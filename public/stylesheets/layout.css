@@ -1,0 +1,106 @@
+#main {width:980px; margin:0 auto; position:relative;}
+#mainR {margin:0 auto; position:relative;}
+
+#header {height:431px; background:url(../images/header-bg.jpg) no-repeat left top;}
+#headerR {height:320px; background:url(../images/header-bg.jpg) no-repeat left top;}
+#header, #headerR, #content, #footer { font-size:0.75em;}
+
+
+
+/*======= index.html =======*/
+#index #content .row-1 .col-1 {width:97%; margin-right:0%}
+#index #content .row-1 .col-2 {width:80%; margin-right:10%}
+#index #content .row-1 .col-2 .row-1 .col-1 { width:20%; margin-right:0;}
+#index #content .row-1 .col-2 .row-1 .col-2 { width:90%; margin-left:10%;}
+#index #content .feature { margin-left: 28px }
+#index .col-1 img {margin-bottom:10px;}
+
+/*======= about.html =======*/
+#about #content .row-1 .col-1 {width:97%; }
+#about #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
+#about #content .row-1 .col-1 .col-2 { width:29%;}
+#about #content .row-1 .col-2 { width:90%; margin-left: 4% }
+#about #content .row-2 .col-1 { width:22%; margin-right:6.9%;}
+#about #content .row-2 .col-2 { width:59%;}  
+
+/*======= projects.html =======*/
+#projects #content .row-1 .col-1 {width:100%; margin-right:4%}
+#projects #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
+#projects #content .row-1 .col-1 .col-2 { width:29%;}
+#projects #content .row-1 .col-2 { width:90%; margin-left: 4% }
+
+@media screen and (min-width: 800px)  
+{
+	#mainR { width: 980px; }
+	#headerR { height: 431px; }
+	/* == home == */
+	#index #content .row-1 .col-1 {width:29%; margin-right:0px; float:left}
+	#index #content .row-1 .col-2 { width:62%; float:right; margin-right:4%}
+	#index #content .row-1 .col-2 .row-1 .col-2 { width:65%; margin-left:0; margin-right:0;}
+	#index .col-1 .col-2 .col-3 { float:left; margin-left:0%}	
+	#index #content .feature { margin-left: 0 }	
+	
+	/* == about == */	
+	#about #content .row-1 .col-1 { float: left; width:60%; }	
+	#about #content .row-1 .col-2 { float: right}
+	#about #content .row-1 .col-2 { width:28%; }	
+	
+	/* == projects == */	
+	#projects #content .row-1 .col-1 { float: left; width:62%; margin-right:3% }
+	#projects #content .row-1 .col-1 .col-1 { width:28%; margin-right:0;}	
+	#projects #content .row-1 .col-2 { width:28%; margin-left: 0%; margin-right:6%; float:right }
+}
+
+
+
+
+/*======= index-3.html =======*/
+#page4 #content .col-1 {width:290px; margin-right:32px;}
+#page4 #content .col-2 { width:574px;}
+#page4 #content .col-2 .row-1 { padding-bottom:22px;}
+#page4 #content .col-2 .row-1 .col-1 { width:205px; margin-right:0;}
+#page4 #content .col-2 .row-1 .col-2 { width:362px;}
+#page4 #content .col-2 .row-2 .col-1 { width:264px; margin-right:28px;}
+#page4 #content .col-2 .row-2 .col-2 { width:263px; margin-right:0;}
+
+/*======= index-4.html =======*/
+#page5 #content .row-1 .col-1 {width:290px; margin-right:32px;}
+#page5 #content .row-1 .col-2 { width:574px;}
+#page5 #content .row-1 .col-2 .row-1 .col-1 { width:205px; margin-right:0;}
+#page5 #content .row-1 .col-2 .row-1 .col-2 { width:362px;}
+#page5 #content .row-1 .col-2 .row-2 .col-1 { width:241px; margin-right:56px;}
+#page5 #content .row-1 .col-2 .row-2 .col-2 { width:260px; margin-right:0;}
+#page5 #content .row-2 .col-1 {width:220px; margin-right:72px;}
+#page5 #content .row-2 .col-2 { width:260px; margin-right:72px;}
+#page5 #content .row-2 .col-3 { width:230px;}
+
+/*======= index-5.html =======*/
+#page6 #content .col-1 {width:605px; margin-right:30px;}
+#page6 #content .col-1 .col-1 { width:254px; margin-right:0;}
+#page6 #content .col-1 .col-2 { width:319px;}
+#page6 #content .col-2 { width:290px;}
+
+/*======= index-6.html =======*/
+#page7 #content .row-1 .col-1 {width:290px; margin-right:32px;}
+#page7 #content .row-1 .col-2 { width:574px;}
+#page7 #content .row-1 .col-2 .col-1 { width:241px; margin-right:56px;}
+#page7 #content .row-1 .col-2 .col-2 { width:268px; margin-right:0;}
+#page7 #content .row-2 .col-1 {width:208px; margin-right:84px;}
+#page7 #content .row-2 .col-2 { width:270px; margin-right:58px;}
+#page7 #content .row-2 .col-3 { width:275px;}
+
+/*======= index-7.html =======*/
+#contact #content .row-1 .col-1 {width:605px; margin-right:30px;}
+#contact #content .row-1 .col-1 .col-1 { width:254px; margin-right:0;}
+#contact #content .row-1 .col-1 .col-2 { width:319px;}
+#contact #content .row-1 .col-2 { width:290px;}
+#contact #content .row-2 .col-1 {width:225px; margin-right:68px;}
+#contact #content .row-2 .col-2 { width:582px;}
+#contact #content .row-2 .col-2 .col-1 { width:260px; margin-right:0;}
+#contact #content .row-2 .col-2 .col-2 { width:269px;}
+
+
+/*=========================*/
+
+
+#footer {height:94px;}
