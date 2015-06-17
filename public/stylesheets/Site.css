@@ -106,11 +106,10 @@ ul { list-style:none;}
 a {color:#767676;}
 a:hover{text-decoration:none;}
 
-h3 { font-family:Arial Narrow, Arial, Helvetica, sans-serif; font-size:2em; line-height:.79em; font-weight:normal; text-transform:uppercase; color:#c9c9c9; margin-bottom:30px;}
+h3 { font-family:Arial Narrow, Arial, Helvetica, sans-serif; font-size:2em; font-weight:normal; text-transform:uppercase; color:#c9c9c9; margin-bottom:30px; line-height: 1.15em}
 h4 { font-size:1.08em; color:#fff; margin-bottom:15px;}
 h4 a { color:#fff;}
 h5 { color:#fff; font-weight:bold; font-size:1.08em;}
-h5 a { color:#fff;}
 
 .txt1 { color:#89acb0;}
 .txt2 { color:#4c4c4c;}
@@ -136,8 +135,7 @@ h5 a { color:#fff;}
 
 /*==================boxes====================*/
 .nav-box { width:100%;}
-.nav-box .tail { background:url(../images/nav-tail.png) repeat-x top; height:102px;}
-.nav-box .right { background:url(../images/nav-right.png) no-repeat right top; padding:0 9px 0 0; height:102px;}
+.nav-box .tail { height:102px; background: #535353}
 
 .footer-box { width:100%; background:#585858; color:#b3b3b3;}
 .footer-box a { color:#89acb0;}
@@ -169,26 +167,24 @@ h5 a { color:#fff;}
 .box1 dl dt { color:#4e4e4e; text-transform:uppercase; font-size:.92em; font-weight:bold; margin-top:14px;}
 .box1 .inner { padding:36px 25px 28px 30px;}
 
-
-#header .row-1 { height:262px;}
-#header .row-1 .logo { padding:131px 0 0 47px;}
-#header .row-2 { height:102px; padding:0 15px 0 30px;}
-#header .right1 { position:absolute; right:-494px; top:0; width:494px; height:588px; }
-
-#headerR { padding:0 15px 2px 15px;}
-#headerR .row-1 { height:126px;}   
-#headerR .row-2 { height:172px; margin-left: 4px}
+#headerR { padding:15px 15px 2px 15px;}
 #headerR .row-1 .logo { width: 100%; }
 
 #footer .indent { padding:0 15px 32px 15px;}
+@media screen and (min-width: 600px)
+{
+    .nav-box .tail { height:102px; background:url(../images/nav-tail.png) }
+    .nav-box .right { background:url(../images/nav-right.png) no-repeat right top; padding:0 9px 0 0; height:102px;} 
+}
+
 @media screen and (min-width: 800px)  
 {
    #headerR { padding:0;}
    #headerR .row-1 { height:262px;}
-   #headerR .row-1 .logo { padding:131px 0 0 47px; width: auto; margin-left: auto}
-   #headerR .row-2 { height:102px; padding:0 15px 0 15px;}
+   #headerR .row-1 .logo { padding:126px 0 0 15px; width: auto; margin-left: auto}
+   #headerR .row-2 { height:102px; padding:0 15px 0 15px;}   
    #headerR .right1 { position:absolute; right:-494px; top:0; width:494px; height:588px; }
-   
+      
    .box .xcontent .top { background:url(../images/box-top.gif) no-repeat right top;}
    .box .xcontent .bot { background:url(../images/box-bot.gif) no-repeat right bottom; width:100%;}
    .box .xcontent .border-right { background:url(../images/border-right.gif) right top repeat-y; width:100%;}    
