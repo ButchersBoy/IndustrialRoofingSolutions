@@ -8,7 +8,7 @@
 
 
 /*======= index.html =======*/
-#index #content .row-1 .col-1 {width:97%; margin-right:0%}
+#index #content .row-1 .col-1 {width:100%; margin-right:0%}
 #index #content .row-1 .col-2 {width:80%; margin-right:10%}
 #index #content .row-1 .col-2 .row-1 .col-1 { width:20%; margin-right:0;}
 #index #content .row-1 .col-2 .row-1 .col-2 { width:90%; margin-left:10%;}
@@ -19,7 +19,7 @@
 #about #content .row-1 .col-1 {width:97%; }
 #about #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
 #about #content .row-1 .col-1 .col-2 { width:29%;}
-#about #content .row-1 .col-2 { width:90%; margin-left: 4% }
+#about #content .row-1 .col-2 { width:100%; }
 #about #content .row-2 .col-1 { width:22%; margin-right:6.9%;}
 #about #content .row-2 .col-2 { width:59%;}  
 
@@ -28,6 +28,15 @@
 #projects #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
 #projects #content .row-1 .col-1 .col-2 { width:29%;}
 #projects #content .row-1 .col-2 { width:90%; margin-left: 4% }
+
+#contact #content .row-1 .col-1 {width:100%; margin-right: 4%}
+#contact #content .row-1 .col-1 .col-1 { width:25%; }
+#contact #content .row-1 .col-1 .col-2 { width:32%;}
+#contact #content .row-1 .col-2 { width:100%;  }
+#contact #content .row-2 .col-1 {width:22%; margin-right:68%;}
+#contact #content .row-2 .col-2 { width:58%;}
+#contact #content .row-2 .col-2 .col-1 { width:26%; }
+#contact #content .row-2 .col-2 .col-2 { width:26%;}
 
 @media screen and (min-width: 800px)  
 {
@@ -49,58 +58,17 @@
 	#projects #content .row-1 .col-1 { float: left; width:62%; margin-right:3% }
 	#projects #content .row-1 .col-1 .col-1 { width:28%; margin-right:0;}	
 	#projects #content .row-1 .col-2 { width:28%; margin-left: 0%; margin-right:6%; float:right }
+	
+	#contact #content .row-1 .col-1 {width:61%; margin-right:3%;}
+	#contact #content .row-1 .col-1 { float:left; margin-left:0%}
+	#contact #content .row-1 .col-2 { float:left; margin-left:0%;  width:29%;}	
 }
 
-
-
-
-/*======= index-3.html =======*/
-#page4 #content .col-1 {width:290px; margin-right:32px;}
-#page4 #content .col-2 { width:574px;}
-#page4 #content .col-2 .row-1 { padding-bottom:22px;}
-#page4 #content .col-2 .row-1 .col-1 { width:205px; margin-right:0;}
-#page4 #content .col-2 .row-1 .col-2 { width:362px;}
-#page4 #content .col-2 .row-2 .col-1 { width:264px; margin-right:28px;}
-#page4 #content .col-2 .row-2 .col-2 { width:263px; margin-right:0;}
-
-/*======= index-4.html =======*/
-#page5 #content .row-1 .col-1 {width:290px; margin-right:32px;}
-#page5 #content .row-1 .col-2 { width:574px;}
-#page5 #content .row-1 .col-2 .row-1 .col-1 { width:205px; margin-right:0;}
-#page5 #content .row-1 .col-2 .row-1 .col-2 { width:362px;}
-#page5 #content .row-1 .col-2 .row-2 .col-1 { width:241px; margin-right:56px;}
-#page5 #content .row-1 .col-2 .row-2 .col-2 { width:260px; margin-right:0;}
-#page5 #content .row-2 .col-1 {width:220px; margin-right:72px;}
-#page5 #content .row-2 .col-2 { width:260px; margin-right:72px;}
-#page5 #content .row-2 .col-3 { width:230px;}
-
-/*======= index-5.html =======*/
-#page6 #content .col-1 {width:605px; margin-right:30px;}
-#page6 #content .col-1 .col-1 { width:254px; margin-right:0;}
-#page6 #content .col-1 .col-2 { width:319px;}
-#page6 #content .col-2 { width:290px;}
-
-/*======= index-6.html =======*/
-#page7 #content .row-1 .col-1 {width:290px; margin-right:32px;}
-#page7 #content .row-1 .col-2 { width:574px;}
-#page7 #content .row-1 .col-2 .col-1 { width:241px; margin-right:56px;}
-#page7 #content .row-1 .col-2 .col-2 { width:268px; margin-right:0;}
-#page7 #content .row-2 .col-1 {width:208px; margin-right:84px;}
-#page7 #content .row-2 .col-2 { width:270px; margin-right:58px;}
-#page7 #content .row-2 .col-3 { width:275px;}
-
-/*======= index-7.html =======*/
-#contact #content .row-1 .col-1 {width:605px; margin-right:30px;}
-#contact #content .row-1 .col-1 .col-1 { width:254px; margin-right:0;}
-#contact #content .row-1 .col-1 .col-2 { width:319px;}
-#contact #content .row-1 .col-2 { width:290px;}
-#contact #content .row-2 .col-1 {width:225px; margin-right:68px;}
-#contact #content .row-2 .col-2 { width:582px;}
-#contact #content .row-2 .col-2 .col-1 { width:260px; margin-right:0;}
-#contact #content .row-2 .col-2 .col-2 { width:269px;}
-
-
-/*=========================*/
-
+.suppliersImages {
+	background-color: white; 
+	padding: 5px; 
+	margin-right: 25px;
+	display: inline-block; 	
+}
 
 #footer {height:94px;}
