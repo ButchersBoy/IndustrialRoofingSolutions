@@ -175,30 +175,28 @@ h5 a { color:#fff;}
 #header .row-2 { height:102px; padding:0 15px 0 30px;}
 #header .right1 { position:absolute; right:-494px; top:0; width:494px; height:588px; }
 
-#headerR { padding:0 8px 2px 30px;}
+#headerR { padding:0 15px 2px 15px;}
 #headerR .row-1 { height:126px;}   
 #headerR .row-2 { height:172px; margin-left: 4px}
 #headerR .row-1 .logo { width: 100%; }
 
-#footer .indent { padding:0 16px 32px 30px;}
+#footer .indent { padding:0 15px 32px 15px;}
 @media screen and (min-width: 800px)  
 {
    #headerR { padding:0;}
    #headerR .row-1 { height:262px;}
    #headerR .row-1 .logo { padding:131px 0 0 47px; width: auto; margin-left: auto}
-   #headerR .row-2 { height:102px; padding:0 15px 0 30px;}
+   #headerR .row-2 { height:102px; padding:0 15px 0 15px;}
    #headerR .right1 { position:absolute; right:-494px; top:0; width:494px; height:588px; }
    
    .box .xcontent .top { background:url(../images/box-top.gif) no-repeat right top;}
    .box .xcontent .bot { background:url(../images/box-bot.gif) no-repeat right bottom; width:100%;}
-   .box .xcontent .border-right { background:url(../images/border-right.gif) right top repeat-y; width:100%;}
-
-    #footer .indent { padding:0 24px 32px 30px;}
+   .box .xcontent .border-right { background:url(../images/border-right.gif) right top repeat-y; width:100%;}    
 }
 
 
 /*content*/
-#content { padding:0 15px 5px 30px; margin-top:-65px; position:relative;}
+#content { padding:0 15px 5px 15px; margin-top:-65px; position:relative;}
 #content .indent { padding:36px 36px 33px 0;}
 #content .indent1 { padding:33px 32px 33px 35px;}
 #content .indent2 { padding:36px 36px 33px 32px;}

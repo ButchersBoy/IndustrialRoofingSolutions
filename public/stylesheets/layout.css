@@ -9,7 +9,7 @@
 
 /*======= index.html =======*/
 #index #content .row-1 .col-1 {width:100%; margin-right:0%}
-#index #content .row-1 .col-2 {width:80%; margin-right:10%}
+#index #content .row-1 .col-2 {width:100%; margin-right:10%}
 #index #content .row-1 .col-2 .row-1 .col-1 { width:20%; margin-right:0;}
 #index #content .row-1 .col-2 .row-1 .col-2 { width:90%; margin-left:10%;}
 #index #content .feature { margin-left: 28px }
