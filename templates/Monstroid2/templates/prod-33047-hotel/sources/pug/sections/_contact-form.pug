@@ -1,0 +1,26 @@
+section.section.section-lg.bg-default.text-center
+	.container
+		.row.justify-content-center
+			.col-xl-8
+				h2 Contact Us
+				//RD Mailform
+				form.rd-form.rd-mailform.text-start(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+					.row.row-20.row-md-30
+						.col-12
+							.form-wrap
+								label.form-label(for="footer-name") Name
+								input#footer-name.form-input(type="text" name="name" data-constraints='@Required')
+						.col-md-6
+							.form-wrap
+								label.form-label(for="footer-phone") Phone
+								input#footer-phone.form-input(type="text" name="phone" data-constraints='@Required @Numeric')
+						.col-md-6
+							.form-wrap
+								label.form-label(for="footer-email") E-Mail
+								input#footer-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+						.col-12
+							.form-wrap
+								label.form-label(for="footer-message") Message
+								textarea#footer-message.form-input(name="message" data-constraints='@Required')
+					.form-button.text-center
+						button(type="submit").btn.btn-primary.btn-ujarak Send

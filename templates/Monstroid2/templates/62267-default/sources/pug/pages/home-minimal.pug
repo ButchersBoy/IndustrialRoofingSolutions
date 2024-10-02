@@ -1,0 +1,126 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Home Minimal'
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-navbar_creative(
+			data-layout='rd-navbar-fixed',
+			data-sm-layout='rd-navbar-fixed',
+			data-sm-device-layout='rd-navbar-fixed',
+			data-md-layout='rd-navbar-fixed',
+			data-md-device-layout='rd-navbar-fixed',
+			data-lg-device-layout='rd-navbar-fixed',
+			data-xl-device-layout='rd-navbar-static',
+			data-xxl-device-layout='rd-navbar-static',
+			data-lg-layout='rd-navbar-static',
+			data-xl-layout='rd-navbar-static',
+			data-xxl-layout='rd-navbar-static',
+			data-stick-up-clone='false',
+			data-sm-stick-up='true',
+			data-md-stick-up='true',
+			data-lg-stick-up='true',
+			data-xl-stick-up='true',
+			data-xxl-stick-up='true',
+			data-lg-stick-up-offset='90px',
+			data-xl-stick-up-offset='90px',
+			data-xxl-stick-up-offset='90px')
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						
+						// RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+					
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						+navigation( menu )
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img
+		include ../sections/_section-slider-boxed
+	='\n'
+	
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-50
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-1-418x315',
+						title: 'Bootstrap Framework',
+						text:  'Monstroid² is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-2-418x315',
+						title: 'Customizable Template',
+						text:  'Use our Template to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-3-418x315',
+						title: 'Responsive & Retina Ready',
+						text:  'Monstroid² looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+	='\n'
+	
+	+divider
+	
+	// Blurbs
+	section.section.novi-bg.novi-bg-img.section-xl
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					h5 Consistency is the Key
+					p Monstroid#[sup 2] boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+					p Unlike many other themes Monstroid#[sup 2] is built around user content but not vice versa. Thus you may be sure when you add your own texts and images the theme will look same cool and appealing.
+				
+				.col-md-6.col-lg-4
+					h5 More plug-ins for better functionality
+					p Monstroid supports a huge list of plugins developed both by Templatemonster.com and 3rd party developers. All plugins are available under GPL3 license. Create events, make schedules, book appointments, build restaurant menus, run community, start your features rich online shop and do so many other things with Monstroid#[sup 2] plugins pack.
+					a.button.button-primary(href=getTemplateLink target='_blank') Buy template
+				
+				.col-md-6.col-lg-4.group-blurb
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title Built For Speed
+							p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+					
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title Social Integration
+							p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+					
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title Flexible and Multipurpose
+							p Monstroid² allows to create a various website for complex and scalable  project.
+	='\n'
+	
+	+divider
+	
+	include ../sections/_section-brand-carousel
+	
+	// Page Footer
+	include ../sections/_footer-corporate

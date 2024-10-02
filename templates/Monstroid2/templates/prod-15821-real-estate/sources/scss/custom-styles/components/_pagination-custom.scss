@@ -1,0 +1,102 @@
+// pagination classic
+//--------------------------------------------------------
+.pagination-classic {
+  margin: 0;
+  li.page-item {
+    display: inline-block;
+    a.page-link,
+    span.page-link {
+      display: inline-block;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 400;
+      font-family: $font-family-sec;
+      color: $black;
+      text-align: center;
+      transition: .3s;
+      border: none;
+
+      &.icon {
+        width: 35px;
+        font-size: 14px;
+        background-color: transparent;
+        border: 0;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+    }
+
+    &.active a.page-link,
+    &.active a.page-link:hover,
+    a.page-link:focus,
+    a.page-link:hover {
+      color: $primary;
+      background-color: transparent;
+    }
+    &.active span.page-link,
+    &.active span.page-link:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+
+    &.active,
+    &.disabled {
+      pointer-events: none;
+    }
+
+    &.disabled a.page-link,
+    &.disabled a.page-link:hover,
+    &.disabled span.page-link,
+    &.disabled span.page-link:hover {
+      background-color: transparent;
+      border-color: $gray-1;
+    }
+    & + li.page-item { margin-left: 10px; }
+    @include media-breakpoint-up(sm) {
+      & + li.page-item { margin-left: 15px; }
+    }
+  }
+
+  li.pagination__control.page-item {
+    a.page-link {
+      font-family: $font-family-sans-serif-2;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    a.page-link {
+      position: relative;
+    }
+
+    &:first-child a.page-link::before,
+    &:last-child a.page-link::after {
+      font-family: 'Material Icons';
+      font-size: 24px;
+      color: inherit;
+      vertical-align: middle;
+    }
+
+    &:first-child a.page-link::before {
+      content: '\e5cb';
+    }
+
+    &:last-child a.page-link::after {
+      content: '\e5cc';
+    }
+  }
+
+}
+
+.page {
+  * + .pagination-classic {
+    margin-top: 30px;
+  }
+}

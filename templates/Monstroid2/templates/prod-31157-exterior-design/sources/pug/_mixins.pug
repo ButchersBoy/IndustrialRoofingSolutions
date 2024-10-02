@@ -1,0 +1,149 @@
+//-
+//- Common usage mixins
+//- --------------------------------------------------
+
+//- Img image
+mixin img( name, options )
+	-
+		var size = getImageSize( name );
+		if( options && options.retina ) { size[0] = ~~(size[0]/2); size[1] = ~~(size[1]/2); }
+	img( src= procImg( name ), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+//- Jpg image
+mixin jpg(name, className)
+	- var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+	img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=className)
+
+//- Png image
+mixin png(name, className)
+	- var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+	img(src='images/' + name + '.png', alt='', width=size[0], height=size[1], class=className)
+
+//- Parallax Section
+	@param {object} obj - parameters storage
+	@param {string} obj.img - image path
+	@param {string} obj.innerClass - content wrapper class
+mixin parallax( obj )
+	section.section.parallax-container( data-parallax-img= procImg( obj.img ) )&attributes( attributes )
+		.parallax-content( class= obj.innerClass )
+			block
+
+//- Quote mark
+mixin quote-mark(objClass)
+	svg.quote-centered__mark(width='132' height='104' viewBox='0 0 132 104')
+		path(opacity='0.2' d='M59.2871 79.8594C59.2871 86.1094 56.748 91.5781 51.6699 96.2656C46.6895 100.953 40.7812 103.297 33.9453 103.297C23.2031 103.297 14.9512 99.7324 9.18945 92.6035C3.42773 85.4746 0.546875 75.6113 0.546875 63.0137C0.546875 51.2949 5.47852 39.4785 15.3418 27.5645C25.3027 15.6504 37.2656 6.61719 51.2305 0.464844L57.6758 10.8652C46.6406 16.2363 37.998 22.4863 31.748 29.6152C25.498 36.7441 21.8848 45.3867 20.9082 55.543H29.1113C35.166 55.543 40.0977 56.2266 43.9062 57.5938C47.7148 58.9609 50.791 60.8652 53.1348 63.3066C55.3809 65.6504 56.9434 68.2383 57.8223 71.0703C58.7988 73.9023 59.2871 76.832 59.2871 79.8594ZM131.504 79.8594C131.504 86.1094 128.965 91.5781 123.887 96.2656C118.906 100.953 112.998 103.297 106.162 103.297C95.4199 103.297 87.168 99.7324 81.4062 92.6035C75.6445 85.4746 72.7637 75.6113 72.7637 63.0137C72.7637 51.2949 77.6953 39.4785 87.5586 27.5645C97.5195 15.6504 109.482 6.61719 123.447 0.464844L129.893 10.8652C118.857 16.2363 110.215 22.4863 103.965 29.6152C97.7148 36.7441 94.1016 45.3867 93.125 55.543H101.328C107.383 55.543 112.314 56.2266 116.123 57.5938C119.932 58.9609 123.008 60.8652 125.352 63.3066C127.598 65.6504 129.16 68.2383 130.039 71.0703C131.016 73.9023 131.504 76.832 131.504 79.8594Z')
+
+//- Divider
+mixin divider
+	// Divider
+	.container: .divider
+	='\n'
+
+//- Thumbnail
+//- Original image naming format: pagename-{X}-1200x600_original.jpg
+mixin img-thumbnail(obj)
+	a(href='images/' + obj.original + '.jpg', class='img-thumbnail-variant-' + obj.number, data-lightgallery="item")
+		figure
+			+jpg(obj.img)
+		.caption
+			span.icon.novi-icon.icon-lg.linear-icon-magnifier
+
+//- progress - object{progress}
+mixin progress-bar-linear(progress)
+	// Linear progress bar
+	.progress-linear( class= progress.progressStyle )
+		.progress-header
+			p=progress.title
+			span.progress-value( class= progress.style )= progress.valueTo
+		.progress-bar-linear-wrap
+			.progress-bar-linear
+
+//- Breadcrumbs
+	@param {Array}  [path] - other navigation path
+	@example +breadcrumbs([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumbs( path )
+	-
+		if ( !path ) {
+			if ( breadcrumbs && breadcrumbs.length ) path = breadcrumbs;
+			else path = [{ title: pageName }];
+		}
+
+	// Breadcrumbs
+	section.section.novi-bg.novi-bg-img.breadcrumbs-custom
+		.container
+			.breadcrumbs-custom__inner
+				p.breadcrumbs-custom__title= path[ path.length - 1 ].title
+				if ( path[0].title.toLowerCase() !== 'home' )
+					ul.breadcrumbs-custom__path
+						li: a( href='index.html' ) Home
+						- for ( var i = 0; i < path.length; i++ )
+							if ( i === path.length - 1 )
+								li.active= path[i].title
+							else
+								li: a( href= path[i].link )= path[i].title
+
+//- Main Navigation
+mixin navigation( menu, type )
+	if( !type )
+		ul.rd-navbar-nav&attributes( attributes )
+			each item in menu
+				li.rd-nav-item( class= { active: item.active } )
+					a.rd-nav-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+					if( item.megamenu )
+						+navigation( item.megamenu, 'megamenu' )
+
+	else if( type === 'dropdown' )
+		ul.rd-menu.rd-navbar-dropdown
+			each item in menu
+				li.rd-dropdown-item( class= { active: item.active } )
+					a.rd-dropdown-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+
+	else if( type === 'megamenu' )
+		ul.rd-menu.rd-navbar-megamenu
+			each item in menu
+				li.rd-megamenu-item
+					if ( item instanceof Array )
+						+navigation( item, 'column' )
+					else
+						+navigation( item, 'block' )
+
+	else if( type === 'column' )
+		each item in menu
+			+navigation( item, 'block' )
+
+	else if( type === 'block' )
+		if (menu.title && menu.link)
+			p.rd-megamenu-header: a( href= menu.link )= menu.title
+		else if (menu.title)
+			p.rd-megamenu-header= menu.title
+		if (menu.list)
+			+navigation( menu.list, 'list' )
+
+	else if( type === 'list' )
+		ul.rd-megamenu-list
+			each item in menu
+				li.rd-megamenu-list-item
+					a.rd-megamenu-list-link( href= item.link )= item.title
+
+//- Logo
+mixin logo
+	// Brand
+	a.brand( href='index.html' )&attributes( attributes )
+		+img( logo.default ).brand-logo-dark
+		+img( logo.inverse ).brand-logo-light
+
+//- Copyright
+mixin rights
+	p.rights&attributes( attributes )
+		span &copy;&nbsp;
+		span.copyright-year
+		span &nbsp;
+		span!=logo.name
+		span .&nbsp;
+		span All Rights Reserved.
+		span &nbsp;
+		a( href='privacy-policy.html' ) Privacy Policy

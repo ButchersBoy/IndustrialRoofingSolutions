@@ -1,0 +1,42 @@
+header.page-header
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-sidebar_reverse.rd-navbar_inverse(data-layout='rd-navbar-fixed',
+    data-sm-layout='rd-navbar-fixed',
+    data-sm-device-layout='rd-navbar-fixed',
+    data-md-layout='rd-navbar-fixed',
+    data-md-device-layout='rd-navbar-fixed',
+    data-lg-layout='rd-navbar-sidebar',
+    data-lg-device-layout='rd-navbar-fixed',
+    data-xl-device-layout='rd-navbar-sidebar',
+    data-xl-layout='rd-navbar-sidebar',
+    data-xxl-device-layout='rd-navbar-sidebar',
+    data-xxl-layout='rd-navbar-sidebar',
+    data-stick-up-clone='false',
+    data-sm-stick-up='true'
+    data-md-stick-up='true'
+    data-lg-stick-up='true',
+    data-xl-stick-up='true',
+    data-xxl-stick-up='true',
+    data-lg-stick-up-offset='50px',
+    data-xl-stick-up-offset='50px',
+    data-xxl-stick-up-offset='50px',
+    data-body-class='',
+    data-md-hover-on='false',
+    data-lg-hover-on='false')
+
+      .rd-navbar-inner.rd-navbar-search-wrap.rd-navbar-search-collapsable-wrap
+        // RD Navbar Panel
+        .rd-navbar-panel.rd-navbar-search_not-collapsable
+          .rd-navbar-panel__aside
+            button.rd-navbar-toggle.rd-navbar-search_collapsable(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          .rd-navbar-panel__main.rd-navbar-search_collapsable
+            // RD Navbar Brand
+            .rd-navbar-brand
+              a.brand-name(href='index.html')
+                +png(logoInverse2)
+
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap
+          include ../includes/_nav

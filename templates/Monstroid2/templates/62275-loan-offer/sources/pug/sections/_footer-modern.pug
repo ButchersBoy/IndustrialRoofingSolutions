@@ -1,0 +1,49 @@
+footer.footer-modern
+  .container
+    .footer-modern__layer.footer-modern__layer_top
+      a.brand(href='index.html')
+        +png(logoInverse)
+
+      ul.list-nav
+        li(class={active: activeIndex == 0}): a(href='index.html#why-us') why us
+        li(class={active: activeIndex == 1}): a(href='index.html#steps') steps
+        li(class={active: activeIndex == 2}): a(href='index.html#testimonials') testimonials
+        li(class={active: activeIndex == 3}): a(href='index.html#partners') partners
+        li(class={active: activeIndex == 4}): a(href='index.html#contact') contact
+        li(class={active: activeIndex == 5}): a(href='index.html#') Pages
+
+      ul.list-inline-xxs.footer-modern__list
+        li: a.icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-youtube(href='#')
+        li: a.icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+
+    .footer-modern__layer.footer-modern__layer_bottom
+      p.rights
+        span!=brandName
+          | (c)
+        span &nbsp;
+        span(class="copyright-year")
+        | .
+        if(footerLink)
+
+
+      ul.list-bordered
+        li
+          dl.list-terms-minimal
+            dt Address
+            dd 4578 Marmora Road, Glasgow, D04 89GR
+
+        li
+          dl.list-terms-minimal
+            dt Phones
+            dd: ul.list-semicolon
+              li: a(href='callto:#') (800) 123-0045
+              li: a(href='callto:#') (800) 123-0045
+
+        li
+          dl.list-terms-minimal
+            dt E-mail
+            dd: a(href='mailto:#') info@demolink.org

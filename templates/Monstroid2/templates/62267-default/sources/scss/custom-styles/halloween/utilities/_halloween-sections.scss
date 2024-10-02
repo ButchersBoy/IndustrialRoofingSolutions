@@ -1,0 +1,44 @@
+/** @section Sections */
+
+// Section Spacing
+.halloween-section-xs,
+.halloween-section-lg {
+	padding: 50px 0;
+}
+
+.halloween-section-xl {
+	padding: 60px 0;
+}
+
+@include media-breakpoint-up(md) {
+	.halloween-section-xs {
+		padding: 62px 0;
+	}
+
+	.halloween-section-lg {
+		padding: 85px 0;
+	}
+
+	.halloween-section-xl {
+		padding: 80px 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.halloween-section-lg {
+		padding: 100px 0;
+	}
+
+	.halloween-section-xl {
+		padding: 100px 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.halloween-section-lg {
+		padding: 115px 0;
+	}
+	.halloween-section-xl {
+		padding: 135px 0;
+	}
+}

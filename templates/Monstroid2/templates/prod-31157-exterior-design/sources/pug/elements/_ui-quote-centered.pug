@@ -1,0 +1,10 @@
+mixin quote-centered(obj)
+  // Quote centered
+  .quote-centered
+    +quote-mark('quote-centered__mark')
+
+    .quote-centered__text
+      p.q=obj.text
+
+    h3.quote-centered__cite=obj.cite
+    h6 Client

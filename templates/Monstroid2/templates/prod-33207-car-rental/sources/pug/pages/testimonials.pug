@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Testimonials'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+
+	+parallax({
+		img: "parallax-06.jpg"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h1 What our customers have to say
+						p Lorem ipsum a dolor sit amet, consectetur there adipiscing elit.
+	='\n'
+
+	// Quotes
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-40
+				.col-sm-6
+					.quote-classic
+						.quote-classic__main
+							.quote-classic__text: q This was the most friendly, quick, and efficient experiences that I have ever experienced. I will definitely be using your services again.
+							.quote-classic__meta
+								.quote-classic__meta-item.quote-classic-rating
+									span ★
+									span 5.0
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-1-72x72')
+							.quote-classic__caption-main
+								p.quote-classic__cite Adam Jordan
+								p.quote-classic__small June 21, 2023
+					.quote-classic
+						.quote-classic__main
+							.quote-classic__text: q Cras elit purus, aliquet ac auctor in, semper at odio. Ut semper justo ultricies, pulvinar odio eu...
+							.quote-classic__meta
+								.quote-classic__meta-item.quote-classic-rating
+									span ★
+									span 5.0
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-3-72x72')
+							.quote-classic__caption-main
+								p.quote-classic__cite Courtney Johnson
+								p.quote-classic__small June 21, 2023
+					.quote-classic
+						.quote-classic__main
+							.quote-classic__text: q Cras tristique semper convallis. Cras efficitur sagittis erat. Fusce pellentesque ligula vitae tellus facilisis fringilla. Pellentesque sit amet massa...
+							.quote-classic__meta
+								.quote-classic__meta-item.quote-classic-rating
+									span ★
+									span 5.0
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-4-72x72')
+							.quote-classic__caption-main
+								p.quote-classic__cite Emma Wilson
+								p.quote-classic__small June 23, 2023
+				.col-sm-6
+					.quote-classic
+						.quote-classic__main
+							.quote-classic__text: q My rental was upgraded with no extra charge, they had a shuttle running around the clock with helpful staff and checking out was quick and painless. The car was clean, fully fueled, stocked with water bottles and a guide to LA, so no extra stops were needed.
+							.quote-classic__meta
+								.quote-classic__meta-item.quote-classic-rating
+									span ★
+									span 4.5
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-2-72x72')
+							.quote-classic__caption-main
+								p.quote-classic__cite Jerome Bell
+								p.quote-classic__small June 25, 2023
+					.quote-classic
+						.quote-classic__main
+							.quote-classic__text: q Fusce vel mauris tristique, egestas velit eu, commodo sapien. Cras lobortis dapibus diam, ut sollicitudin sapien bibendum in. Maecenas ullamcorper odio elit, ut tincidunt neque congue suscipit. In ultricies nisl sit amet velit facilisis feugiat viverra vitae nulla. Quisque ut euismod turpis. Pellentesque accumsan enim ac tempor tincidunt. Praesent non ex ornare, tristique dolor vel, aliquam magna...
+							.quote-classic__meta
+								.quote-classic__meta-item.quote-classic-rating
+									span ★
+									span 4.5
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-2-72x72')
+							.quote-classic__caption-main
+								p.quote-classic__cite John Simmons
+								p.quote-classic__small June 27, 2023
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

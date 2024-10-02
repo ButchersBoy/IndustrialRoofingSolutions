@@ -1,0 +1,101 @@
+/*
+* Backgrounds
+*/
+
+.context-dark {
+	@extend %context-dark;
+}
+
+.context-light {
+	@extend %context-light;
+}
+
+%context-dark {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: none;
+		}
+
+		.brand-logo-light {
+			display: block;
+		}
+	}
+}
+
+%context-light {
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: block;
+		}
+
+		.brand-logo-light {
+			display: none;
+		}
+	}
+}
+
+/*
+* Light Backgrounds
+*/
+.bg-default {
+	@extend %context-light;
+	@include bg-behaviour($body-bg);
+}
+
+.bg-gray-100 {
+	@include bg-behaviour($gray-100);
+}
+
+/*
+* Dark Backgrounds
+*/
+.bg-gray-700 {
+	@extend %context-dark;
+	@include bg-behaviour($gray-700);
+}
+
+/*
+* Accent Backgrounds
+*/
+.bg-primary {
+	background-color: $primary;
+	@extend %context-dark;
+	& + & {
+		padding-top: 0;
+	}
+}
+
+/*
+* Secondary Backgrounds
+*/
+.bg-secondary-1 {
+	background-color: $secondary-1;
+}
+
+.bg-secondary-2 {
+	background-color: $secondary-2;
+}
+
+.bg-secondary-3 {
+	background-color: $secondary-3;
+}
+
+/*
+* Background Image
+*/
+.bg-image {
+	background-size: cover;
+	background-position: center;
+}
+
+
+// Desktop only
+html:not(.tablet):not(.mobile) {
+	.bg-fixed {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}

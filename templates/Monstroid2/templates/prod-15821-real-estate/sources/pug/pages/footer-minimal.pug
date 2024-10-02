@@ -1,0 +1,23 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Footer Minimal'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [['Footers', '#'], [pageName]]
+  })
+
+  include ../sections/_section-testimonials
+  include ../sections/_section-flickr
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

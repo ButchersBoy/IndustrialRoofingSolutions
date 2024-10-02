@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Circles Counter'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  .section-lg.bg-default
+    include ../sections/_section-circle-counters-dark
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-sm-center.row-60
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.45", data-gradient="#000, #000", data-empty-fill="#000", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Pixel perfect typography
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.60", data-gradient="#000, #000", data-empty-fill="#000", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Novi Builder
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.80", data-gradient="#000, #000", data-empty-fill="#000", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Made for community
+
+  ='\n'
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

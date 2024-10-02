@@ -1,0 +1,434 @@
+//
+// Lists
+// --------------------------------------------------
+
+// Default list
+//
+
+.list-0 {
+  line-height: 1.25;
+
+  > li + li {
+    margin-top: 0;
+  }
+}
+
+.list-small {
+  > li {
+    @include small;
+  }
+  > li + li {
+    margin-top: 0;
+  }
+}
+
+.list {
+  > li + li {
+    margin-top: 4px;
+  }
+}
+
+.list-xxs {
+  > li + li {
+    margin-top: 11px;
+  }
+}
+
+.list-xs {
+  > li + li {
+    margin-top: 16px;
+  }
+}
+
+.list-sm {
+  > li + li {
+    margin-top: 22px;
+  }
+}
+
+.list-md {
+  > li + li {
+    margin-top: 30px;
+  }
+}
+
+.list-lg {
+  > li + li {
+    margin-top: 30px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .list-lg {
+    > li + li {
+      margin-top: 50px;
+    }
+  }
+}
+
+.list-default {
+  color: $gray-light;
+  
+  a {
+    color: inherit;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Inline list
+.list-inline-xxs {
+  @include inline-list(2px, 4px);
+}
+
+.list-inline-xs {
+  @include inline-list(13px, 4px);
+}
+
+.list-inline-sm {
+  @include inline-list(20px, 8px);
+}
+
+.list-inline-md {
+  @include inline-list(25px, 10px);
+}
+
+// Terms list
+.list-terms {
+  text-align: left;
+
+  dt,
+  dd {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  dt {
+    padding-right: 5px;
+    font-family: $font-family-sans-serif-2;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: $black;
+    
+    &:after {
+      content: ':';
+    }
+    
+    @include media-breakpoint-up(sm) {
+      min-width: 175px;
+    }
+  }
+}
+
+.list-terms + .list-terms {
+  margin-top: 2px;
+}
+
+// List terms inline
+.list-terms-inline {
+  dt,
+  dd {
+    display: inline-block;
+  }
+
+  dt {
+    padding-right: 5px;
+    color: $black;
+    &:after {
+      content: ':';
+    }
+  }
+}
+
+// List terms minimal
+.list-terms-minimal {
+  * {
+    display: inline;
+  }
+
+  dt:after {
+    display: inline-block;
+    margin-right: 3px;
+    content: ':';
+  }
+}
+
+// List terms modern
+.list-terms-modern {
+  dt,
+  dd {
+    display: block;
+  }
+
+  dt {
+    color: $black;
+
+    &::after {
+      display: inline-block;
+      margin-right: 3px;
+      content: ':';
+    }
+  }
+
+  dd {
+    color: $body-color;
+    a {
+      color: inherit;
+
+      &:hover { color: $primary; }
+    }
+  }
+}
+
+// Index list
+.index-list {
+  counter-reset: li;
+
+  > li {
+    .list-index-counter {
+      &:before {
+        content: counter(li, decimal-leading-zero);
+        counter-increment: li;
+      }
+    }
+  }
+}
+
+// Marked list
+.list-marked {
+  text-align: left;
+  > li {
+    position: relative;
+    padding-left: 14px;
+    line-height: 1.5;
+    color: $gray;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      height: 3px;
+      width: 3px;
+      background: $gray;
+    }
+  }
+  
+  a {
+    display: inline;
+    @include link($primary, $black);
+  }
+
+  > li + li {
+    margin-top: 7px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .list-marked {
+    > li {
+      &::before {
+        top: 12px;
+      }
+    }
+  }
+}
+
+.list-marked-primary {
+  @extend .list-marked;
+
+  > li {
+    color: $primary;
+    &:before {
+      background: $primary;
+    }
+  }
+
+}
+
+// Ordered list
+.list-ordered {
+  counter-reset: li;
+  > li {
+    position: relative;
+    padding-left: 2em;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 15px;
+      content: counter(li, decimal-leading-zero) '.';
+      counter-increment: li;
+      color: $black;
+    }
+
+    a {
+      @include link(inherit, $primary);
+    }
+  }
+
+  li + li {
+    margin-top: 8px;
+  }
+}
+
+// List semicolon
+.list-semicolon {
+  > li {
+    display: inline;
+    color: $body-color;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  > li + li {
+    &:before {
+      display: inline-block;
+      margin-right: 4px;
+      content: ';';
+    }
+  }
+}
+
+// List linked
+.list-linked {
+  line-height: 1.2;
+  
+  > li {
+    display: block;
+  }
+
+  a {
+    display: block;
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  > li + li {
+    margin-top: 10px;
+  }
+}
+
+// List tags
+.list-tags {
+  @include spacing(15px, 8px);
+
+  > li {
+    display: inline-block;
+    font-size: 12px;
+  }
+
+  a {
+    display: inline-block;
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.list-inline-tag {
+  color: $primary;
+
+  li {
+    display: inline-block;
+
+    &:after {
+      content: ',';
+      color: inherit;
+    }
+
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+// List nav
+.list-nav {
+  @include spacing(30px, 10px);
+
+  > li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  > li.active,
+  > li a.active,
+  > li > a:hover {
+    color: $primary;
+  }
+}
+
+// List bordered
+.list-bordered {
+  @include spacing(24px, 10px);
+  > li {
+    position: relative;
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    > li:nth-last-child(n + 2) {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 32px;
+        background: $gray-1;
+      }
+    }
+  }
+}
+
+// List archive
+.list-archive {
+  li a {
+    font-size: 14px;
+    color: $black;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// List rating
+.list-rating {
+  > li {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    color: $primary;
+  }
+  
+  > li + li {
+    margin-left: -0.2em;
+  }
+}

@@ -1,0 +1,46 @@
+//
+// Video overlay wrap
+// --------------------------------------------------
+.video-overlay-wrap {
+  position: relative;
+  cursor: pointer;
+
+  .video-overlay__image {
+    opacity: 1;
+  }
+
+  &:hover {
+    .video-overlay__image {
+      opacity: .66;
+    }
+  }
+}
+
+.video-overlay,
+.video-overlay__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.video-overlay {
+  background: $secondary;
+  z-index: 12;
+}
+
+.video-overlay__image {
+  transition: .33s;
+}
+
+.video-overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 13;
+  transform: translate(-50%, -50%);
+  font-size: 63px;
+  color: $white;
+  border-radius: 50%;
+}

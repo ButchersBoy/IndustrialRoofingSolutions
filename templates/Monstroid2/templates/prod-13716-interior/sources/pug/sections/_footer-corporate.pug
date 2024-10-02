@@ -1,0 +1,67 @@
+section.pre-footer-corporate.bg-gray-darker
+  .container
+    .row.justify-content-sm-center.justify-content-lg-start.row-30.row-md-60
+      .col-sm-10.col-md-6.col-lg-10.col-xl-3
+        a.brand(href='index.html')
+          +png(logoInverse)
+        p We are one of the leading interior design and remodeling studios available for all of your residential and commercial interior design needs. Our team brings a high level of ingenuity and creativity to each project. Our desire is to create a design that represents your personal and unique style, creating an environment that you will love for years to come.
+
+      .col-sm-10.col-md-6.col-lg-3.col-xl-3
+        h6 Navigation
+        ul.list-xxs.list-primary
+          li: a(href='classic-blog.html') News and Updates
+          li: a(href='projects.html') Latest Projects
+          li: a(href='services.html') Our Services
+          li: a(href='contacts.html') Contacts
+
+      .col-sm-10.col-md-6.col-lg-4.col-xl-3
+        h6 Contacts
+        ul.list-xs
+          li
+            dl.list-terms-minimal
+              dt Address
+              dd 4578 Marmora Road, Glasgow, D04 89GR
+
+          li
+            dl.list-terms-minimal
+              dt Phones
+              dd: ul.list-semicolon
+                li: a(href='tel:#') (800) 123-0045
+                li: a(href='tel:#') (800) 123-0045
+
+          li
+            dl.list-terms-minimal
+              dt E-mail
+              dd: a.link-primary(href='mailto:#') info@demolink.org
+
+          li
+            dl.list-terms-minimal
+              dt We are open
+              dd Mn-Fr: 10 am-8 pm
+              
+      .col-sm-10.col-md-6.col-lg-5.col-xl-3
+        .google-map-footer
+          .google-map-container(data-zoom='15' data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]' )
+            .google-map
+            ul.google-map-markers
+              li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+='\n'
+
+footer.footer-corporate.bg-gray-darkest
+  .container
+    .footer-corporate__inner
+      p.rights
+        span!=brandName
+        span &nbsp;
+        span(class="copyright-year")
+        | . All Rights Reserved.
+        a(href='privacy-policy.html') Terms of Use and Privacy Policy
+
+      ul.list-inline-xxs
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-facebook(href='#')
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-twitter(href='#')
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-google-plus(href='#')
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-vimeo(href='#')
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-youtube(href='#')
+        li: a.icon.icon-xxs.icon-gray-darker.fa.fa-pinterest(href='#')

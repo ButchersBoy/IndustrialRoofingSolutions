@@ -1,0 +1,183 @@
+/*
+* Sidebar Layout
+*/
+
+.rd-navbar-sidebar {
+  display: block;
+
+  .rd-navbar-sidebar-toggle{
+    position: fixed;
+    top: 8px;
+    left: 8px;
+
+    display: block;
+    z-index: 999; // More than .rd-navbar-sidebar-inner
+    @extend %rd-navbar-transition;
+  }
+}
+
+
+.rd-navbar-sidebar .rd-navbar-sidebar-inner {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transform: translateX(-100%);
+  box-shadow: none;
+  @extend %rd-navbar-transition;
+
+  &.active{
+    transform: translateX(0);
+    box-shadow: $rd-navbar-fixed-shadow;
+  }
+
+
+  .rd-navbar-top-panel{
+    order: 1;
+    padding: 0 20px;
+
+    text-align: left;
+  }
+
+  .rd-navbar-brand{
+    margin-bottom: 30px;
+  }
+
+  // Base search style
+  .rd-navbar-search{
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 0 10px;
+
+    .rd-search{
+      position: relative;
+    }
+
+    .form-input{
+      padding-right: 50px;
+    }
+
+    .rd-search-form-submit{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      width: 50px;
+      padding: 0;
+      border: none;
+
+      background-color: transparent;
+      color: $black;
+
+      &:hover{
+        color: $primary;
+      }
+    }
+
+    .rd-search-results-live{
+      display: none;
+    }
+  }
+
+
+  // RD Navbar nav
+  .rd-navbar-nav {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      height: 8px;
+    }
+
+    li {
+      > a {
+        display: block;
+        padding: 11px 56px 11px 16px;
+        color: $rd-navbar-fixed-nav-color;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      &:hover,
+      &.active,
+      &.opened{
+        > a{
+          background: $rd-navbar-fixed-nav-active-background;
+          color: $rd-navbar-fixed-nav-active-color;
+        }
+        > .rd-navbar-submenu-toggle {
+          color: $rd-navbar-fixed-nav-active-color;
+        }
+      }
+
+      &.opened {
+        > .rd-navbar-submenu-toggle {
+          &:after {
+            transform : rotate(180deg);
+          }
+        }
+      }
+
+      & + li{
+        margin-top: 4px;
+      }
+    }
+
+    .rd-navbar-submenu-toggle {
+      cursor: pointer;
+      color: $rd-navbar-fixed-nav-color;
+
+      &::after {
+        content: '\f236';
+        position: absolute;
+        top: 22px;
+        right: 0;
+        margin-top: -22px;
+        width: 65px;
+        height: 48px;
+        font: 400 28px "Material Design Icons";
+        line-height: 48px;
+        text-align: center;
+        transition: 0.3s transform ease;
+        z-index: 2;
+      }
+    }
+  }
+
+
+  // RD navbar submenu styles
+  .rd-navbar-dropdown,
+  .rd-navbar-megamenu {
+    display: none;
+    margin-top: 4px;
+  }
+
+  .rd-navbar-submenu {
+    position: relative;
+    @extend %rd-navbar-transition;
+
+    .rd-navbar-dropdown > li > a {
+      padding-left: 30px;
+    }
+
+    .rd-navbar-dropdown li li > a,
+    .rd-navbar-megamenu ul li li > a {
+      padding-left: 48px;
+    }
+
+    &.opened {
+      > .rd-navbar-dropdown,
+      > .rd-navbar-megamenu {
+        display: block;
+      }
+    }
+  }
+}

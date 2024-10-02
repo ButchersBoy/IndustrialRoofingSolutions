@@ -1,0 +1,143 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-shop-list
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Catalog List'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-default
+    .container
+      .row.row-60.flex-lg-row-reverse
+        .col-lg-9.section-divided__main.section-divided__main-left
+          section.section-sm
+            .filter-shop-box
+              p
+                | Showing 1–12 of 15 results
+
+              .form-wrap
+                //Select 2
+                select.form-input.select-filter(data-placeholder="Default sorting" data-minimum-results-for-search="Infinity")
+                  option Default sorting
+                  option(value="2") Sort by popularity
+                  option(value="3") Sort by average rating
+                  option(value="4") Sort by newness
+                  option(value="5") Sort by price: low to high
+                  option(value="6") Sort by price: high to low
+
+            .row.justify-content-sm-center.row-70
+              .col-sm-12
+                +shop-list({
+                  href: 'single-product.html',
+                  img: 'garda-square-sideboard-for-living-and-dining-room-by-dallagnese-418x560',
+                  icon_class1: 'linear-icon-heart',
+                  icon_class2: 'linear-icon-balance',
+
+                  class_label: 'featured',
+                  label_text: 'Featured',
+
+                  tag_list_class: 'product-categories',
+                  tag_list_items: ['Living Room', 'Dining room' ,'Office' ,'Bedroom'],
+
+                  title: 'GARDA SQUARE SIDEBOARD',
+                  prices: ['48'],
+
+                  product_desc: 'This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.',
+
+                  button_class: 'button-black',
+                  button_icon_class: 'linear-icon-cart',
+                  button_text: 'Add to cart'
+                })
+
+              .col-sm-12
+                +shop-list({
+                  href: 'single-product.html',
+                  img: 'emma-chairs-and-table-for-kitchen-418x560',
+                  icon_class1: 'linear-icon-heart',
+                  icon_class2: 'linear-icon-balance',
+
+                  class_label: 'new',
+                  label_text: 'New',
+
+                  tag_list_class: 'product-categories',
+                  tag_list_items: ['Living Room', 'Dining room' ,'Office' ,'Bedroom'],
+
+                  title: 'Italian emma chairs and table wooden for kitchen',
+                  prices: ['69'],
+
+                  product_desc: 'This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.',
+
+                  button_class: 'button-gray-light-outline',
+                  button_icon_class: 'linear-icon-magic-wand',
+                  button_text: 'Select options'
+                })
+
+              .col-sm-12
+                +shop-list({
+                  href: 'single-product.html',
+                  img: 'italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-2-418x560',
+                  icon_class1: 'linear-icon-heart',
+                  icon_class2: 'linear-icon-balance',
+
+                  class_label: 'sale',
+                  label_text: 'Sale',
+
+                  tag_list_class: 'product-categories',
+                  tag_list_items: ['Living Room', 'Dining room' ,'Office' ,'Bedroom'],
+
+                  title: 'Italian furniture contemporary allumen GLASS TABLE',
+
+                  price_class:'sale-price',
+                  prices: ['45','55'],
+
+                  product_desc: 'This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.',
+
+                  button_class: 'button-black',
+                  button_icon_class: 'linear-icon-cart',
+                  button_text: 'Add to cart'
+                })
+
+              .col-sm-12
+                +shop-list({
+                  href: 'single-product.html',
+                  img: 'italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-418x560',
+                  icon_class1: 'linear-icon-heart',
+                  icon_class2: 'linear-icon-balance',
+
+                  tag_list_class: 'product-categories',
+                  tag_list_items: ['Living Room', 'Dining room' ,'Office' ,'Bedroom'],
+
+                  title: 'Italian furniture contemporary mix steel base WOODEN SET',
+                  prices: ['87'],
+
+                  product_desc: 'This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.',
+
+                  button_class: 'button-black',
+                  button_icon_class: 'linear-icon-cart',
+                  button_text: 'Add to cart'
+                })
+
+          // Pagination
+          section.section-sm
+            +pagination-classic(1,
+              [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+              null,
+              {"title": "", "href": "#"}
+            )
+
+        .col-lg-3.section-divided__aside.section__aside-left
+          include ../sections/_section-aside-sidebar-shop
+
+  // Page Footer
+  include ../sections/_footer-corporate

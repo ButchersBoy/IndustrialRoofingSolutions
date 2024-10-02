@@ -1,0 +1,16 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Header default'
+
+block page 
+  // Page header
+  include ../sections/_header-default
+
+  include ../sections/_section-posts
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

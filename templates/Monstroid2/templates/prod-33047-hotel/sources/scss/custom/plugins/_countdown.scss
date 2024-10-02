@@ -1,0 +1,107 @@
+/** @section Countdown */
+
+.countdown {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.2;
+	text-align: center;
+	@include group(15px);
+
+	@include media-breakpoint-up(md) {
+		@include group(30px);
+	}
+}
+
+.countdown-block {
+	position: relative;
+	flex: 1 1 33.33%;
+
+	@include media-breakpoint-up(sm) {
+		flex: 1 1 25%;
+	}
+}
+
+.countdown-block-seconds {
+	display: none;
+
+	@include media-breakpoint-up(sm) {
+		display: block;
+	}
+}
+
+.countdown-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-circle {
+	fill: transparent;
+}
+
+.countdown-circle-bg {
+	stroke: white;
+	stroke-width: 3px;
+}
+
+.countdown-circle-fg {
+	stroke: $primary;
+	stroke-width: 5px;
+}
+
+.countdown-counter {
+	line-height: 1;
+	letter-spacing: 0;
+}
+
+.countdown-title {
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.countdown-container {
+	max-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+* + .countdown-container {
+	margin-top: 65px * $xs-multiplier;
+}
+
+.countdown-container + * {
+	margin-top: 45px * $xs-multiplier;
+}
+
+@include media-breakpoint-down( lg ) {
+	.countdown-circle {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .countdown-container {
+		margin-top: 65px * $lg-multiplier;
+	}
+
+	.countdown-container + * {
+		margin-top: 45px * $lg-multiplier;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	* + .countdown-container {
+		margin-top: 65px;
+	}
+
+	.countdown-container + * {
+		margin-top: 45px;
+	}
+}

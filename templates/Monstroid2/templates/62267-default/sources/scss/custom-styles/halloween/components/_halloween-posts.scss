@@ -1,0 +1,60 @@
+/** @section Posts */
+
+.halloween-post {
+	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.halloween-post-media {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background-color: $halloween;
+
+	&:hover {
+		.halloween-post-img {
+			transform: scale( 1.08 );
+			opacity: .8;
+		}
+	}
+}
+
+.halloween-post-img {
+	transition: .25s;
+}
+
+.halloween-post-meta {
+	position: absolute;
+	left: 16px;
+	top: 19px;
+	padding: 2px 7px 4px;
+	font-weight: 600;
+	font-size: 8px;
+	text-transform: uppercase;
+	text-align: center;
+	color: $white;
+	background-color: $halloween;
+}
+
+.halloween-post-day {
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.halloween-post-month {
+	margin-top: -7px;
+}
+
+* + .halloween-post-title { margin-top: 19px * $halloween-xs-multiplier }
+* + .halloween-post-text { margin-top: 11px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	* + .halloween-post-title { margin-top: 19px * $halloween-lg-multiplier }
+	* + .halloween-post-text { margin-top: 11px * $halloween-lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .halloween-post-title { margin-top: 19px }
+	* + .halloween-post-text { margin-top: 11px }
+}

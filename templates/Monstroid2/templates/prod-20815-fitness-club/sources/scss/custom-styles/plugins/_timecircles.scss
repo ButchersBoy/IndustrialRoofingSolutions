@@ -1,0 +1,101 @@
+/*
+*
+* Time Circles
+*/
+
+//
+// This element is created inside your target element
+// It is used so that your own element will not need to be altered
+//
+.time_circles {
+	position: relative;
+	width: 100%;
+}
+
+//
+// This is all the elements used to house all text used
+// in time circles
+//
+.time_circles > div {
+	position: absolute;
+	top: 0 !important;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: -10px;
+	text-align: center;
+}
+
+@include media-breakpoint-up(xl) {
+	#DateCountdown {
+		width: 100%;
+	}
+}
+
+//
+// Titles (Days, Hours, etc)
+//
+.time_circles > div > h4 {
+	position: absolute;
+	left: 0;
+	top: calc(100% + 10px);
+	right: 0;
+	transform: translateY(-100%);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: $font-family-base;
+	font-weight: 500;
+	font-size: 13px !important;
+	line-height: 1.2 !important;
+	color: $gray-600;
+	text-transform: uppercase;
+
+	& + * {
+		margin-top: 0;
+	}
+}
+
+//
+// Time numbers, ie: 12
+//
+.time_circles > div > span {
+	display: block;
+	text-align: center;
+	letter-spacing: 0;
+	font-size: 24px !important;
+	font-weight: 400;
+	line-height: 1 !important;
+	color: $gray-900;
+
+	@include media-breakpoint-up(md) {
+		font-size: 34px !important;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: 48px !important;
+	}
+}
+
+%context-dark {
+	.time_circles > div > span {
+		color: $white;
+	}
+}
+
+.countdown-wrap {
+	max-width: 730px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
+
+* + .countdown-wrap {
+	margin-top: 35px;
+}
+
+.countdown-wrap + .button {
+	margin-top: 40px;
+}

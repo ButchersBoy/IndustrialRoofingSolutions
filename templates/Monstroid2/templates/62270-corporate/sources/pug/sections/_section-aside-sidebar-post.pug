@@ -1,0 +1,63 @@
+// Categories
+section.section-sm
+  h5 Categories
+  ul.list-linked
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+    li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-sm
+  h5 Latest Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2016
+          span.post-inline__author by Brian Williamson
+
+        p.post-inline__link: a(href=postLink) No Coding Skill Required. Myths and Facts.
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2016
+          span.post-inline__author by Brian Williamson
+
+        p.post-inline__link: a(href=postLink) Getting to another level of design and functionality.
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2016
+          span.post-inline__author by Brian Williamson
+
+        p.post-inline__link: a(href=postLink) Creating Portfolio.
+='\n'
+
+// Tags
+section.section-sm
+  h5 Tags
+  ul.list-tags
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Ultimate Font Collection
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+='\n'
+
+// Flickr
+section.section-sm
+  h5 Flickr
+  .flickr.grid-4(data-flickr-tags='html-m2')
+    - for(var i = 0; i < 8; i++)
+      .flickr-item(data-type="flickr-item")
+        a.thumb-minimal(data-image_b="href", data-lightgallery='item')
+          figure
+            img(src='images/_blank.png', data-image_s="src" data-title="alt", width='75', height='75', alt='')
+          .thumb-minimal__overlay
+='\n'

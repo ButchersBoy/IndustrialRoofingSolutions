@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Single Service Page'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.section-md.bg-gray-3
+		.container
+			h3.text-center.heading-divider Market Research Consulting
+			+jpg('single-services-01-1354x560')
+			.box-single-services 
+				p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand, work mostly with the SMB companies. Our team uncovers market opportunities, and sometimes, marketing challenges, that remain unseen by competitors. Our market research gathers solid, factual, defensible information that is relevant to your company's niche. Not to the needs of an "average" company in your industry. We combine quantitative market research (statistical analysis, graphs, charts) and qualitative market research (interviews, articles, opinions). Altogether it gives a balanced and accurate picture. Here are a few examples of projects we have completed:
+				ul.list.marked-list 
+					li Survey design and execution (invite respondents, collect results, analyze, report)
+					li Phone or in-person interviews of customers, employees, executives, business owners, industry experts, etc.
+					li Focus groups, roundtables, and executive forums
+					li Market opportunity assessments (evaluate the potential for your ideas, products, services, or processes)
+					li Competitor analysis / competitive intelligence studies
+					li "Blue sky" sessions on product / application / market possibilities, particularly in the area of technology
+				h4 Why Market Research is Important
+				p Accurate market research is the foundation for every business or marketing plan. CorpoRational can help you gain a much deeper understanding of:
+				ul.list.marked-list
+					li Market opportunities 
+					li Existing customers
+					li Prospects
+					li Competitors
+					li Employees
+					li Industry trends
+					li Environmental or regulatory risks
+				h4 We Help You Focus
+				p Large market research firms research specific industries and generate standardized industry reports. The problem for most small businesses is that very few of them fit neatly into these industry categories. That's where we come in. Instead of generating canned industry reports, everything we do is customized for each client. Effective marketing is all about targeting and focus. Better targeting means less waste, lower expenses, and higher profits.
+				ul.list.marked-list
+					li Conduct a comprehensive market opportunity assessment - Assess your markets and current market positions (market size and share of market, channels, growth trends, threats, and opportunities)
+					li Identify customer needs and determine which market segments hold the most, and least, attractive profit potential.
+					li Find out what customers and prospects think about your new customer service procedures, your sign-up process, your newest product, your new tag-line, your invoicing process, etc.
+					li Identify regulatory, political, and demographic trends that could create problems and opportunities for your business.
+					li Develop a thorough understanding of competitors - Who leads and who follows in this space? How much market share does each player have? What are their strengths and weaknesses? How do they differentiate themselves? How does their pricing strategy compare with yours? How do they market their products and services? How does their brand equity compare to yours?
+					li Identify opportunities to use your strengths and exploit competitor weaknesses.
+				a.button.button-gradient-intro(href='booking.html') Book an Appointment
+					span.button-gradient-intro__overlay
+	// Page Footer
+	include ../sections/_footer-corporate
+

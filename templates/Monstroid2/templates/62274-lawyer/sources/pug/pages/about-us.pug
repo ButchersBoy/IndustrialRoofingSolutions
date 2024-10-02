@@ -1,0 +1,232 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'About Us'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-accent-2
+    +parallax({ 
+      "src": "images/parallax-2.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-md-center
+            .col-md-10.col-xl-8
+              h1.heading-decorated.heading-decorated_center About
+  ='\n'
+
+  // Intro
+  section.section-md.bg-default.text-center
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3.heading-decorated Welcome to Jerry Robinson's Law office
+          h6 Founded by Steven Pfeiffer, Lesley Dingle and Gerald Harrison back in 1989, today their Houston-based law firm is currently the #1 in both yearly cases dealt with and the percentage of all those cases being won.
+          p But that kind of success does not come by, just when you sit idly or do not have strict work ethic principles being put into practice...
+  ='\n'
+
+  // Our Values
+  section.section-md.bg-accent-2.text-center
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-sm-12
+          h3.heading-decorated We've Always Cherished the Three Pillars Which our #[br.d-none.d-md-block] Company has Always Stood Upon:
+        .col-sm-12
+          .row.row-40
+            .col-md-6.col-lg-4
+              // Blurb tiny
+              article.blurb-tiny.blurb-tiny_centered
+                .blurb-tiny__icon.linear-icon-medal-empty
+                h5.blurb-tiny__title A Commitment to Excellence
+
+            .col-md-6.col-lg-4
+              // Blurb tiny
+              article.blurb-tiny.blurb-tiny_centered
+                .blurb-tiny__icon.linear-icon-balance
+                h5.blurb-tiny__title A Passion for Justice
+
+            .col-md-6.col-lg-4
+              // Blurb tiny
+              article.blurb-tiny.blurb-tiny_centered
+                .blurb-tiny__icon.linear-icon-thumbs-up
+                h5.blurb-tiny__title An urge for fair pricing
+        .col-xl-8
+          p These three have proven to:  Earn our clients' trust with us;   Build our reputation on a good soil:   Attract thousands of individuals and businesses, all of whom (98%) have successfully dealt with their legal conundrums with our timely and diligent help...
+  ='\n'
+
+  // We Stand by:
+  section.section-lg.bg-gray-lighter.text-center
+    .container
+      h3.heading-decorated We Stand by:
+      ul.list-indexed
+        li
+          .list-indexed__index
+          h5.list-indexed__title A Commitment to Excellence
+          p While the yearly number of cases which we take totals to an insurmountable number, unparalleled by any other Houston, TX law firm, our percentage of wins is record-breaking too... Just to drop some statistics here, in more than 9000 cases that we have ever taken on, a whopping 98% of those (which is 9800+) were the cases which we eventually won...
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title A Passion for Justice
+          p With our legal principles and our desire for justice being our first and foremost value, we always try to diversify the range of cases which we take on. That is perfectly shown when you notice that our civil/business cases are divided absolutely evenly. That means that besides helping good, big and small businesses we also help thousands of small men and women!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title An Urge for Fair Pricing
+          p On par with our passion for justice and excellence, the third work ethic which we stand by is the fair pricing. While we have the most winning cases as opposed to any other Houston, TX law firm, we've also got the lowest pricing among them all. That is due to the simple fact, that in our opinion, a decent lawyer should charge a price that is nation-wide affordable!
+  ='\n'
+
+  // Lawyers and Paralegals
+  section.section-lg.bg-default.text-center
+    .container
+      h3.heading-decorated Lawyers and Paralegals
+      .row.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('jerry-robinson-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Jerry Robinson
+              p.thumb__subtitle CEO Lawyer
+              p Jerry represents and counsels owners and investors in a range of complex commercial real estate transactions throughout the United States, including the representation of owners
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('leslie-gross-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Leslie Gross
+              p.thumb__subtitle Lawyer
+              p Leslie Lesley is our managing partner, co-founder, and Texas' leading civil litigation lawyer... She is a proof that female lawyers are just as good and
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('dana-sims-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Dana Sims
+              p.thumb__subtitle Lawyer
+              p Dana is Lesley's brother, an Ivy League graduate and a proven lawyer, who've worked both in NYC and Texas during his 45 years long career...
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('kimberly-barker-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Kimberly Barker
+              p.thumb__subtitle Lawyer
+              p Kimberly comes from a real legal dynasty. Just like the previous 7 generations of her kin, she's a lawyer and a pretty good one. Her
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+  ='\n'
+
+  section.rd-parallax.bg-accent-2.text-center
+    .rd-parallax-layer(data-speed='0.4', data-type='media', data-url='images/parallax-5.jpg')
+    .rd-parallax-layer(data-speed='0', data-type='html')
+      .section-xl.text-center
+        .container
+          .row.justify-content-sm-center.row-60
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.45", data-gradient="#cca776, #cca776", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title A percentage of individual cases that we take yearly, on average
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.60", data-gradient="#cca776, #cca776", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title A share of commercial/business cases that we process yearly
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.80", data-gradient="#cca776, #cca776", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title This is how many cases we end up winning, either civil or commercial
+  ='\n'
+
+  // Call to Action
+  section.section-md.bg-accent.text-center
+    .container
+      h3.heading-decorated Are You a Senior at a Law School or a Post-graduate #[br.d-none.d-md-block] with at Least a Masters Degree in Law?
+      p.heaing-6 If either of the answers is yes, than we've got a job opening waiting for you to apply!
+      a.button.button-black(href='contacts.html') Careers
+
+  ='\n'
+
+  // Contact Us
+  section.section-lg.bg-default.text-center
+    .container
+      h3.heading-decorated
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3 Contact Us
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-telephone
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+              label.form-label(for="contact-phone") Your phone
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

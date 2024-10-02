@@ -1,0 +1,169 @@
+/** @section Buttons */
+
+// Button General Styles
+.btn {
+	position: relative;
+	overflow: hidden;
+	text-transform: $btn-text-transform;
+	text-overflow: ellipsis;
+	letter-spacing: $btn-letter-spacing;
+	min-width: 160px;
+}
+
+.page {
+	.btn {
+		&:not([class*='shadow']) {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active:focus,
+		&:not(:disabled):not(.disabled).active:focus{
+			&:not([class*='shadow']) {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+// Appearance style
+.btn-primary {
+	@include btn-variant($dark, transparent, $primary, $white, $primary, $primary);
+}
+
+.btn-primary-fill {
+	@include btn-variant($white, $primary, $primary, $white, $dark, $dark);
+}
+
+// Outline
+.btn-default-outline {
+	@include btn-variant($dark, transparent, $dark, $white, $primary, $primary);
+}
+
+.btn-white {
+	@include btn-variant($dark, $white, $white, $white, $dark, $dark);
+}
+
+.bg-dark {
+	.btn-white {
+		@include btn-variant($dark, $white, $white, $white, $secondary, $secondary);
+	}
+}
+
+.btn-ghost {
+	border: 0;
+	background-color: transparent;
+
+	&:hover {
+		color: $white;
+		background: $primary;
+	}
+}
+
+// Btn with shadow
+.btn-shadow {
+	box-shadow: 0 9px 21px 0 rgba($gray-300, 0.15);
+
+	&:hover {
+		box-shadow: 0 9px 10px 0 rgba($gray-300, 0.15);
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: none;
+	}
+}
+
+// Button effects
+.btn-ujarak {
+	position: relative;
+	z-index: 0;
+	transition: background .4s, border-color .4s, color .4s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $primary;
+		z-index: -1;
+		opacity: 0;
+		transform: scale3d(0.7, 1, 1);
+		transition: transform 0.42s, opacity 0.42s;
+		border-radius: inherit;
+	}
+
+	&,
+	&::before {
+		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	}
+
+	&:hover {
+		transition: background .4s .4s, border-color .4s 0s, color .2s 0s;
+
+		&::before {
+			opacity: 1;
+			transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+		}
+	}
+}
+
+// Button Shapes
+.btn-circle {
+	border-radius: 30px;
+}
+
+.btn-round-1 {
+	border-radius: 5px;
+}
+
+.btn-round-2 {
+	border-radius: 10px;
+}
+
+.btn-block {
+	width: 100%;
+}
+
+// Button Icon styles
+.btn-icon {
+	font-size: 1.3em;
+	margin: 0 5px;
+
+	&::before {
+		vertical-align: middle;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.btn-group-1 {
+	@include group( 30px, 20px );
+
+	.btn {
+		margin-top: 0;
+	}
+}
+
+* + .btn-group-1 {
+	margin-top: 60px * $xs-multiplier;
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .btn-group-1 {
+		margin-top: 60px * $lg-multiplier;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .btn-group-1 {
+		margin-top: 60px;
+	}
+}

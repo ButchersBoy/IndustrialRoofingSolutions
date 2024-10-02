@@ -1,0 +1,218 @@
+/** @section Pricing */
+
+.halloween-pricing {
+	position: relative;
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 20px;
+	text-align: left;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 13%;
+		content: '';
+		border-color: $halloween-dark;
+		border-style: solid;
+		pointer-events: none;
+		transition: .25s;
+	}
+
+	&::before {
+		left: 0;
+		border-width: 2px 0 2px 2px;
+	}
+
+	&::after {
+		right: 0;
+		border-width: 2px 2px 2px 0;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			width: 22%;
+		}
+	}
+}
+
+.halloween-pricing-title {
+	font-weight: 600;
+	font-size: 30px;
+	color: $halloween-dark;
+}
+
+.halloween-pricing-body {
+	padding-top: 35px * $halloween-xs-multiplier;
+	border-top: 1px solid $gray-200;
+}
+
+.halloween-pricing-value {
+	font-weight: 700;
+	font-size: 50px;
+	color: $halloween;
+}
+
+.halloween-pricing-value-units {
+	font-weight: 400;
+	font-size: .37em;
+	color: $halloween-dark;
+}
+
+.halloween-pricing-value-meta {
+	color: $halloween;
+}
+
+.halloween-pricing-list {
+	color: $halloween-dark;
+
+	> li {
+		padding-left: 35px;
+	}
+
+	> li + li {
+		margin-top: 26px * $halloween-xs-multiplier;
+	}
+}
+
+.halloween-pricing-btn {
+	width: 100%;
+}
+
+.halloween-pricing-footer {
+	text-align: center;
+}
+
+* + .halloween-pricing-title { margin-top: 8px * $halloween-xs-multiplier }
+* + .halloween-pricing-subtitle { margin-top: 5px }
+* + .halloween-pricing-body { margin-top: 24px * $halloween-xs-multiplier }
+* + .halloween-pricing-list { margin-top: 42px * $halloween-xs-multiplier }
+* + .halloween-pricing-btn { margin-top: 42px * $halloween-xs-multiplier }
+* + .halloween-pricing-footer { margin-top: 27px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	.halloween-pricing {
+		padding: 40px 30px;
+	}
+
+	.halloween-pricing-body {
+		padding-top: 35px * $halloween-lg-multiplier;
+	}
+
+	.halloween-pricing-title {
+		font-size: 36px;
+	}
+
+	.halloween-pricing-value {
+		font-size: 66px;
+	}
+
+	.halloween-pricing-list {
+		> li + li {
+			margin-top: 26px * $halloween-lg-multiplier;
+		}
+	}
+
+	* + .halloween-pricing-title { margin-top: 8px * $halloween-lg-multiplier }
+	* + .halloween-pricing-body { margin-top: 24px * $halloween-lg-multiplier }
+	* + .halloween-pricing-list { margin-top: 42px * $halloween-lg-multiplier }
+	* + .halloween-pricing-btn { margin-top: 42px * $halloween-lg-multiplier }
+	* + .halloween-pricing-footer { margin-top: 27px * $halloween-lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.halloween-pricing {
+		padding: 30px 58px 40px;
+	}
+
+	.halloween-pricing-label {
+		font-size: 17px;
+	}
+
+	.halloween-pricing-body {
+		padding-top: 35px;
+	}
+
+	.halloween-pricing-value-meta {
+		font-size: 17px;
+	}
+
+	.halloween-pricing-list {
+		> li {
+			padding-left: 45px;
+		}
+
+		> li + li {
+			margin-top: 26px;
+		}
+	}
+
+	.halloween-pricing-footer {
+		font-size: 17px;
+	}
+
+	* + .halloween-pricing-title { margin-top: 8px }
+	* + .halloween-pricing-subtitle { margin-top: 5px }
+	* + .halloween-pricing-body { margin-top: 24px }
+	* + .halloween-pricing-list { margin-top: 42px }
+	* + .halloween-pricing-value-meta { margin-top: -7px }
+	* + .halloween-pricing-btn { margin-top: 42px }
+	* + .halloween-pricing-footer { margin-top: 27px }
+}
+
+.halloween-pricing-accent {
+	padding: 0;
+	box-shadow: 5px 8px 28px rgba( $gray-900, 0.1 );
+	transition: .25s;
+
+	&::before,
+	&::after {
+		display: none;
+	}
+
+	&:hover {
+		transform: translateY( -10px );
+	}
+
+	.halloween-pricing-header {
+		padding: 30px 20px 20px;
+		background-color: $halloween;
+
+		* {
+			color: $white;
+		}
+	}
+
+	.halloween-pricing-body {
+		margin: 0;
+		padding: 20px 20px 30px;
+		border-top: none;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.halloween-pricing-accent {
+		.halloween-pricing-header {
+			padding: 40px 30px 30px;
+		}
+
+		.halloween-pricing-body {
+			padding: 30px 30px 40px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.halloween-pricing-accent {
+		.halloween-pricing-header {
+			padding: 42px 61px 24px;
+		}
+
+		.halloween-pricing-body {
+			padding: 28px 61px 41px;
+		}
+	}
+}

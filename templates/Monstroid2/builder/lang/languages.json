@@ -1,0 +1,18 @@
+{
+  "en": {
+    "file": "en.json",
+    "name": "English"
+  },
+  "ru": {
+    "file": "ru.json",
+    "name": "Русский"
+  },
+  "fra": {
+    "file": "fra.json",
+    "name": "Français"
+  },
+  "de": {
+    "file": "de.json",
+    "name": "Deutsch"
+  }
+}

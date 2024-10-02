@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'Accordion'
+
+block page
+	// Page header
+	include ../sections/_header
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			// Accordion
+			#accordion2(role='tablist')
+				+card({
+					parentId: "accordion2",
+					title:   "Exterior Designer"
+				})
+					p Adipiscing inciderint est in. Ius nusquam oportere et, ius ea mazim definiebas scribentur, ne putent verterem necessitatibus quo. No quem nulla graece quo. Duo erat dicat consequuntur no, sed in graeco lucilius omittantur, vim inani saperet definiebas te. Oporteat tractatos nam cu, et eam idque putent tibique. Te wisi eleifend electram per, has dicant deterruisset at.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion2",
+					title:   "Landscape Designer"
+				})
+					p Eu dico principes consequat his. Euismod constituam sed te. At est sensibus scriptorem, sint aperiam volumus eam ut, pro audire euismod necessitatibus ei. An tale veri errem duo, no quod probatus adipiscing mei. Eos graeci recusabo eu, tempor nostrud admodum has id.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion2",
+					title:   "Painter"
+				})
+					p Appetere abhorreant duo no, ne elit voluptua vim, iisque sensibus vim id. Cu tation appetere patrioque pri, mel ad oratio eirmod. No errem assueverit nam, mei error quidam rationibus an. Te eos fabulas suscipiantur, omnesque expetenda instructior qui ut.
+					a(href='#').button.button-primary APPLY NOW
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer

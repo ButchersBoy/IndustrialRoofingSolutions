@@ -1,0 +1,330 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+include ../components/_ui-box-classic
+include ../components/_ui-list-classic
+include ../components/_ui-post-classic
+include ../components/_ui-quote-modern
+include ../components/_ui-box-pricing
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+	// Page Header
+	include ../sections/_header-classic
+	='\n'
+	
+	section.section.bg-gray-900.box-custom-1
+		.box-custom-1-aside
+			ul.box-custom-1-list
+				li.wow.fadeInLeft(data-wow-delay='.5s'): a.link.link-social(href='#'): .icon.novi-icon.fa-facebook
+				li.wow.fadeInLeft(data-wow-delay='.6s'): a.link.link-social(href='#'): .icon.novi-icon.fa-youtube-play
+				li.wow.fadeInLeft(data-wow-delay='.7s'): a.link.link-social(href='#'): .icon.novi-icon.fa-instagram
+		.box-custom-1-main(style='background-image: url(images/home-01-1676x731.jpg)')
+			.block-sm
+				h2.wow.fadeInRight(data-wow-delay='.5s') Interior design and decor <br> for your home
+				p.wow.fadeInRight(data-wow-delay='.6s') Our team creates comfortable spaces for our clients. We’ve been designing your everyday life and work through great ideas since 1999.
+				a.button.button-primary.button-shadow.wow.fadeInRight(data-wow-delay='.7s' href='#') Free consultation
+	='\n'
+	
+	section.section.section-lg.bg-white.bg-img-custom#about(style='background-image: url(images/home-16-768x450.png)')
+		.container.container-custom-left
+			.row.justify-content-between.row-60.row-md-30.flex-wrap-reverse.flex-lg-wrap
+				.col-lg-7
+					.row.row-41
+						.col-xs-4.maw-29
+							.row.row-41
+								.col-12
+									.box-custom-3.wow.fadeInLeft(data-wow-delay='.7s')
+										+jpg('home-11-226x261').mt-112
+								.col-12
+									.box-custom-3.wow.fadeInLeft(data-wow-delay='.8s')
+										+jpg('home-12-226x564')
+						.col-xs-8
+							.row.row-41
+								.col-12
+									.box-custom-3.wow.fadeInLeft(data-wow-delay='.5s')
+										+jpg('home-13-560x564')
+										.box-custom-3-container: .box-custom-3-wrap: .box-custom-3-item
+											p.box-custom-3-name Alice Merton
+											p.box-custom-3-position Founder of “Interia”
+								.col-md-7
+									.box-custom-3.box-custom-3-border.wow.fadeInLeft(data-wow-delay='.6s')
+										.box-custom-3-border-dashed
+										.box-custom-3-border-angel
+										+jpg('home-14-257x261')
+				.col-lg-5.col-xxl-4
+					.box-custom-2
+						h2.wow.fadeInRight(data-wow-delay='.5s') Why Choose Us
+						p.wow.fadeInRight(data-wow-delay='.6s') Besides great interior design, there are lots of reasons to choose Interia. Here are some of the most popular ones.
+						ul.list.index-list.list-classic-wrap
+							+list-classic({
+								icon: 'linearicons-users2 icon-xl',
+								title: 'Professional Team',
+								description: 'Our team includes only the best decorators and interior designers in the industry.'
+							}).wow.fadeInRight(data-wow-delay='.7s')
+							
+							+list-classic({
+								icon: 'linearicons-lamp icon-lg',
+								title: 'Unusual Ideas',
+								description: 'Our designers generate various yet always original ideas that will surely fit your needs.'
+							}).wow.fadeInRight(data-wow-delay='.8s')
+							
+							+list-classic({
+								icon: 'linearicons-heart icon-lg',
+								title: 'Made with Respect',
+								description: 'All our work is built around respect to our clients, great service, and creativity.'
+							}).wow.fadeInRight(data-wow-delay='.9s')
+						a.button.button-primary.button-shadow.wow.fadeInRight(data-wow-delay='1s' href='#') Get a Quote
+	='\n'
+	
+	section.section.section-sm.bg-gray-900.novi-bg.novi-bg-img.text-center(style='background-image: url(images/bg-price-1920x1128.png)')
+		.container
+			.row.justify-content-center.wow.fadeInDown(data-wow-delay='.25s')
+				.col-lg-4.col-md-7.col-sm-8
+					h2 Design options for your budget
+					p.pretitle.text-primary Choose your budget
+				.col-lg-9
+					.kraken-range
+					button.button.button-icon.button-icon-right.button-primary.button-shadow(data-custom-toggle='.owl-pagination-custom' data-custom-toggle-hide-on-blur="true")
+						span.icon.mdi.mdi-chevron-down
+						| Budget
+					.owl-pagination-custom#owl-pagination-custom
+						
+						.data-dots-custom(data-owl-item='0'): span $10 000
+						.data-dots-custom(data-owl-item='1'): span $30 000
+						.data-dots-custom(data-owl-item='2'): span $50 000
+						.data-dots-custom(data-owl-item='3'): span $80 000
+				
+			.owl-carousel.owl-carousel-range(
+				data-items='1'
+				data-stage-padding='0'
+				data-loop='false'
+				data-margin='0'
+				data-mouse-drag="false"
+				data-dots-custom='#owl-pagination-custom'
+			)
+				+box-pricing({
+					price: '$10 000',
+					images: [
+							'home-02-370x222',
+							'home-03-370x222',
+							'home-04-370x222'
+					],
+					items: [
+						'Flooring',
+						'Decorative accessories',
+						'Shipping fees',
+						'Window treatments',
+						'Labor costs',
+						'Applicable taxes'
+					]
+				})
+				+box-pricing({
+					price: '$30 000',
+					images: [
+							'home-02-370x222',
+							'home-03-370x222',
+							'home-04-370x222'
+					],
+					items: [
+						'Decorative accessories',
+						'Flooring',
+						'Window treatments',
+						'Shipping fees',
+						'Applicable taxes',
+						'Labor costs'
+					]
+				})
+				+box-pricing({
+					price: '$50 000',
+					images: [
+							'home-02-370x222',
+							'home-03-370x222',
+							'home-04-370x222'
+					],
+					items: [
+						'Flooring',
+						'Decorative accessories',
+						'Shipping fees',
+						'Window treatments',
+						'Labor costs',
+						'Applicable taxes'
+					]
+				})
+				+box-pricing({
+					price: '$80 000',
+					images: [
+							'home-02-370x222',
+							'home-03-370x222',
+							'home-04-370x222'
+					],
+					items: [
+						'Decorative accessories',
+						'Flooring',
+						'Window treatments',
+						'Shipping fees',
+						'Applicable taxes',
+						'Labor costs'
+					]
+				})
+	='\n'
+	
+	section.section.section-md-2.bg-white.pb-0#portfolio
+		.bg-custom.novi-bg.novi-bg-img.bg-gray-200
+		.container
+			.row.row-30
+				.col-xl-6.col-md-6.wow.fadeInLeft(data-wow-delay='.5s')
+					h2 Our Portfolio
+				.col-xl-5.col-md-6.wow.fadeInRight(data-wow-delay='.5s')
+					p All our projects are unique and designed to last. Take a look at our recent works to find it out for yourself.
+		.container.container-custom-right
+			// Owl Carousel
+			.owl-carousel.owl-carousel-classic(
+				data-items='1'
+				data-sm-items='1'
+				data-md-items='2'
+				data-lg-items='3'
+				data-xl-items='3'
+				data-xxl-items='3'
+				data-nav='true'
+				data-loop='true'
+				data-margin='30'
+				data-mouse-drag="false"
+				data-center="true"
+				data-autoplay='true'
+				)
+				+post-classic({
+					img: 'home-05-494x400',
+					title: 'Modern Loft Room',
+					description: ['2018', 'Residential', 'New York']
+				})
+				+post-classic({
+					img: 'home-06-494x400',
+					title: 'Sunny Valley Hotel',
+					description: ['2017', 'Custom Project', 'Los Angeles ']
+				})
+				+post-classic({
+					img: 'home-07-494x400',
+					title: 'Swanson Entertainment Center',
+					description: ['2016', 'Commercial', 'Seattle']
+				})
+				+post-classic({
+					img: 'home-08-494x400',
+					title: 'Jane McMillan’s House',
+					description: ['2015', 'Residential', 'Atlanta']
+				})
+				+post-classic({
+					img: 'home-09-494x400',
+					title: 'Divine Concert Hall',
+					description: ['2015', 'Commercial', 'Sacramento ']
+				})
+				+post-classic({
+					img: 'home-10-494x400',
+					title: 'Barracuda Restaurant',
+					description: ['2014', 'Custom Project', 'Chicago']
+				})
+				+post-classic({
+					img: 'home-11-494x400',
+					title: 'GMD Travel Agency',
+					description: ['2014', 'Commercial', 'Dallas']
+				})
+				+post-classic({
+					img: 'home-12-494x400',
+					title: 'Social Support Center',
+					description: ['2013', 'Custom Project', 'San Diego']
+				})
+				+post-classic({
+					img: 'home-13-494x400',
+					title: 'Boston Airport',
+					description: ['2013', 'Commercial', 'Boston']
+				})
+	='\n'
+	
+	section#contacts.section.section-sm.bg-gray-900.novi-bg.novi-bg-img.pb-0.text-center(style='background-image: url(images/bg-price-1920x1128.png)')
+		.container
+			.row.row-fix.justify-content-center.wow.fadeInDown(data-wow-delay='.25s')
+				.col-lg-6.col-md-8
+					h2 Book a free designer consultation
+					p.pretitle.text-primary A great way to your new interior
+			.row.row-50.justify-content-center
+				.col-md-4
+					+box-classic({
+						icon: 'linearicons-bubble-text',
+						text: 'Discuss every aspect of your interior with one of our designers'
+					}).wow.fadeInLeft(data-wow-delay='.5s')
+				.col-md-4
+					+box-classic({
+						icon: 'linearicons-calculator',
+						text: 'Let us plan and calculate every part of your new interior'
+					}).wow.fadeInDown(data-wow-delay='.5s')
+				.col-md-4
+					+box-classic({
+						icon: 'linearicons-star',
+						text: 'You can also ask questions and suggest any project changes'
+					}).wow.fadeInRight(data-wow-delay='.5s')
+			.row.row-fix.align-items-center.mt-112
+				.col-12
+					.box-cta.bg-gray-700.novi-bg
+						.row.row-30
+							.col-xl-10
+								form.rd-form.rd-mailform.rd-form-inline(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+									.form-wrap
+										input#contact-2-name.form-input(type='text' name='name' data-constraints='@Required')
+										label.form-label(for='contact-2-name') Name
+									.form-wrap
+										input#contact-2-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+										label.form-label(for='contact-2-email') E-mail
+									.form-button
+										button.button.button-primary.button-shadow(type="submit") Send request
+							.col-xl-2
+								.box-cta-text
+									p.small or call us now
+									h4: a(href='tel:#') 1-800-901-234
+	='\n'
+	
+	section.section.section-xs.bg-gray-200
+		.container
+			.row.row-50.justify-content-between.align-items-center
+				.col-xl-6.col-lg-6.wow.fadeInLeft(data-wow-delay='.5s')
+					// Owl Carousel
+					.owl-carousel.owl-carousel-modern(
+						data-items='1'
+						data-dots='true'
+						data-stage-padding='0'
+						data-loop='false'
+						data-margin='0'
+						data-mouse-drag="false"
+						data-autoplay='true'
+					)
+						+quote-modern({
+							img: 'home-08-100x100',
+							name: 'Kate Peterson',
+							text: 'Interia designed my home from top to bottom, and 5 years later I still appreciate their work. They designed built-in cabinetry that works perfectly. They are the most reliable designers I’ve ever met.'
+						})
+						+quote-modern({
+							img: 'home-09-100x100',
+							name: 'Peter Smith',
+							text: 'This agency was highly recommended to me. The sensitivity, knowledge, vision and ultimate execution this firm brought to the table was tremendous. They have enormously talented designers.'
+						})
+						+quote-modern({
+							img: 'home-10-100x100',
+							name: 'Jane Williams',
+							text: 'I chose Interia because of their knowledge, experience and attention to detail that has proven invaluable to me in creating a superior finished project, which attracts more clients to my shop.'
+						})
+				.col-xl-5.col-lg-6.wow.fadeInRight(data-wow-delay='.5s')
+					.box-modern.novi-bg
+						p.box-modern-title companies that trust us
+						ul.box-modern-list
+							li: +png('brand-01-94x34')
+							li: +png('brand-02-82x44')
+							li: +png('brand-03-96x41')
+							li: +png('brand-04-145x32')
+							li: +png('brand-05-78x45')
+							li: +png('brand-06-108x68')
+	
+	// Page Footer
+	include ../sections/_footer-classic

@@ -1,0 +1,137 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+	- pageName = 'Prices'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-center.text-center
+				.col-md-10.col-xl-8
+					h1 Cost of car rental
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor imperdiet velit a consequat. Mauris lacinia sodales lacus, eget consequat.
+			.row.row-20.row-sm-40
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '4 hours',
+						price: '$12'
+					})
+						ul.list-marked.list-marked-sm
+							li Sedans & hatchbacks
+							li Unlimited mileage
+							li Basic insurance
+							li Free cancellation
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 day',
+						price: '$20'
+					})
+						ul.list-marked.list-marked-sm
+							li Coupes and universals
+							li Protection against injuries
+							li GPS
+							li Additional driver
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 week',
+						price: '$78'
+					})
+						ul.list-marked.list-marked-sm
+							li Minivans & pickups
+							li Child seat
+							li Snow chains
+							li Smart cover protection
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 month',
+						price: '$299'
+					})
+						ul.list-marked.list-marked-sm
+							li Roadsters & sport cars
+							li Total protection
+							li Car pooling up to 5 drivers
+							li Animal care
+	='\n'
+
+	// Testimonials
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			h2.text-center What our customers #[br]have to say
+			p.text-center Take a look at the recent testimonials submitted by our clients.
+			// Owl Carousel
+			.owl-carousel(data-autoplay='false' data-items='1', data-md-items='2', data-loop='true', data-margin='20', data-sm-margin='40', data-dots='true')
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q This was the most friendly, quick, and efficient experiences that I have ever experienced. I will definitely be using your services again.
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 5.0
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-1-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Adam Jordan
+							p.quote-classic__small June 21, 2023
+
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q My rental was upgraded with no extra charge, they had a shuttle running around the clock with helpful staff and checking out was quick and painless. The car was clean, fully fueled, stocked with water bottles and a guide to LA, so no extra stops were needed.
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 4.5
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-2-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Jerome Bell
+							p.quote-classic__small June 21, 2023
+
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q Cras tristique semper convallis. Cras efficitur sagittis erat. Fusce pellentesque ligula vitae tellus facilisis fringilla. Pellentesque sit amet massa...
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 5.0
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-4-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Emma Wilson
+							p.quote-classic__small June 23, 2023
+	='\n'
+
+	+divider
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-7.text-center
+					h2 The most popular car brands that we rent
+			.owl-carousel.owl-offset-2(data-autoplay='false' data-items='1', data-sm-items='2', data-md-items='4', data-xl-items='6', data-loop='true', data-margin='20', data-sm-margin='40', data-dots='true')
+				a.link-image-2(href='#'): +img('brand-1-160x100.png')
+				a.link-image-2(href='#'): +img('brand-2-160x100.png')
+				a.link-image-2(href='#'): +img('brand-3-160x100.png')
+				a.link-image-2(href='#'): +img('brand-4-160x100.png')
+				a.link-image-2(href='#'): +img('brand-5-160x100.png')
+				a.link-image-2(href='#'): +img('brand-6-160x100.png')
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

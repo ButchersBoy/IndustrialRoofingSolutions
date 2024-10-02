@@ -1,0 +1,112 @@
+section.section-md
+  .row.row-60.justify-content-md-between
+    .col-md-5.text-md-left
+      a(href=postLink).unit.unit-horizontal.unit-spacing-md.align-items-center
+        .unit__left
+          span.icon.icon-md.linear-icon-arrow-left
+        .unit__body
+          p.small 5 Things to Know Before You Buy an HTML Template
+          
+    .col-md-5.text-md-right
+      a(href=postLink).unit.unit-horizontal.unit-spacing-md.align-items-center
+        .unit__body
+          p.small 5 Things to Know Before You Buy an HTML Template 
+        .unit__right
+          span.icon.icon-md.linear-icon-arrow-right
+
+section.section-md  
+  h5 Latest Posts
+  .row.row-60
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('post-minimal-1-418x315')
+  
+        .post-classic-title
+          h5: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+  
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('post-classic-1-886x668')
+  
+        .post-classic-title
+          h5: a(href=postImage) Getting to another  level of design and functionality.
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+          
+section.section-md
+  // Blurb minimal
+  article.blurb: .unit.unit-xs-horizontal.unit-spacing-md
+    .unit__left
+      +jpg('timeline-1-109x109', 'rounded-circle')
+    .unit__body
+      p.blurb__title About the author
+      p.small Mr.Williamson was born in one of Detroit’s poorest blocks, all before pursuing his successful managerial career in the future. For him, the breakthrough happened when he was able to get on Harvard University’s Law School list. After graduating from there, he was working for a few years for a number of multi-million dollar corporations, climbing up the corporate ladder and...
+
+section.section-md
+  h5 3 Comments
+
+  .box-comment
+    .unit.unit-xs-horizontal.unit-spacing-md
+      .unit__left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          h6 Adam Smith
+          time(datetime='2017') Jul 18, 2016
+          p With all its functionality and stylish design, the price for this one is a bargain!
+          a(href='#') Reply
+
+  .box-comment.box-comment-reply
+    .unit.unit-xs-horizontal.unit-spacing-md
+      .unit__left
+        +jpg('box-comment-1-70x70', 'rounded-circle')
+      .unit__body(style='width: 100%')
+        .box-comment__body
+          h6 Brian Williamson
+          time(datetime='2017') Jul 18, 2016
+          p Awesome theme, that is universal for absolutely any kind of business!
+          a(href='#') Reply
+
+  .box-comment
+    .unit.unit-xs-horizontal.unit-spacing-md
+      .unit__left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          h6 Tom
+          time(datetime='2017') Jul 18, 2016
+          p This HTML Template is the best one I’ve seen this year!
+          a(href='#') Reply
+
+section.section-md
+  h5 Leave a reply
+
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+    .form-wrap
+      input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+      label.form-label(for="contact-name") Your name
+
+    .form-wrap
+      input#contact-email-form.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email-form") Your e-mail
+
+    .form-wrap
+      input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+      label.form-label(for="contact-phone") Your phone
+
+    .form-wrap
+      textarea#contact-message.form-input(name="message" data-constraints="@Required")
+      label.form-label(for="contact-message") Your message
+
+    button(type="submit").button.button-primary SUBMIT COMMENT

@@ -1,0 +1,8 @@
+mixin post-classic(obj)
+	.post-classic
+		.post-classic-figure
+			+jpg(obj.img)
+		h4.post-classic-title: a(href='#')= obj.title
+		ul.post-classic-description
+			each description in obj.description
+				li= description

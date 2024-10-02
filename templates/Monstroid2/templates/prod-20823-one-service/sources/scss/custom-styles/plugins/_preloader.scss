@@ -1,0 +1,127 @@
+/*
+*
+* Preloader
+*/
+
+//
+// Base styles
+//
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: $white;
+	transition: .3s all ease;
+
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+//
+// Custom Styles
+//
+$size: 80px;
+$anim-speed: 2s;
+
+$anim-pull-scale-down: 0.5;
+$anim-pull-translate-in: 150%;
+$anim-pull-translate-out: 25%;
+$anim-shimmy-out: 12px;
+
+.preloader svg {
+	position: absolute;
+}
+
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: url('#gooey');
+	animation: rotate $anim-speed ease infinite;
+
+	.ball {
+		width: $size;
+		height: $size;
+		background-color: $primary;
+		border-radius: 100%;
+
+		&:nth-child(1) {
+			animation: pull-left $anim-speed ease infinite;
+		}
+		&:nth-child(2) {
+			animation: shimmy $anim-speed ease infinite;
+		}
+		&:nth-child(3) {
+			animation: pull-right $anim-speed ease infinite;
+		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(720deg)
+	}
+}
+
+@keyframes shimmy {
+	0%, 55% {
+		transform: translate(0, 0)
+	}
+	60%, 65% {
+		transform: translate(-$anim-shimmy-out, $anim-shimmy-out)
+	}
+	80%, 85% {
+		transform: translate(0, 0)
+	}
+	90% {
+		transform: scaleX(1.2) translate(-$anim-shimmy-out*2, 0)
+	}
+	100% {
+		transform: translate(0, 0)
+	}
+}
+
+@keyframes pull-left {
+	0% {
+		transform: scale($anim-pull-scale-down) translateX($anim-pull-translate-in)
+	}
+	50% {
+		transform: scale(1) translateX(-$anim-pull-translate-out)
+	}
+	75% {
+		transform: scale($anim-pull-scale-down*2) translateX($anim-pull-translate-in*2)
+	}
+	100% {
+		transform: scale($anim-pull-scale-down) translateX($anim-pull-translate-in)
+	}
+}
+
+@keyframes pull-right {
+	0% {
+		transform: scale($anim-pull-scale-down) translateX(-$anim-pull-translate-in)
+	}
+	50% {
+		transform: scale(1) translateX($anim-pull-translate-out)
+	}
+	80% {
+		transform: scale($anim-pull-scale-down) translateX(-$anim-pull-translate-in)
+	}
+	90% {
+		transform: scale($anim-pull-scale-down) translateX(-$anim-pull-translate-in*2)
+	}
+	100% {
+		transform: scale($anim-pull-scale-down) translateX(-$anim-pull-translate-in)
+	}
+}

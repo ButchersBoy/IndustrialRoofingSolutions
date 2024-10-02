@@ -1,0 +1,230 @@
+/** @section Backgrounds */
+
+.context-dark {
+	@extend %context-dark;
+}
+
+%context-dark {
+
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: block;
+		}
+
+		.brand-logo-light {
+			display: none;
+		}
+	}
+}
+
+.context-light {
+	@extend %context-light;
+}
+
+%context-light {
+
+	// Logo
+	.brand {
+		.brand-logo-dark {
+			display: none;
+		}
+
+		.brand-logo-light {
+			display: block;
+		}
+	}
+}
+
+
+// Light Backgrounds
+.bg-default {
+	@include bg-behaviour($body-bg);
+}
+
+.bg-white {
+	@extend %context-light;
+	@include bg-behaviour($white);
+}
+
+.bg-gray-100 {
+	@extend %context-light;
+	@include bg-behaviour($gray-100);
+}
+
+.bg-gray-1 {
+	@extend %context-light;
+	@include bg-behaviour($gray-1);
+}
+
+
+// Dark Backgrounds
+.bg-gray-700 {
+	@include bg-behaviour($gray-700);
+}
+
+
+// Accent Backgrounds
+.bg-primary {
+}
+
+.bg-secondary-9 { @include bg-behaviour($secondary-9); }
+
+
+// Background Image
+.bg-image {
+	background-size: cover;
+	background-position: center;
+}
+
+
+// Desktop only
+html:not(.tablet):not(.mobile) {
+	.bg-fixed {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+
+
+// Background Effects Custom
+.particles-js {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	min-width: 1800px;
+	transform: translateX(-50%);
+	pointer-events: none;
+	z-index: 0;
+
+	@media ( min-width: 1800px ) {
+		right: 0;
+		left: 0;
+		width: auto;
+		transform: none;
+	}
+}
+
+.particles-js-2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	min-width: 1800px;
+	transform: translateX(-50%);
+	background: rgba($black, .05);
+	pointer-events: none;
+	z-index: 0;
+
+	@media ( min-width: 1800px ) {
+		right: 0;
+		left: 0;
+		width: auto;
+		transform: none;
+	}
+}
+
+
+// Gradients
+.gradient-1 {
+	background: linear-gradient(294.56deg, $secondary-2 4.31%, $secondary-3 41.03%, $secondary-4 98.68%);
+}
+
+.gradient-2 {
+	background: linear-gradient(178.65deg, $secondary-5 5.88%, $secondary-6 39.46%, $secondary-7 92.28%);
+}
+
+.gradient-3 {
+	background: linear-gradient(180deg, $secondary-7 0%, $secondary-8 100%);
+}
+
+.gradient-4 {
+	background: linear-gradient(180deg, $secondary-4 0%, $secondary-10 100%);
+}
+
+.gradient-5 {
+	background: linear-gradient(180deg, $secondary-9 0%, $secondary-7 100%);
+}
+
+.gradient-6 {
+	background: linear-gradient(294.56deg, $secondary-2 4.31%, $secondary-3 41.03%, $secondary-12 98.68%);
+}
+
+// Wave
+.wave {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	bottom: -1px;
+}
+
+.ie-10,
+.ie-11,
+.ie-edge {
+	.wave {
+		height: 74px;
+	}
+}
+
+// Background Decor
+.bg-decor {
+	position: relative;
+	z-index: 1;
+}
+
+.bg-decor-line {
+	left: 50%;
+	width: 19%;
+	background-image: linear-gradient( transparent 0%, rgba($white, .04) 50%, transparent 100%);
+	transform: translateX(-50%);
+
+	&,
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-size: auto 200%;
+		background-position: 50% 0;
+		animation: decorGradient 15s infinite linear;
+		z-index: -1;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		left: 0;
+	  width: 100%;
+		background-image: linear-gradient( rgba($white, .04) 0%,transparent 50%, rgba($white, .04) 100%);
+	}
+
+	&::before {
+		transform: translateX(-155%);
+	}
+	
+	&::after {
+		transform: translateX(155%);
+	}
+}
+
+@keyframes decorGradient {
+
+	25% {
+		background-position: 50% 0;
+	}
+
+	35% {
+		background-position: 50% 100%;
+	}
+	65% {
+		background-position: 50% 100%;
+	}
+
+	75% {
+		background-position: 50% 0;
+	}
+}

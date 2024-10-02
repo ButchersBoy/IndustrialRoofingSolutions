@@ -1,0 +1,25 @@
+// RD Navbar Top Panel
+.rd-navbar-top-panel.rd-navbar-search-wrap
+  .rd-navbar-top-panel__main
+    .rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-top-panel__main'): span
+    .rd-navbar-top-panel__content
+      .rd-navbar-top-panel__left: p Premium HTML Template
+      .rd-navbar-top-panel__right: ul.rd-navbar-items-list
+        li: ul.list-inline-xxs
+          li: a(href='#', data-toggle='modal', data-target='#modalLogin') Sign In
+          li: a(href='#', data-toggle='modal', data-target='#modalRegister') Create an Account
+
+        li: ul.list-inline-xxs
+          li: a.icon.icon-xxs.icon-primary.fa.fa-facebook(href='#')
+          li: a.icon.icon-xxs.icon-primary.fa.fa-twitter(href='#')
+          li: a.icon.icon-xxs.icon-primary.fa.fa-google-plus(href='#')
+          li: a.icon.icon-xxs.icon-primary.fa.fa-vimeo(href='#')
+          li: a.icon.icon-xxs.icon-primary.fa.fa-youtube(href='#')
+          li: a.icon.icon-xxs.icon-primary.fa.fa-pinterest-p(href='#')
+
+  .rd-navbar-top-panel__aside
+    ul.rd-navbar-items-list
+      li: .rd-navbar-fixed__element-2: button.rd-navbar-search__toggle.rd-navbar-search__toggle_additional(data-rd-navbar-toggle='.rd-navbar-search-wrap')
+      li: .rd-navbar-fixed__element-3: a.icon.icon-md.linear-icon-cart.link-gray-4(href='cart.html')
+
+  include _navbar-search

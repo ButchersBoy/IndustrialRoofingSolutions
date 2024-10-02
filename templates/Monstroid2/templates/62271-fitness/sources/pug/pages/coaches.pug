@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Coaches'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+
+  section.section.text-center
+    +parallax({
+      img: 'parallax-02',
+      addClass: 'material-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              hr.divider.divider-md.divider-primary
+              h1 Coaches
+              p(style='max-width: 940px;').center-block At IronMass we are growing as you, our attendees, do. In other words, our coaches are seasoning alongside you, while you go through the training course.
+
+  section.bg-accent.section-lg.section.context-dark
+    .container
+      hr.divider.divider-sm
+      h2.text-center Our GYM's Team
+      .row
+        .col-lg-6.col-md-10
+          p Because regardless of how many years of experience a coach might have, there's always a room for growth. Namely, getting each specific new attendee to his or her top shape adds some "achievement points" to coaches own skills. Our coaches and athletes are people who take both fitness and the CrossFit seriously.  We want you to make tangible progress at the GYM! We always push even our own coaches to max out their knowledge, skills and strength.
+        .col-lg-6.col-md-10
+          p We achieve that by constantly upgrading our criteria of physical assessment, programs design, and nutrition.  We see CrossFit as an evolving journey of the body and mind! In our view, CrossFit workouts help to connect mind, body, and spirit. This fitness journey leads to the discovery of purpose in life, of a better way of life...
+
+  section.section.section-lg.text-center.bg-default
+    .container
+      .row.row-xl-120.row-60
+        .col-lg-4.col-md-6
+          +jpg('coaches-1-193x193', 'img-circle')
+          h5 Julie  Collins
+          h6 Coach
+          p.small.center-block(style="width: 86%") I initially took on CrossFit trainings after a spending a lifetime in professional athletics. The fact that I loved sports so much contributed a lot to my decision.
+          a(href='coach.html').button.button-sm.button-primary read more
+
+        .col-lg-4.col-md-6
+          +jpg('coaches-2-193x193', 'img-circle')
+          h5 Steven Ayokee
+          h6 Owner/Head Coach
+          p.small.center-block(style="width: 86%") 12 Years ago I lost 80lbs with the help of a personal coach and it completely changed my way of life. Since then, it’s been my mission to sway other people do CrossFit too.
+          a(href='coach.html').button.button-sm.button-primary read more
+
+        .col-lg-4.col-md-6
+          +jpg('coaches-3-193x193', 'img-circle')
+          h5 Dominic  Snyder
+          h6 Coach
+          p.small.center-block(style="width: 86%") Growing up, I’ve always been involved in sports, fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury wihile serving in Iraq
+          a(href='coach.html').button.button-sm.button-primary read more
+
+        .col-lg-4.col-md-6
+          +jpg('coaches-4-193x193', 'img-circle')
+          h5 Julie  Collins
+          h6 Coach
+          p.small.center-block(style="width: 86%") I initially took on CrossFit trainings after a spending a lifetime in professional athletics. The fact that I loved sports so much contributed a lot to my decision.
+          a(href='coach.html').button.button-sm.button-primary read more
+
+        .col-lg-4.col-md-6
+          +jpg('coaches-5-193x193', 'img-circle')
+          h5 Virgil  Cook
+          h6 Coach
+          p.small.center-block(style="width: 86%") Virgil has been training amateur and professional combat athletes since 1995. His skill-set expands to the following combat styles: MMA fighting, Brazilian Jiu-Jitsu and...
+          a(href='coach.html').button.button-sm.button-primary read more
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

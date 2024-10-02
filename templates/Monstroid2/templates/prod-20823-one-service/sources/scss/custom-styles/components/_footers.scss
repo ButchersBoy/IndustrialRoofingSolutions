@@ -1,0 +1,51 @@
+/*
+* Footers
+*/
+
+//
+// Footer Classic
+//
+
+.footer-classic {
+	padding: 89px 0 105px;
+	background: $gray-100;
+	border-top: 1px solid $gray-150;
+}
+
+.footer-classic-title {
+	margin-top: 7px;
+	font-size: 14px;
+	font-weight: 700;
+	color: $black;
+	text-transform: uppercase;
+
+	+ ul {
+		margin-top: 28px;
+	}
+}
+
+.footer-classic-list {
+	> li + li {
+		margin-top: 20px;
+	}
+}
+
+.footer-classic-dl {
+	display: flex;
+	dt {
+		color: $black-7;
+		width: 59px;
+		flex-basis: 59px;
+	}
+}
+
+.footer-classic-social-list {
+	margin-top: 31px;
+}
+
+.footer-classic-nav {
+	li + li {
+		margin-top: 8px;
+	}
+}
+

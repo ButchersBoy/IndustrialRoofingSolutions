@@ -1,0 +1,317 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-transparent
+	include ../sections/_section-slider-commercial
+
+	section.section-xs.section-cta.bg-gray-dark.text-center.text-md-left
+		.container
+			.row.row-30.justify-content-between.align-items-center
+				.col-12.col-md-8
+					h4 Like What We Offer?
+					p Start with this demo now or check out the others to choose what you need.
+				.col-12.col-md-4.text-md-right
+					a.button.button-primary(href='about.html') Read more
+
+	// About us
+	section.bg-gray-lighter.object-wrap
+		.section-lg
+			.container
+				.row
+					.col-lg-5
+						h4.heading-decorated About us
+						p Quart boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+						.row.row-30
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-menu3
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Award-winning designs
+										p We have received numerous awards for our designs, concepts, and ideas.
+
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-users2
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Expert team
+										p We are a team of dedicated interior design and remodeling professionals.
+
+						.row.justify-content-md-center
+							.col-md-12
+								+progress-bar-linear({
+									title: "Innovative Technologies",
+									progressStyle: "progress-linear-modern",
+									valueTo: "49"
+								})
+
+								+progress-bar-linear({
+									title: "Flexible and Multipurpose",
+									progressStyle: "progress-linear-modern",
+									valueTo: "29"
+								})
+
+								+progress-bar-linear({
+									title: "Made for People",
+									progressStyle: "progress-linear-modern",
+									valueTo: "86"
+								})
+
+		.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+	// Our Services
+	section.section-md.bg-default.text-center#features
+		.container
+			h4.heading-decorated Our Services
+			.row.row-50.justify-content-md-center.justify-content-lg-start.text-left
+				.col-md-6.col-xl-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-pencil-ruler
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Bootstrap Framework
+							p Quart is based on Bootstrap Framework, which makes it a nice template for any purpose.
+
+				.col-md-6.col-xl-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-users
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Novi Builder
+							p Use our Novi Builder to customize and update your website within seconds.
+
+				.col-md-6.col-xl-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-wall
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Responsive & Retina Ready
+							p Quart looks great on any screen resolution and on any device due to its responsiveness.
+
+				.col-md-6.col-xl-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-apartment
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Tons of Tools for Real Needs
+							p Event calendar, bookings and schedule  are just some of tools that come on board.
+
+				.col-md-6.col-xl-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-home4
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Multiple layouts
+							p Huge number of content layouts allow to assemble unique pages with great flexibility.
+
+				.col-md-6.col-xl-4
+					// Blurb circle 
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-pencil-ruler2
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Clean and Crispy Design
+							p Quart is crafted by top industry leaders with love, care and customer needs in mind.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-magic-wand
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Built For Speed
+							p Built for speed and performance. Get best results at GTmetrix and Google PageSpeed.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-menu3
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Flexible and Multipurpose
+							p Quart allows to create a various websites for complex and scalable project.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-users2
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) SEO Friendly
+							p Valid code and performance optimized framework make SEO easy and hassle free.
+	='\n'
+	
+	section.section-md.bg-gray-lighter.text-center
+		.container
+			h4.heading-decorated Our working process
+			.row.row-30.justify-content-center
+				.col-sm-10.col-lg-6
+					+jpg('home-var-2-650x495')
+					
+				.col-sm-10.col-lg-6
+						// Blurb circle
+						article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-circle__icon: span.icon.linear-icon-feather
+							.unit-body
+								p.blurb__title.heading-6 Design creation
+								p Firstly, our designers create the concept of a template, which can be changed and modified.
+								
+						// Blurb circle
+						article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-circle__icon: span.icon.linear-icon-menu3
+							.unit-body
+								p.blurb__title.heading-6 Development
+								p Then our developers begin to work on implementing the template’s final look and features.
+								
+						// Blurb circle
+						article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-circle__icon: span.icon.linear-icon-bag2
+							.unit-body
+								p.blurb__title.heading-6 Testing
+								p Finally, our QA experts make sure that everything works perfectly just as you would expect.
+
+	//cta
+	include ../sections/_section-cta-2
+
+	include ../sections/_section-portfolio
+		
+	section.section-lg.bg-gray-lighter.text-center.text-md-left
+		.container
+			.row.row-50
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Starter',
+						price: '$14.89'
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li 3 Users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+
+				.col-md-6.col-xl-3
+					+pricing-table({
+						class: 'pricing-table-label',
+						label: 'most popular',
+						title: 'Standard',
+						price: '$32.89'
+					})
+						ul.list
+							li
+								span 20GB Storage amount
+							li 5 Users
+							li 30GB Bandwidth
+							li 30 MySQL Databases
+
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Business',
+						price: '$76.89 '
+					})
+						ul.list
+							li
+								span 30GB Storage amount
+							li 10 Users
+							li 50GB Bandwidth
+							li 40 MySQL Databases
+
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Professional',
+						price: '$89.89'
+					})
+						ul.list
+							li
+								span 40GB Storage amount
+							li Unlimited users
+							li 60GB Bandwidth
+							li 50 MySQL Databases
+
+	// Meet Our Team
+	section.section-md.bg-default.text-center
+		.container
+			h4.heading-decorated Meet Our Team
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('calvin-fitzerald-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Calvin Fitgerald
+							p.thumb-flat__subtitle Founder, Managing Director
+							p Calvin’s love for website development started in 1993 when at the age of 12 he learned HTML and secured his first dot-com. After graduating from the University of Minnesota in 2005, Calvin incorporated Quart as a way to advance his career, drive his passion for website development, and help other small business owners with their online presence.
+
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('taylor-wilson-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Taylor Wilson
+							p.thumb-flat__subtitle Senior Designer
+							p Taylor joined the Quart team in August of 2016, shortly after relocating to Minneapolis from Chicago. He has been working in the sphere of web design for 9 years. He has extensive experience with creating responsive HTML websites that are built to increase sales in all industries. He believes quality websites are great for conveying important information.
+
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('josh-wagner-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Josh Wagner
+							p.thumb-flat__subtitle Lead Developer
+							p Josh has a background in Information Technology and Geographic Information Systems. He began his career in Isle of Wight, Virginia where he started working as the County’s GIS Technician and ended up running the Information Technology Department six years later. He has a unique combination of database experience, network and software support skills.
+
+	// get a quote
+	section.bg-gray-lighter.object-wrap
+		.section-lg
+			.container
+				.row.justify-content-end
+					.col-lg-5
+						h4.heading-decorated Get a Quote
+						// RD Mailform
+						form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+								label.form-label(for="contact-name") Your name
+
+							.form-wrap
+								input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+								label.form-label(for="contact-email") Your e-mail
+
+							.form-wrap
+								textarea#contact-message.form-input(name="message" data-constraints="@Required")
+								label.form-label(for="contact-message") Your message
+
+							button(type="submit").button.button-primary send
+
+		.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+			
+	include ../sections/_section-posts
+
+	include ../sections/_section-testimonials
+		
+	include ../sections/_section-clients
+
+	// Page Footer 
+	include ../sections/_footer-corporate-2

@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Contacts'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+
+  section
+    include ../sections/_section-gmap
+
+  section.section-md.bg-default
+    .container
+      .row.row-50
+        .col-md-5.col-lg-4
+          h2 Contact Details
+          hr.divider-minimal.divider__left
+          ul.list-xs.contact-info
+            li
+              dl.list-terms-minimal
+                dt Address
+                dd Alexandria, 32 Washington str, 22303
+
+            li
+              dl.list-terms-minimal
+                dt Phones
+                dd: ul.list-semicolon
+                  li: a(href='callto:#') (800) 123-0045
+                  li: a(href='callto:#') (800) 123-0045
+
+            li
+              dl.list-terms-minimal
+                dt E-mail
+                dd: a(href='mailto:#') info@demolink.org
+
+            li
+              dl.list-terms-minimal
+                dt We are open
+                dd Mn-Fr: 10am - 8pm
+            li
+              +list-inline-icon({
+                  list_class: 'list-inline-sm',
+                  items: [
+                      "icon-sm fa-facebook",
+                      'icon-sm fa-twitter',
+                      'icon-sm fa-google-plus',
+                      'icon-sm fa-vimeo',
+                      'icon-sm fa-youtube',
+                      'icon-sm fa-pinterest-p']
+              })
+        .col-md-7.col-lg-8
+          h2 Get in Touch
+          hr.divider-minimal.divider__left
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your name')
+              label.form-label(for="contact-name") 
+
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Your e-mail')
+              label.form-label(for="contact-email") 
+
+            .form-wrap
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Your phone')
+              label.form-label(for="contact-phone") 
+
+            .form-wrap
+              textarea#contact-message.form-input(name="message" data-constraints="@Required" placeholder='Your message')
+              label.form-label(for="contact-message") 
+
+            button(type="submit").button.button-gray-light-outline: span submit
+
+
+
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

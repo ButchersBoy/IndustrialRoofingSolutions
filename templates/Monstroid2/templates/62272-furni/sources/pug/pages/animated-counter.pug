@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-progress-bar-linear
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Animated Counter'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Website Update Progress",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Novi Builder",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Flexible and Multipurpose",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Website Update Progress",
+            progressStyle: "progress-linear-modern",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Novi Builder",
+            progressStyle: "progress-linear-modern",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Flexible and Multipurpose",
+            progressStyle: "progress-linear-modern",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

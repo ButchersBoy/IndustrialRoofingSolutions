@@ -1,0 +1,49 @@
+//
+// Project
+// --------------------------------------------------
+
+
+.project {
+	max-width: 440px;
+}
+
+.project-figure-custom {
+	@include media-breakpoint-up(xl) {
+		position: relative;
+		min-height: 530px;
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 50vw;
+			max-width: none;
+			height: 530px;
+			object-fit: cover;
+		}
+	}
+}
+
+.project-description-list {
+	* + & {
+		margin-top: 20px;
+	}
+}
+
+.project-description-item {
+	& + & {
+		margin-top: 10px;
+	}
+}
+
+.project-description-title {
+	display: inline-block;
+	font-weight: 700;
+	color: $gray-800;
+	min-width: 100px;
+}
+
+.project-description-text {
+	color: $primary;
+}

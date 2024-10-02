@@ -1,0 +1,112 @@
+//
+// Blurb
+// --------------------------------------------------
+
+// Blurb
+.blurb {
+  img{
+    width: auto;
+  }
+}
+* + .blurb { margin-top: 30px; }
+.blurb + .blurb { margin-top: 25px;}
+
+* + .blurb__title { margin-top: 45px * $xs-multiplier; }
+.blurb__title + * { margin-top: 15px * $xs-multiplier; }
+
+@include media-breakpoint-up(lg) {
+  * + .blurb { margin-top: 43px * $lg-multiplier; }
+  .blurb + .blurb { margin-top: 35px * $lg-multiplier;}
+  * + .blurb__title { margin-top: 45px * $lg-multiplier; }
+  .blurb__title + * { margin-top: 15px * $lg-multiplier; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .blurb { margin-top: 43px; }
+  .blurb + .blurb { margin-top: 35px; }
+
+  * + .blurb__title { margin-top: 45px; }
+  .blurb__title + * { margin-top: 15px; }
+}
+
+// Blurb circle
+.blurb-circle {
+  text-align: left;
+
+  .unit {
+    .blurb-circle__icon {
+      position: relative;
+    }
+  }
+}
+
+.blurb-circle__icon {
+  .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 64px;
+    background-color: $white;
+
+    &::before {
+      line-height: inherit;
+    }
+  }
+}
+
+
+.blurb-circle.blurb-circle_centered {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@include media-breakpoint-down(md) {
+  .blurb-circle{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Blurb minimal
+.blurb-minimal {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  &.blurb-minimal_centered {
+    text-align: center;
+  }
+  .unit {
+    .blurb-minimal__icon .icon {
+      font-size: 32px;
+    }
+  }
+}
+
+.blurb-minimal__icon .icon {
+  font-size: 30px;
+  color: $primary;
+}
+
+.blurb-minimal.blurb-minimal_black {
+  &, .blurb-minimal__icon .icon {
+    color: $black;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .blurb-minimal__icon .icon {
+    font-size: 36px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .blurb-minimal__icon .icon {
+    font-size: 44px;
+  }
+}

@@ -1,0 +1,12 @@
+//- Progress Bar linear
+	@param {object} progress
+	@param {string} progress.title
+	@param {number} progress.value
+mixin progress-bar-linear( progress )
+	//Linear progress bar
+	article.progress-linear&attributes( attributes )
+		.progress-header
+			p= progress.title
+			span.progress-value= progress.value
+		.progress-bar-linear-wrap
+			.progress-bar-linear

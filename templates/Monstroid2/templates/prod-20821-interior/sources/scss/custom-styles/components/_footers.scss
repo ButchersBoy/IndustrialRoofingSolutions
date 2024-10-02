@@ -1,0 +1,64 @@
+/*
+* Footers
+*/
+
+//
+// Footer Classic
+//
+
+.footer-classic {
+	padding: 70px 0 67px;
+	a:hover {
+		color: $primary;
+	}
+}
+
+.footer-classic-title {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $white-4;
+}
+
+.footer-classic-list {
+	margin-top: 20px;
+	@include grid-offset(4px)
+}
+
+.footer-classic-logo-wrap {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 88px;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 20%;
+		height: 1px;
+		background-color: $white-1;
+		top: 50%;
+		// Medium ≥576px
+		@include media-breakpoint-up(sm) {
+			width: 30%;
+		}
+		// Large ≥992px
+		@include media-breakpoint-up(lg) {
+			width: 40%;
+		}
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+}

@@ -1,0 +1,126 @@
+/** @section Countdown */
+
+//
+// Countdown 2
+//
+.countdown-style-1 {
+
+	.countdown-row {
+		@include spacingX(30px);
+	}
+
+	.countdown-section {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+
+		&::before {
+			display: none;
+			position: absolute;
+			content: ':';
+			font-size: 30px;
+			line-height: 1;
+			left: 0;
+			top: 45%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+
+		> * {
+			display: block;
+		}
+	}
+
+	.countdown-section + .countdown-section {
+
+		&::before {
+			display: block;
+		}
+	}
+
+	.countdown-amount {
+		font-size: $h2-font-size - 30;
+		line-height: $h2-line-height - 30;
+		color: $white;
+	}
+
+	.countdown-period {
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+}
+
+* + .countdown-style-1 { margin-top: 25px; }
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+
+	.countdown-style-1 {
+
+		.countdown-section::before {
+			font-size: 40px;
+		}
+
+		.countdown-amount {
+			font-size: $h2-font-size - 20;
+			line-height: $h2-line-height - 20;
+		}
+
+		.countdown-period {
+			font-size: 12px;
+			font-weight: 600;
+		}
+	}
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.countdown-style-1 {
+
+		.countdown-row {
+			@include spacingX(60px);
+		}
+
+		.countdown-section::before {
+			font-size: 50px;
+		}
+
+		.countdown-amount {
+			font-size: $h2-font-size - 10;
+			line-height: $h2-line-height - 10;
+		}
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.countdown-style-1 {
+
+		.countdown-section::before {
+			font-size: 60px;
+		}
+
+		.countdown-amount {
+			font-size: $h2-font-size;
+			line-height: $h2-line-height;
+		}
+	}
+
+	.countdown-style-2 {
+		.countdown-row {
+			@include spacingX(80px);
+		}
+	}
+
+	* + .countdown-style-1 { margin-top: 36px; }
+}
+
+// Context styling
+%context-light {
+
+	.countdown-section:before,
+	.countdown-amount {
+		color: $secondary;
+	}
+}

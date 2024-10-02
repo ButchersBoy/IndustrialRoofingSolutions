@@ -1,0 +1,63 @@
+-
+	var
+			htmlClass = "wide wow-animation",
+			fonts = "//fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Volkhov:wght@400;700&display=swap",
+			novi = true,
+			
+			logo = {
+				default: 'logo-default-119x43.svg',
+				inverse: 'logo-inverse-119x43.svg',
+				name:    'Pland'
+			},
+			
+			links = {
+				about: 'about.html'
+			}
+			
+			menu = [
+				{
+					title: 'Home',
+					link:  'index.html'
+				},
+				{title: 'About'},
+				{
+					title:    'Services',
+					dropdown: [
+						{title: 'Services'},
+						{title: 'Single Service'},
+					]
+				},
+				{ title:    'Portfolio' },
+				{
+					title:    'Pages',
+					link:     '#',
+					megamenu: [
+						{
+							title: 'Special Pages',
+							link:  null,
+							list:  [
+								{title: '404 Page'},
+								{title: 'Search Results'},
+								{title: 'Privacy Policy'},
+								{title: 'Accordion'}
+							]
+						},
+						{
+							title: 'Elements',
+							link:  null,
+							list:  [
+								{title: 'Buttons'},
+								{title: 'Typography'},
+								{title: 'Tabs'},
+								{title: 'Contact Forms'}
+							]
+						}
+					]
+				},
+				{title: 'Contacts'},
+			],
+			
+			// Predefined variables
+			breadcrumbs = [],
+			pageName = 'Home',
+			self = self || {};

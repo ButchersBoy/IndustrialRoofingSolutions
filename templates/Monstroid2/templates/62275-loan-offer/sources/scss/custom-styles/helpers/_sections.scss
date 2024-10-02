@@ -1,0 +1,299 @@
+//
+// Sections
+// --------------------------------------------------
+
+// Section Spacing
+// -------------------------
+
+.section-sm,
+.section-md {
+  padding: 35px 0;
+}
+
+.section-lg,
+.section-xl,
+.section-xxl {
+  padding: 60px 0;
+}
+
+.section-xxl{
+  padding: 75px 0;
+}
+
+.section-collapse + .section-collapse {
+  padding-top: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  .section-sm,
+  .section-md,
+  .section-lg,
+  .section-xl,
+  .section-xxl {
+    
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section-sm {
+    padding: 50px 0;
+  }
+
+  .section-md {
+    padding: 60px 0;
+  }
+
+  .section-lg {
+    padding: 70px 0;
+  }
+ 
+  .section-xl {
+    padding: 80px 0;
+  }
+
+  .section-xxl {
+    padding: 95px 0;
+  }
+
+  .section-alternate-1 {
+    padding: 90px 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-lg {
+    padding: 90px 0;
+  }
+
+  .section-xl {
+    padding: 100px 0;
+  }
+
+  .section-xxl {
+    padding: 130px 0;
+  }
+}
+
+@media (min-width: $screen-lg-min) and (min-height: $screen-height-desktop) {
+  .section-lg {
+    padding: 120px 0 110px;
+  }
+
+  .section-xl {
+    padding: 135px 0;
+  }
+
+  .section-xxl {
+    padding: 190px 0;
+
+    &.section-xxl_bigger {
+      padding-top: 210px;
+      padding-bottom: 210px;
+    }
+  }
+
+  .section-xxl {
+    padding: 165px 0 190px;
+  }
+
+  .section-sm,
+  .section-md,
+  .section-lg,
+  .section-xl{
+    
+  }
+}
+
+// Custom
+.section-divided {
+}
+
+.section-divided__main,
+.section-divided__aside {
+  > *:first-child {
+    padding-top: 0;
+  }
+
+  > *:last-child {
+    padding-bottom: 0;
+  }
+
+  [class*='section']:nth-child(n + 2) {
+    border-top: 1px solid $gray-1;
+  }
+}
+
+.section-divided__aside {
+  h5 + *,
+  .heading-5 + * {
+    margin-top: 23px;
+  }
+
+  * + h5 {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-between(md, md) {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin-left: -25px;
+    margin-right: -25px;
+
+    > [class*='section'] {
+      width: calc(50% - 50px);
+      margin-left: 25px;
+      margin-right: 25px;
+
+      &:nth-child(2) {
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+    > .section-style-1 {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    > * {
+      max-width: 370px;
+      margin-left: 50px;
+    }
+  }
+  
+  &.section__aside-left {
+    @include media-breakpoint-up(xl) {
+      > * {
+        margin-left: 0;
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+.section-divided__aside-left {
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    &:after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 25px;
+      content: "";
+      display: inline-block;
+      border-left: 1px solid $gray-1;
+    }
+  }
+}
+
+.section-divided__main-left {
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    &:after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -25px;
+      content: "";
+      display: inline-block;
+      border-left: 1px solid $gray-1;
+    }
+  }
+}
+
+
+
+//fullwidth page
+//
+
+.fullwidth-page {
+  @include display-flex;
+  @include align-items(center);
+  min-height: 100vh;
+
+  .section-md {
+    padding: 60px 0;
+  }
+  
+  > * {
+    flex-basis: 100%;
+  }
+
+  * + .countdown {
+    margin-top: 45px;
+  }
+  * + h5 {
+    margin-top: 35px;
+    @media (min-width: 768px) {
+      margin-top: 55px;
+    }
+  }
+}
+
+.ie-10,
+.ie-11 {
+  .fullwidth-page {
+    white-space: nowrap;
+
+    > * {
+      display: inline-block;
+      width: 100%;
+      white-space: normal;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      min-height: inherit;
+    }
+  }
+}
+
+.section-full-width {
+  padding-top: 45px;
+  padding-bottom: 45px; 
+}
+
+
+@include media-breakpoint-up(sm) {
+  .section-full-width {
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .ie-10,
+  .ie-11 {
+    .section-full-width {
+      height: 100vh;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .desktop {
+    .section-full-width {
+      padding-top: 220px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .desktop {
+    .section-full-width {
+      padding-top: 170px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) and (min-height: 700px) {
+  .desktop {
+    .section-full-width {
+      padding-top: 310px;
+      padding-bottom: 200px;
+    }
+  }
+}

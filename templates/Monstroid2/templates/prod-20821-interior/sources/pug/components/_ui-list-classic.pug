@@ -1,0 +1,8 @@
+mixin list-classic(obj)
+	li.unit.unit-spacing-lg.align-items-start.list-classic.flex-column.flex-xs-row&attributes( attributes )
+		.unit-left.list-index-counter
+			.list-classic-rectangle
+			.icon.novi-icon(class= obj.icon)
+		.unit-body
+			h4= obj.title
+			p= obj.description

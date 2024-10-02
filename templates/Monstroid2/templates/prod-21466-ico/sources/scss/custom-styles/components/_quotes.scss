@@ -1,0 +1,108 @@
+/** @section Quotes */
+
+// Quote classic
+.quote-classic {
+	text-align: left;
+	padding: 30px 15px;
+	background: $white;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 30px;
+}
+
+.quote-classic-figure {
+	display: flex;
+	align-items: center;
+	min-height: 50px;
+}
+
+.quote-classic-title {
+	font-weight: 500;
+}
+
+.quote-classic-text {
+
+}
+
+* + .quote-classic-title { margin-top: 10px; }
+* + .quote-classic-text { margin-top: 10px; }
+
+@include media-breakpoint-up(md) {
+	.quote-classic {
+		padding: 40px 25px;
+		border-radius: 50px;
+	}
+
+	* + .quote-classic-text { margin-top: 20px; }
+}
+
+@include media-breakpoint-up(xl) {
+	.quote-classic {
+		padding: 40px 30px 30px 50px;
+	}
+}
+
+
+
+// Quote Default
+.quote-default {
+	font-size: $h5-font-size - 6;
+	font-weight: 300;
+	line-height: 1.334;
+	
+	&::before {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		top: -2px;
+		height: 0;
+		width: 33px;
+	  text-indent: 0;
+		border-top: 1px solid $black;
+		margin-right: 17px;
+	}
+}
+
+* + .quote-default { margin-top: 12px; }
+.quote-default + p { margin-top: 12px; }
+
+@include media-breakpoint-up(sm) {
+
+	.quote-default {
+		padding-left: 50px;
+		text-indent: -50px;
+
+		&::before {
+			position: relative;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	.quote-default {
+		font-size: $h5-font-size - 4;
+	}
+
+	* + .quote-default { margin-top: 20px; }
+	.quote-default + p { margin-top: 20px; }
+}
+
+@include media-breakpoint-up(lg) {
+
+	.quote-default {
+		font-size: $h5-font-size - 2;
+	}
+
+	* + .quote-default { margin-top: 30px; }
+	.quote-default + p { margin-top: 30px; }
+}
+
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.quote-default {
+		font-size: $h5-font-size;
+	}
+}

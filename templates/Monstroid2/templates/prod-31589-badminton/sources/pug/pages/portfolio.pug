@@ -1,0 +1,144 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+	- pageName = 'Portfolio'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Portfolio
+			.isotope-wrap.row.row-70
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal
+						li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+						li: a(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Badminton
+						li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') Other
+					
+					.isotope.row.row-30.row-xl-40(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-1-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['9 photos', 'Badminton'],
+								title:       'Badminton Gear',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-2-original',
+								img:         'portfolio-2-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Badminton'],
+								title:       'Classes for Adults',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-3-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['9 photos', 'Badminton'],
+								title:       'Quality Courts',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-4-original',
+								img:         'portfolio-4-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Badminton'],
+								title:       'Competitive Atmosphere',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-5-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['9 photos', 'Badminton'],
+								title:       'Well-Furnished Interior',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-6-original',
+								img:         'portfolio-6-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Badminton'],
+								title:       'Group Training',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-7-original',
+								img:         'portfolio-7-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Badminton'],
+								title:       'Apparel for Everyone',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-8-original',
+								img:         'portfolio-8-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Badminton'],
+								title:       'Professional Coaches',
+								desc:        'Your #1 club for badminton',
+								icon_class2: 'linear-icon-plus'
+							})
+				
+				
+				.col-sm-12
+					+pagination-classic(1,
+					[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+					null,
+					{
+						"title": "",
+						"href":  "#"
+					}
+					)
+	
+	// Page Footer
+	include ../sections/_footer-classic

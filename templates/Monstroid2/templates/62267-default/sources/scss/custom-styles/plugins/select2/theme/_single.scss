@@ -1,0 +1,89 @@
+.select2-selection--single {
+  background-color: map-get( $select2, background-default );
+  border-radius: map-get($select2, input-border-radius);
+
+  @if ( map-get($select2, input-border-width ) ) {
+    border: map-get($select2, input-border-width) solid map-get( $select2, input-border-color);
+  }
+  
+  .has-error & {
+    border-color: $danger-color;
+  }
+  
+  .select2-selection__rendered {
+    padding-left: map-get( $select2, input-side-indent );
+    font-size: map-get( $select2, input-fsz );
+    font-style: italic;
+    line-height: 1;
+    color: map-get( $select2, color-default );
+    
+    @if ( map-get($select2, input-border-width ) ) {
+      padding-top: (map-get( $select2, input-height ) - map-get( $select2, input-fsz )) / 2 - map-get( $select2, input-border-width );
+      padding-bottom: (map-get( $select2, input-height ) - map-get( $select2, input-fsz )) / 2  - map-get( $select2, input-border-width );
+    } @else {
+      padding-top: (map-get( $select2, input-height ) - map-get( $select2, input-fsz )) / 2;
+      padding-bottom: (map-get( $select2, input-height ) - map-get( $select2, input-fsz )) / 2;
+    }
+    
+    @if ( map-get( $select2, input-side-indent ) > map-get( $select2-CONST, input-single-right-indent ) ) {
+      padding-right: map-get( $select2, input-side-indent );
+    } @else {
+      padding-right: map-get( $select2-CONST, input-single-right-indent )
+    }
+  }
+
+  .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+  }
+
+  .select2-selection__placeholder {
+    color: map-get( $select2, color-default );
+  }
+  
+  .select2-selection__arrow {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    top: 0;
+    
+    b {
+      &:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        content: '\e93a';
+        font: 400 16px/1 $font-icons;
+      }
+    }
+  }
+}
+
+&[dir="rtl"] {
+  .select2-selection--single {
+    .select2-selection__clear {
+      float: left;
+    }
+
+    .select2-selection__arrow {
+      left: 15px;
+      right: auto;
+    }
+  }
+}
+
+&.select2-container--disabled {
+  .select2-selection--single {
+    cursor: default;
+    background-color: map-get( $select2, background-disabled );
+    color: map-get( $select2, color-disabled );
+    
+    .select2-selection__clear {
+      display: none;
+    }
+  }
+}
+
+

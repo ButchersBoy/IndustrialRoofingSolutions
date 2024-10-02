@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Footer Modern'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [['Footers', '#'], [pageName]]
+  })
+
+  include ../sections/_section-testimonials
+    
+  // Driving Directions
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row
+          .col-lg-5
+            h6 Hotel Location & Map
+            h2 Driving Directions
+            p Follow the 14th street and then turn right.
+
+            .row.row-30
+              .col-sm-6
+                p.heading-2 5.4 km
+                p.heading-4 Away from the Town hall 
+              .col-sm-6
+                p.heading-2 18 km
+                p.heading-4 Away from the Airport
+
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right
+      include ../sections/_section-gmap
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-modern
+

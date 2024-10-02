@@ -1,0 +1,26 @@
+extends ../_skeleton
+
+block variables
+	- pageName = '404'
+
+block page
+	section.section.section-single.section-relative.gradient-1.bg-vide-1
+		.section-single-inner
+			.section-single-header: .container: +logo
+
+			.section-single-main: .container
+				.headings-default.headings-default-2
+					.headings-default-subtitle 404
+					h3 Page not found
+				p.text-width-medium The page requested couldn't be found - this could be due to a spelling error in the URL or a removed page.
+				a.button.button-isi.button-primary( href='./' ) Back to home
+
+			.section-single-footer: .container
+				ul.list-inline.list-inline-md.list-social
+					li: a.icon.mdi.mdi-facebook( href='#' )
+					li: a.icon.mdi.mdi-youtube-play( href='#' )
+					li: a.icon.mdi.mdi-instagram( href='#' )
+					li: a.icon.mdi.mdi-twitter( href='#' )
+				+rights
+
+		.bg-vide( data-vide-bg='video/video-2' data-vide-options='posterType: jpg, position: 50% 50%' )

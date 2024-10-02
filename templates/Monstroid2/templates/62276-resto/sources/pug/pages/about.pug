@@ -1,0 +1,138 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'About'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+
+  section.section-xl.bg-default
+    .container
+      .row.row-50
+        .col-md-6
+          +jpg('about-1-652x492')
+        .col-md-6
+          h1 The Resto Restaurant
+          h5 The perfect place to enjoy the life and food.
+          hr.divider-minimal.divider__left
+          p
+            | Resto Restaurant & Bar is a traditional European cuisine venue, serving 
+            i the best dishes and drinks from across the range of European cuisines. 
+            | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+            i Honest food and honest drinks set the foundation of our place's menu!
+            
+          .group
+            figure.figure-inline
+              +png('about-2-123x124')
+            figure.figure-inline
+              +png('about-3-129x121')
+
+  section.section-xl.bg-default
+    .object-wrap
+      .section-xl-bottom
+        .container
+          .row
+            .col-lg-5
+              h1 Since 1982
+              h5 Resto is proud to be serving fine European dishes for more than 30 years!
+              hr.divider-minimal.divider__left
+              p 
+                | It resonates very nice with the fact of how universally cozy and welcoming our atmosphere is. 
+                i All our customers say that when they eat at Resto, they feel like having a nice dinner at home. 
+                | These are sweet words, which just melt our hearts with joy!
+  
+      .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/about-4-985x652.jpg)')
+  ='\n'
+  
+  section.section-xl.bg-default
+    .container
+      h1 Our Standards
+      .row.row-xl.justify-content-sm-center.row-70
+        .col-md-6.col-lg-4
+          hr.divider-minimal.divider__left
+          h4 Casually European
+          p With our menu being centered around the casual European dishes, we have both Greek, French and Italian food...
+        .col-md-6.col-lg-4
+          hr.divider-minimal.divider__left
+          h4 American Comfort
+          p Despite being a European restaurant, visiting our place feels just as casual as any traditional American restaurant would feel...
+        .col-md-6.col-lg-4
+          hr.divider-minimal.divider__left
+          h4 Event-friendly
+          p If you're considering celebrating a persoonal or a business occasion at our restaurant, all of our 3 big dining halls will be ready for you!
+    
+
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/video-preview-1-1920x703.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Meet our Team
+              hr.divider-minimal
+              p 
+                | Resto is a family owned restaurant, which treasures the atmosphere just as much as the dining menu. 
+                i We've assembled a strong team of professionals, all of whom aspire to constantly excel and step it up!
+              a(href='our-team.html').button.button-gray-light-outline: span Our Team
+              
+  section.section-xl.bg-default.text-center
+    .container
+      h1 Happy Customers
+      hr.divider-minimal
+      .row.row-50
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q I've been eating their business lunches for the past 7 years. Not even once have I had any unpleasant experience. And the dishes always taste fresh and good!
+            p.quote-default__cite Amanda
+            span.quote-default__source posted on TripAdvisor
+
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The prices are as good as the menu! Each time I spend less money, than anywhere else and get a fresh, tasty, homemade dinner!
+            p.quote-default__cite Sam
+            span.quote-default__source posted on foursquare
+            
+            
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-03.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10
+              h4 We're hiring new culinary talents all the time! If you want to become a part of our culinary family and you have at least 6 months of prior experience of working at a restaurant, than contact us today!
+              a(href='contacts.html').button.button-gray-light-outline: span careers
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

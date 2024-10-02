@@ -1,0 +1,156 @@
+//
+// Utilities custom
+// --------------------------------------------------
+.height-fill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+.block-top-level {
+  position: relative;
+  z-index: 10;
+}
+
+.block-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-width-1 {
+  max-width: 540px;
+}
+
+.text-width-2 {
+  max-width: 560px;
+}
+ 
+.img-bordered {
+  border: 8px solid $gray-lighter;
+
+  @include media-breakpoint-up(lg) {
+    border-width: 15px;
+  }
+}
+
+.grid-4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 370px;
+  @include spacing(8px, 10px);
+
+  > * {
+    width: 25%;
+  }
+}
+
+.object-displacement-1 {
+  @include media-breakpoint-up(lg) {
+    margin-top: -45px;
+  }
+}
+
+// Mods
+@include media-breakpoint-up(xxl) {
+  .row.row-50 {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    > [class*='col-'] {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+// Brand
+.brand {
+  text-align: center;
+  
+  .brand__slogan {
+    font-family: $font-family-sans-serif-2;
+    font-size: 10px;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    color: $gray-2;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  * +  .brand__slogan {
+    margin-top: 7px;
+  }
+  
+}
+
+// Price
+.price {
+  position: relative;
+  top: -.1em;
+  font-family: $font-family-sec;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: .9;
+  color: $gray-darker;
+  vertical-align: baseline;
+}
+
+.price__aside-top {
+  position: relative;
+  top: -.5em;
+  font-size: 20px;
+  vertical-align: middle;
+  
+  &:first-child {
+    margin-right: 5px;
+  }
+}
+
+.price__main {
+  font-size: 1em;
+}
+
+.price__aside-bottom {
+  font-size: 16px;
+}
+
+* + .price {
+  margin-top: 0; 
+}
+
+@include media-breakpoint-up(md) {
+  .price {
+    font-size: 80px;
+  }
+
+  .price__aside-top {
+    font-size: 22px;
+  }
+
+  .price__aside-bottom {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .price {
+    font-size: 100px;
+  }
+
+  .price__aside-top {
+    font-size: 28px;
+  }
+
+  .price__aside-bottom {
+    font-size: 18px;
+  }
+}

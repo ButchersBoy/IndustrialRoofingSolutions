@@ -1,0 +1,11 @@
+mixin slider-blog(obj)
+  // Owl Carousel
+  .owl-carousel.carousel-post-gallery(data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-lightgallery='group' class=obj.class)
+    each item in obj.items
+      .item
+        +img-thumbnail({
+          number: 1,
+          original: item.original_img,
+          img: item.img_thumb
+        })
+    

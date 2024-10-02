@@ -1,0 +1,287 @@
+/*
+*
+* Offsets
+* --------------------------------------------------
+*/
+
+// Element offset
+* + p {
+	margin-top: 16px;
+}
+
+p + * {
+	margin-top: 22px;
+}
+
+// Headings
+
+// Tags + Tags
+p + p {
+	margin-top: 16px;
+}
+
+h2 + h6,
+h3 + h6 {
+	margin-top: 23px;
+}
+
+// Tags + Classes
+
+// Classes
+* + .list-xs {
+	margin-top: 16px;
+}
+
+* + .list-small {
+	margin-top: 15px;
+}
+
+* + .list-md {
+	margin-top: 20px;
+}
+
+* + .list-marked {
+	margin-top: 15px;
+}
+
+* + .list-ordered {
+	margin-top: 15px;
+}
+
+* + .list-linked {
+	margin-top: 23px;
+}
+
+* + .quote-centered {
+	margin-top: 25px;
+}
+
+* + .group-lg {
+	margin-top: 35px;
+}
+
+* + .figure {
+	margin-top: 30px;
+}
+
+* + [class*=list-inline-] {
+	margin-top: 38px;
+}
+
+* + .rd-mailform {
+	margin-top: 38px;
+}
+
+* + .contact-info {
+	margin-top: 30px;
+}
+
+* + .table-responsive {
+	margin-top: 25px;
+}
+
+* + .blurb-minimal {
+	margin-top: 40px;
+}
+
+* + .quote-default {
+	margin-top: 40px;
+}
+
+// Classes + Tags
+h5 + p,
+.heading-5 + p {
+	margin-top: 18px;
+}
+
+h6 + p,
+.heading-6 + p {
+	margin-top: 10px;
+}
+
+.icon-xxl + h3,
+.icon-xxl + .heading-3 {
+	margin-top: 35px;
+}
+
+// Classes + Classes
+.range + .range {
+	margin-top: 40px;
+}
+
+h1 + h3,
+.heading-1 + h3,
+h1 + .heading-3,
+.heading-1 + .heading-3 {
+	margin-top: 20px;
+}
+
+h2 + h5,
+.heading-2 + h5,
+h2 + .heading-5,
+.heading-2 + .heading-5 {
+	margin-top: 15px;
+}
+
+h3 + .owl-carousel,
+.heading-3 + .owl-carousel {
+	margin-top: 35px;
+}
+
+.blurb-minimal + .blurb-minimal {
+	margin-top: 35px;
+}
+
+.post-event + .divider-wrap,
+.divider-wrap + .post-event {
+	@include media-breakpoint-up(md) {
+		margin-top: 55px;
+	}
+}
+
+.table-responsive + .range {
+	margin-top: 50px;
+}
+
+// Media offsets
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+	* + p {
+		margin-top: 28px;
+	}
+	* + .quote-centered {
+		margin-top: 50px;
+	}
+	* + .figure {
+		margin-top: 40px;
+	}
+	* + .group-lg {
+		margin-top: 50px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	* + .quote-default {
+		margin-top: 65px;
+	}
+	.range + .range {
+		margin-top: 60px;
+	}
+}
+
+html .page {
+	* + .offset-top-1 {
+		margin-top: 35px;
+	}
+}
+
+// Range spacing
+// -------------------------------
+html {
+	.row-10 {
+		@include grid-offset(10px);
+	}
+
+	.row-20 {
+		@include grid-offset(20px);
+	}
+
+	.row-30 {
+		@include grid-offset(30px);
+	}
+
+	.row-both-30 {
+		margin-left: -15px;
+		margin-right: -15px;
+		@include grid-offset(30px);
+
+		> [class*='cell'] {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.row-50 {
+		@include grid-offset(50px);
+	}
+
+	.row-60 {
+		@include grid-offset(50px);
+	}
+
+	.row-70 {
+		@include grid-offset(50px);
+	}
+
+	@include media-breakpoint-up(md) {
+		.row-60 {
+			@include grid-offset(60px);
+		}
+		.row-70 {
+			@include grid-offset(70px);
+		}
+
+		.row-sm-75 {
+			@include grid-offset(75px);
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.row-md-90 {
+			@include grid-offset(90px);
+		}
+	}
+
+	@media (min-width: map_get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+		.row-70 {
+			@include grid-offset(70px);
+		}
+	}
+
+	@include media-breakpoint-up(xxl) {
+		.row-xl-50 {
+			@include grid-offset(50px);
+		}
+
+		.row-xl-both-50 {
+			margin-left: -50px;
+			margin-right: -50px;
+			@include grid-offset(50px);
+
+			> [class*='cell'] {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+	}
+}
+
+
+// custom offset for row
+//
+html.lt-ie-10 * + .row,
+* + .row {
+	margin-top: 30px;
+}
+
+@include media-breakpoint-up(md) {
+	html.lt-ie-10 * + .row,
+	* + .row {
+		margin-top: 35px;
+	}
+}
+
+.row:not(.row-condensed).row-horizontal-10 {
+	margin-left: -5px;
+	margin-right: -5px;
+
+	> [class*='col'] {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+// Insets
+// -------------------------

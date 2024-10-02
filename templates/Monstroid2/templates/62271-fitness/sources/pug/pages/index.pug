@@ -1,0 +1,411 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+include ../elements/_ui-slider-blog
+
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Home'
+
+block page
+  // Page Header
+
+  header.page-header.section.page-header--abs
+    // RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar(
+      data-body-class='rd-navbar-static-smooth',
+      data-layout=                'rd-navbar-fixed',
+      data-sm-layout=             'rd-navbar-fixed',
+      data-md-layout=             'rd-navbar-fixed',
+      data-md-device-layout=      'rd-navbar-fixed',
+      data-lg-layout=             'rd-navbar-static',
+      data-lg-device-layout=      'rd-navbar-fixed',
+      data-xl-layout=             'rd-navbar-static',
+      data-xl-device-layout=      'rd-navbar-static',
+      data-xxl-layout=            'rd-navbar-static',
+      data-xxl-device-layout=     'rd-navbar-static',
+      data-lg-stick-up-offset=    '69px',
+      data-xl-stick-up-offset=    '35px',
+      data-xxl-stick-up-offset=   '35px',
+      data-lg-stick-up=           'true',
+      data-xl-stick-up=           'true',
+      data-xxl-stick-up=          'true'
+      )
+        .rd-navbar-inner.rd-navbar-search-wrap
+          // RD Navbar Panel
+          .rd-navbar-panel
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+            // RD Navbar Brand
+            .rd-navbar-brand
+              a.brand-name(href='index.html')
+                +png('logo-1770x398')
+
+          // RD Navbar Search wrap
+          // RD Navbar Nav
+          .rd-navbar-nav-wrap.rd-navbar-search_not-collapsable
+            .rd-navbar-search_collapsable
+              button.rd-navbar-search__toggle.rd-navbar-fixed--hidden(data-rd-navbar-toggle='.rd-navbar-search-wrap')
+
+            include ../includes/_navbar-search
+
+            .rd-navbar-search_collapsable
+              include ../includes/_nav
+
+  include ../sections/_section-slider-default
+
+  // Presentation
+  section.section-lg.bg-default
+    .container
+      .row.justify-content-lg-center.row-50
+        .col-lg-6
+          hr.divide.divider-sm.divider-left
+          h2 Fitness is the Answer…
+          h4.heading-thin ...whenever the question is your physical shape!
+          p With a notion that fitness activities are not just mere 3 times a week routine, but rather a day-to-day lifestyle, we have opened a first of our fitness centers in the city… When we were asking ourselves, whether we would be able to offer something different to what other fitness studios offer, we found the answer. It was a skilled team of trainers!
+          h3 — Amanda Smith
+        .col-lg-6
+          img(src="images/home-04.jpg", alt="")
+  ='\n'
+
+  section.section-lg.bg-gray-lighter(id=seeFeaturesLink)
+    .container.text-center
+      hr.divider.divider-sm.divider-primary
+      h2 Our Classes
+
+      .row.row-50.justify-content-center
+        .col-lg-4.col-md-7
+          .img-thumbnail-variant-4
+            figure
+              img(src="images/home-05.jpg", alt="")
+              a(href='single-program.html').caption-abs CrossFit
+            .caption-bottom.box
+              .box-inner
+                p.box__left Friday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 09 AM. —  10 AM.
+              .box-inner
+                p.box__left Saturday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 12 PM. —  13 PM.
+              .box-inner
+                p.box__left Sunday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 09 AM. —  10 AM.
+        .col-lg-4.col-md-7
+          .img-thumbnail-variant-4
+            figure
+              img(src="images/home-06.jpg", alt="")
+              a(href='single-program.html').caption-abs Yoga
+            .caption-center.box
+              .unit.flex-row.align-items-center.unit-spacing-sm
+                .unit-left
+                  img(src="images/home-07.jpg", alt="").rounded-circle
+                .unit-body
+                  h6
+                    a(href='coach.html') Julie Collins
+                  p.small Coach
+              .unit.flex-row.align-items-center.unit-spacing-sm
+                .unit-left
+                  img(src="images/home-08.jpg", alt="").rounded-circle
+                .unit-body
+                  h6
+                    a(href='coach.html') Brenda  Flores
+                  p.small Coach
+            .caption-bottom.box
+              .box-inner
+                p.box__left Friday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 09 AM. —  10 AM.
+        .col-lg-4.col-md-7
+          .img-thumbnail-variant-4
+            figure
+              img(src="images/home-09.jpg", alt="")
+              a(href='single-program.html').caption-abs Fitness
+            .caption-center.box
+              .unit.flex-row.align-items-center.unit-spacing-sm
+                .unit-left
+                  img(src="images/home-10.jpg", alt="").rounded-circle
+                .unit-body
+                  h6
+                    a(href='coach.html') Steven Ayokee
+                  p.small Coach
+            .caption-bottom.box
+              .box-inner
+                p.box__left Friday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 09 AM. —  10 AM.
+              .box-inner
+                p.box__left Saturday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 12 PM. —  13 PM.
+              .box-inner
+                p.box__left Sunday
+                p.box__right
+                  span.mdi.mdi-clock.icon
+                  | 09 AM. —  10 AM.
+
+  ='\n'
+
+  section.section.text-center
+    +parallax({
+      img: 'home-11',
+      addClass: 'material-parallax-light'
+    })
+      .container.section-lg
+        hr.divider.divider-md.divider-primary
+        h4.heading-thin Whatever your mood is…
+        h1 … We’ve got
+          br.d-none.d-xl-block
+          | a Fitness Class for it!
+        a.button.button-sm.button-primary(href='programs.html') View the classes
+
+  section.section.bg-default.section-lg
+    .container
+      .row
+        .col-lg-6
+          img(src="images/home-12.jpg", width='652' height="491" alt="")
+        .col-lg-6
+          hr.divider.divider-sm.divider-left
+          h2 Fitness for Men?
+          h4.heading-thin Why Not? These men found it awesome!
+          p Since the time our fitness studio opened up its doors for the very first time, there always was a conventional feeling that fitness is more of a girly thing, than a manly one. No one could have been more wrong! Just in the last 10 years our fitness center’s men/women attendees ration skyrocketed from 10/90 to 35/65! This means that each third of our fitness club’s attendees is a man who just loves keeping up in shape while doing fitness!
+          a(href='single-program.html').button.button-sm.button-gray read more
+
+
+  section.section.text-center
+    +parallax({
+      img: 'home-26'
+    })
+      .container.section-lg
+        hr.divider.divider-sm
+        h2.context-dark Our Coaches
+
+        .owl-carousel.owl-carousel-light-dots.owl-carousel-fullhigth.owl-carousel-nav-style-1.owl-carousel-nav-top(data-autoplay='true', data-items='1', data-md-items='2', data-xl-items='3', data-dots='true' data-nav='true' data-loop='true', data-margin='50', data-mouse-drag="false")
+          .box.bg-default
+            +jpg('coaches-1-193x193', 'img-circle')
+            h5 Julie  Collins
+            h6 Coach
+            p.small.center-block I initially took on CrossFit trainings after a spending a lifetime in professional athletics. The fact that I loved sports so much contributed a lot to my decision.
+            a(href='coach.html').button.button-sm.button-primary read more
+
+          .box.bg-default
+            +jpg('coaches-2-193x193', 'img-circle')
+            h5 Steven Ayokee
+            h6 Owner/Head Coach
+            p.small.center-block 12 Years ago I lost 80lbs with the help of a personal coach and it completely changed my way of life. Since then, it’s been my mission to sway other people do CrossFit too.
+            a(href='coach.html').button.button-sm.button-primary read more
+
+          .box.bg-default
+            +jpg('coaches-3-193x193', 'img-circle')
+            h5 Dominic  Snyder
+            h6 Coach
+            p.small.center-block Growing up, I’ve always been involved in sports, fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury wihile serving in Iraq.
+            a(href='coach.html').button.button-sm.button-primary read more
+            
+
+  section.section.bg-default.section-lg
+    .container
+      .text-center
+        hr.divider.divider-sm
+        h2 Most Recent
+        h4.heading-thin Fitness Posts
+      .row.justify-content-center.row-50
+        .col-md-6.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            .post-inner
+              .post-label
+                a(href='classic-blog.html').label.label-primary Fitness
+              img(src="images/home-16.jpg",width='418' height="315" alt="")
+
+              .post-classic-title
+                h5: a(href=postImage) Tanya Swift: New Female Athlete of the Month
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      img(src="images/home-17.jpg", width='74' height="74" alt="").rounded-circle
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+        .col-md-6.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            .post-inner
+              .post-label
+                a(href='classic-blog.html').label.label-primary Fitness
+              img(src="images/home-18.jpg", width='418' height="315" alt="")
+
+              .post-classic-title
+                h5: a(href=postImage) If My Last Day of CrossFit Were Tomorrow…
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      img(src="images/home-19.jpg", width='74' height="74" alt="").rounded-circle
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' Max Colins'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+        .col-md-6.col-xl-4
+          // Post slider
+          article.post-slider.post-minimal
+            .post-inner
+              .post-label
+                a(href=postImage).label.label-primary Fitness
+              img(src="images/home-20.jpg", width='418' height="315" alt="")
+
+              .post-classic-title
+                h5: a(href=postImage) The heavy weight of olympics: power lifting for the pros
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      img(src="images/home-21.jpg", width='74' height="74"  alt="").rounded-circle
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' David Rain'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+  section.section.text-center
+    +parallax({
+      img: 'home-22',
+      addClass: 'material-parallax-light'
+    })
+      .container.section-lg
+        hr.divider.divider-md.divider-primary
+        h4.heading-thin Discover the schedule…
+        h1 … That Will Fit Your
+          br.d-none.d-xl-block
+          | Energy Rhythm!
+        a.button.button-sm.button-primary(href='programs.html') View the classes
+
+
+  section.section-lg.bg-gray-lighter.section
+    .container
+      hr.divider.divider-sm.divider-primary
+      h2.text-center Testimonials
+      // Owl Carousel
+      .owl-carousel.owl-carousel-nav-top(data-autoplay='true',data-items='1', data-md-items='2', data-lg-items='3', data-dots='true' data-nav='true' data-loop='true', data-margin='40', data-mouse-drag="false")
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-74x74')
+            h5.quote-default__title Incredible!
+            .quote-default__text: p.q I am amazed at how quick are the first results, all of which I sincerely attribute to my newly found love for these fitness workouts! I lost some weight and I feel amazing!
+            p.quote-default__cite Jim Stone
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-74x74')
+            h5.quote-default__title Amazing!
+            .quote-default__text: p.q Though I’m just in the middle of my first fitness “semester”, I am officially excited about how re-energizing and revitalizing this whole workout thing is!
+            p.quote-default__cite Alison Winnergate
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-3-74x74')
+            h5.quote-default__title Inspiring!
+            .quote-default__text: p.q Before I was referred here by my old good friend Janette, I never considered the fitness workouts routine to be so efficient. Now, my body proves me wrong!
+            p.quote-default__cite Emma Smith
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-74x74')
+            h5.quote-default__title Incredible!
+            .quote-default__text: p.q I am amazed at how quick are the first results, all of which I sincerely attribute to my newly found love for these fitness workouts! I lost some weight and I feel amazing!
+            p.quote-default__cite Jim Stone
+
+
+  section.section.section-lg.bg-accent.context-dark.text-center
+    .container
+      .row.justify-content-center
+        .col-xl-8.col-lg-10
+          h2 Get Best Fitness Tips and Tricks!
+
+          // RD Mailform
+          form.rd-mailform.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              label.form-label(for="email") Enter your e-mail please
+              input#email.form-input(type="email" name="email" data-constraints="@Email @Required")
+            .form-button
+              button(type="submit").button.button-sm.button-gray-light-outline Subscribe
+
+  section.section
+    // Owl Carousel
+    // RD Flickr
+    .owl-carousel.owl-flex.flickr(data-autoplay='true',data-flickr-tags='tm-62271' data-items='2', data-sm-items='3', data-md-items='4', data-lg-items='5', data-xl-items='6', data-xxl-items='8' data-loop='false', data-mouse-drag="true")
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+      div(data-type='flickr-item')
+        a.thumb-overlay(href='#', target="_blank" data-link='href')
+          img(data-image_z='src', data-title='alt', src='images/_blank.png', alt='')
+          .thumb-centered__caption
+            span.icon.icon-lg.fa-flickr
+
+  // Page Footer
+  include ../sections/_footer-minimal

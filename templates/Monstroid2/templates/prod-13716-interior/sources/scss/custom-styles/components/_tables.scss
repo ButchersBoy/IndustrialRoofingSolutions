@@ -1,0 +1,116 @@
+//
+// Table custom
+// --------------------------------------------------
+
+$table-head-padding:            33px 24px;
+$table-cell-padding:            17px 24px 18px;
+$table-condensed-cell-padding:  5px;
+
+$table-bg:                      $white;
+$table-bg-accent:               $gray-lighter;
+$table-bg-hover:                $secondary;
+$table-bg-active:               $table-bg-hover;
+
+$table-border-color:            #d9d9d9;
+
+.table-custom {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  background: $table-bg;
+
+  th,
+  td {
+    color: $black;
+    background: $table-bg;
+  }
+
+  th {
+    padding: 25px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      padding: $table-head-padding;
+    }
+  }
+
+  td {
+    padding: $table-cell-padding;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  tfoot td {
+    font-weight: 700;
+  }
+}
+
+// Styles
+.table-custom-secondary {
+  th {
+    color: $white;
+    background: $secondary;
+  }
+}
+
+.table-custom-lighter {
+  thead th {
+    background: $table-bg-accent;
+  }
+
+  td + td {
+    border-left: 1px solid $table-border-color;
+  }
+}
+
+.table-custom-bordered {
+  border: 1px solid $table-border-color;
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  tbody > tr:first-of-type > td {
+    border-top: 0;
+  }
+}
+
+.table-custom-striped {
+  tbody tr:nth-of-type(odd) td {
+    background: transparent;
+  }
+
+  tbody tr:nth-of-type(even) td {
+    background: $table-bg-accent;
+  }
+
+  tbody td {
+    border: 0;
+  }
+}
+
+// Modificators
+.table-round {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+//
+// Table Custom Additional
+//
+.table-custom-responsive {
+  @include media-breakpoint-down(md) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+    
+    // Prevent double border on horizontal scroll due to use of `display: block;`
+    &.table-bordered {
+      border: 0;
+    }
+  }
+}

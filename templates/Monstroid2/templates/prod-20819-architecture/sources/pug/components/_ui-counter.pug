@@ -1,0 +1,6 @@
+mixin counter-classic( obj )
+	article.counter-classic( class= obj.mod )&attributes(attributes)
+		.counter-classic-header
+			.heading-1.counter-classic-number: span.counter=obj.number
+			h6.counter-classic-title= obj.title
+		.counter-classic-text= obj.text

@@ -1,0 +1,186 @@
+/*
+* Sections
+*/
+
+//
+// Section Spacing
+// 
+.section-xs {
+	padding: 25px 0;
+}
+
+.section-sm,
+.section-md,
+.section-md-2,
+.section-md-3,
+.section-md-4,
+.section-lg,
+.section-xl {
+	padding: 50px 0;
+}
+
+
+.section-md {
+	padding: 20px 0 120px;
+}
+
+// Section collapse
+.section-collapse + .section-collapse {
+	padding-top: 0;
+}
+
+.section-collapse:last-child {
+	padding-bottom: 0;
+}
+
+// Section with bottom zero padding
+html [class*='section-'].section-bottom-0 {
+	padding-bottom: 0;
+}
+
+@include media-breakpoint-down(md) {
+	section.section-sm,
+	section.section-md,
+	section.section-lg,
+	section.section-xl,
+	section.section-xxl {
+		&:first-of-type {
+			padding-top: 40px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	.section-sm {
+		padding: 60px 0;
+	}
+
+	.section-md {
+		padding: 30px 0 120px;
+	}
+
+	.section-md-2,
+	.section-md-3,
+	.section-md-4 {
+		padding: 50px 0 100px;
+	}
+
+	.section-lg {
+		padding: 85px 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+
+	.section-md-2 {
+		padding: 81px 0 118px;
+	}
+
+	.section-md-3 {
+		padding: 86px 0 91px;
+	}
+
+	.section-md-4 {
+		padding: 80px 0 110px;
+	}
+
+	.section-md {
+		padding: 123px 0 56px;;
+	}
+
+	.section-lg {
+		padding: 100px 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.section-lg {
+		padding: 139px 0 126px;
+	}
+}
+
+//
+// Custom sections
+//
+
+// Section single
+.section-single {
+	display: flex;
+	text-align: center;
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	* + .rights {
+		margin-top: 35px;
+	}
+	* + .countdown-wrap {
+		margin-top: 35px;
+	}
+	.countdown-wrap + * {
+		margin-top: 35px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		* + .rights {
+			margin-top: 60px;
+		}
+		.countdown-wrap + * {
+			margin-top: 35px;
+		}
+	}
+
+	.rd-mailform-wrap {
+		max-width: 670px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	* + .rd-mailform-wrap {
+		margin-top: 20px;
+	}
+}
+
+.section-single-header {
+	padding: calc(1em + 3vh) 0 calc(1em + 2vh);
+}
+
+.section-single-main {
+	padding: calc(1em + 4vh) 0;
+}
+
+.section-single-footer {
+	padding: calc(1em + 2vh) 0 calc(1em + 3vh);
+}
+
+.section-single-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 100vh;
+
+	> * {
+		width: 100%;
+	}
+}
+
+@supports (display: grid) {
+	.section-single-inner {
+		display: grid;
+		justify-items: center;
+		align-content: space-between;
+		grid-template-columns: 1fr;
+	}
+}
+
+// Section Custom
+.section-custom {
+	position: relative;
+	overflow: hidden;
+}

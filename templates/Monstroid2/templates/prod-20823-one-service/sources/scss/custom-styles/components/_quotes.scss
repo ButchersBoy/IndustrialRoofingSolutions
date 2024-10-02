@@ -1,0 +1,141 @@
+/*
+* Quotes
+*/
+
+//
+// Table of Contents: 
+//
+// Quote primary
+//
+
+//
+// Quote primary
+//
+.quote-primary {
+}
+
+.quote-primary-mark {
+	position: relative;
+	top: 6px;
+	display: block;
+	width: 37px;
+	height: 27px;
+	fill: $primary;
+	flex-shrink: 0;
+}
+
+.quote-primary-body {
+	position: relative;
+	padding: 25px 0;
+	border-top: 1px solid $gray-200;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 13px;
+		border-style: solid;
+		border-color: $gray-200;
+	}
+
+	&::before {
+		left: 0;
+		width: 78px;
+		border-width: 1px 1px 0 0;
+	}
+
+	&::after {
+		right: 0;
+		width: calc(100% - 78px - 12px);
+		border-width: 1px 0 0 1px;
+		transform-origin: 0 0;
+		transform: skew(-45deg);
+	}
+}
+
+.quote-primary-text {
+	padding-top: 20px;
+}
+
+.quote-primary-cite {
+	font-weight: 700;
+}
+
+.quote-primary-footer {
+	padding-left: 5px;
+}
+
+* + .quote-primary {
+	margin-top: 30px;
+}
+
+* + .quote-primary-footer {
+	margin-top: 8px;
+}
+
+@include media-breakpoint-up(sm) {
+	.quote-primary-body {
+		display: flex;
+		padding: 32px 20px 40px 30px;
+	}
+
+	.quote-primary-text {
+		padding-top: 0;
+		padding-left: 20px;
+	}
+
+	.quote-primary-footer {
+		padding-left: 30px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.quote-primary-body {
+		padding-right: 40px;
+	}
+}
+
+
+// Quote Classic
+.quote-classic-wrap {
+	margin-top: 30px;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	+ .button {
+		margin-top: 30px;
+	}
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 42px;
+		+ .button {
+			margin-top: 52px;
+		}
+	}
+}
+
+.quote-classic-img {
+	width: 25px;
+	margin-top: 8px;
+	position: absolute;
+	// Medium ≥768px
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		width: 37px;
+	}
+}
+
+.quote-classic-name {
+	color: $black;
+	font-weight: 700;
+	margin-top: 37px;
+	// Medium <768px
+	@include media-breakpoint-down(sm) {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+}
+
+

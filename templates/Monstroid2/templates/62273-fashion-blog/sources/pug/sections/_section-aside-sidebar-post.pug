@@ -1,0 +1,61 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+// Search
+section.section-sm.section-style-1
+  h5 Search
+  // RD Search
+  form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+    .form-wrap.form-wrap_icon.linear-icon-magnifier
+      label(for="rd-search-form-input" class="form-label") Enter  keyword
+      input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+    button(type="submit").button.button-gray-light-outline Go!
+='\n'
+
+// About
+section.section-sm
+  h5 About
+  .thumbnail-classic-minimal
+    +jpg('aside-blog-about-1-210x210','img-circle')
+    .caption
+      p Hello, my dear readers! I’d like to tell you more about myself, my fashion tastes and the origins of my inspiration for all things lifestyle and beauty. I’ve been working for almost 15 years in different, nationwide fashion and lifestyle magazines, such as Vogue; Elle; Pink. Such experience gave me a professional expertise and a personal passion for everything related ...
+      a(href='about.html').button.button-link Read more
+='\n'
+
+// Categories
+section.section-sm
+  h5 Categories
+  ul.list-linked
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+    li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-sm
+  h5 Latest Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          p.post-inline__link: a(href=postLink) SKIN UNDERTONE HIDDEN SECRETS: WHY IT MATTERS FOR HOW THE MAKEUP LOOKS ON YOU
+          span.post-inline__time Jan.20, 2016
+
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          p.post-inline__link: a(href=postLink) THURSDAY’S WORKWEAR REPORT: SILK BLEND CARDIGAN
+          span.post-inline__time Jan.20, 2016
+
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          p.post-inline__link: a(href=postLink) COFFEE BREAK: KNOTTED CASHMERE HEMMED RUANA
+          span.post-inline__time Jan.20, 2016
+
+='\n'

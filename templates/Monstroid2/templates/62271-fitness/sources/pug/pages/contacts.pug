@@ -1,0 +1,73 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Contacts'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+  +breadcrumbs({
+    path: [[pageName]]
+  })
+
+  section.section.section-lg.text-center.bg-default
+    .container
+      hr.divider.divider-md.divider-primary
+      h1 Contacts
+      p Join the Best GYM in Your Town!
+      h5 Address: 6036 Richmond hwy., Alexandria, VA 2230 #[br.d-none.d-lg-block] Let's talk
+        a.text-primary(href='callto:#')=' (703) 329-06-32'
+      h5 We are working on:
+      div.list-terms-wrapper
+        dl.list-terms-inline
+          dt Monday - Thursday
+          dd
+            span.icon.icon-primary.fa-clock-o
+            | 09 AM. — 09 PM.
+        dl.list-terms-inline
+          dt Friday
+          dd
+            span.icon.icon-primary.fa-clock-o
+            | 09 AM. — 07 PM.
+        dl.list-terms-inline
+          dt Saturday
+          dd
+            span.icon.icon-primary.fa-clock-o
+            | 09 AM. — 02 PM.
+
+      .row.justify-content-center
+        .col-xl-6.col-lg-7
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap-label-aside
+              label.form-label.form-label-outside(for="contact-name") Name:
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Enter please your name')
+
+            .form-wrap.form-wrap-label-aside
+              label.form-label.form-label-outside(for="contact-email") E-mail:
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Enter your e-mail please')
+
+            .form-wrap.form-wrap-label-aside
+              label.form-label.form-label-outside(for="contact-phone") Phone:
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Enter please your phone')
+
+            .form-wrap.form-wrap-label-aside
+              label.form-label.form-label-outside(for="contact-message") Message:
+              textarea#contact-message.form-input(name="message" data-constraints="@Required" placeholder='Enter please your message')
+
+            button(type="submit").button.button-sm.button-primary Submit
+
+
+  section.section
+    include ../sections/_section-gmap
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal

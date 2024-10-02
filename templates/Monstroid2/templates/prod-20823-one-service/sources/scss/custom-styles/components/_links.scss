@@ -1,0 +1,81 @@
+/*
+* Links
+*/
+
+// Standard link style
+a {
+	transition: $transition-base;
+
+	&,
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: $link-decoration;
+	}
+
+	@include link($link-color, $link-hover-color);
+
+	&[href*='tel'],
+	&[href*='mailto'] {
+		white-space: nowrap;
+	}
+}
+
+.link-hover {
+	color: $link-hover-color;
+}
+
+.link-press {
+	color: $link-press-color;
+}
+
+.privacy-link {
+}
+
+* + .privacy-link {
+	margin-top: 25px;
+}
+
+.link-border {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: 500;
+	color: $black;
+	border-bottom: 1px solid;
+
+	&:hover {
+		color: $primary;
+	}
+
+
+}
+
+.link-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $white;
+	border-radius: 10em;
+	border: 1px solid $gray-200;
+	transition: $transition-base;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 18px;
+
+	[class*=facebook] {
+		color: $facebook;
+	}
+	[class*=instagram] {
+		color: $instagram;
+	}
+	[class*=youtube] {
+		color: $youtube;
+	}
+
+	&:hover {
+		border-color: transparent;
+		box-shadow: 0 0 10px rgba($black, 0.2);
+	}
+}

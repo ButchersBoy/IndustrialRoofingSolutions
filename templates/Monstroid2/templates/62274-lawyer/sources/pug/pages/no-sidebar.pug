@@ -1,0 +1,25 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'No Sidebar'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-default.section-md
+    .container
+      .row.justify-content-sm-center
+        .col-lg-7.col-xl-8.section-divided__main
+          include ../sections/_section-classic-blog
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,116 @@
+/*
+*
+* Lists
+* --------------------------------------------------
+*/
+
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.list {
+  > li + li {
+    margin-top: 10px;
+  }
+}
+
+
+// List inline
+//
+
+.list-inline {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  > li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
+// Description Lists
+//
+
+dl {
+  margin: 0;
+}
+
+
+// List terms
+//
+
+.list-terms {
+  margin-top: 35px;
+  dt + dd { margin-top: 5px; }
+  dd + dt { margin-top: 25px; }
+}
+
+
+// List index
+//
+
+.list-index {
+  counter-reset: li;
+
+  li {
+    .list-index-counter {
+      &:before {
+        content: counter(li, decimal)". ";
+        counter-increment: li;
+      }
+    }
+  }
+}
+
+
+// List marked
+//
+
+.list-marked {
+  li {
+    position: relative;
+    padding-left: 16px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: $gray-dark;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// List nav
+.list-nav {
+  @include spacing(30px, 10px);
+
+  > li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  > li.active,
+  > li a.active,
+  > li > a:hover {
+    color: $primary;
+  }
+}

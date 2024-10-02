@@ -1,0 +1,39 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Buttons'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Buttons
+  section.section-lg.bg-default.text-center
+    .container
+      .group-lg
+        .button.button-primary REQUEST A QUOTE
+        .button.button-black REQUEST A QUOTE
+        .button.button-primary-outline REQUEST A QUOTE
+        .button.button-gray-light-outline REQUEST A QUOTE
+        .button.button-link REQUEST A QUOTE
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-accent.text-center
+    .container
+      .group-lg
+        .button.button-primary-outline REQUEST A QUOTE
+        .button.button-gray-light-outline REQUEST A QUOTE
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

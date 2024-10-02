@@ -1,0 +1,5 @@
+mixin tag-list(obj)
+  ul(class=obj.list_class)
+    li Tags:
+    each item in obj.items
+      li: a(href=obj.href)= item

@@ -1,0 +1,390 @@
+extends ../_skeleton
+include ../components/_boxes
+include ../components/_card
+
+block variables
+	- pageName = 'Home'
+
+block page
+	#particles-js.particles-js
+
+	include ../sections/_header-classic
+
+	.gradient-1.bg-vide-1
+		.gradient-6.bg-vide( data-vide-bg='video/video-1' data-vide-options='posterType: jpg, position: 50% 50%' )
+
+		// About
+		section.section.section-inset-1
+			.container: .row.row-30.justify-content-xl-between.align-items-md-center.align-items-xxl-start
+				.col-md-6.col-xl-5.offset-top-xxl-15.wow.fadeInLeft: .box-style-1
+					.headings-default
+						.headings-default-subtitle Crypto
+						h2 Powerful Platform
+							br
+							| for ICO Startups
+					p Get Unit is a full service ICO platform and service provider. We are one of the few companies to offer ICO turnkey solutions in California. We are capable of deploying both utility and security tokens.
+					.group-md.group-middle.justify-content-center
+						a.button.button-isi.button-primary( href='#' ) Get started
+						a.button.button-default-outline( href='#' ) Learn More
+
+				.col-md-6.wow.fadeIn: .img-style-1.img-style-3: +img('image-1-715x521.png')
+
+		// Clients
+		section.section-style-1
+			.container
+				.clients-default-wrap.wow.fadeInRight: .row.row-20.align-items-center.justify-content-center.justify-content-md-start.justify-content-lg-between
+					.col-auto.col-sm-4.col-lg-auto: a.clients-default( href='#' ): +img('clients-1-82x30.png')
+					.col-auto.col-sm-4.col-lg-auto: a.clients-default( href='#' ): +img('clients-2-130x25.png')
+					.col-auto.col-sm-4.col-lg-auto: a.clients-default( href='#' ): +img('clients-3-86x15.png')
+					.col-auto.col-sm-4.col-lg-auto: a.clients-default( href='#' ): +img('clients-4-116x26.png')
+					.col-auto.col-sm-4.col-lg-auto: a.clients-default( href='#' ): +img('clients-5-191x31.png')
+
+	.gradient-2
+		section.section.section-xs.section-inset-3.text-center
+			.container
+				.box-relative.wow.fadeInUp
+					.headings-default
+						.headings-default-subtitle About
+						h3 Your All-in-One ICO
+							br
+							| Command Center
+					p.d-inline-block.text-width-medium Our company provides a fully compliant security and utility token issuance solutions with a post-token issuance community and company management.
+
+				.row.row-xxl.row-30.justify-content-center
+					.col-sm-6.col-md-4.wow.fadeInUp( data-wow-delay='.1s' )
+						+service-default({
+							icon: 'thin-icon-network',
+							title: 'Blockchain Infrastructure',
+							text: 'Our platform is blockchain-based to address the structural issues in the global financial sector. '
+						})
+					.col-sm-6.col-md-4.wow.fadeInUp
+						+service-default({
+							icon: 'thin-icon-documents',
+							title: 'Easy Token Integration',
+							text: 'Integrate your tokens easily using a variety of options and tools available to  registered users of Get Unit.'
+						})
+					.col-sm-6.col-md-4.wow.fadeInUp( data-wow-delay='.1s' )
+						+service-default({
+							icon: 'thin-icon-lock',
+							title: 'Increased Security',
+							text: 'Our platform is provided with full protection against DDoS attacks and is completely fraud resistant.'
+						})
+
+	.gradient-3
+		// Pre-Sale
+		section#token-sale.section.section-xs
+			.container
+				.row.row-30.justify-content-center.justify-content-xl-between.align-items-center.align-items-xl-start
+					.col-sm-8.col-md-6.text-center
+						.discount-progress.custom-progress-radial
+							svg.custom-progress-radial-bar( x='0', y='0', width='308', height='308', viewbox='0 0 308 308' )
+								circle.custom-progress-radial-bg( cx=154, cy=154, r=145 )
+								circle.custom-progress-radial-fg.clipped( cx=154, cy=154, r=145 )
+								circle.custom-progress-radial-dot( cx=154, cy=154, r=9 )
+								rect.custom-progress-radial-start( x='154' y='0' width='4' height='18' )
+							.discount-progress-content
+								.discount-progress-number
+									span.custom-progress-radial-dividend 100000
+									| eth
+								p Goal
+								.discount-progress-divider
+								.discount-progress-number.discount-progress-now
+									span.custom-progress-radial-divider 70000
+									| eth
+								p Now
+
+						+img('image-3-552x303.png').wow.fadeInUp
+					.col-md-6.col-xl-5.wow.fadeInUp
+						.headings-default
+							.headings-default-subtitle Tokens
+							h3 Pre-Sale & Values
+						p.d-inline-block.text-width-medium We are happy to announce the launch of presale stage of token sale as a first step of our ICO campaign. The tokens can be purchased by anyone with cryptocurrency.
+						.countdown.countdown-style-1( data-type='until' data-time='31 Dec 2019 16:00' )
+						.group-sm.discount-time-wrap
+							.discount-time: .unit.unit-spacing-sm.flex-column.flex-sm-row.flex-md-column.flex-lg-row
+								.unit-left
+									span.icon.discount-time-icon.mdi.mdi-rocket
+								.unit-body
+									h6.discount-time-title Start
+									p.discount-time-text Feb 8, 2019
+										br
+										| (9:00AM GMT)
+
+							.discount-time: .unit.unit-spacing-sm.flex-column.flex-sm-row.flex-md-column.flex-lg-row
+								.unit-left
+									span.icon.discount-time-icon.mdi.mdi-flag-checkered
+								.unit-body
+									h6.discount-time-title End
+									p.discount-time-text Feb 20, 2019
+										br
+										| (11:00AM GMT)
+
+						.group-xl.group-middle.discount-details.justify-content-center.justify-content-sm-start
+							div
+								p.discount-details-title Tokens exchange rate
+								ul.discount-details-list
+									li 1 ETH = 650 ICC
+									li 1 BTC = 1940 ICC
+
+							a.button.button-isi.button-primary( href='#' ) Get started
+
+		// Values
+		section.section.section-lg.text-center
+			.container: .row.row-30
+				.col-lg-6.wow.fadeInUp
+					.donut-chart( data-donut='[{ "Title": "Team", "Percentage": "0.12", "Fill": "#a0d7ff" }, { "Title": "Advisors", "Percentage": "0.12", "Fill": "#29a5ff" }, { "Title": "Reserve", "Percentage": "0.26", "Fill": "#3cc774" }, { "Title": "ICO", "Percentage": "0.5", "Fill": "#ffd234" }]' )
+
+						.donut-chart-caption
+							.donut-chart-text Distribution
+								br
+								| of Tokens
+
+				.col-lg-6.wow.fadeInUp( data-wow-delay='.1s' )
+					.donut-chart( data-donut='[{ "Title": "Marketing", "Percentage": "0.25", "Fill": "#3cc774" }, { "Title": "Development", "Percentage": "0.32", "Fill": "#ffd234" }, { "Title": "Partnership", "Percentage": "0.3", "Fill": "#a0d7ff" }, { "Title": "Legal & Taxation", "Percentage": "0.13", "Fill": "#29a5ff" }]' )
+
+						.donut-chart-caption
+							.donut-chart-text Funds
+								br
+								| Allocation
+
+	.gradient-4
+
+		// Our Roadmap
+		section#roadmap.section-timeline.text-sm-left
+			.container.container-custom-1: .row: .col-sm-7.col-lg-6.col-xl-5.wow.fadeInLeft
+				.headings-default
+					.headings-default-subtitle Steps
+					h3 Our Roadmap
+				p.d-inline-block.text-width-medium Take a look at our roadmap, showing various stages of our platform development and its eventual success.
+			svg.timeline-svg( x='0', y='0', viewBox='0 0 1920 500', preserveAspectRatio='none' )
+				path.timeline-svg-path( d='M 0 490  C 250 525 340 350 460 320  S 600 280 770 350  S 960 350 1070 260  S 1240 140 1420 160  S 1850 100 1920 0' )
+			// Owl Carousel
+			.owl-carousel.owl-style-1( data-items='1' data-autoplay='false' data-loop='false' data-nav='true' data-animation-in='fadeIn' data-animation-out='fadeOut' data-mouse-drag='false' data-touch-drag='false' )
+				.timeline-dots
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 05.2019
+						.timeline-dot-title: a( href='#') Project concept
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 06.2019
+						.timeline-dot-title: a( href='#') Project design
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 08.2019
+						.timeline-dot-title: a( href='#') Platform launch
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 10.2019
+						.timeline-dot-title: a( href='#') Main token sale
+
+				.timeline-dots
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 12.2019
+						.timeline-dot-title: a( href='#') Listing on exchanges
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 01.2019
+						.timeline-dot-title: a( href='#') Work with media
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 02.2019
+						.timeline-dot-title: a( href='#') Property marketing
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 03.2019
+						.timeline-dot-title: a( href='#') Better security
+
+				.timeline-dots
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 04.2019
+						.timeline-dot-title: a( href='#') Press tour
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 05.2019
+						.timeline-dot-title: a( href='#') New features
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 06.2019
+						.timeline-dot-title: a( href='#') Rental auction
+
+					.timeline-dot
+						time.timeline-dot-time( datetime='2019' ) 07.2019
+						.timeline-dot-title: a( href='#') Platform updates
+
+		// Section Mobile
+		section#get-the-app.section.section-xs.section-inset-2
+			.container: .row.row-30
+				.col-md-4.col-lg-6.col-xl-7.align-self-end.d-none.d-md-block.wow.fadeInLeft: .img-style-2: +img('image-2-641x616.png')
+				.col-md-8.col-lg-6.col-xl-5.inset-bottom-md-100: .box-style-2.wow.fadeInUp
+					.headings-default
+						.headings-default-subtitle Ico app
+						h3 ICO Mobile App
+					p.d-inline-block.text-width-medium Our mobile app is designed to provide the registered users of Get Unit with the best experience of using our platform on smartphones, tablets, and other gadgets. It includes a variety of useful tools perfectly adapted to any OS:
+					ul.list.list-marked.list-2-columns.d-inline-block.d-md-block
+						li Crypto Wallet
+						li Token Marketplace
+						li Personal Crypto Assistant
+						li Accounting Service
+
+					.group-xl.group-middle.justify-content-center
+						a.button.button-isi.button-primary( href='#' ) Get the app now
+						div: ul.list-inline.list-inline-md.list-social
+							li: a.icon.mdi.mdi-apple( href='#' )
+							li: a.icon.mdi.mdi-android( href='#' )
+							li: a.icon.mdi.mdi-windows( href='#' )
+
+	.gradient-5
+		section.section.section-md.section-collapse.text-center
+			.container
+				.box-relative.wow.fadeInUp
+					.headings-default
+						.headings-default-subtitle Team
+						h3 Our Dedicated Team
+					p.d-inline-block.text-width-medium Since our establishment, we have gathered a team composed of experienced professionals in various sectors.
+				.row.row-xl.row-30.justify-content-center.team-default-wrap
+					.col-sm-6.col-md-5.col-lg-3.wow.fadeInUp( data-wow-delay='.1s' )
+						+team-default({
+							img: 'team-1-202x171',
+							name: 'Ann McMillan',
+							status: 'CEO, Founder'
+						})
+					.col-sm-6.col-md-5.col-lg-3.wow.fadeInUp
+						+team-default({
+							img: 'team-2-202x171',
+							name: 'John Smith',
+							status: 'Blockchain Developer'
+						})
+					.col-sm-6.col-md-5.col-lg-3.wow.fadeInUp( data-wow-delay='.1s' )
+						+team-default({
+							img: 'team-3-202x171',
+							name: 'Jane Peterson',
+							status: 'Content Marketer'
+						})
+					.col-sm-6.col-md-5.col-lg-3.wow.fadeInUp
+						+team-default({
+							img: 'team-4-202x171',
+							name: 'Peter Williams',
+							status: 'Community Manager'
+						})
+
+				a.button.button-isi.button-primary.wow.fadeInUp( href='#' ) Read more about us
+
+		section#faq.section.section-lg.section-collapse.text-center.wow.fadeInUp
+			.container
+				.headings-default
+					.headings-default-subtitle FAQ
+					h3 Frequently Asked Questions
+
+				.row.row-md.justify-content-center: .col-xl-10
+					//Bootstrap tabs
+					.tabs-custom.tabs-line
+						//Nav tabs
+						ul.nav.nav-tabs
+							li.nav-item( role='presentation' ): a.nav-link.active( href='#tabs-1-1' data-toggle='tab' ) General
+							li.nav-item( role='presentation' ): a.nav-link( href='#tabs-1-2' data-toggle='tab' ) Tokens
+							li.nav-item( role='presentation' ): a.nav-link( href='#tabs-1-3' data-toggle='tab' ) Legal
+
+						//Tab panes
+						.tab-content
+							div#tabs-1-1.tab-pane.fade.show.active
+								//Bootstrap collapse
+								#accordion1.card-group-custom.card-group-corporate( role='tablist' aria-multiselectable='false' )
+									+card({
+										show: true,
+										parentId: 'accordion1',
+										title: 'What are the advantages of purchasing a website template?'
+									}).card-corporate
+										p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+									+card({
+										parentId: 'accordion1',
+										title: 'What do I receive when I order a template from Zemez?'
+									}).card-corporate
+										p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+									+card({
+										parentId: 'accordion1',
+										title: 'Do you provide any scripts with your templates?'
+									}).card-corporate
+										p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+							div#tabs-1-2.tab-pane.fade
+								#accordion2.card-group-custom.card-group-corporate( role='tablist' aria-multiselectable='false' )
+
+									+card({
+										show: true,
+										parentId: 'accordion2',
+										title: 'Do you provide any scripts with your templates?'
+									}).card-corporate
+										p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+									+card({
+										parentId: 'accordion2',
+										title: 'What are the advantages of purchasing a website template?'
+									}).card-corporate
+										p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+									+card({
+										parentId: 'accordion2',
+										title: 'What do I receive when I order a template from Zemez?'
+									}).card-corporate
+										p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+							div#tabs-1-3.tab-pane.fade
+								#accordion3.card-group-custom.card-group-corporate( role='tablist' aria-multiselectable='false' )
+									+card({
+										show: true,
+										parentId: 'accordion3',
+										title: 'What do I receive when I order a template from Zemez?'
+									}).card-corporate
+										p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+									+card({
+										parentId: 'accordion3',
+										title: 'Do you provide any scripts with your templates?'
+									}).card-corporate
+										p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+									+card({
+										parentId: 'accordion3',
+										title: 'What are the advantages of purchasing a website template?'
+									}).card-corporate
+										p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+	.gradient-5
+		section#contacts.section.section-lg
+			.container: .row.row-30.row-md-50.align-items-center
+				.col-md-6.wow.fadeInUp: .inset-right-xl-70
+					.headings-default
+						.headings-default-subtitle Contacts
+						h3 Have Any Questions?
+					p.d-inline-block.text-width-medium You can contact us any way that is convenient for you. We are available 24/7 via fax, email or telephone. You can also use a quick contact form on the right or call our managers.
+					ul.contacts-default.d-inline-block.inset-left-xl-70
+						li.unit.unit-spacing-lg.align-items-center
+							.unit-left: span.icon.contacts-default-icon.mdi.mdi-telegram
+							.unit-body: a.contacts-default-link( href='#' ) Join us on Telegram
+						li.unit.unit-spacing-lg.align-items-center
+							.unit-left: span.icon.contacts-default-icon.mdi.mdi-message-text
+							.unit-body: a.contacts-default-link( href='tel:#' ) 1-300-123-1234
+						li.unit.unit-spacing-lg.align-items-center
+							.unit-left: span.icon.contacts-default-icon.mdi.mdi-email
+							.unit-body: a.contacts-default-link( href='mailto:#' ) info@demolink.org
+
+				.col-md-6.wow.fadeInRight
+					.form-style-1
+						//RD Mailform
+						form.rd-mailform.rd-form( data-form-output='form-output-global' data-form-type='contact' method='post' action='bat/rd-mailform.php' )
+							.form-wrap
+								label.form-label( for='contact-name' ) Name
+								input#contact-name.form-input( type='text' name='name' data-constraints='@Required' )
+							.form-wrap
+								label.form-label( for='contact-email' ) E-Mail
+								input#contact-email.form-input( type='email' name='email' data-constraints='@Required @Email' )
+							.form-wrap
+								label.form-label( for='contact-message' ) Message
+								textarea#contact-message.form-input( name='message' data-constraints='@Required' )
+							.form-button
+								button.button.button-primary.button-isi( type='submit' ) Send
+
+	include ../sections/_footer-info
+	include ../sections/_footer-classic

@@ -1,0 +1,27 @@
+@mixin grid-offset($offset) {
+  position: relative;
+  transform: translateY(-$offset);
+  margin-bottom: -$offset;
+  pointer-events: none;
+
+  > *:before {
+    content: '';
+    display: table;
+    width: 0;
+  }
+
+  > * {
+    margin-top: $offset;
+    pointer-events: auto;
+  }
+}
+
+
+@mixin grid-offset($offset) {
+  transform: translateY(-$offset);
+  margin-bottom: -$offset;
+
+  > * {
+    margin-top: $offset;
+  }
+}

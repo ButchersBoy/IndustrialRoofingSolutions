@@ -1,0 +1,68 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Single service'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	// Parallax header
+	section
+		+parallax({
+			"attrType": "media",
+			"src": "images/parallax-3.jpg",
+			"htmlSpeed": "0.1",
+			"class": ['parallax-header']
+		})
+			.parallax-header__inner.context-dark: .parallax-header__content
+				.container
+					.row.justify-content-sm-center
+						.col-md-10.col-xl-8
+							h2.heading-decorated Bootstrap Framework
+	='\n'
+
+	section.section-lg.bg-default.text-center
+		.container
+			.row.row-50.justify-content-sm-center
+				.col-md-10
+					h5 More plug-ins for better functionality
+					p Quart supports a huge list of plugins developed both by Templatemonster.com and 3rd party developers. Create events, make schedules, book appointments, build restaurant menus, run community, start your features rich online shop and do so many other things with Quart plugins pack.
+				.col-md-10
+					h5 Multiple skins & predesigned pages
+					p As Bootstrap offers a lot of possibilities to customize and change your website according to your own wishes, we designed a number of pages, which we hope you will like. They contain everything a modern website owner needs, from store and checkout pages to personal or corporate blog as well as pages to publish some important information about your company.
+
+	include ../sections/_section-pricing-table-2
+		
+	include ../sections/_section-cta-1
+
+	section.section-lg.bg-default
+		.container
+			.row.row-60
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-1-418x315',
+						title: 'Bootstrap Framework',
+						text: 'Quart is based on Bootstrap Framework, which makes it a nice template for any purpose.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-2-418x315',
+						title: 'Novi Builder',
+						text: 'Use our Novi Builder to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-3-418x315',
+						title: 'Responsive & Retina Ready',
+						text: 'Quart looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

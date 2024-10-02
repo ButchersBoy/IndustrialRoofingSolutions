@@ -1,0 +1,30 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Right Sidebar'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-default.section-md.text-center
+    .container
+      .row: .col-sm-12: h2.heading-decorated News
+      .row.row-70 
+        .col-lg-7.col-xl-8.section-divided__main
+          include ../sections/_section-classic-blog
+        .col-lg-5.col-xl-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-blog
+
+  // Modal
+  include ../sections/_section-modal
+
+  // Page Footer
+  include ../sections/_footer-corporate

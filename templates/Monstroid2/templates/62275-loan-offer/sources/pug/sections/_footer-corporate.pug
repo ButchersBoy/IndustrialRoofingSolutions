@@ -1,0 +1,39 @@
+footer.footer-corporate
+	.container.text-center
+		p.text-black Get money management and loan tips here! 
+		.row.align-items-md-center.row-50
+			.col-lg-3.text-lg-left
+				a(href='index.html')
+					+png(logoInverse)
+			.col-lg-6
+				form.rd-mailform.rd-mailform_style-1.rd-mailform-inline-flex.text-center.rd-mailform-style-3(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php', novalidate='novalidate')
+					.form-wrap
+						input#contact-email.form-input.form-input-has-validation(type='email', name='email', data-constraints='@Email @Required')
+						span.form-validation
+						label.form-label.rd-input-label(for='contact-email') Enter email address
+					button.button.button-primary(type='submit') Subscribe!
+			.col-lg-3.text-lg-right
+				ul.list-inline-sm
+					li: a.icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+					li: a.icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+					li: a.icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+					li: a.icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+					li: a.icon.icon-sm.icon-primary.fa.fa-youtube(href='#') 
+					li: a.icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+		.divider
+		.text-lg-left
+			p.small The loans offered on this website are unsecured personal loans made available by the LoanOffer Bank, an FDIC-insured, New Jersey State chartered bank. Eligibility for a loan is not guaranteed. To get a loan, you must be a US citizen or permanent resident and at least 18 years old (or 19 years old in Alabama). Due to some state legislation obstacles we currently do not accept loan applications from residents of Connecticut, Hawaii, Idaho, Iowa, Maine, Mississippi, Nevada, New York, North Dakota, Tennessee, Vermont, West Virginia, Wisconsin or Wyoming .
+			p.small *We accept loan requests ranging from $2,500 to $35,000 for loans that pay over a 3- or 5-year period. Interest rates on our loans range from 5.99% to 26.99% per year. All loans are subject to credit review and approval. To qualify for the lowest available interest rates, you must have excellent credit and meet other conditions. The availability of the 5-year loan may be limited. Your actual rate depends upon credit score, loan amount, loan term, and credit usage and history. Loans are subject to a non-refundable one-time origination fee ranging from 1 to 5%. The annual percentage rate (APR) includes the interest rate and any origination fee. APRs on our loans range from 6.66% to 29.99%.
+			p.small The total loan amount for a loan includes the amount distributed plus any origination fee. For Colorado and Georgia residents, the total loan amount must exceed $3,000. For Massachusetts residents, the total loan amount must exceed $6,000. For Pennsylvania residents, the total loan amount may not exceed $25,000.
+			p.small Each late payment is subject to a $15 fee. Each payment by check is subject to a $15 processing fee, to the extent permitted by applicable law.
+				br.d-none.d-xxl-block
+				| Each failed automated withdrawal, returned check or bank draft is subject to a $15 fee. Your bank may also charge you a fee for each failed withdrawal, returned check or bank draft.
+			p.small LoanOffer is the registered service mark of LoanOffer, Inc. © 2015. All rights reserved.
+			p.small.text-black
+				span(class="copyright-year")
+				="\t"
+				| (с) LoanOffer. All Rights Reserved.   
+				a(href='privacy-policy.html')  Privacy Policy  
+				if(footerLink)
+
+

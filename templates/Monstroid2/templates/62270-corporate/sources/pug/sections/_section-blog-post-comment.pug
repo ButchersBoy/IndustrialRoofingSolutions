@@ -1,0 +1,67 @@
+//Post comment
+section.bg-default.section-md
+	.container
+		.single-post-body.text-center.text-md-left
+			.unit.unit-sm-horizontal.align-items-md-center.unit-spacing-xl
+				.unit__left
+					+jpg('post-standart-03-170x170', 'rounded-circle')
+				.unit__body
+					h4 Written by Brian Williamson
+					p.small-md Corp is an internationally acknowledged management consulting firm. It provides localized solutions in partnership with our clients. Our aim is to enhance Corp's competency and performance through result-based solutions
+				
+// Post navigation
+section.section-md.bg-gray-3
+	.container
+		.single-post-body
+			.single-post-navigation
+				.single-post-navigation-left: a(href='#')  3 things financial advisers need to know when serving female clients
+				.single-post-navigation-right: a(href='#')  Side-by-side comparison of Clinton, Trump tax plans
+		
+		.row.justify-content-sm-center.blog-items
+			.col-md-6.col-xl-4
+				include ../includes/_post-grid-classic
+			.col-md-6.col-xl-4
+				include ../includes/_post-grid-slider
+		.single-post-body
+			h4.text-center.text-md-left 3 Responses
+			.comment-default
+				.unit.unit-sm-horizontal
+					.unit__left
+						+jpg('post-standart-04-86x86', 'rounded-circle')
+					.unit__body
+						.group
+							a(href=''): time(datetime='2017') Jan.20, 2016
+							a(href='').meta-author Brian Williamson
+						p Corp is an internationally acknowledged management consulting firm. It provides localized solutions in partnership with our clients. Our aim is to enhance Corp's competency and performance through result-based solutions
+						a(href='').comment-default-meta-replay Reply 
+			.comment-default
+				.unit.unit-sm-horizontal
+					.unit__left
+						+jpg('post-standart-04-86x86', 'rounded-circle')
+					.unit__body
+						.group
+							a(href=''): time(datetime='2017') Jan.20, 2016
+							a(href='').meta-author Brian Williamson
+						p Corp is an internationally acknowledged management consulting firm. It provides localized solutions in partnership with our clients. Our aim is to enhance Corp's competency and performance through result-based solutions
+						a(href='').comment-default-meta-replay Reply 
+			.comment-default
+				.unit.unit-sm-horizontal
+					.unit__left
+						+jpg('post-standart-04-86x86', 'rounded-circle')
+					.unit__body
+						.group
+							a(href=''): time(datetime='2017') Jan.20, 2016
+							a(href='').meta-author Brian Williamson
+						p Corp is an internationally acknowledged management consulting firm. It provides localized solutions in partnership with our clients. Our aim is to enhance Corp's competency and performance through result-based solutions
+						a(href='').comment-default-meta-replay Reply 
+							
+		
+		.single-post-body
+			h4.text-center.text-md-left Leave a Reply
+			p.small-md Your email address will not be published. Required fields are marked *
+			
+			
+			include ../includes/_form
+			 
+
+

@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Quote post'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 SASHA AND MALIA OBAMA'S STYLE EVOLUTION
+            .post-meta
+              .group
+                a(href=postQuote): time(datetime='2017') Jan.20, 2016
+                a(href=postQuote) by Brian Williamson
+                a(href=postQuote) 3 comment(s)
+                a(href=postQuote) Theme
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postQuote,
+                    items: [
+                        "Style",
+                        'Fashion']
+                })
+                
+            // Quote default
+            .quote-default.quote-default__border-left
+              .quote-default__text
+                p.q FASHION IS NOT NECESSARILY ABOUT LABELS. IT’S NOT ABOUT BRANDS. IT’S ABOUT SOMETHING ELSE THAT COMES FROM WITHIN YOU.
+
+              p.quote-default__cite Adam Smith
+              
+            p.first-letter
+              | This newly famous jewelry master Mark Armstrong Peddigrew is also an avid traveller. Born in the land of most spectacular North America’s landscapes – namely city of St John, Newfoundland in Canada – he nurtured a fancy for everything antique all the way back from his childhood. The one he spent in that old-fashioned, europe-esque looking city. So no wonder, that after few years of globetrotting and studying in such a multicultural city as London, now Mark calls NYC home. The true melting pot of cultures and styles. And that is a lucky fact for all women across the globe, because exactly that was the city where he began to follow the fashion and started working in jewelry industry.
+
+            +jpg('about-1-886x668')
+
+            p In his own words about his latest jewelry collection called “Cartography”, Mark said: “I guess the story of Cartography owes to my nomad biography and centers around me just being me; the traveling was in my genes and destiny right off my christening name choice, made by parents: Mark Armstrong Peddigrew — initials of which spell MAP. So traveling and cartography (study and creation of maps) felt as something very much related to myself. I never set out to ‘be something’ — I’ve worked as an actor, bartender, waiter, researcher, music supervisor, personal trainer. I have to admit that Cartography is a total accident, a surprise business built on happenstance.”
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+  
+  // Page Footer
+  include ../sections/_footer-minimal
+

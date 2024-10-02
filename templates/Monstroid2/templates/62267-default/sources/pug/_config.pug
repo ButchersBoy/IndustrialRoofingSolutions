@@ -1,0 +1,536 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,500;0,600;1,300&display=swap",
+		novi = true,
+
+		logo = {
+			default:  'logo-default-347x65.png',
+			inverse:  'logo-inverse-347x65.png',
+			inverse2: 'logo-inverse2-347x65.png',
+			name:     'Monstroid&#178;'
+		},
+
+		getTemplateLink = '//www.templatemonster.com/website-templates/monstroid2.html',
+		seeFeaturesLink = 'section-see-features',
+		postLink = 'standard-post.html',
+		postSlider = 'gallery-post.html',
+		postVideo = 'video-post.html',
+		blogPostLink = 'link-post.html',
+		postQuote = 'quote-post.html',
+		postAudio = 'audio-post.html',
+		postImage = 'image-post.html',
+		videoSrc = '//www.youtube.com/embed/ccuQoF0vKYU',
+		teamMember = 'team-member-profile.html',
+		menu = [
+			{
+				title: 'Home',
+				subtitle: 'Text',
+				link: 'index.html',
+				dropdown: [
+					{
+						title: 'Home Default',
+						link: 'index.html',
+						dropdown: [
+							{
+								title: 'Home Default 1',
+								link: 'home-default-1.html'
+							},
+							{
+								title: 'Home Default 2',
+								link: 'home-default-2.html'
+							},
+							{
+								title: 'Home Default 3',
+								link: 'home-default-3.html'
+							},
+							{
+								title: 'Home Default 4',
+								link: 'home-default-4.html'
+							},
+							{
+								title: 'Home Default 5',
+								link: 'home-default-5.html'
+							},
+							{
+								title: 'Home Default 6',
+								link: 'home-default-6.html'
+							},
+							{
+								title: 'Home Default 7',
+								link: 'home-default-7.html'
+							},
+							{
+								title: 'Home Default 8',
+								link: 'home-default-8.html'
+							}
+						]
+					},
+					{
+						title: 'Home Business',
+						link: 'home-business.html'
+					},
+					{
+						title: 'Home Commercial',
+						link: 'home-commercial.html'
+					},
+					{
+						title: 'Home Creative',
+						link: 'home-creative.html'
+					},
+					{
+						title: 'Home Minimal',
+						link: 'home-minimal.html'
+					},
+					{
+						title: 'Home Modern',
+						link: 'home-modern.html'
+					},
+					{
+						title: 'Home Personal',
+						link: 'home-personal.html'
+					},
+					{
+						title: 'Home Portfolio',
+						link: 'home-portfolio.html'
+					}
+				]
+			},
+			{
+				title: 'Features',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Headers',
+						link: '#',
+						dropdown: [
+							{
+								title: 'Header Default',
+								link: 'header-default.html'
+							},
+							{
+								title: 'Header Default Dark',
+								link: 'header-default-dark.html'
+							},
+							{
+								title: 'Header Modern',
+								link: 'header-modern.html'
+							},
+							{
+								title: 'Header Creative',
+								link: 'header-creative.html'
+							},
+							{
+								title: 'Header Corporate',
+								link: 'header-corporate.html'
+							},
+							{
+								title: 'Header Transparent',
+								link: 'header-transparent.html'
+							},
+							{
+								title: 'Header Inverse',
+								link: 'header-inverse.html'
+							},
+							{
+								title: 'Header Sidebar',
+								link: 'header-sidebar.html'
+							},
+							{
+								title: 'Header Sidebar Inverse',
+								link: 'header-sidebar-inverse.html'
+							}
+						]
+					},
+					{
+						title: 'Footers',
+						link: '#',
+						dropdown: [
+							{
+								title: 'Footer Corporate',
+								link: 'footer-corporate.html'
+							},
+							{
+								title: 'Footer Minimal',
+								link: 'footer-minimal.html'
+							},
+							{
+								title: 'Footer Modern',
+								link: 'footer-modern.html'
+							}
+						]
+					}
+				]
+			},
+			{
+				title: 'Pages',
+				subtitle: 'Text',
+				link: '#',
+				megamenu: [
+					{
+						title: 'General',
+						link: null,
+						list: [
+							{
+								title: 'About',
+								link: 'about.html'
+							},
+							{
+								title: 'Our Team',
+								link: 'our-team.html'
+							},
+							{
+								title: 'Team Member Profile',
+								link: teamMember
+							},
+							{
+								title: 'Services',
+								link: 'services.html'
+							},
+							{
+								title: 'Single Service Page',
+								link: 'single-service-page.html'
+							}
+						]
+					},
+					{
+						title: 'General #2',
+						link: null,
+						list: [
+							{
+								title: 'Our Story',
+								link: 'our-story.html'
+							},
+							{
+								title: 'Monthly Events',
+								link: 'monthly-events.html'
+							},
+							{
+								title: 'Booking',
+								link: 'booking.html'
+							}
+						]
+					},
+					{
+						title: 'Auxiliary',
+						link: null,
+						list: [
+							{
+								title: 'Contacts',
+								link: 'contacts.html'
+							},
+							{
+								title: 'FAQs',
+								link: 'faqs.html'
+							},
+							{
+								title: 'Pricing',
+								link: 'pricing.html'
+							},
+							{
+								title: 'Careers',
+								link: 'careers.html'
+							},
+							{
+								title: 'Clients',
+								link: 'clients.html'
+							}
+						]
+					},
+					{
+						title: 'Special Pages',
+						link: null,
+						list: [
+							{
+								title: 'Maintenance',
+								link: 'maintenance.html'
+							},
+							{
+								title: '404 Page',
+								link: '404-page.html'
+							},
+							{
+								title: 'Search Results',
+								link: 'search-results.html'
+							},
+							{
+								title: 'Coming Soon',
+								link: 'coming-soon.html'
+							},
+							{
+								title: 'Privacy Policy',
+								link: 'privacy-policy.html'
+							}
+						]
+					}
+				]
+			},
+			{
+				title: 'Events',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Monthly Events',
+						link: 'monthly-events.html'
+					},
+					{
+						title: 'Event List',
+						link: 'event-list.html'
+					},
+					{
+						title: 'Single Event',
+						link: 'single-event.html'
+					}
+				]
+			},
+			{
+				title: 'Blog',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Post Formats',
+						link: '#',
+						dropdown: [
+							{
+								title: 'Standard post',
+								link: postLink
+							},
+							{
+								title: 'Nonstandard post with sidebar',
+								link: 'nonstandard-post-with-sidebar.html'
+							},
+							{
+								title: 'Nonstandard post',
+								link: 'nonstandard-post.html'
+							},
+	
+							{
+								title: 'Gallery post',
+								link: postSlider
+							},
+							{
+								title: 'Image post',
+								link: postImage
+							},
+							{
+								title: 'Link post',
+								link: blogPostLink
+							},
+							{
+								title: 'Quote post',
+								link: postQuote
+							},
+							{
+								title: 'Video post',
+								link: postVideo
+							},
+							{
+								title: 'Audio post',
+								link: postAudio
+							}
+						]
+					},
+					{
+						title: 'Blog Layouts',
+						link: '#',
+						dropdown: [
+							{
+								title: 'Classic Blog',
+								link: 'classic-blog.html'
+							},
+							{
+								title: 'Grid Blog',
+								link: 'grid-blog.html'
+							},
+							{
+								title: 'Masonry Blog',
+								link: 'masonry-blog.html'
+							},
+							{
+								title: 'Justify Blog',
+								link: 'justify-blog.html'
+							}
+						]
+					},
+					{
+						title: 'Sidebar',
+						link: '#',
+						dropdown: [
+							{
+								title: 'Left Sidebar',
+								link: 'left-sidebar.html'
+							},
+							{
+								title: 'Right Sidebar',
+								link: 'right-sidebar.html'
+							},
+							{
+								title: 'No Sidebar',
+								link: 'no-sidebar.html'
+							}
+						]
+					}
+				]
+			},
+			{
+				title: 'Gallery',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Portfolio',
+						link: 'portfolio.html'
+					},
+					{
+						title: 'Single Portfolio',
+						link: 'single-portfolio.html'
+					}
+				]
+			},
+			{
+				title: 'Shop',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Shop Grid',
+						link: 'shop-grid.html'
+					},
+					{
+						title: 'Shop List',
+						link: 'shop-list.html'
+					},
+					{
+						title: 'Single product',
+						link: 'single-product.html'
+					},
+					{
+						title: 'Cart',
+						link: 'cart.html'
+					},
+					{
+						title: 'Checkout',
+						link: 'checkout.html'
+					}
+				]
+			},
+			{
+				title: 'Elements',
+				subtitle: 'Text',
+				link: '#',
+				megamenu: [
+					{
+						list: [
+							{
+								title: 'Accordion',
+								link: 'accordion.html'
+							},
+							{
+								title: 'Audio',
+								link: 'audio.html'
+							},
+							{
+								title: 'Blurb',
+								link: 'blurb.html'
+							},
+							{
+								title: 'Buttons',
+								link: 'buttons.html'
+							},
+							{
+								title: 'Typography',
+								link: 'typography.html'
+							},
+							{
+								title: 'Testimonials',
+								link: 'testimonials.html'
+							}
+						]
+					},
+					{
+						list: [
+							{
+								title: 'Halloween',
+								link: 'halloween.html'
+							},
+							{
+								title: 'Text',
+								link: 'text.html'
+							},
+							{
+								title: 'Countdown',
+								link: 'countdown.html'
+							},
+							{
+								title: 'Animated Counter',
+								link: 'animated-counter.html'
+							},
+							{
+								title: 'Number Counter',
+								link: 'number-counter.html'
+							},
+							{
+								title: 'Circles Counter',
+								link: 'circles-counter.html'
+							}
+						]
+					},
+					{
+						list: [
+							{
+								title: 'Pricing Table',
+								link: 'pricing-table.html'
+							},
+							{
+								title: 'Images',
+								link: 'images.html'
+							},
+							{
+								title: 'Person',
+								link: 'person.html'
+							},
+							{
+								title: 'Slider',
+								link: 'slider.html'
+							},
+							{
+								title: 'Call To Action',
+								link: 'call-to-action.html'
+							}
+						]
+					},
+					{
+						list: [
+							{
+								title: 'Toggles',
+								link: 'toggles.html'
+							},
+							{
+								title: 'Tabs',
+								link: 'tabs.html'
+							},
+							{
+								title: 'Contact Forms',
+								link: 'contact-forms.html'
+							},
+							{
+								title: 'Maps',
+								link: 'maps.html'
+							},
+							{
+								title: 'Social Sharing',
+								link: 'social-sharing.html'
+							}
+						]
+					}
+				]
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		self = self || {};

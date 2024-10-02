@@ -1,0 +1,175 @@
+// Post classic
+.section-sm
+  article.post-classic
+    .post-classic-title.post-classic-title-icon.linear-icon-star
+      h3: a(href='nonstandard-post.html') 2016 Texas Employment Law Update
+    +jpg('post-classic-1-886x668')
+
+    .post-meta
+      .group
+        a(href='nonstandard-post.html'): time(datetime='2017') December 3, 2016
+        a(href='nonstandard-post.html').meta-author by Adam Smith
+        a(href='nonstandard-post.html') 3 comment(s)
+        a(href='nonstandard-post.html') Theme
+        +tag-list({
+          list_class: 'list-inline-tag',
+          href: 'nonstandard-post.html',
+          items: [
+            "Family Law",
+            'Maritime Law',
+            'Court']
+        })
+
+    .post-classic-body
+      p As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+    .post-classic-footer
+      +list-inline-icon({
+        list_class: 'list-inline-sm',
+        items: [
+          "icon-xxs fa-facebook",
+          'icon-xxs fa-twitter',
+          'icon-xxs fa-google-plus',
+          'icon-xxs fa-vimeo',
+          'icon-xxs fa-youtube',
+          'icon-xxs fa-pinterest-p']
+      })
+
+      a(href='nonstandard-post.html').button.button-link Read more
+
+// Post gallery
+.section-sm
+  article.post-slider
+    .post-classic-title
+      h3: a(href=postSlider) Welcome to Jerry Robinson's Law office
+
+    include ../includes/_post-slider
+
+    .post-classic-body
+      p As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postSlider): time(datetime='2017') Jan.20, 2016
+          a(href=postSlider).meta-author by Adam Smith
+          a(href=postSlider) 3 comment(s)
+          a(href=postSlider) Theme
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postSlider,
+            items: [
+              "Maritime Law",
+              'Court',
+              'Judge'
+            ]
+          })
+      a(href=postSlider).button.button-link Read more
+
+// Post video 
+.section-sm
+  article.post-video
+    .post-classic-title
+      h3: a(href=postVideo) Plan ahead to avoid driving under the influence and DUI accidents
+
+    .entry-video.embed-responsive.embed-responsive-16by9
+      iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+    .post-classic-body
+      p As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postVideo): time(datetime='2017') Jan.20, 2016
+          a(href=postVideo).meta-author by Adam Smith
+          a(href=postVideo) 3 comment(s)
+          a(href=postVideo) Theme
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postVideo,
+            items: [
+              "Maritime Law",
+              "Medical",
+              "Malpractice",
+              "Judge",
+              'Verdict']
+          })
+      a(href=postVideo).button.button-link Read more
+
+// Post Link
+.section-sm
+  article.post-link
+    .post-classic-title
+      h3: a(href=blogPostLink) How-to: New Divorce Laws In California
+    a(href=blogPostLink) http://templatemonster.com/
+
+// Post quote
+.section-sm
+  article.post-quote
+    // Quote default
+    a(href=postQuote).quote-default
+      +quote-mark('quote-default__mark')
+      .quote-default__text: p.q.heading-4 At his best, man is the noblest of all animals; separated from law and justice he is the worst.
+      p.quote-default__cite Marcel Vossen
+
+// Post standard
+.section-sm
+  article.post-classic
+    .post-classic-title
+      h3: a(href=postLink) Can you be fined with $1600 for missing a license plate decal?
+
+    .post-classic-body
+      p As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postLink): time(datetime='2017') Jan.20, 2016
+          a(href=postLink).meta-author by Adam Smith
+          a(href=postLink) 3 comment(s)
+          a(href=postLink) Theme
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postLink,
+            items: [
+              "Family Law",
+              "Court",
+              'Law']
+          })
+      a(href=postLink).button.button-link Read more
+
+// Post audio
+.section-sm
+  article.post-audio
+    .post-classic-title
+      h3: a(href=postAudio) 4 things to keep in mind about fireworks this Fourth of July
+
+    include ../includes/_rd-audio-track
+
+    .post-classic-body
+      p As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postAudio): time(datetime='2017') Jan.20, 2016
+          a(href=postAudio).meta-author by Adam Smith
+          a(href=postAudio) 3 comment(s)
+          a(href=postAudio) Theme
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postAudio,
+            items: [
+              "Family Law",
+              'Mergers & Acquisitions law']
+          })
+      a(href=postAudio).button.button-link Read more
+
+// Pagination
+.section-sm.text-left
+  +pagination-classic(1,
+  [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+  null,
+  {"title": "", "href": "#"}
+  )

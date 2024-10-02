@@ -1,0 +1,237 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-minimal
+		
+	include ../sections/_section-canvas 
+
+	// Presentation
+	section.section-md.bg-default.text-center(id=seeFeaturesLink)
+		.container
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3.heading-decorated
+						| Multiple Themes &
+						br
+						| a Variety of Features
+					p Quart is a multipurpose template optimized for various niches of business. Besides neutral classic websites you can create restaurant, hotel, sport gym website and much much more. There is also a variety of useful features that are included with this template.
+			.row.row-50
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-1-418x315',
+						title: 'Bootstrap Framework',
+						text: 'Quart is based on Bootstrap Framework, which makes it a nice template for any purpose.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-2-418x315',
+						title: 'Novi Builder',
+						text: 'Use our Novi Builder to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'portfolio-3-418x315',
+						title: 'Responsive & Retina Ready',
+						text: 'Quart looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+	='\n'
+
+	// Consistency is the Key
+	section.section-md.bg-gray-lighter
+		.container
+			.row.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-6
+					h3.heading-decorated Consistency is the Key
+					p Quart boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+
+				.col-md-9.col-lg-5
+						+jpg('home-variant-7-464x464')
+	='\n'
+
+	// Blurbs
+	section.section-md
+		.container
+			.row.row-50.row-lg-90
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title Built for Speed
+							p Built for speed and performance. Get best results at GTmetrix and Google PageSpeed.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title Flexible and Multipurpose
+							p Quart allows to create various websites for complex and scalable  projects.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-file-search
+						.unit-body
+							p.blurb__title SEO Friendly
+							p Valid code and performance optimized framework make SEO easy and hassle-free.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-headset
+						.unit-body
+							p.blurb__title 24/7 Support
+							p 24/7 Premium technical support and great documentation are included in this template price.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title Social Integration
+							p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-cart-full
+						.unit-body
+							p.blurb__title Advanced UI Kit
+							p Quart comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+
+	include ../sections/_section-cta-3
+
+	// Share Your Company Testimonials
+	section.section-md.bg-default.text-center
+		.container
+			h3.heading-decorated Share Your Company Testimonials
+			// Owl Carousel
+			.owl-carousel(data-autoplay='true',data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Quart is my number one choice!
+						p.quote-default__cite James Wilson
+
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+						p.quote-default__cite Sam Lee
+	='\n'
+
+	// Gallery
+	section.section-md.bg-default(data-lightgallery="group")
+		.container-fluid
+			.row.no-gutters
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-4-1920x1440.jpg')
+						figure
+							+jpg('portfolio-4-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-5-1920x1280.jpg')
+						figure
+							+jpg('portfolio-5-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-6-1920x1280.jpg')
+						figure
+							+jpg('portfolio-6-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-7-1920x1280.jpg')
+						figure
+							+jpg('portfolio-7-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-8-1536x1920.jpg')
+						figure
+							+jpg('portfolio-8-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-9-1567x1920.jpg')
+						figure
+							+jpg('portfolio-9-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/portfolio-original-10-1920x1280.jpg')
+						figure
+							+jpg('portfolio-10-418x315')
+						.thumb-modern__overlay
+
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/slider-slide-14-1280x1920.jpg')
+						figure
+							+jpg('portfolio-2-418x315')
+						.thumb-modern__overlay
+	='\n'
+
+	include ../sections/_section-brand-carousel
+	include ../sections/_section-cta-5
+
+	// Page Footer
+	footer.footer-minimal
+		.container
+			h5
+				| Get latest news delivered daily!
+				br
+				|  We will send you breaking news right to your inbox.
+			// RD Mailform
+			form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+				.form-wrap.form-wrap_icon.linear-icon-envelope
+					input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+					label.form-label(for="contact-email") Enter please your e-mail
+				button(type="submit").button.button-primary Subscribe!
+
+			ul.list-inline-sm.footer-minimal__list
+				li: a.icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+				li: a.icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+				li: a.icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+				li: a.icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+				li: a.icon.icon-sm.icon-primary.fa.fa-youtube(href='#')
+				li: a.icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+
+			p.rights
+				span!=brandName
+				span &nbsp;
+				span(id="copyright-year")
+				| . All Rights Reserved.
+				br
+				a(href='privacy-policy.html') Terms of Use and Privacy Policy

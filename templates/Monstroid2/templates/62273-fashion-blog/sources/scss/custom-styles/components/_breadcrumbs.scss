@@ -1,0 +1,107 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+$breadcrumb-padding-vertical:   8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg:                 transparent;
+$breadcrumb-color:              $primary;
+$breadcrumb-active-color:       $gray;
+$breadcrumb-separator:          "-";
+
+.breadcrumbs-custom {
+  position: relative;
+  background: $breadcrumb-bg;
+  
+}
+
+.breadcrumbs-custom__inner {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid $gray-1;
+
+  > * + * {
+    margin-top: 10px;
+  }
+}
+
+.breadcrumbs-custom__title {
+  font-size: 18px;
+  letter-spacing: .28em;
+  line-height: 1.2;
+  color: $black;
+  text-transform: uppercase;
+  font-family: $font-family-sec;
+}
+
+.breadcrumbs-custom__path {
+  > li {
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 12px;
+    line-height: 1.3;
+    font-family: $font-family-sec2;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+
+  a {
+    position: relative;
+    top: -1px;
+  }
+
+  > li.active {
+    color: $breadcrumb-active-color;
+
+    a {
+      color: inherit;
+      pointer-events: none;
+    }
+  }
+
+  > li + li {
+    &:before {
+      position: relative;
+      left: -1px;
+      display: inline-block;
+      padding: 0 5px;
+      content: $breadcrumb-separator;
+      vertical-align: baseline;
+    }
+  }
+
+  a {
+    display: inline;
+    vertical-align: middle;
+    &,
+    &:active,
+    &:focus {
+      color: $breadcrumb-color;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .breadcrumbs-custom__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > * + * {
+      padding-left: 15px;
+    }
+
+    > * + * {
+      margin-top: 0;
+    }
+  }
+  
+  .breadcrumbs-custom__title {
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+  }
+}

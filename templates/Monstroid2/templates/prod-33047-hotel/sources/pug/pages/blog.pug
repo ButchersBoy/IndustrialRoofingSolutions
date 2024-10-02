@@ -1,0 +1,77 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Blog'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Post
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-26.flex-md-row-reverse.align-items-center
+				.col-md-6.col-lg-7
+					a.img-responsive.img-link( href='single-post.html' )
+						+img( 'blog-01-700x513' )
+				.col-md-6.col-lg-5
+					.block-lg
+						+post-default({
+							title: 'Best Days to Stay in Los Angeles',
+							date: 'Nov 30, 2023',
+							author: 'Gavin Bell',
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit turpis feugiat nisi facilisis dapibus. Suspendisse erat lacus, tincidunt sit amet quam a, blandit aliquet ligula. Morbi fringilla ante non.',
+						})
+
+	// Post
+	section.section.section-lg.section-half-bg.section-half-bg-right.text-center.text-md-start
+		.container
+			.row.row-26.align-items-center
+				.col-md-6.col-lg-7
+					a.img-responsive.img-link( href='single-post.html' )
+						+img( 'blog-02-700x513' )
+				.col-md-6.col-lg-5.text-md-end
+					.block-lg.text-md-start
+						+post-default({
+							title: 'Top 3 Hostels for Families with Kids',
+							date: 'Nov 30, 2023',
+							author: 'Gavin Bell',
+							text: 'Feugiat vivamus at augue eget arcu dictum varius duis. Egestas sed tempus urna et. Commodo ullamcorper a lacus vestibulum. Tempor orci eu lobortis elementum nibh.',
+						})
+
+	// Post
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-26.flex-md-row-reverse.align-items-center
+				.col-md-6.col-lg-7
+					a.img-responsive.img-link( href='single-post.html' )
+						+img( 'blog-03-700x513' )
+				.col-md-6.col-lg-5
+					.block-lg
+						+post-default({
+							title: 'Top 8 Minimalistic Hostels in the USA',
+							date: 'Nov 30, 2023',
+							author: 'Gavin Bell',
+							text: 'Tristique magna sit amet purus gravida quis. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Urna nec tincidunt praesent semper. Id consectetur purus ut faucibus pulvinar elementum.',
+						})
+
+	// Post
+	section.section.section-lg.section-half-bg.section-half-bg-right.text-center.text-md-start
+		.container
+			.row.row-26.align-items-center
+				.col-md-6.col-lg-7
+					a.img-responsive.img-link( href='single-post.html' )
+						+img( 'blog-04-700x513' )
+				.col-md-6.col-lg-5.text-md-end
+					.block-lg.text-md-start
+						+post-default({
+							title: 'What Exactly Is a Boutique Hotel?',
+							date: 'Nov 30, 2023',
+							author: 'Gavin Bell',
+							text: 'Egestas pretium aenean pharetra magna. Tincidunt dui ut ornare lectus sit amet est. Nisl rhoncus mattis rhoncus urna neque viverra justo. Sagittis vitae et leo duis ut diam quam nulla porttitor.',
+						})
+
+
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

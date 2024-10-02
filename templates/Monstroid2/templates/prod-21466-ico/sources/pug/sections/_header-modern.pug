@@ -1,0 +1,48 @@
+header.section.page-header.page-header-absolute-2
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-modern(
+			data-layout=                'rd-navbar-fixed'
+			data-sm-layout=             'rd-navbar-fixed'
+			data-md-layout=             'rd-navbar-fixed'
+			data-md-device-layout=      'rd-navbar-fixed'
+			data-lg-layout=             'rd-navbar-static'
+			data-lg-device-layout=      'rd-navbar-fixed'
+			data-xl-layout=             'rd-navbar-static'
+			data-xl-device-layout=      'rd-navbar-static'
+			data-xxl-layout=            'rd-navbar-static'
+			data-xxl-device-layout=     'rd-navbar-static'
+			data-lg-stick-up-offset=    '46px'
+			data-xl-stick-up-offset=    '46px'
+			data-xxl-stick-up-offset=   '46px'
+			data-lg-stick-up=           'true'
+			data-xl-stick-up=           'true'
+			data-xxl-stick-up=          'true'
+			data-lg-auto-height=        'false'
+			data-xl-auto-height=        'false'
+			data-xxl-auto-height=       'false'
+		)
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-main-element
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+
+						a.button.button-xs.button-white.rd-navbar-fixed-element-1( href='login.html' )
+							span.button-text Log In
+							span.icon.mdi.mdi-login
+
+						.select-ln-wrap.rd-navbar-fixed-element-2
+							select( data-container-class='select-ln select-ln-2' data-dropdown-class='select-ln-dropdown' )
+								option EN
+								option DE
+								option ES

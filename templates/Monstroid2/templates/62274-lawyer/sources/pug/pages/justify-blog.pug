@@ -1,0 +1,185 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Justify Blog'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-default.section-md.text-center
+    .container
+      .row: .col-sm-12: h2.heading-decorated News
+      .row.row-60
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-1-886x668')
+
+            .post-classic-title
+              h5: a(href='nonstandard-post.html') 2016 Texas Employment Law Update
+
+            .post-meta
+              .group
+                a(href='nonstandard-post.html'): time(datetime='2017') Jan.20, 2016
+                a(href='nonstandard-post.html').meta-author by Adam Smith
+
+        .col-md-6.col-lg-8
+          // Post slider
+          article.post-slider.post-minimal
+            +slider-blog({ 
+              class: 'carousel-blog-post-minimal',
+              items: [
+                {
+                  original_img: 'gallery-post-1-886x668',
+                  img_thumb: 'gallery-post-1-886x668'
+                },
+                {
+                  original_img: 'gallery-post-2-886x668',
+                  img_thumb: 'gallery-post-2-886x668'
+                },
+                {
+                  original_img: 'gallery-post-3-886x668',
+                  img_thumb: 'gallery-post-3-886x668'
+                }
+              ]
+            })
+
+            .post-classic-title
+              h5: a(href=postSlider) Welcome to Jerry Robinson's Law office
+
+            .post-meta
+              .group
+                a(href=postSlider): time(datetime='2017') Jan.20, 2016
+                a(href=postSlider).meta-author by Adam Smith
+
+        .col-md-6.col-lg-7.col-xl-8
+          // Post video
+          article.post-video.post-minimal.post-video-wrap
+
+            .entry-video.embed-responsive.embed-responsive-16by9
+              iframe(width='886', height='320', src=videoSrc, allowfullscreen='')
+
+            .post-classic-title
+              h5: a(href=postVideo) Plan ahead to avoid driving under the influence and DUI accidents
+
+            .post-meta
+              .group
+                a(href=postVideo): time(datetime='2017') Jan.20, 2016
+                a(href=postVideo).meta-author by Adam Smith
+
+        .col-md-6.col-lg-5.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-2-418x315')
+
+            .post-classic-title
+              h5: a(href=postLink) Can you be fined with $1600 for missing a license plate decal?
+
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Adam Smith
+
+        .col-md-6.col-xl-4
+          // Post Link
+          article.post-link
+            .post-classic-title
+              h4: a(href=blogPostLink) How-to: New Divorce Laws In California
+            a(href=blogPostLink) http://templatemonster.com/
+
+        .col-md-6.col-xl-4
+          // Post quote
+          article.post-quote.post-minimal
+            // Quote default
+            a(href=postQuote).quote-default
+              +quote-mark('quote-default__mark')
+              .quote-default__text: p.q.heading-4 Getting to another level of design and functionality.
+              p.quote-default__cite Adam Smith
+
+        .col-md-6.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-4-418x242')
+  
+            .post-classic-title
+              h5: a(href=postLink) How Couples Decide To Divorce
+  
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Adam Smith
+
+        .col-md-6.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-2-418x315')
+
+            .post-classic-title
+              h5: a(href=postLink) Can you be fined with $1600 for missing a license plate decal?
+
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Adam Smith
+
+        .col-md-6.col-xl-8
+          // Post audio
+          article.post-audio.post-minimal
+
+            // RD Audio
+            .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+              .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+                .rd-audio-controls.text-center
+                  .rd-audio-controls-left
+                    // Play\Pause button
+                    a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+                  .rd-audio-progress-bar-wrap
+                    // Time
+                    .rd-audio-time
+                      // currentTime
+                      span.rd-audio-current-time 00:00
+                    // Progress bar
+                    .rd-audio-progress-bar
+                  // Volume button
+                  a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+                  // Volume bar
+                  .rd-audio-volume-bar
+                  .rd-audio-controls-righ.d-none
+                    // Playlist button
+                    a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+                .rd-audio-playlist-wrap
+                  h6.rd-audio-playlist-title Playlist
+                  ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+                    li(data-rd-audio-src='audio/sound.mp3')
+
+
+            .post-classic-title
+              h5: a(href=postAudio) 4 things to keep in mind about fireworks this Fourth of July
+
+            .post-minimal-footer
+              .post-meta
+                .group
+                  a(href=postAudio): time(datetime='2017') Jan.20, 2016
+                  a(href=postAudio).meta-author by Adam Smith
+
+  +divider
+  section.section-sm.text-center
+    .container
+      +pagination-classic(1,
+      [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+      null,
+      {"title": "", "href": "#"}
+      )
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Projects'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  // Parallax header
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/bg-image-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated Projects 
+  ='\n'
+
+  section.section-md.bg-default
+    .container
+      .row.row-50.row-xl-110
+        .col-md-6
+          +post-project({
+              img: 'project-1-652x491',
+              title: 'Healthcare',
+              text: 'We can build any healthcare type of building. From a small private medical clinic to a full-fetched, new county hospital!'
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-2-652x491',
+              title: 'Educational',
+              text: 'Educational institutions can be much more creative, than your regular school or a college campus! Entrust us with building it and it will be mesmerizing!'
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-3-652x491',
+              title: 'Commercial',
+              text: "It's probably the most diverse category of construction to work in. But we've got experience of building both small shopping malls and 50-stories high-rises!"
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-4-652x491',
+              title: 'Manufacturing / Industrial',
+              text: 'Building a manufacturing facility or a factory house can be much more challenging, than building a cottage house. Trust us in such a complex task!'
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-5-652x491',
+              title: 'Data / Technology',
+              text: "While building a head quarters building for an IT company is relatively easy, we've also got our hands at constructing more challenging types of IT related structures..."
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-6-652x491',
+              title: 'Government / Military',
+              text: 'The US military and States governments used our expertise and manpower to build numerous military-grade, cost-efficient and usage-practical buildings, all over the US and overseas...'
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-7-652x491',
+              title: 'Cultural / Lifestyle',
+              text: "Working on a socially important building, such as a park involves additional landscape construction expertise. Thankfully, we've got it and we aren't afraid to apply it in practice!"
+          })
+
+        .col-md-6
+          +post-project({
+              img: 'project-8-652x491',
+              title: 'Warehouse / Logistics',
+              text: "While building a warehouse for an e-store is no easy feat itself, think about building it for Amazon or Google! We've already done that, so no complexity can scare us off the project!"
+          })
+  ='\n'
+
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

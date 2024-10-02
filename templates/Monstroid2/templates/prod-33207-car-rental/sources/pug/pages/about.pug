@@ -1,0 +1,172 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'About us'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-03.jpg"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h1 About us
+						p Lorem ipsum dolor sit amet consectetur. Tortor sem sed id auctor mi cras nisi suspendisse. Elementum felis volutpat ornare morbi a. Diam maecenas maecenas orci amet lorem donec amet malesuada. Mauris nullam ipsum morbi est gravida bibendum nisi elementum. Elementum vulputate eu convallis aliquam leo luctus enim. Etiam neque fusce bibendum.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-40
+				.col-md-5
+					h2 Our mission
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor imperdiet velit a consequat. Mauris lacinia sodales lacus, eget consequat est auctor vel.
+					p Donec fringilla porttitor dictum. Integer aliquet tempor dui, nec finibus tortor auctor id.
+				.col-md-5.offset-md-1
+					h2 Our vision
+					p Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate. Maecenas ac maximus lacus. Nullam in nisl sit amet sapien.
+	='\n'
+
+	include ../sections/_section-cta-2
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent
+		.container.text-start
+			.row.row-40.row-md-60
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('percent-02-48x48.svg')
+						h3.heading-4.blurb__title Low prices
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('user-msg-02-48x48.svg')
+						h3.heading-4.blurb__title Experienced staff
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('msg-02-48x48.svg')
+						h3.heading-4.blurb__title Reliable support
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('marker-02-48x48.svg')
+						h3.heading-4.blurb__title Convenient locations
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('bill-02-48x48.svg')
+						h3.heading-4.blurb__title Easy refund
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('fuel-02-48x48.svg')
+						h3.heading-4.blurb__title Fuel included
+						p.small.text-secondary Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi. Nunc molestie dolor ac mi tempor vulputate.
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.justify-content-center.text-center
+				.col-md-8
+					h2 Our qualified team
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor imperdiet velit a consequat. Mauris lacinia sodales lacus, eget consequat est auctor vel.
+			.row.row-30.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('esther-howard-360x269')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							h3.heading-4.thumb__title: a(href='team-member-profile.html') Esther Howard
+							p.thumb__subtitle Director, co-founder
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('cameron-williamson-360x269')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							h3.heading-4.thumb__title: a(href='team-member-profile.html') Cameron Williamson
+							p.thumb__subtitle Fleet manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('jenny-wilson-360x269')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							h3.heading-4.thumb__title: a(href='team-member-profile.html') Jenny Wilson
+							p.thumb__subtitle Support manager
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

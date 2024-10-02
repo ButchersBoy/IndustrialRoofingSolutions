@@ -1,0 +1,61 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Animated Counter'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Pixel perfect typography",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Power Page Builder",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Made for community",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Pixel perfect typography",
+            progressStyle: "progress-linear-modern",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Power Page Builder",
+            progressStyle: "progress-linear-modern",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Made for community",
+            progressStyle: "progress-linear-modern",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

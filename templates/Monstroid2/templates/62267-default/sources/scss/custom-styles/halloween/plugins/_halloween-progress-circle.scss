@@ -1,0 +1,70 @@
+/** @section Progress Circle */
+
+.halloween-section {
+	.progress-circle {
+		display: inline-block;
+		text-align: center;
+		line-height: 1.2;
+	}
+
+	.progress-circle-block {
+		position: relative;
+	}
+
+	.progress-circle-bar {
+		width: 120px;
+		height: auto;
+	}
+
+	.progress-circle-bg {
+		fill: transparent;
+		stroke: $halloween-dark;
+		stroke-width: 2px;
+	}
+
+	.progress-circle-fg {
+		fill: transparent;
+		stroke: $halloween;
+		stroke-width: 10px;
+	}
+
+	.progress-circle-counter {
+		position: absolute;
+		top: 50%;
+		left: 51%;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 30px;
+		transform: translate(-50%, -50%);
+		color: $halloween-dark;
+
+		&::after {
+			content: "%";
+		}
+	}
+
+	.progress-circle-title {
+		font-size: 14px;
+		color: $halloween-dark;
+	}
+
+	* + .progress-circle-title {
+		margin-top: 26px * $halloween-xs-multiplier;
+	}
+
+	@include media-breakpoint-up(lg) {
+		.progress-circle-bar {
+			width: 174px;
+		}
+
+		* + .progress-circle-title {
+			margin-top: 26px * $halloween-lg-multiplier;
+		}
+	}
+
+	@include media-breakpoint-up(xxl) {
+		* + .progress-circle-title {
+			margin-top: 26px;
+		}
+	}
+}

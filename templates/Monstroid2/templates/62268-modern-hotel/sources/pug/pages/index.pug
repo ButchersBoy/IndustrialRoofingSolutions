@@ -1,0 +1,270 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-menu-item
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home'
+
+block page
+  include ../sections/_header-default
+  include ../sections/_section-slider-default
+
+  // Welcome to the Best Indianapolis Hotel!
+  section.section-lg.bg-gray-lighter          
+    .container
+      .row.row-50.justify-content-md-center 
+        .col-md-10.col-lg-6
+          h6 Welcome to the
+          h2 Best Indianapolis Hotel!
+          p.text-width-2 The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt state for some commercial affairs. Here, we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service, a dining and lounge zone or any additional amenities a traveller might want...
+          a.button.button-primary-outline(href='about.html') read more
+
+        .col-md-10.col-lg-6
+          figure.figure-fullwidth
+            +jpg('about-1-622x456', 'img-bordered')
+  ='\n'
+  
+  // Plenty of room...
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8
+        h6 Plenty of room...
+        h2 Rooms & Suites
+        p Modern Hotel has 35 elegantly furnished and air conditioned classic rooms, which will be a perfect pick both for business and leisure travelers...
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-1-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-room.html') Suite
+              .price
+                span.price__aside-top $
+                span.price__main 249
+                span.price__aside-bottom /per night
+              ul.list-marked
+                li Only 5 rooms are available
+                li Breakfast included
+                li Price does not include VAT & services fee
+              a.button.button-primary(href='single-room.html') book now!
+
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-2-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-room.html') Double Room
+              .price
+                span.price__aside-top $
+                span.price__main 114
+                span.price__aside-bottom /per night
+              ul.list-marked
+                li Perfect for traveling couples
+                li Breakfast not included
+                li Concierge services
+              a.button.button-primary(href='single-room.html') book now!
+
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-3-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-room.html') Family Room
+              .price
+                span.price__aside-top $
+                span.price__main 195
+                span.price__aside-bottom /per night
+              ul.list-marked
+                li Two double beds
+                li Babysitting facilities
+                li 1 free bed available on request
+              a.button.button-primary(href='single-room.html') book now!
+
+  ='\n'
+
+  // Dining & Bar
+  section.section-lg.bg-gray-lighter.text-center
+    .container
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8
+        h2 Dining & Bar
+        p Taste our trademark cocktails & enjoy a truly unique culinary experience...  As the sun sets and the sky turns purple, we celebrate the violet hour and the end of the day before welcoming the start of the night.
+
+      .isotope-wrap
+        ul.list-nav.isotope-filters.isotope-filters-horizontal
+          li.active: a(data-isotope-filter='Category 1', data-isotope-group='menu' href='#') Mains 
+          li: a(data-isotope-filter='Category 2', data-isotope-group='menu' href='#') Desserts
+          li: a(data-isotope-filter='Category 3', data-isotope-group='menu' href='#') Drinks
+          
+        .isotope(data-isotope-layout='fitRows', data-isotope-group='menu')
+          .isotope-item(data-filter='Category 1')
+            .row.row-50.justify-content-md-center
+              .col-md-10.col-lg-6
+                ul.menu-list
+                  +menu-item({
+                    title: "Crumbed Whiting",
+                    price: "$45.89",
+                    text: "Fresh local baby whiting fillets in a sesame and parsley crumb s/w chips salad lemon and tartare... This is a lunch that will leave you asking for more!"
+                  })
+      
+                  +menu-item({
+                    title: "Chicken Parmagiana",
+                    price: "$45.89",
+                    text: "Chicken Surf & Turf $31 Char grilled garlic chicken breast fillet topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed vegetables and potato."
+                  })
+      
+                  +menu-item({
+                    title: "Gluten Free Surf & Turf",
+                    price: "$45.89",
+                    text: "Char grilled Scotch fillet 300gm topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed veggies roast chat potato."
+                  })
+      
+                  +menu-item({
+                    title: "Asian noodle salad",
+                    price: "$45.89",
+                    text: "Julliene veggies & rice noodles with mint coriander & cashew nuts nestled in mixed leaves and finished with sesame oil and a lime dressing."
+                  })
+  
+              .col-md-10.col-lg-6
+                +jpg('dining-and-bar-1-652x486', 'img-bordered')
+                
+          .isotope-item(data-filter='Category 2')
+            .row.row-50.justify-content-md-center
+              .col-md-10.col-lg-6
+                ul.menu-list
+                  +menu-item({
+                    title: "Organic Yoghurt Panna Cotta",
+                    price: "$45.89",
+                    text: "Blackcurrant & limoncello compote, crunchy spiced crumble & lemon zest"
+                  })
+      
+                  +menu-item({
+                    title: "Jamie’s Favorite Orange Blossom Poleta Cake",
+                    price: "$45.89",
+                    text: "Served with whipped crème fraîche, fresh orange & pomegranate"
+                  })
+      
+                  +menu-item({
+                    title: "Vin Sano Tiramisu",
+                    price: "$45.89",
+                    text: "The classic Italian dessert with vin santo, chocolate shavings & orange zest"
+                  })
+                  
+  
+              .col-md-10.col-lg-6
+                +jpg('dining-and-bar-3-652x486', 'img-bordered')
+                
+          .isotope-item(data-filter='Category 3')
+            .row.row-50.justify-content-md-center
+              .col-md-10.col-lg-6
+                ul.menu-list
+                  +menu-item({
+                    title: "Mezzo e mezzo",
+                    price: "$45.89",
+                    text: "A beautiful blend of Martini Rosso, Nardini Rabarbaro rhubarb liqueur & a splash of soda"
+                  })
+      
+                  +menu-item({
+                    title: "Aperol Spritz",
+                    price: "$45.89",
+                    text: "A refreshing mix of Aperol, soda & Jamie’s Prosecco"
+                  })
+      
+                  +menu-item({
+                    title: "Elderflower Spritz",
+                    price: "$45.89",
+                    text: "St Germain elderflower liqueur, Jamie’s Prosecco & soda"
+                  })
+      
+                  +menu-item({
+                    title: "Bellini",
+                    price: "$45.89",
+                    text: "White peach purée & Jamie’s Prosecco"
+                  })
+  
+              .col-md-10.col-lg-6
+                +jpg('dining-and-bar-2-652x486', 'img-bordered')
+
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8
+        a.button.button-primary-outline(href='dining-&-bar.html') See all menu
+  ='\n'
+
+  // Amenities
+  section.section-lg.bg-accent
+    .container
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8.text-center
+        h6 A little extra...
+        h2 Amenities
+        p Besides our main services, we always have a lot of extra amenities to offer. Starting with the free parking and WiFi to a SPA center and a Conference hall, we can make all of your wishes come true!
+        
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center
+        .col-md-10.col-lg-6
+          h3
+            | Book a Suite Now 
+            br
+            |  GET a FREE Airport Shuttle
+          p That's correct! We're so determined to make your experience at our hotel a charm, that we'd love to provide you with a courtesy airport shuttle if you book with us!
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 249
+            span.price__aside-bottom /per night
+            
+          a.button.button-primary-outline(href=bookingLink) book now!
+
+        .col-md-10.col-lg-6
+          +jpg('home-4-652x486', 'img-bordered')
+  ='\n'
+    
+  include ../sections/_section-testimonials
+
+  // Driving Directions
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row
+          .col-lg-5
+            h6 Hotel Location & Map
+            h2 Driving Directions
+            p Follow the 14th street and then turn right.
+            
+            .row.row-30
+              .col-sm-6
+                p.heading-2 5.4 km
+                p.heading-4 Away from the Town hall 
+              .col-sm-6
+                p.heading-2 18 km
+                p.heading-4 Away from the Airport
+                
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right
+      include ../sections/_section-gmap
+  ='\n'
+  
+  // Subscribe form
+  section.section-md.bg-accent.text-center.text-lg-left
+    .container
+      .row.row-30.justify-content-md-center.align-items-lg-center.justify-content-xl-between
+        .col-md-10.col-lg-6
+          h3 Sign Up for a Newsletter...
+          p.heading-6 ...and never miss OUR special offers and news!
+          
+        .col-md-10.col-lg-6.col-xl-5
+          // RD Mailform
+          form.rd-mailform.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Enter your e-mail
+            button(type="submit").button.button-primary-outline Subscribe!
+  ='\n' 
+  
+  include ../sections/_section-flickr
+
+  // Page Footer 
+  include ../sections/_footer-corporate

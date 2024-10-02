@@ -1,0 +1,26 @@
+/*
+*
+* Counter
+*/
+
+.counter {
+
+}
+.counter-creative {
+  text-align: center;
+  padding: 20px 0;
+  @include media-breakpoint-up(md){
+    padding: 40px 0;
+  }
+}
+.counter-creative-number{
+  font-size: 60px;
+  font-weight: 700;
+  font-family: $font-family-sans-serif;
+}
+.counter-creative-title{
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}

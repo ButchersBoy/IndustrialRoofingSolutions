@@ -1,0 +1,33 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Countdown'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  // Countdown
+  section.section-lg.bg-default.text-center
+    .container
+      .countdown.countdown-default(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Countdown
+  section.section-xl.bg-accent.bg-image.bg-image-bottom.text-center(style='background-image: url(images/bg-image-1.jpg);')
+    .container
+      .countdown.countdown-default(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Countdown
+  section.section-lg.bg-default.text-center
+    .container
+      .countdown.countdown-default.countdown-primary(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

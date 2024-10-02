@@ -1,0 +1,213 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-centered
+
+block variables
+	- pageName = 'Typography'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	.section-md.section-divided
+		.container
+			.row.row-50.row-md-75
+				.col-lg-8.section-divided__main
+					// Base typography
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Typography
+						ul.list-md
+							li
+								h1 H1 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							li
+								h2 H2 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h3 H3 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h4 H4 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h5 H5 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h6 H6 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					='\n'
+					
+					// Unordered list
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Unordered list
+						ul.list-marked
+							li 10 Reasons to Buy Monstroid#[sup 2].
+							li Getting to another  level of design
+							li Clean Style. Cons and Pros.
+					='\n'
+					
+					// Ordered list
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Ordered list
+						ul.list-ordered
+							li 10 Reasons to Buy Monstroid#[sup 2].
+							li Getting to another  level of design
+							li Clean Style. Cons and Pros.
+					='\n'
+					
+					// Blockquotes
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Blockquotes
+						+quote-centered({
+							text: "Monstroid² is perfect to display the members of your staff, team or working force. ",
+							cite: "Adam Smith"
+						})
+					='\n'
+					
+					// Some other styles
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Some other styles
+						p.first-letter Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+						
+						ul.list-xxs
+							li
+								dl.list-terms-inline
+									dt Bold Text
+									dd: span.fw-medium Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt Italic
+									dd: span.fst-italic Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt Strike-through
+									dd: span.text-decoration-line-through Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt Link
+									dd: a(href='#') Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt Inline Code
+									dd: code Whether you found me on YouTube
+					='\n'
+					
+					// Centre aligned image
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Centre aligned image
+						p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+						.figure-centered
+							figure.figure
+								+jpg('typography-1-418x315')
+					='\n'
+					
+					// Left aligned image
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Left aligned image
+						.row.flex-md-row-reverse.row-30
+							.col-md-6
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							.col-md-6
+								figure.figure
+									+jpg('typography-2-418x315')
+					='\n'
+					
+					// Right aligned image
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Right aligned image
+						.row.row-30
+							.col-md-6
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							.col-md-6
+								figure.figure
+									+jpg('typography-3-418x315')
+					='\n'
+					
+					// Large image should always fit
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Large image should always fit
+						p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+						
+						figure.figure
+							+jpg('typography-4-886x668')
+					='\n'
+				
+				
+				.col-lg-4.section-divided__aside
+					// Categories
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Categories
+						ul.list-linked
+							li: a(href='#') Retina Homepage
+							li: a(href='#') New Page Examples
+							li: a(href='#') Parallax Sections
+							li: a(href='#') Shortcode Central
+							li: a(href='#') Ultimate Font Collection
+					='\n'
+					
+					// Posts
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Latest Posts
+						ul.list-sm
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2022
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2022
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) 5 Things to Know Before You Buy an HTML Template
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2022
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) Installing Your First HTML Template
+					='\n'
+					
+					// Tags
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Tags
+						ul.list-tags
+							li: a(href='#') Retina Homepage
+							li: a(href='#') New Page Examples
+							li: a(href='#') Ultimate Font Collection
+							li: a(href='#') Parallax Sections
+							li: a(href='#') Shortcode Central
+					='\n'
+					
+					// Flickr
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Flickr
+						.flickr.grid-4(data-flickr-tags='html-m2', data-lightgallery="group")
+							- for(var i = 0; i < 8; i++)
+								.flickr-item(data-type="flickr-item")
+									a.thumb-minimal(href='#', data-image_b="href", data-lightgallery="item")
+										figure
+											img(src='images/_blank.png', data-image_s="src" data-title="alt", width='75', height='75', alt='')
+										.thumb-minimal__overlay
+					='\n'
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

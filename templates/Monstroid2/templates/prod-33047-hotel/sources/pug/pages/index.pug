@@ -1,0 +1,162 @@
+extends ../_skeleton
+
+block page
+	include ../sections/_header-classic
+
+	// Intro
+	section.section.section-intro( style='background-image:url(images/background-01.jpg)' )
+		.container
+			.row.row-26.align-items-center
+				.col-md-6.position-relative
+					h1.section-intro-title.wow.fadeInLeft( data-wow-delay='.5s' ) Welcome to the Best Hotel
+					p.section-intro-text.wow.fadeInRight( data-wow-delay='.5s' ) Need a perfect place to stay at? Norliva offers amazing accommodation with the most comfortable layout.
+					.section-intro-contacts
+						.section-intro-contacts-text.wow.fadeInLeft( data-wow-delay='.5s' ) 28 Jackson Blvd Ste 1020 Chicago IL 60604-2340
+						.section-intro-contacts-phone.wow.fadeInRight( data-wow-delay='.5s' )
+							= 'Tel: '
+							a( href='tel:#' ) 800-2345-6789
+				.col-md-5.d-none.d-md-block
+					.section-intro-img
+						+img( 'home-08-878x660' )
+				.col-md-1.text-md-center
+					.section-intro-social
+						.section-intro-social-list: a.section-intro-social-icon.mdi.mdi-facebook( href='#' )
+						.section-intro-social-list: a.section-intro-social-icon.mdi.mdi-twitter( href='#' )
+						.section-intro-social-list: a.section-intro-social-icon.mdi.mdi-instagram( href='#' )
+
+	// About me
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-40.justify-content-md-between
+				.col-md-6.col-xl-4
+					.thumbnail-person
+						+img( 'user-01-369x384' ).thumbnail-person-img
+						.thumbnail-person-text “At Norliva, we believe that staying at a hotel must be a positive experience for everyone. We try to establish inclusive environments and flexible spaces buzzing with the neighborhood's spirit...”
+						.thumbnail-person-footer
+							.thumbnail-person-footer-item
+								h4.thumbnail-person-title Ricard Morgan
+								.thumbnail-person-title-caption General Manager
+							.thumbnail-person-footer-item
+								+img( 'sign-106x63.png' ).thumbnail-person-sign
+
+				.col-md-6.col-xxl-5
+					.block-sm
+						h2.wow.fadeIn The Best Place to Enjoy Your Life
+						p.text-primary.fw-medium.wow.fadeIn Welcome to Norliva, one of the best hotels to stay at. Established in 2005, today our hotel provides accommodation services of the utmost level.
+						p.wow.fadeIn Norliva Hotel offers its guests a modern accommodation combined with the top-level selection of additional services. We strive to be the first choice in the mind of guests, owners, and talent. In our journey to achieve this, we practice strong beliefs and actions that respect the diversity of people, the community, ethics, and the planet.
+						a.btn.btn-primary.btn-ujarak.wow.fadeIn( href='about.html' ) Read more
+
+	// Services
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-right.section-half-bg-custom-1.text-center.text-md-start.z-index-1
+		.container
+			.row.row-40.justify-content-md-between
+				.col-md-6.col-xl-7
+					.block-sm
+						h2 Right Services for Great Customers
+						p A great stay at Norliva means not just top-notch accommodation but also a wide selection of luxury services that you’ll surely enjoy.
+						.list-custom
+							.h4.list-custom-title Reception
+							p.list-custom-text Our well-informed and dedicated staff is always available to satisfy any of your requests.
+							.h4.list-custom-title In-Room Safe
+							p.list-custom-text For your comfort you will find in each room an electronic, extremely easy-to-use safe.
+							.h4.list-custom-title Wi-Fi
+							p.list-custom-text We have a Wi-Fi system, which provides stable Internet connection from anywhere in the hotel. This wireless system makes connection practical and fast.
+					.row.row-30.row-offset-1.justify-content-center( data-lightgallery='group' )
+						.col-5.col-xs-4.wow.fadeInUp
+							+thumbnail-gallery({
+								img: 'home-01-200x200',
+								imgOriginal: 'home-01-1200x800',
+							})
+						.col-5.col-xs-4.wow.fadeInUp( data-wow-delay='.15s' )
+							+thumbnail-gallery({
+								img: 'home-02-200x200',
+								imgOriginal: 'home-02-1200x800',
+							})
+						.col-5.col-xs-4.wow.fadeInUp( data-wow-delay='.3s' )
+							+thumbnail-gallery({
+								img: 'home-03-200x200',
+								imgOriginal: 'home-03-1200x800',
+							})
+
+				.col-md-6.col-xl-5
+					h2 Superior Room
+					.terms-table
+						.terms-table-title.wow.fadeInUp( data-wow-delay='.15s' ) bed:
+						.terms-table-text.wow.fadeInUp( data-wow-delay='.15s' ) twin bed
+						.terms-table-title.wow.fadeInUp( data-wow-delay='.15s' ) capacity:
+						.terms-table-text.wow.fadeInUp( data-wow-delay='.15s' ) 2 adults, 1 children
+						.terms-table-title.wow.fadeInUp( data-wow-delay='.15s' ) room size:
+						.terms-table-text.wow.fadeInUp( data-wow-delay='.15s' ) 30m²
+						.terms-table-title.wow.fadeInUp( data-wow-delay='.15s' ) view:
+						.terms-table-text.wow.fadeInUp( data-wow-delay='.15s' ) sea view
+						.terms-table-title.wow.fadeInUp( data-wow-delay='.15s' ) recommend:
+						.terms-table-text.wow.fadeInUp( data-wow-delay='.15s' ) great for business trip
+						.terms-table-footer.wow.fadeInUp( data-wow-delay='.15s' )
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $199
+					.img-responsive.img-wrap-1
+						+img( 'image-04-469z558' )
+
+	// Testimonials
+	section.section.section-lg.section-lg-2.section-half-bg.section-half-bg-custom-2.text-center.text-md-start
+		.container
+			.row.row-40.justify-content-md-between.align-items-md-end
+				.col-md-6.col-xl-4
+					h2 Find hot deals #[br]& discounts
+					p
+						b Check out our selection of deals.
+						= ' We regularly add new discounts and offers for our  hotel visitors to help them save on luxury accommodation.'
+					a.btn.btn-primary.btn-ujarak.btn-offset-1( href='offers.html' ) Read more
+
+				.col-md-6.col-xl-5
+					.owl-carousel.owl-carosel-1(
+						data-items='1',
+						data-autoplay='true',
+						data-owl= {
+							dots: true,
+							smartSpeed: 2000,
+							autoplayTimeout: 6000,
+						}
+					)
+						+quote-default({
+							text: 'Everything from the car parking, to check in, the panoramic room to check out was perfect. I am literally amazed by your range of services and the way you treat your visitors. Keep doing what you do so well. Can\'t wait to visit again next year.',
+							cite: 'Peter Wilson',
+							meta: 'Client',
+						})
+						+quote-default({
+							text: 'We had our company annual offsite at Norliva. It was the perfect choice for us: there are multiple large event spaces for various activities and the great staff made sure the events went smoothly. Thank you for making us feel special.',
+							cite: 'Kate Adams',
+							meta: 'Client',
+						})
+						+quote-default({
+							text: 'The hospitality and services provided by the hotel staff were excellent. They attended us well at all times and we were impressed by their courtesy. We enjoyed our stay and convey thanks to all associated with the hotel.',
+							cite: 'Sam Johnson',
+							meta: 'Client',
+						})
+						+quote-default({
+							text: 'The Norliva Hotel is an excellent choice for anybody considering hosting their events there. Top level facilities and excellent staff make for a brilliant environment within which to operate. Staying there was one of the best experiences this year.',
+							cite: 'Emma Rodriguez',
+							meta: 'Client',
+						})
+
+	// Testimonials
+	section.section.section-lg.bg-default.text-center.text-md-start
+		.container
+			.row.row-40.justify-content-center
+				.col-9.col-md-11.col-lg-10.col-xxl-12
+					.owl-carousel.owl-carosel-1(
+						data-items='1',
+						data-sm-items='2',
+						data-md-items='3',
+						data-autoplay='false',
+						data-owl= {
+							nav: true
+						}
+					)
+						.img-responsive.wow.fadeInLeft: +img( 'home-05-370x467' )
+						.img-responsive.wow.fadeInUp: +img( 'home-06-370x467' )
+						.img-responsive.wow.fadeInRight: +img( 'home-07-370x467' )
+						.img-responsive: +img( 'single-room-01-370x467' )
+
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

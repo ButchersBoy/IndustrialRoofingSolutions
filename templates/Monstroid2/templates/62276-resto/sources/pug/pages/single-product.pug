@@ -1,0 +1,115 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-label-list
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Single product'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+  
+  .section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            
+            h4 Thyme Soup with Cream
+            
+            +jpg('single-product-1-886x668')
+            
+            p This creamy chicken soup is definitely a good dish for people who carefully follow a diet. Including low-fat cheese, a lightweight chicken meat and some fresh vegetables with rice, this soup is a perfect lunch. Especially for anyone with irritable bowel syndrome. The thyme adds a special kinky flavor to this mild dish, making it even tastier!        
+            
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-sm fa-facebook",
+                'icon-sm fa-twitter',
+                'icon-sm fa-google-plus',
+                'icon-sm fa-vimeo',
+                'icon-sm fa-youtube',
+                'icon-sm fa-pinterest-p']
+            })
+
+          section.section-sm
+            h5 Leave a reply
+
+            // RD Mailform
+            form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your name')
+                label.form-label(for="contact-name")
+
+              .form-wrap
+                input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Your e-mail')
+                label.form-label(for="contact-email")
+
+              .form-wrap
+                input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Your phone')
+                label.form-label(for="contact-phone")
+
+              .form-wrap
+                textarea#contact-message.form-input(name="message" data-constraints="@Required" placeholder='Your message')
+                label.form-label(for="contact-message")
+
+              button(type="submit").button.button-gray-light-outline: span SUBMIT COMMENT
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          
+          section.section-sm.section-style-1
+            h5 Price:  $5.47
+            
+          ='\n'
+          
+          section.section-sm
+            h5 Portion Size
+            p Weight: 650g
+            
+          ='\n'
+          
+          section.section-sm
+            h5 Ingredients
+            p Chicken, Eggs, Lemon, Rice, Salmon, Salt, Thyme, Water
+            
+          ='\n'
+          
+          section.section-sm
+            h5 Nutrition Facts
+            p Calories: 650
+            
+          ='\n'          
+
+          // Custom post
+          section.section-sm
+            h5 You might also like
+            ul.list-md
+              li
+                article.unit.flex-sm-row.unit-spacing-sm
+                  .unit-left
+                    figure.figure-inline
+                      +jpg('aside-single-producy-1-133x100')
+                  .unit-body.post-inline
+                    a(href="#").post-inline__link Chipotle Spinach Dip
+              li
+                article.unit.flex-sm-row.unit-spacing-sm
+                  .unit-left
+                    figure.figure-inline
+                      +jpg('aside-single-producy-2-133x100')
+                  .unit-body.post-inline
+                    a(href="#").post-inline__link Truffle Parm Potato Crisps
+            
+          ='\n'
+          
+    
+  // Page Footer
+  include ../sections/_footer-minimal

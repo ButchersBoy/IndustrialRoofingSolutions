@@ -1,0 +1,59 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+include ../elements/_ui-rd-video
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Portfolio'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[pageName]]
+  })
+  
+  section.parallax-header.bg-accent
+    .parallax-header__inner.section-lg: .parallax-header__content
+      .video-overlay__image.bg-image(style='background-image: url(images/video-preview-1-1920x703.jpg);')
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              a.mfp-link.video-overlay-icon.linear-icon-play-circle(href='https://www.youtube.com/watch?v=ccuQoF0vKYU', data-lightbox='iframe')
+              h1 Casually European...
+
+  section.section-md.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-xl-8
+          h1 Our interior
+          hr.divider-minimal
+          p Do you value casual dining setting? The Resto restaurant offers three different dining halls (one big and two a bit more intimate), with tables varying in size (for 2, 4 or 8 guests). Additionally we have a wide bar desk with high chairs, a welcoming space for enjoying your drink!
+
+  section.section-md.bg-default
+    .container
+      .row.justify-content-sm-center.row-60
+        .col-md-6.col-lg-4
+          a(href='Single-portfolio.html').thumbnail-classic.thumbnail-classic__center
+            +jpg('portfolio-1-418x315')
+            .caption
+              h4 Bar Desk
+        .col-md-6.col-lg-4
+          a(href='Single-portfolio.html').thumbnail-classic.thumbnail-classic__center
+            +jpg('portfolio-2-418x315')
+            .caption
+              h4 Big Hall
+        .col-md-6.col-lg-4
+          a(href='Single-portfolio.html').thumbnail-classic.thumbnail-classic__center
+            +jpg('portfolio-3-418x315')
+            .caption
+              h4 Small Hall
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

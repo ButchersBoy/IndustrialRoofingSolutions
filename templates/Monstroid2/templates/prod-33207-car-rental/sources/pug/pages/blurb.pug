@@ -1,0 +1,155 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Blurb'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+
+	.section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-1-360x269',
+						title: 'Car with personal driver',
+						text: 'Virtute dosent a reprimique at pertinaxet en salutandi quo nec elit utinam fierent. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-2-360x269',
+						title: 'MPV rental',
+						text: 'Cras tristique semper convallis. Cras efficitur sagittis erat. Fusce pellentesque ligula vitae tellus.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-3-360x269',
+						title: 'Limousine rental',
+						text: 'Fusce pellentesque ligula vitae tellus facilisis fringilla. Pellentesque sit amet massa at diam tempus faucibus. Nunc eleifend, ipsum nec maximus.'
+					})
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-feather
+						h4.blurb__title Clean and Crispy Design
+						p.small.text-secondary Monstroid² is crafted by top industry leaders with love, care and customer needs in mind.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-menu3
+						h4.blurb__title Template
+						p.small.text-secondary Use our Template to customize and update your website within seconds.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-bag2
+						h4.blurb__title Advanced UI Kit
+						p.small.text-secondary Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-magic-wand
+						.unit-body
+							h4.blurb__title Advanced UI Toolkit
+							p.small.text-secondary Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+						.unit-body
+							h4.blurb__title Template
+							p.small.text-secondary Use our Template to customize and update your website within seconds.
+
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-users2
+						.unit-body
+							h4.blurb__title Made for People
+							p.small.text-secondary Monstroid² is built for real users that enjoy easy website development.
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.linear-icon-feather
+						.unit-body
+							h4.blurb__title Clean and Crispy Design
+							p.small.text-secondary Monstroid² is crafted by top industry leaders with love, care and customer needs in mind.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.linear-icon-menu3
+						.unit-body
+							h4.blurb__title Template
+							p.small.text-secondary Use our Template to customize and update your website within seconds.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.linear-icon-bag2
+						.unit-body
+							h4.blurb__title Advanced UI Kit
+							p.small.text-secondary Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+						h4.blurb__title Template
+						p.small.text-secondary Use our Template to customize and update your website within seconds.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-users2
+						h4.blurb__title Made for People
+						p.small.text-secondary Monstroid² is built for real users that enjoy easy website development.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-bag2
+						h4.blurb__title Advanced UI Kit
+						p.small.text-secondary Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

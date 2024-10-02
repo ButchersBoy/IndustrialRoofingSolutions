@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Nonstandard post'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-xxl.text-center.bg-image-6
+    .container.nonstandart-post-header
+      +jpg('timeline-1-109x109', 'img-circle')
+      p.heading-4 Amanda smith
+      h2 SASHA AND MALIA OBAMA'S STYLE EVOLUTION
+
+      .post-meta
+        .group
+          .icon-list-wrap.icon.icon-gray.linear-icon-clock3
+            a(href=postLink): time(datetime='2017') Jan.20, 2016
+          .icon-list-wrap.icon.icon-gray.linear-icon-bubble
+            a(href=postLink) 3 comment(s)     
+          .icon-list-wrap.icon.icon-gray.linear-icon-tag
+            a(href=postLink) Clothes
+          +tag-list({
+              list_class: 'list-inline-tag icon icon-list-wrap linear-icon-tags icon-gray',
+              href: postLink,
+              items: [
+                  "Style",
+                  'Clean']
+          })
+          
+      +list-inline-icon({
+          list_class: 'list-inline-sm',
+          items: [
+              "icon-sm fa-facebook",
+              'icon-sm fa-twitter',
+              'icon-sm fa-google-plus',
+              'icon-sm fa-vimeo',
+              'icon-sm fa-youtube',
+              'icon-sm fa-pinterest-p']
+      })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          .section-sm.post-single-body
+            include ../sections/_section-post-single-content
+
+          include ../sections/_section-blog-post-comment
+
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

@@ -1,0 +1,8 @@
+//-
+  Blurb mini
+  @param {object} blurb
+mixin blurb-mini( blurb )
+  .blurb-mini&attributes( attributes )
+    .img-wrap.bg-gray-lighter
+      img( src= blurb.src, alt='' )
+    .caption= blurb.caption

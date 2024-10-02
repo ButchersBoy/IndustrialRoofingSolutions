@@ -1,0 +1,145 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/events
+
+
+
+block variables
+  - pageName = 'News'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  // Featured Lectures
+  section.section.section-md.section-relative.bg-transparent.text-center
+    .container
+      h6 Latest News
+      h3 Our Blog
+      +event-modern({
+        img: {
+          name: 'event-01-810x735',
+          link: links.post
+        },
+        time: {
+          link: links.post,
+          value: ['24', 'March']
+        },
+        title: {
+          link: links.post,
+          text: 'Business Coaching or Mentoring?'
+        },
+        address: {
+          link: links.post,
+          title: 'John Doe'
+        },
+        text: 'Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat.',
+        link: {
+          path: '#',
+          text: 'Read More'
+        }
+      })
+      +event-modern({
+        img: {
+          name: 'event-02-810x735',
+          link: links.post
+        },
+        time: {
+          link: links.post,
+          value: ['28', 'March']
+        },
+        title: {
+          link: links.post,
+          text: 'Building a Correct Strategy'
+        },
+        address: {
+          link: links.post,
+          title: 'Jane Wilson'
+        },
+        text: 'Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat.',
+        link: {
+          path: '#',
+          text: 'Read More'
+        }
+      })
+      +event-modern({
+        img: {
+          name: 'event-03-810x735',
+          link: links.post
+        },
+        time: {
+          link: links.post,
+          value: ['03', 'April']
+        },
+        title: {
+          link: links.post,
+          text: 'The Role of Business Planning'
+        },
+        address: {
+          link: links.post,
+          title: 'Debra Nelson'
+        },
+        text: 'Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat.',
+        link: {
+          path: '#',
+          text: 'Read More'
+        }
+      })
+      +event-modern({
+        img: {
+          name: 'event-04-810x735',
+          link: links.post
+        },
+        time: {
+          link: links.post,
+          value: ['12', 'April']
+        },
+        title: {
+          link: links.post,
+          text: 'How Team Building Can Help You'
+        },
+        address: {
+          link: links.post,
+          title: 'James Howard'
+        },
+        text: 'Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat.',
+        link: {
+          path: '#',
+          text: 'Read More'
+        }
+      })
+      +event-modern({
+        img: {
+          name: 'event-05-810x735',
+          link: links.post
+        },
+        time: {
+          link: links.post,
+          value: ['10', 'May']
+        },
+        title: {
+          link: links.post,
+          text: '5 Secrets of Profitable Sales'
+        },
+        address: {
+          link: links.post,
+          title: 'Eugene Garcia'
+        },
+        text: 'Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat.',
+        link: {
+          path: '#',
+          text: 'Read More'
+        }
+      })
+
+      ul.pagination-custom
+        li: a.active(href='#') 1
+        li: a(href='#') 2
+        li: a(href='#') 3
+        li: span ...
+        li: a(href='#') 12
+
+
+  include ../sections/_footer-classic

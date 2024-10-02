@@ -1,0 +1,26 @@
+// Post standard
+article.post-classic.post-classic-simple
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postLink) Managing Human Resources
+		.post-meta
+			.group
+				a(href=postLink): time(datetime='2017') Jan.20, 2016
+				a(href=postLink).meta-author Brian Williamson
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand...
+
+		.post-classic-footer
+			.post-meta
+				.group
+					a.post-meta__comment(href=postLink) 3 comment(s)
+					a(href=postLink) Theme
+					+tag-list({
+						list_class: 'list-inline-tag',
+						href: postLink,
+						items: [
+							"Style",
+							'Clean']
+					})
+		a(href=postLink).button.button-link Read more

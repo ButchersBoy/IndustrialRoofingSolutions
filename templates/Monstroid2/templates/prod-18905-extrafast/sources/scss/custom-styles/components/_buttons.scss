@@ -1,0 +1,165 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Button General Styles
+.button {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  border: 1px solid;
+  border-radius: 0;
+  @include btn-size(12px, 25px, $input-btn-font-size, 17px);
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  letter-spacing: $btn-letter-spacing;
+  transition: .33s all ease;
+  white-space: normal;
+  text-transform: $btn-text-transform;
+  cursor: pointer;
+  text-align: center;
+}
+
+span.button {
+  cursor: default;
+}
+
+// Appearance style
+// --------------------------------------------------
+.button-primary {
+  @include btn-variant($white, $primary, $primary, $white, $black, $black);
+}
+
+.page {
+  .button-default {
+    @include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+  }
+
+  .button-black {
+    @include btn-variant($white, $black, $black, $white, $primary, $primary);
+  }
+  
+  .button-gray-dark {
+    @include btn-variant($white, $gray-dark, $gray-dark, $white, $primary, $primary);
+  }
+
+  .button-primary {
+    @include btn-variant($white, $primary, $primary, $white, $black, $black);
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($black, transparent, $gray-light, $white, $primary, $primary);
+  }
+
+  span.button-gray-light-outline {
+    @include btn-variant($black, transparent, $gray-light, $black, transparent, $gray-light);
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+  @include btn-size(5px, 25px, 12px, 22px);
+}
+
+.button-sm {
+  @include btn-size(6px, 25px, 13px, 24px);
+}
+
+.button-lg {
+  @include btn-size(18px, 45px, 16px, 24px);
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.button-xl {
+  @include btn-size(20px, 50px, 18px, 28px);
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+  border-radius: 35px;
+}
+
+.button-square {
+  border-radius: 0;
+}
+
+.button-round-2 {
+  border-radius: 8px;
+}
+
+// Button Types
+// --------------------------------------------------
+.button-link {
+  border: 0;
+  padding: 0;
+  font-family: $font-family-sec;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: .06em;
+  @include link($primary, $black);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+// Button Icon styles
+// --------------------------------------------------
+
+.page .button {
+  &.button-icon {
+    .icon {
+      position: relative;
+      top: -.21em;
+      display: inline-block;
+      vertical-align: middle;
+      color: inherit;
+      font-size: 1.85em;
+      line-height: 0;
+    }
+    
+    &-left {
+      .icon {
+        padding-right: 11px;
+      }
+    }
+    
+    &-right {
+      .icon {
+        float: right;
+        padding-left: 11px;
+      }
+    }
+  }
+}
+
+// Button other styles
+// --------------------------------------------------
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+// bootstrap buttons
+
+.btn-primary:active:hover {
+  background-color: $primary;
+  border-color: $primary;
+}

@@ -1,0 +1,131 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+	- pageName = 'Single service'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-05.jpg"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h1 Car with personal driver
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-50.row-md-60.justify-content-sm-center
+				.col-md-10.col-xl-8
+					h2 Our rental fleet at a glance
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor imperdiet velit a consequat. Mauris lacinia sodales lacus, eget consequat est auctor vel. Cras elit purus, aliquet ac auctor in, semper at odio. Ut semper justo ultricies, pulvinar odio.
+				.col-md-10.col-xl-8
+					h2 Quality guaranteed
+					p Cras elit purus, aliquet ac auctor in, semper at odio. Ut semper justo ultricies, pulvinar odio eu, suscipit dui. Ut volutpat porta diam, in pulvinar purus ultrices sit amet. Ut elementum, libero a semper vehicula, urna diam tincidunt tellus, ut fringilla mi sapien in orci. Maecenas elementum arcu ut arcu condimentum egestas. Vivamus nec nisl massa.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-20.row-sm-40
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '4 hours',
+						price: '$12'
+					})
+						ul.list-marked.list-marked-sm
+							li Sedans & hatchbacks
+							li Unlimited mileage
+							li Basic insurance
+							li Free cancellation
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 day',
+						price: '$20'
+					})
+						ul.list-marked.list-marked-sm
+							li Coupes and universals
+							li Protection against injuries
+							li GPS
+							li Additional driver
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 week',
+						price: '$78'
+					})
+						ul.list-marked.list-marked-sm
+							li Minivans & pickups
+							li Child seat
+							li Snow chains
+							li Smart cover protection
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 month',
+						price: '$299'
+					})
+						ul.list-marked.list-marked-sm
+							li Roadsters & sport cars
+							li Total protection
+							li Car pooling up to 5 drivers
+							li Animal care
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-40
+				.col-md-6
+					h2 Our advantages
+					p Renting a car at GoDrive offers lots of advantages.
+					p Driving a rented car from us provides an unforgettable and positive experience. With our services, you’ll also get other cool benefits.
+				.col-md-6.col-xl-5
+					article.blurb.blurb-circle.ms-0: .unit.unit-spacing-xl
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.fa-check
+						.unit-body
+							h3.heading-4.blurb__title Mobile phone reservation
+							p.small.text-secondary.text-width-3 Book your rental car in advance with mobile phone reservation services or by using our app.
+
+					article.blurb.blurb-circle.ms-0: .unit.unit-spacing-xl
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.fa-check
+						.unit-body
+							h3.heading-4.blurb__title One-way car rentals
+							p.small.text-secondary.text-width-3 GoDrive offers easy and convenient one-way car rentals between many of its locations in the US.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-40
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-4-360x269',
+						title: 'SUV rental',
+						text: 'Nunc eleifend, ipsum nec maximus vehicula, leo lorem mollis nunc, at facilisis justo nisi eu erat. Cras elit purus, aliquet ac auctor in, semper at odio.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-5-360x269',
+						title: 'Car leasing',
+						text: 'Pertinaxet en salutandi quo nec elit utinam fierent. Lorem ipsum dolor sit amet, consectetur.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img: 'services-6-360x269',
+						title: 'One-way car rental',
+						text: 'Cras elit purus, aliquet ac auctor in, semper at odio. Ut semper justo ultricies, pulvinar odio eu, suscipit dui.'
+					})
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

@@ -1,0 +1,219 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Home Personal'
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-navbar_transparent(
+			data-layout='rd-navbar-fixed',
+			data-sm-layout='rd-navbar-fixed',
+			data-sm-device-layout='rd-navbar-fixed',
+			data-md-layout='rd-navbar-fixed',
+			data-md-device-layout='rd-navbar-fixed',
+			data-lg-device-layout='rd-navbar-fixed',
+			data-xl-device-layout='rd-navbar-static',
+			data-xxl-device-layout='rd-navbar-static',
+			data-lg-layout='rd-navbar-static',
+			data-xl-layout='rd-navbar-static',
+			data-xxl-layout='rd-navbar-static',
+			data-stick-up-clone='false',
+			data-sm-stick-up='true',
+			data-md-stick-up='true',
+			data-lg-stick-up='true',
+			data-xl-stick-up='true',
+			data-xxl-stick-up='true',
+			data-lg-stick-up-offset='30px',
+			data-xl-stick-up-offset='50px',
+			data-xxl-stick-up-offset='50px',
+			data-body-class='rd-navbar-absolute rd-navbar_transparent-linked')
+				.rd-navbar-top-panel
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						
+						// RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+					
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						+navigation( menu )
+	='\n'
+	
+	include ../sections/_section-slider-personal
+	='\n'
+	
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-xxl.bg-default(id=seeFeaturesLink)
+		.container
+			.row.row-fix.row-50
+				.col-lg-4
+					h3 About Me
+				
+				.col-lg-8
+					figure.figure-inline.object-displacement-1
+						+png('images-9-382x382', 'rounded-circle')
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+					p We’ve made a huge effort to give site owners access to the most innovative HTML template, which includes a variety of modern web technologies as well as smooth and clear design and easy-to-use interface. That’s why Monstroid² can definitely become your favorite template.
+	
+	='\n'
+	
+	include ../sections/_section-circle-counters-dark
+	
+	// Blurbs
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-50
+				.col-lg-4
+					h3 What I Do
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+						p.blurb__title Great for Any Device
+						p This template is fully responsive and Retina-ready, which means its ability to be displayed on any modern gadgets, from computers and laptops to smartphones and tablets. It is also perfectly optimized for high-resolution displays and other devices.
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-users2
+						p.blurb__title Made for People
+						p Monstroid² is built for real users that enjoy easy website development and at the same are looking for a clear and stunning design. Our template can provide you with lots of child themes so you don’t need to buy other templates and adapt your website to them.
+	='\n'
+	
+	// Gallery
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default(data-lightgallery="group")
+		.container-fluid
+			.row.g-0
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-3-1200x906.jpg')
+						figure
+							+jpg('home-default-9-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-9-1200x905.jpg')
+						figure
+							+jpg('home-commercial-2-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-10-1200x675.jpg')
+						figure
+							+jpg('home-commercial-3-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-11-1200x1200.jpg')
+						figure
+							+jpg('home-commercial-4-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-12-1200x797.jpg')
+						figure
+							+jpg('home-commercial-5-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-13-1200x800.jpg')
+						figure
+							+jpg('home-commercial-6-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-14-1200x905.jpg')
+						figure
+							+jpg('home-commercial-7-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-6-1200x905.jpg')
+						figure
+							+jpg('home-default-12-472x355')
+						.thumb-modern__overlay
+	='\n'
+	
+	// Testimonials
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-50
+				.col-md-4
+					h3 Testimonials
+				
+				.col-md-8.group-quote
+					// Quote default
+					.quote-default.quote-default_left
+						.quote-default__image
+							+jpg('testimonials-1-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+					
+					// Quote default
+					.quote-default.quote-default_left
+						.quote-default__image
+							+jpg('testimonials-2-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+	='\n'
+	
+	include ../sections/_section-cta-4
+	
+	// Contact Form
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-50
+				.col-lg-4
+					h3 Get in touch
+				
+				.col-lg-8
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+						
+						button(type="submit").button.button-primary send
+	='\n'
+	
+	// Footer corporate
+	footer.novi-bg.novi-bg-img.footer-corporate
+		.container
+			.footer-corporate__inner
+				+rights
+				
+				ul.list-inline-xxs
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-facebook(href='#')
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-twitter(href='#')
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-google-plus(href='#')
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-vimeo(href='#')
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-youtube(href='#')
+					li: a.icon.novi-icon.icon-xxs.icon-primary.fa.fa-pinterest(href='#')

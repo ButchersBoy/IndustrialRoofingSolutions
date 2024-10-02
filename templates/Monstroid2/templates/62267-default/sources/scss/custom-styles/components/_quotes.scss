@@ -1,0 +1,308 @@
+//
+// Quotes
+// --------------------------------------------------
+
+// Quote centered
+.quote-centered {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.quote-centered__text {
+
+  .q {
+    font-size: 16px;
+    color: $black;
+  }
+}
+
+.quote-centered__mark {
+  display: inline-block;
+  fill: $primary;
+}
+
+.quote-centered__cite {
+  color: $gray;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+* + .quote-centered__cite {
+  margin-top: 10px;
+}
+
+@include media-breakpoint-up(md) {
+  .quote-centered__text {
+    .q {
+      font-size: 24px;
+      line-height: (43 / 30);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-centered {
+    max-width: 760px;
+  }
+
+  .quote-centered__text {
+    .q {
+      font-size: 30px;
+    }
+  }
+}
+
+// Quote default
+.quote-default {
+  @include responsive-block;
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-default {
+    max-width: 865px;
+  }
+}
+
+.quote-default__mark {
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  fill: $primary;
+}
+
+.quote-default__image {
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.quote-default__cite {
+  vertical-align: middle;
+  color: $black;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+* + .quote-default__mark {
+  margin-top: 30px;
+}
+
+* + .quote-default__text {
+  margin-top: 20px;
+}
+
+* + .quote-default__cite {
+  margin-top: 15px;
+}
+
+// Modificators
+.quote-default.quote-default_left {
+  text-align: left;
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+.quote-default.quote-default_left-v2 {
+  text-align: left;
+
+  .quote-default__image {
+    text-align: center;
+  }
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  * + .quote-default__text {
+    margin-top: 30px;
+  }
+}
+
+// Quote bordered
+//
+.quote-bordered {
+  padding: 20px;
+  border: 1px solid $gray-1;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.quote-bordered__mark {
+  display: block;
+  fill: $primary;
+}
+
+.quote-bordered__image {
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.quote-bordered__cite {
+  color: $black;
+}
+
+.quote-bordered__small {
+  @include small;
+}
+
+* + .quote-bordered__image {
+  margin-top: 15px;
+}
+
+* + .quote-bordered__small {
+  margin-top: 0;
+}
+
+* + .quote-bordered__text {
+  margin-top: 25px;
+}
+
+* + .quote-bordered__caption {
+  margin-top: 10px;
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-bordered {
+    padding: 40px;
+  }
+
+  * + .quote-bordered__text {
+    margin-top: 50px;
+  }
+
+  * + .quote-bordered__caption {
+    margin-top: 30px;
+  }
+}
+
+// Quote classic
+.quote-classic {
+}
+
+.quote-classic__mark {
+  fill: $primary;
+}
+
+.quote-classic__main {
+  position: relative;
+  padding: 25px;
+  margin-bottom: 12px;
+  border: 1px solid $gray-1;
+  border-bottom: 0;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    height: 13px;
+    border-style: solid;
+    border-color: $gray-1;
+    transform-origin: 0 0;
+  }
+
+  &:before {
+    left: 0;
+    width: 40px;
+    border-width: 1px 1px 0 0;
+    transform: skew(45deg);
+  }
+
+  &:after {
+    right: 0;
+    width: calc(100% - 40px - 25px);
+    border-width: 1px 0 0 1px;
+    transform: skew(-45deg);
+  }
+}
+
+.quote-classic__image {
+  img {
+    border-radius: 100%;
+    width: 40px;
+    height: auto;
+  }
+}
+
+.quote-classic__caption {
+  @include display-flex;
+  @include flex-direction(row);
+  @include align-items(center);
+}
+
+.quote-classic__caption-main {
+  padding-left: 20px;
+}
+
+.quote-classic__cite {
+  color: $black;
+}
+
+.quote-classic__small {
+  @include small;
+}
+
+* + .quote-classic__text {
+  margin-top: 8px;
+}
+
+* + .quote-classic__small {
+  margin-top: 0;
+}
+
+.quote-classic__main +  .quote-classic__caption {
+  margin-top: 35px;
+}
+
+@include media-breakpoint-up(sm) {
+  .quote-classic__image {
+    img {
+      width: 100px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-classic__main {
+    padding: 40px;
+  }
+
+  .quote-classic__caption-main {
+    padding-left: 40px;
+  }
+}

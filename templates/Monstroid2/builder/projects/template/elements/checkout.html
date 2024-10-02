@@ -1,0 +1,75 @@
+<section class="section novi-bg novi-bg-img section-md bg-default">
+  <div class="container">
+    <!-- Accordion-->
+    <div id="accordion4" role="tablist">
+      <!--Bootstrap card-->
+      <article class="card card-custom">
+        <div class="card-custom-heading" role="tab">
+          <h5 class="card-custom-title"><a class="collapsed" id="accordion4-card-head-dlowuksi" data-toggle="collapse" data-parent="#accordion4" href="#accordion4-card-body-qjspgdda" aria-controls="accordion4-card-body-qjspgdda" aria-expanded="false" role="button">Returning customer?<span>Click here to login</span>
+              <div class="card-arrow"></div>
+            </a></h5>
+        </div>
+        <div class="collapse card-custom-collapse" id="accordion4-card-body-qjspgdda" aria-labelledby="accordion4-card-head-dlowuksi" data-parent="#accordion4" role="tabpanel">
+          <div class="card-custom-body">
+            <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p> <!-- RD Mailform-->
+            <form class="rd-mailform rd-mailform_responsive rd-mailform_style-2">
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span> <input class="form-input" id="modal-login-email" type="email" name="email" data-constraints="@Email @Required"> <label class="form-label" for="modal-login-email">Your e-mail</label> </div>
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-lock"></span> <input class="form-input" id="modal-login-password" type="password" name="password" data-constraints="@Required"> <label class="form-label" for="modal-login-password">Your password</label> </div>
+              <div class="form-wrap group-xl"> <button class="button button-primary" type="submit">Login</button> <label class="checkbox-inline"> <input type="checkbox" name="remember">Remember me </label> </div>
+            </form>
+            <ul class="list-small">
+              <li><a href="#">Lost your password?</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <!--Bootstrap card-->
+      <article class="card card-custom">
+        <div class="card-custom-heading" role="tab">
+          <h5 class="card-custom-title"><a class="collapsed" id="accordion4-card-head-gjamphit" data-toggle="collapse" data-parent="#accordion4" href="#accordion4-card-body-xeelxokc" aria-controls="accordion4-card-body-xeelxokc" aria-expanded="false" role="button">Have a coupon?<span>Click here to enter your code</span>
+              <div class="card-arrow"></div>
+            </a></h5>
+        </div>
+        <div class="collapse card-custom-collapse" id="accordion4-card-body-xeelxokc" aria-labelledby="accordion4-card-head-gjamphit" data-parent="#accordion4" role="tabpanel">
+          <div class="card-custom-body">
+            <div class="row">
+              <div class="col-md-8 col-xl-5">
+                <form class="rd-mailform rd-mailform_responsive rd-mailform-inline-flex">
+                  <div class="form-wrap"> <input class="form-input" id="coupon-code" type="email" name="email" data-constraints="@Email @Required"> <label class="form-label" for="coupon-code">Coupon Code</label> </div> <button class="button button-black" type="submit">Apply coupon</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <hr> <!-- RD Mailform-->
+    <form class="rd-mailform text-left row row-50">
+      <div class="col-md-6 col-lg-4">
+        <h5>Billing Details</h5>
+        <div class="form-wrap"> <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="contact-name">First Name *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="contact-last-name">Last Name *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="company" type="text" name="name"> <label class="form-label" for="company">Company Name</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required"> <label class="form-label" for="contact-email">Email Address *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric"> <label class="form-label" for="contact-phone">Phone *</label> </div>
+        <div class="form-wrap">
+          <!--Select 2--> <select class="form-input select-filter" data-placeholder="Country" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+            <option>Country</option>
+            <option value="2">USA</option>
+            <option value="3">Mexico</option>
+            <option value="4">China</option>
+          </select> </div>
+        <div class="form-wrap"> <input class="form-input" id="address" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="address">Street address *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="address-2" type="text" name="name"> <label class="form-label" for="address-2">Apartment, suite, unit etc. (option)</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="city" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="city">Town / City *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="country" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="country">State / County *</label> </div>
+        <div class="form-wrap"> <input class="form-input" id="postcode" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="postcode">Postcode / ZIP *</label> </div>
+        <div class="form-wrap"> <label class="checkbox-inline"> <input type="checkbox" name="remember">Create an account? </label> </div>
+      </div>
+      <div class="col-md-6 col-lg-8">
+        <h5>Additional Information</h5>
+        <div class="form-wrap"> <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea> <label class="form-label" for="contact-message">Order Notes *</label> </div>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+include ../elements/_ui-rd-video
+// Swiper
+section.rd-parallax
+  .rd-parallax-layer(data-type='html', data-speed='1')
+    .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5500')
+      .swiper-wrapper
+        .swiper-slide.bg-secondary-7.custom-parallax-wrap(data-slide-bg='images/slider-slide-10-1920x1080.jpg')
+          .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true').text-left
+            .container
+              h2(data-caption-animate='fadeInLeftSmall')
+                | Buy Once - Use Forever.
+                br
+                |  Feel the freedom of
+                br.d-none.d-lg-block
+                | GPL3 license.
+              a.button.button-gray-light-outline(data-caption-animate='fadeInLeftSmall', data-caption-delay='200', href=getTemplateLink) Buy theme
+
+        .swiper-slide.bg-gray-dark.custom-parallax-wrap(data-slide-bg='images/slider-slide-11-1920x1080.jpg')
+          .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true').text-center
+            .container
+              h1(data-caption-animate='fadeInUpSmall')
+                span Monstroid
+                sup 2
+              h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') New Wordpress Themes Generation.
+              .group-lg.group-middle
+                a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+                a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink) Buy theme
+
+        .swiper-slide.swiper-slide_video.bg-gray-dark.rd-video-bg.rd-video-bg-overlay.custom-parallax-wrap
+          +rd-video({
+            "src": "video/video",
+            "imageXS": "144",
+            "imageSM": "144",
+            "imageMD": "144",
+            "imageLG": "144",
+            "imageXLG": "144",
+            "autoplay": "true",
+            "preload": "metadata"
+          })
+            .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true').text-center
+              .container
+                h2(data-caption-animate='fadeInUpSmall') Build by geeks used by humans.
+                h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Monstroid#[sup 2] aims to satisfy real need of real projects. We've got a pack a of tools for that.
+                .group-lg.group-middle
+                  a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#') Supported Plugins
+                  a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink) Buy theme
+
+      // Swiper Pagination
+      .swiper-pagination
+
+      // Swiper Navigation
+      .swiper-button-prev.linear-icon-chevron-left
+      .swiper-button-next.linear-icon-chevron-right
+='\n'

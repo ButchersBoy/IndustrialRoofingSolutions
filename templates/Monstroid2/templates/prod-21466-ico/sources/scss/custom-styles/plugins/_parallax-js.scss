@@ -1,0 +1,61 @@
+// Parallax-js
+// ----------------------
+
+.parallax-scene {
+	overflow: hidden;
+	z-index: 1;
+}
+
+.layer-wrap {
+	display: none;
+	justify-content: space-between;
+	position: absolute;
+	top: 10%;
+	left: 38%;
+	width: 450px;
+	height: 280px;
+	z-index: -1;
+
+	img {
+		opacity: .09;
+	}
+
+	.layer {
+		position: relative !important;
+	}
+
+
+}
+
+@include media-breakpoint-up(lg) {
+ .desktop {
+	 .layer-wrap {
+		 display: flex;
+	 }
+ }
+}
+
+@include media-breakpoint-up(xl) {
+	.layer-wrap {
+		top: 17%;
+		left: 42%;
+	}
+}
+
+.layer-1 {
+	img {
+		max-width: 240px;
+	}
+}
+
+.layer-2 {
+	img {
+		max-width: 50px;
+	}
+}
+
+.layer-3 {
+	img {
+		max-width: 110px;
+	}
+}

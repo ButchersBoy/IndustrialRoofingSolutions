@@ -1,0 +1,210 @@
+/*
+* Typography
+*/
+
+// Body
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-body;
+	line-height: $line-height-base;
+	font-weight: $font-weight-base;
+	color: $body-color;
+	background-color: $body-bg;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+// Headings
+#{headings()} {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: $headings-font-weight;
+	color: $headings-color;
+	text-transform: uppercase;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+h1,
+.heading-1 {
+	position: relative;
+	font-size: 36px;
+	font-weight: 900;
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		font-size: 55px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h1-font-size;
+		line-height: $h1-line-height;
+	}
+
+	&[data-subtext] {
+		&::before {
+			content: attr(data-subtext);
+			position: absolute;
+			text-align: center;
+			top: -30px;
+			left: -10px;
+			color: $black;
+			font-size: 20px;
+			font-weight: 600;
+			background-color: $secondary;
+			width: 46px;
+			height: 46px;
+			line-height: 46px;
+			box-shadow: 7px 8px 10px rgba($black, 0.25);
+			border-radius: 10em;
+			transition: cubic-bezier(1,0,.86,-0.88) 1s;
+			opacity: 0;
+			.swiper-slide-active & {
+				opacity: 1;
+			}
+			// Large ≥992px
+			@include media-breakpoint-up(lg) {
+				top: -11px;
+			}
+			// Mega large ≥1600px
+			@include media-breakpoint-up(xxl) {
+				left: -31px;
+			}
+		}
+	}
+}
+
+h2,
+.heading-2 {
+	font-size: 28px;
+	font-weight: 700;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h2-font-size;
+		line-height: $h2-line-height;
+	}
+}
+
+h3,
+.heading-3 {
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
+	color: $black-5;
+	font-weight: 600;
+
+	%context-dark & {
+		color: $white-5;
+	}
+}
+
+h4,
+.heading-4 {
+	font-size: 22px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h4-font-size;
+		line-height: $h4-line-height;
+	}
+}
+
+h5,
+.heading-5 {
+	font-size: 20px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h5-font-size;
+		line-height: $h5-line-height;
+	}
+}
+
+h6,
+.heading-6 {
+	font-size: 18px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(lg) {
+		font-size: $h6-font-size;
+		line-height: $h6-line-height;
+	}
+}
+
+h3.subtitle {
+	color: $white;
+}
+
+// Emphasis
+small,
+.small {
+	display: block;
+	font-size: $font-size-sm;
+	line-height: $line-height-sm;
+}
+
+mark,
+.mark {
+	padding: 3px 5px;
+	color: $white;
+	background: $primary;
+}
+
+// Big text
+.big {
+	font-size: $font-size-lg;
+	line-height: $line-height-lg;
+	font-weight: 500;
+}
+
+.lead {
+	font-size: $lead-font-size;
+	line-height: $lead-line-height;
+	font-weight: $lead-font-weight;
+}
+
+code {
+	padding: $code-padding-y $code-padding-x;
+	border-radius: $border-radius-sm;
+	font-size: $code-font-size;
+	color: $code-color;
+	background: $code-bg;
+}
+
+// Paragraph
+p {
+	[data-toggle='tooltip'] {
+		padding-left: .25em;
+		padding-right: .25em;
+		color: $primary;
+	}
+
+	[style*='max-width'] {
+		display: inline-block;
+	}
+}
+
+.postitle {
+	font-weight: 500;
+	line-height: 21px;
+	color: $black-7;
+	%context-dark & {
+		color: $white-7;
+	}
+}
+
+// Selection
+::selection {
+	background: $primary;
+	color: $white;
+}
+
+::-moz-selection {
+	background: $primary;
+	color: $white;
+}

@@ -1,0 +1,197 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Single Property'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Single Property 
+  section.section-md.section-md_smaller.bg-default
+    .container.text-center
+      h2 Single Property
+      h4 Prices start at
+
+      .price
+        span.price__aside-top $
+        span.price__main 99
+        span.price__aside-bottom /per night
+
+    .slick-gallery.offset-top-1
+      // Slick Carousel
+      .slick-slider.carousel-parent(data-arrows="true", data-loop="false", data-dots="false", data-swipe="true", data-items="1" data-child="#child-carousel", data-for="#child-carousel" data-lightgallery="group")
+        .item: a.thumb-modern.thumb_rect(href='images/single-room-1-1920x1200.jpg', data-lightgallery='group-item', data-size='1920x1200')
+          figure.thumb__inner
+            +jpg('single-room-1-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-2-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-3-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-4-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-5-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-6-1920x1200')
+          
+        .item: .thumb-modern.thumb_rect
+          figure.thumb__inner
+            +jpg('single-room-7-1920x1200')
+          
+
+      .slick-slider.carousel-child#child-carousel(data-for=".carousel-parent", data-arrows="true", data-loop="false", data-dots="false", data-swipe="true", data-items="3", data-xs-items='3' data-sm-items="3", data-md-items="4", data-lg-items="5", data-xl-items="6", data-slide-to-scroll="1")
+        .item
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-1-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-2-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-3-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-4-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-5-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-6-1920x1200')
+        .item
+          // Thumb
+          .thumb.thumb_rect-2: .thumb__inner
+            +jpg('single-room-7-1920x1200')
+  ='\n'
+
+  // Room details 
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h4 Description  
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          .section-xs: .divider
+
+          h4 Room Details
+          ul.list-marked
+            li Adults: 1
+            li
+              | Facilites: 
+              a(href=roomsResults) Bathroom tub and shower and hair Dryer
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+              | , 
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+
+            li Size: 35m²
+            li Bed Type: One single bed
+            li
+              | Categories: 
+              a(href=roomsResults) Single
+
+          .section-xs: .divider
+            
+          h4 Room Availability
+          .rd-calendar.calendar-availability(data-days='Sun, Mon, Tue, Wed, Thu, Fri, Sat')
+            .rdc-panel.text-center
+              a.rdc-prev
+              h5
+                span.rdc-month
+                =' '
+                span.rdc-fullyear
+              a.rdc-next
+            .rdc-table
+            .rdc-events
+              a.rdc-events_close
+              ul.list-unstyled
+                li.rdc-event(data-date='10/15/2018')
+                  span.rd-calendar-info 3 available
+
+                li.rdc-event(data-date='02/14/2018')
+                  span.rd-calendar-info 2 available
+
+                li.rdc-event(data-date='03/14/2018')
+                  span.rd-calendar-info 5 available
+
+                li.rdc-event(data-date='04/14/2018')
+                  span.rd-calendar-info 1 available
+
+                li.rdc-event(data-date='05/14/2018')
+                  span.rd-calendar-info 5 available
+
+                li.rdc-event(data-date='06/14/2018')
+                  span.rd-calendar-info 3 available
+
+
+          .section-xs: .divider
+
+          h4 Reservation Form
+          p.small Required fields are followed by *
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              label.form-label-outside(for="reservation-arrival") Arrival:*
+              input#reservation-arrival.form-input(type="text" name="arrival" data-time-picker='date' data-constraints='@Required')
+
+            .form-wrap
+              label.form-label-outside(for="reservation-departure") Departure:*
+              input#reservation-departure.form-input(type="text" name="departure" data-time-picker='date' data-constraints='@Required')
+
+            .form-wrap
+              label.form-label-outside(for="reservation-adults-count") Adults:*
+              // Select 2
+              select#reservation-adults-count.form-input.select-filter(data-placeholder="1" name="adults-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+                option 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+
+            .form-wrap
+              label.form-label-outside(for="reservation-children") Children:*
+              // Select 2
+              select#reservation-children.form-input.select-filter(data-placeholder="0" name="children-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+                option 0
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+                option(value="5") 5
+                option(value="6") 6
+                
+            a.button.button-primary(href='checkout.html') reserve room
+  ='\n'
+  
+  include ../sections/_footer-corporate
+

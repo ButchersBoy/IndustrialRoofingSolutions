@@ -1,0 +1,31 @@
+include ../elements/_ui-card
+	
+section.section-md.bg-default
+	.container
+		.row.justify-content-md-center.justify-content-lg-between.row-50.align-items-center
+			.col-md-8.col-lg-6
+				#accordion(role='tablist')
+					+card({
+						parentId: "accordion",
+						number: "1",
+						header: "What are the advantages of purchasing a website template?"
+					})
+						p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+					+card({
+						parentId: "accordion",
+						number: "2",
+						header: "Do you provide any scripts with your templates or could you do some custom programming?"
+					})
+						p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.TemplateTuning.com If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+					+card({
+						parentId: "accordion",
+						number: "3",
+						header: "In what formats are your templates available?"
+					})
+						p Website templates are available in Photoshop and HTML formats. Fonts are included with Photoshop file. In most templates HTML is compatible with Adobe® GoLive®, Macromedia Dreamweaver® and Microsoft Frontpage®.
+
+			.col-md-7.col-lg-5
+				figure
+					+jpg('home-variant-3-555x500') 

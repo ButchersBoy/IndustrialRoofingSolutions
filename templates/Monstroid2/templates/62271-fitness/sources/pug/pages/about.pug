@@ -1,0 +1,145 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'About'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+  section.section.text-center
+    +parallax({
+      img: 'parallax-03',
+      addClass: 'material-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              hr.divider.divider-md.divider-primary
+              h1 About
+              p Welcome to the IronMass Fitness Studio!
+
+  section.section.section-lg.bg-default
+    .container
+      hr.divider.divider-sm
+      h2.text-center What is CrossFit?
+      .row.justify-content-center
+        .col-lg-4.col-md-10
+          p.
+            IronMass is not just a GYM. We're a family of like-minded and high-spirited people. We come together daily to inspire, challenge, and motivate each other to do more... To become more! To max out each day and achieve the results previously deemed impossible!
+            Here the individuals who made a decision to challenge their own limits gather and train. The sweet moment of achieving the first visible results changes their lives forever!
+        .col-lg-4.col-md-10
+          p.
+            Constant engagement will become their fitness life's norm. Our staff of seasoned, skilled and remarkably motivated coaches will be right by your side. Day by day, throughout your entire CrossFit journey. With each workout program customized to meet your personal needs, inefficiency will be gone! The thoughts like: “Hmm, what am I gonna do today? I guess the treadmill will do...” will be ranked and filed forever. Our foremost priority is your safety and your comfort during the class.
+        .col-lg-4.col-md-10
+          p.
+            We are well aware that each and every attendee that calls our CrossFit studio a home has a unique history. As well as specific needs that may vary both in movement and training's intensity. With our facility's seven separate training floors (15,000 sq/ft), both the newbies and long-term players will have enough room fro a maneuver... A space that meets and exceeds their fitness needs. Lets us help empower the better you. Empower the "You" of tomorrow!
+
+  section.section
+    .row.no-gutters
+      .col-md-6
+        +jpg('about-01-960x713','img-wide')
+      .col-md-6
+        +jpg('about-02-960x713','img-wide')
+
+  section.bg-accent.section-lg.section.context-dark
+    .container
+      hr.divider.divider-sm
+      h2.text-center Did You Know…?
+      .row
+        .col-md-6
+          p.
+            CrossFit is the world's most popular strength and conditioning program. That one is employed by numerous police academies and tactical operations teams, military special operations units... As well as by champions in martial arts and hundreds of professional, even Olympics-level athletes.
+
+          p.
+            CrossFit makes possible to practice a fitness that is universal by design. Basically, it does not matter what for you're practicing the CrossFit routine. So whether you’re training for a combat, survival, sports, or life in general, CrossFit will help you. It will make your life and shape better and healthier.
+
+        .col-md-6
+          p.
+            The CrossFit program is designed to be as universal and scalable as possible.  It makes it the perfect application for any committed person. The best thing - it does so regardless of athletic of fitness experience of a person. The same routines can be applied to people with very different backgrounds. People as diverse as a man in his middle age, recovering from a heart attack and a professional MMA cage fighter! That is all due to scalable loads and intensity prescriptions, native to the CrossFit philosophy...
+
+
+  section.section-lg.bg-default.text-center.section
+    .container
+      .row.row-50.justify-content-center
+        .col-sm-6.col-lg-3
+          // Box counter
+          article.box-counter
+            .box-counter__wrap
+              .counter 6
+            h5.box-counter__title Classes
+        .col-sm-6.col-lg-3
+          // Box counter
+          article.box-counter
+            .box-counter__wrap
+              .counter 20
+            h5.box-counter__title Awards
+        .col-sm-6.col-lg-3
+          // Box counter
+          article.box-counter
+            .box-counter__wrap
+              .counter 5
+            h5.box-counter__title Experienced Coaches
+        .col-sm-6.col-lg-3
+          // Box counter
+          article.box-counter
+            .box-counter__wrap
+              .counter 90
+            h5.box-counter__title Attendees
+
+  section.section-lg.bg-gray-lighter.section
+    .container
+      hr.divider.divider-sm.divider-primary
+      h2.text-center Testimonials
+      // Owl Carousel
+      .owl-carousel.owl-carousel-nav-top(data-autoplay='true',data-items='1', data-md-items='2', data-lg-items='3', data-dots='true' data-nav='true' data-loop='true', data-margin='40', data-mouse-drag="false")
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-74x74')
+            h5.quote-default__title Incredible!
+            .quote-default__text: p.q I am amazed at how quick are the first results are, all of which I sincerely attribute to my newly found love for these fitness workouts! I lost some weight and I feel amazing!
+            p.quote-default__cite Joanne Stone
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-74x74')
+            h5.quote-default__title Amazing!
+            .quote-default__text: p.q Though I’m just in the middle of my first fitness “semester”, I am officially excited about how re-energizing and revitalizing this whole workout thing is!
+            p.quote-default__cite Alison Winnergate
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-3-74x74')
+            h5.quote-default__title Inspiring!
+            .quote-default__text: p.q Before I was referred here by my old good friend Janette, I never considered the fitness workouts routine to be so efficient. Now, my body proves me wrong!
+            p.quote-default__cite Emma Poppuri
+
+        .item
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-74x74')
+            h5.quote-default__title Incredible!
+            .quote-default__text: p.q I am amazed at how quick are the first results are, all of which I sincerely attribute to my newly found love for these fitness workouts! I lost some weight and I feel amazing!
+            p.quote-default__cite Joanne Stone
+
+  ='\n'
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

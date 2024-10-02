@@ -1,0 +1,89 @@
+// Swiper
+section.swiper-form-wrap
+  .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="true", data-loop='true', data-autoplay='5500')
+    .swiper-wrapper
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-1.jpg')
+        .swiper-slide-caption
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+            ul.list-rating
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='180')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='220')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='260')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='320')
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') Welcome to
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='100') Modern Hotel
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              | Indianapolis’ mornings are beautiful...especially if you’re waking up in one 
+              br.d-none.d-md-block 
+              |  of our hotel’s refined rooms!
+            
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-2.jpg')
+        .swiper-slide-caption
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+            ul.list-rating
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='180')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='220')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='260')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='320')
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') Enjoy our
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='100') Stunning View
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              |  Every room at our hotel offers not just a high level of comfort, but also an amazing view of the sea.
+            
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-3.jpg')
+        .swiper-slide-caption
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+            ul.list-rating
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='180')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='220')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='260')
+              li.icon-lg.icon.material-icons-star(data-caption-animate='fadeIn', data-caption-delay='320')
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') Visit Our Restaurant
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='100') The Best Dishes
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              | At our restaurant, we offer a variety of dishes inspired by world cuisines 
+              |  and cooked by real professionals.
+
+    // Swiper Pagination
+    .swiper-pagination 
+      
+  .container.section-form: .section-form__inner: .section-form__content
+    // RD Mailform
+    form.rd-mailform.rd-mailform_boxed.rd-mailform_modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+      .rd-mailform_boxed__inner 
+        .box-element.box-element_md: .form-wrap
+          label.form-label-outside(for="reservation-arrival") Arrival:
+          input#reservation-arrival.form-input(type="text" name="arrival" placeholder='Check-in date' data-time-picker='date' data-constraints='@Required')
+          //label.form-label Check-in date
+ 
+        .box-element.box-element_md: .form-wrap
+          label.form-label-outside(for="reservation-departure") Departure:
+          input#reservation-departure.form-input(type="text" name="departure" placeholder='Check-out date' data-time-picker='date' data-constraints='@Required')
+          //label.form-label Check-out date
+
+        .box-element.box-element_xs: .form-wrap
+          label.form-label-outside(for="reservation-adults-count") Adults: 
+          // Select 2
+          select#reservation-adults-count.form-input.select-filter(data-placeholder="1" name="adults-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
+            option(value="6") 6
+
+        .box-element.box-element_xs: .form-wrap
+          label.form-label-outside(for="reservation-children") Children:
+          // Select 2
+          select#reservation-children.form-input.select-filter(data-placeholder="0" name="children-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option 0
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
+            option(value="6") 6
+
+        .box-element.box-element_sm: a.button.button-primary(href='rooms-search-results.html') Check Availability
+
+='\n'

@@ -1,0 +1,15 @@
+/** @section Images */
+
+// Standard img style
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+@include media-breakpoint-down( sm ) {
+	.img-responsive {
+		display: inline-block;
+		max-width: 320px;
+	}
+}

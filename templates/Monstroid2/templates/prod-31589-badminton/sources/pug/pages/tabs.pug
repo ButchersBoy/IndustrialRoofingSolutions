@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Tabs'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			// Bootstrap tabs
+			#tabs-1.tabs-custom.tabs-horizontal
+				// Nav tabs
+				ul.list-fix.nav.nav-custom.nav-custom-tabs
+					li.nav-item: a(href='#tabs-1-1' data-bs-toggle='tab').nav-link Responsive Design
+					li.nav-item: a(href='#tabs-1-2' data-bs-toggle='tab').nav-link Retina Ready
+			
+			.tab-content.text-start
+				div#tabs-1-1.tab-pane.fade
+					h5 Extensive UI kit
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					h5 Details
+					ul.list-marked
+						li Sed ut perspiciatis
+						li Unde omnis iste natus
+						li Error sit voluptatem accusantium
+				div#tabs-1-2.tab-pane.fade
+					h5 Responsive & Retina Ready
+					p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur
+					h5 Details
+					ul.list-marked
+						li Unde omnis iste natus
+						li Sed ut perspiciatis
+	
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-classic

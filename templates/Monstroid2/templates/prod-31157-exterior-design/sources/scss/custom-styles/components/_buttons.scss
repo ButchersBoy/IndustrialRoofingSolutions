@@ -1,0 +1,183 @@
+//
+// Buttons
+// --------------------------------------------------
+
+button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+// Button General Styles
+.button {
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	border: 1px solid;
+	border-radius: 50px;
+	@include btn-size(12px, 30px, $btn-font-size, 24px);
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	letter-spacing: $btn-letter-spacing;
+	white-space: normal;
+	text-transform: $btn-text-transform;
+	cursor: pointer;
+	text-align: center;
+}
+
+span.button {
+	cursor: default;
+}
+
+.button-dot {
+	border-color: transparent;
+	position: relative;
+	overflow: hidden;
+	transform: translateZ(0);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		background-color: $primary;
+		border-radius: 50%;
+		transform: translateY(-50%);
+		transition: $transition-base;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: $white !important;
+
+		&::before {
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+		}
+	}
+}
+
+* + .button {
+	margin-top: 25px;
+	@include media-breakpoint-up(md) {
+		margin-top: 35px;
+	}
+}
+
+// Appearance style
+// --------------------------------------------------
+
+.page {
+	.button-default {
+		@include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+	}
+
+	.button-black {
+		@include btn-variant($white, $black, $black, $white, $primary, $primary);
+	}
+
+	.button-primary {
+		@include btn-variant($white, $primary, $primary, $white, $black, $black);
+	}
+
+	.button-gray-light-outline {
+		@include btn-variant($black, transparent, $gray-light, $white, $primary, $primary);
+	}
+
+	span.button-gray-light-outline {
+		@include btn-variant($black, transparent, $gray-light, $black, transparent, $gray-light);
+	}
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+	@include btn-size(5px, 25px, 12px, 22px);
+}
+
+.button-sm {
+	@include btn-size(4px, 25px, 14px, 24px);
+}
+
+.button-lg {
+	@include btn-size(18px, 45px, 16px, 24px);
+
+	@include media-breakpoint-up(xl) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+
+.button-xl {
+	@include btn-size(20px, 50px, 18px, 28px);
+
+	@include media-breakpoint-up(xl) {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+	border-radius: 35px;
+}
+
+.button-square {
+	border-radius: 0;
+}
+
+.button-round-2 {
+	border-radius: 8px;
+}
+
+// Button Types
+// --------------------------------------------------
+.button-link {
+	border: 0;
+	padding: 0;
+	@include link($black, $primary);
+
+	&:after {
+		display: inline-block;
+		padding-left: 8px;
+		content: '\e944';
+		font-family: 'Linearicons';
+	}
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.button-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	> * + * {
+		margin-left: 10px;
+	}
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+// Button other styles
+// --------------------------------------------------
+.button-block {
+	display: block;
+	width: 100%;
+}
+
+// bootstrap buttons
+
+.btn-primary:active:hover {
+	background-color: $primary;
+	border-color: $primary;
+}

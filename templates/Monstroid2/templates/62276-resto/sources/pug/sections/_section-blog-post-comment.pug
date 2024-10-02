@@ -1,0 +1,120 @@
+section.section-sm
+  // Blurb minimal
+  article.blurb: .unit.flex-sm-row.unit-spacing-md
+    .unit-left
+      +jpg('aside-blog-about-1-210x210','img-circle')
+    .unit-body
+      p.blurb__title Albert Stroller
+      p Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop in 2008. While economic difficulties led them to close that shop, the pair spun off their popular BBQ meat into its own business.
+
+section.section-sm
+  .row.row-60.justify-content-md-between
+    .col-md-5.text-md-left
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit-left
+          span.icon.icon-md.linear-icon-arrow-left
+        .unit-body
+          p Authentic German Bread (Bauernbrot) Cooking
+          
+    .col-md-5.text-md-right
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit-body
+          p Authentic German Bread (Bauernbrot) Cooking
+        .unit-right
+          span.icon.icon-md.linear-icon-arrow-right
+
+section.section-sm
+  h5 Latest Posts
+  .row.row-60
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('post-minimal-1-418x315')
+  
+        .post-classic-title
+          h5: a(href=postImage) A perfect place to enjoy
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+  
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('post-classic-1-886x668')
+  
+        .post-classic-title
+          h5: a(href=postImage) A perfect place to enjoy
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+          
+
+section.section-sm
+  h5 3 Comments
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit-body
+        .box-comment__body
+          .post-meta
+            .group
+              span Adam Smith
+              time(datetime='2017') Jul 18, 2016
+            a(href='#').comment-reply-link Reply
+          p Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop in 2008. While economic difficulties led them to close that shop, the pair spun off their popular BBQ meat into its own business.
+
+  .box-comment.box-comment-reply
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        +jpg('box-comment-1-70x70', 'img-circle')
+      .unit-body(style='width: 100%')
+        .box-comment__body
+          .post-meta
+            .group
+              span Brian Williamson
+              time(datetime='2017') Jul 18, 2016
+            a(href='#').comment-reply-link Reply
+          p Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop.
+          
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit-body
+        .box-comment__body
+          .post-meta
+            .group
+              span Tom
+              time(datetime='2017') Jul 18, 2016
+            a(href='#').comment-reply-link Reply
+          p Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop in 2008. While economic difficulties led them to close that shop, the pair spun off their popular BBQ meat into its own business.
+          
+
+section.section-sm
+  h5 Leave a reply
+
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+    .form-wrap
+      input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+      label.form-label(for="contact-name") Your name
+
+    .form-wrap
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email") Your e-mail
+
+    .form-wrap
+      input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+      label.form-label(for="contact-phone") Your phone
+
+    .form-wrap
+      textarea#contact-message.form-input(name="message" data-constraints="@Required")
+      label.form-label(for="contact-message") Your message
+
+    button(type="submit").button.button-gray-light-outline: span SUBMIT COMMENT

@@ -1,0 +1,38 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Buttons'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Buttons
+  section.section-lg.bg-default.text-center
+    .container
+      .group-lg
+        .button.button-gray-light-outline Buy theme!
+        .button.button-link read more
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-accent.text-center
+    .container
+      .group-lg
+        .button.button-gray-light-outline View now!
+  ='\n'
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-pagination-classic
+
+
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Link Post'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.bg-gray-3.section-md
+		.container.text-center.single-post
+
+			//Post Title and meta
+			h3.heading-divider= pageName
+			include ../includes/_post-content-before
+			//Post Link
+			article.post-link.post-classic.single-post-link
+				.post-classic-title
+					h4
+						a(href='link-post.html') Launching Your Business
+				a(href='https://www.templatemonster.com/d/?utm_expid=2187874-92.i_6LOCbGRI-RabxtUctdMA.1&utm_referrer=https%3A%2F%2Fwww.templatemonster.com%2Fd%2F') http://templatemonster.com/
+
+			include ../includes/_post-content-after
+
+	include ../sections/_section-blog-post-comment
+	// Page Footer
+	include ../sections/_footer-corporate
+

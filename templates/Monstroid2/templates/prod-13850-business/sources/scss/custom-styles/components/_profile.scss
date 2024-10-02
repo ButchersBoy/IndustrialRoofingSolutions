@@ -1,0 +1,56 @@
+//
+// Profile
+// --------------------------------------------------
+.profile-corporate {
+  text-align: center;
+}
+
+.profile-corporate__image {
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-corporate__caption {
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.profile-corporate__subtitle {
+  @include small;
+  font-style: italic;
+  color: $primary;
+}
+
+* + .profile-corporate__caption { margin-top: 30px; }
+* + .profile-corporate__title { margin-top: 30px; }
+.profile-corporate__title + .profile-corporate__subtitle { margin-top: 5px; }
+
+
+@include media-breakpoint-up(lg) {
+  .profile-corporate__caption {
+    * + p { margin-top: 30px; }
+    * + .profile-corporate__caption { margin-top: 40px; }
+    * + .profile-corporate__title { margin-top: 40px; }
+    * + .profile-corporate__list { margin-top: 30px; }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .profile-corporate__image {
+    max-width: 886px;
+  }
+
+  .profile-corporate__caption {
+    max-width: 975px;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+  * + .profile-corporate__caption { margin-top: 60px; }
+  * + .profile-corporate__title { margin-top: 60px; }
+}

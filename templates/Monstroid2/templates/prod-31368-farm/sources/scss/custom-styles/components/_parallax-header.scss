@@ -1,0 +1,73 @@
+//
+// Parallax header
+// --------------------------------------------------
+.parallax-header__inner {
+  position: relative;
+  text-align: center;
+}
+
+.parallax-header__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-header__content {
+  width: 100%;
+  padding: 50px 0;
+}
+
+@include media-breakpoint-up(md) {
+  .parallax-header__inner {
+    @include display-flex;
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    min-height: 33.3333vh;
+  }
+
+  .ie-10,
+  .ie-11 {
+    .parallax-header__inner {
+      display: block;
+      vertical-align: middle;
+      white-space: nowrap;
+      text-align: center;
+
+      > * {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        white-space: normal;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        min-height: inherit;
+        width: 0;
+      }
+    }
+  }
+
+  .parallax-header__content {
+    padding: 100px 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .parallax-header__inner {
+    min-height: 33.33333vw;
+  }
+
+  .parallax-header__content {
+    padding: 120px 0 130px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .parallax-header__inner {
+    min-height: 640px;
+  }
+}

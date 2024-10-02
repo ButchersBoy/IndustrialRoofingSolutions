@@ -1,0 +1,120 @@
+/** @section Countdown */
+
+.countdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -5px;
+	margin-right: -5px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.countdown-block {
+	position: relative;
+	flex: 0 1 auto;
+	padding: 0 5px;
+}
+
+.countdown-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-circle {
+	fill: transparent;
+
+	html:not(.ie-11):not(.ie-10) & {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.countdown-circle-bg {
+	stroke: $black;
+	stroke-width: 1px;
+	opacity: .075;
+}
+
+.countdown-circle-fg {
+	stroke: $primary;
+	stroke-width: 1px;
+}
+
+.countdown-counter {
+	font-size: 18px;
+	font-weight: 200;
+	letter-spacing: 0;
+	color: $black;
+
+	// Medium ≥ 768px
+	@include media-breakpoint-up(md) {
+		font-size: 40px;
+	}
+}
+
+.countdown-title {
+	font-size: 12px;
+	font-style: italic;
+
+	// Medium ≥ 768px
+	@include media-breakpoint-up(md) {
+		font-size: 14px;
+	}
+}
+
+* + .countdown {
+	margin-top: 35px;
+}
+
+.countdown + * {
+	margin-top: 35px;
+}
+
+.countdown-block-seconds {
+	display: none;
+
+	// Medium ≥ 768px
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+}
+
+%context-dark {
+	.countdown-counter {
+		color: $white;
+	}
+
+	.countdown-circle-bg,
+	.countdown-circle-fg {
+		stroke: $white;
+	}
+
+	.countdown-circle-bg {
+		opacity: .25;
+	}
+}
+
+
+// Countdown Primary
+.countdown-primary {
+	.countdown-counter,
+	.countdown-title {
+		color: $white;
+	}
+
+	.countdown-circle {
+		fill: $primary;
+	}
+
+	.countdown-circle-bg {
+		stroke: $primary;
+		opacity: 1;
+	}
+}

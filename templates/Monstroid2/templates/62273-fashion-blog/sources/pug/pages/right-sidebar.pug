@@ -1,0 +1,50 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Right Sidebar'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-70
+        .col-lg-7.col-xl-8.section-divided__main
+          include ../sections/_section-main-blog
+
+        .col-lg-5.col-xl-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-blog
+  // Modal
+  include ../sections/_section-modal
+    
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  section.section-md.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-xl-6
+          h5 GET LATEST NEWS DELIVERED DAILY! WE WILL SEND YOU BREAKING NEWS RIGHT TO YOUR INBOX
+
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Enter please your e-mail')
+            button(type="submit").button.button-gray-light-outline Subscribe!
+            
+  // Page Footer
+  include ../sections/_footer-corporate
+

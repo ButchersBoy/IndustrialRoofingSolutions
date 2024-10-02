@@ -1,0 +1,24 @@
+/** @section Offsets */
+.halloween-section {
+	h1 + h5 { margin-top: 11px; }
+	h2 + h6 { margin-top: 18px * $halloween-xs-multiplier; }
+	h6 + .big { margin-top: 13px * $halloween-xs-multiplier; }
+	* + .text-custom { margin-top: 29px; }
+	h5 + .btn { margin-top: 42px * $halloween-xs-multiplier; }
+	.big + .btn { margin-top: 44px * $halloween-xs-multiplier; }
+	.text-custom + .btn { margin-top: 25px; }
+
+	@include media-breakpoint-up( lg ) {
+		h2 + h6 { margin-top: 18px * $halloween-lg-multiplier; }
+		h6 + .big { margin-top: 13px * $halloween-lg-multiplier; }
+		h5 + .btn { margin-top: 42px * $halloween-lg-multiplier; }
+		.big + .btn { margin-top: 44px * $halloween-lg-multiplier; }
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		h2 + h6 { margin-top: 18px; }
+		h6 + .big { margin-top: 13px; }
+		h5 + .btn { margin-top: 42px; }
+		.big + .btn { margin-top: 44px; }
+	}
+}

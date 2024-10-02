@@ -1,0 +1,6 @@
+mixin box-icon-classic( obj )
+	article.box-icon-classic( class= obj.mod )&attributes(attributes)
+		.box-icon-classic-header
+			.box-icon-classic-icon.novi-icon( class= obj.icon )
+			h6.box-icon-classic-title: a(href='#')= obj.title
+		.box-icon-classic-text= obj.text

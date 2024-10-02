@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+
+block variables
+	- pageName = 'Gallery post'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.bg-default.section-lg
+		.container
+			.row.row-fix.row-60.justify-content-sm-center
+				.col-lg-8.section-divided__main.group-post
+					.section-md.post-single-body
+						h3 Clean Style. Cons and Pros.
+						.post-meta
+							.group
+								a(href=postLink): time(datetime='2022') Jan.20, 2022
+								span by Brian Williamson
+								a(href=postLink) 3 comment(s)
+								a(href=postLink) Theme
+								+tag-list({
+									list_class: 'list-inline-tag',
+									href:       postLink,
+									items:      [
+										"Style",
+										'Clean']
+								})
+						
+						+slider-blog({
+							class: 'carousel-slider-blog-post',
+							items: [
+								{
+									original_img: 'gallery-post-01-original-1354x762',
+									img_thumb:    'gallery-post-1-886x668'
+								},
+								{
+									original_img: 'gallery-post-02-original-1354x762',
+									img_thumb:    'gallery-post-2-886x668'
+								},
+								{
+									original_img: 'gallery-post-03-original-1354x762',
+									img_thumb:    'gallery-post-3-886x668'
+								}
+							]
+						})
+						
+						
+						p.first-letter
+							| All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the
+							=' '
+							a(href='#') HTML Template
+							=' '
+							| that is based on your business’ or a closely related field. Either way, thanks to all the diversity here you will be able to choose a  template that can be either of a formal color scheme with some light colors in it or a more vivid one, featuring bold textures and hues!
+						
+						// Quote default
+						.quote-default
+							+quote-mark('quote-default__mark')
+							.quote-default__text: p.q.heading-4 Monstroid² is perfect to display the members of your staff, team or working force.
+							p.quote-default__cite Adam Smith
+						
+						p Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates… Due to the fact that this is a HTML Template, the process of installing it and using it is truly as easy as it gets! Read our documentation to understand how fast you can go from purchasing a TemplateMonster HTML Template to actually using it as a live skin for your company’s webpage. Also, our Template allows you to easily change the content (text; multimedia; blocks; pages) of any part of your new template!
+						
+						+list-inline-icon({
+							list_class: 'list-inline-sm',
+							items:      [
+								"icon-sm fa-facebook",
+								'icon-sm fa-twitter',
+								'icon-sm fa-google-plus',
+								'icon-sm fa-vimeo',
+								'icon-sm fa-youtube',
+								'icon-sm fa-pinterest-p']
+						})
+					
+					include ../sections/_section-blog-post-comment
+				
+				.col-lg-4.section-divided__aside.section-divided__aside-left.group-post
+					include ../sections/_section-aside-sidebar-post
+	
+	// Page Footer
+	include ../sections/_footer-corporate

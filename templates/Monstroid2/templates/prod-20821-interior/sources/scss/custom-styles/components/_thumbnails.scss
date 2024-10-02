@@ -1,0 +1,32 @@
+/*
+* Thumbnails
+*/
+
+// 
+// Table of Contents
+// 
+// Figure Light
+//
+
+//
+// Figure Light
+//
+.figure-light figcaption {
+	padding-top: 10px;
+	color: $gray-400;
+}
+
+.thumbnail {
+	box-shadow: 0 10px 10px rgba($black, 0.25);
+	border-radius: 4px;
+	overflow: hidden;
+	display: inline-block;
+	img {
+		transition: $transition-base;
+	}
+	&:hover {
+		img {
+			transform: scale(1.05);
+		}
+	}
+}

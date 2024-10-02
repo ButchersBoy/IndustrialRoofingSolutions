@@ -1,0 +1,122 @@
+/*
+* Posts
+*/
+
+// 
+// Table of Contents:
+// 
+// Post Classic
+//
+//
+
+//
+// Post Classic
+//
+.col-bordered{
+  border: 1px solid $gray-light;
+  transition: all ease .35s;
+  &:hover{
+    box-shadow: 0 5px 25px rgba($black, .15);
+    transition: all ease .35s;
+  }
+}
+.col-bordered + .col-bordered{
+  margin-left: -1px;
+}
+.post-classic {
+  position: relative;
+  transition: all ease .35s;
+  z-index: 1;
+  padding: 30px 25px;
+  @include media-breakpoint-up(lg){
+    padding: 55px 45px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 76%;
+    @include media-breakpoint-up(xl){
+      width: 0;
+    }
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 4px;
+    @include gradient-horizontal();
+    transition: all ease .35s;
+  }
+  &:hover{
+
+    transition: all ease .35s;
+    z-index: 5;
+    .button-md{
+      opacity: 1;
+      transition: all ease .35s;
+    }
+    .post-preview{
+      transition: all ease .35s;
+    }
+    &:before{
+      width: 76%;
+      transition: all ease .35s;
+    }
+  }
+  .post-preview{
+    width: 98px;
+    height: 98px;
+    transition: all ease .35s;
+    img{
+      border-radius: 50%;
+    }
+  }
+  .post-title{
+    margin-top: 38px;
+    h4{
+      font-weight: 500;
+      font-family: $font-family-sans-serif-1;
+      a{
+        color: $black;
+        &:hover{
+          color: $primary;
+          transition: all ease .35s;
+        }
+      }
+    }
+  }
+  .post-description{
+    margin-top: 25px;
+    font-size: 15px;
+    letter-spacing: .03em;
+  }
+  .button-md{
+    padding: 8px 14px;
+    font-size: 15px;
+    line-height: 21px;
+    transition: all ease .35s;
+    @include media-breakpoint-up(xl){
+      opacity: 0;
+      transition: all ease .35s;
+    }
+
+  }
+  .post-date{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    color: $black;
+    span{
+      display: inline-block;
+      margin: 0 5px;
+      width: 21px;
+      vertical-align: middle;
+      height: 1px;
+      background-color: $black;
+    }
+  }
+}
+
+// Context styling
+%context-dark {
+}
+

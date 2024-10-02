@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Services'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	// Parallax header
+	section
+		+parallax({
+			"attrType": "media",
+			"src": "images/parallax-1.jpg",
+			"htmlSpeed": "0.1",
+			"class": ['parallax-header']
+		})
+			.parallax-header__inner.context-dark: .parallax-header__content
+				.container
+					.row.justify-content-sm-center
+						.col-md-10.col-xl-8
+							h2.heading-decorated Our Services
+							p.heading-6 A Wide Variety of High Quality Services.
+							
+	include ../sections/_section-services
+		
+	include ../sections/_section-circle-counters-light
+		
+	include ../sections/_section-portfolio-2
+		
+	include ../sections/_section-cta-1
+		
+	include ../sections/_section-services-2
+		
+	include ../sections/_section-pricing-table-1
+
+	// Page Footer
+	include ../sections/_footer-corporate-2
+

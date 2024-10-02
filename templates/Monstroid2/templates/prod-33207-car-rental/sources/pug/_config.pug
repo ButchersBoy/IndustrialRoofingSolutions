@@ -1,0 +1,79 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap",
+		novi = true,
+
+		logo = {
+			default:  'logo-default-416x96.svg',
+			inverse:  'logo-inverse-416x96.svg',
+			name:     'GoDrive'
+		},
+
+		menu = [
+			{
+				title: 'About us',
+				link: 'about.html'
+			},
+			{ title: 'Services' },
+			{ title: 'Testimonials' },
+			{
+				title: 'Prices',
+				link: 'pricing.html'
+			},
+			{ title: 'FAQs' },
+			{
+				title: 'Location',
+				link: 'contacts.html'
+			},
+			{
+				title: 'Pages',
+				subtitle: 'Text',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{ title: 'Single service' },
+							{ title: 'Team member profile' },
+							{ title: 'Maintenance' },
+							{
+								title: '404 Page',
+								link: '404-page.html'
+							},
+							{
+								title: 'Search Results',
+								link: 'search-results.html'
+							},
+							{
+								title: 'Coming Soon',
+								link: 'coming-soon.html'
+							},
+							{
+								title: 'Privacy Policy',
+								link: 'privacy-policy.html'
+							}
+						]
+					},
+					{
+						title: 'Elements',
+						link: null,
+						list: [
+							{ title: 'Accordion' },
+							{ title: 'Blurb' },
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Tabs' },
+							{ title: 'Testimonials' },
+							{ title: 'Typography'}
+						]
+					}
+				]
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		self = self || {};

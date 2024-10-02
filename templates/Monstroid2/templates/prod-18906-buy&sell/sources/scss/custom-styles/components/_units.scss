@@ -1,0 +1,35 @@
+/*
+*
+* Responsive unit
+* --------------------------------------------------
+*/
+
+
+@include unit-responsive($grid-breakpoints, 20px, 30px);
+
+// Unit Spacing
+//
+
+.unit-spacing-xs {
+  @include unit-spacing(5px, 5px);
+}
+
+.unit-spacing-sm {
+  @include unit-spacing(15px, 20px);
+}
+
+.unit-spacing-md {
+  @include unit-spacing(15px, 30px);
+}
+
+.unit-spacing-lg {
+  @include unit-spacing(25px, 45px);
+}
+
+@include media-breakpoint-down(sm) {
+  .unit.unit-horizontal.unit-spacing-md {
+    .unit-body {
+      padding-left: 18px;
+    }
+  }
+}

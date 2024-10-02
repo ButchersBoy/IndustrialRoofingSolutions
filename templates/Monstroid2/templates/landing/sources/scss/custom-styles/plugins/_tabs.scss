@@ -1,0 +1,203 @@
+/*
+*
+* Tabs
+* --------------------------------------------------
+*/
+
+
+//== Tabs variables
+//
+//##
+
+// Base
+$tabs-color: $primary;
+$tabs-background: $primary;
+$tabs-font: 400 15px/24px $font-family-base;
+$tabs-padding: 4px 8px;
+
+// Horizontal tabs
+$tabs-horizontal-active-color: $white;
+$tabs-horizontal-active-background: $primary;
+$tabs-horizontal-background: transparent;
+
+// Vertical tabs
+$tabs-vertical-active-color: $gray-dark;
+$tabs-vertical-active-line: $primary;
+
+
+
+// Base styles
+//--------------------------------------
+
+.tabs-custom {
+  .nav-custom {
+    &> li, &> li > a {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .nav-custom-tabs {
+    font-size: 0;
+    line-height: 0;
+
+    li {
+      margin: -1px 0;
+
+      &+ li {
+        margin-top: 7px;
+
+        @include media-breakpoint-up(md) {
+          margin-top: 0;
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+}
+
+.tabs-custom {
+  .nav-custom-tabs {
+    li a {
+      position: relative;
+      padding: $tabs-padding;
+      font: $tabs-font;
+      color: $tabs-color;
+      border: 2px solid;
+      text-align: center;
+      vertical-align: middle;
+      transition: .3s all ease;
+    }
+
+    li a:hover,
+    li.active a {
+      color: $white;
+      background: $tabs-background;
+      border-color: $tabs-background;
+    }
+  }
+}
+
+.tab-content {
+  padding-top: 20px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 32px;
+  }
+}
+
+
+// Horizontal tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-horizontal {
+    @include media-breakpoint-up(md) {
+      .nav-custom-tabs {
+        position: relative;
+        justify-content: center;
+        display: flex;
+
+        li a {
+          display: block;
+          padding: 5px 18px;
+          background: $tabs-horizontal-background;
+          border: 2px solid $gray-lighter;
+        }
+
+        li a:hover,
+        li.active a {
+          color: $tabs-horizontal-active-color;
+          background: $tabs-horizontal-active-background;
+          border-color: $tabs-horizontal-active-background;
+
+          &:before {
+            transform: translate(-50%, 0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Vertical tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-vertical {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+
+      .nav-custom-tabs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        flex-shrink: 0;
+        max-width: 50%;
+      }
+
+      .tab-content {
+        flex-grow: 1;
+      }
+
+      .nav-custom-tabs {
+        text-align: right;
+        border-right: 1px solid #f2f2f2;
+
+        li + li {
+          margin-top: 12px;
+        }
+
+        li a {
+          display: inline-block;
+          padding: 5px 28px 5px 0;
+          border: 0;
+          background: transparent;
+
+          &:after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 0;
+            width: 1px;
+            background: $tabs-vertical-active-line;
+            content: '';
+            transform: translateY(-50%);
+            transition: .3s all ease;
+          }
+        }
+
+        li a:hover,
+        li.active a {
+          color: $tabs-vertical-active-color;
+
+          &:after {
+            height: 100%;
+          }
+        }
+      }
+
+      .tab-content {
+        padding: 0 0 0 33px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .nav-custom-tabs {
+        min-width: 170px;
+      }
+    }
+  }
+}
+
+.page {
+  .tabs-custom-wrap + .row {
+    margin-top: 0;
+  }
+}

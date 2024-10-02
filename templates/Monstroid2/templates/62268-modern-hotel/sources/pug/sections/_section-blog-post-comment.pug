@@ -1,0 +1,108 @@
+section.section-sm
+  .row.row-60.justify-content-md-between
+    .col-md-5.text-md-left
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit-left
+          span.icon.icon-md.linear-icon-arrow-left
+        .unit-body
+          p.small A Definitive Guide to the Best Dining and Drinking Venues in the City
+          
+    .col-md-5.text-md-right
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit-body
+          p.small A Definitive Guide to the Best Dining and Drinking Venues in the City
+        .unit__right
+          span.icon.icon-md.linear-icon-arrow-right
+
+section.section-sm  
+  h4 Latest Posts
+  .row.row-60
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('single-post-1-886x661')
+  
+        .post-classic-title
+          h5: a(href=postImage) A Definitive Guide to the Best Dining
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Calvin Fitzgerald
+  
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('single-post-2-886x661')
+  
+        .post-classic-title
+          h5: a(href=postImage) A Definitive Guide to the Best Dining
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Calvin Fitzgerald
+          
+section.section-sm
+  // Blurb minimal
+  article.blurb: .unit.flex-sm-row.unit-spacing-md
+    .unit-left
+      +jpg('post-author-109x109', 'img-circle')
+    .unit-body
+      p.blurb__title About the author
+      p.small The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt state for some commercial affairs. Here, we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service, a dining and lounge zone or any additional amenities a traveller might want...
+
+section.section-sm
+  h4 3 Comments
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit-body
+        .box-comment__body
+          h6 Adam Smith
+          time(datetime='2017') Jul 18, 2016
+          p With all its functionality and stylish design, the price for this one is a bargain!
+          a(href='#') Reply
+
+  .box-comment.box-comment-reply
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        +jpg('box-comment-1-70x70', 'img-circle')
+      .unit-body(style='width: 100%')
+        .box-comment__body
+          h6 Calvin Fitzgerald
+          time(datetime='2017') Jul 18, 2016
+          p Awesome theme, that is universal for absolutely any kind of business!
+          a(href='#') Reply
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit-left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit-body 
+        .box-comment__body
+          h6 Tom
+          time(datetime='2017') Jul 18, 2016
+          p This HTML Template is the best one I’ve seen this year!
+          a(href='#') Reply
+
+section.section-sm
+  h4 Leave a reply
+
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+    .form-wrap
+      label.form-label-outside(for="contact-name") Your Name:*
+      input#contact-name.form-input(type="text" name="name" data-constraints='@Required', placeholder='Your Name')
+
+    .form-wrap
+      label.form-label-outside(for="contact-email") Email:*
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required", placeholder='Email')
+
+    .form-wrap
+      label.form-label-outside(for="contact-message") Comment:*
+      textarea#contact-message.form-input(name="comment" data-constraints="@Required", placeholder='Comment')
+ 
+    button(type="submit").button.button-primary Submit comment

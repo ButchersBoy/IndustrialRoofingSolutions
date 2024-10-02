@@ -1,0 +1,107 @@
+//- Block image
+mixin halloween-block-image( data )
+	.halloween-block-image&attributes( attributes )
+		+img( data.img ).halloween-block-image-icon
+		h6.halloween-block-image-title!= data.title
+
+//- Thumbnail classic
+mixin halloween-thumbnail( data )
+	.halloween-thumbnail&attributes( attributes )
+		a.halloween-thumbnail-media( href='#' )
+			+img( data.img ).halloween-thumbnail-img
+		h5.halloween-thumbnail-title: a( href='#' )= data.title
+
+//- Pricing
+mixin halloween-pricing( data )
+	.halloween-pricing&attributes( attributes )
+		.halloween-pricing-header
+			if ( data.label )
+				.halloween-pricing-label= data.label
+			.halloween-pricing-title= data.title
+			h5.halloween-pricing-subtitle= data.subtitle
+		.halloween-pricing-body
+			.halloween-pricing-value
+				= data.value
+				span.halloween-pricing-value-units /mo
+			.halloween-pricing-value-meta= data.valueMeta
+			.halloween-pricing-list.list-marked
+				each item in data.list
+					li= item
+			a.halloween-pricing-btn.btn.btn-primary.btn-ujarak( href='#' ) Get now
+			.halloween-pricing-footer
+				='or '
+				a.halloween-pricing-footer-link( href='#' ) See More Features
+
+//- Post
+mixin halloween-post( data )
+	.halloween-post&attributes( attributes )
+		.halloween-post-media
+			a.halloween-post-media-link( href='#' )
+				+img( data.img ).halloween-post-img
+			.halloween-post-meta
+				.halloween-post-day= data.date[0]
+				.halloween-post-month= data.date[1]
+		h6.halloween-post-title: a( href='#' )= data.title
+		.halloween-post-text= data.text
+
+//- Quote
+mixin halloween-quote( data )
+	.halloween-quote.big&attributes( attributes )
+		+img( data.img ).halloween-quote-img
+		.halloween-quote-rating
+			.halloween-quote-rating-icon.fa.fa-star
+			.halloween-quote-rating-icon.fa.fa-star
+			.halloween-quote-rating-icon.fa.fa-star
+			.halloween-quote-rating-icon.fa.fa-star
+			.halloween-quote-rating-icon.fa.fa-star
+		.halloween-quote-text: q= data.quote
+		.halloween-quote-cite: cite= data.cite
+		.halloween-quote-cite-meta= data.citeMeta
+
+//- Countdown
+	@param {object} data
+	@param {string} data.to
+	@param {string} [data.from]
+	@param {string} [data.count]
+mixin halloween-countdown( data )
+	.countdown( data-countdown data-from= data.from, data-to= data.to, data-count= data.count )
+		each item in [ 'days', 'hours', 'minutes', 'seconds' ]
+			- var attrProgress = {}; attrProgress[ 'data-progress-'+ item ] = '';
+			- var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+			.countdown-block( class= 'countdown-block-'+ item )
+				.countdown-inner
+					svg.countdown-circle( x='0', y='0', width='76', height='76', viewbox='0 0 76 76' )&attributes( attrProgress )
+						circle.countdown-circle-bg( cx=38, cy=38, r=36 )
+						circle.countdown-circle-fg.clipped( cx=38, cy=38, r=36 )
+					.countdown-wrap
+						.countdown-counter&attributes( attrCounter ) 00
+				.countdown-title= item
+
+//- Progress Bar linear
+	@param {object} data
+	@param {string} data.title
+	@param {number} data.value
+mixin halloween-progress-linear( data )
+	//Linear progress bar
+	.progress-linear( data-daration= data.duration )&attributes( attributes )
+		.progress-linear-header
+			span.progress-linear-title= data.title
+			= ' '
+			span.progress-linear-counter.progress-value= data.value
+		.progress-linear-body
+			.progress-linear-bar.progress-bar-linear
+
+//- Circle progress bar
+	@param {object} data
+	@param {string} data.title
+	@param {number} data.value
+mixin halloween-progress-circle( data )
+	//Circle progress bar
+	.progress-circle&attributes( attributes )
+		.progress-circle-block
+			svg.progress-circle-bar( x='0', y='0', width='174', height='174', viewbox='0 0 174 174' )
+				circle.progress-circle-bg( cx=87, cy=87, r=82 )
+				circle.progress-circle-fg.clipped( cx=87, cy=87, r=82 )
+			.progress-circle-counter= data.value
+		if ( data.title )
+			p.progress-circle-title= data.title

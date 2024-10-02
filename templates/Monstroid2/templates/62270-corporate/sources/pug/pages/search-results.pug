@@ -1,0 +1,38 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+	- var activeIndex = 6
+	- var pageName = 'Search results'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+
+	// Page Content
+	section.section-lg.bg-gray-3
+		.container
+			.row
+				.col-md-6
+					// RD Search
+					.rd-search-wrap
+						h3 Search results
+						form.rd-search.rd-mailform-blog.text-center(action='search-results.html', method='GET', data-search-live='rd-search-results-live')
+							.form-wrap
+								label.form-label.rd-input-label(for='rd-search-form-input') Enter keyword
+								input#rd-search-form-input.form-input(type='text', name='s', autocomplete='off')
+							button.button.linear-icon-magnifier.button-icon.button-gradient-intro(type='submit')
+								span.button-gradient-intro__overlay
+
+
+			.rd-search-results
+
+	// Page Footer
+	include ../sections/_footer-corporate

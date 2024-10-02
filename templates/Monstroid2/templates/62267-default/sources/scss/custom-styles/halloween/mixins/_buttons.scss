@@ -1,0 +1,25 @@
+// Custom button variants
+@mixin halloween-btn-variant($clr, $bg, $bd, $clr-hover, $bg-hover, $bd-hover) {
+	&,
+	&:focus {
+		color: $clr;
+		background-color: $bg;
+		border-color: $bd;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	&:hover,
+	&:active,
+	&.active {
+		color: $clr-hover;
+		background-color: $bg-hover;
+		border-color: $bd-hover;
+	}
+
+	&.btn-ujarak {
+		&::before {
+			background: $bg-hover;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Footer Modern'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-70
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-1-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-2-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-3-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-4-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-5-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-6-418x315')
+	='\n'
+	
+	// Gallery
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default(data-lightgallery="group")
+		.container-fluid
+			.row.row-10.row-horizontal-10
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-1-1200x905.jpg')
+						figure
+							+jpg('home-default-7-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-2-1200x905.jpg')
+						figure
+							+jpg('home-default-8-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-3-1200x906.jpg')
+						figure
+							+jpg('home-default-9-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-4-1200x905.jpg')
+						figure
+							+jpg('home-default-10-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-5-1200x905.jpg')
+						figure
+							+jpg('home-default-11-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-6-1200x905.jpg')
+						figure
+							+jpg('home-default-12-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-7-1200x906.jpg')
+						figure
+							+jpg('home-default-13-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-8-1200x906.jpg')
+						figure
+							+jpg('home-default-14-472x355')
+						.thumb-modern__overlay
+	='\n'
+	
+	include ../sections/_section-brand-carousel
+	
+	// Page Footer
+	include ../sections/_footer-modern

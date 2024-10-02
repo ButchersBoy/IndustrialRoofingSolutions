@@ -1,0 +1,47 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'Careers'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Our Current Vacancies List
+			// Accordion
+			#accordion3.text-start(role='tablist')
+				+card({
+					parentId: "accordion3",
+					title:   "Sales assistant"
+				})
+					p One of the main duties of a sales assistant is greeting and serving customers from the moment they enter the shop. Sales Assistants are expected to advise customers and answer any queries they may have, from stock availability and details of special offers to a product’s price.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion3",
+					title:   "Store manager"
+				})
+					p A store manager is responsible for overseeing the daily operations of a Farmey store, making sure it runs smoothly and effectively. Their duties include motivating sales teams, creating business strategies, developing promotional material, and training new staff.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion3",
+					title:   "Organic Farmer"
+				})
+					p We are looking for organic farmers to help us manage our farm that produces 100% organic products. The responsibilities include managing staff, handling production and schedules, working the land, operating and maintaining machinery, and repairing farm structures. Farming experience is greatly appreciated.
+					a(href='#').button.button-primary APPLY NOW
+	
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

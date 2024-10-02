@@ -1,0 +1,246 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Booking'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Book an Appointment
+			// RD Calendar
+			.booking-calendar#chapters-select
+				.rdc-panel.text-center
+					a.rdc-prev
+					h4
+						span.rdc-month
+						=' '
+						span.rdc-fullyear
+					a.rdc-next
+				.rdc-table
+				.rdc-events
+					a.rdc-events_close
+					ul.list-unstyled
+						li.rdc-event(data-date='09/10/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span September 10, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='09/14/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span September 14, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='10/07/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span October 07, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='10/15/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span October 15, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='11/14/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span November 14, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='11/19/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span November 19, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+			
+						li.rdc-event(data-date='12/14/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span December 14, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+						
+						li.rdc-event(data-date='12/19/2024')
+							table.table.rdc-event-booking-table
+								thead
+									tr
+										th(colspan="3"): p.heading-5 Available Appointments on #[span December 19, 2024]
+								tbody
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 8:00am - 9:00am
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+									tr
+										td
+											dl.dl-horizontal-mod-1
+												dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+												dd
+													time(datetime="2024") 10:30am - 11:00am
+										
+										td
+											span 2 time slots available
+										td.text-md-end: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+			
+			// Modal
+			include ../sections/_section-modal
+	
+	// Page Footer
+	include ../sections/_footer-corporate

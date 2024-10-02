@@ -1,0 +1,9 @@
+mixin quote-left(obj)
+  // Quote left
+  .quote-left
+    +quote-mark('quote-left__mark')
+
+    .quote-left__text
+      p.q=obj.text
+
+    p.quote-left__cite=obj.cite

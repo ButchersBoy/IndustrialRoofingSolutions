@@ -1,0 +1,158 @@
+/*
+* Offsets
+*/
+
+// Elements offset
+* + p {
+	margin-top: 15px;
+}
+
+// Headings
+
+// Headings + Paragraph
+h2 + p,
+.heading-2 + p {
+	margin-top: 20px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 34px;
+	}
+}
+
+h1 + .big,
+.heading-1 + .big {
+	margin-top: 21px;
+}
+
+h3 + h2 {
+	margin-top: 23px;
+}
+
+// Paragraph + Headings
+p + h2,
+p + .heading-2 {
+	margin-top: 15px;
+}
+
+.subtitle + h1,
+.subtitle + .heading-1 {
+	margin-top: 35px;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 55px;
+	}
+}
+
+// Tags + Tags
+p + p {
+	margin-top: 12px;
+}
+
+img + p {
+	margin-top: 15px;
+}
+
+h3 + img {
+	margin-top: 42px;
+}
+
+// Classes
+* + .row {
+	margin-top: 45px;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 75px;
+	}
+}
+
+* + .big {
+	margin-top: 20px;
+}
+
+.big + .postitle {
+	margin-top: 30px;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 154px;
+	}
+}
+
+* + .text-block {
+	margin-top: 30px;
+}
+
+* + .button {
+	margin-top: 30px;
+}
+
+.list-marked + .button {
+	margin-top: 25px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 45px;
+	}
+}
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 {
+	margin-top: 80px;
+}
+
+// Classes + Classes
+.container + .container {
+	margin-top: 35px;
+}
+
+.row + .row {
+	margin-top: 35px;
+}
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+	* + .rd-form {
+		margin-top: 65px;
+	}
+
+	.container + .container {
+		margin-top: 60px;
+	}
+	.row + .row {
+		margin-top: 60px;
+	}
+}
+
+// Range spacing
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-22 {
+	@include grid-offset(22px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+@include media-breakpoint-up(lg) {
+	.row-md-30 {
+		@include grid-offset(30px);
+	}
+}

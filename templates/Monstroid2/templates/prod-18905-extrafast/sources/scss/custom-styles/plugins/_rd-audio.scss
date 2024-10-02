@@ -1,0 +1,492 @@
+/*
+* @subsection   RD Audio
+* @description  Describes style declarations for RD Audio extension
+* @author       Rafael Shayvolodyan
+* @link         https://ua.linkedin.com/in/rafael-shayvolodyan-3a297b96
+* @version      1.0.0
+*/
+
+$color-3: #333;
+$color-2: #888;
+$color-1: #fff;
+
+.rd-audio {
+  position: relative;
+  z-index: -1;
+  padding: 8px 20px;
+  width: 100%;
+  height: auto;
+  transition: .3s;
+  box-shadow: $shadow-area-xs;
+  background: $color-1;
+  color: $color-3;
+
+  @include media-breakpoint-up(md) {
+    padding: 4px 20px 8px 15px;
+  }
+}
+
+.rd-audio-volume,
+.rd-audio-volume-bar,
+.rd-audio-controls-left,
+.rd-audio-icon,
+.rd-audio-progress-bar-wrap,
+.rd-audio-time,
+.rd-audio-title-wrap,
+.rd-audio-controls-right {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: top;
+}
+
+.rd-audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rd-audio-controls-left,
+.rd-audio-volume,
+.rd-audio-volume-bar {
+  order: 1;
+}
+
+.rd-audio-volume {
+  margin-left: calc(100% - 210px);
+}
+
+.rd-audio-controls-left {
+  width: 100px;
+}
+
+.rd-audio-volume-bar-horizontal {
+  margin-top: 13px;
+  width: 80px;
+}
+
+.rd-audio-controls-right {
+  width: auto;
+}
+
+.rd-audio-time {
+  width: 76px;
+}
+
+.rd-audio-title-wrap, .rd-audio-time, .rd-audio-current-time, .rd-audio-duration {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.rd-audio-progress-bar-wrap {
+  flex-basis: 100%;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.rd-audio-current-time, .rd-audio-duration {
+  vertical-align: top;
+}
+
+.rd-audio-title-wrap {
+  max-width: calc(100% - 102px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rd-audio-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+  transition: .3s;
+  color: $color-2;
+
+  &:before {
+    content: "\f00d";
+    font-family: 'FontAwesome';
+  }
+
+  &:focus {
+    color: $color-2;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $color-3;
+  }
+}
+
+.player-hidden {
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+
+.rd-audio.state-loading .rd-audio-progress-bar {
+  background: $color-3;
+}
+
+.rd-audio-progress-bar {
+  position: relative;
+  width: 100%;
+  background: $color-2;
+  height: 4px;
+  cursor: pointer;
+}
+
+.rd-audio-progress-bar .current {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: $color-3;
+  z-index: 0;
+}
+
+.rd-audio-progress-bar-slider {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -3px;
+  margin-left: -5px;
+  background: $color-3;
+  z-index: 1;
+}
+
+.ipad {
+  .rd-audio-play-pause {
+    margin-top: 2px;
+  }
+}
+
+.rd-audio.state-playing .rd-audio-play-pause:before {
+  content: '\f04c';
+  font-family: 'FontAwesome';
+}
+
+.rd-audio.muted .rd-audio-volume:before {
+  content: '\f026';
+  font-family: 'FontAwesome';
+}
+
+.rd-audio-current-time {  }
+
+.rd-audio-time-divider {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.rd-audio-volume-bar {
+  position: relative;
+  background: $color-2;
+  cursor: pointer;
+}
+
+.rd-audio-volume-bar .current {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background: $color-3;
+  z-index: 0;
+}
+
+.rd-audio-volume-bar-slider {
+  position: absolute;
+  background: $color-3;
+  z-index: 1;
+}
+
+.rd-audio-volume-bar-vertical {
+  width: 10px;
+  height: 100px;
+}
+
+.rd-audio-volume-bar-vertical .rd-audio-volume-bar-slider {
+  left: -5px;
+  right: -5px;
+  height: 4px;
+  bottom: 0;
+  margin-top: 2px;
+}
+
+.rd-audio-volume-bar-horizontal {
+  height: 4px;
+}
+
+.rd-audio-volume-bar-horizontal .rd-audio-volume-bar-slider {
+  width: 10px;
+  height: 10px;
+  top: -3px;
+  margin-left: -5px;
+}
+
+.rd-audio-title {  }
+
+.rd-audio-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-2;
+
+  &:focus { color: $color-2; }
+  &:hover { color: $color-3; }
+}
+
+.control-icon {
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  color: $color-3;
+}
+
+@include media-breakpoint-up(md) {
+  .rd-audio-controls-left,
+  .rd-audio-controls-right,
+  .rd-audio-volume {
+    margin-top: 8px;
+  }
+
+  .rd-audio-controls-left,
+  .rd-audio-volume,
+  .rd-audio-volume-bar {
+    order: 0;
+  }
+
+  .rd-audio-progress-bar-wrap {
+    margin-top: 2px;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  .rd-audio-volume {
+    margin-left: 9px;
+  }
+
+  .rd-audio-volume-bar-horizontal {
+    margin-top: 22px;
+  }
+
+  .player-hidden {
+    transform: translate(-50%, 100%);
+  }
+}
+
+// Playlist
+.rd-audio-playlist {
+  &-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    right: 0;
+    display: none;
+    margin-bottom: -5px;
+    padding-bottom: 5px;
+    text-align: left;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+  }
+
+  .audio-track {
+    position: relative;
+
+    .author, .title, .length {
+      position: relative;
+      vertical-align: bottom;
+      line-height: 40px;
+    }
+
+    .author, .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .author {
+      position: relative;
+      padding-left: 50px;
+      font-size: 24px;
+      font-weight: 400;
+      color: $gray-dark;
+
+      &:before {
+        content: "\e038";
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-family: 'Material Icons';
+        font-size: 17px;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      border-bottom: 2px solid $gray-dark;
+      transition: .3s;
+      opacity: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:before {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &.playing {
+      .author:before { content: "\e035"; }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .audio-track {
+      .author, .title, .length { line-height: 22px; }
+
+      .length {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    * + .audio-track { margin-top: 14px; }
+  }
+
+  @include media-breakpoint-down(md) {
+    .audio-track {
+      .author, .title, .length { line-height: 30px; }
+      .title, .length { margin: 0; }
+      .author, .title { padding-left: 60px; }
+      .author { font-size: inherit; }
+    }
+
+    * + .audio-track { margin-top: 14px; }
+  }
+
+  @include media-breakpoint-up(lg) {
+    * + .audio-track { margin-top: 30px; }
+
+    .audio-track {
+      .author { padding-left: 61px; }
+    }
+  }
+}
+
+.rd-audio-dark {
+
+}
+
+.rd-audio-horizontal {
+  .rd-audio {
+    width: 100%;
+    max-width: 100%;
+    padding: 5px 8px;
+    color: $white;
+    background: $gray-darker;
+    box-shadow: none;
+  }
+
+  .rd-audio-controls,
+  .rd-audio-progress-bar-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    > * {
+      margin-top: 0;
+      margin-left: 9px;
+    }
+  }
+
+  .rd-audio-progress-bar-wrap,
+  .rd-audio-progress-bar {
+    flex-grow: 1;
+  }
+
+  .rd-audio-progress-bar,
+  .rd-audio-volume-bar-horizontal,
+  .rd-audio-volume-bar-horizontal .current {
+    height: 8px;
+  }
+
+  .rd-audio-progress-bar {
+    margin-left: 12px;
+  }
+
+  .rd-audio-controls-left {
+    width: auto;
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 14px;
+    order: 0;
+
+    > * {
+      vertical-align: middle;
+    }
+  }
+
+  .rd-audio-icon {
+    width: auto;
+    height: auto;
+    min-width: 15px;
+    text-align: center;
+    padding: 0;
+    line-height: 0;
+    &:before {
+      font-size: 16px;
+    }
+  }
+
+  .rd-audio-time {
+    font-size: 10px;
+    width: auto;
+  }
+
+  .rd-audio-play-pause {
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    &:before {
+      font-size: 10px;
+      line-height: 0;
+    }
+  }
+
+  .rd-audio-volume {
+    font-size: 14px;
+    line-height: 1;
+    &:before {
+      font-size: 14px;
+    }
+  }
+
+  .rd-audio-volume-bar,
+  .rd-audio-progress-bar {
+    .current {
+      background: $white;
+    }
+  }
+
+  a {
+    &, &:active, &:focus {
+      color: $white;
+    }
+
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}
+

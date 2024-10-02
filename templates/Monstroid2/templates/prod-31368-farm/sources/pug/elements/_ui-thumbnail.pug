@@ -1,0 +1,11 @@
+//- Thumbnail 3
+//- Original image naming format: pagename-{X}-1200x600_original.jpg
+mixin thumbnail(obj)
+	//- Thumbnail variant 1
+	.thumbnail.thumbnail-variant-1(class=obj.mod)
+		figure
+			+img(obj.img,{lazy:'disable'})
+		.caption
+			a.link.link-original(href='images/' + obj.original + '.jpg', data-lightgallery='item')
+
+

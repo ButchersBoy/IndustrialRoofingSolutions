@@ -1,0 +1,217 @@
+extends ../_skeleton
+
+include ../components/_ui-swiper-content
+include ../components/_ui-product
+
+block variables
+	- var pageName = 'Home'
+	
+block page
+
+	include ../sections/_header-classic
+	//Swiper
+	section.section.swiper-container.swiper-slider.bg-primary(
+		data-autoplay='3500'
+		data-loop='false'
+		data-simulate-touch='false'
+		data-effect='circle-bg'
+		data-speed='750'
+	)
+		.swiper-bg-text Food
+		.swiper-wrapper
+			+swiper-content({
+				subtitle: 'Welcome to Plate',
+				subtext: '#1',
+				title: 'delivery service',
+				text: 'Plate offers quick delivery of organic & healthy food all over the state.',
+				postitle: 'Why Choose Plate',
+				img: 'slider-01-671x671'
+			})
+
+			+swiper-content({
+				subtitle: 'Delivery throughout the Country',
+				subtext: '250',
+				title: 'supported locations',
+				text: 'Our food delivery service is available in more than 200 cities for your comfort.',
+				postitle: 'Nationwide Delivery',
+				img: 'slider-02-671x671'
+			})
+
+			+swiper-content({
+				subtitle: 'Best dishes & ingredients',
+				subtext: '100%',
+				title: 'Delicious Food',
+				text: 'Plate regularly updates the menus to make sure our customers eat the best and the tastiest food.',
+				postitle: 'Organic Ingredients',
+				img: 'slider-03-671x671'
+			})
+
+			+swiper-content({
+				subtitle: 'Our clients trust us',
+				subtext: '3k',
+				title: 'Positive Reviews',
+				text: 'Our clients’ reviews are the best way to learn more about our food delivery service.',
+				postitle: 'Reviews & Testimonials',
+				img: 'slider-04-671x671'
+			})
+
+		//Swiper Pagination
+		.swiper-pagination
+	='\n'
+
+	// About
+	section#about.section.novi-bg.novi-bg-img.section-sm.bg-gray-100.pb-xl-0
+		.container
+			.row.row-50.flex-wrap-md-reverse.flex-lg-wrap.align-items-lg-center
+				.col-xl-6.col-lg-6
+					.box-custom-2
+						+img('home-01-455x685.png')
+						.box-custom-2-smal
+							p.box-custom-2-name Julie Fox
+							p.box-custom-2-position Head Chef
+				.col-xl-5.col-lg-6
+					.box-custom-1
+						h3 About us
+						h2 healthy food <br> can be delicious
+						p Plate was established in 2013, as a reliable food service provider where anyone could order healthy food they like.
+						ul.list-marked
+							li Choose gluten-free meals from our menu
+							li The freshest ingredients for every dish
+							li Get great discounts when ordering for 2+ people
+						a(href='#').button.button-primary read more
+	='\n'
+
+	// What we Offer
+	section.section.novi-bg.novi-bg-img.section-md-4.bg-primary
+		.container
+			.text-center
+				h3 What we Offer
+				h2 Food packages
+			.row.row-50.justify-content-center
+
+				+product({
+					title: 'detox',
+					img: 'product-01-176x176.png',
+					value: '15',
+					text: 'The best choice if you are looking for tasty & light yet healthy food to start your day full of energy.'
+				})
+
+				+product({
+					title: 'balanced',
+					img: 'product-02-176x176.png',
+					value: '30',
+					text: 'If you need daily balanced menu including breakfast & dinner, then Balanced package is what you need!'
+				})
+
+				+product({
+					title: 'Vegan',
+					img: 'product-03-176x176.png',
+					value: '22',
+					text: 'Special menu developed for our vegan clients who appreciate healthy and plant-based food.'
+				})
+	='\n'
+
+	// How it Works
+	section.section.novi-bg.novi-bg-img.section-md-2.bg-default
+		.container
+			.text-center
+				h3 how it works
+				h2 3 steps to healthy eating
+			.row.row-50.post-classic-counter.justify-content-lg-between.justify-content-center
+				.col-lg-4.col-sm-6
+					.post-classic.novi-bg.bg-secondary-1
+						h3.post-classic-title choose <br> a food package
+						p.post-classic-text First, select the package that you prefer the most.
+				.col-lg-4.col-sm-6
+					.post-classic.novi-bg.bg-secondary-2
+						h3.post-classic-title customize your menu
+						p.post-classic-text After that, feel free to change and customize your menu.
+				.col-lg-4.col-sm-6
+					.post-classic.novi-bg.bg-secondary-3
+						h3.post-classic-title Select a delivery <br> address & time
+						p.post-classic-text Finally, let us know where and when to deliver your food.
+	='\n'
+
+	// Advantages
+	section.section.novi-bg.novi-bg-img.section-custom.section-lg.bg-primary
+		.container
+			.row.row-fix
+				.col-lg-7
+					.row.row-40
+						.col-md-6
+							.box-icon
+								.box-icon-header
+									.icon.novi-icon.icon-lg.linearicons-diamond2
+									h3.box-icon-title Quality
+								p.box-icon-text We work with the best suppliers to make sure you get the top-quality dishes, beverages, and service.
+						.col-md-6
+							.box-icon
+								.box-icon-header
+									.icon.novi-icon.icon-lg.linearicons-leaf
+									h3.box-icon-title organic
+								p.box-icon-text All ingredients we use are 100% organic and fresh. Such approach makes our food a lot healthier.
+						.col-md-6
+							.box-icon
+								.box-icon-header
+									.icon.novi-icon.icon-lg.linearicons-chef
+									h3.box-icon-title tasty
+								p.box-icon-text Great and unforgettable taste of our dishes is what attracts more and more clients to Plate.
+						.col-md-6
+							.box-icon
+								.box-icon-header
+									.icon.novi-icon.icon-lg.linearicons-egg2
+									h3.box-icon-title Diverse
+								p.box-icon-text Our team regularly updates the menus to provide you with better food diversity whenever you order.
+		.box-custom-3
+			.box-custom-3-img-wrap
+				+img('home-01-382x375.png')
+			.box-custom-3-img-wrap
+				+img('home-02-293x293.png')
+			.box-custom-3-img-wrap
+				+img('home-03-461x407.png')
+			.box-custom-3-img-wrap
+				+img('home-04-191x191.png')
+	='\n'
+
+	// Testimonials
+	section#clients.section.novi-bg.novi-bg-img.section-md-3.bg-default
+		.container
+			.row.row-40.align-items-center
+				.col-lg-6
+					.owl-pagination-custom#owl-pagination-custom
+						.data-dots-custom(data-owl-item="0")
+							+img('testimonials-01-179x179.png')
+						.data-dots-custom(data-owl-item="1")
+							+img('testimonials-02-306x306.png')
+						.data-dots-custom(data-owl-item="2")
+							+img('testimonials-03-179x179.png')
+				.col-lg-6
+					h3 what Our clients say
+					h2 testimonials
+					// Owl Carousel
+					.quote-classic-wrap
+						.quote-classic-img
+							+img('quote-37x29.png')
+						.owl-carousel.owl-carousel-classic(
+							data-items='1'
+							data-dots='true'
+							data-loop='false'
+							data-autoplay='false'
+							data-mouse-drag='false'
+							data-dots-custom='#owl-pagination-custom'
+						)
+							.quote-classic
+								p.big I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!
+								h3.quote-classic-name Sophie Smith
+
+							.quote-classic
+									p.big Both the food and your customer service are excellent in every way, and I just wanted to express how happy I am with your company. Wishing you all the best!
+									h3.quote-classic-name Ann peters
+
+							.quote-classic
+								p.big Thank you so much for your Balanced menu, it has been such a big help to me and I feel the food I am eating from you has really helped boost my immune system.
+								h3.quote-classic-name peter lee
+					a(href='#').button.button-primary.button-sm Send Your Review
+	='\n'
+
+	include ../sections/_footer-classic

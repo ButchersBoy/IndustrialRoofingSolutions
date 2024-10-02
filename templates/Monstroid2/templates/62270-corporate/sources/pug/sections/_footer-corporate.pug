@@ -1,0 +1,76 @@
+section.pre-footer-corporate
+	.container
+		.row.justify-content-sm-center.justify-content-lg-start.row-30.row-sm-60
+			.col-sm-10.col-md-6.col-lg-10.col-xl-3
+				.rd-navbar-brand
+					a.brand-name(href='index.html')
+						+png(logoInverse)
+				p Corp is an internationally acknowledged management consulting firm. It provides localized solutions in partnership with our clients. Our aim is to enhance Corp's competency and performance through result-based solutions
+				ul.list-inline.list-inline-lg
+					li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-facebook(href='#')
+					li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-twitter(href='#')
+					li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-google-plus(href='#')
+
+			.col-sm-10.col-md-6.col-lg-3.col-xl-3
+				h6 Additional Links
+				ul.list-xxs.list-primary
+					li: a(href='#') Our Website Privacy Policy
+					li: a(href='#') International Offices 
+					li: a(href='#') Call Center
+					li: a(href='#') Employment
+					li: a(href='#') Social Media 
+					li: a(href='#') Business Formation
+
+
+			.col-sm-10.col-md-6.col-lg-5.col-xl-3
+				h6 Recent Comments
+				ul.list-xs
+					li
+						// Comment minimal
+						article.comment-minimal
+							p.comment-minimal__author Brian Williamson
+							p.comment-minimal__link: a(href=postLink) Human Resources Planning (HRP) ensures that the 
+					li
+						// Comment minimal
+						article.comment-minimal
+							p.comment-minimal__author Brian Williamson
+							p.comment-minimal__link: a(href=postLink) Human Resources Planning (HRP) ensures that the 
+					li
+						// Comment minimal
+						article.comment-minimal
+							p.comment-minimal__author Brian Williamson
+							p.comment-minimal__link: a(href=postLink) Human Resources Planning (HRP) ensures that the 
+
+			.col-sm-10.col-md-6.col-lg-4.col-xl-3
+				h6 Contacts
+				ul.list-sm.list-gray-2
+					li
+						p
+							span.icon.icon-xs.icon-primary.icon-left.linear-icon-map-marker
+							a(href='#') 6036 Richmond hwy., Alexandria, VA 22303
+					li
+						p
+							span.icon.icon-xs.icon-primary.icon-left.linear-icon-telephone
+							span Let's talk
+							="\t"
+							a(href='callto:#') (703) 329-06-32 
+					li
+						p
+							span.icon.icon-xs.icon-primary.icon-left.linear-icon-clock3
+							="\t"
+							span We are open:  Mn-Fr: 10 am-8 pm
+
+='\n'
+
+footer.footer-corporate
+	.container
+		.footer-corporate__inner
+			p.rights
+				span Corp  ©
+				span &nbsp;
+				span(class="copyright-year")
+				| .
+				="\t"
+				="\t" 
+				a(href='privacy-policy.html') Privacy Policy
+

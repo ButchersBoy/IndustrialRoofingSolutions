@@ -1,0 +1,39 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+	- pageName = 'Circles Counter'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	.section-xl.bg-default
+		include ../sections/_section-circle-counters-dark
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.justify-content-sm-center.row-60
+				.col-md-4.col-xl-3
+					+progress-circle({
+						title: 'Pixel perfect typography',
+						value: 45
+					})
+				.col-md-4.col-xl-3
+					+progress-circle({
+						title: 'Template',
+						value: 60
+					})
+				.col-md-4.col-xl-3
+					+progress-circle({
+						title: 'Made for People',
+						value: 80
+					})
+	
+	// Page Footer
+	include ../sections/_footer-corporate

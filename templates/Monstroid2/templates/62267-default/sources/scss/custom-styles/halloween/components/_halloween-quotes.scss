@@ -1,0 +1,78 @@
+/** @section Quotes */
+
+.halloween-quote {
+	position: relative;
+	margin-top: 45px;
+	padding: 0 20px 30px;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 13%;
+		content: '';
+		border-color: $halloween-dark;
+		border-style: solid;
+		pointer-events: none;
+		transition: .25s;
+	}
+
+	&::before {
+		left: 0;
+		border-width: 2px 0 2px 2px;
+	}
+
+	&::after {
+		right: 0;
+		border-width: 2px 2px 2px 0;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			width: 18%;
+		}
+	}
+}
+
+.halloween-quote-img {
+	position: relative;
+	margin-top: -45px;
+	border-radius: 50%;
+}
+
+.halloween-quote-rating-icon {
+	font-size: 24px;
+	color: $orange;
+}
+
+.halloween-quote-cite {
+	font-weight: 700;
+	color: $halloween-dark;
+}
+
+* + .halloween-quote-rating { margin-top: 29px * $halloween-xs-multiplier }
+* + .halloween-quote-text { margin-top: 22px * $halloween-xs-multiplier }
+* + .halloween-quote-cite { margin-top: 28px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	.halloween-quote {
+		padding: 0 20px 50px;
+	}
+
+	* + .halloween-quote-rating { margin-top: 29px * $halloween-lg-multiplier }
+	* + .halloween-quote-text { margin-top: 22px * $halloween-lg-multiplier }
+	* + .halloween-quote-cite { margin-top: 28px * $halloween-lg-multiplier }
+}
+
+
+@include media-breakpoint-up( xl ) {
+	.halloween-quote {
+		padding: 0 39px 68px;
+	}
+
+	* + .halloween-quote-rating { margin-top: 29px }
+	* + .halloween-quote-text { margin-top: 22px }
+	* + .halloween-quote-cite { margin-top: 28px }
+}

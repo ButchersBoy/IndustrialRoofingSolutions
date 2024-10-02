@@ -1,0 +1,209 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Rooms Search Results'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Rooms & Suites
+  section.section-md.bg-default.text-center
+    .container
+      h6 Rooms & Suites
+      h2 Search Results
+      
+      // RD Mailform
+      form.rd-mailform.rd-mailform_boxed.bg-gray-lighter(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+        .rd-mailform_boxed__inner 
+          .box-element.box-element_md: .form-wrap
+            label.form-label-outside(for="reservation-arrival") Arrival:
+            input#reservation-arrival.form-input(type="text" name="arrival" data-time-picker='date' data-constraints='@Required')
+  
+          .box-element.box-element_md: .form-wrap
+            label.form-label-outside(for="reservation-departure") Departure:
+            input#reservation-departure.form-input(type="text" name="departure" data-time-picker='date' data-constraints='@Required')
+  
+          .box-element.box-element_xs: .form-wrap
+            label.form-label-outside(for="reservation-adults-count") Adults: 
+            // Select 2
+            select#reservation-adults-count.form-input.select-filter(data-placeholder="1" name="adults-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+              option 1
+              option(value="2") 2
+              option(value="3") 3
+              option(value="4") 4
+              option(value="5") 5
+              option(value="6") 6
+  
+          .box-element.box-element_xs: .form-wrap
+            label.form-label-outside(for="reservation-children") Children:
+            // Select 2
+            select#reservation-children.form-input.select-filter(data-placeholder="0" name="children-count" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+              option 0
+              option(value="1") 1
+              option(value="2") 2
+              option(value="3") 3
+              option(value="4") 4
+              option(value="5") 5
+              option(value="6") 6
+  
+          .box-element.box-element_sm: a.button.button-primary(href='checkout.html') Check Availability
+  ='\n'
+
+  // Single Room
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='single-room.html') Single Room
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has… It features such essentials as a flat-screen 45″ TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 99
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 1
+            li
+              | Facilites: 
+              a(href=roomsResults) Bathroom tub and shower and hair Dryer
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+              | , 
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+
+            li Size: 35m²
+            li Bed Type: One single bed
+            li
+              | Categories: 
+              a(href=roomsResults) Single
+
+          a.button.button-primary(href=bookingLink) Book now!
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true' data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-lightgallery='group')
+            figure.thumb-decorated
+              +jpg('room-1-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-2-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-3-650x490', 'img-decorated')
+  ='\n'
+
+  +divider
+  
+  // Double Room
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='single-room.html') Double Room
+          p This is the ultimate double room, enhanced with 2 king sized beds, a flat TV and a spacious area, which will be more than enough for a company of two...
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 145
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 3
+            li
+              | Facilites: 
+              a(href=roomsResults) Closet with hangers
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | ,
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+              | , 
+              a(href=roomsResults) Telephone
+
+            li Size: 30m²
+            li Bed Type: One bed
+            li
+              | Categories: 
+              a(href=roomsResults) Double
+              | ,
+              a(href=roomsResults) Single
+          a.button.button-primary(href=bookingLink) Book now!
+
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true' data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-lightgallery='group')
+            figure.thumb-decorated
+              +jpg('room-4-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-2-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-5-650x490', 'img-decorated')
+  ='\n'
+
+  +divider
+  
+  // Family Room
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='single-room.html') Family Room
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has… It features such essentials as a flat-screen 45″ TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 195
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 2
+            li
+              | Facilites: 
+              a(href=roomsResults) Closet with hangers
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+            li Size: 25m²
+            li Bed Type: One bed
+            li
+              | Categories: 
+              a(href=roomsResults) Double
+          a.button.button-primary(href=bookingLink) Book now!
+
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true' data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-lightgallery='group')
+            figure.thumb-decorated
+              +jpg('room-6-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-4-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-5-650x490', 'img-decorated')
+  ='\n'
+
+  // Pagination
+  section.section-lg.bg-default
+    .container 
+      .divider
+      +pagination
+  ='\n'
+
+  include ../sections/_footer-corporate
+

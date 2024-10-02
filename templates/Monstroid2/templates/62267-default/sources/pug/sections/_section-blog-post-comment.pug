@@ -1,0 +1,116 @@
+.section-md
+	.row.row-60.justify-content-md-between
+		.col-md-5.text-md-start
+			a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+				.unit-left
+					span.icon.novi-icon.icon-md.linear-icon-arrow-left
+				.unit-body
+					p.small 5 Things to Know Before You Buy an HTML Template
+		
+		.col-md-5.text-md-end
+			a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+				.unit-body
+					p.small 5 Things to Know Before You Buy an HTML Template
+				.unit-right
+					span.icon.novi-icon.icon-md.linear-icon-arrow-right
+
+.section-md
+	h5 Latest Posts
+	.row.row-60
+		.col-sm-6
+			// Post classic
+			article.post-classic.post-minimal
+				+jpg('post-minimal-1-418x315')
+				
+				.post-classic-title
+					h5: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+				
+				.post-meta
+					.group
+						a(href=postImage): time(datetime='2022') Jan.20, 2022
+						a(href=postImage).meta-author by Brian Williamson
+		
+		.col-sm-6
+			// Post classic
+			article.post-classic.post-minimal
+				+jpg('post-classic-1-886x668')
+				
+				.post-classic-title
+					h5: a(href=postImage) Getting to another  level of design and functionality.
+				
+				.post-meta
+					.group
+						a(href=postImage): time(datetime='2022') Jan.20, 2022
+						a(href=postImage).meta-author by Brian Williamson
+
+.section-md
+	// Blurb minimal
+	article.blurb: .unit.flex-sm-row.unit-spacing-md
+		.unit-left
+			+jpg('timeline-1-109x109', 'rounded-circle')
+		.unit-body
+			p.blurb__title About the author
+			p.small Mr.Williamson was born in one of Detroit’s poorest blocks, all before pursuing his successful managerial career in the future. For him, the breakthrough happened when he was able to get on Harvard University’s Law School list. After graduating from there, he was working for a few years for a number of multi-million dollar corporations, climbing up the corporate ladder and...
+
+.section-md
+	h5 3 Comments
+	
+	.box-comment
+		.unit.flex-sm-row.unit-spacing-md
+			.unit-left
+				.box-comment__icon: span.icon.novi-icon.linear-icon-man
+			.unit-body
+				.box-comment__body
+					h6 Adam Smith
+					time(datetime='2022') Jul 18, 2022
+					p With all its functionality and stylish design, the price for this one is a bargain!
+					a(href='#') Reply
+	
+	.box-comment.box-comment-reply
+		.unit.flex-sm-row.unit-spacing-md
+			.unit-left
+				+jpg('box-comment-1-70x70', 'rounded-circle')
+			.unit-body(style='width: 100%')
+				.box-comment__body
+					h6 Brian Williamson
+					time(datetime='2022') Jul 18, 2022
+					p Awesome theme, that is universal for absolutely any kind of business!
+					a(href='#') Reply
+	
+	.box-comment
+		.unit.flex-sm-row.unit-spacing-md
+			.unit-left
+				.box-comment__icon: span.icon.novi-icon.linear-icon-man
+			.unit-body
+				.box-comment__body
+					h6 Tom
+					time(datetime='2022') Jul 18, 2022
+					p This HTML Template is the best one I’ve seen this year!
+					a(href='#') Reply
+
+.section-md
+	h5 Leave a reply
+	
+	// RD Mailform
+	form.rd-mailform.rd-mailform_style-1.text-start(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-man
+			input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+			label.form-label(for="contact-name") Your name
+		
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-envelope
+			input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+			label.form-label(for="contact-email") Your e-mail
+		
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-telephone
+			input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+			label.form-label(for="contact-phone") Your phone
+		
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-feather
+			textarea#contact-message.form-input(name="message" data-constraints="@Required")
+			label.form-label(for="contact-message") Your message
+		
+		button(type="submit").button.button-primary SUBMIT COMMENT

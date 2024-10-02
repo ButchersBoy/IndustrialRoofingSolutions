@@ -1,0 +1,54 @@
+// Unit Utilities
+@mixin unit-variant($spacing-x, $spacing-y, $breakpoint) {
+  .unit#{$breakpoint} {
+    @include group-contextual($spacing-x, $spacing-y);
+  }
+}
+
+@mixin unit-spacing-variant($spacing-x, $spacing-y, $breakpoint) {
+  $infix: breakpoint-infix($breakpoint);
+
+  &.unit#{$infix} {
+    @include group-contextual($spacing-x, $spacing-y);
+  }
+}
+
+@mixin unit-spacing($breakpoints, $spacing-x, $spacing-y: $spacing-x) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint) {
+      @include unit-spacing-variant($spacing-x, $spacing-y, $infix);
+    }
+  }
+}
+
+@mixin unit-responsive($breakpoints, $spacing-x, $spacing-y: $spacing-x) {
+  .unit {
+    display: flex;
+    flex: 0 1 100%;
+  }
+
+  [class*='unit']:empty {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .unit-body {
+    flex: 0 1 auto;
+  }
+
+  .unit-left,
+  .unit-right {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint) {
+      @include unit-variant($spacing-x, $spacing-y, $infix);
+    }
+  }
+}

@@ -1,0 +1,74 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Team member profile'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	// Team member profile
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8
+					// Profile Corporate
+					article.profile-corporate
+						+img('team-member-01-886x666').profile-corporate__image
+
+						.profile-corporate__caption
+							p.profile-corporate__title Brian King
+							p.profile-corporate__subtitle Senior Coach, Founder
+							p Repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.
+
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'profile-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+	
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+						
+						button(type="submit").button.button-primary send
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-classic

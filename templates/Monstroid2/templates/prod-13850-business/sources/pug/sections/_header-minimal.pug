@@ -1,0 +1,33 @@
+header.page-header
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar(data-layout='rd-navbar-fixed'
+    data-sm-layout='rd-navbar-fixed'
+    data-sm-device-layout='rd-navbar-fixed'
+    data-md-layout='rd-navbar-static'
+    data-md-device-layout='rd-navbar-fixed'
+    data-lg-device-layout='rd-navbar-static'
+    data-lg-layout='rd-navbar-static'
+    data-xl-device-layout='rd-navbar-static'
+    data-xl-layout='rd-navbar-static'
+    data-xxl-device-layout='rd-navbar-static'
+    data-xxl-layout='rd-navbar-static'
+    data-stick-up-clone='false'
+    data-sm-stick-up='true'
+    data-md-stick-up='true'
+    data-lg-stick-up='true'
+    data-md-stick-up-offset='110px'
+    data-lg-stick-up-offset='1px')
+      .rd-navbar-inner.rd-navbar-search-wrap
+        // RD Navbar Panel
+        .rd-navbar-panel.rd-navbar-search-lg_collapsable
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          // RD Navbar Brand
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              +png(logoDefault)(srcset=logoDefaultRetina)
+
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap
+          include ../includes/_nav

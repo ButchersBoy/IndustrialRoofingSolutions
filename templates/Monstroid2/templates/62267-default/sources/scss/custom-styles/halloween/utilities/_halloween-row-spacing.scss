@@ -1,0 +1,28 @@
+/** @section Row spacing */
+.halloween-section {
+	.row-30 {
+		@include grid-offset(30px);
+	}
+
+	.row-40 {
+		@include grid-offset(40px);
+	}
+
+	h4 + .row { margin-top: 30px }
+	h4 + .row-content-1 { margin-top: 51px * $halloween-xs-multiplier }
+	.row-content-1 + .row-content-1 { margin-top: 100px * $halloween-xs-multiplier }
+
+	@include media-breakpoint-up( lg ) {
+		.row-lg-56 {
+			@include grid-offset(56px);
+		}
+
+		h4 + .row-content-1 { margin-top: 51px * $halloween-lg-multiplier }
+		.row-content-1 + .row-content-1 { margin-top: 100px * $halloween-lg-multiplier }
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		h4 + .row-content-1 { margin-top: 51px }
+		.row-content-1 + .row-content-1 { margin-top: 100px }
+	}
+}

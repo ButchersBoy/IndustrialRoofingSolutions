@@ -1,0 +1,120 @@
+//pricing table
+//------------------------------------
+
+.pricing-table {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  border: 1px solid $gray-1;
+  transition: $transition-base;
+
+  .price {
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 500;
+  }
+
+  * + .price { margin-top: 5px; }
+
+  &.pricing-table-label {
+    .pricing-label {
+      display: flex;
+    }
+  }
+  &:hover {
+    border-color: transparent;
+    box-shadow: $shadow-area-xxl;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 30px 30px 50px;
+  }
+}
+
+.pricing-header {
+  padding: 15px 0;
+  border-bottom: 1px solid $gray-1;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 20px;
+    padding-bottom: 29px;
+  }
+}
+
+.pricing-body {
+  padding:15px 0;
+  .list {
+    font-size: 14px;
+    > li + li {
+      margin-top: 7px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 35px;
+  }
+}
+
+.pricing-footer {
+  padding:15px 0 0;
+
+  p{
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 40px;
+
+    * + p {
+      margin-top: 41px;
+    }
+  }
+}
+
+.pricing-label {
+  display: none;
+  position: absolute;
+  top: -36px;
+  right: 26px;
+  z-index: 1;
+  width: 86px;
+  height: 86px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    fill: $primary;
+  }
+}
+
+//pricing-table-custom
+.pricing-table-custom {
+  padding-top: 30px;
+
+  * + .list-xxs {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 80px;
+
+    * + .list-xxs {
+      margin-top: 115px;
+    }
+  }
+}
+

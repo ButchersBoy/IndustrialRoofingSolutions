@@ -1,0 +1,41 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Login'
+
+block page
+	section.section.section-single.section-relative.gradient-1.bg-vide-2
+		.section-single-inner
+			.section-single-header: .container: +logo
+
+			.section-single-main: .container
+				.form-style-2
+					h5.form-title Log in to your account
+					//RD Mailform
+					form.rd-mailform.rd-form
+						.form-wrap
+							label.form-label( for='register-email' ) Email
+							input#register-email.form-input( type='email' name='email' data-constraints='@Required @Email' )
+						.form-wrap
+							label.form-label( for='register-password' ) Password
+							input#register-password.form-input( type='password' name='password' data-constraints='@Required' )
+
+						.group-md.group-middle.d-flex.justify-content-center.justify-content-sm-between
+							label.checkbox-inline
+								input(name='input-checkbox-1' value='checkbox-1' type='checkbox')
+								| Remember me
+							a.link-1( href='#' ) Forgot Password?
+
+						button.button.button-block.button-primary.button-isi( type='submit' ) Log in
+						a.button.button-block.button-icon.button-icon-left.button-default-outline-2( href='#' )
+							+img('icon-1-20x20.png')
+							span Sign up with Google
+
+					p First time here?
+						=' '
+						a.link-1( href='register.html' ) Register!
+
+
+			.section-single-footer: .container: +rights
+
+		.bg-vide( data-vide-bg='video/video-3' data-vide-options='posterType: jpg, position: 50% 50%' )

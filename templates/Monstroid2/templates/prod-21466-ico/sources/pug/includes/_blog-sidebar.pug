@@ -1,0 +1,34 @@
+.row.row-30.row-md-55.inset-left-xl-70
+	.col-12
+		//RD Search
+		form.rd-form.rd-search( action='search-results.html' method='GET' )
+			.form-wrap
+				label.form-label( for='rd-search-form-input' ) Search
+				input.form-input( id='rd-search-form-input' type='text' name='s' autocomplete='off' )
+				button.button-search.mdi.mdi-magnify( type='submit' )
+	.col-sm-6.col-md-4.col-lg-12
+		h6.title-style-2 Categories
+		ul.list-marked-2.list-link.d-inline-block
+			li: a( href='#' ) Blockchain
+			li: a( href='#' ) Cryptocurrency
+			li: a( href='#' ) Technology
+			li: a( href='#' ) News
+
+	.col-sm-6.col-md-4.col-lg-12
+		h6.title-style-2 Tags
+		ul.list-tag.group.d-inline-block
+			li: a.link-tag( href='#' ) Bitcoin
+			li: a.link-tag( href='#' ) Ethereum
+			li: a.link-tag( href='#' ) Tokens
+			li: a.link-tag( href='#' ) Crypto
+
+	.col-sm-6.col-md-4.col-lg-12
+		h6.title-style-2 Archive
+		.select-wrap
+			select( data-placeholder='Select a Month' )
+				option( label='placeholder' )
+				option December 2019
+				option November 2019
+				option October 2019
+				option September 2019
+				option August 2019

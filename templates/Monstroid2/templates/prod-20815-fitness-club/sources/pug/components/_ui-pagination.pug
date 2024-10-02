@@ -1,0 +1,32 @@
+//- Pagination
+//- modClass - pagination modification class
+//- active - active index of pagination
+//- index - an array of {link} for indexes
+
+mixin pagination-bootstrap(modClass, active, indexes)
+	// Bootstrap Pagination
+	nav(aria-label='Page navigation')
+		ul.pagination(class=modClass)
+			//- Previous
+			li.page-item.page-item-control(class={'disabled': active === 1})
+				a.page-link(href='#' aria-label="Previous")
+					span.icon(aria-hidden='true')
+
+			//- Indexes
+			if (indexes.length)
+				each index, i in indexes
+					if (i === (active - 1))
+						li.page-item.active: span.page-link= i + 1
+					else
+						li.page-item: a.page-link(href=index)= i + 1
+			else
+				- for (var i = 1; i <= indexes; i++)
+					if (i === active)
+						li.page-item.active: span.page-link= i
+					else
+						li.page-item: a.page-link(href="#")= i
+
+			//- Next
+			li.page-item.page-item-control(class={'disabled': (indexes.length === active || indexes === active)})
+				a.page-link(href='#' aria-label="Next")
+					span.icon(aria-hidden='true')

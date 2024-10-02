@@ -1,0 +1,66 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Buttons'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Button Sizes
+	section.section.section-lg.bg-default.text-center
+		.container
+			h4 Button Sizes
+			p 3 different sizes: small, default and large.
+			.group-xl
+				.btn.btn-sm.btn-primary Small size
+				.btn.btn-primary Default size
+				.btn.btn-lg.btn-primary Large size
+
+	hr
+
+	// Button Shapes
+	section.section.section-lg.bg-default.text-center
+		.container
+			h4 Button Shapes
+			p 4 different shapes: default, round, round 2, and circle.
+			.group-xl
+				.btn.btn-primary Default
+				.btn.btn-primary.btn-round-1 Round 1
+				.btn.btn-primary.btn-round-2 Round 2
+				.btn.btn-primary.btn-circle Circle
+
+	hr
+
+	// Buttons with Icons
+	section.section.section-lg.bg-default.text-center
+		.container
+			h4 Buttons with Icons
+			p Buttons are fully integrated with 900+ icons.
+			.group-xl
+				.btn.btn-primary
+					span Icon right
+					span.btn-icon.icon.mdi.mdi-account
+				.btn.btn-primary
+					span.btn-icon.icon.mdi.mdi-account
+					span Icon left
+				.btn.btn-default-outline
+					span Icon right
+					span.btn-icon.icon.mdi.mdi-account
+				.btn.btn-default-outline
+					span.btn-icon.icon.mdi.mdi-account
+					span Icon left
+
+	hr
+
+	// Buttons with Shadow
+	section.section.section-lg.bg-default.text-center
+		.container
+			h4 Buttons with Shadow
+			p Enhance your buttons with a shadow effect.
+			.group-xl
+				.btn.btn-primary.btn-circle.btn-shadow Shadow
+				.btn.btn-ghost.btn-circle.btn-shadow Shadow
+
+	include ../sections/_footer-classic

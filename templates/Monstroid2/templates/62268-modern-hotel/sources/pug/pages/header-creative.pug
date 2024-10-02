@@ -1,0 +1,20 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Header creative'
+ 
+block page
+  // Page header  
+  include ../sections/_header-creative 
+  include ../sections/_section-slider-default 
+
+  include ../sections/_section-testimonials
+  include ../sections/_section-flickr
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

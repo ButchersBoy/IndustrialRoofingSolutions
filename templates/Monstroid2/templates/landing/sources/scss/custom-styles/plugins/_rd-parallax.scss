@@ -1,0 +1,45 @@
+/*
+*
+* RD Parallax
+* --------------------------------------------------
+*/
+
+.rd-parallax{
+
+  &-inner{
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    clip: rect(0,auto,auto,0);
+    pointer-events: none;
+  }
+
+  &-layer[data-type="media"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-layer-holder{
+    pointer-events: all;
+  }
+
+  &-layer[data-url]{
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  // Styles for Parallax with slider
+  &-swiper{
+    z-index: 1!important;
+  }
+}

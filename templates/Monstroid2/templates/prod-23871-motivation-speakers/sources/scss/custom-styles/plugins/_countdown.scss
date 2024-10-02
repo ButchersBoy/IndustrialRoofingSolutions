@@ -1,0 +1,126 @@
+/** @section Countdown */
+
+.countdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left:-5px;
+	margin-right:-5px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.countdown-block {
+	position: relative;
+	flex: 0 1 auto;
+	padding: 0 5px;
+}
+
+.countdown-block-seconds {
+	display: none;
+}
+
+.countdown-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-circle {
+	fill: transparent;
+
+	html:not(.ie-11):not(.ie-10) & {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.countdown-circle-bg {
+	stroke: $gray-100;
+	stroke-width: 5px;
+}
+
+.countdown-circle-fg {
+	stroke: $primary;
+	stroke-width: 10px;
+}
+
+.countdown-counter {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: 0;
+	color: $gray-700;
+	font-family: $font-family-sec;
+}
+
+.countdown-title {
+	font-size: 12px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: $gray-700;
+	font-family: $font-family-sec;
+	letter-spacing: .05em;
+}
+
+* + .countdown {
+	margin-top: 35px;
+}
+
+.countdown + * {
+	margin-top: 35px;
+}
+
+
+@include media-breakpoint-up(sm) {
+
+	.countdown-title {
+		font-size: 13px;
+		letter-spacing: .2em;
+	}
+
+	.countdown-block-seconds {
+		display: block;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.countdown {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.countdown-block {
+		padding: 0 15px;
+	}
+
+	.countdown-counter {
+		font-size: 34px;
+	}
+
+	.countdown-circle-bg {
+		stroke-width: 3px;
+	}
+
+	.countdown-circle-fg {
+		stroke-width: 5px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.countdown-counter {
+		font-size: 48px;
+	}
+}
+
+
+%context-dark {
+	.countdown-counter {
+		color: $white;
+	}
+}

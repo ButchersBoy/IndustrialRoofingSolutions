@@ -1,0 +1,28 @@
+/*
+*
+* Counter
+* --------------------------------------------------
+*/
+
+
+.counter {
+  font-size: 40px;
+  line-height: 1.2;
+  color: $black;
+  font-weight: 700;
+
+  &-postfix{
+    &:after{
+      content: "+";
+    }
+  }
+
+  &-title{
+    margin-top: 10px;
+  }
+}
+
+.counter,
+.counter-svg{
+  margin-top: 16px;
+}

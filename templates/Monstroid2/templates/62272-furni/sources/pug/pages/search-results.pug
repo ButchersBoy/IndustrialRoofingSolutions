@@ -1,0 +1,34 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Search results'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+
+  // Page Content
+  section.section-lg.bg-default
+    .container
+      .row
+        .col-md-6
+          // RD Search
+          form.rd-search.rd-mailform-inline-flex(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+            .form-wrap.form-wrap_icon.linear-icon-magnifier
+              label(for="rd-search-form-input" class="form-label") Enter  keyword
+              input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+            button(type="submit").button.button-primary Go!
+
+      .rd-search-results
+
+  // Page Footer
+  include ../sections/_footer-corporate

@@ -1,0 +1,291 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+
+// Search
+section.section-sm.section-style-1
+  h4 Search
+  // RD Search
+  form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+    .form-wrap
+      label(for="rd-search-form-input" class="form-label") Enter  keyword
+      input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+    button(type="submit").button.button-primary Go!
+='\n'
+
+// About
+section.section-sm
+  h4 About
+  .thumbnail-classic-minimal 
+    +jpg('sidebar-1-418x312','img-bordered')
+    .caption
+      p The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt state for some commercial affairs. Here, we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service, a dining and lounge zone or any additional amenities a traveller might want...
+      a(href='about.html').button.button-primary-outline Read more
+='\n'
+
+// Categories
+section.section-sm
+  h4 Categories
+  ul.list-linked
+    li: a(href='#') Special Offers
+    li: a(href='#') Guest Review
+    li: a(href='#') City Guide
+    li: a(href='#') State Guide
+    li: a(href='#') News
+='\n'
+
+// Posts
+section.section-sm
+  h4 Recent Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+          span.post-inline__time Jan. 12
+        h5.post-inline__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+          span.post-inline__time Jan. 12
+        h5.post-inline__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+          span.post-inline__time Jan. 12
+          ul.list-semicolon
+            li: a(href='#') Travel
+            li: a(href='#') Hotel
+
+        h5.post-inline__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+        .post-inline__text
+          p The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt.
+='\n'
+
+// Resent comments
+section.section-sm
+  h4 Recent Comments
+
+  ul.list-sm
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Calvin Fitzgerald on
+        p.heading-5.post-inline__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Calvin Fitzgerald on
+        p.heading-5.post-inline__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+
+// Tags
+section.section-sm
+  h4 Tags
+  ul.list-tags
+    li: a(href='#') Special Offers      
+    li: a(href='#') Guest Review      
+    li: a(href='#') City Guide      
+    li: a(href='#') State Guide      
+    li: a(href='#') News
+='\n'
+
+section.section-sm
+  h4 Calendar
+
+  // RD Calendar
+  .booking-calendar.booking-calendar-aside#chapters-select
+    .rdc-panel.text-center
+      a.rdc-prev
+      h5
+        span.rdc-month
+        =' '
+        span.rdc-fullyear
+      a.rdc-next
+
+    .rdc-table
+    .rdc-events
+      a.rdc-events_close
+      ul.list-unstyled 
+        li.rdc-event(data-date='11/15/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span January 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+
+        li.rdc-event(data-date='02/16/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span February 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+
+        li.rdc-event(data-date='03/14/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span March 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+        li.rdc-event(data-date='04/14/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span April 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+        li.rdc-event(data-date='05/14/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span May 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+ 
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+        li.rdc-event(data-date='06/14/2018')
+          table.table.rdc-event-booking-table
+            thead
+              tr
+                th(colspan="3"): p.heading-6 Available Appointments on #[span June 14, 2018]
+            tbody
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 8:00am - 9:00am
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+              tr
+                td
+                  dl.dl-horizontal-mod-1
+                    dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+                    dd
+                      time(datetime="2018") 10:30am - 11:00am
+
+                td
+                  span 2 time slots available
+                td.text-lg-center: a.button.button-primary(href=bookingLink) Book an Appointment
+
+
+='\n'
+
+// Sign Up for a Newsletter...
+section.section-sm
+  h4 Sign Up for a Newsletter...
+  p.small ...and never miss the Hotel's special offers and news!
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-center.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+    .form-wrap
+      input#contact-aside-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-aside-email") Enter your e-mail
+    button(type="submit").button.button-primary Get!
+
+  h4 Follow Us
+  ul.list-inline-xxs
+    li: a.icon.icon-xxs.icon-light.icon-square.fa.fa-facebook(href='#')
+    li: a.icon.icon-xxs.icon-light.icon-square.fa.fa-twitter(href='#')
+    li: a.icon.icon-xxs.icon-light.icon-square.fa.fa-instagram(href='#')

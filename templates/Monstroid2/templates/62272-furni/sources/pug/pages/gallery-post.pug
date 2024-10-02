@@ -1,0 +1,72 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+
+
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Gallery post'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 BUY SMART: HOW TO BUY A DURABLE RECLINER CHAIR
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Brian Williamson
+                a(href=postLink) 3 comment(s)
+                a(href=postLink) Kids Room
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postLink,
+                    items: [
+                      "Armchair",
+                      'Chair']
+                })
+                
+            +slider-blog({
+              class: 'carousel-slider-blog-post',
+              items: [
+                {
+                  original_img: 'gallery-post-01-original-1200x800',
+                  img_thumb: 'gallery-post-1-886x668'
+                },
+                {
+                  original_img: 'gallery-post-02-original-1200x800',
+                  img_thumb: 'gallery-post-2-886x668'
+                },
+                {
+                  original_img: 'gallery-post-03-original-1200x800',
+                  img_thumb: 'gallery-post-3-886x668'
+                }
+              ]
+            })
+                
+                
+            include ../sections/_section-post-single-content
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+            
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

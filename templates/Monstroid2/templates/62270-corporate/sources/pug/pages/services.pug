@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Services'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link]]
+	})
+	
+	//Services
+	section.section-md.bg-gray-3
+		.container
+			h3.text-center.heading-divider Services
+			.row.offset-1.row-60.justify-content-sm-center.justify-content-md-start
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-01-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Human Resources Planning
+							p Human Resources Planning (HRP) ensures that the organization has the right number of human resources.
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-02-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Business Plan Consulting
+							p We work closely with you to understand your goals and aims, and then develop a new business plan
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-03-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Exit Planning
+							p Often referred to as business succession strategy, exit planning is more complex than that.
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-04-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Market Research
+							p The majority of market researching companies tend to work for the industry leaders - big corporations. 
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-05-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Conflict Management
+							p It's not very efficient to resolve disputes with childish, unprofessional behavior.  
+				.col-sm-10.col-md-6.col-lg-4
+					.box-services
+						+jpg('services-03-418x315')
+						.box-services__content
+							h4: a(href='single-service-page.html') Mergers & Acquisitions
+							p Corp provides unmatched expertise throughout the transaction support services life cycle – from initial target acquisition screening.
+					
+					
+	include ../sections/_section-parallax-intro
+	// Page Footer
+	include ../sections/_footer-corporate
+

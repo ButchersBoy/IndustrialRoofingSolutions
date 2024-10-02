@@ -1,0 +1,149 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-menu-item
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Dining & Bar'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link]]
+  })
+
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-5.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+    
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2 Dining & Bar
+              p While you'll be staying at our hotel, you will be able to enjoy our exquisite food menu available both at our lobby restaurant and a summer terrace, just as well as order menu items upstairs, as a part of our room service. We offer both meat & fish dishes and vegetarian menu items...
+              p On par with our two restaurants, we also have a lobby bar, which features an extensive Beverages, Spirits and Wines Menu of its own... Try not to get tangled within dozens of miscellaneous cocktails, alcoholic drinks and different wines that we have there!
+  ='\n'
+
+  // Main Courses Menu
+  section.section-lg.bg-default.text-center
+    .container
+      h3 Main Courses Menu
+      .row.row-50.justify-content-md-center
+        .col-md-10.col-lg-6
+          ul.menu-list
+            +menu-item({
+              title: "Crumbed Whiting",
+              price: "$45.89",
+              text: "Fresh local baby whiting fillets in a sesame and parsley crumb s/w chips salad lemon and tartare... This is a lunch that will leave you asking for more!"
+            })
+
+            +menu-item({
+              title: "Chicken Parmagiana",
+              price: "$45.89",
+              text: "Chicken Surf & Turf $31 Char grilled garlic chicken breast fillet topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed vegetables and potato."
+            })
+
+            +menu-item({
+              title: "Gluten Free Surf & Turf",
+              price: "$45.89",
+              text: "Char grilled Scotch fillet 300gm topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed veggies roast chat potato."
+            })
+
+            +menu-item({
+              title: "Asian noodle salad",
+              price: "$45.89",
+              text: "Julliene veggies & rice noodles with mint coriander & cashew nuts nestled in mixed leaves and finished with sesame oil and a lime dressing."
+            })
+
+        .col-md-10.col-lg-6
+          +jpg('dining-and-bar-1-652x486', 'img-bordered')
+  ='\n'
+
+  // Desserts Menu
+  section.section-lg.bg-gray-lighter.text-center
+    .container
+      h3 Desserts Menu
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Box menu item
+          article.box-menu-item
+            +jpg('menu-1-418x313', 'img-bordered')
+            p.box-menu-item__title Organic Yoghurt Panna Cotta
+            p.box-menu-item__price $45.89
+            .box-menu-item__main
+              p Blackcurrant & limoncello compote, crunchy spiced crumble & lemon zest
+
+        .col-md-6.col-lg-4
+          // Box menu item
+          article.box-menu-item
+            +jpg('menu-2-418x313', 'img-bordered')
+            p.box-menu-item__title Jamie’s Favorite Orange Blossom Poleta Cake
+            p.box-menu-item__price $45.89
+            .box-menu-item__main
+              p Served with whipped crème fraîche, fresh orange & pomegranate
+ 
+        .col-md-6.col-lg-4
+          // Box menu item
+          article.box-menu-item
+            +jpg('menu-3-418x313', 'img-bordered')
+            p.box-menu-item__title Vin Sano Tiramisu
+            p.box-menu-item__price $45.89
+            .box-menu-item__main
+              p The classic Italian dessert with vin santo, chocolate shavings & orange zest
+  ='\n'
+
+  // Drinks Menu
+  section.section-lg.bg-default.text-center
+    .container
+      h3 Drinks Menu
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          ul.menu-list
+            +menu-item({
+              title: "Mezzo e mezzo",
+              price: "$45.89",
+              text: "A beautiful blend of Martini Rosso, Nardini Rabarbaro rhubarb liqueur & a splash of soda"
+            })
+
+            +menu-item({
+              title: "Aperol Spritz",
+              price: "$45.89",
+              text: "A refreshing mix of Aperol, soda & Jamie’s Prosecco"
+            })
+
+            +menu-item({
+              title: "Elderflower Spritz",
+              price: "$45.89",
+              text: "St Germain elderflower liqueur, Jamie’s Prosecco & soda"
+            })
+
+            +menu-item({
+              title: "Bellini",
+              price: "$45.89",
+              text: "White peach purée & Jamie’s Prosecco"
+            })
+
+        .col-md-10.col-lg-6
+          +jpg('dining-and-bar-2-652x486', 'img-bordered')
+  ='\n'
+
+  // Download the Full Menu
+  section.section-md.bg-accent.text-center
+    .container
+      h4 Download the Full Menu
+      a.button.button-primary-outline.button-icon.button-icon-left(href='#', target='_blank')
+        span.icon.icon-sm.material-icons-file_download
+        | DOWNLOAD NOW
+  ='\n'
+
+  include ../sections/_footer-corporate
+

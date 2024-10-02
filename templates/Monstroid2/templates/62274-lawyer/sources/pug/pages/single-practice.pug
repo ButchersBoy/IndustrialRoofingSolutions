@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Single practice'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-accent-2
+    +parallax({
+      "src": "images/parallax-2.jpg",
+      "class": ['parallax-header'] 
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-md-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated.heading-decorated_center Labor & #[br] Employment Law
+  ='\n'
+
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-xl-center
+        .col-lg-10.col-xl-8
+          article.post-wide
+            p.heading-5.first-letter Employment law is designed to serve as a regulatory device, working our the lights and duties  between employers and workers. Also known simply as the labor law, the rules contained in it are primarily designed to keep workers safe and make sure they are treated fairly.
+            p Of course, for the overall balance of things, these laws also ensure that the employers' interests are just as administered and upheld.
+            p The main task of the labor law is to mediate the relationship between workers (employees), employers, trade unions and the government. Collective labor law relates to the tripartite relationship between employee, employer and union.
+            p If we're talking about which laws apply for Texas, than we can say that the employees working her are protected by many state and federal employment laws.
+
+            p.heading-5.first-letter Just as the law mediates your relationship between the company and the worker, we want our law firm to be a mediator between you and the appliance of those laws. Here are the services that we provide:
+            ul.list-marked
+              li We litigate in Texas-based and federal courts
+              li Our attorneys do all the paperwork and negotiations to either uphold your case in trial or in order to achieve the favorable settlements on behalf of employees and workers
+              li On par with handling separate single cases on behalf of individual employees, we're also willing to bring class actions too
+              li Additionally to that, our vast team of attorneys represents employees with claims against their employer of discrimination, sexual harassment, or other improper treatment in violation of labor law.  Our lawyers represent workers not being paid their tips, commissions or minimum, prevailing, and overtime wages
+              li As a part of our effort to help the middle class, we review severance and other employment agreements for executives, managers and professionals. We arbitrate and litigate breach of non-compete or confidentiality clauses in employment contracts.
+              li Our employee benefits lawyers have represented a multitude of retirees seeking retirement and pension benefits under ERISA.
+              li As to working with the labor unions, we're also experienced in almost every aspect of labor-management relations and internal union affairs.
+              li We counsel welfare and pension plans about proper benefit fund administration.  We handle actions against fiduciaries alleging breach of fiduciary duty and failure to pay a benefit.
+  ='\n'
+
+  // Free Legal Consultation
+  section.section-lg.bg-gray-lighter.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3.heading-decorated Free Legal Consultation
+          p All of our lawyers are available all business week long for providing you with their best initial analysis on any legal issue. Once you've decided to hire us for your defense or offense, we'll be there for you till the we win your case!
+      .row.justify-content-md-center
+        .col-md-9.col-lg-7.col-xl-5
+          h5 I Would Like to Discuss
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-briefcase
+              //Select 2
+              select.form-input.select-filter(data-placeholder="Subjects", data-minimum-results-for-search="Infinity", data-constraints="@Required", name='subject')
+                option Subjects
+                option(value="2") Subject 1
+                option(value="3") Subject 2
+                option(value="4") Subject 3
+
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact2-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact2-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact2-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact2-email") Your e-mail
+
+            button(type="submit").button.button-primary Submit
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

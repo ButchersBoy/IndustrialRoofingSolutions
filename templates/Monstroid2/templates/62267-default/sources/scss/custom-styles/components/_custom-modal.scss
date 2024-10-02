@@ -1,0 +1,86 @@
+//
+// Custom modal
+// --------------------------------------------------
+.modal-dialog_custom {
+  min-height: calc(100vh - 20px);
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+  text-align: left;
+  pointer-events: auto;
+  
+  .modal-dialog__inner {
+    position: relative;
+    padding: 60px 20px 30px;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $white;
+  }
+
+  button.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    transition: .33s all ease;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 1;
+    color: $black;
+    opacity: 1;
+    text-shadow: none;
+
+    &::before {
+      display: block;
+      content: '\e92a';
+      font-family: 'Linearicons';
+      font-weight: 400;
+      font-size: 19px;
+      line-height: inherit;
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  * + .rd-mailform {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: calc(100vh - 60px);
+    .modal-dialog__inner {
+      padding: 60px 30px 30px;
+    }
+  }
+}
+
+.ie-10,
+.ie-11 {
+  .modal-dialog_custom {
+    display: block;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    > * {
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      white-space: normal;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      min-height: inherit;
+      width: 0;
+    }
+  }
+}

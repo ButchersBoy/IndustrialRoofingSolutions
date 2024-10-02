@@ -1,0 +1,106 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Clients'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-08.jpg"
+	}).parallax-header.bg-gray-lighter
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2.text-width-1.block-centered We are proud of our customers
+						p We work with an extensive range of companies, both domestic and international. They require impressive web design, which Monstroid² is ready to give.
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-70
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-1-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-2-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-3-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-4-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-5-418x315')
+				
+				.col-md-6.col-lg-4: a.link-image(href='#')
+					+jpg('brand-6-418x315')
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter.text-center
+		.container
+			.row.justify-content-md-center.row-60
+				.col-md-6.col-lg-4.col-xl-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-users2
+						.box-counter__wrap
+							.counter 4578
+						p.box-counter__title Current Clients
+				
+				.col-md-6.col-lg-4.col-xl-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-group-work
+						.box-counter__wrap
+							.counter 4578
+						p.box-counter__title Virtual Clients
+	='\n'
+	
+	// Represent your staff
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-50
+				.col-sm-12
+					h3 Represent your staff
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-1-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q Since I’m not a real pro in web design, I love to use these ready-made and beautifully looking templates. They are available at very affordable prices and they save you a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+				
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-2-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-3-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	
+	// Page Footer
+	include ../sections/_footer-corporate

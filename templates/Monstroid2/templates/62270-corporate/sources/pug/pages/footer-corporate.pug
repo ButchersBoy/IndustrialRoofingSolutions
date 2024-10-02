@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Footer corporate'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[pageName]]
+	})
+	
+	
+	include ../sections/_about-corporate
+	
+	include ../sections/_section-parallax-intro
+		
+	// Page Footer
+	include ../sections/_footer-corporate
+

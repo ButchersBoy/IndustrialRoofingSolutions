@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+
+block variables
+	- pageName = 'Quality control'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+
+	+breadcrumbs
+	='\n'
+
+	// Quality
+	section.section.section-xl.bg-default
+		.container
+			.row
+				.col-12
+					h2.text-center.text-lg-start Our quality control
+						br.d-none.d-md-block
+						| is always on top
+			.row.row-30
+				.col-lg-6
+					.box-feature
+						.box-feature-number 01
+						.box-feature-wrap
+							h3.box-feature-header Product testing
+							.box-feature-body
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi delectus ex facilis, in ipsam minima nemo nesciunt.
+					.box-feature
+						.box-feature-number 02
+						.box-feature-wrap
+							h3.box-feature-header Quality testing
+							.box-feature-body
+								p Assumenda at magni odit perspiciatis vero. Adipisci dolore dolorum modi necessitatibus quam quas recusandae veniam voluptas.
+					.box-feature
+						.box-feature-number 03
+						.box-feature-wrap
+							h3.box-feature-header Packaging inspections
+							.box-feature-body
+								p Dignissimos dolores dolorum ducimus enim excepturi hic illo, neque quis ratione? Accusamus dolorum fugit incidunt velit veniam?
+				.col-lg-5.offset-lg-1.text-center.text-lg-start
+					+img('quality-01-460x740')
+
+	section.section.section-xl.bg-default
+		.container
+			.row.row-30
+				.col-md-6
+					+img('quality-02-560x750')
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at, debitis earum magnam optio repellat sit tempora unde vero voluptatum!
+				.col-md-6.col-xl-5.offset-xl-1
+					.row.row-30.row-md-60.row-xl-120.justify-content-center.text-center
+						.col-8.mt-5
+							+img('quality-03-260x260').w-100
+							p.text-start Corporis culpa itaque non optio reiciendis repellat saepe velit, voluptates! Natus, voluptatibus.
+						.col-12
+							+img('quality-04-460x460').w-100
+							p.text-start Consectetur adipisicing elit. Aliquam consectetur consequatur ducimus enim et iusto, labore, laudantium nesciunt pariatur provident repellat reprehenderit unde. Adipisci inventore laborum minus natus necessitatibus non.
+
+
+	// Page Footer
+	include ../sections/_footer-corporate

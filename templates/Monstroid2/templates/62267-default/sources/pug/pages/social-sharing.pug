@@ -1,0 +1,41 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Social Sharing'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Social Sharing
+			
+			+list-inline-icon({
+				list_class: 'list-inline-sm',
+				items:      [
+					"icon-sm fa-facebook",
+					'icon-sm fa-twitter',
+					'icon-sm fa-google-plus',
+					'icon-sm fa-vimeo',
+					'icon-sm fa-youtube',
+					'icon-sm fa-pinterest-p',
+					'icon-sm fa-linkedin',
+					'icon-sm fa-odnoklassniki',
+					'icon-sm fa-vk',
+					'icon-sm fa-skype',
+					'icon-sm fa-rss']
+			})
+	
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

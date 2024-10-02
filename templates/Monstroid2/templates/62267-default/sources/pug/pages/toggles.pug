@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'Toggles'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			// Accordion
+			#accordion6(role='tablist')
+				+card({
+					parentId:   "accordion6",
+					title:     "Consistency is the Key"
+				}).card-classic
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+				
+				+card({
+					parentId:   "accordion6",
+					title:     "The Power of Bootstrap Toolkit"
+				}).card-classic
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+				
+				+card({
+					parentId:   "accordion6",
+					title:     "Content Driven Design"
+				}).card-classic
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+				
+				+card({
+					parentId:   "accordion6",
+					title:     "Pixel Perfect Typography"
+				}).card-classic
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

@@ -1,0 +1,102 @@
+extends  ../_skeleton
+
+
+block variables
+	- pageName = 'Our Products'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+
+	+breadcrumbs
+	='\n'
+
+	// Our products
+	section.section.section-lg.bg-default
+		.container
+			.row.row-lg.row-20
+				.col-md-6
+					+img('product-01-550x350')
+				.col-md-6
+					h3 Raw milk
+					p Ab error ex fuga harum hic id maiores, minima modi numquam praesentium provident, soluta tenetur? Aliquid aperiam cum debitis dolor dolores dolorum earum error esse ex fuga fugit, hic illum in incidunt laborum magni molestias mollitia necessitatibus neque nihil odio optio placeat porro quaerat quam quia quis quo reprehenderit sequi soluta tempora tenetur velit voluptatibus. A aperiam at aut, autem blanditiis corporis culpa dolorem doloremque dolorum ea enim et eum facere fuga, id illum in ipsam iste iusto magni maiores maxime, mollitia obcaecati possimus quaerat reprehenderit repudiandae saepe sed vitae voluptate voluptates.
+			.row.row-lg.row-20
+				.col-md-6
+					+img('product-02-550x350')
+				.col-md-6
+					h3 Grass-fed beef
+					p Assumenda atque cupiditate doloremque libero nobis provident voluptate! Aperiam dolores excepturi, fugit nihil nulla odit perferendis placeat qui reprehenderit sed sit, voluptatem? Amet blanditiis, dolores ea fuga impedit ipsum non omnis quae voluptate. Consequuntur distinctio expedita fuga fugiat harum ipsum laudantium, nemo, neque nostrum omnis pariatur qui quisquam saepe sit totam vel voluptate? Ab alias aut commodi culpa cumque doloribus eveniet excepturi facilis fugiat impedit, nemo nobis omnis pariatur, placeat quaerat quo repudiandae sint veritatis voluptas voluptatem. A alias animi architecto consectetur deleniti esse hic, iste laudantium modi nobis non quae ratione?
+			.row.row-lg.row-20
+				.col-md-6
+					+img('product-03-550x350')
+				.col-md-6
+					h3 Organic cheese
+					p Aperiam consequatur eius eligendi enim ratione repudiandae tenetur velit vero. Accusamus autem, consectetur cupiditate dolore dolorum earum est expedita fuga, id impedit, in ipsum itaque maxime minima nisi odit optio rem rerum saepe soluta! Amet, aperiam autem, delectus deleniti dolorum eligendi et explicabo fugiat iure laboriosam nisi obcaecati pariatur perspiciatis quam quasi reiciendis rem tenetur, vel vero voluptatibus. Animi aperiam esse ex itaque modi, nisi qui repudiandae sapiente similique sint! Earum excepturi id pariatur saepe? Aliquid consequuntur dolore dolorem, doloremque dolorum eaque explicabo illo inventore necessitatibus perferendis quibusdam repellat saepe sapiente voluptas!
+			.row.row-lg.row-20
+				.col-md-6
+					+img('product-04-550x350')
+				.col-md-6
+					h3 Organic butter
+					p Accusantium adipisci aliquid animi aperiam asperiores assumenda, commodi consectetur culpa cupiditate debitis deserunt ex exercitationem fuga fugit illum impedit incidunt inventore ipsum iste iusto laboriosam libero magnam maiores necessitatibus nobis non numquam odit officia optio porro quia recusandae rerum sit sunt temporibus tenetur voluptatum. Assumenda consequatur consequuntur cum cumque distinctio dolore dolores enim est et fugiat illo impedit iure molestiae quasi qui recusandae sint sit soluta suscipit temporibus unde, vel velit! Ad, alias animi, aperiam atque distinctio dolore dolorum eos exercitationem fugit iusto, numquam praesentium quaerat quasi qui quisquam reprehenderit saepe voluptatum.
+			.row.row-lg.row-20
+				.col-md-6
+					+img('product-05-550x350')
+				.col-md-6
+					h3 Organic cream
+					p Aliquam blanditiis cupiditate deserunt distinctio, dolore eligendi harum, illum ipsum iste laudantium maxime molestiae nihil, nisi obcaecati omnis praesentium reiciendis repudiandae saepe sapiente voluptatum? Amet atque debitis dicta eos esse nesciunt obcaecati quo. Aliquam commodi cum ea harum tempora ullam. Aliquam assumenda culpa dolorum eaque ex explicabo fuga fugiat, labore minima modi nam natus, necessitatibus nisi officiis quaerat quibusdam saepe sed soluta sunt veritatis. Aliquam assumenda autem, cum delectus dolore dolorum esse expedita facilis magnam maxime nemo, nesciunt quaerat quisquam quod recusandae rem suscipit tempora, veritatis. Eius et ipsum non sed unde.
+	='\n'
+	section.section.section-xl.bg-accent
+		.container.text-center
+			.row
+				.col-12
+					h2 Visit our farms to buy the best
+						br.d-none.d-sm-block
+						| organic dairy products
+			.row.justify-content-center
+				.col-xl-10
+					.row.row-30
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header California
+								.box-icon-text
+									ul.list
+										li 2000 Sierra Point Rd
+											br
+											| Brisbane, CA, 94005
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header Montana
+								.box-icon-text
+									ul.list
+										li 15851 33rd St
+											br
+											| Fairview, MT, 59221
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header new York
+								.box-icon-text
+									ul.list
+										li 66 Ackert Hook Rd
+											br
+											| Rhinebeck, NY, 12572
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+
+
+
+	// Page Footer
+	include ../sections/_footer-corporate

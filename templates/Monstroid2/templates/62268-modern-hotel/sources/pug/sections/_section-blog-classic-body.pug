@@ -1,0 +1,219 @@
+// Post classic
+.section-sm
+  article.post-classic
+    .post-classic-title.post-classic-title-icon.linear-icon-star
+      h3: a(href=postImage) A Definitive Guide to the Best Dining and Drinking Venues in the City
+    +jpg('single-post-2-886x661', 'img-bordered')
+
+    .post-classic-body
+      p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list. We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat…
+
+    .post-meta
+      .group
+        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        a(href=postImage).meta-author by Calvin Fitzgerald
+        a(href=postImage) 3 comment(s)
+        +tag-list({
+          list_class: 'list-inline-tag',
+          href: postImage,
+          items: [
+            "News",
+            "State Guide",
+            'Special Offers']
+        })
+
+    .post-classic-footer
+      a(href=postImage).button.button-primary-outline Read more
+
+      +list-inline-icon({
+        list_class: 'list-inline-sm list-default',
+        items: [
+          "icon-xxs fa-facebook",
+          'icon-xxs fa-twitter',
+          'icon-xxs fa-google-plus',
+          'icon-xxs fa-vimeo',
+          'icon-xxs fa-youtube']
+      })
+
+// Post gallery
+.section-sm
+  article.post-slider
+    .post-classic-title
+      h3: a(href=postSlider) A Definitive Guide to the Best Dining and Drinking Venues in the City
+
+    +slider-blog({
+      class: 'carousel-slider-blog-post',
+      items: [
+        {
+          original_img: 'gallery-post-1-886x668',
+          img_thumb: 'gallery-post-1-886x668'
+        },
+        {
+          original_img: 'gallery-post-2-886x668',
+          img_thumb: 'gallery-post-2-886x668'
+        },
+        {
+          original_img: 'gallery-post-3-886x668',
+          img_thumb: 'gallery-post-3-886x668'
+        },
+        {
+          original_img: 'gallery-post-4-886x668',
+          img_thumb: 'gallery-post-4-886x668'
+        },
+        {
+          original_img: 'gallery-post-5-886x668',
+          img_thumb: 'gallery-post-5-886x668'
+        },
+        {
+          original_img: 'gallery-post-6-886x668',
+          img_thumb: 'gallery-post-6-886x668'
+        },
+        {
+          original_img: 'gallery-post-7-886x668',
+          img_thumb: 'gallery-post-7-886x668'
+        }
+      ]
+    })
+
+    .post-classic-body
+      p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list. We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat…
+
+    .post-classic-footer
+      a(href=postSlider).button.button-primary-outline Read more
+
+      +list-inline-icon({
+        list_class: 'list-inline-sm list-default',
+        items: [
+          "icon-xxs fa-facebook",
+          'icon-xxs fa-twitter',
+          'icon-xxs fa-google-plus',
+          'icon-xxs fa-vimeo',
+          'icon-xxs fa-youtube']
+      })
+
+// Post video
+.section-sm
+  article.post-video
+    .post-classic-title
+      h3: a(href=postVideo) A Definitive Guide to the Best Dining
+
+    .entry-video.embed-responsive.embed-responsive-16by9.img-bordered
+      iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+    .post-classic-body
+      p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list. We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat…
+
+    .post-classic-footer
+      a(href=postVideo).button.button-primary-outline Read more
+
+      +list-inline-icon({
+        list_class: 'list-inline-sm list-default',
+        items: [
+          "icon-xxs fa-facebook",
+          'icon-xxs fa-twitter',
+          'icon-xxs fa-google-plus',
+          'icon-xxs fa-vimeo',
+          'icon-xxs fa-youtube']
+      })
+
+// Post Link
+.section-sm
+  article.post-link
+    .post-classic-title
+      h4: a(href=blogPostLink) A Definitive Guide to the Best Dining
+    a(href="http://templatemonster.com/") http://templatemonster.com/
+
+// Post quote
+.section-sm
+  .post-quote
+    .post-classic-body
+      article.quote-line
+        .quote-line__aside
+          +png('quote-mark-44x36')
+        .quote-line__main
+          h4.q A Definitive Guide to the Best Dining and Drinking Venues
+          h5.cite Martin van Buuren
+        
+      .post-meta
+        .group
+          a(href=postQuote): time(datetime='2017') Jan.20, 2016
+          a(href=postQuote).meta-author by Calvin Fitzgerald
+          a(href=postQuote) 3 comment(s)
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postLink,
+            items: [
+              "News",
+              'State Guide']
+          })
+          
+    .post-classic-footer
+      a(href=postQuote).button.button-primary-outline Read more
+
+      +list-inline-icon({
+        list_class: 'list-inline-sm list-default',
+        items: [
+          "icon-xxs fa-facebook",
+          'icon-xxs fa-twitter',
+          'icon-xxs fa-google-plus',
+          'icon-xxs fa-vimeo',
+          'icon-xxs fa-youtube']
+      })
+
+// Post standard
+.section-sm
+  article.post-classic
+    .post-classic-title
+      h3: a(href=postLink) A Definitive Guide to the Best Dining
+
+    .post-classic-body
+      p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list. We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat…
+
+    .post-classic-footer
+      a(href=postLink).button.button-primary-outline Read more
+
+      .post-meta
+        .group
+          a(href=postLink): time(datetime='2017') Jan.20, 2016
+          a(href=postLink).meta-author by Calvin Fitzgerald
+          a(href=postLink) 3 comment(s)
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postLink,
+            items: [
+              "News",
+              'State Guide']
+          })
+
+// Post audio
+.section-sm
+  article.post-audio
+    .post-classic-title
+      h3: a(href=postAudio) A Definitive Guide to the Best Dining
+
+    include ../includes/_rd-audio-track
+
+    .post-classic-body
+      p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list. We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat…
+
+    .post-classic-footer
+      a(href=postAudio).button.button-primary-outline Read more
+
+      .post-meta
+        .group
+          a(href=postAudio): time(datetime='2017') Jan.20, 2016
+          a(href=postAudio).meta-author by Calvin Fitzgerald
+          a(href=postAudio) 3 comment(s)
+          a(href=postAudio) Theme
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postAudio,
+            items: [
+              "City Guide",
+              'Guest Review']
+          })
+
+
+// Pagination
+.section-sm
+  +pagination

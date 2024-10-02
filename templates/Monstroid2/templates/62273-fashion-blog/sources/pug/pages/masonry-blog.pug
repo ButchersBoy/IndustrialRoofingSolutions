@@ -1,0 +1,221 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Masonry Blog'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+  
+  section.bg-default.section-md
+    .container
+      .posts-lists-masonry-3-cols
+        // Post classic
+        article.post-classic.post-minimal
+          +jpg('post-minimal-1-418x315')
+
+          .post-classic-title
+            h5: a(href=postImage) THESE ARE MIRANDA KERR'S FAVORITE THINGS
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+        // Post video
+        article.post-video.post-minimal
+
+          .entry-video.embed-responsive.embed-responsive-16by9
+            iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+          .post-classic-title
+            h5: a(href=postVideo) COFFEE BREAK: KNOTTED CASHMERE HEMMED RUANA
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postVideo): time(datetime='2017') Jan.20, 2016
+              a(href=postVideo).meta-author by Brian Williamson
+
+        // Post classic
+        article.post-classic.post-minimal
+          +jpg('blog10-886x668')
+
+          .post-classic-title
+            h5: a(href=postImage) SKIN UNDERTONE HIDDEN SECRETS: WHY IT MATTERS FOR HOW THE MAKEUP LOOKS ON YOU
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+        // Post Link
+        article.post-link
+          .post-classic-title
+            h5: a(href=blogPostLink) Multiple skins
+          a(href="http://templatemonster.com/") http://templatemonster.com/
+
+        // Post classic
+        article.post-classic.post-minimal
+          +jpg('post-minimal-3-418x315')
+
+          .post-classic-title
+            h5: a(href=postImage) SIDE EFFECTS OF FAST FASHION CULTURE
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+        // Post quote
+        article.post-quote.post-minimal
+          // Quote default
+          a(href=postQuote).quote-default.quote-default__border-left
+            .quote-default__text
+              p.q FASHION IS NOT NECESSARILY ABOUT LABELS...
+
+            p.quote-default__cite Adam Smith
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postQuote): time(datetime='2017') Jan.20, 2016
+              a(href=postQuote).meta-author by Brian Williamson
+
+        // Post classic
+        article.post-minimal
+
+          +jpg('post-minimal-4-418x315')
+          .post-classic-title
+            h5: a(href=postImage) SUIT OF THE WEEK: BRIGHT TOUCHES TO ADD
+
+          .post-meta
+            .group-xs
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+              a(href=postImage) 3 comment(s)
+              +tag-list({
+                  list_class: 'list-inline-tag',
+                  href: postImage,
+                  items: [
+                      "Style",
+                      'Fashion']
+              })
+
+          .post-classic-body
+            p This newly famous jewelry master Mark Armstrong Peddigrew is also an avid traveller. Born in the land of most spectacular North America’s landscapes – namely city of St John...
+
+          .post-minimal-footer
+            +list-inline-icon({
+                list_class: 'list-inline-sm',
+                items: [
+                    "icon-xxs fa-facebook",
+                    'icon-xxs fa-twitter',
+                    'icon-xxs fa-google-plus',
+                    'icon-xxs fa-vimeo',
+                    'icon-xxs fa-youtube',
+                    'icon-xxs fa-pinterest-p']
+            })
+
+            a(href=postImage).button.button-link View now!
+
+        // Post slider
+        article.post-slider.post-minimal
+          +slider-blog({
+            class: 'carousel-slider-blog-post',
+            items: [
+              {
+                original_img: 'gallery-post-01-original-1200x800',
+                img_thumb: 'blog5-886x668'
+              },
+              {
+                original_img: 'gallery-post-02-original-1200x800',
+                img_thumb: 'blog17-886x668'
+              },
+              {
+                original_img: 'gallery-post-03-original-1200x800',
+                img_thumb: 'blog18-886x668'
+              }
+            ]
+          })
+          .post-classic-title
+            h5: a(href=postSlider) THURSDAY’S WORKWEAR REPORT: SILK BLEND CARDIGAN
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postSlider): time(datetime='2017') Jan.20, 2016
+              a(href=postSlider).meta-author by Brian Williamson
+
+        // Post standard
+        article.post-classic.post-minimal
+          .post-classic-title
+            h5: a(href=postLink) KYLIE JENNER'S SEXY WRAP DRESS IS STILL AVAILABLE FOR UNDER $70
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postLink): time(datetime='2017') Jan.20, 2016
+              a(href=postLink).meta-author by Brian Williamson
+
+          .post-classic-body
+            p This newly famous jewelry master Mark Armstrong Peddigrew is also an avid traveller. Born in the land of most spectacular North America’s landscapes – namely city of St John, Newfoundland in Canada – he nurtured a fancy for everything antique all the way back from his childhood.
+
+        // Post classic
+        article.post-classic.post-minimal
+          +jpg('post-minimal-2-418x315')
+
+          .post-classic-title
+            h5: a(href=postImage) LUCKY 7: MUST DO THINGS IN LAS VEGAS
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+        // Post audio
+        article.post-audio.post-minimal
+          .post-classic-title
+            h5: a(href=postAudio) SELENA GOMEZ MAKES LEGGINGS LOOK CHIC WITH THE RIGHT COAT
+
+          .post-meta
+            .post-inline__header-meta
+              a(href=postAudio): time(datetime='2017') Jan.20, 2016
+              a(href=postAudio).meta-author by Brian Williamson
+          include ../includes/_rd-audio-track
+
+  +divider
+  
+  section.section-sm.text-center
+    .container
+      +pagination-classic(1,
+      [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+      null,
+      {"title": "", "href": "#"}
+      )
+      
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+      
+  section.section-md.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-xl-6
+          h5 GET LATEST NEWS DELIVERED DAILY! WE WILL SEND YOU BREAKING NEWS RIGHT TO YOUR INBOX
+
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Enter please your e-mail')
+            button(type="submit").button.button-gray-light-outline Subscribe!
+  
+  // Page Footer
+  include ../sections/_footer-corporate

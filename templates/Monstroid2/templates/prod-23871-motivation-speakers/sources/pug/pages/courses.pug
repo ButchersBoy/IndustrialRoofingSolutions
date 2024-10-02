@@ -1,0 +1,332 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/courses
+include ../components/pagination
+
+
+
+block variables
+	- pageName = 'Courses'
+
+block page
+	include ../sections/_header-classic
+
+	+breadcrumbs
+
+	// Featured Lectures
+	section.section.section-md.section-relative.bg-transparent.text-center
+		.container
+			h6 Learning classes
+			h3 Online Courses
+			.row.row-30.row-xl-40
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-01-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-01-34x34',
+							name: 'Peter Smith'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Control Your Life'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-02-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-02-34x34',
+							name: 'Kate Wilson'
+						},
+						price: {
+							link: links.post,
+							value: '$435'
+						},
+						title: {
+							link: links.post,
+							text: 'Your Commercial Success'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-03-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-03-34x34',
+							name: 'Jack Adams'
+						},
+						price: {
+							link: links.post,
+							value: '$321'
+						},
+						title: {
+							link: links.post,
+							text: 'Financial Stability'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-04-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-04-34x34',
+							name: 'Mike Anderson'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Employees’ Productivity'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-05-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-05-34x34',
+							name: 'Brandon Patterson'
+						},
+						price: {
+							link: links.post,
+							value: '$250'
+						},
+						title: {
+							link: links.post,
+							text: 'Building Better Staff'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-06-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-06-34x34',
+							name: 'Joyce Lee'
+						},
+						price: {
+							link: links.post,
+							value: '$399'
+						},
+						title: {
+							link: links.post,
+							text: 'Improving Teamwork'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-07-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-07-34x34',
+							name: 'Michael Wood'
+						},
+						price: {
+							link: links.post,
+							value: '$150'
+						},
+						title: {
+							link: links.post,
+							text: 'Your Business Strategy'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-08-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-08-34x34',
+							name: 'Christopher Martin'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Efficient Communication'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-09-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-09-34x34',
+							name: 'Phillip Gonzalez'
+						},
+						price: {
+							link: links.post,
+							value: '$499'
+						},
+						title: {
+							link: links.post,
+							text: 'Road to Better Marketing'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-10-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-10-34x34',
+							name: 'Melissa Wilson'
+						},
+						price: {
+							link: links.post,
+							value: '$235'
+						},
+						title: {
+							link: links.post,
+							text: 'Secrets of Leadership'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-11-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-11-34x34',
+							name: 'Ralph Long'
+						},
+						price: {
+							link: links.post,
+							value: '$250'
+						},
+						title: {
+							link: links.post,
+							text: 'Increasing Profitability'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-12-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-12-34x34',
+							name: 'Diane Parker'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Driving Your Sales'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+
+			ul.pagination-custom
+				li: a.active(href='#') 1
+				li: a(href='#') 2
+				li: a(href='#') 3
+				li: span ...
+				li: a(href='#') 12
+
+
+	include ../sections/_footer-classic

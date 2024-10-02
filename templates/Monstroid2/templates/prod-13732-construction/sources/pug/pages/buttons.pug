@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Buttons'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-default.text-center
+    .container
+      .group-lg
+        .button.button-primary See Features
+        .button.button-black Buy template
+        .button.button-gray-light-outline Buy template!
+        .button.button-link read more
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-accent.text-center
+    .container
+      .group-lg
+        .button.button-gray-light-outline View now!
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

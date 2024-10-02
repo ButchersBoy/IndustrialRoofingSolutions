@@ -1,0 +1,72 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Team member profile'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Team member profile
+  section.section-lg.bg-default
+    .container
+      // Profile Corporate
+      article.profile-corporate
+        +jpg('team-member-profile-1-886x666', 'profile-corporate__image')
+
+        .profile-corporate__caption
+          h1 Albert Stroller 
+          h5 Head Chef/Owner
+          hr.divider-minimal
+          p Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop in 2008. While economic difficulties led them to close that shop, the pair spun off their popular European dishes inot a business of its own!
+
+          +list-inline-icon({
+            list_class: ['list-inline-sm', 'profile-corporate__list'],
+            items: [
+              "icon-sm fa-facebook",
+              'icon-sm fa-twitter',
+              'icon-sm fa-google-plus',
+              'icon-sm fa-vimeo',
+              'icon-sm fa-youtube',
+              'icon-sm fa-pinterest-p'
+            ]
+          })
+
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8
+          h4  Reservation
+          hr.divider-minimal
+          p We are always ready to meet all your needs and requirements during the night time. Please call #[a(href='callto:#') 555.329.0632] or fill out the contact form and we will call back to you ASAP.
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your name')
+              label.form-label(for="contact-name")
+
+            .form-wrap
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Your phone')
+              label.form-label(for="contact-phone")
+              
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Your e-mail')
+              label.form-label(for="contact-email")
+
+            button(type="submit").button.button-gray-light-outline: span Submit
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

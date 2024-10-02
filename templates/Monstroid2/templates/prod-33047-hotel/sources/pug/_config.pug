@@ -1,0 +1,93 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap",
+		logo = {
+			default: 'logo-default-497x100.png',
+			inverse: 'logo-inverse-497x100.png',
+			name: 'Norliva'
+		},
+		links = {
+			post: 'blog-post.html',
+			getTemplate:'#get-template'
+		},
+		colors = {
+			primary: '#b6c062'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About'
+			},
+			{
+				title: 'Rooms',
+				dropdown: [
+					{
+						title: 'Single room',
+					}
+				]
+			},
+			{
+				title: 'Offers'
+			},
+			{
+				title: 'Blog',
+				dropdown: [
+					{
+						title: 'Single post',
+					}
+				]
+			},
+			{
+				title: 'Pages',
+				link: null,
+				megamenu: [
+					{
+						title: 'Pages 1',
+						link: null,
+						list: [
+							{ title: 'Single room' },
+							{ title: 'Privacy policy' },
+							{ title: 'Typography' },
+						]
+					},
+					{
+						title: 'Pages 2',
+						link: null,
+						list: [
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Grid system' },
+						]
+					},
+					{
+						title: 'Pages 3',
+						link: null,
+						list: [
+							{ title: 'Tabs and accordions' },
+							{ title: 'Progress bars' },
+							{ title: 'Tables' }
+						]
+					},
+					{
+						title: 'Pages 4',
+						link: null,
+						list: [
+							{ title: '404' },
+							{ title: '503' },
+							{ title: 'Coming soon' },
+						]
+					},
+				]
+			},
+			{
+				title: 'Contacts'
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

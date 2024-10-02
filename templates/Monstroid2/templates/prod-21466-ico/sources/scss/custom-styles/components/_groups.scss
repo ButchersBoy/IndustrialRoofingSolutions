@@ -1,0 +1,62 @@
+/** @section Groups */
+
+html {
+
+	.group {
+		@include group(10px);
+	}
+
+	.group-xs {
+		@include group(15px);
+	}
+
+	.group-sm {
+		@include group(20px, 10px);
+	}
+
+	.group-md {
+		@include group(25px, 15px);
+	}
+
+	.group-lg {
+		@include group(30px, 15px);
+	}
+
+	.group-xl {
+		@include group(40px, 20px);
+	}
+
+	.group-middle {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.group-custom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 100%;
+
+		> * {
+			flex: 0 1 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@include media-breakpoint-up(sm) {
+			flex-wrap: nowrap;
+
+			> * {
+				flex: 1 1 auto;
+			}
+		}
+	}
+}
+
+* + .group-sm { margin-top: 30px; }
+* + .group-md { margin-top: 30px; }
+* + .group-lg {	margin-top: 30px; }
+* + .group-xl {	margin-top: 30px; }
+* + .group-middle {	margin-top: 30px; }

@@ -1,0 +1,81 @@
+extends ../_skeleton
+include ../components/_post
+include ../components/_pagination
+
+block variables
+	- pageName = 'Blog Post'
+
+block page
+	include ../sections/_header-classic
+
+	.gradient-1.bg-vide-2
+		.bg-vide( data-vide-bg='video/video-3' data-vide-options='posterType: jpg, position: 50% 50%' )
+
+		+breadcrumbs({
+			text: 'Single Post'
+		})
+
+	.gradient-2
+		section.section.section-md.text-sm-left
+			.container: .row.row-30.row-md-60
+				.col-lg-8
+					article.post
+						a.post-figure( href='blog-post.html' ): +img( 'post-2-773x311' )
+						.post-body.post-body-2
+							.post-info-panel
+								ul.list-inline
+									li: time.post-time( datetime='2019' ) November 10, 2019
+									li: a.post-tag( href='#' ) Cryptocurrency
+							.post-share
+								.post-share-button( data-custom-toggle='' data-custom-toggle-disable-on-blur='true' )
+								ul.post-social-list
+									li: a.icon.mdi.mdi-facebook( href='#' )
+									li: a.icon.mdi.mdi-twitter( href='#' )
+							h4.post-title.post-title-2 New Qualifier Program for the ICO
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Convallis a cras semper auctor. In nisl nisi scelerisque eu ultrices vitae. Nibh ipsum consequat nisl vel pretium lectus.
+							.quote-default Orci nulla pellentesque dignissim enim sit. Auctor urna nunc id cursus metus aliquam eleifend mi. Feugiat in ante metus dictum.
+							p Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Ultrices neque ornare aenean euismod elementum. Consequat interdum varius sit amet. Tellus cras adipiscing enim eu turpis egestas pretium. Ultrices in iaculis nunc sed augue. In dictum non consectetur a erat. Non sodales neque sodales ut etiam sit. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Lobortis elementum nibh tellus molestie nunc non blandit massa.
+
+					.box-default
+						.box-default-header
+							h6.box-default-title 2 Comments
+						.box-default-body
+							article.box-comment
+								.unit.flex-column.flex-sm-row
+									.unit-left: +img('user-1-76x76').box-comment-figure
+									.unit-body
+										.box-comment-author: a( href='#' ) John	Parker
+										.box-comment-time: time( datetime='2019' ) April 14, 2019
+										p.box-comment-text Diam quam nulla porttitor massa id. Bibendum at varius vel pharetra vel turpis nunc eget. Pharetra pharetra massa massa ultricies mi. Ut diam quam nulla porttitor.
+
+							article.box-comment
+								.unit.flex-column.flex-sm-row
+									.unit-left: +img('user-2-76x76').box-comment-figure
+									.unit-body
+										.box-comment-author: a( href='#' ) Michelle	Mitchell
+										.box-comment-time: time( datetime='2019' ) April 14, 2019
+										p.box-comment-text Ut eu sem integer vitae justo eget magna fermentum iaculis. Viverra accumsan in nisl nisi scelerisque eu. Diam maecenas sed enim ut sem viverra aliquet. Nisl pretium fusce id velit ut tortor.
+
+					.box-default
+						.box-default-header
+							h6.box-default-title Leave a comment
+						.box-default-body
+							//RD Mailform
+							form.rd-mailform.rd-form
+								.form-wrap
+									label.form-label( for='comment-name' ) Name
+									input#comment-name.form-input( type='text' name='name' data-constraints='@Required' )
+								.form-wrap
+									label.form-label( for='comment-email' ) Email
+									input#comment-email.form-input( type='email' name='email' data-constraints='@Required @Email' )
+								.form-wrap
+									label.form-label( for='comment-message' ) Your comment
+									textarea#comment-message.form-input( name='message' data-constraints='@Required' )
+								.form-button
+									button.button.button-primary.button-isi( type='submit' ) Submit
+
+
+				.col-lg-4: include ../includes/_blog-sidebar
+
+	include ../sections/_footer-info
+	include ../sections/_footer-classic

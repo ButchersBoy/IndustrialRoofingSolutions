@@ -1,0 +1,90 @@
+//
+// Service
+// --------------------------------------------------
+
+
+.section-services {
+	position: relative;
+	z-index: 1;
+
+	> .container {
+		@include media-breakpoint-up(lg) {
+			transform: translateY(120px);
+		}
+
+		@include media-breakpoint-up(xl) {
+			transform: translateY(195px);
+		}
+	}
+}
+
+.service {
+	position: relative;
+	width: 280px;
+	max-width: 100%;
+}
+
+.service-2 {
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 100px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 270px;
+	}
+}
+
+.service-3 {
+	margin-left: auto;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 105px;
+	}
+}
+
+.service-number {
+	font-family: $font-family-sec;
+	font-size: 100px;
+	letter-spacing: -.1em;
+	color: $secondary;
+	opacity: .1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-20px, -100px);
+
+	@include media-breakpoint-up(lg) {
+		font-size: 120px;
+		transform: translate(-55px, -112px);
+	}
+}
+
+.service-title {
+	margin-top: 30px;
+}
+
+.service-text {
+	font-size: 16px;
+	line-height: 27.2px;
+
+	* + & {
+		margin-top: 16px;
+	}
+}
+
+.service-figure {
+	* + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 53px;
+		}
+	}
+}

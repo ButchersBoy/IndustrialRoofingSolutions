@@ -1,0 +1,42 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Footer Minimal'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [['Footers', '#'], [pageName]]
+  })
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.row-70
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-1-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-2-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-3-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-4-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-5-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-6-886x668')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

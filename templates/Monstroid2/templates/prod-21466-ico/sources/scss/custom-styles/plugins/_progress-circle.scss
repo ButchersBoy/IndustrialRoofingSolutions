@@ -1,0 +1,90 @@
+/** @section Progress Circle */
+
+.custom-progress-radial-bg {
+	fill: $secondary-11;
+	stroke: rgba($white, .2);
+	stroke-width: 2px;
+}
+
+.custom-progress-radial-fg {
+	fill: transparent;
+	stroke: $primary;
+	stroke-width: 4px;
+}
+
+.custom-progress-radial-start,
+.custom-progress-radial-dot {
+	fill: $white;
+}
+
+.custom-progress-radial-counter {
+	display: none;
+}
+
+.custom-progress-radial-title {
+	font-size: 14px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+}
+
+.discount-progress {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	color: $white;
+	animation: motionY 3s infinite linear;
+	z-index: 1;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 8px;
+		right: 8px;
+		bottom: 8px;
+		left: 8px;
+		border-radius: 50%;
+		box-shadow: 0 25px 70px rgba($black, 0.25);
+		z-index: -1;
+	}
+}
+
+.discount-progress-content {
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.discount-progress-number {
+	font-size: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+	
+	span {
+		font-size: 33px;
+		font-weight: 600;
+		margin-right: 4px;
+	}
+}
+
+.discount-progress-now {
+	color: $turquoise;
+}
+
+.discount-progress-divider {
+	font-size: 0;
+	line-height: 0;
+	margin: 15px 0 18px;
+
+	&::before {
+		display: inline-block;
+		content: '';
+		width: 70%;
+		height: 0;
+		border-top: 2px solid;
+	}
+}
+
+.discount-progress + img { margin-top: 15px; }
+.discount-progress-number + p {	margin-top: 0; }
+* + .progress-bar-circle-title { margin-top: 12px; }

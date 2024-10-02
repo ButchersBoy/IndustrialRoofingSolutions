@@ -1,0 +1,289 @@
+extends  ../_skeleton
+
+//- Includes
+include ../includes/_halloween-mixins
+
+block variables
+	- pageName = 'Hallween'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	//+breadcrumbs
+
+	// Features
+	section.section.halloween-section.halloween-section-lg.bg-default.text-center
+		.container
+			+parallax({
+				img: 'halloween/background-01',
+				innerClass: 'halloween-section-xl context-dark bg-image px-3'
+			})
+				h1 Find a diverse variety #[br] of Halloween apparel!
+				h5 Make any of your crazy ideas come true with our unlimited store options.
+				a.btn.btn-white.btn-ujarak( href='#' ) Read more
+
+			.owl-carousel(
+				data-items='1',
+				data-sm-items='3',
+				data-md-items='4',
+				data-lg-items='5',
+				data-xl-items='6',
+				data-margin='30',
+				data-dots='true',
+			)
+				+halloween-block-image({
+					img: 'halloween/icon-01-100x100.png',
+					title: 'Haunted ghost tour',
+				})
+				+halloween-block-image({
+					img: 'halloween/icon-02-100x100.png',
+					title: 'Zombie run <br>event',
+				})
+				+halloween-block-image({
+					img: 'halloween/icon-03-100x100.png',
+					title: 'Jack-O\'-Lantern piñata',
+				})
+				+halloween-block-image({
+					img: 'halloween/icon-04-100x100.png',
+					title: 'Murder mystery dinner',
+				})
+				+halloween-block-image({
+					img: 'halloween/icon-05-100x100.png',
+					title: 'Halloween crafts and workshops',
+				})
+				+halloween-block-image({
+					img: 'halloween/icon-06-100x100.png',
+					title: 'Witch Dance <br>Party',
+				})
+
+	// About us
+	section.section.halloween-section.halloween-section-lg.bg-default.text-center.text-md-start
+		.container
+			.row.row-30.justify-content-between.align-items-center
+				.col-md-6
+					h2.text-halloween Trick or Treat? Boo!
+					h6 Join us for an eerie evening tour of our castles or houses for the fright of your life.
+					.big Our storytellers will guide you through the darkness and take you on a bone-chilling journey through the past. With tales of ghosts, supernatural sightings and horrors from history, these events are not for the faint-hearted. Join us and experience Halloween like never before!
+					a.btn.btn-primary.btn-ujarak( href='#' ) Read more
+				.col-md-6.col-xl-5.d-none.d-md-block.wow.fadeIn
+					+img( 'halloween/image-01-470x530' )
+
+	// Services
+	section.section.halloween-section.halloween-section-lg.bg-default.text-center
+		.container
+			.owl-carousel(
+				data-items='1',
+				data-sm-items='2',
+				data-md-items='3',
+				data-lg-items='4',
+				data-margin='30',
+				data-dots='true',
+			)
+				+halloween-thumbnail({
+					img: 'halloween/image-02-270x255',
+					title: 'Home decorations',
+				}).wow.fadeInDown( data-wow-delay='.15s' )
+				+halloween-thumbnail({
+					img: 'halloween/image-03-270x255',
+					title: 'Halloween makeup',
+				}).wow.fadeInUp( data-wow-delay='.15s' )
+				+halloween-thumbnail({
+					img: 'halloween/image-04-270x255',
+					title: 'Outdoor decor',
+				}).wow.fadeInDown( data-wow-delay='.15s' )
+				+halloween-thumbnail({
+					img: 'halloween/image-05-270x255',
+					title: 'Treats',
+				}).wow.fadeInUp( data-wow-delay='.15s' )
+
+	// Pricing tables
+	section.section.halloween-section.halloween-section-lg.bg-default
+		.container
+			h4.text-center Pricing tables
+			.owl-carousel.owl-carousel-shadow.owl-carousel-1(
+				data-items='1',
+				data-sm-items='2',
+				data-lg-items='3',
+				data-loop='false',
+				data-margin='30',
+				data-dots='true',
+			)
+				+halloween-pricing({
+					title: 'Standard',
+					subtitle: 'Perfect for getting started',
+					value: '$15',
+					valueMeta: 'Billed monthly',
+					list: [
+						'Ghost tour',
+						'Halloween workshop',
+						'Zombie run',
+					]
+				})
+				+halloween-pricing({
+					label: 'Most popular',
+					title: 'Premium',
+					subtitle: 'Great for couples & families',
+					value: '$25',
+					valueMeta: 'Billed monthly',
+					list: [
+						'Mystery dinner',
+						'Horror movies',
+						'Witch dance party',
+					]
+				}).halloween-pricing-accent
+				+halloween-pricing({
+					title: 'Ultimate',
+					subtitle: 'Enjoy all the activities',
+					value: '$35',
+					valueMeta: 'Billed monthly',
+					list: [
+						'Haunted house tour',
+						'Scavenger hunt',
+						'Pumpkin golf',
+					]
+				})
+
+	// Offers
+	section.section.halloween-section.halloween-section-lg.bg-default
+		.container
+			.row.row-30
+				.col-sm-6.wow.fadeInLeft
+					.halloween-box.halloween-box-light.text-center( style='background-image:url(images/halloween/image-06-570x365.jpg)' )
+						.halloween-box-inner
+							.halloween-box-title Hurry Up! #[br]Save 10%
+							.halloween-box-text Only one week!
+							a.halloween-box-btn.btn.btn-white.btn-ujarak( href='#' ) Shop now
+				.col-sm-6.wow.fadeInRight
+					.halloween-box( style='background-image:url(images/halloween/image-07-570x365.jpg)' )
+						.halloween-box-inner
+							.halloween-box-title
+								span.text-halloween The Secret
+								br
+								span of Perfect Party
+							.halloween-box-text costumes for adults and kids!
+							a.halloween-box-btn.btn.btn-white.btn-ujarak( href='#' ) Shop now
+
+	// Blog
+	section.section.halloween-section.halloween-section-lg.bg-default
+		.container
+			h4.text-center Latest from the blog
+			.owl-carousel.owl-carousel-1(
+				data-items='1',
+				data-sm-items='2',
+				data-lg-items='3',
+				data-autoplay='true',
+				data-margin='30',
+				data-dots='true',
+				data-autoplaySpeed='1500',
+				data-autoplayTimeout='5000',
+			)
+				+halloween-post({
+					img: 'halloween/image-08-370x308',
+					date: [ '17', 'October' ],
+					title: 'History of the Jack-O’-Lantern',
+					text: 'Every October, carved pumpkins peer out from porches and doorsteps in the United States and other parts of the world.',
+				})
+				+halloween-post({
+					img: 'halloween/image-09-370x308',
+					date: [ '17', 'October' ],
+					title: 'Werewolf Legends',
+					text: 'A werewolf is a mythological animal and the subject of many stories throughout the world—and more than a few nightmares.',
+				})
+				+halloween-post({
+					img: 'halloween/image-10-370x308',
+					date: [ '17', 'October' ],
+					title: 'The Village Halloween Parade',
+					text: 'We invite you to take part in the upcoming NYC Village Halloween Parade. Prepare your best costumes for the #1 Halloween event!',
+				})
+
+	// Offers
+	section.section.halloween-section.text-center
+		.container
+			+parallax({
+				img: 'halloween/background-02',
+				innerClass: 'halloween-section-xs context-dark context-dark-1 bg-image px-3'
+			})
+				+halloween-countdown({ to: '2024-12-31' })
+				.text-custom
+					| New Arrivals
+					br
+					span.text-halloween= 'at 20% off!'
+				a.btn.btn-white.btn-ujarak( href='#' ) Shop now
+
+	// Progress bars
+	section.section.halloween-section.halloween-section-lg.bg-default.text-center
+		.container
+			h4 Popular Halloween deals
+			.row.row-40.row-lg-56.row-content-1
+				.col-sm-6
+					+halloween-progress-linear({
+						title: 'Costumes',
+						value: '60'
+					})
+				.col-sm-6
+					+halloween-progress-linear({
+						title: 'Candies',
+						value: '30'
+					})
+				.col-sm-6
+					+halloween-progress-linear({
+						title: 'Decorations',
+						value: '50'
+					})
+				.col-sm-6
+					+halloween-progress-linear({
+						title: 'Party supplies',
+						value: '90'
+					})
+
+			.row.row-30.row-content-1.justify-content-around
+				.col-auto.col-lg-3
+					+halloween-progress-circle({
+						title: 'Crafts',
+						value: 85
+					})
+				.col-auto.col-lg-3
+					+halloween-progress-circle({
+						title: 'Movies',
+						value: 70
+					})
+				.col-auto.col-lg-3
+					+halloween-progress-circle({
+						title: 'Books',
+						value: 50
+					})
+
+	// Testimonials
+	section.section.halloween-section.halloween-section-lg.bg-default
+		.container
+			h4.text-center Testimonials
+			.owl-carousel(
+				data-items='1',
+				data-md-items='2',
+				data-lg-items='3',
+				data-margin='30',
+				data-dots='true',
+			)
+				+halloween-quote({
+					img: 'halloween/person-01-90x90',
+					quote: 'We had an amazing time at this year’s Halloween event. Your team was brilliant. A spirit came through and made me feel like I was going to pass out!',
+					cite: 'Emma Wilson',
+					citeMeta: 'San Diego, CA',
+				})
+				+halloween-quote({
+					img: 'halloween/person-02-90x90',
+					quote: 'The team was very professional and there was a vast array of activities. The night was amazing. I cannot thank them enough for a great evening.',
+					cite: 'Peter Simmons',
+					citeMeta: 'New York, NY',
+				})
+				+halloween-quote({
+					img: 'halloween/person-03-90x90',
+					quote: 'I have just returned from the Haunted Castle tour, organized by your agency. It was a great and frightening experience that I won’t soon forget.',
+					cite: 'Jacob Jones',
+					citeMeta: 'Seattle, WA',
+				})
+	
+	// Page Footer
+	include ../sections/_footer-corporate

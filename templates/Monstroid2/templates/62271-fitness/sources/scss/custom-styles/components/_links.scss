@@ -1,0 +1,39 @@
+//
+// Links
+// --------------------------------------------------
+.link-image {
+  @include responsive-block;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .desktop {
+    .link-image {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      transition: .44s all ease;
+
+      &:hover {
+        box-shadow: $shadow-area-lg;
+      }
+    }
+  }
+}
+
+.link-gray-4 {
+  @include link($gray-4, $black);
+}
+
+// Link transparent
+.link-transparent {
+  padding: 1px 20px;
+  opacity: .3;
+  transition: .33s;
+  text-align: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,4 @@
+mixin label-list(obj)
+  ul(class=obj.list_class)
+    each item in obj.items
+      li: a(href=obj.href).button.button-xxs.button-gray-light-outline: span= item

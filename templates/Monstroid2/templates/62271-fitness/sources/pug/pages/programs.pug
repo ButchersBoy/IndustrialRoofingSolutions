@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+include ../elements/_ui-thumbnail-classic
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Programs'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+  section.section.text-center
+    +parallax({
+      img: 'parallax-04',
+      addClass: 'material-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              hr.divider.divider-md.divider-primary
+              h1 Programs
+              p Welcome to the IronMass Fitness Studio!
+
+  section.section.section-lg.bg-default
+    .container
+      .row.row-50.row-xl-100
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-1-418x315',
+            title: 'CrossFit',
+            text: "CrossFit is a principal strength and conditioning program. it's used by many serious, law enforcement and military institutions. Oftentimes it's used at the police academies and in military special operations units. As well as by hundreds of other amateur and professional..."
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-2-418x315',
+            title: 'Yoga',
+            text: "Yoga is an important part of every fitness facility's schedule nowadays. That is all due to yoga being so universal for all kinds of people and the overall benefits it brings to any person's health and shape. The yoga classes listed below have a shorter duration time than our other classes on..."
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-3-418x315',
+            title: 'Fitness',
+            text: "Our fitness classes have all the equipment necessary to provide a great exercise. For sure we do have traditional cardio equipment as well. That is one of our main focuses because cardiovascular fitness is indeed important.  Even the professional athletes who train at our classes ..."
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-4-418x315',
+            title: 'Olympic & Powerlifting',
+            text: "Whether you are a newbie or an experienced athlete, if you want to improve yourself and hone your physical condition, this is the place to be! Among our wide variety of CrossFit and fitness classes we offer a powerlifting services that meet no competition! The discipline of powerlifting may..."
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-5-418x315',
+            title: 'Personal Training',
+            text: "IronMass CrossFit studio provides both individual and group trainings, on a regular basis. We have a time tested approach for tailoring each specific program for each specific trainee. So regardless of what your workout routine and end goals are, we will adapt ourselves to be of the most service to you!"
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+            img: 'programs-6-418x315',
+            title: 'WODs',
+            text: "At IronMass, we aim to provide our visitors, both beginners, and professionals, with a wide variety of new and old WODs. These workouts of the day always challenge the body, as well as the mind. We want to keep you waiting for more to come! Then you’ll always be guessing…what’s in store ..."
+          })
+
+  section.section.section-lg.bg-accent.context-dark.text-center
+    .container
+      .row.justify-content-center
+        .col-xl-8.col-lg-10
+          h2 Don’t miss out, Subscribe to the newsletter
+
+          // RD Mailform
+          form.rd-mailform.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              label.form-label(for="email") Enter your e-mail please
+              input#email.form-input(type="email" name="email" data-constraints="@Email @Required")
+            .form-button
+              button(type="submit").button.button-sm.button-gray-light-outline Subscribe
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

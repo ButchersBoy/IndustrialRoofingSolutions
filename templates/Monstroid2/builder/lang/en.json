@@ -1,0 +1,1159 @@
+{
+  "errors": {
+    "serverNotFound": "Application has failed to start because Local or Hosting Server was missing. Please upload Novi Builder to server and try again",
+    "dontSaveProject": "Project is not saved. You will lost the changes if you leave the page.",
+    "noCurrentProject": "Current project is not set",
+    "emailFieldNotSet": "Please, define email field in your form!",
+    "messageCanNotBeSend": "Unfortunately, your message can not be sent. Please, mail us directly at #{mail}",
+    "bigFileChosen": "The file you have chosen is too large.",
+    "maxFileSize": "Failed to upload. File size exceeds the maximum #{size} value.",
+    "maxFileCount": "Failed to upload. \nFiles count exceeds the maximum value (#{maxFileCount}).",
+    "totalFileSize": "Failed to upload. \nTotal files size exceeds the maximum #{humanMaxSize} value.",
+    "zipExtension": "The file you are trying to upload is not a .zip file.\nPlease try again.",
+    "templateUpload": "There was a problem with the upload template. Please try again.",
+    "openZip": "There was a problem with opening a zip file. Please check your archive and try again.",
+    "noSuchFile": "There no HTML files or project.json file in your project",
+    "templateImporting": "There was a problem with template importing. Please try again.",
+    "projectImporting": "There was a problem with project importing. Please try again.",
+    "serverUnavailable": "Server is temporarily unavailable. Try again later",
+    "modSecurity": "It's look like a ModSecurity (or another security framework) is blocking Novi at your server. Please, disable it or remove it's rules which are referring to Novi files to prevent unexpected behavior.",
+    "failedToSave": "Failed to save your project. Please check your server security settings and free storage space or contact your server administrator to solve the problem.",
+    "wrongFileFormat": "Wrong file format selected. Supported formats: .jpg, .png, .gif, .webm, .avi, ogg."
+  },
+  "codeEditor": {
+    "noFiles": "There are no files to show.",
+    "openStyleManager": "Show Styles",
+    "closeStyleManager": "Hide Styles",
+    "autoSave": "Autodeploy",
+    "codeError": "Error: #{errorText} At line #{errorRow}, column #{errorColumn}",
+    "codeErrorLink": "Go to #{errorLine} line",
+    "noPages": "There are no active page.",
+    "fileSelect": "Please select file",
+    "fileReadOnly": "(Read only)",
+    "notValidHtml": "HTML Code is not Valid",
+    "notValidCss": "One of CSS Files is not Valid",
+    "editorDisabledTitle": "VISUAL EDITING IS BLOCKED",
+    "editorDisabledDescription": "There are several validation errors in the code used on this page. You should dive into the code to fix the problem yourself.",
+    "editorDisabledButtonText": "CLICK TO OPEN CODE EDITOR"
+  },
+  "editor": {
+    "moveLabel": "Move #{element} element",
+    "moveItem": {
+      "tooltip": "Move Layer",
+      "title": "Move Layer"
+    },
+    "replaceItem": {
+      "tooltip": "Replace Layer",
+      "headerTitle": "Replace Preset",
+      "title": "Replace Layer"
+    },
+    "duplicateItem": {
+      "tooltip": "Duplicate Layer",
+      "title": "Duplicate Layer"
+    },
+    "removeItem": {
+      "tooltip": "Remove Layer",
+      "title": "Remove Layer"
+    }
+  },
+  "switcher": {
+    "yes": "yes",
+    "no": "no"
+  },
+  "builderLoading": {
+    "progressStep1": "Waking Up...",
+    "progressStep2": "Searching for undeclared features in Your project...",
+    "progressStep3": "Getting ready for the hard work..."
+  },
+  "failedLoadProjectScreen": {
+    "title": "Novi Builder can't load your project",
+    "subtitle": "There was a problem loading the project.json file of your project. You can fix the error manually on the server or use the suggested import options. If one of the options is selected, the current project files will be overwritten.",
+    "chooseText": "Choose following option:",
+    "openProjectDescription": "Upload a new project. Choose a prepared zip archive.",
+    "openProjectButton": "Import Novi Project",
+    "openTemplateDescription": "Upload a new template. Choose a prepared zip archive.",
+    "openTemplateButton": "Import HTML Template"
+  },
+  "tooltips": {
+    "insertPreset": "Insert a preset here",
+    "projectSave": "Save Project",
+    "projectSettings": "Settings",
+    "pageSettings": "Page Settings",
+    "previewModeTitle": "Preview Mode",
+    "previewModeDescription": "Preview made changes",
+    "editModeTitle": "Edit Mode",
+    "editModeDescription": "Change page content",
+    "designModeTitle": "Design Mode",
+    "designModeDescription": "Design and Develop"
+  },
+  "startScreen": {
+    "title": "Get started with your project",
+    "subtitle": "Click on any preview bellow to open a page"
+  },
+  "iconManager": {
+    "headerTitle": "Icon Manager",
+    "searchPlaceholder": "Search your icons ...",
+    "uploadTitle": "Upload icon Pack",
+    "emtySearchMessage": "No icons found for ",
+    "errorMessage": "No icons found ...",
+    "submitButton": "Insert Icon"
+  },
+  "introduction": {
+    "slide1": {
+      "title": "Introducing Novi Builder",
+      "subtitle": "Your irreplaceable tool for instant HTML websites creation \nand maintenance.",
+      "body": "Novi Builder is an innovative visual HTML page builder, which allows you to \nquickly assemble pages from pre-made blocks and visually edit their \ncontent. Use the feature of working with your website’s source code, \navailable only in Novi Builder."
+    },
+    "slide2": {
+      "title": "Managing pages",
+      "subtitle": "Create, edit, delete, and manage the settings of your project’s\n web pages with “Page Manager”.",
+      "body": "Use a simple click to open the desired page or to create a new one. To\n delete or access additional actions, use the context menu on the selected\n page."
+    },
+    "slide3": {
+      "title": "Separate Task — Separate Mode",
+      "subtitle": "Browse, edit, develop and create the design of your future\n website with «Preview», «Edit», and «Design» modes.",
+      "bodyParagraph1": "To view the intermediate results of your work with a project, use\n the #{previewIcon} Preview mode.",
+      "bodyParagraph2": "Use the #{editIcon} Edit mode to edit text and move, create, or delete elements\n sections on your page as quickly as possible.",
+      "bodyParagraph3": "Become a designer with the #{designIcon} Design mode. Work on the level of layers\n elements (while pressing #{commandSymbol} on keyboard ) in the workspace of this mode\n or use access to the source code of your project. "
+    },
+    "slide4": {
+      "title": "Developer Tools",
+      "subtitle": "Get the enhanced features to create your HTML website with\n the help of developer tools in «Develop» mode.",
+      "bodyParagraph1": "Experience an absolutely new way of work with visual HTML page builders.\n Use the power of HTML, CSS, and JS editor in its usual form and edit the\n source code of your project just as you would have done it in any standard\n code editor. Emmet and code highlight allow you to speed up your work.",
+      "bodyParagraph2": "Save snippets of your project in a completely new way using the Preset\n Manager. Select any available element in the workspace of your active page\n and save it via #{savePresetIcon} Save as Preset in the context menu.\n Use existing presets just by dragging them to the page."
+    },
+    "slide5": {
+      "title": "Instant Publishing",
+      "subtitle": "Keep the version of your website up-to-date using the instant\n publication of your project directly to the server with Novi.",
+      "body": "Press the #{publishIcon} Publish Site button to publish your project right on the\n server, where Novi Builder is located. You can change the path of your\n project’s publication, using the «Publication Path» option\n in «Configuration» dialog."
+    },
+    "slide6": {
+      "title": "Additional Features",
+      "subtitle": "Perform additional actions with your project using the Novi's\n system panel.",
+      "bodyParagraph1": "Change the workspace size by clicking #{resizeIcon} Change Resolution button.",
+      "bodyParagraph2": "Press #{settingsIcon} Settings to obtain access to the settings of the page, project etc.",
+      "bodyParagraph3": "Use Novi Layers feature to improve the user experience of your project.\n Create the rules of insertion, movement, deletion, and other actions in a\n convenient form via standard CSS selectors.",
+      "bodyParagraph4": "Download the template of your project to give it to your clients or to transfer\n it to other devices by pressing #{downloadIcon} Download Template button.",
+      "bodyParagraph5": "Press #{saveIcon} Save Project button to save your project for future use.",
+      "bodyParagraph6": "Use the feedback form  to get in touch with us. Send your ideas and\n suggestions. We are always happy to communicate with you."
+    },
+    "slide": "Slide",
+    "of": "of",
+    "skip": "Skip Introduction",
+    "next": "Next Slide",
+    "end": "Launch Novi Builder"
+  },
+  "mainMenu": {
+    "tooltip": "Open Main Menu",
+    "importItem": "Import...",
+    "importProjectItem": "Import Project",
+    "importTemplateItem": "Import Template",
+    "exportItem": "Export...",
+    "exportProjectItem": "Export Project",
+    "exportTemplateItem": "Export Template",
+    "exportError": "Internal server error. Contact your server administrator to resolve server or network problem.",
+    "mediaLibraryItem": "Media Library",
+    "iconManagerItem": "Icon Manager",
+    "configurationItem": "Configuration",
+    "authorizationItem": "Security Settings",
+    "settingsItem": "System Settings",
+    "feedbackItem": "Feedback",
+    "aboutItem": "About Us"
+  },
+  "mediaLibrary": {
+    "headerTitle": "Media Library",
+    "categoryAll": "Show All",
+    "categoryImages": "Images Only",
+    "categoryNew": "New Category",
+    "categoryVideos": "Videos Only",
+    "submitText": "Insert Image",
+    "categories": "Categories:",
+    "addCategory": "Add New Category",
+    "uploadFiles": "Upload Files",
+    "filesCount": "Files",
+    "insertImage": "Insert Image",
+    "moveLabel": "Add to category",
+    "categoryProjectFiles": "Project files",
+    "linkDescription": "File is located in the project directory",
+    "dropzoneLabel": "Add files to media gallery",
+    "emptyLabel": "Drag file to display",
+    "downloadProjectItemsTooltip": "Upload all project media files into gallery",
+    "unsplashPhotos": "Photos from Unsplash",
+    "unsplashSearchPlaceholder": "Search",
+    "unsplashServiceError": "Service unavailable. Please, try again later.",
+    "unsplashNoItemsFoundError": "No items found",
+    "unsplashDownloadTooltip": "Download",
+    "unsplashDownloadedTooltip": "Downloaded",
+    "unsplashDownloadError": "Error downloading selected image. Please, try again later.",
+    "unsplashLoadMore": "Load More",
+    "unsplashBack": "Back"
+  },
+  "pageManager": {
+    "page": "Page",
+    "pages": "Pages",
+    "searchPlaceholder": "Filter pages",
+    "addPage": "Add New Page",
+    "all": "All"
+  },
+  "breadcrumbs": {
+    "pages": "Pages"
+  },
+  "pageStarterScreen": {
+    "title": "Let's start building your page",
+    "subtitle": "Click on any preset below to add a block."
+  },
+  "publish": {
+    "buttonText": "Publish Site",
+    "buttonTooltip": "Publish to server with Novi Builder",
+    "errorUnableToPublish": "Unable to publish site.",
+    "errorWrongPath": "Its not able to publish your project into #{publishPath}. Please, choose another one or contact your server administrator",
+    "errorNoPermission": "Not enough permisіions to publish your project. Contact your server administrator to resolve this problem",
+    "errorZipOpen": "Failed to publish your site. Please check the free storage space of your hosting server or contact your server administrator",
+    "internalServerError": "Internal server error. Contact your server administrator to resolve server or network problem."
+  },
+  "repository": {
+    "itemName": "Preset",
+    "itemsName": "Presets",
+    "filterPlaceholder": "Filter presets",
+    "addNewItem": "Add New Preset",
+    "all": "All",
+    "emptyItems": "No items found ..."
+  },
+  "textEditor": {
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "linkTooltip": "Set Link",
+    "colorTooltip": "Change Color",
+    "fontTooltip": "Change Font",
+    "textAlignTooltip": "Change Text Align",
+    "textTransformTooltip": "Change Text Case",
+    "linkTool": {
+      "title": "Link change",
+      "tooltip": "Link change",
+      "header": "Link change",
+      "body": {
+        "linkType": "Link type",
+        "pagesTabTitle": "Pages",
+        "favoritesTabTitle": "Favorites",
+        "customTabTitle": "URL",
+        "pagesLabel": "Select page from project:",
+        "linksLabel": "Select from favorite links:",
+        "inputLabel": "URL:",
+        "openInNewTab": "Open in new tab",
+        "removeLink": "Delete link"
+      }
+    },
+    "fontTool": {
+      "tooltip": "Change font",
+      "title": "Font change",
+      "fontFamily": "Font family",
+      "fontWeight": "Bold font weight",
+      "fontSize": "Font size",
+      "lineHeight": "Line height",
+      "letterSpacing": "Letter spacing",
+      "addFonts": "Add fonts..."
+    }
+  },
+  "resizer": {
+    "tooltip": "Change Resolution",
+    "mobile": "Mobile (Portrait)",
+    "mobileLandscape": "Mobile (Landscape)",
+    "tablet": "Tablet (Portrait)",
+    "tabletLandscape": "Tablet (Landscape)",
+    "laptop": "Laptop",
+    "desktop": "Desktop",
+    "desktopFullHd": "Desktop FULL-HD"
+  },
+  "untitled": "Untitled",
+  "copy": "Copy",
+  "file": "file",
+  "files": "files",
+  "contextMenu": {
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "pasteBefore": "Paste Before",
+    "pasteInside": "Paste Inside",
+    "pasteAfter": "Paste After",
+    "forceHover": "Force \"hover\" state",
+    "forceDefault": "Force default state",
+    "delete": "Delete",
+    "duplicate": "Duplicate",
+    "sourceCode": "Source Code",
+    "selectParent": "Select Parent",
+    "saveAsPreset": "Save as Preset",
+    "rename": "Rename",
+    "setHomePage": "Set as home page",
+    "previewAdd": "Upload Preview...",
+    "pageSettings": "Page Settings...",
+    "edit": "Edit...",
+    "projectLayers": "Project Layers...",
+    "cropImage": "Crop Image",
+    "deleteFromCategory": "Delete #{itemText} from category",
+    "deleteCompletely": "Delete #{itemText} completely",
+    "clearCategory": "Clear category",
+    "deleteCategory": "Delete category",
+    "resizeImage": "Reduce image",
+    "copyLink": "Copy link"
+  },
+  "snackbar": {
+    "linkCopied": "Link copied to clipboard",
+    "projectSaved": "Project saved successfully",
+    "securitySettingsSaved": "Security settings saved"
+  },
+  "dialogs": {
+    "insertPreset": {
+      "searchPlaceholder": "Filter presets...",
+      "header": "Insert Preset"
+    },
+    "demoMode": {
+      "header": "Demo Restrictions",
+      "body": "This feature is disabled.\n Purchase template to get an access to it.",
+      "cancelButton": "Dismiss"
+    },
+    "fatalError": {
+      "header": "Fatal Error",
+      "submitButton": "Restart Novi",
+      "cancelButton": "Dismiss"
+    },
+    "success": {
+      "header": "Success",
+      "cancelButton": "OK"
+    },
+    "error": {
+      "header": "Error",
+      "cancelButton": "Dismiss"
+    },
+    "warning": {
+      "header": "Warning",
+      "submitButton": "Restart Novi",
+      "cancelButton": "Dismiss"
+    },
+    "browserWarning": {
+      "header": "Warning!",
+      "body": "To have a better experience in Novi Builder we recommend using Google Chrome 56+ or Safari 10+. You may continue using our builder but some features will not be available",
+      "cancelButton": "Continue Anyway"
+    },
+    "sessionChangesDiscard": {
+      "header": "Discard changes",
+      "body": "Are you sure you want to discard all unsaved changes?",
+      "submitButton": "Yes",
+      "cancelButton": "No"
+    },
+    "projectDoesntExists": {
+      "header": "Project doesn't exists",
+      "body": "Project '#{name}' does not exist.\n Check your Novi config.json data.",
+      "submitButton": "Restart Novi"
+    },
+    "projectConfiguration": {
+      "header": "Settings",
+      "body": {
+        "generalSettings": "General",
+        "projectName": "Project Name:",
+        "publishTitle": "Publish",
+        "publishPathLabel": "Publish path:",
+        "publishComputedPathLabel": "Your site will be published to:",
+        "publishPathValidationError": "You have entered an invalid path or a path to another server.",
+        "publishPromtSkip": "Disable confirmation before publish",
+        "mediaDir": "Image directory path:",
+        "videoDir": "Video directory path:",
+        "fontDir": "Font directory path:",
+        "cssDir": "Style directory path:",
+        "codeTemplates": "File and Code Templates",
+        "codeTemplatesDescription": "Specify special file and code templates for current project",
+        "newPageTemplate": "New Page Template:",
+        "layers": "Project Layers",
+        "layersTable": {
+          "name": "Name",
+          "element": "Element",
+          "canBeInsertedTo": "Can Be Inserted To"
+        },
+        "pageContainer": "Page container",
+        "layersDescription": "Project Layers helps organize your project. By Linking elements via CSS selectors, you able to restrict element selection and nesting rules. You always can disable this rules by simply clicking your elements with hold CTRL/CMD key.",
+        "layerPresetsDescription": "If your project includes specific CSS framework for layout and markup, try our preconfigured layers:",
+        "seoTitle": "SEO",
+        "sitemapTitle": "Sitemap",
+        "sitemapDomain": "Sitemap Domain (for correct work of sitemap.xml file specify a valid domain where you launch your website.)",
+        "sitemapFullPath": "Generated sitemap.xml file will be placed here:",
+        "homePagePriority": "Home Page Priority",
+        "homePageChangeFrequency": "Home Page Change Frequency",
+        "otherPagesPriority": "Other Pages Priority",
+        "otherPagesChangeFrequency": "Other Pages Change Frequency",
+        "generate": "Generate",
+        "notSelected": "Not Selected",
+        "linkToSitemap": "Link to sitemap",
+        "sitemapGenerated": "Your sitemap was generated successfully.",
+        "sitemapNotGenerated": "Your sitemap was not generated. Check your settings.",
+        "sitemapIncorrectSettings": "Please, check your sitemap settings.",
+        "recommendedRobotsTxt": "Recommended robots.txt",
+        "instructCrawlersToNotIndex": "Instruct web crawlers not to access and index your website",
+        "urlToSitemap": "URL to your sitemap.xml file",
+        "customCodeForRobotsTxt": "Custom code in robots.txt file",
+        "linkToRobotsTxt": "Link to robots.txt",
+        "robotsTxtGenerated": "Your robots.txt file was generated successfully.",
+        "robotsTxtNotGenerated": "Your robots.txt file was not generated. Check your settings.",
+        "analyticsTitle": "Analytics",
+        "googleAnalyticsId": "Google Analytics Tracking ID",
+        "googleAnalyticsIdDesc": "e.g. UA-1234587-77",
+        "googleWebmasterToolsTag": "Google Webmaster Tools HTML Tag",
+        "googleWebmasterToolsTagDesc": "e.g. UAdkfdsgsgFewfsdfxg",
+        "googleTagManagerId": "Google Tag Manager ID",
+        "googleTagManagerIdDesc": "e.g. GTM-A1BCDEF",
+        "facebookPixelId": "Facebook Pixel ID",
+        "facebookPixelIdDesc": "e.g. 345678909876543",
+        "projectSettingsLabel": "Project",
+        "systemSettingsLabel": "System",
+        "publishSkipMessage": "Do not display confirmation window before publishing",
+        "fontsDescription": "You can easily add any Google fonts to your projects using the field below. The most popular fonts:",
+        "fontsTitle": "Google fonts",
+        "fontsLabel": "Project fonts",
+        "fontsAdvancedLabel": "Show advanced settings:",
+        "fontsNotSelected": "Choose one or several fonts for advanced settings.",
+        "switcher": {
+          "on": "Yes",
+          "off": "No"
+        },
+        "systemSettings": {
+          "startupTitle": "Startup / Shutdown",
+          "startupDescription": "Change application behavior during startup or shutdown",
+          "showTipsOnStartup": "Show introduction at startup",
+          "checkForUpdates": "Check for updates availability",
+          "languageTitle": "Language",
+          "languageDescription": "Change current application language:"
+        }
+      },
+      "cancelButton": "Cancel",
+      "submitButton": "Save Changes"
+    },
+    "pageSettings": {
+      "header": "Page Settings",
+      "body": {
+        "generalSettings": "General Settings",
+        "pageName": "Page name:",
+        "fileName": "File name:",
+        "useAsHomePage": "Use as Home Page?",
+        "pageNameValidationError": "File name is not valid",
+        "pageNameDuplicationError": "File with such name already exists in your project.",
+        "favicon": "Favicon:",
+        "seoSettings": "Seo Settings",
+        "seoSettingsDescription": "Specify this page's keywords and description",
+        "metaKeywords": "Meta Keywords:",
+        "metaDescription": "Meta Description:"
+      },
+      "cancelButton": "Cancel",
+      "submitButton": "Save Changes"
+    },
+    "securitySettings": {
+      "header": "Security settings",
+      "body": {
+        "title": "Security",
+        "description": "Change the password and the system boot options. To apply changes, you must enter the current password",
+        "changeSettingsLabel": "Change Settings",
+        "changePasswordLabel": "Change Password",
+        "oldPassLabel": "Current Password",
+        "passLabel": "New Password",
+        "enableAuthorization": "Enable password authorization",
+        "enableDemoMode": "Enable demo mode",
+        "authorizationError": "Password is wrong"
+      },
+      "cancelButton": "Cancel",
+      "submitButton": "Save Changes"
+    },
+    "pageCreate": {
+      "header": "Create New Page",
+      "body": "Type a name to get started with new page",
+      "cancelButton": "Cancel",
+      "submitButton": "Create Page"
+    },
+    "deletePage": {
+      "header": "Delete Page",
+      "body": "This action can not be undone.Are you sure?",
+      "cancelButton": "No",
+      "submitButton": "Yes"
+    },
+    "presetDelete": {
+      "header": "Delete Preset",
+      "body": "This action can not be undone. Are you sure?",
+      "cancelButton": "No",
+      "submitButton": "Yes"
+    },
+    "presetSave": {
+      "header": "Save Element as Preset",
+      "body": {
+        "title": "Preset name:",
+        "category": "Keywords:",
+        "preview": "Preset preview:",
+        "code": "HTML Code:",
+        "reload": "Deploy on preset insertion"
+      },
+      "cancelButton": "Cancel",
+      "submitButton": "Save Preset"
+    },
+    "presetValidation": {
+      "header": "Failed to save preset",
+      "body": "Failed to save preset. All fields of the\n previous dialog must be filled in",
+      "submitButton": "Got It"
+    },
+    "templateExportDownload": {
+      "header": "Export Template",
+      "body": "Your template.zip is ready to download.\n Upload its content to your server.",
+      "submitButton": "Download"
+    },
+    "templateExportZipping": {
+      "header": "Export template",
+      "body": "Zipping your template.\n Meanwhile, you can get a cup of coffee."
+    },
+    "templateExportError": {
+      "header": "Export Template",
+      "body": "Unable to export. Create at least one page.",
+      "cancelButton": "Dismiss"
+    },
+    "projectExportDownload": {
+      "header": "Export Project",
+      "body": "Your project.zip is ready to download.\n Upload its content to your server.",
+      "submitButton": "Download"
+    },
+    "projectExportZipping": {
+      "header": "Export project",
+      "body": "Zipping your project.\n Meanwhile, you can get a cup of coffee."
+    },
+    "projectExportError": {
+      "header": "Export Project",
+      "body": "Unable to export. Create at least one page.",
+      "cancelButton": "Dismiss"
+    },
+    "resolutionChangeError": {
+      "header": "Operation blocked",
+      "body": "Can not change preview resolution.\n Open a page first to perform this action.",
+      "cancelButton": "Dismiss"
+    },
+    "nestingError": {
+      "header": "Operation blocked",
+      "body": "Operation blocked by HTML5 Nesting Rules.\n'#{tagName}' element cannot be nested in '#{parentTagName}'.",
+      "cancelButton": "Dismiss"
+    },
+    "publishSuccessful": {
+      "header": "Publish site",
+      "body": "Your project was successfully published to\n #{publishPath}",
+      "submitButton": "Open site"
+    },
+    "publishPromt": {
+      "header": "Publish site",
+      "body": "Your project will be published to #{publishPath}.\n All data on this address will be overwritten. Are you sure?",
+      "submitButton": "Publish site",
+      "cancelButton": "Cancel"
+    },
+    "publishProgress": {
+      "header": "Publish site",
+      "body": "Publishing ...\n Meanwhile, you can get a cup of coffee."
+    },
+    "templateImport": {
+      "header": "Import Template",
+      "body": "Press the «Choose file» to upload and import your template. Note, template will overwrite your current project files.\nThe maximum file size is 2GB.",
+      "cancelButton": "Cancel",
+      "submitButton": "Import Template"
+    },
+    "templateImportProgress": {
+      "header": "Import Template",
+      "body": {
+        "uploading": "Uploading file ...",
+        "importing": "Importing ...",
+        "message": "\nMeanwhile, you can get a cup of coffee."
+      }
+    },
+    "templateImportSuccessful": {
+      "header": "Import Template",
+      "body": "Your Template was successfully imported.\nApplication needs to be restarted to load new template.",
+      "submitButton": "Restart Novi"
+    },
+    "projectImport": {
+      "header": "Import Project",
+      "body": "Press the «Choose file» to upload and import your project. Note, template will overwrite your current project files.\nThe maximum file size is 2GB.",
+      "cancelButton": "Cancel",
+      "submitButton": "Import Project"
+    },
+    "projectImportProgress": {
+      "header": "Import Project",
+      "body": {
+        "uploading": "Uploading file ...",
+        "importing": "Importing ...",
+        "message": "\nMeanwhile, you can get a cup of coffee."
+      }
+    },
+    "projectImportSuccessful": {
+      "header": "Import Project",
+      "body": "Your Project was successfully imported.\nApplication need to be restarted to load new project.",
+      "submitButton": "Restart Novi"
+    },
+    "feedback": {
+      "header": "Send a feedback",
+      "body": {
+        "title": "Contact us",
+        "description": "Send us your question, feedback or just say hello.",
+        "email": "Your E-Mail",
+        "message": "Your Message",
+        "messagePlaceholder": "Hi, i have a question with:\n\nHi, i want to submit a bug. Steps to reproduce:\n1. \n2. \n3. \n",
+        "emailPlaceholder": "example@gmail.com"
+      },
+      "submitButton": "Send a message",
+      "cancelButton": "Cancel"
+    },
+    "feedbackProgress": {
+      "header": "Send a feedback",
+      "body": "Sending ...\nMeanwhile, you can get a cup of coffee."
+    },
+    "feedbackSuccessful": {
+      "header": "Send a feedback",
+      "body": "Your message was successfully sent. Thanks for reply.",
+      "submitButton": "Dismiss"
+    },
+    "feedbackLocalServerError": {
+      "header": "Send a feedback",
+      "body": "Hi, mate. If you have any questions, suggestions or \njust want to say hello, mail us at #{supportMail}",
+      "submitButton": "Dismiss"
+    },
+    "previewGeneration": {
+      "header": "Generating your page",
+      "body": "Generating Your page ...\n Meanwhile, you can get a cup of coffee."
+    },
+    "frameGeneration": {
+      "header": "Preparing to build",
+      "body": "Cleaning up ...\n Meanwhile, you can get a cup of coffee."
+    },
+    "updateAvailable": {
+      "header": "Application Update",
+      "body": "Version '#{version}' is available.\n We recommend that you install it now.",
+      "changeLogLinkTitle": "ChangeLog",
+      "cancelButton": "Remind later",
+      "submitButton": "Update now",
+      "checkForUpdates": "Check for Updates"
+    },
+    "updateDownloading": {
+      "header": "Application update",
+      "body": "Downloading update…#{progress}%\n Meanwhile, you can get a cup of coffee."
+    },
+    "updateError": {
+      "header": "Application update",
+      "body": "It was unable to install the update.\n Please, try again later.",
+      "cancelButton": "dismiss"
+    },
+    "updateInstalling": {
+      "header": "Application update",
+      "body": "Installing update…#{progress}%\n Meanwhile, you can get a cup of coffee."
+    },
+    "updateSuccess": {
+      "header": "Application update",
+      "body": "Update was successfully installed.\n Please, restart the application to get it on.",
+      "submitButton": "Restart Novi"
+    },
+    "mediaUploadProgress": {
+      "header": "Upload an file",
+      "body": "Uploading file ...#{progress}%\n Meanwhile, you can get a cup of coffee."
+    },
+    "upload": {
+      "header": "Upload a File",
+      "body": "Click on 'Choose File' to upload your file",
+      "cancelButton": "Cancel",
+      "maxFileSize": "\nThe maximum file size is",
+      "submitButton": "Upload File"
+    },
+    "iconsUpload": {
+      "header": "Icons Upload Dialog",
+      "body": "Press the «Choose file» to upload your icons pack. \nThe maximum file size is #{humanFileSize}.",
+      "submitButton": "Upload Icons",
+      "cancelButton": "Dismiss",
+      "importError": "Failed to import icon font! Please check all files in archive."
+    },
+    "iconsImportProgress": {
+      "header": "Import Icon Font",
+      "body": "Importing icon font...\nMeanwhile, you can get a cup of coffee."
+    },
+    "crop": {
+      "header": "Upload image",
+      "cancelButton": "Cancel",
+      "submitButton": "Crop Image",
+      "error": "Unable to crop \n Selected image is too large for processing. Increase memory_limit attribute in your php.ini file of server settings",
+      "loadingImage": "Image loading ...",
+      "keepRatio": "Keep original aspect ratio",
+      "widthLabel": "w:",
+      "heightLabel": "h:",
+      "saveOriginalImage": "Create a\ncopy of original"
+    },
+    "checkingCrop": {
+      "header": "Crop Image",
+      "body": "Check for server settings\n Meanwhile, you can get a cup of coffee."
+    },
+    "cropError": {
+      "header": "Error",
+      "submitButton": "Insert Original Image",
+      "cancelButton": "Dismiss"
+    },
+    "mediaUpload": {
+      "header": "Upload a Media",
+      "body": "Click on 'Choose File' to upload your files. \n The maximum file size is #{humanMaxFileSize}",
+      "submitButton": "Upload Media",
+      "cancelButton": "Cancel"
+    },
+    "linkPreview": {
+      "header": "Link Preview",
+      "cancelButton": "Cancel"
+    },
+    "mediaItemsDeleteConfirmation": {
+      "header": "Deletion confirmation",
+      "description": "This action cannot be undone. Are you sure?",
+      "checkboxLabel": "Delete files from the project",
+      "checkboxDescription": "In case of connecting the file on project pages, it will not be displayed.",
+      "cancelButton": "No",
+      "submitButton": "Yes"
+    },
+    "mediaCopyProgress": {
+      "header": "Adding files to the project",
+      "body": "Copying the file..."
+    },
+    "mediaLinkCopy": {
+      "header": "Copying the link",
+      "body": "File was copied to the project",
+      "cancelButton": "Cancel",
+      "submitButton": "Copy link"
+    },
+    "mediaImport": {
+      "submit": "Import",
+      "cancel": "Cancel",
+      "header": "Import confirmation",
+      "description": "This operation can take several minutes. Import of images and videos is performed from directories specified in project settings.",
+      "mediaDir": "Project images -",
+      "videoDir": "Project videos -",
+      "linkText": "Change directories path"
+    },
+    "mediaImportProgress": {
+      "header": "Project files import",
+      "body": "Importing project files... \nMeanwhile, you can drink a cup of coffee."
+    },
+    "mediaChangeProgress": {
+      "header": "Applying changes",
+      "body": "Applying changes to media file..."
+    },
+    "resize": {
+      "saveOriginalImage": "Create a copy of original",
+      "header": "Image reduction",
+      "cancelButton": "Cancel",
+      "submitButton": "Apply",
+      "error": "Unable to reduce. The selected image is too big for processing. Increase memory_limit attribute in php.ini in your server settings.",
+      "loadingImage": "Loading data...",
+      "description": "Change the image size in percents or pixels, for example 1366x768 pixels",
+      "widthLabel": "W:",
+      "heightLabel": "H:"
+    }
+  },
+  "developPanel": {
+    "presetItem": "Presets",
+    "pluginItem": "Plugins"
+  },
+  "filePicker": {
+    "title": "Choose File",
+    "placeholder": "No File Chosen"
+  },
+  "styleManager": {
+    "generalPlaceholder": "Please, select element for loading styles",
+    "clickForRefresh": "Click for refresh styles",
+    "noStylesPlaceholder": "There aren't element styles for \n choosen state"
+  },
+  "plugins": {
+    "title": "Novi Plugins",
+    "compatibleWarning": "Warning: #{brand} ver. #{dependence} is required! You are using version #{version} now.",
+    "novi-plugin-background-image": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Change Background Image",
+        "tooltip": "Change Background Image"
+      }
+    },
+    "novi-plugin-background": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Change Background",
+        "tooltip": "Change Background",
+        "header": "Change Background Color",
+        "body": {
+          "colorOption": "Color",
+          "gradientOption": "Gradient",
+          "colorPlaceholder": "Color:",
+          "bgFillType": "Background Fill Type"
+        }
+      }
+    },
+    "novi-plugin-camera-slider": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "replaceImage": {
+          "title": "Replace Slide Image",
+          "tooltip": "Replace Slide Image"
+        },
+        "addSlide": {
+          "title": "Add New Slide",
+          "tooltip": "Add Slide"
+        },
+        "removeSlide": {
+          "title": "Remove Slide",
+          "tooltip": "Remove Active Slide"
+        }
+      }
+    },
+    "novi-plugin-campaign-monitor": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "tooltip": "Change campaign monitor settings",
+        "title": "Campaign monitor settings",
+        "header": "CampaignMonitor Settings",
+        "body": {
+          "signUpUrl": "CampaignMonitor Signup Url:",
+          "inputName": "CampaignMonitor Input Name:"
+        }
+      }
+    },
+    "novi-plugin-google-map": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "mapSettingsTitle": "Google Map Settings",
+        "mapSettingsTooltip": "Change Map settings",
+        "mapSettingsHeader": "Google Map Settings",
+        "markerSettingsTitle": "Customize Markers",
+        "markerSettingsTooltip": "Customize Markers",
+        "markerSettingsHeader": "Google Map Markers Settings",
+        "mapSettingsBody": {
+          "mapCenter": "Map Center:",
+          "zoom": "Zoom:",
+          "style": "Style:",
+          "defaultStyle": "Default Style",
+          "customStyle": "Custom Style",
+          "markerIcon": "Marker Icon:",
+          "activeMarkerIcon": "Active Marker Icon:",
+          "apiKey": "API key:"
+        },
+        "markerSettingsBody": {
+          "markers": "Markers:",
+          "markerLocation": "Marker Location*:",
+          "markerDescription": "Marker Description:",
+          "addMarkerText": "Add marker"
+        }
+      }
+    },
+    "novi-plugin-icon-manager": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Replace icon",
+        "tooltip": "Replace Icon"
+      }
+    },
+    "novi-plugin-iframe": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Edit Iframe source",
+        "tooltip": "Change Iframe Source"
+      }
+    },
+    "novi-plugin-image": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Replace image",
+        "tooltip": "Replace Image"
+      }
+    },
+    "novi-plugin-light-gallery": {
+      "settings": {
+        "groupPlaceholder": "Apply this plugin to lighgallery group which are matching selector:",
+        "albumPlaceholder": "Apply this plugin to lighgallery album which are matching selector:",
+        "itemPlaceholder": "Apply this plugin to lighgallery item which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "group": {
+          "title": "Gallery Settings",
+          "tooltip": "Gallery Settings",
+          "header": "Gallery Settings",
+          "body": {
+            "animation": "Gallery slide animation:",
+            "thumbnails": "Thumbnails:",
+            "loop": "Loop:",
+            "autoplay": "Autoplay:",
+            "autoplayDelay": "Gallery Autoplay Delay, seconds"
+          }
+        },
+        "album": {
+          "title": "Album Settings",
+          "tooltip": "Album Settings",
+          "header": "Album Settings",
+          "body": {
+            "addItem": "Add gallery item"
+          }
+        },
+        "item": {
+          "title": "Edit Gallery Item",
+          "tooltip": "Edit Gallery Item",
+          "header": "Gallery Item",
+          "body": {
+            "src": "Large image or video source:",
+            "thumb": "Thumbnail image source:",
+            "openLibrary": "Choose from Media Library",
+            "description": "Item Description (HTML markup is supported):",
+            "backToAlbum": "Back to album"
+          },
+          "linkPreviewTooltip": "Open link preview"
+        }
+      }
+    },
+    "novi-plugin-label": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Edit Label Text",
+        "tooltip": "Edit Label Text"
+      }
+    },
+    "novi-plugin-link": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings",
+        "favoriteLinksTitle": "Favorite Links",
+        "applyToProjectElements": "Apply to all project links",
+        "applyToProjectElementsDescription": "(The change will affect all your project links. If the link is deleted, it's address in your project will be replaced by '#')",
+        "duplicateError": "Duplicated links found",
+        "linksCountLabel": "links in project:",
+        "favoriteItemLinkTitle": "Name:",
+        "favoriteItemLinkValue": "URL:"
+      },
+      "editor": {
+        "title": "Change Link",
+        "tooltip": "Change Link",
+        "header": "Change Link",
+        "body": {
+          "linkType": "Link type",
+          "pagesTabTitle": "Pages",
+          "favoritesTabTitle": "Favorites",
+          "customTabTitle": "URL",
+          "pagesLabel": "Choose from project page:",
+          "linksLabel": "Choose from favorite links:",
+          "inputLabel": "URL:",
+          "openInNewTab": "Open link in new tab"
+        }
+      }
+    },
+    "novi-plugin-material-parallax": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Replace Background Image",
+        "tooltip": "Replace Background Image"
+      }
+    },
+    "novi-plugin-mailchimp": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Mailchimp settings",
+        "tooltip": "Change mailchimp signup url",
+        "header": "Mailchimp Settings",
+        "body": {
+          "signUpUrl": "Mailchimp signup url:"
+        }
+      }
+    },
+    "novi-plugin-owl-carousel": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "settings": {
+          "title": "Owl Carousel Settings",
+          "tooltip": "Owl Carousel Settings",
+          "header": "Owl Carousel Settings",
+          "body": {
+            "visibleItems": "Visible items:",
+            "indent": "Indent between items (px):",
+            "loop": "Enable loop (in Preview Mode)",
+            "autoplay": "Enable autoplay (in Preview Mode)",
+            "autoplayDelay": " Carousel Autoplay Delay, seconds"
+          }
+        },
+        "addSlide": {
+          "title": "Add New Slide",
+          "tooltip": "Add Slide"
+        },
+        "removeSlide": {
+          "title": "Remove Slide",
+          "tooltip": "Remove Slide"
+        },
+        "moveSlideLeft": {
+          "title": "Move Slide Left",
+          "tooltip": "Move Slide Left"
+        },
+        "moveSlideRight": {
+          "title": "Move Slide Right",
+          "tooltip": "Move Slide Right"
+        }
+      }
+    },
+    "novi-plugin-rd-facebook": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Facebook settings",
+        "tooltip": "Change Facebook settings",
+        "header": "Facebook Settings",
+        "body": {
+          "pageType": "Facebook Page Type:",
+          "group": "Facebook Group:",
+          "page": "Facebook Page:",
+          "accessToken": "Facebook Access Token:"
+        }
+      }
+    },
+    "novi-plugin-rd-instafeed": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Change instagram setting",
+        "tooltip": "Instagram settings",
+        "header": "Instagram Settings",
+        "body": {
+          "postType": "Show Instagram Posts by:",
+          "user": "Instagram User Name:",
+          "tag": "Instagram Tag:"
+        }
+      }
+    },
+    "novi-plugin-rd-mailform": {
+      "settings": {
+        "pluginElement": "Apply this plugin to elements which are matching selector:",
+        "configPath": "Path to RD Mailform configuration file:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Mailform settings",
+        "tooltip": "Change Mailform settings",
+        "header": "RD Mailform Settings",
+        "body": {
+          "emailAddress": "Send emails to: (affects all RD Mailforms in your website)",
+          "smtpUse": "Use SMTP server for email sending:",
+          "host": "Host:",
+          "port": "Port:",
+          "userName": "User Name:",
+          "pass": "Password:"
+        }
+      }
+    },
+    "novi-plugin-rd-twitterfeed": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Twitter settings",
+        "tooltip": "Change twitter user name",
+        "header": "RD Twitter Settings",
+        "body": {
+          "userName": "Twitter User Name:"
+        }
+      }
+    },
+    "novi-plugin-swiper-slider": {
+      "settings": {
+        "pluginElement": "Apply this plugin to elements which are matching selector:",
+        "effects": "Available transition effects:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "imageReplace": {
+          "title": "Replace Slide Image",
+          "tooltip": "Replace Slide Image"
+        },
+        "addSlide": {
+          "title": "Add New Slide",
+          "tooltip": "Add Slide"
+        },
+        "removeSlide": {
+          "title": "Remove Active Slide",
+          "tooltip": "Remove Slide"
+        },
+        "settings": {
+          "title": "Slider Settings",
+          "tooltip": "Slider Settings",
+          "header": "Swiper Slider Settings",
+          "body": {
+            "effect": "Slider transition effect:",
+            "autoPlay": "Enable autoplay(in Preview Mode)",
+            "autoPlayDelay": "Slider Autoplay Delay, seconds"
+          }
+        }
+      }
+    },
+    "novi-plugin-vide": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "replaceVideo": {
+          "title": "Replace Video",
+          "tooltip": "Replace Video"
+        },
+        "replacePoster": {
+          "title": "Replace Poster",
+          "tooltip": "Replace Poster Image"
+        }
+      }
+    },
+    "novi-plugin-countdown": {
+      "settings": {
+        "inputPlaceholder": "Apply this plugin to elements which are matching selector:",
+        "submitButton": "Save Settings"
+      },
+      "editor": {
+        "title": "Countdown settings",
+        "tooltip": "Change Countdown settings",
+        "header": "Countdown Settings",
+        "body": {
+          "type": "Type:",
+          "time": " Time (Example - 1 Jan 1970 00:00):",
+          "error": "Invalid time format!"
+        }
+      }
+    }
+  }
+}

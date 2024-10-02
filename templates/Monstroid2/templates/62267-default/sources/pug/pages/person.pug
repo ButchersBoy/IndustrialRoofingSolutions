@@ -1,0 +1,259 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Person'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('brian-king-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('amanda-smith-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('george-nelson-418x315')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+	='\n'
+	
+	+divider
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						+jpg('barbara-young-480x362')
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Barbara Young
+							p.thumb__subtitle Creative Director
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						+jpg('bryan-thompson-480x362')
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Bryan Thompson
+							p.thumb__subtitle Developer
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						+jpg('paul-wallker-418x315')
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Paul Walker
+							p.thumb__subtitle Marketing
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+	
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container-fluid
+			.row.row-xl-condensed.row-30
+				.col-md-6.col-lg-4.col-xl-3
+					// Thumb classic
+					.thumb.thumb-classic
+						figure.thumb-classic__image
+							+jpg('barbara-young-480x362')
+						
+						.thumb-classic__caption
+							p.thumb__title: a(href=teamMember) Barbara Young
+							p.thumb__subtitle Creative Director
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+				.col-md-6.col-lg-4.col-xl-3
+					// Thumb classic
+					.thumb.thumb-classic
+						figure.thumb-classic__image
+							+jpg('bryan-thompson-480x362')
+						
+						.thumb-classic__caption
+							p.thumb__title: a(href=teamMember) Bryan Thompson
+							p.thumb__subtitle Developer
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+				
+				.col-md-6.col-lg-4.col-xl-3
+					// Thumb classic
+					.thumb.thumb-classic
+						figure.thumb-classic__image
+							+jpg('amanda-smith-480x362')
+						
+						.thumb-classic__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+				
+				.col-md-6.col-lg-4.col-xl-3
+					// Thumb classic
+					.thumb.thumb-classic
+						figure.thumb-classic__image
+							+jpg('brian-king-480x362')
+						
+						.thumb-classic__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+							p Non-standard approaches and the most complicated cases – my mission is to create balance between functionality and convenience for users to get a top-notch product
+							
+							+list-inline-icon({
+								list_class: ['list-inline-sm', 'thumb-corporate__list'],
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p'
+								]
+							})
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

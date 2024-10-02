@@ -1,0 +1,69 @@
+extends  ../_skeleton
+include ../elements/_ui-thumbnail
+
+block variables
+	- pageName = 'Gallery'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+
+	+breadcrumbs
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container.isotope-wrap.text-center
+			.row.row-30
+				.col-sm-12
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true', data-custom-toggle-disable-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', href='#') All
+									li: a(data-isotope-filter='Category 1', href='#') Farm
+									li: a(data-isotope-filter='Category 2', href='#') Products
+									li: a(data-isotope-filter='Category 3', href='#') Other
+
+				//- Isotope Content
+				.col-sm-12
+					.row.isotope.isotope-gutter-default(data-lightgallery='group', data-lg-thumbnail='false')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail({img: 'gallery-grid-1-370x278', original: 'grid-gallery-01-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail({img: 'gallery-grid-2-370x278', original: 'grid-gallery-02-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail({img: 'gallery-grid-3-370x278', original: 'grid-gallery-03-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail({img: 'gallery-grid-4-370x278', original: 'grid-gallery-04-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail({img: 'gallery-grid-5-370x278', original: 'grid-gallery-05-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail({img: 'gallery-grid-6-370x278', original: 'grid-gallery-06-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail({img: 'gallery-grid-7-370x278', original: 'grid-gallery-07-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail({img: 'gallery-grid-8-370x278', original: 'grid-gallery-08-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail({img: 'gallery-grid-9-370x278', original: 'grid-gallery-09-original'})
+
+
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

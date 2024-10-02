@@ -1,0 +1,27 @@
+// RD Audio
+.post-audio
+  // RD Audio
+  .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+    .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+      .rd-audio-controls.text-center
+        .rd-audio-controls-left
+          // Play\Pause button
+          a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+        .rd-audio-progress-bar-wrap
+          // Time
+          .rd-audio-time
+            // currentTime
+            span.rd-audio-current-time 00:00
+          // Progress bar
+          .rd-audio-progress-bar
+        // Volume button
+        a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+        // Volume bar
+        .rd-audio-volume-bar
+        .rd-audio-controls-righ.d-none
+          // Playlist button
+          a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+      .rd-audio-playlist-wrap
+        h6.rd-audio-playlist-title Playlist
+        ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+          li(data-rd-audio-src='audio/sound.mp3')

@@ -1,0 +1,212 @@
+/*
+*
+* Tabs
+* --------------------------------------------------
+*/
+
+//== Tabs variables
+//
+//##
+
+// Base
+$tabs-color: $black;
+$tabs-background: transparent;
+$tabs-font: 400 12px/20px $font-family-sans-serif-2;
+$tabs-padding: 25px 22px;
+
+// Horizontal tabs
+$tabs-horizontal-active-color: $primary;
+$tabs-horizontal-active-background: transparent;
+$tabs-horizontal-background: transparent;
+
+// Vertical tabs
+$tabs-vertical-active-color: $gray-dark;
+$tabs-vertical-active-line: $gray-light;
+
+// Base styles
+//--------------------------------------
+
+.tabs-custom {
+  .nav-custom {
+    & > .nav-item, & > .nav-item > .nav-link {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .nav-custom-tabs {
+    font-size: 0;
+    line-height: 0;
+
+    .nav-item {
+      margin: -1px 0;
+
+      & + .nav-item {
+        margin-top: 7px;
+
+        @include media-breakpoint-up(md) {
+          margin-top: 0;
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+}
+
+.tabs-custom {
+  .nav-custom-tabs {
+    .nav-item a {
+      position: relative;
+      padding: 15px 25px;
+      font: $tabs-font;
+      color: $white;
+      text-align: center;
+      vertical-align: middle;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: .3s all ease;
+      background-color: $gray-dark;
+    }
+
+    .nav-item .nav-link:hover,
+    .nav-item .nav-link.active {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .nav-custom-tabs {
+      .nav-item .nav-link {
+        background-color: $tabs-background;
+        color: $tabs-color;
+        padding: $tabs-padding;
+      }
+      .nav-item .nav-link:hover,
+      .nav-item .nav-link.active {
+        color: $primary;
+        background-color: $tabs-background;
+      }
+    }
+  }
+}
+
+.tab-content {
+  background-color: transparent;
+  padding: 25px 15px 25px;
+  border:  1px solid $gray-1;;
+
+  @include media-breakpoint-up(md) {
+    padding: 60px 0 30px;
+    border:0;
+    border-top: 1px solid $gray-1;
+
+    p + h5 {
+      margin-top: 45px;
+    }
+  }
+}
+
+// Horizontal tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-horizontal {
+    @include media-breakpoint-up(md) {
+      .nav-custom-tabs {
+        position: relative;
+        justify-content: center;
+        display: flex;
+
+        .nav-item .nav-link {
+          display: block;
+          background: $tabs-horizontal-background;
+        }
+
+        .nav-item .nav-link:hover,
+        .nav-item .nav-link.active {
+          color: $tabs-horizontal-active-color;
+          background: $tabs-horizontal-active-background;
+          border-color: $tabs-horizontal-active-background;
+
+          &:before {
+            transform: translate(-50%, 0);
+            opacity: 1;
+          }
+        }
+      }
+
+      .nav-custom__align-left {
+        justify-content: flex-start;
+
+        .nav-item:first-of-type .nav-link {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+// Vertical tabs
+//--------------------------------------
+
+.tabs-custom {
+  &.tabs-vertical {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+
+      .nav-custom-tabs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        flex-shrink: 0;
+        max-width: 50%;
+      }
+
+      .tab-content {
+        flex-grow: 1;
+        padding-top: 26px;
+      }
+
+      .nav-custom-tabs {
+        text-align: left;
+
+        .nav-item {
+          //background-color: $tabs-vertical-active-line;
+
+          .nav-link:hover, .nav-link.active {
+            color: $tabs-vertical-active-color;
+            background-color: $tabs-vertical-active-line;
+          }
+        }
+
+        .nav-item + .nav-item {
+          margin-top: 12px;
+          margin-left: 0;
+        }
+
+        .nav-item .nav-link {
+          display: inline-block;
+          text-align: left;
+          padding-left: 35px;
+          @include media-breakpoint-up(xl) {
+            min-width: 160px;
+          }
+        }
+      }
+
+      .tab-content {
+        padding: 26px 55px 25px 30px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .nav-custom-tabs {
+        min-width: 170px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Quote post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-default
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main.section-divided__main_full
+          section.section-sm.post-single-body
+            h3 The Dilettante Judge
+           
+            .post-quote
+              // Quote default
+              .quote-default 
+                +quote-mark('quote-default__mark')
+                .quote-default__text: p.q.heading-4 At his best, man is the noblest of all animals; separated from law and justice he is the worst.
+            
+            p.first-letter The Atlanta Journal-Constitution last week reported on the plight of 52-year-old Fulton County resident Linda Ford and what the paper described as an “outlandish” fine that had been imposed by Grantville Municipal Court Judge Lisa R. Reeves. The woman repeatedly tried to pay the fine at once, but she just missed a deadline… To understand how the case unfolded, let’s roll back to the last fall, when Ms. Ford’s troubles began.
+
+            p It was then, when on an unfortunate occasion she’s been driving past the local police department building, as the Grantville, TX police officer pulled her over and accused of missing a plate.
+
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-sm fa-facebook",
+                'icon-sm fa-twitter',
+                'icon-sm fa-google-plus',
+                'icon-sm fa-vimeo',
+                'icon-sm fa-youtube',
+                'icon-sm fa-pinterest-p']
+            })
+
+          include ../sections/_section-blog-post-comment
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

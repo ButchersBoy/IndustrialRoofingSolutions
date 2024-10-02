@@ -1,0 +1,225 @@
+//
+// Table custom
+// --------------------------------------------------
+
+$table-head-padding:            33px 24px;
+$table-cell-padding:            17px 24px 18px;
+$table-condensed-cell-padding:  5px;
+
+$table-bg:                      $white;
+$table-bg-accent:               $gray-lighter;
+$table-bg-hover:                $secondary;
+$table-bg-active:               $table-bg-hover;
+
+$table-border-color:            #d9d9d9;
+
+$schedule-cell-min-height:      46px;
+$schedule-inner-offset:         12px;
+$schedule-coll-items:           8;
+
+
+* + .table-schedule{
+  margin-top: 50px;
+}
+
+.table-schedule{
+
+  // Large <991px
+  @include media-breakpoint-down(md) {
+    overflow: auto;
+  }
+
+  display: flex;
+}
+
+
+.schedule__col{
+  @include media-breakpoint-up(lg) {
+    width: 100% / $schedule-coll-items;
+  }
+
+  & + &{
+    margin-left: $schedule-inner-offset;
+  }
+}
+
+
+.schedule__col .schedule__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: $schedule-cell-min-height;
+  border: 1px solid #ECECEE;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  color: $white;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+  }
+
+  > :first-child{
+    display: table;
+  }
+
+  .time{
+    font-size: 14px;
+  }
+
+  & + .schedule__cell{
+    margin-top: $schedule-inner-offset;
+  }
+
+  &--sys{
+    color: $black;
+    font-size: 14px;
+    border: none;
+    background-color: #f3f3f3;
+    white-space: nowrap;
+  }
+
+
+  // Cell sizes
+  //
+
+  &--2{
+    border: none;
+    height: ($schedule-cell-min-height * 2) + $schedule-inner-offset;
+  }
+
+  &--3{
+    border: none;
+    height: ($schedule-cell-min-height * 3) + ($schedule-inner-offset *2 );
+  }
+
+
+  // Cell colors
+  //
+
+  &--style-1{ background-color: $primary; }
+  &--style-2{ background-color: rgb(70, 74, 82) }
+  &--style-3{ background-color: rgb(254, 172, 77); }
+  &--style-4{ background-color: rgb(252, 215, 105); }
+  &--style-5{ background-color: rgb(37, 37, 37); }
+}
+
+
+.table-custom {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  background: $table-bg;
+
+  th,
+  td {
+    color: $black;
+    background: $table-bg;
+  }
+
+  th {
+    padding: 25px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      padding: $table-head-padding;
+    }
+  }
+
+  td {
+    padding: $table-cell-padding;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  tfoot td {
+    font-weight: 700;
+  }
+}
+
+// Styles
+.table-custom-secondary {
+  th {
+    color: $white;
+    background: $secondary;
+  }
+}
+
+.table-custom-lighter {
+  thead th {
+    background: $table-bg-accent;
+  }
+
+  td + td {
+    border-left: 1px solid $table-border-color;
+  }
+}
+
+.table-custom-bordered {
+  border: 1px solid $table-border-color;
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  tbody > tr:first-of-type > td {
+    border-top: 0;
+  }
+}
+
+.table-custom-striped {
+  tbody tr:nth-of-type(odd) td {
+    background: transparent;
+  }
+
+  tbody tr:nth-of-type(even) td {
+    background: $table-bg-accent;
+  }
+
+  tbody td {
+    border: 0;
+  }
+}
+
+// Modificators
+.table-round {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.table-custom-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+
+  // Medium <768px
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $table-border-color;
+
+    // Tighten up spacing
+    > .table-custom {
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

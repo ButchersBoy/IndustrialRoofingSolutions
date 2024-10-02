@@ -1,0 +1,19 @@
+mixin course( obj )
+  article.course
+    .course-img: a(href= obj.image.link ): +img( obj.image.name )
+    .course-body
+      .course-body-meta
+        div
+          .unit.unit-spacing-xs
+            .unit-left: +img( obj.meta.image )
+            .unit-body: a( href= obj.meta.link )= obj.meta.name
+        .course-price: span= obj.price.value
+      .course-title: h5: a( href= obj.title.link )= obj.title.text
+      .course-divider
+      .course-footer
+        ul.course-rating
+          - for ( var i = 0; i < obj.rating.length; i++)
+            li: span.icon( class= obj.rating[i] )
+        .course-amount
+          span.icon.fa-users
+          a( href= obj.users.link )= obj.users.count

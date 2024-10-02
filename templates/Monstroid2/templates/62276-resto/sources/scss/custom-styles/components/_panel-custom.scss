@@ -1,0 +1,218 @@
+/*
+*
+* Panels Custom
+* --------------------------------------------------
+*/
+
+//== Panel variables
+//
+//##
+
+$panel-title-color: $gray-dark;
+$panel-title-background: $white;
+$panel-title-padding: 22px 0 20px;
+$panel-title-sm-padding: 55px 0 55px 0;
+$panel-active-background: transparent;
+$panel-arrow: '\e937';
+$panel-arrow-font: 400 24px/24px $font-icons;
+$panel-body-padding: 15px 25px 30px 0;
+$panel-body-sm-padding: 30px 30px 22px 0;
+
+
+// Base Style
+// --------------------------------------------------
+
+.panel {
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.panel-custom {
+  padding: $panel-title-padding;
+
+  @include media-breakpoint-up(md) {
+    padding: $panel-title-sm-padding;
+  }
+
+  & + .panel-custom {
+    border-top: 1px solid $gray-1;
+    margin-top: 0;
+  }
+
+  .panel-custom-title {
+
+    > a {
+      display: block;
+      position: relative;
+      padding-right: 40px;
+      color: $panel-title-color;
+      background: $panel-active-background;
+      transition: .3s all ease;
+
+      &:before {
+        content: $panel-arrow;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font: $panel-arrow-font;
+        transform: translateY(-50%) rotate(0deg);
+        transition: .3s all ease-in-out;
+      }
+
+      span {
+        padding-left: 8px;
+        color: $gray;
+        font-size: 14px;
+      }
+
+      &.collapsed {
+        background: $panel-title-background;
+
+        &:before {
+          content: '\e936';
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        //background: $panel-active-background;
+      }
+    }
+  }
+
+  .panel-custom-collapse {
+    background: $panel-active-background;
+
+    .panel-custom-body {
+      padding: $panel-body-padding;
+
+      @include media-breakpoint-up(md) {
+        padding: $panel-body-sm-padding;
+      }
+    }
+  }
+}
+
+h3 + .panel-custom-group-wrap {
+  margin-top: 30px;
+}
+
+//panel classic
+.panel-classic {
+  .panel-custom-title {
+
+    > a {
+      padding-right: 35px;
+      padding-left: 0;
+
+      &:before {
+        content: "\e93c";
+        top: 47%;
+        left: auto;
+        right: 0;
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      &.collapsed {
+        &:before {
+          content: '\e93c';
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $gray; 
+        //background: $panel-active-background;
+      }
+    }
+  }
+}
+
+
+
+//panel classic aside
+//-------------------------------
+.panel-classic__aside {
+  padding: 0;
+  
+  & + .panel-classic__aside {
+    border-top: 0;
+    margin-top: 9px;
+  }
+  
+  .panel-custom-title {
+
+    > a {
+      padding: 25px 50px 30px 25px;
+      border: 1px solid $primary;
+      border-bottom: 0;
+      background-color: $primary;
+      color: $white;
+      transform: translate3d(2px, 3px, 5px);
+      transition: 250ms ease-in;
+
+      &:before {
+        content: "\e939";
+        font-size: 20px;
+        top: 33px;
+        left: auto;
+        right: 20px;
+        transform: rotate(0deg);
+      }
+
+      @media (min-width: 1400px) {
+        padding: 25px 80px 30px 35px;
+        &:before{
+          right: 35px;
+        }
+      }
+
+      &.collapsed {
+        border: 1px solid $primary;
+        box-shadow: 2px 3px 0 0;
+        background-color: $white;
+        transform: translate3d(0, 0, 0);
+        color: $black;
+        &:before {
+          content: '\e939';
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $primary;
+        color: $white;
+        transform: translate3d(2px, 3px, 5px);
+      }
+    }
+    
+    time {
+      font-size: $font-size-sm;
+      font-style: italic;
+      color: $gray;
+      text-align: left;
+      &:before{
+        vertical-align: bottom;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  .panel-custom-collapse {
+    padding-left: 35px;
+    font-size: $font-size-sm;
+    background-color: $primary;
+    color: $white;
+    transform: translate3d(2px, 3px, 5px);
+    
+    .panel-custom-body {
+      padding-top: 0;
+    }
+  }
+}
+

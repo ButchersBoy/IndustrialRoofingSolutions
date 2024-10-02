@@ -1,0 +1,78 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+	- var activeIndex = 6
+	- var pageName = 'Nonstandard post'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	section.section-xxl.text-center.bg-image-6.bg-overlay-darker 
+		.container.nonstandart-post-header
+			.row.justify-content-center
+				.col-lg-8.col-xxl-6
+					+jpg('benedict-arnold-120x120', 'rounded-circle')
+					p.heading-6 by Brian Williamson
+					h3 Getting to another  level of design and functionality.
+
+			.post-meta
+				.group
+					.icon-list-wrap.icon.icon-gray.linear-icon-clock3
+						a(href=postLink): time(datetime='2018') Jan.20, 2018
+					.icon-list-wrap.icon.icon-gray.linear-icon-
+						a(href=postLink) 3 comment(s)
+					.icon-list-wrap.icon.icon-gray.linear-icon-tag
+						a(href=postLink) Theme
+					+tag-list({
+						list_class: 'list-inline-tag icon icon-list-wrap linear-icon-tags icon-gray',
+						href: postLink,
+						items: [
+							"Style",
+							'Clean']
+					})
+
+			+list-inline-icon({
+				list_class: 'list-inline-sm',
+				items: [
+					"icon-sm fa-facebook",
+					'icon-sm fa-twitter',
+					'icon-sm fa-google-plus',
+					'icon-sm fa-vimeo',
+					'icon-sm fa-youtube',
+					'icon-sm fa-pinterest-p']
+			})
+
+	section.bg-default.section-lg
+		.container
+			.row.row-60.justify-content-sm-center
+				.col-lg-8.section-divided__main
+					section.section-md.post-single-body
+						p.first-letter
+							| Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates… Due to the fact that this is a HTML Template, the process of installing it and using it is truly as easy as it gets! Read our documentation to understand how fast you can go from purchasing a TemplateMonster HTML Template to actually using it as a live skin for your company’s webpage. Also, our Novi Builder allows you to easily change the content (text; multimedia; blocks; pages) of any part of your new template!
+
+						+jpg('nonstandart-post-1-886x668')
+
+						p In the modern days of a very tight online business competition, ranking high in such search engines as Google, Bing or Yahoo is critical. With the help of our heavy customizations, each of our Business HTML templates is enhanced with an optimized features. Believe us, Google will just love crawling your new website! All in all, feel free to browse our Business HTML templates category and you will definitely find a new look for your company’s website!
+
+						// Quote default
+						.quote-default
+							+quote-mark('quote-default__mark')
+							.quote-default__text: p.q.heading-4 Quart is perfect to display the members of your staff, team or working force.
+							p.quote-default__cite Adam Smith
+
+						p When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a template for your HTML website, the overall number of characteristics that you will need to keep in mind narrows down significantly. But how do you stay focused on what kind of a template you need and what do you want to get from that template? We recommend focusing on 4 most essential characteristics, each vital for your company’s to have an efficient and long-standing online presence!
+
+					include ../sections/_section-blog-post-comment
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

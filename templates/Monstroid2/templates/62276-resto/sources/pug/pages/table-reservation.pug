@@ -1,0 +1,161 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Table reservation'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-sm.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-lg-10
+          h1 Table Reservation
+          h5 Use this form in order to book a table with us!
+          hr.divider-minimal
+          // RD Calendar
+          .booking-calendar#chapters-select
+            .rdc-panel.text-center
+              a.rdc-prev
+              h4
+                span.rdc-month
+                =' '
+                span.rdc-fullyear
+              a.rdc-next
+            .rdc-table
+            .rdc-events
+              a.rdc-events_close
+              ul
+                li.rdc-event(data-date='05/15/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span January 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+    
+    
+                li.rdc-event(data-date='06/22/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span February 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+    
+    
+                li.rdc-event(data-date='07/14/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span March 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+    
+                li.rdc-event(data-date='08/14/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span April 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+    
+                li.rdc-event(data-date='09/14/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span May 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am    
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+    
+                li.rdc-event(data-date='10/14/2018')
+                  table.table.rdc-event-booking-table
+                    thead
+                      tr
+                        th(colspan="3"): p.heading-6 Available Appointments on #[span June 14, 2018]
+                    tbody
+                      tr
+                        td
+                          time(datetime="2018") 8:00am - 9:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+                      tr
+                        td
+                          time(datetime="2018") 10:30am - 11:00am
+                        td
+                          span 2 time slots available
+                        td.text-md-right: button.button.button-gray-light-outline(data-toggle="modal" data-target="#appointment"): span Book Appointment
+
+      // Modal
+      include ../sections/_section-modal
+  section.section-sm.bg-default
+  // Page Footer
+  include ../sections/_footer-minimal

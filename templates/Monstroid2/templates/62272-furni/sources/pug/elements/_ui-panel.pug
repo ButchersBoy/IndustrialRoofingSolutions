@@ -1,0 +1,28 @@
+//- Mixin: bootstrap panel
+//------------------------------------------
+//- parentId - Id of parent block
+//- panelClass - Class for styling
+//- first - bool variable to set open panel
+//- arrow - exists by default, false to disable
+//- header - Header text
+
+mixin panel(obj)
+  - var headingId = id=obj.parentId + 'Heading' + obj.number
+  - var bodyId = id=obj.parentId + 'Collapse' + obj.number
+
+
+  // Bootstrap panel
+  .panel.panel-custom(class=obj.panelClass)
+    .panel-custom-heading(id=headingId, role='tab')
+      h5.panel-custom-title
+        if(obj.first)
+          a(role='button', data-toggle='collapse', data-parent='#' + obj.parentId, href='#' + bodyId, aria-controls=bodyId, aria-expanded='true')
+            !=obj.header
+        else
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#' + obj.parentId, href='#' + bodyId, aria-controls=bodyId)
+            !=obj.header
+
+    .panel-custom-collapse.collapse(id=bodyId, class={'in' : obj.first}, role='tabpanel', aria-labelledby=headingId)
+      .panel-custom-body
+        block
+

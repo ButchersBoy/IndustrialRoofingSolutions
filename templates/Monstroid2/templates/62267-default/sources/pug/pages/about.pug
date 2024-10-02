@@ -1,0 +1,165 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'About'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-03.jpg"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2 About Us
+						p Monstroid#[sup 2] boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-50
+				.col-md-6
+					h3 Our Mission
+					p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Toolkit. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards.
+				.col-md-6
+					h3 Our Vision
+					p Unlike many other themes Monstroid#[sup 2] is built around user content but not vice versa. Thus you may be sure when you add your own texts and images the theme will look same cool and appealing.
+	
+	include ../sections/_section-cta-2
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-black
+		.container
+			.row.row-50.row-lg-90
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						p.blurb__title Built For Speed
+						p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						p.blurb__title Flexible and Multipurpose
+						p Monstroid² allows to create various websites for complex and scalable  project.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						p.blurb__title SEO Friendly
+						p Valid code and performance optimized framework make SEO easy and hassle free.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-headset
+						p.blurb__title 24/7 Support
+						p 24/7 Premium technical support and great documentation are included in theme price.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+						p.blurb__title Social Integration
+						p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cart-full
+						p.blurb__title Advanced UI Kit
+						p Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Represent Your Staff
+			p
+				| It’s perfect to display the members of your staff, team or working force. Within Monstroid template you can present your
+				br.d-none.d-xl-block
+				|  team members in the best well made and interface with special design and multiple styling options.
+			.row.row-30.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('brian-king-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('amanda-smith-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('george-nelson-418x315')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

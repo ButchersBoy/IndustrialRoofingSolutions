@@ -1,0 +1,39 @@
+footer.section.footer-classic
+	.container
+		.row.row-30.justify-content-xl-between
+			.col-md-6.col-lg-7.col-xl-6
+				+logo
+				.list-icon
+					.list-icon-left.icomoon-home
+					.list-icon-body
+						.list-icon-item: a( href='#' ) 8601 Glenoaks Blvd Sun Valley, California, CA, 91352
+				.row.row-15.row-list
+					.col-xs-6.col-sm-5.col-md-12.col-lg-5.col-xl-6
+						.list-icon
+							.list-icon-left.icomoon-phone
+							.list-icon-body
+								.list-icon-item: a( href='tel:#' ) +1 747 567 8901
+								.list-icon-item: a( href='tel:#' ) +1 747 567 8902
+					.col-xs-6.col-sm-7.col-md-12.col-lg-7.col-xl-6
+						.list-icon
+							.list-icon-left.icomoon-clock
+							.list-icon-body
+								.list-icon-item Mon – Fri: 9:00 AM – 8:00 PM
+								.list-icon-item Sat – Sun: 9:00 AM – 6:00 PM
+				.list-social
+					a( href='#' ).list-social-icon.mdi.mdi-youtube-play
+					a( href='#' ).list-social-icon.mdi.mdi-facebook
+					a( href='#' ).list-social-icon.mdi.mdi-instagram
+					a( href='#' ).list-social-icon.mdi.mdi-twitter
+					a( href='#' ).list-social-icon.mdi.mdi-linkedin
+
+			.col-md-6.col-lg-5.col-xl-5
+				h5 Subscribe to our newsletter
+				p.big Sign up for our newsletter to receive the latest news and updates about special offers and service discounts.
+				form.rd-mailform.rd-form-boxed( data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php' )
+					.form-wrap
+						input.form-input(type="email" name="email" data-constraints="@Email @Required" id='footer-mail' )
+						label.form-label(for='footer-mail') Enter your e-mail
+					button.form-button.icomoon-send
+		.divider.divider-1
+		+rights

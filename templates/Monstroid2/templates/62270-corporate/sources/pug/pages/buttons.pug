@@ -1,0 +1,42 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+	- var activeIndex = 6
+	- var pageName = 'Buttons'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	// Buttons
+	section.section-lg.bg-gray-3.text-center
+		.container
+			.group-lg
+				.button.button-gradient-intro Book an Appointment
+					span.button-gradient-intro__overlay
+
+				.button.button-primary See Features
+				.button.button-black Buy theme
+				.button.button-gray-light-outline Buy theme!
+				.button.button-link read more
+	='\n'
+
+	// Buttons
+	section.section-lg.bg-accent.text-center
+		.container
+			.group-lg
+				.button.button-gradient-intro-outline Book an Appointment
+					span.button-gradient-intro__overlay
+
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

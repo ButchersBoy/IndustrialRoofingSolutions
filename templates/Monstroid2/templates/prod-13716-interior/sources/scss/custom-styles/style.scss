@@ -1,0 +1,403 @@
+@charset "UTF-8";
+
+/*
+*
+* Trunk version 2.0.0
+*
+*/
+
+
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "variables_custom";
+@import "mixins";
+@import "reset";
+
+// 
+// Main Styles
+//
+
+
+// Body
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 14px;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+  color: $body-color;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base;
+  }
+}
+
+// Links
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: .33s all ease;
+
+  &,
+  &:active,
+  &:focus {
+    color: $link-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &[href*='callto'],
+  &[href*='mailto'] {
+    white-space: nowrap;
+  }
+}
+
+// Images
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Horizontal rules
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $gray-light;
+}
+
+//
+// Typography
+//
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+  text-transform: uppercase;
+  letter-spacing: 0;
+
+  a {
+    display: inline;
+    font: inherit;
+    letter-spacing: inherit;
+    @include link(inherit, $primary);
+  }
+
+  > * {
+    display: inline-block;
+  }
+
+  span:not(:last-child) {
+    margin-right: .25em;
+  }
+}
+
+// {0 - 768px} <= 40px
+// {768px - 992px} <= 62px
+h1,
+.heading-1 {
+  font-size: 30px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(md) {
+    font-size: 56px;
+    line-height: $h1-line-height;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    font-size: 74px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: $h1-font-size;
+  }
+}
+
+// {0 - 768px} <= 36px
+// {768px - 992px} <= 52px
+h2,
+.heading-2 {
+  font-size: 26px;
+  line-height: 1.3;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    line-height: $h2-line-height;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 44px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h2-font-size;
+  }
+}
+
+// {0 - 768px} <= 32px
+// {768px - 992px} <= 44px
+h3,
+.heading-3 {
+  font-size: 22px;
+  line-height: 1.45;
+
+  @include media-breakpoint-up(md) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+  }
+}
+
+// {0 - 768px} <= 26px
+// {768px - 992px} <= 36px
+h4,
+.heading-4 {
+  font-size: 18px;
+  line-height: 1.5;
+  color: $gray-dark;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+  }
+}
+
+// {0 - 768px} <= 22px
+// {768px - 992px} <= 28px
+h5,
+.heading-5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $gray-dark;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+  }
+}
+
+// {0 - 768px} <= 18px
+// {768px - 992px} <= 22px
+h6,
+.heading-6 {
+  font-size: 14px;
+  line-height: 1.6;
+  color: $gray-dark; 
+  
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+  }
+}
+
+.heading-decorated {
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 1px;
+    width: 35px;
+    margin-top: 15px;
+    background: $primary;
+    will-change: transform, opacity;
+  }
+}
+
+.heading-decorated_center,
+.parallax-header .heading-decorated,
+.text-center .heading-decorated {
+  &::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .heading-decorated {
+    &::after {
+      width: 50px;
+    }
+  }
+  
+  h1,
+  .heading-1 {
+    &.heading-decorated {
+      &::before {
+        width: 115px;
+      }
+    }
+  }
+}
+
+
+.text-sm-2 {
+  @include media-breakpoint-up(md) {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+  
+  @include media-breakpoint-up(xxl) {
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+  }
+}
+
+// Big text
+.big {
+  font-size: $font-size-lg;
+}
+
+// Small text
+@mixin small {
+  font-size: 14px;
+  line-height: (24 / 14);
+  
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+    line-height: (26 / 16);
+  }
+}
+
+small,
+.small {
+  display: block;
+  @include small;
+}
+
+// Code
+code,
+.code {
+  padding: 1px 5px;
+  border-radius: 0;
+  font-family: $font-family-base;
+  color: $white;
+  background: $black;
+}
+
+/*
+*
+* Colors
+* ==================================================
+*/
+.page {
+  .text-primary {
+    color: $primary;
+  }
+
+  .text-dark {
+    color: $gray-dark;
+  }
+}
+
+/*
+*
+* Main layout
+* ==================================================
+*/
+
+// Page
+//
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh !important;
+}
+
+// Page header
+.page-header {
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+  background: $gray-darker;
+}
+
+// Page footer
+.page-footer {
+}
+
+//call to action
+//
+.cat-img-group {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+
+  > div {
+    position: absolute;
+    bottom: 0;
+    max-width: 80%;
+
+    &:first-of-type {
+      z-index: 1;
+      right: 0;
+    }
+    &:last-of-type {
+      left: 0;
+    }
+  }
+  img {
+    width: auto;
+  }
+}
+
+//toggle
+[data-custom-toggle] {
+  cursor: pointer;
+}
+
+// call to action
+.section-cta {
+  .page & {
+    .button-primary {
+      @include btn-variant($black, $white, $white, $white, $black, $black);
+    }
+  }
+  
+}
+
+// Components & modules & plugins & helpers & fonts
+//
+
+@import "includes";
+
+.parallax-light {
+  #{headings()},
+  p {
+    color: $white;
+  }
+}

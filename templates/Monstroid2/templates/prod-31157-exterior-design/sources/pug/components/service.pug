@@ -1,0 +1,7 @@
+mixin service( obj )
+	.service&attributes( attributes )
+		.service-number= obj.number
+		h4.service-title= obj.title
+		p.service-text= obj.text
+		figure.service-figure
+			+img( obj.img )

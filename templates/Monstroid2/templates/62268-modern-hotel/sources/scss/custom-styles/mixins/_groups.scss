@@ -1,0 +1,23 @@
+// Element-groups
+@mixin group($offset-x, $offset-y) {
+  transform: translateY(-$offset-y);
+  margin-bottom: -$offset-y;
+  margin-left: -$offset-x;
+
+  > *, > *:first-child {
+    display: inline-block;
+    margin-top: $offset-y;
+    margin-left: $offset-x;
+    vertical-align: middle;
+  }
+}
+
+@mixin group-contextual($offset-x, $offset-y: $offset-x) {
+  margin-bottom: -$offset-y;
+  margin-left: -$offset-x;
+
+  > * {
+    margin-bottom: $offset-y;
+    margin-left: $offset-x;
+  }
+}

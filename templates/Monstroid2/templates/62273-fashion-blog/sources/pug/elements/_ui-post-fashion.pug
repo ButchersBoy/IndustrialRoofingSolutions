@@ -1,0 +1,12 @@
+mixin post-fashion(obj)
+  .post-fashion-style(class=obj.class)
+    figure
+      +jpg(obj.img)
+    .caption
+      .post-fashion-style-title
+        h5: a(href=postImage)=obj.title
+      ul.post-fashion-style-meta
+        li: time(datetime='2016')=obj.time
+        li: a(href=postImage)=obj.author
+      .post-fashion-style-footer
+        a(href=postImage).button.button-link Read More

@@ -1,0 +1,7 @@
+mixin thumbnail-classic(obj)
+  .thumbnail-classic
+    +jpg(obj.img)
+    .caption
+      h5: a(href=obj.link ? obj.link : 'single-program.html').thumbnail-classic-title=obj.title
+      p=obj.text
+      a(href='single-program.html').button.button-sm.button-primary.button-square Read more

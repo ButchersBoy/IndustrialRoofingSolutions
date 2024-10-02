@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Accordion'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-gray-3
+    .container
+      // Accordion
+      #accordion(role='tablist')
+        +panel({
+            parentId: "1",
+            header: "Technical Support Representative"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+          a(href='#').button.button-primary APPLY NOW
+
+        +panel({
+            parentId: "2",
+            header: "Customer Care Specialist"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+          a(href='#').button.button-primary APPLY NOW
+
+        +panel({
+            parentId: "3",
+            header: "Interactive Art Director"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+          a(href='#').button.button-primary APPLY NOW
+
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

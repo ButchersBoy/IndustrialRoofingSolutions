@@ -1,0 +1,73 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Menu'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+
+  section.section-sm.bg-default.text-center
+    .container-fluid
+      .row.flex-md-row-reverse.no-gutters.align-items-lg-center
+        .col-lg-6.section-sm
+          .row.justify-content-center
+            .col-11.col-md-9
+              h1 Starters
+              hr.divider-minimal
+              p The start of any meal is so important...So brace your appetite, while waiting for your main course. Our diverse and delicious appetizers will help you with that!
+              a(href='starters.html').button.button-gray-light-outline: span See menu
+        .col-lg-6
+          +jpg('menu-1-960x652','img-fullwidth')
+          
+    .container-fluid
+      .row.no-gutters.align-items-lg-center
+        .col-lg-6.section-sm
+          .row.justify-content-center
+            .col-11.col-md-9
+              h1 Main Courses
+              hr.divider-minimal
+              p Resto's menu knows no borders and nationalities. At the core of our main courses roaster we have the idea of a cosmopolitan, contemporary cuisine. So whether you'll pick a meat, fish or vegetarian main course, be sure that it will be universally good!
+              a(href='main-courses.html').button.button-gray-light-outline: span See menu
+        .col-lg-6
+          +jpg('menu-2-960x652','img-fullwidth')
+        
+    .container-fluid
+      .row.no-gutters.align-items-lg-center.flex-md-row-reverse
+        .col-lg-6.section-sm
+          .row.justify-content-center
+            .col-11.col-md-9
+              h1 Desserts
+              hr.divider-minimal
+              p That sweet taste of a dessert at the end of the meal...If you look forward to it too, than you're at the right place! Our menu has prolific choice of desserts. It can make even the most picky sweet tooth person happy!
+              a(href='desserts.html').button.button-gray-light-outline: span See menu
+        .col-lg-6
+          +jpg('menu-3-960x652','img-fullwidth')
+        
+    .container-fluid
+      .row.no-gutters.align-items-lg-center
+        .col-lg-6.section-sm
+          .row.justify-content-center
+            .col-11.col-md-9
+              h1 Drinks
+              hr.divider-minimal
+              p Refresh yourself while enjoying a flavorsome dinner or a lunch at our place. We at the Resto offer different beverages as well as spirits, and liquors!
+              a(href='drinks.html').button.button-gray-light-outline: span See menu
+        .col-lg-6
+          +jpg('menu-4-960x652','img-fullwidth')
+  section.section-xl.bg-default.text-center
+    .container
+      a(href='#').button.button-gray-light-outline: span download the full menu (.pdf)
+
+  // Page Footer
+  include ../sections/_footer-minimal

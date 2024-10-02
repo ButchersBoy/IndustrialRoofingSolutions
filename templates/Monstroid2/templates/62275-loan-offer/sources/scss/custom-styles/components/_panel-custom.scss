@@ -1,0 +1,135 @@
+/*
+*
+* Panels Custom
+* --------------------------------------------------
+*/
+
+//== Panel variables
+//
+//##
+
+$panel-title-color: $primary;
+$panel-title-background: transparent;
+$panel-title-padding: 22px 0 20px;
+$panel-title-sm-padding: 40px 0 40px 0;
+$panel-active-background: transparent;
+$panel-arrow: '\e937';
+$panel-arrow-font: 400 24px/24px $font-icons;
+$panel-body-padding: 15px 25px 30px 0;
+$panel-body-sm-padding: 15px 30px 22px 0;
+
+
+// Base Style
+// --------------------------------------------------
+
+.panel {
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.panel-custom {
+  padding: $panel-title-padding;
+
+  @include media-breakpoint-up(md) {
+    padding: $panel-title-sm-padding;
+  }
+
+  & + .panel-custom {
+    border-top: 1px solid $gray-1;
+    margin-top: 0;
+  }
+
+  .panel-custom-title {
+
+    > a {
+      display: block;
+      position: relative;
+      padding-right: 40px;
+      color: $panel-title-color;
+      background: $panel-active-background;
+      transition: .3s all ease;
+
+      &:before {
+        content: $panel-arrow;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font: $panel-arrow-font;
+        color: $primary;
+        transform: translateY(-50%) rotate(0deg);
+        transition: .35s all ease-in-out;
+      }
+
+      span {
+        padding-left: 8px;
+        color: $gray;
+        font-size: 14px;
+      }
+
+      &.collapsed {
+        background: $panel-title-background;
+
+        &:before {
+          content: '\e936';
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $panel-active-background;
+      }
+    }
+  }
+
+  .panel-custom-collapse {
+    background: $panel-active-background;
+
+    .panel-custom-body {
+      padding: $panel-body-padding;
+
+      @include media-breakpoint-up(md) {
+        padding: $panel-body-sm-padding;
+      }
+    }
+  }
+}
+
+h3 + .panel-custom-group-wrap {
+  margin-top: 30px;
+}
+
+//panel classic
+.panel-classic {
+  .panel-custom-title {
+
+    > a {
+      padding-left: 35px;
+      padding-right: 0;
+
+      &:before {
+        content: "\e93c";
+        top: 47%;
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotate(90deg);
+        transition: .35s all ease-in-out;
+      }
+
+      &.collapsed {
+        &:before {
+          content: '\e93c';
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $panel-active-background;
+      }
+    }
+  }
+}

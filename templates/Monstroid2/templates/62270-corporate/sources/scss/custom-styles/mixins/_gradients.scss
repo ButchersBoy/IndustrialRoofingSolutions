@@ -1,0 +1,86 @@
+//Gradient background
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin gradient($color-1 : $primary, $color-2 : $secondary) {
+  background: -moz-linear-gradient(to right, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(to right, $color-1 0%, $color-2 100%);
+  background: linear-gradient(to right, $color-1 0%, $color-2 100%);
+}
+
+@mixin text-gradient($color-1 : $primary, $color-2 : $secondary) {
+  display: inline-block;
+  color: $color-1;
+  background: $color-1;
+  background: -moz-linear-gradient(to right, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(to right, $color-1 0%, $color-2 100%);
+  background: linear-gradient(to right, $color-1 0%, $color-2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+@mixin text-gradient-animated($color-1 : $primary, $color-2 : $secondary) {
+  display: inline-block; 
+  color: $color-1;
+  background: -moz-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -o-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -ms-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background-size: 350% 350%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  @include animation(Gradient-fade 2.3s ease-in-out infinite);
+}
+
+@mixin button-gradient($color-1 : $primary, $color-2 : $secondary) {
+  background: -moz-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -o-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -ms-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background-size: 350% 350%;
+  &:hover {
+    @include animation(Gradient-fade 2.3s ease-in-out infinite);  
+  }
+}
+
+@mixin background-gradient($color-1 : $primary, $color-2 : $secondary) {
+  fill: $color-1;
+  background: $color-1;
+  background: -moz-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -o-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -ms-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: linear-gradient(90deg, $color-1 0%, $color-2 100%);
+}
+
+@mixin background-animated-gradient($color-1 : $primary, $color-2 : $secondary) {
+  position: relative;
+  fill: $color-1;
+  background: $color-1;
+  background: -moz-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -webkit-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -o-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: -ms-linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  background: linear-gradient(90deg, $color-1 0%, $color-2 100%);
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    animation: fadeBoth 6s infinite;
+    fill: $color-1;
+    background: $color-1;
+    background: -moz-linear-gradient(270deg, $color-1 0%, $color-2 100%);
+    background: -webkit-linear-gradient(270deg, $color-1 0%, $color-2 100%);
+    background: -o-linear-gradient(270deg, $color-1 0%, $color-2 100%);
+    background: -ms-linear-gradient(270deg, $color-1 0%, $color-2 100%);
+    background: linear-gradient(270deg, $color-1 0%, $color-2 100%);
+  }
+}

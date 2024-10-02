@@ -1,0 +1,58 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'About'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+  section.section-lg.bg-default.section-limit
+    .container
+      .row.row-50.align-items-md-center
+        .col-md-6
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') ABOUT OUR STORE
+          p.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') Mary's interest in furniture and everything related to it began in her father's local chairs & tables store in Virginia... Starting off as his helper and accountant, she eventually grew fond of the whole thing and began to consider an option of starting her own furniture store in the big city. With her first store in Arlington in 1999, Mary's chain began to gradually expand, now consisting of more than 5 furniture stores nationwide...
+        .col-md-6.text-center
+          +jpg('about-3-418x418','img-circle wow fadeInUpSmall')
+          
+
+  section.section-limit.bg-gray-lighter.bg-image.bg-image-1
+    .container
+      .row.justify-content-md-end
+        .col-md-7.col-lg-6.section-xl.section-xl_bigger
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') Best US & UK furniture brands
+          p.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') We sell only the best furniture sets and pieces, manufactured in either US, Canada or the UK...  All of our range includes only brands with long-lasting reputation, which have been proved as popular among people for years...
+          
+  section.section-limit.bg-default.bg-image.bg-image-2
+    .container
+      .row
+        .col-md-7.col-lg-6.section-xl.section-xl_bigger
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') A VARIETY OF HOME FURNITURE
+          p.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') When you're looking for a sofa or a chair, comfort and durability must come first! With our range of cozy daybeds, recliners and many other pieces we can guarantee that you'll find it! We provide a variety of home furniture from acknowledged manufacturers. At Furni, you can easily purchase stylish tables, chairs, and other high-quality furniture for your house.
+
+
+  section.section-limit.bg-accent.bg-image.bg-image-3
+    .container
+      .row.justify-content-md-end
+        .col-md-7.col-lg-6.section-xl.section-xl_bigger
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') Agreeable pricing for a great quality
+          p.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') The pricing policy that we have put in place makes affordability a centre point... While for some people quality means sky-high cost, for us the balance between these two is reached easily
+
+  section.section-limit.bg-default.bg-image.bg-image-5
+    .container
+      .row
+        .col-md-7.col-lg-6.section-xl.section-xl_bigger
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') Stock sales all #[br.visible-lg-inline] the time...
+          p.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') When you're looking for a sofa or a chair, comfort and durability must come first!  With our range of cozy daybeds, recliners and many other pieces we can guarantee that you'll find it!
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

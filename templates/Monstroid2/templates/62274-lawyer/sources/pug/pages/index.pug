@@ -1,0 +1,285 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home'
+
+block page
+  include ../sections/_header-default
+
+  // Swiper
+  section.swiper-panel-wrap
+    .swiper-container.swiper-slider.swiper-slider_fullheight.swiper-slider_nav-responsive(data-simulate-touch="false", data-loop='true', data-autoplay='5500')
+      .swiper-wrapper
+        .swiper-slide.bg-accent-2(data-slide-bg='images/slider-1-slide-1-1920x980.jpg')
+          .swiper-slide-caption.text-center 
+            .container: .row.justify-content-lg-center: .col-lg-10.col-xxl-8
+              h3.heading-decorated(data-caption-animate='fadeInUpSmall') Professional Lawyer
+              h1(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Jerry Robinson
+              .group-lg.group-middle
+                a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='about-us.html') MORE INFO
+
+        .swiper-slide.bg-accent-2(data-slide-bg='images/slider-1-slide-2-1920x980.jpg')
+          .swiper-slide-caption.text-center
+            .container: .row.justify-content-lg-center: .col-lg-10.col-xxl-8
+              h3.heading-decorated(data-caption-animate='fadeInUpSmall') We're Always Available for Customers with #[br.d-none.d-md-block] Emergent Lawyer Problems.
+              p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') You can easily reach us 24/7 via the phone number below:
+              dl.list-terms-inline.heading-2(data-caption-animate='fadeInUpSmall', data-caption-delay='350')
+                dt Tel 
+                dd: a(href='callto:#') 1.555.123.2323
+
+        .swiper-slide.bg-accent-2(data-slide-bg='images/slider-1-slide-3-1920x980.jpg')
+          .swiper-slide-caption.text-center
+            .container: .row.justify-content-lg-center: .col-lg-10.col-xxl-8
+              h2.heading-decorated(data-caption-animate='fadeInUpSmall') Appointment
+              p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Booking an appointment at our law firm is as easy as it gets... 
+              p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') You will be able to schedule a convenient time for your meeting with our lawyers with just 2 clicks!
+              .group-lg.group-middle
+                a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=appointmentLink) BOOK AN APPOINTMENT
+
+      // Swiper Pagination
+      .swiper-pagination
+
+      // Swiper Navigation
+      .swiper-button-prev.linear-icon-chevron-left
+      .swiper-button-next.linear-icon-chevron-right
+
+    .swiper-panel.section-sm.bg-accent-2
+      .container
+        .row.align-items-md-center.row-custom-bordered
+          .col-sm-6.col-md-3
+            // Counter modern
+            article.counter-modern
+              h4.counter-modern__value
+                span.counter 450
+                span +
+              p.counter-modern__title Trusting Clients
+
+          .col-sm-6.col-md-3
+            // Counter modern
+            article.counter-modern
+              h4.counter-modern__value
+                span $
+                span.counter 14
+                span ,5 mln.
+              p.counter-modern__title Won in Settlements
+
+          .col-sm-6.col-md-3
+            // Counter modern
+            article.counter-modern
+              h4.counter-modern__value
+                span.counter 98 
+                span %
+              p.counter-modern__title Cases Won
+
+          .col-sm-6.col-md-3
+            // Counter modern
+            article.counter-modern
+              h4.counter-modern__value
+                span.counter 25
+              p.counter-modern__title Awards Won
+
+  ='\n'
+
+  // Welcome
+  section.section-md.bg-default.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          article.post-info
+            h3.heading-decorated Welcome to Jerry Robinson's Law office
+            p We're proud that our law firm offers top-notch legal services for a nationwide affordable pricing!
+            p With us you'll never feel like the lawyers are just robbers in suits, besides, we win 98% of all cases. So with us, your chances of winning are as high as they possibly can be!
+  ='\n'
+
+  // Why Hiring Us is Always a Winning Move?
+  +parallax({
+    "src": "images/parallax-1.jpg",
+    "sectionClass": ['bg-accent-2', 'text-center']
+  })
+    .section-md.text-center
+      .container
+        .row.justify-content-md-center: .col-md-7.col-xl-6
+          h3.heading-decorated Why Hiring Us is Always a Winning Move?
+        .row.row-50.offset-top-1
+          .col-md-6.col-xl-3
+            // Blurb tiny
+            article.blurb-tiny.blurb-tiny_centered
+              .blurb-tiny__icon.linear-icon-library2
+              h5.blurb-tiny__title Any Litigation
+              p It's very hard to name a civil litigation field where our expertise is absent. Starting with Labor & Employment laws, insurance & personal injuries fields for helping the individuals and finishing with the real estate law, divorce and child custody laws, we have it all covered...
+
+          .col-md-6.col-xl-3
+            // Blurb tiny
+            article.blurb-tiny.blurb-tiny_centered
+              .blurb-tiny__icon.linear-icon-trophy2
+              h5.blurb-tiny__title Winning Streak
+              p Our track record is higher than that of the best MLB pitchers! We've got an amazing percentgae of won cases, with the mark standing now at over 99%... But these kinds of results were made possible only thanks to our due diligence, timely efforts and an incredible range of legal wit!
+
+          .col-md-6.col-xl-3
+            // Blurb tiny
+            article.blurb-tiny.blurb-tiny_centered
+              .blurb-tiny__icon.linear-icon-hourglass
+              h5.blurb-tiny__title Timely Work
+              p Working with a lot of civil litigation allows us to make some considerable timing shortcuts. That means that while we never compromise for an attention to case's details, we also never waste your time idly! Winning ahead of the schedule is our signature move!
+
+          .col-md-6.col-xl-3
+            // Blurb tiny
+            article.blurb-tiny.blurb-tiny_centered
+              .blurb-tiny__icon.linear-icon-thumbs-up
+              h5.blurb-tiny__title Affordable Help
+              p On par with such a client-friendly pace of work, we also have another uncompromised advantage - namely, our reasonable pricing! Keeping in mind that most of our clients are individuals and not businesses - we keep our fees low!
+  ='\n'
+
+  // Our Legal Practice Areas
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3.heading-decorated Our Legal Practice Areas:
+
+      ul.list-indexed
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Labor & Employment Law
+          p We'll be glad to deal with any kind of employment litigation issues, such as unlawful termination, wage hack or discrimination of any kind, which you might have encountered at your workplace...
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Real Estate Law
+          p The real property market nuances and the laws regulating it (such as estate taxing, e.g.) are one of our biggest field of work. We will be protecting your best interest whatever the case is!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Personal Injury
+          p We're working with personal injuries, which are basically minor wrongful conduct torts, thus being out of the criminal hearings reach. We will become your defenders in any of  such civil litigations cases!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Business Litigation & Arbitration
+          p We'll be glad to deal with any kind of employment litigation issues, such as unlawful termination, wage hack or discrimination of any kind, which you might have encountered at your workplace...
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Insurance Law
+          p The insurance marketplace has a lot of restrictions and limitations, which the insurance companies oftentimes try to use as the loopholes for getting away with not paying you. We will change that!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Mergers & Acquisitions
+          p The commercial world of mergers & acquisitions is a harsh one. You'd better have a just as harsh team of sharky lawyers so that your business emerges as the winner in the court!
+  ='\n'
+
+  include ../sections/_section-cta-1
+
+  include ../sections/_section-default-testimonials
+
+  // Some Of Our Clients
+  section.section-md.bg-gray-lighter.text-center
+    .container
+      h3.heading-decorated Some Of Our Clients
+      // Owl Carousel
+      .owl-carousel.owl-carousel_centered.text-center(data-autoplay='true', data-items='1', data-sm-items='2', data-md-items='4', data-lg-items='5', data-xl-items='6', data-stage-padding='15', data-loop='true', data-margin='30', data-mouse-drag="false", data-dots='true')
+        .item: a.link-transparent(href='#'): +png('brand-1-128x111')
+        .item: a.link-transparent(href='#'): +png('brand-2-129x102')
+        .item: a.link-transparent(href='#'): +png('brand-3-143x110')
+        .item: a.link-transparent(href='#'): +png('brand-4-129x86')
+        .item: a.link-transparent(href='#'): +png('brand-5-142x102')
+        .item: a.link-transparent(href='#'): +png('brand-6-134x122')
+  ='\n'
+
+  // Winning is easier than you think...
+  section.bg-accent-2
+    +parallax({
+      "src": "images/bg-image-3.jpg",
+      "class": ['parallax-light']
+    })
+      .section-lg
+        .container
+          .row.row-50.justify-content-md-center.justify-content-xl-between
+            .col-md-10.col-lg-6.col-xl-5
+              h3.heading-decorated(style='max-width: 70%;') Winning is easier than you think...
+              p Watch this video, where dozens of our former clients tell, how desperate they were to win their respective case and how slim their chances seemed... before hiring us as their lawyers! That's right, our law firm has the highest wins ratio percentage among all other Houston, Texas legal practices. With us, there's just no other way but to win!
+              a.button.button-primary(href='won-cases.html') Our Cases
+
+            .col-md-10.col-lg-6
+              // Video overlay wrap
+              .video-overlay-wrap
+                .video-overlay
+                  .video-overlay__image.bg-image(style='background-image: url(images/video-preview-1-652x461.jpg);')
+                  span.video-overlay-icon.linear-icon-play-circle
+                .video-overlay__video
+                  .entry-video.embed-responsive.embed-responsive-16by9
+                    iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+  ='\n'
+
+  // Featured News
+  section.section-lg.bg-default.text-center
+    .container
+      h3.heading-decorated Featured News
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-2-418x315')
+
+            .post-classic-title
+              h5: a(href=postLink) Can you be fined with $1600 for missing a license plate decal?
+
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Adam Smith
+
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-1-418x315')
+
+            .post-classic-title
+              h5: a(href='nonstandard-post.html') 2016 Texas Employment Law Update
+
+            .post-meta
+              .group
+                a(href='nonstandard-post.html'): time(datetime='2017') Jan.20, 2016
+                a(href='nonstandard-post.html').meta-author by Adam Smith
+
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal
+            +jpg('post-classic-3-418x315')
+
+            .post-classic-title
+              h5: a(href=postLink) What the federal legal consequences of Florida's shooting wlll be?
+
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2017') Jan.20, 2016
+                a(href=postLink).meta-author by Adam Smith      
+  ='\n'
+
+  // Distinctive Recognition
+  section.bg-accent-2
+    +parallax({
+      "src": "images/bg-image-2.jpg",
+      "class": ['parallax-light']
+    })
+      .section-md.text-center
+        .container
+          h3.heading-decorated Distinctive Recognition
+          // Owl Carousel
+          .owl-carousel.owl-carousel_centered.text-center(data-autoplay='true',data-items='1', data-sm-items='2', data-md-items='4', data-lg-items='5', data-stage-padding='15', data-loop='true', data-margin='30', data-mouse-drag="false", data-dots='true')
+            .item: a.link-transparent(href='#'): +png('brand-7-134x139')
+            .item: a.link-transparent(href='#'): +png('brand-8-162x83')
+            .item: a.link-transparent(href='#'): +png('brand-9-257x133')
+            .item: a.link-transparent(href='#'): +png('brand-10-115x116')
+            .item: a.link-transparent(href='#'): +png('brand-11-265x62')
+  ='\n'
+
+  // Page Footer 
+  include ../sections/_footer-corporate

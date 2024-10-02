@@ -1,0 +1,51 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_rdc-event
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Book an Appointment'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-lg.bg-default.text-center
+    .container
+      h3 Book an Appointment
+      // RD Calendar
+      .rd-calendar.booking-calendar#chapters-select(data-events-inline='true')
+        .rdc-panel.text-center
+          a.rdc-prev
+          h4
+            span.rdc-month
+            =' '
+            span.rdc-fullyear
+          a.rdc-next
+        .rdc-table
+        .rdc-events
+          a.rdc-events_close
+          ul.list-unstyled
+            +rdc-event({date: '10/16/2017', dateText: 'October 16, 2017'})
+            +rdc-event({date: '11/22/2017', dateText: 'November 22, 2017'})
+            +rdc-event({date: '12/07/2017', dateText: 'December 7, 2017'})
+            +rdc-event({date: '01/31/2018', dateText: 'January 31, 2018'})
+            +rdc-event({date: '02/13/2018', dateText: 'February 13, 2018'})
+            +rdc-event({date: '03/20/2018', dateText: 'March 20, 2018'})
+            +rdc-event({date: '04/24/2018', dateText: 'April 24, 2018'})
+            +rdc-event({date: '05/08/2018', dateText: 'May 8, 2018'})
+            +rdc-event({date: '06/14/2018', dateText: 'June 14, 2018'})
+            +rdc-event({date: '07/11/2018', dateText: 'Jule 11, 2018'})
+            +rdc-event({date: '08/20/2018', dateText: 'Jule 20, 2018'})
+            +rdc-event({date: '09/05/2018', dateText: 'September 20, 2018'})
+            +rdc-event({date: '10/31/2018', dateText: 'October 20, 2018'})
+
+      // Modal
+      include ../sections/_section-modal
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

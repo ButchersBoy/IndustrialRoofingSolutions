@@ -1,0 +1,20 @@
+<section class="section novi-bg novi-bg-img section-xl bg-default text-center">
+  <div class="container">
+    <h3>Form with Captcha</h3>
+    <div class="row justify-content-lg-center">
+      <div class="col-lg-10 col-xl-8">
+        <!-- RD Mailform -->
+        <form class="rd-mailform rd-mailform_style-3 text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+          <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-man"></span> <input class="form-input" id="contact-captcha-name" type="text" name="name" data-constraints="@Required"> <label class="form-label" for="contact-captcha-name">Your name</label> </div>
+          <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span> <input class="form-input" id="contact-captcha-email" type="email" name="email" data-constraints="@Email @Required"> <label class="form-label" for="contact-captcha-email">Your e-mail</label> </div>
+          <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-telephone"></span> <input class="form-input" id="contact-captcha-phone" type="text" name="phone" data-constraints="@Numeric"> <label class="form-label" for="contact-captcha-phone">Your phone</label> </div>
+          <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-feather"></span> <textarea class="form-input" id="contact-captcha-message" name="message" data-constraints="@Required"></textarea> <label class="form-label" for="contact-captcha-message">Your message</label> </div>
+          <div class="form-wrap form-validation-left">
+            <!-- Google captcha-->
+            <div class="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
+          </div> <button class="button button-primary" type="submit">send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

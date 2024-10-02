@@ -1,0 +1,23 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Call to Action'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section-xl.bg-default
+		include ../sections/_section-cta-1
+		include ../sections/_section-cta-2
+		include ../sections/_section-cta-3
+		include ../sections/_section-cta-4
+		include ../sections/_section-cta-5
+		include ../sections/_section-cta-6
+	
+	// Page Footer
+	include ../sections/_footer-corporate

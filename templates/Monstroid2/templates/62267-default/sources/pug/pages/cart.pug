@@ -1,0 +1,86 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-shop-grid
+include ../elements/_ui-tag-list
+
+block variables
+	- pageName = 'Cart'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.table-responsive
+				table.table-cart
+					thead
+						tr
+							th(colspan=2) Product
+							th Price
+							th Quantity
+							th Total
+					tbody
+						tr
+							td.table-cart-remove-item
+								span.icon.novi-icon.icon-sm.linear-icon-cross2.icon-gray-4
+							td(style='min-width: 330px')
+								.unit.flex-row.unit-spacing-md.align-items-center
+									.unit-left
+										+jpg('adidas-Originals-Trefoil-Logo-Snapback-Trucker-Cap-141x188')
+									.unit-body
+										h6: a.thumbnail-classic-title(href='single-product.html') Adidas Originals Trefoil Logo Snapback Trucker Cap
+							td
+								.product-price
+									span 45
+							td
+								input.form-input(type="number" data-zeros="true" value="1" min="1" max="20")
+							td
+								.product-price
+									span 45
+						tr
+							td.table-cart-remove-item
+								span.icon.novi-icon.icon-sm.linear-icon-cross2.icon-gray-4
+							td(style='min-width: 330px')
+								.unit.flex-row.unit-spacing-md.align-items-center
+									.unit-left
+										+jpg('ASOS-Sculpt-Me-Premium-Jeans-in-Clean-Black-141x188')
+									.unit-body
+										h6: a.thumbnail-classic-title(href='single-product.html') ASOS ‘Sculpt Me’ Premium Jeans in Clean Black
+							td
+								.product-price
+									span 45
+							td
+								input.form-input(type="number" data-zeros="true" value="1" min="1" max="20")
+							td
+								.product-price
+									span 45
+			.row.row-fix.row-50.text-center
+				.col-md-8.text-md-start
+					.group-xs
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-tag
+							input.form-input(type="text" name="name" placeholder='Enter Code')
+						button(type='submit').button.button-black Aplly coupon
+				.col-md-4.text-md-end
+					button(type='submit').button.button-gray-light-outline Update card
+				.col-sm-12
+					hr
+				.col-sm-12
+					.text-md-end
+						dl.list-terms-minimal
+							dt Subtotal
+							dd $90
+						dl.heading-5.list-terms-minimal
+							dt Total
+							dd $90
+						a(href='checkout.html').button.button-primary  Proceed to Checkout
+	
+	
+	// Page Footer
+	include ../sections/_footer-corporate

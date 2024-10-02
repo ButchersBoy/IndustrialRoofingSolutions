@@ -1,0 +1,78 @@
+/** @section Buttons */
+
+// Button General Styles
+.halloween-section {
+	.btn {
+		position: relative;
+		overflow: hidden;
+		padding: $halloween-btn-padding-y $halloween-btn-padding-x;
+		font-family: $halloween-btn-font-family;
+		font-size: $halloween-btn-font-size;
+		line-height: $halloween-btn-line-height;
+		font-weight: $halloween-btn-font-weight;
+		letter-spacing: $halloween-btn-letter-spacing;
+		text-transform: $halloween-btn-text-transform;
+		white-space: $halloween-btn-white-space;
+		transition: $halloween-btn-transition;
+		text-overflow: ellipsis;
+		border-radius: 0;
+
+		&:hover,
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+	}
+
+	// Appearance style
+	.btn-primary {
+		@include halloween-btn-variant($white, $halloween, $halloween, $white, $halloween-dark, $halloween-dark);
+	}
+
+	.btn-white {
+		@include halloween-btn-variant($halloween-dark, $white, $white, $white, $halloween-dark, $halloween-dark);
+	}
+
+	.context-dark-1 {
+		.btn-white {
+			@include halloween-btn-variant($halloween-dark, $white, $white, $white, $halloween, $halloween);
+		}
+	}
+
+	// Button effects
+	.btn-ujarak {
+		position: relative;
+		z-index: 0;
+		transition: background .4s, border-color .4s, color .4s;
+		will-change: transform;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $halloween;
+			z-index: -1;
+			opacity: 0;
+			transform: scale3d(0.7, 1, 1);
+			transition: transform 0.42s, opacity 0.42s;
+			border-radius: inherit;
+		}
+
+		&,
+		&::before {
+			transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		}
+
+		&:hover {
+			transition: background .4s .4s, border-color .4s 0s, color .2s 0s;
+
+			&::before {
+				opacity: 1;
+				transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+			}
+		}
+	}
+}

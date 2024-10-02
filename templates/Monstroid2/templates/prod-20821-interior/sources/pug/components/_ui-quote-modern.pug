@@ -1,0 +1,10 @@
+mixin quote-modern(obj)
+	.quote-modern
+		.quote-modern-header
+			.quote-classic-avatar
+				+jpg(obj.img)
+			.quote-classic-description
+				h4.quote-classic-name= obj.name
+				p.quote-classic-position= obj.position ? obj.position : 'Regular client'
+		.quote-modern-body
+			p= obj.text

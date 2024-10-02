@@ -1,0 +1,63 @@
+- var navbarTexts = false
+
+header.page-header
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar(data-layout='rd-navbar-fixed',
+    data-sm-layout='rd-navbar-fixed',
+    data-sm-device-layout='rd-navbar-fixed',
+    data-md-layout='rd-navbar-static',
+    data-md-device-layout='rd-navbar-fixed',
+    data-lg-device-layout='rd-navbar-static',
+    data-lg-layout='rd-navbar-static',
+    data-xl-device-layout='rd-navbar-static',
+    data-xl-layout='rd-navbar-static',
+    data-xxl-device-layout='rd-navbar-static',
+    data-xxl-layout='rd-navbar-static',
+    data-stick-up-clone='false',
+    data-sm-stick-up='true'
+    data-md-stick-up='true'
+    data-lg-stick-up='true',
+    data-md-stick-up-offset='153px',
+    data-lg-stick-up-offset='153px',
+    data-body-class='rd-navbar-default-linked')
+      // RD Navbar Top Panel
+      .rd-navbar-top-panel
+        .rd-navbar-top-panel__main
+          .rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-top-panel__main'): span
+          .rd-navbar-top-panel__content
+            .rd-navbar-top-panel__left
+              ul.list-inline-xxs
+                li: a.icon.icon-xxs.icon-primary.fa.fa-facebook(href='#')
+                li: a.icon.icon-xxs.icon-primary.fa.fa-twitter(href='#')
+                li: a.icon.icon-xxs.icon-primary.fa.fa-google-plus(href='#')
+                li: a.icon.icon-xxs.icon-primary.fa.fa-vimeo(href='#')
+                li: a.icon.icon-xxs.icon-primary.fa.fa-youtube(href='#')
+                li: a.icon.icon-xxs.icon-primary.fa.fa-pinterest-p(href='#')
+            .rd-navbar-top-panel__right: ul.rd-navbar-items-list
+              li
+                .unit.flex-row.align-items-center.unit-spacing-xs
+                  .unit__left: span.icon.icon-xxs.icon-primary.linear-icon-telephone
+                  .unit__body: ul.list-semicolon
+                    li: a(href='callto:#') (800) 123-0045
+                    li: a(href='callto:#') (800) 123-0045
+
+              li
+                .unit.flex-row.align-items-center.unit-spacing-xs
+                  .unit__left: span.icon.icon-xxs.icon-primary.linear-icon-clock3
+                  .unit__body: p Mn-Fr: 10 am-8 pm
+
+      .rd-navbar-inner
+        // RD Navbar Panel
+        .rd-navbar-panel
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          // RD Navbar Brand
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              +png(logoDefault)
+
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap
+          include ../includes/_nav
+='\n'

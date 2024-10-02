@@ -1,0 +1,180 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Project Category'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+
+  // Parallax header
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated Offices 
+  ='\n'
+  
+  // Project category description
+  section.section-md.bg-default
+    .container
+      .divider-small
+      p.text-sm-2 Doing a construction in an active hospital environment is perhaps the most complex and challenging work in the industry. Maintaining safety, keeping a low level of noise and collaborating with facility's staff requires an extremely well planned management. These are the keys to successfully completing the work with no interruption of services and minimal inconvenience to the patients, residents and staff members.  We've got all the experience that's needed to perform both a new construction and a renovation in a continuously inhabited and operating environment. Builderra has constructed more than 800 significant healthcare facilities and renovated thousands more. Our company's name consistently pops on Modern Healthcare's Top five list of leading healthcare construction management companies. Rest assured that our credentials, experience and in-house expertise benefit every healthcare construction project we undertake!
+  ='\n'
+
+  // Projects
+  section.bg-default
+    .container-fluid.container-flex
+      .row.no-gutters(data-lightgallery='group')
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner 
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back 
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-652x491', 'thumb-creative__image') 
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) Roland Office Center
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-1_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) Omni Lounge
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-2_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) Smith’s Art Studio
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-3_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) Bryson Café & Coworking
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-4_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) RapidMinds
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-5_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) WTech Entertainment
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-6_original-1200x800.jpg', data-lightgallery='item')
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) Barnes Hotel
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-7_original-1200x800.jpg', data-lightgallery='item')
+ 
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative.thumb-creative_no-cover: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-652x491', 'thumb-creative__image')
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-652x491', 'thumb-creative__image')
+              .thumb-creative__content
+                ul.list-inline-tag
+                  li: a(href='#') Office 
+                h6.thumb-creative__title: a(href=singleProject) GDevs Ltd.
+                p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM.…
+                a.link-icon.icon-md.linear-icon-plus(href='images/project-category-8_original-1200x800.jpg', data-lightgallery='item')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

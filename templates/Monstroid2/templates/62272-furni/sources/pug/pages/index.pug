@@ -1,0 +1,511 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-shop-grid 
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home Default'
+
+block page
+  
+  include ../sections/_header-inverse
+
+
+  section.section-sm.bg-default.section-limit
+    .row.justify-content-sm-center.row-50
+      .col-md-4
+        .banner-thumbnail.banner-thumbnail-top
+          a(href='catalog-grid.html')
+            +jpg('banner-1-573x914')          
+            
+      .col-md-4
+        .banner-thumbnail.banner-thumbnail-top
+          a(href='catalog-grid.html')
+            +jpg('banner-2-573x432')
+          
+            
+        .banner-thumbnail.banner-thumbnail-center
+          a(href='catalog-grid.html')
+            +jpg('banner-3-573x432')
+
+      .col-md-4
+        .banner-thumbnail.banner-thumbnail-top
+          a(href='catalog-grid.html')
+            +jpg('banner-4-573x914')
+          
+            
+  section.section-limit.bg-gray-lighter.bg-image.bg-image-8
+    .container
+      .row
+        .col-md-7.col-lg-5.section-xl.section-xl_bigger
+          h3.wow.fadeInUpSmall(data-wow-delay=".2s" data-wow-duration='1.2s') Get our Catalogue
+          p.big.wow.fadeInUpSmall(data-wow-delay=".5s" data-wow-duration='1.2s') Receive free monthly catalogue showcasing the best in modern furniture design!
+          a.banner-link.wow.fadeInUpSmall(href='catalog-grid.html' data-wow-delay=".7s" data-wow-duration='1.2s') Shop now!
+  
+  section.section-lg.bg-default.text-center
+    .container
+      h4 Top Furniture Categories
+      .row.row-60
+        .col-md-6.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('categories-1-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href='catalog-grid.html') Living Room
+              p.thumb__subtitle 25 products
+        .col-md-6.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('categories-2-301x301')
+  
+            .thumb-corporate__caption
+              p.thumb__title: a(href='catalog-grid.html') Dining room
+              p.thumb__subtitle 25 products
+        .col-md-6.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('categories-3-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href='catalog-grid.html') Bedroom
+              p.thumb__subtitle 25 products
+        .col-md-6.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('categories-4-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href='catalog-grid.html') Office
+              p.thumb__subtitle 25 products
+
+  +divider
+  
+  section.section-lg.bg-default
+    .container.text-center
+      h4 Furniture on Fire - Hot Sales!
+      // Owl Carousel
+      .owl-carousel.carousel-product(data-autoplay='true',data-items='1',data-md-items='2', data-lg-items='3',data-xl-items='4', data-stage-padding='0', data-loop='false', data-margin='50', data-mouse-drag="false" data-nav='true')
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Italian furniture contemporary mix steel base WOODEN SET',
+            prices: ['87'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'modern-small-cucciolo-2-seater-sofa-domingo-salotti-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Modern small cucciolo 2 seater sofa domingo salotti',
+            prices: ['16'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'my-italian-living-contemporary-manila-leather-blue-dining-chair-by-imperial-line-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'My italian living contemporary manila leather BLUE CHAIR',
+            prices: ['44'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart',
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'Porta-venezia-kitchen-bar-dining-stool-by-infiniti-design-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Porta venezia kitchen bar dining stool by infiniti design',
+            prices: ['82'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand icon-gray',
+            button_text: 'Select options'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'santarossa_plastic_transparent_glossy_chair-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Santarossa plastic transparent glossy chair',
+            prices: ['40'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand icon-gray',
+            button_text: 'Select options'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'slamp-lighting-italain-designer-floor-lamp-contemporary-design-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Slamp italian floor lamp luxury italian lighting',
+            prices: ['43'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand icon-gray',
+            button_text: 'Select options',
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'garda-square-sideboard-for-living-and-dining-room-by-dallagnese-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            class_label: 'featured',
+            label_text: 'Featured',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Garda square sideboard for living room',
+            prices: ['48'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart',
+
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'emma-chairs-and-table-for-kitchen-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            class_label: 'new',
+            label_text: 'New',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Italian emma chairs and table wooden for kitchen',
+            prices: ['69'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+  
+  +divider
+
+  section.section-lg.bg-default
+    .container.text-center
+      h4 Most Popular Items
+      // Owl Carousel
+      .owl-carousel.carousel-product(data-autoplay='true',data-items='1',data-md-items='2', data-lg-items='3',data-xl-items='4', data-stage-padding='0', data-loop='false', data-margin='50', data-mouse-drag="false" data-nav='true')
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'santarossa_plastic_transparent_glossy_chair-1-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Santarossa plastic transparent glossy chair',
+              prices: ['40'],
+
+              button_class: 'button-gray-light-outline',
+              button_icon_class: 'linear-icon-magic-wand icon-gray',
+              button_text: 'Select options'
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'slamp-lighting-italain-designer-floor-lamp-contemporary-design-1-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Slamp italian floor lamp luxury italian lighting',
+              prices: ['43'],
+
+              button_class: 'button-gray-light-outline',
+              button_icon_class: 'linear-icon-magic-wand icon-gray',
+              button_text: 'Select options',
+              rating_list: true
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'garda-square-sideboard-for-living-and-dining-room-by-dallagnese-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              class_label: 'featured',
+              label_text: 'Featured',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Garda square sideboard for living room',
+              prices: ['48'],
+
+              button_class: 'button-black',
+              button_icon_class: 'linear-icon-cart',
+              button_text: 'Add to cart',
+
+              rating_list: true
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'emma-chairs-and-table-for-kitchen-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              class_label: 'new',
+              label_text: 'New',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Italian emma chairs and table wooden for kitchen',
+              prices: ['69'],
+
+              button_class: 'button-black',
+              button_icon_class: 'linear-icon-cart',
+              button_text: 'Add to cart'
+            })
+  
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Italian furniture contemporary mix steel base WOODEN SET',
+              prices: ['87'],
+
+              button_class: 'button-black',
+              button_icon_class: 'linear-icon-cart',
+              button_text: 'Add to cart'
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'modern-small-cucciolo-2-seater-sofa-domingo-salotti-1-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Modern small cucciolo 2 seater sofa domingo salotti',
+              prices: ['16'],
+
+              button_class: 'button-black',
+              button_icon_class: 'linear-icon-cart',
+              button_text: 'Add to cart'
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'my-italian-living-contemporary-manila-leather-blue-dining-chair-by-imperial-line-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'My italian living contemporary manila leather BLUE CHAIR',
+              prices: ['44'],
+
+              button_class: 'button-black',
+              button_icon_class: 'linear-icon-cart',
+              button_text: 'Add to cart',
+              rating_list: true
+            })
+          .item
+            +shop-grid({
+              href: 'single-product.html',
+              img: 'Porta-venezia-kitchen-bar-dining-stool-by-infiniti-design-300x300',
+              icon_class1: 'linear-icon-heart',
+              icon_class2: 'linear-icon-balance',
+
+              tag_list_class: 'product-categories',
+              tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+              title: 'Porta venezia kitchen bar dining stool by infiniti design',
+              prices: ['82'],
+
+              button_class: 'button-gray-light-outline',
+              button_icon_class: 'linear-icon-magic-wand icon-gray',
+              button_text: 'Select options'
+            })
+  
+  section.section-limit
+    .row.justify-content-md-center.row-50
+      .col-md-6.col-lg-4
+        .banner-thumbnail.banner-thumbnail-top.bg-accent
+          a(href='catalog-grid.html')
+            +jpg('banner-5-573x432')
+          .caption
+            p Living Room
+            h5.banner-title: a(href='catalog-grid.html') Up to 30% off!            
+
+            
+      .col-md-6.col-lg-4
+        .banner-thumbnail.banner-thumbnail-center.text-center.bg-accent
+          a(href='catalog-grid.html')
+            +jpg('banner-6-573x432')
+          .caption
+            h4.banner-title: a(href='catalog-grid.html')
+              | Save 49%
+            p when buying kitchen tables!
+            
+      .col-md-6.col-lg-4
+        .banner-thumbnail.banner-thumbnail-top
+          a(href='catalog-grid.html')
+            +jpg('banner-7-573x432')
+          .caption
+            p See our best bar furniture
+            h5.banner-title: a(href='catalog-grid.html') UP TO 70% OFF
+            
+  section.section-lg.bg-default
+    .container
+      .row.row-60.justify-content-md-center
+        .col-md-6.col-lg-4
+          // Blurb circle
+          article.blurb.blurb-circle.blurb-circle_centered
+            .blurb-circle__icon: span.icon.linear-icon-clock3
+            p.blurb__title 365-Day Home Trial
+            p Our unique return policy will allow you to return furniture for almost a year
+
+        .col-md-6.col-lg-4
+          // Blurb circle
+          article.blurb.blurb-circle.blurb-circle_centered
+            .blurb-circle__icon: span.icon.linear-icon-truck
+            p.blurb__title Free Shipping and Delivery
+            p We're one of the few furniture online retailers, who offer delivery free of charge
+
+        .col-md-6.col-lg-4
+          // Blurb circle
+          article.blurb.blurb-circle.blurb-circle_centered
+            .blurb-circle__icon: span.icon.linear-icon-medal-empty
+            p.blurb__title Lifetime Warranty
+            p Purchasing furniture with us comes with longer warranty than anyone else offers!
+  ='\n'
+  
+  +divider
+  
+  section.section-lg.bg-default.text-center
+    .container
+      h4 Here We Post Furniture Tips,#[br] Purchasing Guides and Special Offers!
+      .row.row-60.justify-content-md-center
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal.text-center
+            +jpg('post-index-1-418x315')
+
+            .post-classic-title
+              h6: a(href=postImage) FURNITURE STYLES PROFILE: ART DECO
+
+            .post-meta
+              .group
+                a(href=postImage): time(datetime='2017') Jan.20, 2016
+                a(href=postImage).meta-author by Brian Williamson
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal.text-center
+            +jpg('post-index-2-418x315')
+  
+            .post-classic-title
+              h6: a(href=postImage) HOW LAIDBACK AN OFFICE CHAIR SHOULD BE?
+  
+            .post-meta
+              .group
+                a(href=postImage): time(datetime='2017') Jan.20, 2016
+                a(href=postImage).meta-author by Brian Williamson
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal.text-center
+            +jpg('post-index-3-418x315')
+
+            .post-classic-title
+              h6: a(href=postImage) THE INTERSECTION OF LEFTOVERS AND HAND-CRAFTED FURNITURE
+
+            .post-meta
+              .group
+                a(href=postImage): time(datetime='2017') Jan.20, 2016
+                a(href=postImage).meta-author by Brian Williamson
+          
+  +divider
+
+  section.section-lg.bg-default
+    .container
+      .row
+        .col-lg-4
+          h4 Join Our Newsletter
+        .col-lg-8
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Enter your email, please
+            button(type="submit").button.button-primary Subscribe!
+            
+  // Page Footer 
+  include ../sections/_footer-corporate

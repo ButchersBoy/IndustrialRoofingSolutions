@@ -1,0 +1,69 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Header minimal'
+
+block page 
+  // Page header
+  include ../sections/_header-minimal
+
+  // Our Services
+  section.section-md.bg-default.text-center
+    .container
+      .row: .col-sm-12: h4.heading-decorated Our Services
+      .row.row-50.justify-content-md-center.justify-content-lg-start
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-pencil-ruler
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) Pre-construction Services
+              p We take our time on initial planning before any construction begins, to balance all the financial and efficiency issues beforehand...
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-users
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) General Contracting
+              p We have a long list of professional contractors, whom our engineers and architects enjoy to work with on a majority of our projects!
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-wall
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) Construction Services
+              p Our customers love the pace/quality tempo that we show during each of the principal construction processes!
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-apartment
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) Construction Management
+              p Construction project management is essential. We're using the most time and iterations efficient life cycles methods for that.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-home4
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) Building Information Modeling (BIM)
+              p Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left: .blurb-circle__icon: span.icon.linear-icon-pencil-ruler2
+            .unit__body
+              p.heading-6.blurb__title: a(href=singleService) Design-Build
+              p If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of the construction shorter
+  ='\n'
+  
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

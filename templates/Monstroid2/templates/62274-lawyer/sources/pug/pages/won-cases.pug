@@ -1,0 +1,145 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Won Cases'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-accent-2
+    +parallax({
+      "src": "images/parallax-3.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-md-center
+            .col-md-10.col-xl-8
+              h1.heading-decorated.heading-decorated_center Won Cases
+  ='\n'
+
+  // Intro
+  section.section-md.bg-default.text-center
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          .divider-small
+          h6 In our long history of helping Texan people and businesses, we've accumulated a 98% of positive verdicts rate, which beats any of our local competitor's margins by double digits...
+          p Even if we've tried to, it would have been an awfully long of a page to list all of the 98 hundred cases we won, helped to dismiss, drop or settle in those 27 years. These are our most recent victories, which we'll be updating regularly with newer ones...
+          p.font-italic * (all the names of individual clients are replaced for confidentiality reasons)
+  ='\n'
+
+  // Cases
+  section.section-lg.bg-default.text-center
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-1-301x301',
+            title: 'Mary Lewis',
+            text: 'When our law firm was dealing with this case, it was about an African American Nurse put through a Mandatory unpaid Overtime at work. Besides that she also told about a Hostile Work Environment situation. She reported the organization and the company targeted her.  Our firm challenged that unlawful action.',
+            result: 'Case won.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-2-301x301',
+            title: 'Gary Winkler',
+            text: "When an employee asked us to represent his interests in a case of a sexual harassment by another male colleague - we were eager to take on it. The harassment happened while he was on a business trip. The unprovoked touching  was reported to supervisors, but they've tried to keep the thing down.  Our lawyers have sent a detailed settlement offer to the company that their attorneys responded to favorably.  ",
+            result: 'Favorable confidential settlement.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-3-301x301',
+            title: 'Hexi Co.',
+            text: "While working with this company we've been handling soem patent lawsuits that the Hexi Co. company filed against their competitors in the market. We''ve had a long and arduous fight. As our whole intellectual property and patent rights division of lawyers and paralegals showcased their skills, we eventually were able to win. ",
+            result: 'Victory.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-4-301x301',
+            title: 'Walter Mayham',
+            text: "When a mental health condition client has asked us to protect him against being accused of shoplifting gadgetry from a major shopping store location. Our client continually insisted on his innocence. Negotiations were difficult because the client had a prior history of thefts.",
+            result: 'Won, thanks to the full assessment and repeal of accusations...'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-5-301x301',
+            title: 'Amy Lambert',
+            text: "This case is an example of a female employee facing rough and hostile treatment at her workplace on the basis of racial discrimination. The employee has thus been unlawfully terminated. Our team of lawyers was able to settle a reasonable deal and her personal work record was amended by the employer... ",
+            result: 'Favorable settlement.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-6-301x301',
+            title: 'Humblr',
+            text: "The most recent case that we've worked at for this Internet giant's company has been about the mergers & acquisition. That department, managed by our senior lawyer and managing partner Gerald Harrison worked on this specific case for over a year. But eventually, the legal facts and arguments that they have successfully gathered have proven our client's claims. ",
+            result: 'in favor of our client.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-7-301x301',
+            title: 'Glippery',
+            text: "The Glippery company has been one of our oldest customers, with our team of lawyers working with them since 1992. Most recently we've been representing their interests when solving one of the business disputes inside their company's management. Eventually, it never made it to court hearings, which was our client's desire. ",
+            result: 'settlement.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-8-301x301',
+            title: 'James Murdoch',
+            text: "This is an example of an unlawful job termination done by a big pharmaceutical company... Following a long process of investigation and facts assessments, it turned out to be a case of discrimination based on race or ethnicity. Our team of lawyers and paralegals worked day and night and eventually won the case. ",
+            result: 'Case won.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-9-301x301',
+            title: 'Ranfort Highberry',
+            text: "This client was accused of possessing a controlled substance. Policemen sighted him at a parking lot and stated that they saw a bag with a white substance. then allegedly hidden  by our client When our client was taken into custody, officers found a bag which tested positive for a controlled substance. ",
+            result: 'Case dismissed, charges dropped.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-10-301x301',
+            title: 'Janice Grieg',
+            text: "This is a good example of a family law case. Edward, Janice's husband has tried to declare the prenuptial agreement those 2 signed as null and void. While we protected the legal grounds of that document, we found out and proved to the court and the judge, that he was seeking to collect a newly obtained principal capital, not a subject to the prenuptial agreement they've priorly signed. ",
+            result: 'case dismissed'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-11-301x301',
+            title: 'Hirosoft',
+            text: "While we've been working with this IT company well since the '90s, most recently we were able to settle a decision in client's favor while suing the unlawful use of patented intellectual property by a Chinese state company. As a result of it, we settled the case in client's favor. ",
+            result: 'Settlement'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-12-301x301',
+            title: 'Home Hero',
+            text: "This nationwide retailing chain has been among our clients for many years. Most recently we've been able to settle an intellectual property case in their favor. That one has been one of the most complex, paperwork filled and complicated cases in our firm's entire legal practice... Eventually, due to all the information we've gathered, the settlement in favor of the client came in. ",
+            result: 'settlement.'
+          })
+  ='\n'
+
+  include ../sections/_section-cta-1
+
+  include ../sections/_section-default-testimonials
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

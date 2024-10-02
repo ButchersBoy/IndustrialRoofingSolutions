@@ -1,0 +1,77 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Animated Counter'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Innovative Technologies",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Flexible and Multipurpose",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Made for People",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          +progress-bar-linear({
+            title: "Interior Design",
+            progressStyle: "progress-linear-modern",
+            valueTo: "49"
+          })
+
+          +progress-bar-linear({
+            title: "Interior Planning",
+            progressStyle: "progress-linear-modern",
+            valueTo: "29"
+          })
+
+          +progress-bar-linear({
+            title: "Flexible and Multipurpose",
+            progressStyle: "progress-linear-modern",
+            valueTo: "86"
+          })
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,38 @@
+/*
+* Navbar components
+*/
+
+// RD Navbar
+.rd-navbar {
+  display: none;
+}
+
+// RD Navbar Toggle
+.rd-navbar-toggle,
+.rd-navbar-sidebar-toggle{
+  @include make-toggle(
+          $rd-navbar-toggle-preset,
+          $rd-navbar-min-line-height,
+          $rd-navbar-min-font-size,
+          $rd-navbar-fixed-toggle-color
+  );
+  background-color: transparent;
+  border: none;
+  display: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+// RD Navbar Brand
+.rd-navbar-brand {
+  a{
+    display: inline-block;
+  }
+}
+
+// RD Navbar Dropdown
+.rd-navbar-dropdown {
+  display: none;
+}

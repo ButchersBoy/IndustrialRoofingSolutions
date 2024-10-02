@@ -1,0 +1,79 @@
+/** @section Progress Bars */
+
+.halloween-section {
+	// Linear Progress Bars
+	.progress-linear {
+		position: relative;
+		text-align: left;
+	}
+
+	.progress-linear-header {
+		font-size: 14px;
+		color: $halloween-dark;
+		text-align: center;
+	}
+
+	.progress-linear-body {
+		position: relative;
+		height: 2px;
+		margin-left: 3%;
+		margin-right: 3%;
+		background: $halloween-dark;
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			width: 2.5%;
+			height: 30px;
+			content: '';
+			border-color: $halloween-dark;
+			border-style: solid;
+			pointer-events: none;
+			transform: translateY(-50%);
+		}
+
+		&::before {
+			left: -3%;
+			border-width: 2px 0 2px 2px;
+		}
+
+		&::after {
+			right: -3%;
+			border-width: 2px 2px 2px 0;
+		}
+	}
+
+	.progress-linear-bar {
+		width: 0;
+		height: 10px;
+		background: $halloween;
+		transition: 1s all ease-in-out;
+		transform: translateY(-4px);
+	}
+
+	.progress-linear-counter {
+		color: $halloween;
+
+		&::after {
+			content: "%";
+		}
+	}
+
+	* + .progress-linear-body {
+		margin-top: 28px * $halloween-xs-multiplier;
+	}
+
+
+	@include media-breakpoint-up(lg) {
+		* + .progress-linear-body {
+			margin-top: 28px * $halloween-lg-multiplier;
+		}
+	}
+
+	@include media-breakpoint-up(xxl) {
+		* + .progress-linear-body {
+			margin-top: 28px;
+		}
+	}
+}

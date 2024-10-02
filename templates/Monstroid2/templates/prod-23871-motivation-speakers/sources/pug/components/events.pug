@@ -1,0 +1,26 @@
+mixin event-default( obj )
+  article.event
+    .event-image: a( href= obj.img.link ): +img( obj.img.name )
+    h4.event-title: a( href= obj.title.link )= obj.title.text
+    .event-location
+      span.icon.fa-map-marker.icon-primary
+      a(href= obj.address.link )= obj.address.title
+    if (obj.text)
+      p.event-text= obj.text
+    a.event-link( href= obj.video.link data-lightgallery="item" )= obj.video.text
+      span.icon.fa-play-circle
+
+mixin event-modern( obj )
+  article.event-modern
+    .event-modern-img: a( href= obj.img.link ): +img( obj.img.name )
+    .event-modern-body
+      .event-modern-time
+        a( href= obj.time.link )= obj.time.value[0]
+          span= obj.time.value[1]
+      .event-modern-content
+        h4.event-modern-title: a( href= obj.title.link )= obj.title.text
+        .event-modern-location
+          span.icon.fa-user.icon-primary
+          a(href= obj.address.link )= obj.address.title
+        p.event-modern-text= obj.text
+        a.event-modern-link( href= obj.link.path )= obj.link.text

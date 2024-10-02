@@ -1,0 +1,161 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-centered
+
+block variables
+	- pageName = 'Typography'
+
+block page
+	// Page header
+	include ../sections/_header
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	.section-md.section-divided
+		.container
+			.row.row-50.row-md-75
+				.col-lg-8.section-divided__main
+					// Base typography
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Typography
+						ul.list-md
+							li
+								h1 H1 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							li
+								h2 H2 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h3 H3 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h4 H4 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h5 H5 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							
+							li
+								h6 H6 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					='\n'
+					
+					// Unordered list
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Unordered list
+						ul.list-marked
+							li Lorem ipsum dolor sit amet
+							li Adipiscing inciderint est
+							li Mel tale nonumy ea. Illum
+					='\n'
+					
+					// Ordered list
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Ordered list
+						ul.list-ordered
+							li Ei solum iisque saperet
+							li Eu dico principes consequat
+							li Est in ullum tibique, vim
+					='\n'
+					
+					// Blockquotes
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Blockquotes
+						+quote-centered({
+							text: "The team of Pland is highly professional, friendly, hard-working, and neat.",
+							cite: "Adam Smith"
+						})
+					='\n'
+					
+					// Some other styles
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Some other styles
+						p.first-letter Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+						
+						ul.list-xxs
+							li
+								dl.list-terms-inline
+									dt Bold Text
+									dd: span.text-medium Id lorem invidunt vix. Has ei quod
+							li
+								dl.list-terms-inline
+									dt Italic
+									dd: span.font-italic Ignota noster mei ne, ad duis consul
+							li
+								dl.list-terms-inline
+									dt Strike-through
+									dd: span.text-strike Sit illum constituto conclusionemque
+							li
+								dl.list-terms-inline
+									dt Link
+									dd: a(href='#') Appetere abhorreant duo no, ne elit
+							li
+								dl.list-terms-inline
+									dt Inline Code
+									dd: code Melius commodo suscipiantur ad usu
+					='\n'
+				
+				
+				.col-lg-4.section-divided__aside
+					// Categories
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Categories
+						ul.list-linked
+							li: a(href='#') Exterior design
+							li: a(href='#') Landscape design
+							li: a(href='#') Decorating
+							li: a(href='#') Project planning
+							li: a(href='#') Garden design
+					='\n'
+					
+					// Posts
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Latest Posts
+						ul.list-sm
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2021
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) 6 Types of Outdoor Living Spaces
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2021
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) 5 In-Demand Types of Exterior Siding
+							li
+								// Post inline
+								article.post-inline
+									.post-inline__header
+										span.post-inline__time Jan.20, 2021
+										span.post-inline__author by Brian Williamson
+									
+									p.post-inline__link: a(href=postLink) How Much Do Gutter Guards Cost?
+					='\n'
+					
+					// Tags
+					section.section.novi-bg.novi-bg-img.section-md
+						h5 Tags
+						ul.list-tags
+							li: a(href='#') News
+							li: a(href='#') Exterior Design
+							li: a(href='#') Landscape Design
+							li: a(href='#') Tips
+							li: a(href='#') Siding
+					='\n'
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer

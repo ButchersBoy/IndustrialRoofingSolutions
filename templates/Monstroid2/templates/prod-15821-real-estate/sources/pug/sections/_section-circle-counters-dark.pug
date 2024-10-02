@@ -1,0 +1,25 @@
+include ../elements/_ui-material-parallax
+section.bg-gray-dark.text-center
+  +material-parallax({
+    "src": "images/parallax-1.jpg",
+    "class": 'parallax-header rd-parallax-light'
+  })
+    .section-lg
+      .container
+        .row.justify-content-sm-center.row-60 
+          .col-md-4.col-xl-3
+            // Circle Progress Bar
+            .progress-bar-circle(data-value="0.45", data-gradient="#ff596d, #ff596d", data-empty-fill="#f8f8f8", data-size="141", data-thickness="5")
+              span
+            .progress-bar-circle-title Clean Interface
+          .col-md-4.col-xl-3
+            // Circle Progress Bar
+            .progress-bar-circle(data-value="0.60", data-gradient="#ff596d, #ff596d", data-empty-fill="#f8f8f8", data-size="141", data-thickness="5")
+              span
+            .progress-bar-circle-title Responsive Design
+          .col-md-4.col-xl-3
+            // Circle Progress Bar
+            .progress-bar-circle(data-value="0.80", data-gradient="#ff596d, #ff596d", data-empty-fill="#f8f8f8", data-size="141", data-thickness="5")
+              span
+            .progress-bar-circle-title Easy Customization
+='\n'

@@ -1,0 +1,32 @@
+//Post Grid Classic
+article.post-classic
+	.post-classic__header
+		.post-classic-title.post-classic-title-icon.linear-icon-star
+			h4: a(href=postImage) How our market research system works
+		.post-meta
+			.group
+				a(href=postImage): time(datetime='2017') Jan.20, 2016
+				a(href=postImage).meta-author Brian Williamson
+	+jpg('post-classic-1-886x501')
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand...
+		.post-meta
+			.group
+				a.post-meta__comment(href=postImage) 3 comment(s)
+				a(href=postImage) Theme
+				+tag-list({
+					list_class: 'list-inline-tag',
+					href: postImage,
+					items: [
+						"Style",
+						'Clean']
+				})
+
+		.post-classic-footer
+			ul.list-inline.list-inline-lg
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-facebook(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-twitter(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-google-plus(href='#')
+
+			a(href=postImage).button.button-link Read More

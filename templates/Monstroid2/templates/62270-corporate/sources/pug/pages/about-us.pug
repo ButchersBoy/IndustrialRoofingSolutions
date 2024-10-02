@@ -1,0 +1,53 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- var activeIndex = 1
+	- var pageName = 'About Us'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[pageName]]
+	})
+
+	include ../sections/_about-corporate
+					
+	section.bg-gray-dark.text-center
+		+parallax({
+			"img": "about-parallax-01",
+			"addClass": 'rd-parallax-light'
+		})
+			.section-md
+				.container
+					h3.heading-divider Corp's Quality Policy
+					.row.text-md-left.justify-content-md-center.align-items-md-center.justify-content-sm-center
+						.col-lg-2.col-md-3.col-sm-6
+							+png('about-01-173x170')
+						.col-xl-6.col-md-7
+							p ''Quality excellence is the foundation of the management of our business and the keystone of our aim for customer satisfaction. Therefore, it is Corporate's Inc. policy to consistently provide services that meet customer requirements and exceed their expectations. Corporate's Inc. strives to actively pursue the improvement of quality services through programs that enable each of its personnel to perform tasks right; first time and every time.''
+						
+	="\n"
+	
+	section.section-md.bg-gray-3.text-md-left
+		.container
+			.row
+				.col-md-6
+					+jpg('about-02-652x491')
+				.col-md-6
+					h3.heading-divider Corp's Executive Managers
+					p Corporate's Inc.team of over 5 consultants has collectively worked across numerous consulting projects in a wide range of industries and has a good understanding of the types of skills, experience and professional qualifications required to be successful within the consulting discipline.
+					
+	="\n"
+	
+	include ../sections/_section-parallax-intro
+		
+	// Page Footer
+	include ../sections/_footer-corporate
+

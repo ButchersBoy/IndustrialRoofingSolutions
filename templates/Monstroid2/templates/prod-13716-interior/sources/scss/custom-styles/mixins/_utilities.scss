@@ -1,0 +1,77 @@
+//
+// Utilities
+// --------------------------------------------------
+
+// Grid related values
+//
+@mixin make-grid-parameter($parameter, $offset, $container, $col) {
+  @if $offset > 0 {
+    #{$parameter}: calc(50% - #{$container} / 2 + #{$offset} + (#{$container} / #{$cell-count}) * #{$col});
+  } @else if ($offset < 0) {
+    #{$parameter}: calc(50% - #{$container} / 2 - #{-$offset} + (#{$container} / #{$cell-count}) * #{$col});
+  } @else {
+    #{$parameter}: calc(50% - #{$container} / 2 + (#{$container} / #{$cell-count}) * #{$col});
+  }
+}
+
+// Spacing
+//
+@mixin spacing($x, $y : $x) {
+  position: relative;
+  transform: translate3d(0,-$y,0);
+  margin-bottom: -$y;
+  margin-left: - round($x / 2);
+  margin-right: - round($x / 2);
+
+  > * {
+    position: relative;
+    margin-top: $y;
+    padding-left: round($x / 2);
+    padding-right: round($x / 2);
+  }
+}
+
+// Inline list
+//
+@mixin inline-list($x, $y: $x) {
+  @include spacing($x, $y);
+  > * {
+    display: inline-block;
+  }
+}
+
+// Link
+//
+@mixin link($default-clr, $hover-color) {
+  &,
+  &:active,
+  &:focus {
+    color: $default-clr;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+// Default bg behaviour
+//
+@mixin bg-behaviour($bg-color) {
+  background-color: $bg-color;
+
+  &[class*='section-'] + &.section-md,
+  &[class*='section-'] + &.section-lg,
+  &[class*='section-'] + &.section-xl {
+    padding-top: 0;
+  }
+}
+
+@mixin responsive-block {
+  @include media-breakpoint-down(sm) {
+    & {
+      max-width: 370px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

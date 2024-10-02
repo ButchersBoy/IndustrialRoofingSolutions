@@ -1,0 +1,20 @@
+- function getImageSize(name) { return name.match('[0-9]+(x)[0-9]+')[0].split('x'); }
+
+
+//- Img image
+mixin img(name, className)
+	- var size = getImageSize(name);
+
+	img(src='images/' + name, alt='', width=size[0], height=size[1], class=className)
+
+
+//- Jpg image
+mixin jpg(name, className)
+	- var size = getImageSize(name);
+	img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=className)
+
+
+//- Png image
+mixin png(name, className)
+	- var size = getImageSize(name);
+	img(src='images/' + name + '.png', alt='', width=size[0], height=size[1], class=className)

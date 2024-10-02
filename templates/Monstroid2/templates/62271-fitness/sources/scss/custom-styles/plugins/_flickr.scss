@@ -1,0 +1,30 @@
+//
+// Flickr
+// --------------------------------------------------
+[data-type='flickr-item'] {
+  font-size: 0;
+  line-height: 0;
+
+  a{
+    display: block;
+    position: relative;
+    height: 190px;
+
+    @include media-breakpoint-up(sm) {
+      height: 230px;
+    }
+  }
+
+  img{
+    min-width: 100%;
+  }
+}
+
+.flickr{
+  img{
+    pointer-events: none;
+    position: absolute;
+    max-width: none;
+    height: 100%;
+  }
+}

@@ -1,0 +1,214 @@
+/*
+* Lists
+*/
+
+/*
+* Vertical list
+*/
+.list {
+	> li + li { margin-top: 10px; }
+}
+
+.list-xs > li + li {
+	margin-top: 5px;
+}
+
+.list-sm > li + li {
+	margin-top: 15px;
+}
+
+.list-md > li + li {
+	margin-top: 20px;
+}
+
+.list-lg > li + li {
+	margin-top: 25px;
+}
+
+.list-xl > li + li {
+	margin-top: 30px;
+}
+
+/*
+* List inline
+*/
+.list-inline {
+
+	> li {
+		display: inline-block;
+	}
+}
+
+html {
+
+	.list-inline-xs {
+		@include spacing(6px);
+	}
+
+	.list-inline-sm {
+		@include spacing(10px, 8px);
+	}
+
+	.list-inline-md {
+		@include spacing(16px, 10px);
+	}
+
+	.list-inline-lg {
+		@include spacing(20px, 10px);
+	}
+
+	.list-inline-xl {
+		@include spacing(26px, 10px);
+	}
+
+	.list-inline-xxl {
+		@include spacing(30px, 10px);
+	}
+}
+
+/*
+* List terms
+*/
+.list-terms {
+	dt + dd {
+		margin-top: 5px;
+	}
+	dd + dt {
+		margin-top: 25px;
+	}
+}
+
+* + .list-terms {
+	margin-top: 25px;
+}
+
+/*
+* Index list
+*/
+.index-list {
+	counter-reset: li;
+
+	> li {
+		.list-index-counter {
+			&:before {
+				content: counter(li, decimal-leading-zero);
+				counter-increment: li;
+			}
+		}
+	}
+}
+
+/*
+* Marked list
+*/
+.list-marked {
+	padding-left: 25px;
+	text-align: left;
+
+	> li {
+		text-indent: -25px;
+		padding-left: 25px;
+		&::before {
+			position: relative;
+			display: inline-block;
+			left: 25px;
+			top: -1px;
+			min-width: 25px;
+			content: '\f105';
+			font: 400 14px/24px 'FontAwesome';
+			color: $gray-400;
+		}
+	}
+
+	> li + li {
+		margin-top: 4px;
+	}
+}
+
+* + .list-marked {
+	margin-top: 15px;
+}
+
+p + .list-marked {
+	margin-top: 10px;
+}
+
+/*
+* Ordered List
+*/
+.list-ordered {
+	counter-reset: li;
+	text-align: left;
+	line-height: 1.46667;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: $font-family-sec;
+
+	> li {
+		padding-left: 32px;
+		text-indent: -32px;
+
+		&:before {
+			text-align: center;
+			content: counter(li, decimal-leading-zero);
+			counter-increment: li;
+			display: inline-block;
+			width: 20px;
+			margin-right: 12px;
+			text-indent: 0;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+* + .list-ordered { margin-top: 15px; }
+
+
+
+//
+// Custom List Styles
+//
+
+.list-style-1 {
+
+}
+
+
+
+//
+// List Social
+//
+.list-social {
+	color: inherit;
+
+	.icon {
+		font-size: 22px;
+		line-height: 1;
+	}
+
+	a {
+		@include link(inherit, $primary);
+	}
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+
+		.icon {
+			font-size: 27px;
+		}
+	}
+}
+
+* + .list-social { margin-top: 30px; }
+
+// Context styling
+%context-dark {
+
+	.list-social {
+		color: $white;
+	}
+}

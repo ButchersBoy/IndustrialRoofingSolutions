@@ -1,0 +1,41 @@
+// Categories
+section.section-sm
+  h5 Categories
+  ul.small.list
+    li: a(href='#') Kitchen
+    li: a(href='#') Office
+    li: a(href='#') Bedroom
+    li: a(href='#') Living Room
+
+='\n'
+
+// Filter color
+section.section-sm
+  h5 Filter By Color
+  ul.small.list
+    li: a(href='#') Black (9)
+    li: a(href='#') Blue (3)
+    li: a(href='#') Brown (5)
+    li: a(href='#') Gray (7)
+    li: a(href='#') White (6)
+='\n'
+
+// Range
+section.section-sm
+  h5 Filter By Price
+  
+  //RD Range
+  .rd-range-wrap
+    .rd-range-inner
+      span Price: 
+      span.rd-range-input-value-1
+      span —
+      span.rd-range-input-value-2
+    
+    .rd-range(data-min='10', data-max='500', data-start='[75, 244]',
+              data-step='1', data-tooltip='true', data-min-diff='10',
+            data-input='.rd-range-input-value-1', data-input-2='.rd-range-input-value-2')
+      
+  a(href='#').button.button-gray-light-outline Filter
+      
+='\n'

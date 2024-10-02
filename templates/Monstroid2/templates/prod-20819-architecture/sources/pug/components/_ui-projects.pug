@@ -1,0 +1,11 @@
+mixin project-mary( obj )
+	article.project-mary( class= obj.mod )&attributes(attributes)
+		.project-mary-figure
+			+jpg( obj.img )
+			.project-mary-link-wrap: a.project-mary-link.mdi.mdi-magnify( data-lightgallery='item' href='images/' + obj.imgOriginal + '.jpg' ): +jpg( obj.img )
+		.project-mary-content
+			ul.project-mary-panel
+				li.project-mary-panel-item: time.project-mary-time( datetime= obj.time.datetime )= obj.time.datetext
+				li.project-mary-panel-item: .project-mary-tag= obj.tag
+			h3.project-mary-title: a( href='#' )= obj.title
+			p.project-mary-text= obj.text

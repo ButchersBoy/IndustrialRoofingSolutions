@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Contacts'
+
+block page
+	// Page header
+	include ../sections/_header
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section
+		include ../sections/_section-gmap
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-fix.row-50
+				.col-md-5.col-lg-4
+					h3 Contact Details
+					ul.list-xs.contact-info
+						li
+							dl.list-terms-minimal
+								dt Address
+								dd 4578 Marmora Road, Glasgow, D04 89GR
+						
+						li
+							dl.list-terms-minimal
+								dt Phones
+								dd: ul.list-semicolon
+									li: a(href='tel:#') (800) 123-0045
+									li: a(href='tel:#') (800) 123-0045
+						
+						li
+							dl.list-terms-minimal
+								dt E-mail
+								dd: a(href='mailto:#') info@demolink.org
+						
+						li
+							dl.list-terms-minimal
+								dt Opening hours:
+								dd Mn-Fr: 10 am-8 pm
+						li
+							+list-inline-icon({
+								list_class: 'list-inline-sm',
+								items:      [
+									"icon-sm fa-facebook",
+									'icon-sm fa-twitter',
+									'icon-sm fa-google-plus',
+									'icon-sm fa-vimeo',
+									'icon-sm fa-youtube',
+									'icon-sm fa-pinterest-p']
+							})
+				.col-md-7.col-lg-8
+					h3 Let’s Get in Touch
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+						
+						button(type="submit").button.button-primary send
+	
+	
+	
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer

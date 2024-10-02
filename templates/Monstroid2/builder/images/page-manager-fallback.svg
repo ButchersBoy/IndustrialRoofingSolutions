@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="230px" height="179px" viewBox="0 0 230 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Fallback</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="230" height="177.721429" rx="2"></rect>
+    </defs>
+    <g id="Novi-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GetStartedScreen-(Page)" transform="translate(-395.000000, -307.000000)">
+            <g id="GetStartedScreen">
+                <g id="Presets" transform="translate(135.000000, 307.000000)">
+                    <g id="Preset-2" transform="translate(260.000000, 0.000000)">
+                        <g id="Fallback">
+                            <rect id="Rectangle-81-Copy" stroke-opacity="0.12" stroke="#9CB9FA" x="0.5" y="0.5" width="229" height="178" rx="2"></rect>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Rectangle-81-Copy-8"></g>
+                            <g id="Group-4" mask="url(#mask-2)">
+                                <g transform="translate(5.111111, 5.114286)">
+                                    <rect id="Rectangle-81-Copy-2" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none" x="0.5" y="0.5" width="218.777778" height="101.285714" rx="2"></rect>
+                                    <g id="ic_filter_hdr_black_24px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(84.333333, 17.900000)">
+                                        <g id="Group">
+                                            <polygon id="Shape" points="0 0 51.1111111 0 51.1111111 51.1428571 0 51.1428571"></polygon>
+                                            <path d="M29.8148148,25.5714286 L21.8287037,36.2261905 L27.8981481,44.3238095 L24.4907407,46.8809524 C20.8916667,42.0863095 14.9074074,34.0952381 14.9074074,34.0952381 L2.12962963,51.1428571 L48.9814815,51.1428571 L29.8148148,25.5714286 Z" id="Shape" fill-opacity="0.12" fill="#9CB9FA" fill-rule="nonzero"></path>
+                                        </g>
+                                        <ellipse id="Oval" fill-opacity="0.12" fill="#9CB9FA" cx="44.7222222" cy="29.4071429" rx="3.83333333" ry="3.83571429"></ellipse>
+                                    </g>
+                                    <path d="M142.611111,173.385714 L0.5,173.385714 L0.5,108.112786 C0.5,107.290036 1.17047798,106.621429 1.99574449,106.621429 L141.115367,106.621429 C141.940716,106.621429 142.611111,107.290938 142.611111,108.112786 L142.611111,173.385714 Z" id="Rectangle-81-Copy-3" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none"></path>
+                                    <path d="M219.277778,173.385714 L148.722222,173.385714 L148.722222,108.112786 C148.722222,107.29232 149.399895,106.621429 150.229553,106.621429 L217.770447,106.621429 C218.602835,106.621429 219.277778,107.291589 219.277778,108.112786 L219.277778,173.385714 Z" id="Rectangle-81-Copy-5" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none"></path>
+                                    <path d="M214.166667,173.385714 L153.833333,173.385714 L153.833333,113.231671 C153.833333,112.403209 154.50242,111.735714 155.339133,111.735714 L212.660867,111.735714 C213.496131,111.735714 214.166667,112.401117 214.166667,113.231671 L214.166667,173.385714 Z" id="Rectangle-81-Copy-7" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none"></path>
+                                    <rect id="Rectangle-Copy" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="116.35" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-6" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="120.185714" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-7" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="124.021429" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-8" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="127.857143" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-9" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="131.692857" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-10" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="135.528571" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-11" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="139.364286" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-12" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="143.2" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-13" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="147.035714" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-14" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="150.871429" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-15" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="154.707143" width="51.1111111" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-18" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="158.444444" y="158.542857" width="20.4444444" height="1.27857143"></rect>
+                                    <path d="M68.5,173.385714 L5.61111111,173.385714 L5.61111111,113.231671 C5.61111111,112.408679 6.28719551,111.735714 7.11093179,111.735714 L67.0001793,111.735714 C67.8318012,111.735714 68.5,112.40078 68.5,113.231671 L68.5,173.385714 Z" id="Rectangle-81-Copy-4" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none"></path>
+                                    <rect id="Rectangle" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="1.27777778" y="15.3428571" width="217.222222" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="10.2222222" y="7.67142857" width="38.3333333" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-2" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="196.777778" y="7.67142857" width="12.7777778" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-3" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="178.888889" y="7.67142857" width="12.7777778" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-4" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="161" y="7.67142857" width="12.7777778" height="1.27857143"></rect>
+                                    <rect id="Rectangle-Copy-5" stroke="none" fill-opacity="0.12" fill="#9CB9FA" fill-rule="evenodd" x="143.111111" y="7.67142857" width="12.7777778" height="1.27857143"></rect>
+                                    <g id="ic_filter_hdr_black_24px-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(17.888889, 113.792857)">
+                                        <g id="Group">
+                                            <polygon id="Shape" points="0 0 38.3333333 0 38.3333333 38.3571429 0 38.3571429"></polygon>
+                                            <path d="M22.3611111,19.1785714 L16.3715278,27.1696429 L20.9236111,33.2428571 L18.3680556,35.1607143 C15.66875,31.5647321 11.1805556,25.5714286 11.1805556,25.5714286 L1.59722222,38.3571429 L36.7361111,38.3571429 L22.3611111,19.1785714 Z" id="Shape" fill-opacity="0.12" fill="#9CB9FA" fill-rule="nonzero"></path>
+                                        </g>
+                                        <ellipse id="Oval" fill-opacity="0.12" fill="#9CB9FA" cx="33.5416667" cy="22.0553571" rx="2.875" ry="2.87678571"></ellipse>
+                                    </g>
+                                    <path d="M137.5,173.385714 L74.6111111,173.385714 L74.6111111,113.231671 C74.6111111,112.408679 75.2871955,111.735714 76.1109318,111.735714 L136.000179,111.735714 C136.831801,111.735714 137.5,112.40078 137.5,113.231671 L137.5,173.385714 Z" id="Rectangle-81-Copy-6" stroke-opacity="0.12" stroke="#9CB9FA" stroke-width="1" fill="none"></path>
+                                    <g id="ic_filter_hdr_black_24px-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(84.333333, 113.792857)">
+                                        <g id="Group">
+                                            <polygon id="Shape" points="0 0 38.3333333 0 38.3333333 38.3571429 0 38.3571429"></polygon>
+                                            <path d="M22.3611111,19.1785714 L16.3715278,27.1696429 L20.9236111,33.2428571 L18.3680556,35.1607143 C15.66875,31.5647321 11.1805556,25.5714286 11.1805556,25.5714286 L1.59722222,38.3571429 L36.7361111,38.3571429 L22.3611111,19.1785714 Z" id="Shape" fill-opacity="0.12" fill="#9CB9FA" fill-rule="nonzero"></path>
+                                        </g>
+                                        <ellipse id="Oval" fill-opacity="0.12" fill="#9CB9FA" cx="33.5416667" cy="22.0553571" rx="2.875" ry="2.87678571"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

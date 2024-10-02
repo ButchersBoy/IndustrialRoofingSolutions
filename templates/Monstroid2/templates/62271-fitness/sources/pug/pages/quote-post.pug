@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+include ../elements/_ui-slider-blog
+
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Quote post'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+
+
+  section.bg-default.section-lg
+    .container.post-single-body
+      .row.justify-content-sm-center
+        .col-lg-8
+          section.section-sm.section-top-none
+            .post-label.post-label-static
+              a(href='#').label.label-primary Fitness
+            h4 Weightlifting Program Plan: be Flexible with the Prescriptions
+
+            .post-meta
+              .unit.flex-row.align-items-center
+                .unit-left
+                  img(src="images/program-1.jpg", width="74", height="74", alt="").rounded-circle
+                .unit-body
+                  div.post-relative
+                    a(href=postImage).meta-author by
+                      span.meta-author__inner=' Steven Ayokee'
+                  .group
+                    a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+            p There are millions of ways on how to compose good weightlifting workout programs. Some coaches stay true to few basic plans on such training. They simply tweak them to be fit for different skills and experience levels. But we are sticking to quite a different plan. We put our focus on intensity (actual weights) prescriptions for any specific powerlifter.  I personally am sure there are times when both approaches are applicable, even within the same workout session...
+
+            .quote-centered.text-left
+              svg.quote-centered__mark(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484', xml:space='preserve')
+                g
+                  path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959              c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246              c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885              c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723              c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984              c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635              s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+              .quote-centered__text
+                p.q
+                  | Intensity prescriptions are sometimes the best choice for composing proper weightlifting programs.
+              p.quote-centered__cite Adam Smith
+
+
+            p There is a basic, first situation when it's not a good idea to do intensity prescriptions. That's when the lifter is a newbie. And there are two really simple reasons for that. First is, that such powerlifters either don’t have 1RMs to base the intensity prescriptions on or the 1RMs they have are not correct. The latter reason occurs due to a mix of multiple factors.  Such as limited technical ability, limited mobility, poor neurological efficiency, and the weak power of will. Secondly, new powerlifters usually progress very quickly to the next routines of the training. Which means that even if their 1RM was true at the beginning of the training session, it will very likely become incorrect in the long run. All in all, prescribed intensity with starters will usually hold their progress back more than help them proceed farther...
+
+            +jpg('nonstandart-post-1-886x668')
+
+            p The next situation is in a program in which the trainer wants the powerlifter to workout as intense as possible on any given session. This may mean aspiring to a single maximal or near-maximal set (perhaps with subsequent back-off sets). Then lifter's hitting a prescribed number of sets of the maximal number of weights per set. In such a situation it's always better to listen to the coach's personal guidance. No one except your trainer will be able to intuitively figure out what's best for your workout routine right now.
+
+            p A third situation includes few factors that can make intensity prescriptions obscure as well. Like when you stumble into specific exercises for which 1RMs don’t exist at all.  Maybe you run into exercises for which 1RMs are not possible or not advisable. Also, there can be such a routines, for which 1RMs have not been tested yet. Thus, they are assumed to be incorrect due to that. Or your coach may be the one who prefers you to go by feel, rather than using any prescription workout weights and intensities. In such a coach's opinion the degree of effort or speed requires the intensity to be determined by gut feeling. As well as by measuring your specific shape, day to day.
+
+            p Finally, some kinds of workouts are better to have at least some detailed plan laid out. Like, e.g. when the weights should increase over the course of 5 weeks and should be maxed out each time, etc. Exercises like squats, good mornings, stiff legged deadlifts, etc. often fall into this category.
+
+            .post-socials
+              ul.list-inline
+                li
+                  a(href='#').icon.fa-facebook
+                li
+                  a(href='#').icon.fa-twitter
+                li
+                  a(href='#').icon.fa-instagram
+                li
+                  a(href='#').icon.fa-youtube
+
+          include ../sections/_section-blog-post-comment
+
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

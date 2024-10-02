@@ -1,0 +1,103 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Amenities'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link]]
+  })
+
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-4.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+    
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h6 A LITTLE EXTRA…
+              h2 Hotel Amenities
+              p All of these amenities come at a reasonable pricing and with an excellent quality! Be sure, that besides having a nice stay at our place, you will be able to accomplish any additional errands you need…
+  ='\n'
+
+  // Airport Shuttle & Underground Parking
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='checkout.html')
+            | Airport Shuttle &
+            br
+            |  Underground Parking
+          h5 Free for all visitors except Single Rooms
+          p We know that our hotel's visitors come from different places. But considering that most of them arrive in Indianapolis via the local airport, we wanted to make some extra step for their convenience. As a courtesy service, we're always glad to offer you an airport shuttle service to and from the airport... Additionally, for those of our customers who arrive at the city on their own car, we always offer a secure, underground parking lot, which usually comes at no additional charge (starting with the double room & up). Some extra fees for using the hotel's parking may apply to the visitors staying at our single rooms...
+          a.button.button-primary(href='checkout.html') Order now
+          
+        .col-md-10.col-lg-6
+          +jpg('amenities-1-652x486', 'img-bordered')
+  ='\n'
+
+  // Room Service & Concierge Service
+  section.section-lg.bg-accent
+    .container
+      .row.row-50.justify-content-md-center
+        .col-md-10.col-lg-6
+          h3: a(href='checkout.html') Room Service & Concierge Service
+          h5 Prices depend on the menu items you order
+          p Room service has always been one of the most essential (and popular) services for any hotel. With us being no exception to this practice, we at the Modern Hotel would truly like to be sure that any kind of additional service a customer wants can be easily and timely delivered to them. Besides offering an option to deliver Food & Drinks to your room, we also give you an option to file any additional orders or queries to one of our concierges. Also the list includes same day valet dry cleaning and laundering services...
+          a.button.button-primary-outline(href=bookingLink) Order now
+          
+        .col-md-10.col-lg-6
+          +jpg('amenities-2-652x486', 'img-bordered')
+  ='\n'
+
+  // SPA & Beauty Centre
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='checkout.html') SPA & Beauty Centre
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 140
+            span.price__aside-bottom /per night
+          p Having our own SPA & beauty center comes as a great advantage for anyone who's staying with us, as the majority of other hotels in the city do not offer such an additional servicing...  Here you'll be able to find a peace of mind at any time, as the SPA center works 24/7. So shake the traveling dust off your shoulders and relax at an hour long massage session... Or, maybe get a new hairdo and a manicure before the evening's dinner...
+          a.button.button-primary(href='checkout.html') Order now
+          
+        .col-md-10.col-lg-6
+          +jpg('amenities-3-652x486', 'img-bordered')
+  ='\n'
+
+  // Conference Hall for Business Events
+  section.section-lg.bg-gray-lighter 
+    .container
+      .row.row-50.justify-content-md-center
+        .col-md-10.col-lg-6
+          h3: a(href='checkout.html') Conference Hall for Business Events
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 340
+            span.price__aside-bottom /per hour
+          p Though a majority of our hotel's visitors are families, traveling across the country, many business people visit our city and are staying at our hotel as well. Bearing in mind, that no business event can possibly happen without a place for having a meeting at, we offer you a number of spacious conference rooms for that matter! With all of them having food and beverage catering, included in the renting price, free & speedy WiFi and even complimentary hardware (like TVs, laptops, tablets, and projectors) - we're sure that they will be a perfect fit!
+          a.button.button-primary(href='checkout.html') Order now
+
+        .col-md-10.col-lg-6
+          +jpg('amenities-4-652x486', 'img-bordered')
+  ='\n'
+
+  include ../sections/_footer-corporate
+

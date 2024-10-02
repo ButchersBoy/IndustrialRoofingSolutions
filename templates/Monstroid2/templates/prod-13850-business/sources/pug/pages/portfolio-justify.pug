@@ -1,0 +1,129 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Portfolio'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	// Parallax header
+	+parallax({
+		"src": "images/parallax-4.jpg",
+		"class": ['parallax-header']
+	})
+		.parallax-header__inner.context-dark: .parallax-header__content
+			.container
+				.row.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2.heading-decorated Our Portfolio
+						h6 Justify layout
+
+
+	section.section-lg.bg-default.text-center
+		.container
+			h4.heading-decorated Portfolio
+			.isotope-wrap.row.row-70
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal
+						li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+						li: a(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Objects
+						li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') People
+
+					.isotope.row.portfolio-justify-container(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album: true,
+								href: 'single-portfolio.html',
+								img: 'portfolio-justify-1-430x750',
+								label_text: 'Link',
+								icon_class1: 'linear-icon-folder-picture',
+								items: ['9 photos', 'Objects'],
+								title: 'Portfolio Album',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+
+						.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'slider-slide-14-1280x1920',
+								img: 'portfolio-justify-2-910x750',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album: true,
+								href: 'single-portfolio.html',
+								img: 'portfolio-justify-3-910x500',
+								label_text: 'Link',
+								icon_class1: 'linear-icon-folder-picture',
+								items: ['9 photos', 'Objects'],
+								title: 'Portfolio Album',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-4-1920x1440',
+								img: 'portfolio-justify-4-430x500',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								album: true,
+								href: 'single-portfolio.html',
+								img: 'portfolio-justify-5-670x500',
+								label_text: 'Link',
+								icon_class1: 'linear-icon-folder-picture',
+								items: ['9 photos', 'Objects'],
+								title: 'Portfolio Album',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-6-1920x1280',
+								img: 'portfolio-justify-6-670x500',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+							
+
+				.col-sm-12
+					+pagination-classic(1,
+					[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+					null,
+					{"title": "", "href": "#"}
+					)
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

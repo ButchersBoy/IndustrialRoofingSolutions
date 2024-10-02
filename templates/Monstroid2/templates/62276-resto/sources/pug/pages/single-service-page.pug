@@ -1,0 +1,79 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Single Service Page'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.text-center
+    +parallax({
+        "backgroundSpeed": "0.35",
+        "attrType": "media",
+        "src": "images/parallax-05.jpg",
+        "htmlSpeed": "0.1",
+        "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Personal Events Catering
+              hr.divider-minimal
+              p We cater any type of personal events. Starting with weddings, baby showers, bachelor parties, birthdays and finishing  with anniversaries...   
+
+  section.section-md.bg-default.text-center
+    .container
+      .row.row-50.justify-content-sm-center
+        .col-md-10
+          h5 Over the last few years, as our restaurant has grown considerably in its popularity, we've been catering a multitude of personal events.
+          hr.divider-minimal
+          p And as far as we can tell, the most important thing is the menu customization, as each specific event usually has its own specific set of appetizers, dishes and NA and alcoholic beverages. With our professional waiters and cooks in charge, any type of a menu that you will come up with will be possible to be brought to life and delivered right to your place!
+        .col-md-10
+          h6 We cater any types of personal events such as:
+          ul.list-marked.list-centered.text-left
+            li Weddings
+            li Baby showers
+            li Bachelor parties
+            li Birthdays
+            li Anniversaries
+
+  section.section-xl.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-8
+          h1 Reservation
+          hr.divider-minimal
+          p We are always ready to meet all your needs and requirements during the night time. Please call #[a(href='callto:#') 555.329.0632] or fill out the contact form and we will call back to you ASAP.
+
+          // RD Mailform
+          form.rd-mailform.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your name')
+              label.form-label(for="contact-name")
+
+            .form-wrap
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Your phone')
+              label.form-label(for="contact-phone")
+              
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Your e-mail')
+              label.form-label(for="contact-email")
+              
+            button(type="submit").button.button-gray-light-outline: span Submit
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

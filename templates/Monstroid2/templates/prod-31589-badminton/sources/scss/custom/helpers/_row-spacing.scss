@@ -1,0 +1,57 @@
+/** @section Row spacing */
+
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+* + .row-content-1 { margin-top: 50px * $xs-multiplier }
+* + .row-content-2 { margin-top: 60px * $lg-multiplier }
+
+@include media-breakpoint-up( sm ) {
+	.row-sm-20 {
+		@include grid-offset( 20px );
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .row-content-1 { margin-top: 50px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xl ) {
+	.row-xl-30 {
+		@include grid-offset( 30px );
+	}
+
+	.row-xl-40 {
+		@include grid-offset( 40px );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.row-xxl-50 {
+		@include grid-offset(50px);
+	}
+
+	* + .row-content-1 { margin-top: 50px }
+	* + .row-content-2 { margin-top: 60px }
+}

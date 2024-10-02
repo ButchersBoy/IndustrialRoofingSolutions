@@ -1,0 +1,58 @@
+#appointment.modal.fade(role='dialog').text-left
+  .modal-dialog
+    // Modal content
+    .modal-content
+      .modal-header
+        h5.modal-title Request Appointment
+        button.close(type='button', data-dismiss='modal'): span.icon.icon-md.linear-icon-cross
+      .modal-body
+        .group-xl
+          span
+            span.icon.icon-md.icon-primary.linear-icon-calendar-full
+            | January 15, 2017
+          span
+            span.icon.icon-md.icon-primary.linear-icon-clock3
+            | 10:00 am – 12:00 am
+        div
+          label.radio-inline
+            input( type="radio" name="optradio" value='login' checked='checked')
+            | I am a new customer
+        div
+          label.radio-inline
+            input( type="radio" name="optradio" value='register' )
+            | I am a current customer
+
+        hr
+
+        .register-form
+          h5 Registration: #[span.text-primary *]
+          p Your first name and an email address are required.
+          // Login form
+          form
+            .rd-mailform-inline-flex
+              .form-wrap
+                label.form-label(for="name-2") 
+                input#name-2.form-input(type="text" name="name" data-constraints='@Required' placeholder='First Name')
+              .form-wrap
+                label.form-label(for="email") 
+                input#email.form-input(type="email" name="email" data-constraints='@Email @Required' placeholder='E-mail')
+            .form-wrap
+              label.form-label(for="password-2") 
+              input#password-2.form-input(type="password" name="password" data-constraints='@Required' placeholder='Password')
+            .group
+              button(type="submit").button.button-gray-light-outline: span Book Appointment
+              button(type="button" data-dismiss="modal").button.button-gray-light-outline: span close
+        .login-form
+          h5 Login
+          // Login form
+          form
+            .form-wrap
+              label.form-label(for="name") 
+              input#name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Username or e-mail')
+            .form-wrap
+              label.form-label(for="password") 
+              input#password.form-input(type="password" name="password" data-constraints='@Required' placeholder='Password')
+            .group
+              button(type="submit").button.button-gray-light-outline: span Book Appointment
+              button(type="button" data-dismiss="modal").button.button-gray-light-outline: span close
+              

@@ -1,0 +1,15 @@
+mixin swiper-blog(obj)
+  // Swiper
+  .swiper-container.swiper-slider(data-simulate-touch="false" class=obj.class)
+    .swiper-wrapper
+      each item in obj.items
+        .swiper-slide(data-slide-bg='images/' + item + '.jpg')
+          .swiper-slide-caption
+
+    // Swiper Pagination
+    .swiper-pagination
+
+    // Swiper Navigation
+    .swiper-button-prev.linear-icon-chevron-left
+    .swiper-button-next.linear-icon-chevron-right
+

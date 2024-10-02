@@ -1,0 +1,86 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Offers'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Offer
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-custom-6.text-center.text-md-start
+		.container
+			.row.row-30.justify-content-between.align-items-center
+				.col-md-6
+					.img-responsive
+						+img( 'offers-01-584x481' )
+				.col-md-6.col-lg-5
+					.block-lg
+						h2 Room Promotions
+						p.fw-medium.text-primary Looking for a special offer from our hotel with first-class accommodation and extra services at the right price? Then you are at the right place!
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit turpis feugiat nisi facilisis dapibus. Suspendisse erat lacus, tincidunt sit amet quam a, blandit aliquet ligula. Morbi fringilla ante non convallis condimentum. Sed tincidunt ultrices semper. Fusce tortor tellus, vehicula at magna id, consectetur finibus ipsum.
+
+	// Offers
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-right.section-half-bg-custom-5.text-center
+		.container
+			.owl-carousel.owl-carosel-1(
+				data-items='1',
+				data-sm-items='2',
+				data-lg-items='3',
+				data-autoplay='false',
+				data-loop='false',
+				data-owl= {
+					dots: true
+				}
+			)
+				+thumbnail-offer({
+					img: 'offer-02-370x467',
+					title: '2 Nights Getaway Promotion Package',
+					meta: 'General Manager',
+				})
+				+thumbnail-offer({
+					img: 'offer-03-370x467',
+					title: 'Free Breakfast for 3 days Package',
+					meta: 'General Manager',
+				})
+				+thumbnail-offer({
+					img: 'offer-04-370x467',
+					title: '3 Nights Honeymoon Special Package',
+					meta: 'General Manager',
+				})
+
+	// Offers
+	section.section.section-lg.bg-default.text-center.text-md-start
+		.container
+			.row.row-30
+				.col-md-8.col-lg-6
+					h2 Wellness Promotions
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit tis feugiat nisi facilisis dapibus. Suspendisse erat lacus, tincidunt sit amet quam a, blandit aliquet ligula. Morbi fringilla ante non convalli.
+			.owl-carousel.owl-carosel-1(
+				data-items='1',
+				data-sm-items='2',
+				data-md-items='3',
+				data-autoplay='false',
+				data-loop='false',
+				data-owl= {
+					dots: true
+				}
+			)
+				.img-responsive
+					+thumbnail-gallery({
+						img: 'offer-05-370x467',
+						imgOriginal: 'offer-05-original',
+					})
+				.img-responsive
+					+thumbnail-gallery({
+						img: 'offer-06-370x467',
+						imgOriginal: 'offer-06-original',
+					})
+				.img-responsive
+					+thumbnail-gallery({
+						img: 'offer-07-370x467',
+						imgOriginal: 'offer-07-original',
+					})
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

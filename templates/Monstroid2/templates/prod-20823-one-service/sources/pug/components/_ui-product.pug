@@ -1,0 +1,15 @@
+//- Product
+mixin product( obj )
+	.col-xl-4.col-md-6
+		// Product
+		.product.novi-bg.bg-default
+			h3.product-title= obj.title
+			+img( obj.img ).product-img
+			.product-price
+				.product-price-header
+					.product-price-currency= obj.currency ? obj.currency : '$'
+					.product-price-value= obj.value
+				.product-price-footer= obj.priceFooter ? obj.priceFooter : 'per day'
+			p.product-text=obj.text
+			a(href='#').button.button-primary Order now
+			div: a.link-border(href='#')=obj.link ? obj.link : 'open menu (pdf)'

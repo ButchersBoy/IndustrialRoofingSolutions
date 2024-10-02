@@ -1,0 +1,94 @@
+// Variables
+
+// Color system
+// Gray colors
+$white:    #ffffff;
+$halloween-gray-200: #e8e8e9; //
+$halloween-gray-500: #a3a3a3; //
+$black:    #000000;
+$halloween-dark:     $black;
+
+// Body
+$halloween-body-color: $halloween-gray-500;
+
+// Accent colors
+$halloween:      #ff8428;
+
+// Resize multiplier
+$halloween-xs-multiplier: .6;
+$halloween-lg-multiplier: .7;
+
+// Fonts
+// Font, line-height, and color for body text, headings, and more.
+//$font-family-sans-serif:   'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+//$font-family-serif:        'Roboto Slab', "Times New Roman", Times, serif;
+//$font-family-monospace:    'Menlo', Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+//
+//$font-family-base: $font-family-sans-serif;
+//$font-family-sec: $font-family-base;
+
+// Base fonts
+$halloween-font-size-body: 14px;
+$halloween-font-size-lg:   18px;
+$halloween-font-size-sm:   12px;
+
+$halloween_lh-base: 20px;
+$halloween_lh-lg:   25px;
+$halloween_lh-sm:   18px;
+
+$halloween-font-weight-base: 400;
+
+// ** < Calculated font values >
+$halloween-line-height-base: ($halloween_lh-base / $halloween-font-size-body);
+$halloween-line-height-lg: ($halloween_lh-lg / $halloween-font-size-lg);
+$halloween-line-height-sm: ($halloween_lh-sm / $halloween-font-size-sm);
+// ** </ Calculated font values >
+
+// Headings
+$headings-font-family: inherit;
+$headings-font-weight: 400;
+$headings-line-height: 1.1;
+$headings-color: $halloween-dark;
+
+// Template Heading Values
+$halloween_h1-fsz: 70;
+$halloween_h2-fsz: 50;
+$halloween_h3-fsz: 30;
+$halloween_h4-fsz: 24;
+$halloween_h5-fsz: 20;
+$halloween_h6-fsz: 18;
+
+$halloween_h1-lh: 84;
+$halloween_h2-lh: 60;
+$halloween_h3-lh: 42;
+$halloween_h4-lh: 36;
+$halloween_h5-lh: 30;
+$halloween_h6-lh: 29;
+
+// ** < Calculated Headings values >
+$halloween-h1-font-size: $halloween_h1-fsz * 1px;
+$halloween-h2-font-size: $halloween_h2-fsz * 1px;
+$halloween-h3-font-size: $halloween_h3-fsz * 1px;
+$halloween-h4-font-size: $halloween_h4-fsz * 1px;
+$halloween-h5-font-size: $halloween_h5-fsz * 1px;
+$halloween-h6-font-size: $halloween_h6-fsz * 1px;
+
+$halloween-h1-line-height: ($halloween_h1-lh / $halloween_h1-fsz);
+$halloween-h2-line-height: ($halloween_h2-lh / $halloween_h2-fsz);
+$halloween-h3-line-height: ($halloween_h3-lh / $halloween_h3-fsz);
+$halloween-h4-line-height: ($halloween_h4-lh / $halloween_h4-fsz);
+$halloween-h5-line-height: ($halloween_h5-lh / $halloween_h5-fsz);
+$halloween-h6-line-height: ($halloween_h6-lh / $halloween_h6-fsz);
+// ** </ Calculated Headings values >
+
+// Buttons
+$halloween-btn-padding-y:        16px;
+$halloween-btn-padding-x:        38px;
+$halloween-btn-font-family:      $font-family-base;
+$halloween-btn-font-size:        16px;
+$halloween-btn-line-height:      1.2;
+$halloween-btn-font-weight:      700;
+$halloween-btn-letter-spacing:   0;
+$halloween-btn-text-transform:   uppercase;
+$halloween-btn-white-space:      nowrap;
+$halloween-btn-transition:      $transition-base;

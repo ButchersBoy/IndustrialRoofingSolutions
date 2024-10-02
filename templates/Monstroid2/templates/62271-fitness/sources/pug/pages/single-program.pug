@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+include ../elements/_ui-thumbnail-classic
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Programs'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+  section.section.text-center
+    +parallax({
+      img: 'parallax-01',
+      addClass: 'material-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+              hr.divider.divider-md.divider-primary
+              h1 CrossFit Classes
+              p(style='max-width: 740px;').center-block CrossFit is a principal strength and conditioning program. It's used by many serious, law enforcement and military institutions.
+
+  section.section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-center
+        .col-lg-8
+          h5 What is CrossFit?
+          p CrossFit is a principal strength and conditioning program. it's used by many serious, law enforcement and military institutions. Oftentimes it's used at the police academies and in military special operations units. As well as by hundreds of other amateur and professional athletes worldwide. CrossFit is a universal fitness program. It includes everything to help you achieve the top of your shape.
+          p People whom we train will not necessarily be using their strengths on a regular basis. Still it provides a universal and a well-rounded course of training for anyone. CrossFit will be useful regardless of anyone's station in life. Once again, the CrossFit program is designed for universal scalability. That lets any person with no previous workout experience fit in.
+          p The beauty of the CrossFit broad appeal is that it can be used to train anyone, with a great benefit for health and performance. It makes possible to train both an elderly individual with a heart disease and a cage fighter. All while following the one and same training routine!
+          p This is done by tweaking each workout individually (in both the physical load and workouts' intensity). Each CrossFit workout is exercised within a small group of students. It's always scaled across all levels of fitness routine. With CrossFit, you will have the guidance and motivational support of our premium trainers and coaches!
+
+          h5 People whom we would recommend taking our CrossFit classes:
+          ul.list
+            li • Professional athletes, preparing for competitions
+            li • Law enforcement officers, participating in an active duty
+            li • Amateur athletes with a mid to long experience in fitness
+        .col-lg-4.col-md-8
+          .thumbnail-gray
+            +jpg('coach-1-193x193', 'img-circle center-block')
+            .caption
+              h5 Steven Ayokee
+              h6 Owner/Head Coach
+              p 12 Years ago I lost 80lbs with the help of a personal coach and it completely changed my way of life. Since then, it’s been my mission to sway other people do CrossFit too.
+              a(href='coach.html').button.button-sm.button-primary read more
+
+  section.section-md.bg-accent-l.section.text-center.context-dark
+    .container
+      .row.justify-content-center.row-50
+        .col-lg-3.col-md-5
+          hr.divider.divider-sm
+          .heading-1
+            sup $
+            |56
+          p.small.heading-sup /per month
+          h5 1 - 5 sessions
+        .col-lg-3.col-md-5
+          hr.divider.divider-sm
+          .heading-1
+            sup $
+            | 49
+          p.small.heading-sup /per month
+          h5 5 - 9 sessions
+        .col-lg-3.col-md-5
+          hr.divider.divider-sm
+          .heading-1
+            sup $
+            | 37
+          p.small.heading-sup /per month
+          h5 10 - 14 sessions
+        .col-lg-3.col-md-5
+          hr.divider.divider-sm
+          .heading-1
+            sup $
+            | 26
+          p.small.heading-sup /per month
+          h5 15 -25 sessions
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

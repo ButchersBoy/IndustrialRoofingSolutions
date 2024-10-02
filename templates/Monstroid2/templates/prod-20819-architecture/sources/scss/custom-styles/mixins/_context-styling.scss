@@ -1,0 +1,57 @@
+/*
+* Contexts
+*/
+
+%context-dark {
+	& {
+		color: rgba($white, .5);
+	}
+
+	#{headings()} {
+		color: $white;
+	}
+
+	// Forms
+	.form-input,
+	.form-label {
+		color: $white;
+	}
+
+	.form-input {
+		border-color: rgba($white, .1);
+	}
+
+	// Buttons
+
+	.button.button-jerry {
+
+		&:hover,
+		&:active,
+		&.active {
+			color: $white;
+		}
+	}
+
+	.button-primary-outline {
+
+		&,
+		&:focus { color: $white; }
+	}
+
+	// Owl Carousel
+	.owl-dot {
+
+		&,
+		&:focus {
+			background-color: rgba($white, .2);
+		}
+	}
+}
+
+%context-light {
+	color: $body-color;
+
+	#{headings()} {
+		color: $headings-color;
+	}
+}

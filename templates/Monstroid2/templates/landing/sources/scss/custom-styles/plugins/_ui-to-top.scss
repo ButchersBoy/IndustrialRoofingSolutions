@@ -1,0 +1,52 @@
+/*
+*
+* ToTop
+* --------------------------------------------------
+*/
+
+.ui-to-top {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 46px;
+  color: #FFF;
+  background-image: linear-gradient(225deg, $primary 0%, $secondary 100%);
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+  transition: .45s all ease-in-out;
+  transform: translateY(100px);
+
+  &:hover {
+    color: $white;
+    background-image: linear-gradient(25deg, $primary 0%, $secondary 100%);
+    text-decoration: none;
+  }
+
+  &:focus{
+    color: $white;
+  }
+
+  &.active{
+    transform: translateY(0);
+  }
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top {
+  display: none !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+

@@ -1,0 +1,65 @@
+// Categories
+section.section-sm
+	h6 Categories
+	ul.list-linked
+		li: a(href='#') Retina Homepage
+		li: a(href='#') New Page Examples
+		li: a(href='#') Parallax Sections
+		li: a(href='#') Shortcode Central
+		li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-sm
+	h6 Latest Posts
+	ul.list-sm
+		li
+			// Post inline
+			article.post-inline
+				.post-inline__header
+					span.post-inline__time Jan.20, 2018
+					a(href=postLink).post-inline__author.meta-author by Brian Williamson
+
+				p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+		li
+			// Post inline
+			article.post-inline
+				.post-inline__header
+					span.post-inline__time Jan.20, 2018
+					a(href=postLink).post-inline__author.meta-author by Brian Williamson
+
+				p.post-inline__link: a(href=postLink) Getting to another level of design and functionality.
+='\n'
+
+// Tags
+section.section-sm
+	h6 Tags
+	ul.list-tags
+		li: a(href='#') Retina Homepage
+		li: a(href='#') New Page Examples
+		li: a(href='#') Ultimate Font Collection
+		li: a(href='#') Parallax Sections
+		li: a(href='#') Shortcode Central
+='\n'
+
+// Follow us
+section.section-sm
+	h6 Follow Us
+	+list-inline-icon({
+		list_class: 'list-inline-sm',
+		items: [
+			"icon-sm fa-facebook",
+			'icon-sm fa-twitter',
+			'icon-sm fa-google-plus',
+			'icon-sm fa-vimeo',
+			'icon-sm fa-youtube',
+			'icon-sm fa-pinterest-p']
+	})
+
+	h6 Get the latest news delivered daily!
+	// RD Mailform
+	form.rd-mailform.rd-mailform_style-1.text-center.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+		.form-wrap.form-wrap_icon.linear-icon-envelope
+			input#contact-email-blog-post.form-input(type="email" name="email" data-constraints="@Email @Required")
+			label.form-label(for="contact-email-blog-post") Enter please your e-mail
+		button(type="submit").button.button-gray-dark Get

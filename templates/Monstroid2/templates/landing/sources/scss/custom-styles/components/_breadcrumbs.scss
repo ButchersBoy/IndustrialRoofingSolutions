@@ -1,0 +1,43 @@
+/*
+*
+* Breadcrumbs
+* --------------------------------------------------
+*/
+
+//== Breadcrumbs variables
+//
+//##
+
+$bread-color: $white;
+$bread-active-color: $primary;
+
+
+.breadcrumb-wrapper{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.breadcrumb-custom{
+  margin-top: 20px;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    color: $bread-active-color;
+
+    > a{
+      color: $bread-color;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    + li:before {
+      padding: 0 8px 0 5px;
+      font-family: "Material Design Icons";
+      content: "\f238";
+      color: $white;
+    }
+  }
+}

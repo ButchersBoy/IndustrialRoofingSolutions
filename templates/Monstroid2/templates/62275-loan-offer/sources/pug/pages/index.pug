@@ -1,0 +1,575 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-panel
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-rd-parallax
+
+block variables
+	- var activeIndex = 0
+	- var footerLink = true
+	- var pageName = 'Home Default'
+
+block page
+	// Page Header
+	header.page-header.page-header-default
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar(
+				data-layout=            'rd-navbar-fixed',
+				data-sm-layout=         'rd-navbar-fixed',
+				data-md-layout=         'rd-navbar-fixed',
+				data-lg-layout=         'rd-navbar-fixed',
+				data-xl-layout=         'rd-navbar-static',
+				data-xxl-layout=        'rd-navbar-static',
+			
+				data-sm-device-layout=  'rd-navbar-fixed',
+				data-md-device-layout=  'rd-navbar-fixed',
+				data-lg-device-layout=  'rd-navbar-fixed',
+				data-xl-device-layout=  'rd-navbar-static',
+				data-xxl-device-layout= 'rd-navbar-static',
+				
+				data-body-class='rd-navbar-static-smooth rd-navbar-default-linked'
+			)
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+						// RD Navbar Brand
+						.rd-navbar-brand
+							a.brand-name.brand-name-static(href='index.html')
+								+png(logoDefault)
+							a.brand-name.brand-name-fixed(href='index.html')
+								+png(logoInverse)
+
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						.rd-navbar-nav-wrap__element
+							a.button.button-primary-outline(href='#') find my rate
+						include ../includes/_nav
+	
+	="\n"
+	
+	//Personal Loans							
+	section.context-dark.bg-image.bg-image-top.text-center(style='background-image: url(images/home-01-1920x1080.jpg)')
+		.container
+			.row.align-items-sm-center.justify-content-sm-center.section-full-width
+				.col-xl-11
+					h2 Looking for Big Loans with
+						br.d-none.d-xl-block
+						="\t"
+						| Low Interest Rate?
+					p.heading-4 Personal Loans at Fixed Rates from
+						="\t"
+						span.text-sbold.text-primary 5.95% APR
+						="\t"
+						| to 
+						="\t"
+						span.text-sbold.text-primary 12.99% APR
+						="\t"
+						br.d-none.d-xl-block.d-xxl-none
+						| (with AutoPay)
+					a.button.button-primary(href='#') find my rate
+					p.heading-4 Call us for a Free Consultation at
+					a.link-phone.heading-4(href='callto:#') 855-456-7634
+					p Checking your rate will not affect your credit score.
+					
+	="\n"
+
+	// Easy & Secure
+	section.section-lg.bg-gray-lighter.text-center
+		.container.container-odd
+			.row.row-odd.justify-content-sm-center.row-50
+				.cell-odd-md-2.col-md-4.col-sm-6
+					span.icon.icon-xxl.icon-primary.linear-icon-shield-check 
+					h5.text-primary Easy & Secure
+					p secure & confidential
+				.cell-odd-md-2.col-md-4.col-sm-6
+					span.icon.icon-xxl.icon-primary.linear-icon-speed-fast
+					h5.text-primary Get Money
+						="\t"
+						span.text-sbold in 1
+					p ...hour. Or even faster!
+				.cell-odd-md-2.col-md-4.col-sm-6
+					span.icon.icon-xxl.icon-primary.linear-icon-wallet
+					h5.text-primary Up to
+						="\t"
+						span.text-sbold $100k
+					p in cash or a wired transfer!
+				.cell-odd-md-2.col-md-4.col-sm-6
+					span.icon.icon-xxl.icon-primary.linear-icon-clock3
+					h5.text-primary Up to 
+						="\t"
+						span.text-sbold 3 YRS
+					p 36 months of low rates
+				.cell-odd-md-2.col-md-4.col-sm-6
+					span.icon.icon-xxl.icon-primary.linear-icon-laptop-phone
+					h5.text-primary Online
+					p no bank visit required!
+
+	="\n"
+	
+	// Pay off Credit Cards
+	section.section-lg.bg-default.text-center 
+		.container
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-9
+					h3 Pay off Credit Cards or
+						br.d-none.d-xl-block
+						="\t"
+						| Invest in a Major Purchase
+					.divider-text.divider-text-primary 
+					p.inset-xl Are you paying more than 10% of interest on your credit cards? Our low interest rates will help you save thousands of dollars in payments. With the lowest rates and a fixed monthly payment, you can pay off high interest debt, like credit cards, or make a major purchase. It only takes minutes to apply.
+					
+	='\n'
+
+	// Stunning Repayment Flexibility
+	section.section-lg.bg-accent.bg-overlay-dark.text-center.text-md-left.bg-image#home(data-type="anchor" style='background-image: url(images/bg-image-01.jpg)')
+		.container
+			.row.justify-content-md-end
+				.col-md-7
+					.inset-xxl
+						h3 Stunning Repayment Flexibility
+							br.d-none.d-xxl-block
+							="\t"
+							| for Your Loan
+						p Paying off your personal loans gets easy within our online dashboard.
+						.divider-text
+						ul.list.list-icon
+							li
+								.unit.unit-icon.unit-sm-horizontal.align-items-md-center
+									.unit__left: span.icon-lg.linear-icon-receipt
+									.unit__body: p.heading-5 Choose your preferred monthly payment
+							li
+								.unit.unit-icon.unit-sm-horizontal.align-items-md-center
+									.unit__left: span.icon-lg.linear-icon-cash-dollar
+									.unit__body: p.heading-5 Increase your payment amount anytime
+							li
+								.unit.unit-icon.unit-sm-horizontal.align-items-md-center
+									.unit__left: span.icon-lg.linear-icon-calendar-31
+									.unit__body: p.heading-5 Make extra or early payments without fees
+							li
+								.unit.unit-icon.unit-sm-horizontal.align-items-md-center
+									.unit__left: span.icon-lg.linear-icon-percent
+									.unit__body: p.heading-5 No fees, hidden or otherwise
+	='\n'
+				
+	// WHY LoanOffer is the Smartest Choice?
+	section.section-lg.bg-default.text-center#why-us(data-type="anchor")
+		.container
+			h3 WHY LoanOffer is the Smartest Choice?
+			.divider-text.divider-text-primary
+			.row.row-50
+				.col-sm-6.col-md-3 
+					span.icon.icon-xxl.icon-primary.linear-icon-vault
+					h5.text-primary Serious Savings
+					p.inset-lg Borrow from $5k-$100k at fixed rates that start at 5.95% APR (with AutoPay)
+				.col-sm-6.col-md-3 
+					span.icon.icon-xxl.icon-primary.linear-icon-run
+					h5.text-primary No Fees. No Catch.
+					p.inset-lg No origination fees or pre-payment penalties. What you see is what you get.
+				.col-sm-6.col-md-3 
+					span.icon.icon-xxl.icon-primary.linear-icon-graph
+					h5.text-primary Easy Experience
+					p.inset-lg Simple online application and access to live customer support 7 days a week.
+				.col-sm-6.col-md-3 
+					span.icon.icon-xxl.icon-primary.linear-icon-users2
+					h5.text-primary Community Benefits
+					p.inset-lg If you lose your job, we’ll temporarily pause your payments and even assist you in finding a new job!
+				
+	='\n'
+
+	// Invest in Your Career
+	section
+		.container-fluid
+			.row.no-gutters
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-01-640x432')
+							.thumb-accent-content
+								p.heading-4 Invest in
+									br
+									| Your Career 
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-02-640x432')
+							.thumb-accent-content
+								p.heading-4 Pay Off Credit
+									br
+									| Card Debt
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-03-640x432')
+							.thumb-accent-content
+								p.heading-4 Take Care of
+									br
+									| Medical Expenses
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-04-640x432')
+							.thumb-accent-content
+								p.heading-4 Cover Your
+									br
+									| Moving Expenses
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-05-640x432')
+							.thumb-accent-content
+								p.heading-4 Invest in Home
+									br
+									| Improvements
+				.col-sm-6.col-lg-4
+					//Thumb Accent
+					.thumb-accent
+						.thumb-accent-inner
+							.thumb-accent-image
+								+jpg('home-thumb-06-640x432')
+							.thumb-accent-content
+								p.heading-4 Consolidate Other
+									br
+									| High Interest Loans
+								
+	="\n"
+
+	// WHY LoanOffer is the Smartest Choice?
+	section.section-lg.bg-default.text-center
+		.container
+			h3 Personal Loan Comparison
+			.divider-text.divider-text-primary
+			p.text-black Here’s how LoanOffer Personal Loans compare
+			.row.row-50
+				.col-md-6.col-xl-3
+					//Pricing Box
+					.pricing-box
+						.pricing-box-header
+							h5 LoanOffer
+						.pricing-box-info 
+							div
+								.pricing-box-info-title APR range:
+								ul.pricing-box-info-list
+									li
+										.pricing-box-info-list-title Fixed Rates
+										.pricing-box-info-list-price 5.95% – 12.99% 
+									li
+										.pricing-box-info-list-title Variable Rates
+										.pricing-box-info-list-price 4.80% – 11.40%
+										.pricing-box-info-list-title (with AutoPay)5
+						ul.pricing-box-meta
+							li
+								dl
+									dt.pricing-box-meta-title Fees
+									dd.pricing-box-meta-text No Fees
+							li
+								dl
+									dt.pricing-box-meta-title Term
+									dd.pricing-box-meta-text 3, 5, or 7 years
+							li
+								dl
+									dt.pricing-box-meta-title Amount
+									dd.pricing-box-meta-text $5,000 – $100,000
+							li
+								dl
+									dt.pricing-box-meta-title Unemployment Protection 4
+									dd.pricing-box-meta-text Yes
+				.col-md-6.col-xl-3
+					//Pricing Box
+					.pricing-box
+						.pricing-box-header
+							h5 Lending Club
+						.pricing-box-info 
+							div
+								.pricing-box-info-title APR range:
+								ul.pricing-box-info-list
+									li
+										.pricing-box-info-list-price 5.99 – 35.96%
+						ul.pricing-box-meta
+							li
+								dl
+									dt.pricing-box-meta-title Fees
+									dd.pricing-box-meta-text 1 – 5% Origination Fee
+							li
+								dl
+									dt.pricing-box-meta-title Term
+									dd.pricing-box-meta-text 3 or 5 years
+							li
+								dl
+									dt.pricing-box-meta-title Amount
+									dd.pricing-box-meta-text $1,000 – $40,000
+							li
+								dl
+									dt.pricing-box-meta-title Unemployment Protection 4
+									dd.pricing-box-meta-text No
+				.col-md-6.col-xl-3
+					//Pricing Box
+					.pricing-box
+						.pricing-box-header
+							h5 Discover
+								br
+								| Personal Loan
+						.pricing-box-info 
+							div
+								.pricing-box-info-title APR range:
+								ul.pricing-box-info-list
+									li
+										.pricing-box-info-list-price 6.99 – 29.99%
+						ul.pricing-box-meta
+							li
+								dl
+									dt.pricing-box-meta-title Fees
+									dd.pricing-box-meta-text No Fees
+							li
+								dl
+									dt.pricing-box-meta-title Term
+									dd.pricing-box-meta-text 3, 4, 5, 6, or 7 years
+							li
+								dl
+									dt.pricing-box-meta-title Amount
+									dd.pricing-box-meta-text $2,500 – $30,000
+							li
+								dl
+									dt.pricing-box-meta-title Unemployment Protection 4
+									dd.pricing-box-meta-text No
+				.col-md-6.col-xl-3
+					//Pricing Box
+					.pricing-box
+						.pricing-box-header
+							h5 Credit Cards
+						.pricing-box-info 
+							div
+								.pricing-box-info-title APR range:
+								ul.pricing-box-info-list
+									li
+										.pricing-box-info-list-price 11.96 – 22.56%
+						ul.pricing-box-meta
+							li
+								dl
+									dt.pricing-box-meta-title Fees
+									dd.pricing-box-meta-text 3% Balance Transfer Fee
+							li
+								dl
+									dt.pricing-box-meta-title Term
+									dd.pricing-box-meta-text Rolling
+							li
+								dl
+									dt.pricing-box-meta-title Amount
+									dd.pricing-box-meta-text Varies
+							li
+								dl
+									dt.pricing-box-meta-title Unemployment Protection 4
+									dd.pricing-box-meta-text No
+									
+	='\n'
+
+	// Fast application. 
+	section.bg-gray-dark.text-center#steps(datatype='anchor')
+		+parallax({
+			"img": "home-parallax-01",
+			"addClass": 'rd-parallax-light'
+		})
+			.section-lg
+				.container
+					h3 Fast application.
+						br.d-none.d-xl-block
+						="\t"
+						| Fast process. So easy.
+					p Apply for a decision in minutes.
+					.divider-text.divider-text-primary
+					ul.row.index-list.row-50
+						li.col-md-6.col-xl-4
+							.list-index-counter-wrap
+								.list-index-counter
+								.list-index-title
+									h5 Find Your Rate
+								p Get pre-approved online with no fees and no long-term obligations
+						li.col-md-6.col-xl-4
+							.list-index-counter-wrap
+								.list-index-counter
+								.list-index-title
+									h5 Select Your Loan & Apply
+								p Choose the loan that fits you and complete your application.
+						li.col-md-6.col-xl-4
+							.list-index-counter-wrap
+								.list-index-counter
+								.list-index-title
+									h5 Put your e-signature in
+										br.d-none.d-xl-block
+										="\t"
+										| and receive your money
+								p.inset-md Sign your documents and funds will be immediately wired to your account.
+							
+	="\n"
+
+	// How We Help People
+	section.section-lg.bg-default.text-center#testimonials(datatype='anchor')
+		.container
+			h3 How We Help People
+			.divider-text.divider-text-primary
+			p.test-bound.text-black With serious savings, a seamless online application, and unique community benefits, our members have a lot to say about our loans!
+			.row.row-50.text-md-left
+				
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							svg.quote-classic__mark(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484', xml:space='preserve')
+								g
+									path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959              c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246              c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885              c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723              c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984              c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635              s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+							.quote-classic__text
+								p.q
+									| This has quite possibly been the best experience that I've had—easy application process, great rates, and great customer service.
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								img(src='images/home-01-109x109.png', class='rounded-circle' alt='', width='109', height='109')
+							.quote-classic__caption-main
+								p.quote-classic__cite Jane Stephens
+								p.quote-classic__small New York
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							svg.quote-classic__mark(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484', xml:space='preserve')
+								g
+									path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959              c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246              c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885              c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723              c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984              c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635              s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+							.quote-classic__text
+								p.q
+									| My LoanOffer personal loan will save me thousands of dollars in interest. The application process was fast and effortless.
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								img(src='images/home-02-109x109.png', class='rounded-circle' alt='', width='109', height='109')
+							.quote-classic__caption-main
+								p.quote-classic__cite Christopher Campbell
+								p.quote-classic__small Minnesota
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							svg.quote-classic__mark(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484', xml:space='preserve')
+								g
+									path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959              c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246              c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885              c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723              c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984              c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635              s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+							.quote-classic__text
+								p.q
+									| I know I’m making progress and LoanOffer has given me the freedom to invest that money in other assets.
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								img(src='images/home-03-109x109.png', class='rounded-circle' alt='', width='109', height='109')
+							.quote-classic__caption-main
+								p.quote-classic__cite Adam Devine
+								p.quote-classic__small California
+
+
+
+	
+	="\n" 	
+
+	// As Featured on:
+	section.section-md.bg-gray-lighter
+		.container
+			// Accordion
+			#accordion(role='tablist')
+				+panel({
+					parentId: "1",
+					header: "How getting a LoanOffer deal is different from getting into a credit card debt?"
+				})
+					p As opposed to credit cards' variable rates - our loans have a fixed interest rate. This means on funding day 1 you'll know your exact monthly payment schedule for the term of the loan!
+
+				+panel({
+					parentId: "2",
+					header: "Why your interest rates are lower?"
+				})
+					p As opposed to credit cards’ variable rates – our loans have a fixed interest rate. This means on funding day 1 you’ll know your exact monthly payment schedule for the term of the loan!
+
+				+panel({
+					parentId: "3",
+					header: 'What does "underwriting" mean?'
+				})
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					
+	="\n"
+
+	// As Featured in:
+	section.section-lg.bg-default.text-center#partners(datatype='anchor')
+		.container
+			h3 As Featured in:
+			.divider-text.divider-text-primary
+			.row.justify-content-sm-center.align-items-md-center.justify-content-xl-between.no-gutters.row-lg.row-50.row-image-wrap
+				+png('home-04-181x107')
+				+png('home-05-181x67')
+				+png('home-06-185x28')
+				+png('home-07-185x47')
+				+png('home-08-298x42')
+				
+	="\n"
+
+	// Fast application. 
+	section.bg-gray-dark.bg-overlay-dark#contact(datatype='anchor')
+		+parallax({
+			"img": "home-parallax-02",
+			"addClass": 'rd-parallax-light'
+		})
+			.section-xl
+				.container
+					.row.justify-content-md-end
+						.col-md-7
+							.inset-xxl
+								h3 See what LoanOffer Can Offer
+									br.d-none.d-xxl-block
+									="\t"
+									| You in 2 Minutes
+								.divider-text
+								// RD Mailform
+								form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global",
+								data-form-type='contact', method='post', action='bat/rd-mailform.php')
+									.form-wrap
+										input#first-name.form-input(type="text" name="First name" data-constraints='@Required')
+										label.form-label(for="first-name") First name
+
+									.form-wrap
+										input#last-name.form-input(type="text" name="Last Name" data-constraints='@Required')
+										label.form-label(for="last-name") Last name
+
+									.form-wrap
+										input#state-of-residence.form-input(type="text" name="State of residence" data-constraints='@Required')
+										label.form-label(for="state-of-residence") State of residence
+
+									.form-wrap
+										input#form-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+										label.form-label(for="form-email") E-mail address
+
+									p By pressing the button below you confirm that you have read, understood and consent to the language and authorizations outlined in LoanOffer's Electronic Communication Policy, LoanOffer Social Policy, GLBA Privacy Notice, and Arbitration Agreement. We recommend that you retain a copy for your reference.
+
+									button(type="submit").button.button-primary let's go
+	
+	="\n"
+
+	// Still Have Some Questions Left?
+	section.section-lg.text-center
+		.container
+			.row.justify-content-md-center
+				.col-xl-10
+					h3 Still Have Some Questions Left?
+						br
+						="\t"
+						| Call us for a 
+						span.text-primary Free Consultation at 
+							a(href='callto:#') 	855-456-7634
+				
+
+	// Page Footer 
+	include ../sections/_footer-corporate

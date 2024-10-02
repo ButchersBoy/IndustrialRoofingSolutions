@@ -1,0 +1,220 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Properties'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link]]
+  })
+
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-3.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center 
+            .col-md-10.col-xl-8
+              h6 Plenty of room...
+              h2 Properties
+              p While our hotel has a standard set of room types, there's absolutely nothing standard about them! Each Single Property, double or family room, each suite we offer is enhanced with a little extra of its own! The intricate and elegant, but at the same time comfortable interior and exterior of the hotel make your stay here a blast! Additionally, all the amenities that we have, hotel-wide WiFI & our incredible eat & drink venues will be a cherry on the top!
+  ='\n'
+
+  // Single Property
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='single-property.html') Single Property
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has… It features such essentials as a flat-screen 45″ TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 99
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 1
+            li 
+              | Facilites: 
+              a(href=roomsResults) Bathroom tub and shower and hair Dryer
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+              | , 
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+              
+            li Size: 35m²
+            li Bed Type: One single bed
+            li 
+              | Categories: 
+              a(href=roomsResults) Single
+
+          a.button.button-primary(href=bookingLink) Book now!
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true',data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-photo-swipe-gallery='gallery')
+            figure.thumb-decorated
+              +jpg('room-1-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-2-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-3-650x490', 'img-decorated')
+  ='\n'
+
+  // Double Room
+  section.section-lg.bg-gray-lighter
+    .container
+      .row.row-50.justify-content-md-center
+        .col-md-10.col-lg-6
+          h3: a(href='single-property.html') Double Room
+          p This is the ultimate double room, enhanced with 2 king sized beds, a flat TV and a spacious area, which will be more than enough for a company of two...
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 145
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 3
+            li 
+              | Facilites: 
+              a(href=roomsResults) Closet with hangers
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | ,
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+              | , 
+              a(href=roomsResults) Telephone
+              
+            li Size: 30m²
+            li Bed Type: One bed
+            li 
+              | Categories: 
+              a(href=roomsResults) Double
+              | ,
+              a(href=roomsResults) Single
+          a.button.button-primary(href=bookingLink) Book now!
+
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true',data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-photo-swipe-gallery='gallery')
+            figure.thumb-decorated
+              +jpg('room-4-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-2-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-5-650x490', 'img-decorated')
+  ='\n'
+
+  // Family Room
+  section.section-lg.bg-default
+    .container
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse
+        .col-md-10.col-lg-6
+          h3: a(href='single-property.html') Family Room
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has… It features such essentials as a flat-screen 45″ TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 195
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 2
+            li 
+              | Facilites: 
+              a(href=roomsResults) Closet with hangers
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+            li Size: 25m²
+            li Bed Type: One bed
+            li 
+              | Categories: 
+              a(href=roomsResults) Double
+          a.button.button-primary(href=bookingLink) Book now!
+
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true',data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-photo-swipe-gallery='gallery')
+            figure.thumb-decorated
+              +jpg('room-6-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-4-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-5-650x490', 'img-decorated')
+  ='\n'
+
+  // Suite
+  section.section-lg.bg-gray-lighter 
+    .container
+      .row.row-50.justify-content-md-center
+        .col-md-10.col-lg-6
+          h3: a(href='single-property.html') Suite
+          p Enjoy our classic suites with all the elegancy and comfort that its interior has… It features such essentials as a flat-screen 45″ TV, WiFi and 2 bathrooms with a living room and 2 bedrooms, big and chic enough to be counted as real suite bedrooms!
+
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 249
+            span.price__aside-bottom /per night
+
+          ul.list-marked
+            li Adults: 2
+            li 
+              | Facilites: 
+              a(href=roomsResults) Air conditioner
+              | , 
+              a(href=roomsResults) Bathroom tub and shower and hair Dryer
+              | , 
+              a(href=roomsResults) Closet with hangers
+              | , 
+              a(href=roomsResults) Digital Personal Safe
+              | , 
+              a(href=roomsResults) Free high speed Wi-Fi and cable internet access
+              | , 
+              a(href=roomsResults) HD flat-screen TV (including Satellite TV)
+              | , 
+              a(href=roomsResults) Telephone
+              
+            li View: Some view
+            li Size: 24m²
+            li Bed Type: One bed
+            li 
+              | Categories: 
+              a(href=roomsResults) Triple
+          a.button.button-primary(href=bookingLink) Book now!
+
+        .col-md-10.col-lg-6
+          // Owl Carousel
+          .owl-carousel.carousel-gallery(data-autoplay='true',data-items='1', data-stage-padding='0', data-loop='false', data-margin='10px', data-mouse-drag="false" data-nav='true' data-dots='true' data-photo-swipe-gallery='gallery')
+            figure.thumb-decorated
+              +jpg('room-7-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-8-650x490', 'img-decorated')
+            figure.thumb-decorated
+              +jpg('room-9-650x490', 'img-decorated')
+  ='\n'
+
+  include ../sections/_footer-corporate
+

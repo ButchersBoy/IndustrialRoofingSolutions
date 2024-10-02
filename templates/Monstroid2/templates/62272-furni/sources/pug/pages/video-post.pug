@@ -1,0 +1,55 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Video post'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 BUY SMART: HOW TO BUY A DURABLE RECLINER CHAIR
+            .post-meta
+              .group
+                a(href=postImage): time(datetime='2017') Jan.20, 2016
+                a(href=postImage).meta-author by Brian Williamson
+                a(href=postImage) 3 comment(s)
+                a(href=postImage) Kids Room
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postImage,
+                    items: [
+                      "Armchair",
+                      'Chair']
+                })
+                
+            .entry-video.embed-responsive.embed-responsive-16by9
+              iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+            
+            include ../sections/_section-post-single-content
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+            
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

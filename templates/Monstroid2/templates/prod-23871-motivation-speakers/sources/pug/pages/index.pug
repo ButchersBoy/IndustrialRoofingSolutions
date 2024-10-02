@@ -1,0 +1,344 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/counter
+include ../components/services
+include ../components/events
+include ../components/courses
+
+block page
+	include ../sections/_header-classic
+
+	// Hello
+	section.section.section-md.section-relative
+		.decor-1: +img('decor-01-132x283.png')
+		.container
+			.row.row-30.align-items-sm-center
+				.col-md-5.col-xl-6
+					h1 Hello
+						span.big.d-block I`m
+							=" "
+							span.text-primary John Doe
+					h4.heading-4 Motivational Speaker
+					p.lead-custom My business coaching services and motivational speeches proved
+						br.d-none.d-xl-block
+						=" "
+						| to be very efficient, and that’s why they are so popular.
+					a.button.button-primary.button-circle.button-shadow(href='#') Make An Appointment
+				.col-md-7.col-xl-6.section-relative-col-static
+					.d-block.d-xl-none
+						+img('home-01-613x701')
+					.image-custom-wrap: +img('home-01-940x816.png', 'image-custom')
+
+
+	// About
+	section.section.section-lg.section-lg-1.section-relative.bg-transparent
+		.decor-2: +img('decor-02-472x762.png')
+		.decor-3: +img('decor-03-1343x1845.png')
+		.container
+			.row.row-30.flex-lg-row-reverse.align-items-center
+				.col-md-6.col-lg-7
+					.block-sm
+						h6 About
+						h3 A Few Words About Me
+						p.lead-custom I am an entrepreneur, best-selling author, philanthropist and the nation’s #1 Life and Business Strategist who is always ready to help you.
+						p I see my goal in motivating people all over the country to do more so that they could live a happier life, whether it means getting more benefits from their daily activities or by living a life full of positive emotions and unique achievements they strive for.
+						a.button.button-primary.button-circle.button-shadow(href='#') read more
+				.col-md-6.col-lg-5: +img('home-02-470x547')
+
+	// Counters
+	section.section.section-md.bg-transparent.section-relative
+		.container
+			.row.row-30.justify-content-center
+				.col-6.col-md-3.col-xl-2
+					+counter({
+						title: 'TOTAL AWARDS',
+						value: 72
+					})
+				.col-6.col-md-3.col-xl-3
+					+counter({
+						title: 'MOTIVATED CLIENTS',
+						value: 1200
+					})(class='box-counter-1')
+				.col-6.col-md-3.col-xl-3
+					+counter({
+						title: 'ORGANIZED WORKSHOPS',
+						value: 114
+					})
+				.col-6.col-md-3.col-xl-2
+					+counter({
+						title: 'WRITTEN BOOKS',
+						value: 25
+					})(class='box-counter-2')
+
+	// Services
+	section.section.section-md.bg-transparent.section-relative.text-center
+		.decor-4: +img('decor-04-146x121.png')
+		.container
+			h6 services
+			h3 What I Offer
+			p My solutions are not limited just by business coaching, I provide a variety of services for everyone who is looking for proper
+				br.d-none.d-xl-block
+				=" "
+				| motivation or a goal that will drive you to long-lasting development and guaranteed results.
+			// Owl Carousel
+		.owl-carousel.owl-carousel-services(
+		data-items='1'
+		data-sm-items='2'
+		data-md-items='3'
+		data-lg-items='3'
+		data-xl-items='4'
+		data-dots='true'
+		data-nav='false'
+		data-stage-padding='15'
+		data-loop='false'
+		data-margin='30'
+		data-mouse-drag="false"
+		data-dots-each='1'
+		data-autoplay='6000')
+			+service-default({
+				icon: 'thin-icon-time',
+				title: 'Public Speaking',
+				text: 'Improve your public speaking skills by attending a workshop developed according to your needs.'
+			})
+			+service-default({
+				icon: 'thin-icon-pointer',
+				title: 'Business Coaching',
+				text: 'My executive business coaching services are available to a wide range of business owners and executive officers.'
+			})
+			+service-default({
+				icon: 'thin-icon-user',
+				title: 'Time Management',
+				text: 'If you feel like there’s not enough time to do everything you need, then this service may help you.'
+			})
+			+service-default({
+				icon: 'thin-icon-briefcase-2',
+				title: 'Personal Development',
+				text: 'Personal development is an important part of any individual’s success and I will be glad to help you.'
+			})
+			+service-default({
+				icon: 'thin-icon-time',
+				title: 'Team Development',
+				text: 'When a team works effectively and efficiently, everyone wins. Improve your teamwork at my team development.'
+			})
+			+service-default({
+				icon: 'thin-icon-pointer',
+				title: 'Assessments',
+				text: 'I also offer efficient assessment tools to help employers make the most of their human capital and improve their productivity.'
+			})
+
+	// Event spaces
+	section.section.section-md.section-md-big.bg-transparent.section-relative.text-center
+		.container
+			h6 My Events
+			h3 Featured Workshops
+			.row.row-30( data-lightgallery="group" )
+				.col-md-6.col-lg-4
+					+event-default({
+						img: {
+							name: 'event-01-370x282',
+							link: links.post
+						},
+						title: {
+							link: links.post,
+							text: 'Achieving Better Business Balance'
+						},
+						address: {
+							link: links.post,
+							title: 'Location: Hearst Expo, Seattle'
+						},
+						text: 'Feeling like you’re treading water with your small business and not making progress towards your goals? Then this workshop is what you need.',
+						video: {
+							link: 'https://youtu.be/7dTve2Hsl_0',
+							text: 'view now'
+						}
+					})
+				.col-md-6.col-lg-4
+					+event-default({
+						img: {
+							name: 'event-02-370x282',
+							link: links.post
+						},
+						title: {
+							link: links.post,
+							text: 'Learning to Love Your Employees'
+						},
+						address: {
+							link: links.post,
+							title: 'Location: BRG Center, NYC'
+						},
+						text: 'In this workshop, I’ll share secrets of better understanding your employees and their needs as it can help you create a better working atmosphere.',
+						video: {
+							link: 'https://youtu.be/T_pQf2dm504',
+							text: 'view now'
+						}
+					})
+				.col-md-6.col-lg-4
+					+event-default({
+						img: {
+							name: 'event-03-370x282',
+							link: links.post
+						},
+						title: {
+							link: links.post,
+							text: 'Becoming a More Effective Manager'
+						},
+						address: {
+							link: links.post,
+							title: 'Location: 5th Floor Studios, Dallas'
+						},
+						text: 'Managers need to be better trained to get the best out of themselves and the team they lead. That’s exactly what this workshop is about.\n',
+						video: {
+							link: 'https://youtu.be/7Iw9KueqZxs',
+							text: 'view now'
+						}
+					})
+
+	// Tweets
+	section.section.section-md.bg-transparent.section-relative.text-center
+		.decor-5: +img('decor-05-648x1031.png')
+		.decor-6: +img('decor-06-191x159.png')
+		.container
+			h3 Tweets
+			.owl-carousel.twitter(
+				data-twitter-username='templatemonster'
+				data-items='1'
+				data-dots='true'
+				data-nav='false'
+				data-stage-padding='0'
+				data-loop='false'
+				data-margin='0'
+				data-mouse-drag="false"
+				data-dots-each='1'
+				data-autoplay='6000')
+				.tweet(data-twitter-type='tweet')
+					.tweet-icon: span.icon.fa-twitter
+					.tweet-user-name: a(href='#' data-url='href' data-user_name='text')
+					.tweet-text(data-tweet='text')
+					ul.tweet-tags
+						li: a(href='https://twitter.com/search?q=%23Speaker&src=typd&lang=en') #Speaker
+						li: a(href='https://twitter.com/search?q=%23Life%20Couch&src=typd&lang=en') #LifeCoach
+				.tweet(data-twitter-type='tweet')
+					.tweet-icon: span.icon.fa-twitter
+					.tweet-user-name: a(href='#' data-url='href' data-user_name='text')
+					.tweet-text(data-tweet='text')
+					ul.tweet-tags
+						li: a(href='https://twitter.com/search?q=%23Speaker&src=typd&lang=en') #Speaker
+						li: a(href='https://twitter.com/search?q=%23Life%20Couch&src=typd&lang=en') #LifeCoach
+				.tweet(data-twitter-type='tweet')
+					.tweet-icon: span.icon.fa-twitter
+					.tweet-user-name: a(href='#' data-url='href' data-user_name='text')
+					.tweet-text(data-tweet='text')
+					ul.tweet-tags
+						li: a(href='https://twitter.com/search?q=%23Speaker&src=typd&lang=en') #Speaker
+						li: a(href='https://twitter.com/search?q=%23Life%20Couch&src=typd&lang=en') #LifeCoach
+
+
+	// Learning Classes
+	section.section.section-md.bg-transparent.section-relative.text-center
+		.container
+			h6 Coaching by My Partners
+			h3 Online Courses
+			.row.row-30
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-01-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-01-34x34',
+							name: 'Peter Smith'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Control Your Life'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-02-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-02-34x34',
+							name: 'Kate Wilson'
+						},
+						price: {
+							link: links.post,
+							value: '$435'
+						},
+						title: {
+							link: links.post,
+							text: 'Your Commercial Success'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-03-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-03-34x34',
+							name: 'Jack Adams'
+						},
+						price: {
+							link: links.post,
+							value: '$321'
+						},
+						title: {
+							link: links.post,
+							text: 'Financial Stability'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+				.col-md-6.col-lg-4.col-xl-3
+					+course({
+						image: {
+							link: links.post,
+							name: 'courses-04-270x289'
+						},
+						meta: {
+							link: links.post,
+							image: 'avatar-04-34x34',
+							name: 'Mike Anderson'
+						},
+						price: {
+							link: links.post,
+							value: 'Free'
+						},
+						title: {
+							link: links.post,
+							text: 'Employees’ Productivity'
+						},
+						rating: ['fa-star', 'fa-star', 'fa-star', 'fa-star-half'],
+						users: {
+							link: links.post,
+							count: '120'
+						}
+					})
+
+	include ../sections/_footer-classic

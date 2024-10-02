@@ -1,0 +1,360 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-shop-grid
+include ../elements/_ui-tag-list
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Single Product'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-sm.bg-default
+    .container
+      .row.row-60
+        .col-md-6.col-lg-5
+          // Slick Carousel
+          .slick-slider.carousel-parent(data-arrows="false", data-loop="false", data-dots="false", data-swipe="true", data-items="1" data-child="#child-carousel", data-for="#child-carousel" data-lightgallery='group')
+            .item
+              +img-thumbnail({
+                number: 2,
+                original: 'italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-2000x2000',
+                img: 'italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-2-535x535'
+              })
+            .item
+              +img-thumbnail({
+                number: 2,
+                original: 'italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-1-2000x2000',
+                img: 'italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-1-535x535'
+              })
+
+            .item
+              +img-thumbnail({
+                number: 2,
+                original: 'Italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-2-1150x1150',
+                img: 'Italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-535x535'
+              })
+
+              
+          .slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false",
+                  data-loop="false", data-dots="false", data-swipe="true",
+                  data-items="3", data-sm-items="4", data-md-items="4",
+                  data-lg-items="4", data-xl-items="5", data-slide-to-scroll="1")
+            .item
+              +jpg('italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-2-89x89')
+            .item
+              +jpg('italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-1-89x89')
+            .item
+              +jpg('Italian-furniture-contemporary-allumen-fixed-or-extendable-glass-top-table-by-sedit-89x89')
+
+        .col-md-6.col-lg-7
+          .product-single
+            h4 ITALIAN FURNITURE CONTEMPORARY ALLUMEN GLASS TABLE
+
+            p.product-price
+              span 45.00
+            ul.rating-list
+              li: span.icon.linear-icon-star.icon-secondary-4
+              li: span.icon.linear-icon-star.icon-secondary-4
+              li: span.icon.linear-icon-star.icon-secondary-4
+              li: span.icon.linear-icon-star.icon-secondary-4
+              li: span.icon.linear-icon-star.icon-gray-4
+
+            p.product-text This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.
+
+            .form-wrap.product-select
+              //Select 2
+              select.form-input.select-filter(data-placeholder="Choose an option", data-minimum-results-for-search="Infinity")
+                option Choose an option
+                option(value="2") Energy Star Compliant
+                option(value="3") Handmade
+                option(value="4") UL Listed
+                option(value="5") Clear
+
+            .group
+              input.form-input(type="number" data-zeros="true" value="1" min="1" max="50")
+              button(type='submit').button.button-primary.button-icon.button-icon-left
+                span.icon.icon-md.linear-icon-cart
+                span Add to cart
+
+            .product-icon-wrap
+              span.icon.icon-md.linear-icon-heart(data-toggle='tooltip' data-original-title='Add to Wishlist')
+              span.icon.icon-md.linear-icon-balance(data-toggle='tooltip' data-original-title='Add to Compare')
+
+            ul.product-meta
+              li
+                dl.list-terms-minimal
+                  dt SKU
+                  dd 256
+              li
+                dl.list-terms-minimal
+                  dt Category
+                  dd
+                    +tag-list({
+                      list_class: 'product-categories',
+                      href: 'single-product.html',
+                      items: ['Living Room', 'Dining room', 'Bedroom', 'Office']
+                    })
+              li
+                dl.list-terms-minimal
+                  dt Tags
+                  dd
+                    +tag-list({
+                      list_class: 'product-categories',
+                      href: 'single-product.html',
+                      items: ['Modern', 'Table']
+                    })
+
+        .col-sm-12
+          // Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal
+            // Nav tabs 
+            ul.nav-custom.nav-custom-tabs.nav-custom__align-left.nav.nav-tabs
+              li.nav-item(role='presentation'): a.nav-link.active(href='#tabs-1-1' data-toggle='tab') DESCRIPTION
+              li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-2' data-toggle='tab') ADDITIONAL INFORMATION
+              li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-3' data-toggle='tab') REVIEWS (1)
+
+          .tab-content.text-left
+            div#tabs-1-1.tab-pane.fade.show.active
+              h5 Product Description
+              p This lovely collection features tight back & seat cushions, and motion reclining mechanism for extra comfort.
+              ul.list-marked
+                li Guarantee
+                li Luxury Chair Design
+                li Quilted Detail, Stud Edging & Satin Ring
+                li Protective Plugs To Look After Your Floors
+                li These Product Are Available In Any Quantity
+
+            div#tabs-1-2.tab-pane.fade
+              h5 Additional Information
+
+              table.table-product-info
+                tbody
+                  tr
+                    td Brand
+                    td My italian
+                  tr
+                    td Manufacturer
+                    td Italy
+                  tr
+                    td Features
+                    td Energy Star Compliant, Handmade, UL Listed
+                  tr
+                    td Waterproof
+                    td yes
+
+            div#tabs-1-3.tab-pane.fade
+              .row.row-60
+                .col-sm-12
+                  h5 1 review for ITALIAN FURNITURE CONTEMPORARY ALLUMEN GLASS TABLE
+  
+                  .box-comment.box-comment__product
+                    .unit.flex-sm-row.unit-spacing-md
+                      .unit__left
+                        .box-comment__icon: span.icon.linear-icon-man
+                      .unit__body
+                        .box-comment__body
+                          h6 Adam Smith
+                          time(datetime='2017') - Jan.20, 2016
+                          p This is a great online store.
+                          ul.rating-list
+                            li: span.icon.linear-icon-star.icon-secondary-4
+                            li: span.icon.linear-icon-star.icon-secondary-4
+                            li: span.icon.linear-icon-star.icon-secondary-4
+                            li: span.icon.linear-icon-star.icon-secondary-4
+                            li: span.icon.linear-icon-star.icon-gray-4
+                            
+                .col-md-8
+                  h5 Add a review
+                  p Your email address will not be published. Required fields are marked *
+                  h6 Your Rating
+                  ul.rating-list
+                    li: span.icon.linear-icon-star.icon-gray-4
+                    li: span.icon.linear-icon-star.icon-gray-4
+                    li: span.icon.linear-icon-star.icon-gray-4
+                    li: span.icon.linear-icon-star.icon-gray-4
+                    li: span.icon.linear-icon-star.icon-gray-4
+
+                  // RD Mailform
+                  form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+                    .form-wrap.form-wrap_icon.linear-icon-man
+                      input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                      label.form-label(for="contact-name") Your name *
+
+                    .form-wrap.form-wrap_icon.linear-icon-envelope
+                      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                      label.form-label(for="contact-email") Your e-mail *
+
+                    .form-wrap.form-wrap_icon.linear-icon-telephone
+                      input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+                      label.form-label(for="contact-phone") Your phone *
+
+                    .form-wrap.form-wrap_icon.linear-icon-feather
+                      textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                      label.form-label(for="contact-message") Your message *
+
+                    button(type="submit").button.button-primary Submit
+
+  +divider
+  section.section-sm.bg-default
+    .container.text-center
+      h5 Related Products
+      // Owl Carousel
+      .owl-carousel.carousel-product(data-autoplay='true',data-items='1',data-md-items='2', data-lg-items='3',data-xl-items='4', data-stage-padding='0', data-loop='false', data-margin='50', data-mouse-drag="false" data-nav='true')
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'italian-furniture-contemporary-mix-steel-base-wooden-table-top-dining-table-by-sedit-2-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Italian furniture contemporary mix steel base wooden set',
+            prices: ['87'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'modern-small-cucciolo-2-seater-sofa-domingo-salotti-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Modern small cucciolo 2 seater sofa domingo salotti',
+            prices: ['16'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'my-italian-living-contemporary-manila-leather-blue-dining-chair-by-imperial-line-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'My italian living contemporary manila leather BLUE CHAIR',
+            prices: ['44'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart',
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'Porta-venezia-kitchen-bar-dining-stool-by-infiniti-design-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Porta venezia kitchen bar dining stool by infiniti design',
+            prices: ['82'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand',
+            button_text: 'Select options'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'santarossa_plastic_transparent_glossy_chair-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Santarossa plastic transparent glossy chair',
+            prices: ['40'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand',
+            button_text: 'Select options'
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'slamp-lighting-italain-designer-floor-lamp-contemporary-design-1-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Slamp italian floor lamp luxury lighting',
+            prices: ['43'],
+
+            button_class: 'button-gray-light-outline',
+            button_icon_class: 'linear-icon-magic-wand',
+            button_text: 'Select options',
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'garda-square-sideboard-for-living-and-dining-room-by-dallagnese-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            class_label: 'featured',
+            label_text: 'Featured',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Garda square sideboard for living room',
+            prices: ['48'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart',
+
+            rating_list: true
+          })
+        .item
+          +shop-grid({
+            href: 'single-product.html',
+            img: 'emma-chairs-and-table-for-kitchen-300x300',
+            icon_class1: 'linear-icon-heart',
+            icon_class2: 'linear-icon-balance',
+
+            class_label: 'new',
+            label_text: 'New',
+
+            tag_list_class: 'product-categories',
+            tag_list_items: ['Living Room', 'Dining room', 'Office', 'Bedroom'],
+
+            title: 'Italian emma chairs and table wooden for kitchen ',
+            prices: ['69'],
+
+            button_class: 'button-black',
+            button_icon_class: 'linear-icon-cart',
+            button_text: 'Add to cart'
+          })
+
+  // Page Footer
+  include ../sections/_footer-corporate

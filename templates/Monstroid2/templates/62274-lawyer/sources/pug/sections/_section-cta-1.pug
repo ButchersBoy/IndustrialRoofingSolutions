@@ -1,0 +1,11 @@
+include ../elements/_ui-parallax
+// Call to Action
+section.bg-accent.text-center
+  +parallax({
+    "src": "images/parallax-4.jpg",
+    "class": ['parallax-light']
+  })
+    .container.section-md
+      h2.heading-decorated Sign Up for Your #[br.d-none.d-md-block] FREE Legal Consultation
+      a.button.button-gray-light-outline(href=appointmentLink) BOOK AN APPOINTMENT
+='\n'

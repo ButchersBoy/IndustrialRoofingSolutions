@@ -1,0 +1,36 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+
+block variables
+  - var activeIndex = 2
+  - var pageName = '404 page'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-1.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+    
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2 Page Not Found
+              p The page requested couldn't be found - this could be due to a spelling error in the URL or a removed page.
+              a(href='index.html').button.button-black Go back
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,77 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Single case'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-accent-2
+    +parallax({
+      "src": "images/single-case-image.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-md-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated.heading-decorated_center Mary Lewis
+              p.font-italic * (all the names of individual clients are replaced for confidentiality reasons)
+  ='\n'
+
+  // Case
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-lg-4
+          h3.heading-decorated Team
+          p A team of lawyers, comprising of:
+          ul.list-0
+            li.heading-5: a(href=teamMember) Carter Nickel
+            li.heading-5: a(href=teamMember) Mary Dime
+            li.heading-5: a(href=teamMember) Andrew Quarter
+            li.heading-5: a(href=teamMember) Arthur Halfpence
+            li.heading-5: a(href=teamMember) Donald Buckster
+            li.heading-5: a(href=teamMember) Steven Twobill
+
+        .col-lg-7
+          h3.heading-decorated Case
+          p When our law firm was dealing with this case, it was about an African American Nurse put through a Mandatory unpaid Overtime at work. Besides that she also told about a Hostile Work Environment situation.  She reported the organization and the company targeted her.  Our firm challenged that unlawful action.
+          dl.list-terms-bold
+            dt Result
+            dd Case won.
+          h5 As a part of our lengthy effort to help Ms. Monaghan, our team of lawyers went through roughly 6 stages in working on a case:
+          dl.list-terms-classic
+            dt Legal Stage #1
+            dd We've been assessing the case's details, analyzing the odds of winning and how firm (legally speaking) our stand in it will be.
+
+            dt Legal Stage #2
+            dd Gathering and filing all the paperwork on time is one of the most monotone job lawyers do but on the other hand one of the most crucial ones...
+
+            dt Legal Stage #3
+            dd Cross-examining the evidence and interviewing Michelle' colleagues was vital.
+
+            dt Legal Stage #4
+            dd Rejecting an insufficiently good settlement offer was a hard, but a right thing to do, after which we've headed straight to the trial itself.
+
+            dt Legal Stage #5
+            dd Assessing a jury, we came to a conclusion it looks favorable for our client's cause...
+
+            dt Legal Stage #6
+            dd After doing all the hard work we've been paid off - our client has won the case and a substantial sum of reparations in damage with it!
+
+          p.font-weight-bold Just as usually with our legal practice, this case has proven once again that the hard work our team does will always pay off with a positive verdict!
+
+
+  ='\n'
+
+  include ../sections/_section-free-legal-consultation
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

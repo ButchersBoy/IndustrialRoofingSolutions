@@ -1,0 +1,55 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-pagination-classic
+
+
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Gallery post'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.bg-gray-3.section-md
+		.container.text-center.single-post
+
+			//Post Title and meta
+			h3.heading-divider= pageName
+			include ../includes/_post-content-before
+			//Slider
+			.single-post-gallery
+				+slider-blog({
+					class: 'carousel-slider-blog-post',
+					items: [
+						{
+							original_img: 'gallery-post-01-original-1000x667',
+							img_thumb: 'gallery-post-1-886x501'
+						},
+						{
+							original_img: 'gallery-post-02-original-1000x667',
+							img_thumb: 'gallery-post-2-886x501'
+						},
+						{
+							original_img: 'gallery-post-03-original-1000x667',
+							img_thumb: 'gallery-post-3-886x501'
+						}
+					]
+				})
+			include ../includes/_post-content-after
+
+	include ../sections/_section-blog-post-comment
+	// Page Footer
+	include ../sections/_footer-corporate
+

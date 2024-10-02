@@ -1,0 +1,99 @@
+extends ../_skeleton
+include ../components/progress-linear
+include ../components/progress-circle
+include ../components/counter
+
+block variables
+	- pageName = 'Progress Bars'
+
+block page
+	include ../sections/_header-default
+
+	+breadcrumbs
+
+
+	//Skill Bars
+	section.section.section-md.bg-default.section-relative
+		.container
+			h3.text-center Linear progress bars
+			.row.row-30.justify-content-between.align-items-md-end
+				.col-md-7.col-lg-6
+					p Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat justo ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante nisi.
+					ul.list-marked
+						li Cum pulchritudine velum, omnes quadraes vitare.
+						li Lumens sunt calcarias de clemens era.
+						li Secundus, dexter amors grauiter demitto de pius.
+						li Sunt homoes visum lotus, grandis solemes.
+				.col-md-5.col-lg-5
+					+progress-linear({
+						title: 'Experience',
+						value: '85'
+					})
+					+progress-linear({
+						title: 'Resilience',
+						value: '45'
+					})
+					+progress-linear({
+						title: 'Communication',
+						value: '90'
+					})
+					+progress-linear({
+						title: 'Flexibility',
+						value: '71'
+					})
+
+	// Counters
+	section.section.section-lg.bg-default.section-relative
+		.container
+			h3.text-center Counters
+			.row.row-30.justify-content-center
+				.col-6.col-md-3.col-xl-2
+					+counter({
+						title: 'Team Members',
+						value: 72
+					})
+				.col-6.col-md-3.col-xl-3
+					+counter({
+						title: 'Monthly Clients',
+						value: 1200
+					})(class='box-counter-1')
+				.col-6.col-md-3.col-xl-3
+					+counter({
+						title: 'Annual Events',
+						value: 114
+					})
+				.col-6.col-md-3.col-xl-2
+					+counter({
+						title: 'National Partners',
+						value: 25
+					})(class='box-counter-2')
+
+
+	//Circle Progress Bars
+	section.section.section-lg.bg-default.section-relative.text-center
+		.container
+			h3 Circle Progress Bars
+			.row.justify-content-center.row-30.row-offset-1
+				.col-sm-5.col-lg-3
+					+progress-circle({
+						title: 'Leadership',
+						value: 40
+					})
+				.col-sm-5.col-lg-3
+					+progress-circle({
+						title: 'Management',
+						value: 50
+					})
+				.col-sm-5.col-lg-3
+					+progress-circle({
+						title: 'Innovation and Creativity',
+						value: 60
+					})
+				.col-sm-5.col-lg-3
+					+progress-circle({
+						title: 'Resilience',
+						value: 90
+					})
+
+
+	include ../sections/_footer-corporate

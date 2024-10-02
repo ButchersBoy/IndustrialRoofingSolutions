@@ -1,0 +1,149 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Calculator'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+  
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-04.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Catering, Food Delivery #[br] and More...
+              hr.divider-minimal
+              p
+                | As we're offering a multitude of additional culinary and catering services, we figured that you might need some kind of a calculator tool to aggregate the end price.... 
+                | Be free to use our website calculator to approximate a price total for your order!
+
+  section.section-xl.bg-default
+    .container
+      .row.row-70
+        .col-md-6
+          h2 Personal Events Catering
+          p We cater any types of events. Starting with weddings, baby showers, bachelor parties, birthdays and finishing  with anniversaries...
+          h5 Service Cost (per 1 hour): $150
+          form
+            .form-wrap
+              label.radio-inline
+                input(name="input-group-radio", value="radio-1", type="radio", checked)
+                | Yes
+              label.radio-inline
+                input(name="input-group-radio", value="radio-2", type="radio")
+                | No
+        .col-md-6
+          h2 Private Dining
+          p If you want to take one of our incredible dining halls for a little private rent, we'll be more than happy to help you make that happen!
+          h5 Service Cost (per 1 hour): $150
+          form
+            .form-wrap
+              label.radio-inline
+                input(name="input-group-radio", value="radio-1", type="radio", checked)
+                | Yes
+              label.radio-inline
+                input(name="input-group-radio", value="radio-2", type="radio")
+                | No
+        .col-sm-12
+          hr
+        .col-md-6
+          h2 Personal Menu Delivery
+          p If you're looking for a balanced, well selected menu, our tailored personal catering service will deliver it to you in no time! All of our menu items can be delivered that way!
+          h5 Service Cost (per 1 hour): $150
+          form
+            .form-wrap
+              label.radio-inline
+                input(name="input-group-radio", value="radio-1", type="radio", checked)
+                | Yes
+              label.radio-inline
+                input(name="input-group-radio", value="radio-2", type="radio")
+                | No
+        .col-md-6
+          h2 Business Catering
+          p Our restaurant offers a business catering service that will ensure that a business meeting of any level will get both the perfect dishes and service!
+          h5 Service Cost (per 1 hour): $150
+          form
+            .form-wrap
+              label.radio-inline
+                input(name="input-group-radio", value="radio-1", type="radio", checked)
+                | Yes
+              label.radio-inline
+                input(name="input-group-radio", value="radio-2", type="radio")
+                | No
+        .col-sm-12
+          hr
+        .col-sm-12.text-center
+          h2 Total: $600
+          a(href='table-reservation.html').button.button-gray-light-outline: span Book a table
+
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-03.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h4 
+                | Do you have some additional questions? #[br]
+                | Please read our 
+                =' '
+                a(href='#').link-underline FAQ
+                =' '
+                | or
+                =' '
+                a(href='contacts.html').link-underline Contact Us
+                =' '
+                | directly...
+              
+  section.section-xl.bg-default.text-center
+    .container
+      h1 Our Visitors Just Love #[br.visible-lg-inline]Our Food!
+      hr.divider-minimal
+      .row.row-50
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q I've been eating their business lunches for the past 7 years. Not even once have I had any unpleasant experience. And the dishes always taste fresh and good!
+            p.quote-default__cite Amanda
+            span.quote-default__source posted on TripAdvisor
+
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The prices are as good as the menu! Each time I spend less money, than anywhere else and get a fresh, tasty, homemade dinner!
+            p.quote-default__cite Sam
+            span.quote-default__source posted on foursquare
+            
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

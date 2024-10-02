@@ -1,0 +1,44 @@
+// Element-groups
+@mixin group($offset-x, $offset-y: $offset-x) {
+  margin-bottom: -$offset-y;
+  margin-left: -$offset-x;
+
+  &:empty {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  > * {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: $offset-y;
+    margin-left: $offset-x;
+  }
+}
+
+@mixin group-contextual($offset-x, $offset-y: $offset-x) {
+  margin-bottom: -$offset-y;
+  margin-left: -$offset-x;
+
+  > * {
+    margin-bottom: $offset-y;
+    margin-left: $offset-x;
+  }
+}
+
+// Spacing
+//
+@mixin spacing($x, $y : $x) {
+  position: relative;
+  transform: translate3d(0,-$y,0);
+  margin-bottom: -$y;
+  margin-left: - round($x / 2);
+  margin-right: - round($x / 2);
+
+  > * {
+    position: relative;
+    margin-top: $y;
+    padding-left: round($x / 2);
+    padding-right: round($x / 2);
+  }
+}

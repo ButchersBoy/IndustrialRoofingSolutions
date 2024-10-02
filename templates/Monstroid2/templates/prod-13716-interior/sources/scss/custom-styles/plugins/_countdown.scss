@@ -1,0 +1,103 @@
+//
+// Countdown
+// --------------------------------------------------
+.countdown-default {
+  transform: translateY(-10px);
+  margin-bottom: -10px;
+  white-space: nowrap;
+
+  .countdown-section {
+    position: relative;
+    @include display-inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 80px;
+    min-width: 80px;
+    border-radius: 100%;
+    margin: 10px 5px;
+    text-align: center;
+    border: 1px solid $primary;
+    white-space: normal;
+
+    > * {
+      display: block;
+    }
+  }
+
+  .countdown-amount {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1;
+    color: $black;
+  }
+
+  .countdown-period {
+    margin-top: 0;
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
+.ie-10,
+.ie-11 {
+  .countdown-default {
+    .countdown-section {
+      height: 90px;
+    }
+  }
+}
+
+.countdown-default.countdown-primary {
+  .countdown-section {
+    background: $primary;
+  }
+
+  .countdown-period,
+  .countdown-amount {
+    color: $white;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .countdown-default {
+    .countdown-section:last-child {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .countdown-default {
+    .countdown-section {
+      margin: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .countdown-default {
+    .countdown-section {
+      min-height: 130px;
+      min-width: 130px;
+    }
+
+    .countdown-amount {
+      font-size: 40px;
+    }
+
+    .countdown-period {
+      font-size: 14px;
+    }
+  }
+
+  .ie-10,
+  .ie-11 {
+    .countdown-default {
+      .countdown-section {
+        height: 130px;
+      }
+    }
+  }
+}

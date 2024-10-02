@@ -1,0 +1,174 @@
+/** @section Offsets */
+
+// Elements offset
+* + p { margin-top: 10px; }
+
+// Headings
+
+// Headings + Paragraph
+h2 + p { margin-top: 14px; }
+h3 + p { margin-top: 12px; }
+h6 + p { margin-top: 12px; }
+
+// Paragraph + Headings
+p + h2 { margin-top: 15px; }
+
+// Tags + Tags
+p + p { margin-top: 12px; }
+img + p { margin-top: 15px; }
+h3 + img { margin-top: 42px; }
+h3 + h6 {	margin-top: 15px; }
+
+// Classes
+* + .row { margin-top: 30px; }
+* + .row-xs { margin-top: 20px; }
+* + .big { margin-top: 20px; }
+* + .text-block { margin-top: 30px; }
+* + .button { margin-top: 20px; }
+* + .button-wrap { margin-top: 20px; }
+* + .rd-form { margin-top: 20px; }
+* + .owl-carousel { margin-top: 30px; }
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 {
+	margin-top: 80px;
+}
+
+// Classes + Classes
+.container + .container { margin-top: 40px; }
+.row + .row { margin-top: 40px; }
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+
+	.row + .button { margin-top: 40px; }
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	// Headings + Paragraph
+	h2 + p { margin-top: 26px; }
+	h3 + p { margin-top: 20px; }
+	h6 + p { margin-top: 20px; }
+
+	// Tags + Tags
+	h3 + h6 {	margin-top: 25px; }
+
+	// Classes
+	* + .row-sm { margin-top: 40px; }
+	* + .row-md { margin-top: 40px; }
+	* + .row-lg { margin-top: 50px; }
+	* + .row-xl { margin-top: 50px; }
+	* + .row-xxl { margin-top: 50px; }
+	* + .button { margin-top: 30px; }
+	* + .button-wrap { margin-top: 30px; }
+
+	// Classes + Classes
+	.container + .container { margin-top: 70px;	}
+	.row + .row { margin-top: 70px;	}
+	.row + .button { margin-top: 45px; }
+	* + .owl-carousel { margin-top: 40px; }
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	// Elements offset
+	* + p { margin-top: 15px; }
+
+	// Tags + Tags
+	p + p { margin-top: 20px; }
+
+	// Classes
+	* + .row-md { margin-top: 50px; }
+	* + .rd-form { margin-top: 30px; }
+	* + .button { margin-top: 40px; }
+	* + .button-wrap { margin-top: 40px; }
+	* + .owl-carousel { margin-top: 50px; }
+
+	// Classes + Classes
+	.row + .button { margin-top: 55px; }
+	.container + .container { margin-top: 90px;	}
+	.row + .row { margin-top: 90px;	}
+}
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+
+	// Headings + Paragraph
+	h2 + p { margin-top: 36px; }
+	h3 + p { margin-top: 30px; }
+
+	// Tags + Tags
+	h3 + h6 {	margin-top: 38px; }
+
+	// Classes
+	* + .row-lg { margin-top: 60px; }
+	* + .row-xl { margin-top: 70px; }
+	* + .row-xxl { margin-top: 80px; }
+	* + .offset-top-1 { margin-top: 50px; }
+}
+
+// Range spacing
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+@include media-breakpoint-up(md) {
+
+	.row-md-50 {
+		@include grid-offset(50px);
+	}
+
+	.row-md-55 {
+		@include grid-offset(55px);
+	}
+
+	.row-md-60 {
+		@include grid-offset(60px);
+	}
+}
+
+@include media-breakpoint-up(lg) {
+
+	.row-lg-30 {
+		@include grid-offset(30px);
+	}
+}
+
+@include media-breakpoint-up(xl) {
+
+	.row-xl-40 {
+		@include grid-offset(40px);
+	}
+
+	.row-xl-60 {
+		@include grid-offset(60px);
+	}
+
+	.row-xl-80 {
+		@include grid-offset(80px);
+	}
+}

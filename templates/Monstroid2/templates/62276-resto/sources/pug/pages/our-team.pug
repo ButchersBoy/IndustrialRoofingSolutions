@@ -1,0 +1,190 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Our Team'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-accent
+    +parallax({
+      "backgroundSpeed": "0.25",
+      "attrType": "media",
+      "src": "images/video-preview-1-1920x703.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Our Team
+              h5 Dedicated restaurant team
+              hr.divider-minimal
+              p Everything we do here at the restaurant we do as a team!  Each chef, each cook at the kitchen work as one, just to make you culinary experience unforgettable!  With so much depending on each individual team member we have, we're proud to showcase you with our whole cooking team!
+  ='\n'
+  
+  section.section-lg.bg-default
+    .container
+      .row.row-80
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-1-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Albert Stroller
+              p.thumb__subtitle Head Chef/Owner
+              
+              p 
+                | Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. 
+                i He and her wife Jane launched a gourmet foods and sandwich shop in 2008. While economic difficulties led them to close that shop, the pair spun off their popular BBQ meat into its own business.
+              
+              +list-inline-icon({
+                list_class: ['list-inline-sm'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+              
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-2-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) John Taylor
+              p.thumb__subtitle Chef
+              p
+                | John was born on February 21, 1947 in Pula, Istria, in present-day Croatia, a region in  that was once part of Italy. 
+                i He immigrated to the U.S. when he was 12 and eventually married, opening up a series of restaurants with husband Felice. Bastianich has gone on to be an acclaimed chef and restaurateur, winning awards as well as...
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-3-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Gary Benson
+              p.thumb__subtitle Chef
+              p
+                | Born in 1971 in Ethiopia, Gary was adopted by a Swedish family and cultivated a deep love for cooking via his grandmother, who was a chef. 
+                i Gary went on to become a renowned force in international cuisine, becoming executive chef at New York restaurant Aquavit, receiving multiple awards over the years from...
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-4-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Sam Well
+              p.thumb__subtitle Chef
+              p
+                | After complaining that he couldn't find a good hamburger in Columbus, Ohio, Sam opened his own restaurant on November 15, 1969: Wendy's, named after Thomas's 8-year-old daughter.
+                i Wendy's quickly caught on, and within less than a decade, had grown into a 1,000-store franchise. In 1989, Thomas took on the role of television...
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-5-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) John Major
+              p.thumb__subtitle Chef
+              p
+                | John never knew his birth mother, and was adopted by a couple from Kalamazoo, Michigan, when he was 6 months old. 
+                i Thomas's adoptive mother died when he was only five, and by the age of 10 John had lost two stepmothers as well. He spent summers in Maine with his adoptive grandmother, Minnie Thomas...
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+
+        .col-md-6.col-lg-4
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('team-member-6-418x315')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Lesley Minkle
+              p.thumb__subtitle Chef
+              p
+                | Lesley was born on February 21, 1947 in Pula, Istria, in present-day Croatia, a region in  that was once part of Italy.
+                i He immigrated to the U.S. when he was 12 and eventually married, opening up a series of restaurants with husband Felice. Bastianich has gone on to be an acclaimed chef and restaurateur, winning awards as well as...
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus',
+                  'icon-sm fa-vimeo',
+                  'icon-sm fa-youtube',
+                  'icon-sm fa-pinterest-p'
+                ]
+              })
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

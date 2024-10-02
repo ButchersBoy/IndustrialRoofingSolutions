@@ -1,0 +1,8 @@
+mixin post-project(obj)
+  // Post project
+  article.post-project
+    +jpg(obj.img, 'post-project__image')
+    .post-project__body
+      h6.post-project__title: a(href=projectCategory)=obj.title
+      p=obj.text
+      a.button.button-link(href=projectCategory) View Projects

@@ -1,0 +1,64 @@
+// Categories
+section.section-sm
+  h5 Categories
+  ul.list-archive
+    li: a(href='#') Desserts
+    li: a(href='#') Drinks
+    li: a(href='#') Meat
+    li: a(href='#') Restaurant
+='\n'
+
+// Posts
+section.section-sm
+  h5 Latest Posts
+  ul.list-sm
+    li
+      article.post-inline
+        time(datetime='2017').post-inline__time Jan.20, 2016
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+    li
+      article.post-inline
+        time(datetime='2017').post-inline__time Jan.20, 2016
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+    li
+      article.post-inline
+        time(datetime='2017').post-inline__time Jan.20, 2016
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+
+='\n'
+
+// Tags
+section.section-sm
+  h5 Tags
+  +label-list({
+    list_class: 'list-inline list-label-custom',
+    href: postLink,
+    items: [
+      "Restaurant","Chef","Dinner", "Meat", "Soup","Taste", "Wine"]
+  })
+='\n'
+
+// Resent comments
+section.section-sm
+  h5 Recent Comments
+
+  ul.list-sm
+    li
+      article.post-inline
+        span.post-inline__author.meta-author Brian Williamson on
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+    li
+      article.post-inline
+        span.post-inline__author.meta-author Brian Williamson on
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+    li
+      article.post-inline
+        span.post-inline__author.meta-author Brian Williamson on
+        =' '
+        a(href=postLink).post-inline__link Authentic German Bread (Bauernbrot) Cooking
+

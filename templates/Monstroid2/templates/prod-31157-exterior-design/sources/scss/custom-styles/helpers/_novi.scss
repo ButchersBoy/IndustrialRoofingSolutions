@@ -1,0 +1,102 @@
+[data-x-mode='true'] {
+
+	.thumb-classic {
+		.thumb-classic__caption {
+			pointer-events: none;
+			opacity: 1;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+
+			> * {
+				pointer-events: auto;
+			}
+		}
+	}
+
+	.novi-section {
+		position: relative;
+		z-index: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			z-index: 10;
+			height: 30px;
+		}
+	}
+
+	.thumb-centered img {
+		width: 99.99%;
+		min-width: 99.99%;
+	}
+
+	.novi-in-bg-img,
+	.novi-bg-img {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.form-label {
+		pointer-events: auto;
+	}
+
+	.bounding-fix {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 100%;
+			height: 40px;
+		}
+	}
+
+	.thumb-minimal__overlay {
+		pointer-events: none;
+
+		&:before {
+			pointer-events: auto
+		}
+	}
+
+	.thumb-classic__caption {
+		pointer-events: none;
+
+		& > * {
+			pointer-events: auto
+		}
+	}
+
+	.thumb-modern__overlay {
+		pointer-events: none;
+	}
+
+	.thumb-modern__overlay:before {
+		pointer-events: auto;
+	}
+
+	.img-thumbnail-variant-1 {
+		.caption {
+			pointer-events: none;
+
+			& > * {
+				pointer-events: auto
+			}
+		}
+	}
+
+	.img-thumbnail-variant-3 {
+		.caption {
+			pointer-events: none;
+
+			& > * {
+				pointer-events: auto
+			}
+		}
+	}
+}

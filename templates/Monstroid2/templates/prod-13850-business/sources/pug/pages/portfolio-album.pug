@@ -1,0 +1,96 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Portfolio'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	// Parallax header
+	+parallax({
+		"src": "images/parallax-4.jpg",
+		"class": ['parallax-header']
+	})
+		.parallax-header__inner.context-dark: .parallax-header__content
+			.container
+				.row.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2.heading-decorated Our Portfolio
+						h6 Album layout
+
+
+	section.section-lg.bg-default.text-center
+		.container
+			h4.heading-decorated Portfolio
+			.row.row-50
+				.col-12.col-md-6 
+					.img-thumbnail-variant-3(
+						data-lightgallery='dynamic',
+						data-lg-dynamic-elements= JSON.stringify([
+							{
+								thumb: 'images/portfolio-4-418x315.jpg',
+								src: 'images/portfolio-original-4-1920x1440.jpg'
+							},
+							{
+								thumb: 'images/portfolio-5-418x315.jpg',
+								src: 'images/portfolio-original-5-1920x1280.jpg'
+							},
+							{
+								thumb: 'images/portfolio-6-418x315.jpg',
+								src: 'images/portfolio-original-6-1920x1280.jpg'
+							}
+						])
+					)
+						+jpg("portfolio-2col-1-652x491")
+						span.label-custom.label-white Album
+						.caption
+							span.icon.hover-top-element(class="linear-icon-folder-picture")
+							ul.list-inline-tag.hover-top-element
+									li 9 photos
+									li Objects
+							p.heading-5.hover-top-element Portfolio Album
+							.divider
+							p.small.hover-bottom-element Creating Portfolio.
+							span.icon.arrow-right(class="linear-icon-arrow-right")
+					
+
+				.col-12.col-md-6
+					.img-thumbnail-variant-3(
+					data-lightgallery='dynamic',
+					data-lg-dynamic-elements= JSON.stringify([
+						{
+							thumb: 'images/portfolio-7-418x315.jpg',
+							src: 'images/portfolio-original-7-1920x1280.jpg'
+						},
+						{
+							thumb: 'images/portfolio-8-418x315.jpg',
+							src: 'images/portfolio-original-8-1536x1920.jpg'
+						},
+						{
+							thumb: 'images/portfolio-9-418x315.jpg',
+							src: 'images/portfolio-original-9-1567x1920.jpg'
+						}
+					])
+					)
+						+jpg("portfolio-2col-2-652x491")
+						span.label-custom.label-white Album
+						.caption
+							span.icon.hover-top-element(class="linear-icon-folder-picture")
+							ul.list-inline-tag.hover-top-element
+								li Objects
+							p.heading-5.hover-top-element Portfolio Album
+							.divider
+							p.small.hover-bottom-element Creating Portfolio.
+							span.icon.arrow-right(class="linear-icon-arrow-right")
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

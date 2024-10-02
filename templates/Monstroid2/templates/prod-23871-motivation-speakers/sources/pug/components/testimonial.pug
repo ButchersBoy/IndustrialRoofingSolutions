@@ -1,0 +1,6 @@
+mixin testimonial( obj )
+  article.testimonial
+    .testimonial-img: +img( obj.img )
+    .testimonial-text: p= obj.text
+    .testimonial-name: h4= obj.name
+    .testimonial-position: span= obj.position

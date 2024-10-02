@@ -1,0 +1,10 @@
+mixin post(obj)
+  article.post
+    +jpg(obj.img)
+    h5.post__title: a(href='single-case.html')=obj.title
+    p=obj.text
+
+    .post__footer
+      dl.list-terms-bold
+        dt Result
+        dd=obj.result

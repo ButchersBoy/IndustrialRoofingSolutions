@@ -1,0 +1,44 @@
+/** @section Images */
+
+// Standard img style
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+figcaption {
+	color: $gray-400;
+}
+
+.img-wide {
+	width: 100%;
+}
+
+.img-link {
+	transition: $transition-base;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+* + .img-wrap-1 { margin-top: 78px * $xs-multiplier }
+* + .img-wrap-2 { margin-top: 35px }
+
+@include media-breakpoint-down( md ) {
+	.img-responsive {
+		display: inline-block;
+		max-width: 320px;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .img-wrap-1 { margin-top: 78px * $lg-multiplier }
+	* + .img-wrap-2 { margin-top: 101px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .img-wrap-1 { margin-top: 78px }
+	* + .img-wrap-2 { margin-top: 101px }
+}

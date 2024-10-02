@@ -1,0 +1,70 @@
+section.pre-footer-corporate.bg-gray-dark
+  .container
+    .row.justify-content-sm-center.justify-content-md-start.row-30.row-md-60
+      .col-sm-10.col-lg-4
+        a.brand(href='index.html')
+          +png(logoInverse)
+          .brand__slogan best hotel
+        p While the Modern Hotel is neither the oldest nor the biggest one in Indianapolis or Indiana, we've got our own considerably long history of upholding a benchmark level of quality. Our biggest advantage over other hotels in the city is our balanced approach. With just 35 rooms, we're a quiet place to stay at.
+
+      .col-sm-10.col-md-6.col-lg-4
+        h6 Recent posts
+        ul.list-sm
+          li
+            // Comment minimal
+            article.comment-minimal
+              ul.comment-minimal__meta
+                li
+                  | by&nbsp;
+                  a(href='#') Calvin Fitzgerald
+                li: a(href='#') Jan. 12
+                li: a(href=postLink) 3 comments
+              p.comment-minimal__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+          li
+            // Comment minimal
+            article.comment-minimal
+              ul.comment-minimal__meta
+                li
+                  | by&nbsp;
+                  a(href='#') Calvin Fitzgerald
+                li: a(href='#') Jan. 12
+                li: a(href=postLink) 3 comments
+              p.comment-minimal__link: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+
+      .col-sm-10.col-md-6.col-lg-4
+        h6 Contacts
+        ul.list-xs
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-location_on
+              .unit-body: a(href='#') 410 S Missouri St, Indianapolis, IN 46225, USA
+
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-phone
+              .unit-body: p Contact us directly at #[a(href='callto:#') +3(123) 789-5789]
+
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-email
+              .unit-body: a.link-primary(href='mailto:#') info@demolink.org
+='\n'
+
+footer.footer-corporate.bg-gray-darker
+  .container
+    .footer-corporate__inner
+      p.rights
+        | &copy;&nbsp;
+        !=brandName
+        | &nbsp;
+        span(id="copyright-year")
+        | . All Right Reserved.
+        span &nbsp;
+        a.link-primary(href='privacy-policy.html') Privacy Policy
+        
+
+      ul.list-inline-xs
+        li: a.icon.icon-xxs.icon-default.fa.fa-facebook(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-twitter(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-instagram(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-youtube(href='#')

@@ -1,0 +1,154 @@
+/*
+* Fullwidth Layout
+*/
+
+.rd-navbar-fullwidth {
+  display: block;
+  background-color: $rd-navbar-background;
+  box-shadow: $rd-navbar-shadow;
+
+  // RD Navbar inner
+  .rd-navbar-inner {
+    position: relative;
+    @include flex-direction(column);
+    max-width: map-get($container-max-widths, xl);
+    padding: 25px 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .33s all ease;
+
+    > * + * {
+      margin-top: 20px;
+    }
+  }
+
+  .rd-navbar-inner,
+  .rd-navbar-nav-wrap {
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    > * {
+      padding: 0 15px;
+    }
+  }
+
+  .rd-navbar-panel,
+  .rd-navbar-nav-wrap__element {
+    @include flex-shrink(0);
+  }
+
+  // RD Navbar nav wrap
+  .rd-navbar-nav-wrap {
+    width: 100%;
+    @include flex-direction(row-reverse);
+    @include flex-grow(1);
+  }
+
+  // RD Navbar brand
+  .rd-navbar-brand {
+
+  }
+
+  // RD Navbar Nav
+  .rd-navbar-nav {
+    margin-top: -10px;
+    font-size: 0;
+    line-height: 0;
+
+    > li {
+      margin-top: 10px;
+      padding: 0 5px;
+
+      > a {
+        @include link($rd-navbar-nav-color, $primary);
+      }
+
+      &.focus > a,
+      &.opened > a,
+      &.active > a {
+        color: $primary;
+      }
+    }
+
+    > li + li {
+      margin-left: 20px;
+    }
+
+    > li > .rd-navbar-dropdown {
+      margin-top: 25px;
+      background: $rd-navbar-dropdown-background;
+    }
+  }
+
+  // Submenu styles
+  .rd-navbar-nav {
+    .rd-navbar-submenu {
+      > .rd-navbar-dropdown,
+      > .rd-navbar-megamenu {
+        border-top: 1px solid darken($white, 5%);
+      }
+    }
+
+    > li > .rd-navbar-dropdown,
+    > li .rd-navbar-megamenu {
+      margin-top: 46px;
+    }
+  }
+
+  // Media
+  @include media-breakpoint-up(xl) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .rd-navbar-inner {
+      @include flex-direction(row);
+
+      > * + * {
+        margin-top: 0;
+      }
+    }
+
+    .rd-navbar-nav-wrap {
+      width: auto;
+      text-align: center;
+      &:after { content: ''; }
+    }
+  }
+
+
+  // States
+  &.rd-navbar--is-stuck,
+  &.rd-navbar--is-clone {
+    .rd-navbar-inner {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .rd-navbar-nav > li > .rd-navbar-dropdown,
+    .rd-navbar-nav > li .rd-navbar-megamenu {
+      margin-top: 29px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      .rd-navbar-inner {
+        > * + * {
+          margin-top: 0;
+        }
+      }
+
+      .rd-navbar-brand {
+        display: none;
+      }
+    }
+  }
+}

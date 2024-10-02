@@ -1,0 +1,247 @@
+/** @section Services */
+
+//
+// Services Default
+//
+.service-default {
+	padding-top: 30px;
+	position: relative;
+	text-align: center;
+	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.service-default-icon {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 50%;
+	font-size: 50px;
+	line-height: 1;
+	padding: 10px;
+	min-width: 60%;
+	box-shadow: 0 4px 30px rgba($black, 0.15);
+	border-radius: 12px;
+	color: $white;
+	background: $secondary;
+	border: 3px solid rgba($white, 0.2);
+	transform: translate3d(-50%, 0, 0);
+	transition: all .3s ease-in-out;
+}
+
+.service-default-title {
+	color: $white;
+	font-weight: 500;
+}
+
+.service-default-caption {
+	padding: 70px 15px 30px;
+	border-radius: 12px;
+	color: $body-color;
+	background: linear-gradient(178.65deg, rgba($secondary-13,1) 13%,rgba($secondary-14,1) 100%);
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.service-default {
+		padding-top: 40px;
+	}
+
+	.service-default-icon {
+		font-size: 50px;
+		padding: 15px;
+	}
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.service-default {
+		padding-top: 50px;
+	}
+
+	.service-default-icon {
+		font-size: 70px;
+		padding: 20px 15px;
+	}
+
+	.service-default-caption {
+		padding: 100px 20px 45px;
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.service-default-icon {
+		font-size: 90px;
+		padding-bottom: 28px;
+	}
+
+	.service-default-caption {
+		padding-top: 136px;
+		padding-bottom: 55px;
+	}
+}
+
+.desktop {
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+
+		.service-default:hover {
+			.service-default-icon { color: $primary; }
+		}
+	}
+}
+
+// Context styling
+%context-light {
+	.service-default-title { color: $white; }
+}
+
+
+
+
+//
+// Services classic
+//
+.service-classic {
+	text-align: left;
+}
+
+.service-classic-icon {
+	display: inline-block;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	font-size: 35px;
+	line-height: 60px;
+	border-radius: 50%;
+	color: $primary;
+	background: $white;
+	box-shadow: 0 7px 15px rgba($primary, 0.3);
+}
+
+.service-classic-title {
+	font-weight: 600;
+}
+
+.service-classic-gradient-1 {
+
+	.service-classic-icon {
+		box-shadow: 0 7px 15px rgba($turquoise-3, 0.3);
+
+		> * {
+			background: linear-gradient(135deg,$secondary, $turquoise-3);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+
+	.service-classic-title a:hover {
+		color: $turquoise-3;
+	}
+}
+
+.service-classic-gradient-2 {
+
+	.service-classic-icon {
+
+		> * {
+			background: linear-gradient(135deg,$primary, $orange);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+}
+
+.service-classic-gradient-3 {
+
+	.service-classic-icon {
+		box-shadow: 0 7px 15px rgba($secondary, 0.3);
+
+		> * {
+			background: linear-gradient(135deg,$primary,$secondary);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+
+	.service-classic-title a:hover {
+		color: $secondary;
+	}
+}
+
+.service-classic-gradient-4 {
+
+	.service-classic-icon {
+		box-shadow: 0 7px 15px rgba($green, 0.3);
+
+		> * {
+			background: linear-gradient(135deg,$green,$turquoise-3);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+
+	.service-classic-title a:hover {
+		color: $green;
+	}
+}
+
+
+// Offsets
+* + .service-classic-text { margin-top: 8px; }
+
+// Media
+@include media-breakpoint-up(md) {
+
+	.service-classic-icon {
+		width: 80px;
+		height: 80px;
+		font-size: 40px;
+		line-height: 80px;
+	}
+}
+
+// Context styles
+.ie-10,
+.ie-11,
+.ie-edge {
+	.service-classic-gradient-1 {
+		.service-classic-icon {
+			color: $turquoise-3;
+			> * {
+				background: none;
+			}
+		}
+	}
+
+	.service-classic-gradient-2 {
+		.service-classic-icon {
+			> * {
+				background: none;
+			}
+		}
+	}
+
+	.service-classic-gradient-3 {
+		.service-classic-icon {
+			color: $secondary;
+			> * {
+				background: none;
+			}
+		}
+	}
+
+	.service-classic-gradient-4 {
+		.service-classic-icon {
+			color: $green;
+			> * {
+				background: none;
+			}
+		}
+	}
+}

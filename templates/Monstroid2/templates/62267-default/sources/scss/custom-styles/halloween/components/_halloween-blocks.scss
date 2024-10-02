@@ -1,0 +1,33 @@
+/** @section Blocks */
+
+/* Block image */
+.halloween-block-image {
+	&:hover {
+		.halloween-block-image-icon {
+			transform: translateY( 5px );
+		}
+		.halloween-block-image-title {
+			transform: translateY( -5px );
+		}
+	}
+}
+
+.halloween-block-image-icon,
+.halloween-block-image-title {
+	transition: .3s;
+}
+
+.halloween-block-image-title {
+	line-height: 1.27778;
+	font-weight: 400;
+}
+
+* + .halloween-block-image-title { margin-top: 35px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	* + .halloween-block-image-title { margin-top: 35px * $halloween-lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .halloween-block-image-title { margin-top: 35px }
+}

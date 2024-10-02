@@ -1,0 +1,148 @@
+//
+// Comments
+// --------------------------------------------------
+
+// Comment minimal
+.comment-minimal {
+  > * + * {
+    margin-top: 5px;
+  }
+}
+
+.comment-minimal__author {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.comment-minimal__link {
+  font-size: 14px;
+  line-height: (24 / 14);
+  color: $black;
+
+  a {
+    display: inline;
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Box comment post
+.box-comment {
+  * + & { margin-top: 32px;}
+  & + & {
+    margin-top: 40px;
+  }
+  * + time,
+  p + * { margin-top: 8px; }
+  * + p { margin-top: 0;}
+  
+  p { 
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  time, 
+  a {
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  time { color: $black; }
+  img { width: auto;}
+  .unit-body{
+    width: 100%;
+  }
+}
+
+
+.box-comment.box-comment-reply {
+  padding-left: 20px;
+  
+  * + & {
+    margin-top: 20px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 40px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-left: 100px;
+  }
+}
+
+.box-comment__icon {
+  color: $gray-1;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid;
+
+  .icon { font-size: 27px; }
+}
+
+.box-comment__body {
+  position: relative;
+  border-radius: $border-radius-small;
+  background-color: $gray-lighter;
+  padding: 15px;
+  
+  &:before{
+    bottom: 100%;
+    left: 35px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: $gray-lighter;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    &:before {
+      right: 100%;
+      top: 35px;
+      bottom: auto;
+      left: auto;
+      border-right-color: $gray-lighter;
+      border-bottom-color: transparent;
+      margin-top: -11px;
+      margin-left: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 30px 35px;
+  }
+}
+
+// product comment
+
+.box-comment__product {
+  position: relative;
+  .unit-body {
+    width: 100%;
+  }
+  .rating-list {
+
+    .icon {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+    }
+  }
+}

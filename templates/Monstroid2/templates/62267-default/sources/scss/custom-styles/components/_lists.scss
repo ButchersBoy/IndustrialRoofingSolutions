@@ -1,0 +1,444 @@
+//
+// Lists
+// --------------------------------------------------
+
+// Default list
+//
+
+.list-0 {
+	line-height: 1.25;
+
+	> li + li {
+		margin-top: 0;
+	}
+}
+
+.list-small {
+	> li {
+		@include small;
+	}
+
+	> li + li {
+		margin-top: 0;
+	}
+}
+
+.list {
+	> li + li {
+		margin-top: 5px;
+	}
+}
+
+.list-xxs {
+	> li + li {
+		margin-top: 11px;
+	}
+}
+
+.list-xs {
+	> li + li {
+		margin-top: 16px;
+	}
+}
+
+.list-sm {
+	> li + li {
+		margin-top: 22px;
+	}
+}
+
+.list-md {
+	> li + li {
+		margin-top: 30px;
+	}
+}
+
+.list-lg {
+	> li + li {
+		margin-top: 30px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.list-lg {
+		> li + li {
+			margin-top: 50px;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+}
+
+// Inline list
+.list-inline-xxs {
+	@include inline-list(16px, 5px);
+}
+
+.list-inline-sm {
+	@include inline-list(20px, 8px);
+}
+
+.list-inline-md {
+	@include inline-list(25px, 10px);
+}
+
+// Terms list
+.list-terms {
+	text-align: left;
+
+	dt {
+		font: 700 16px $font-family-sec;
+		line-height: 1.5;
+		letter-spacing: 0;
+		color: $gray-darker;
+	}
+
+	dd {
+		letter-spacing: .02em;
+		line-height: (24 / 14);
+	}
+
+	dt + dd {
+		margin-top: 14px;
+	}
+
+	dd + dt {
+		margin-top: 30px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.list-terms {
+		dt {
+			font-size: 18px;
+			line-height: 1.3;
+		}
+	}
+}
+
+// List terms inline
+.list-terms-inline {
+	dt,
+	dd {
+		display: inline-block;
+	}
+
+	dt {
+		padding-right: 5px;
+		color: $black;
+
+		&:after {
+			content: ':';
+		}
+	}
+}
+
+// List terms minimal
+.list-terms-minimal {
+	* {
+		display: inline;
+	}
+
+	dt:after {
+		display: inline-block;
+		margin-right: 3px;
+		content: ':';
+	}
+}
+
+// List terms modern
+.list-terms-modern {
+	dt,
+	dd {
+		display: block;
+	}
+
+	dt {
+		color: $black;
+
+		&::after {
+			display: inline-block;
+			margin-right: 3px;
+			content: ':';
+		}
+	}
+
+	dd {
+		color: $body-color;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+// Index list
+.index-list {
+	counter-reset: li;
+
+	> li {
+		.list-index-counter {
+			&:before {
+				content: counter(li, decimal-leading-zero);
+				counter-increment: li;
+			}
+		}
+	}
+}
+
+// Marked list
+.list-marked {
+	> li {
+		position: relative;
+		padding-left: 20px;
+		color: $gray;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 11px;
+			left: 0;
+			height: 3px;
+			width: 3px;
+			background: $black;
+		}
+
+		a {
+			@include link($primary, $black);
+		}
+	}
+
+	> li + li {
+		margin-top: 8px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.list-marked {
+		> li {
+			&::before {
+				top: 14px;
+			}
+		}
+	}
+}
+
+.list-marked-primary {
+	@extend .list-marked;
+
+	> li {
+		color: $primary;
+
+		&:before {
+			background: $primary;
+		}
+	}
+
+}
+
+// Ordered list
+.list-ordered {
+	counter-reset: li;
+
+	> li {
+		position: relative;
+		padding-left: 2em;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			content: counter(li, decimal-leading-zero) '.';
+			counter-increment: li;
+			color: $black;
+		}
+
+		a {
+			@include link(inherit, $primary);
+		}
+	}
+
+	li + li {
+		margin-top: 8px;
+	}
+}
+
+// List semicolon
+.list-semicolon {
+	> li {
+		display: inline;
+		color: $body-color;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	> li + li {
+		&:before {
+			display: inline-block;
+			margin-right: 4px;
+			content: ';';
+		}
+	}
+}
+
+// List linked
+.list-linked {
+	font-size: 14px;
+	line-height: (24 / 14);
+
+	> li {
+		display: block;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		color: $primary;
+
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: 3px;
+			content: '\e944';
+			font-family: 'Linearicons';
+			font-size: inherit;
+		}
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+// List tags
+.list-tags {
+	@include spacing(8px, 10px);
+
+	> li {
+		display: inline-block;
+		font-size: 12px;
+	}
+
+	a {
+		display: inline-block;
+		padding: 10px 12px;
+		color: $gray;
+		background: $gray-lighter;
+		border: 1px solid $gray-lighter;
+		border-radius: 3px;
+
+		&:hover {
+			background-color: transparent;
+			border-color: $gray-1;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.list-tags {
+		a {
+			padding: 15px 18px;
+		}
+	}
+}
+
+.list-inline-tag {
+	color: $primary;
+
+	li {
+		display: inline-block;
+
+		&:after {
+			content: ',';
+			color: inherit;
+		}
+
+		&:last-of-type {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
+
+// List nav
+.list-nav {
+	@include spacing(30px, 10px);
+
+	> li {
+		display: inline-block;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $black;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	> li.active,
+	> li a.active,
+	> li > a:hover {
+		color: $primary;
+	}
+}
+
+// List bordered
+.list-bordered {
+	@include spacing(24px, 10px);
+
+	> li {
+		position: relative;
+		display: inline-block;
+	}
+
+	@include media-breakpoint-up(lg) {
+		> li {
+			&::before {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 1px;
+				height: 32px;
+				background: $gray-1;
+			}
+			&:last-of-type {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// List archive
+.list-archive {
+	li a {
+		font-size: 14px;
+		color: $black;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}

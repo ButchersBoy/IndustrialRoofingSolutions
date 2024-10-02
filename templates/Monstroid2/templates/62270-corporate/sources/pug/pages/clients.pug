@@ -1,0 +1,76 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- var activeIndex = 2
+	- var pageName = 'Clients'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link]]
+	})
+
+	section.section-md.bg-gray-3
+		.container
+			h3.text-center.heading-divider Our Clients
+			.row.justify-content-md-center.offset-1 
+				.col-md-11.col-lg-9.col-xl-12
+					.row.row-70
+						.col-xl-6
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-01-236x236', 'rounded-circle')
+									.unit__body
+										h4 Anotoro
+										p I’ve been a CEO for my multi-national holding for over 48 years. So when the time came to pass business affairs to next generation, I asked for CorpoRational’s advisors’ help to get everything thought through and set up, which they did brilliantly and flawlessly!
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-03-236x236', 'rounded-circle')
+									.unit__body
+										h4 Bemisma
+										p Our company which grew in under 3 years from a startup to a corporation employing 17000 people in US and overseas needed general business consultation severely. We received such priceless advices from CorpoRational Inc. pros, and after 1 year we’ve been able.
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-05-236x236', 'rounded-circle')
+									.unit__body
+										h4 Allentis
+										p When our company went through a harsh period of expansion, we did not know how to handle this crisis. Our overall performance efficiency clinched down. So we immediately hired a highly professional Interim manager. Than, with that help of CorpoRational Inc. our company was able to survive such a rapid and unexpected growth and we succeeded!
+						.col-xl-6
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-02-236x236', 'rounded-circle')
+									.unit__body
+										h4 VOLTER
+										p With the release of our new big product, we were in a desperate need for a decent market research. CorpoRational’s advisors gave us a helping hand at that and assisted us in reaching our targeted audience across the globe.
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-04-236x236', 'rounded-circle')
+									.unit__body
+										h4 Pentaca
+										p When me and my friends had this brilliant startup idea 5 years ago, we were at a loss on how to get it to become a reality. CorpoRational’s advices and support helped us to pen a profound business plan and attract first angel investors.
+							.box-client
+								.unit.unit-spacing-lg.unit-sm-horizontal
+									.unit__left
+										+jpg('clients-06-236x236', 'rounded-circle')
+									.unit__body
+										h4 Setra
+										p We did not expect so many obstacles to get in our way, when we initially purchased this 100 employees big company, yet faced those. But with the help of CorpoRational’s strategic advisors to our board, we developed a long term game plan and since then we expand rapidly!
+									
+				
+	include ../sections/_section-parallax-intro
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

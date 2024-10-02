@@ -1,0 +1,337 @@
+/** @section Lists */
+
+// Default list
+//
+
+.list {
+	> li + li {
+		margin-top: 5px;
+	}
+}
+
+.list-xxs {
+	> li + li {
+		margin-top: 11px;
+	}
+}
+
+.list-sm {
+	> li + li {
+		margin-top: 22px;
+	}
+}
+
+.list-md {
+	> li + li {
+		margin-top: 30px;
+	}
+}
+
+// Inline list
+
+.list-inline-sm {
+	@include inline-list(20px, 8px);
+}
+
+// List terms inline
+.list-terms-inline {
+	dt,
+	dd {
+		display: inline-block;
+	}
+
+	dt {
+		padding-right: 5px;
+		color: $black;
+
+		&:after {
+			content: ':';
+		}
+	}
+}
+
+// Marked list
+.list-marked {
+	> li {
+		position: relative;
+		padding-left: 20px;
+		color: $gray;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 11px;
+			left: 0;
+			height: 3px;
+			width: 3px;
+			background: $black;
+		}
+
+		a {
+			@include link($primary, $black);
+		}
+	}
+
+	> li + li {
+		margin-top: 8px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.list-marked {
+		> li {
+			&::before {
+				top: 12px;
+			}
+		}
+	}
+}
+
+.list-marked-primary {
+	@extend .list-marked;
+
+	> li {
+		color: $primary;
+
+		&:before {
+			background: $primary;
+		}
+	}
+}
+
+* + .list-marked {
+	margin-top: 15px;
+}
+
+// List marked 1
+.list-marked-1 {
+	> li {
+		display: block;
+		padding-left: 22px;
+
+		&::before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			width: .34em;
+			height: .34em;
+			margin-left: -22px;
+			margin-top: -1px; // vertical align fix
+			margin-right: 18px;
+			border-radius: 50%;
+			background: $primary;
+		}
+	}
+
+	> li + li {
+		margin-top: 14px;
+	}
+}
+
+* + .list-marked-1 {
+	margin-top: 15px;
+}
+
+h3 + .list-marked-1 {
+	margin-top: 18px;
+}
+
+@include media-breakpoint-up( lg ) {
+	.list-marked-1 {
+		> li + li {
+			margin-top: 28px * $lg-multiplier;
+		}
+	}
+
+	h3 + .list-marked-1 {
+		margin-top: 55px * $lg-multiplier;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.list-marked-1 {
+		> li + li {
+			margin-top: 28px;
+		}
+	}
+
+	h3 + .list-marked-1 {
+		margin-top: 55px;
+	}
+}
+
+
+// Ordered list
+.list-ordered {
+	counter-reset: li;
+
+	> li {
+		position: relative;
+		padding-left: 2em;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			content: counter(li, decimal-leading-zero) '.';
+			counter-increment: li;
+			color: $black;
+		}
+
+		a {
+			@include link(inherit, $primary);
+		}
+	}
+
+	li + li {
+		margin-top: 8px;
+	}
+}
+
+// List linked
+.list-linked {
+	font-size: 14px;
+	line-height: (24 / 14);
+
+	> li {
+		display: block;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		color: $primary;
+
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: 3px;
+			content: '\e944';
+			font-family: 'Linearicons';
+			font-size: inherit;
+		}
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+// List tags
+.list-tags {
+	@include spacing(8px, 10px);
+
+	> li {
+		display: inline-block;
+		font-size: 12px;
+	}
+
+	a {
+		display: inline-block;
+		padding: 10px 12px;
+		color: $gray;
+		background: $gray-lighter;
+		border: 1px solid $gray-lighter;
+		border-radius: 3px;
+
+		&:hover {
+			background-color: transparent;
+			border-color: $gray-1;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.list-tags {
+		a {
+			padding: 15px 18px;
+		}
+	}
+}
+
+.list-inline-tag {
+	color: $primary;
+
+	li {
+		display: inline-block;
+
+		&:after {
+			content: ',';
+			color: inherit;
+		}
+
+		&:last-of-type {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
+
+// List nav
+.list-nav {
+	@include spacing(30px, 10px);
+
+	> li {
+		display: inline-block;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $black;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	> li.active,
+	> li a.active,
+	> li > a:hover {
+		color: $primary;
+	}
+}
+
+/* List count */
+.list-count {
+	counter-reset: li;
+
+	.list-count-item {
+		&:before {
+			content: counter( li, decimal-leading-zero );
+			counter-increment: li;
+		}
+	}
+}
+
+/* List icons */
+.list-icon {
+	display: flex;
+}
+
+.list-icon-left {
+	margin-right: 18px;
+	color: $primary;
+	font-size: 1.1em;
+
+	&::before {
+		display: inline-block;
+		margin-top: 1px;
+		vertical-align: middle;
+	}
+}
+
+/* List social */
+.list-social {
+	@include group( 28px, 10px );
+}
+
+.list-social-icon {
+	display: inline-block;
+	font-size: 24px;
+}

@@ -1,0 +1,83 @@
+//
+// Page loaders
+// --------------------------------------------------
+
+#page-loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	padding: 10px;
+	z-index: 9999999;
+	background: $white;
+	transition: .3s all ease;
+
+	[data-x-mode='true'] &,
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	&.ending {
+		display: none;
+	}
+
+  p {
+    font-weight: 500;
+  }
+
+  * + p {
+    margin-top: 5px;
+  }
+}
+
+[data-x-mode="design-mode"] {
+	#page-loader {
+		display: none;
+	}
+}
+
+#wheel-1,
+#wheel-2 {
+  width: 36px;
+  height: 36px;
+  animation: cssload-spin 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#group-3 {
+  animation: swing 1.5s infinite ease-in-out;
+}
+
+@keyframes cssload-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes  swing {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}

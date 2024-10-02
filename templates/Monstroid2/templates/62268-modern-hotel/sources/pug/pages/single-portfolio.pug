@@ -1,0 +1,72 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Single Portfolio'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-default.text-center
+    .container
+      h3 Portfolio Album
+      p Each business niche may require a unique functionality of its own.
+      
+      .slick-gallery
+        // Slick Carousel
+        .slick-slider.carousel-parent(data-arrows="true", data-loop="false", data-dots="false", data-swipe="true", data-items="1" data-child="#child-carousel", data-for="#child-carousel" data-lightgallery='group')
+          .item
+            +jpg('portfolio-single-1-1200x800')
+          .item
+            +jpg('portfolio-single-2-1200x800')
+          .item
+            +jpg('portfolio-single-3-1200x800')
+          .item
+            +jpg('portfolio-single-4-1200x800')
+          .item
+            +jpg('portfolio-single-5-1200x800')
+          .item
+            +jpg('portfolio-single-6-1200x800')
+          .item
+            +jpg('portfolio-single-7-1200x800')
+          .item
+            +jpg('portfolio-single-8-1200x800')
+          .item
+            +jpg('portfolio-single-9-1200x800')
+
+        .slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="true",
+                data-loop="false", data-dots="false", data-swipe="true",
+                data-items="3", data-sm-items="4", data-md-items="5",
+                data-lg-items="6", data-xl-items="8", data-slide-to-scroll="1")
+          .item
+            +jpg('portfolio-single-thumb-1-168x112')
+          .item
+            +jpg('portfolio-single-thumb-2-168x112')
+          .item
+            +jpg('portfolio-single-thumb-3-168x112')
+          .item
+            +jpg('portfolio-single-thumb-4-168x112')
+          .item
+            +jpg('portfolio-single-thumb-5-168x112')
+          .item
+            +jpg('portfolio-single-thumb-6-168x112')
+          .item
+            +jpg('portfolio-single-thumb-7-168x112')
+          .item
+            +jpg('portfolio-single-thumb-8-168x112')
+          .item
+            +jpg('portfolio-single-thumb-9-168x112')
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,30 @@
+// Free Legal Consultation
+section.section-lg.bg-accent.text-center
+  .container
+    .row.justify-content-lg-center
+      .col-lg-10.col-xl-8
+        h3.heading-decorated Free Legal Consultation
+        p All of our lawyers are available all business week long for providing you with their best initial analysis on any legal issue. Once you've decided to hire us for your defense or offense, we'll be there for you till the we win your case!
+    .row.justify-content-md-center
+      .col-md-9.col-lg-7.col-xl-5
+        h5 I Would Like to Discuss
+        // RD Mailform
+        form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+          .form-wrap.form-wrap_icon.linear-icon-briefcase
+            //Select 2
+            select.form-input.select-filter(data-placeholder="Subjects", data-minimum-results-for-search="Infinity", data-constraints="@Required", name='subject')
+              option Subjects
+              option(value="2") Subject 1
+              option(value="3") Subject 2
+              option(value="4") Subject 3
+
+          .form-wrap.form-wrap_icon.linear-icon-man
+            input#contact2-name.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="contact2-name") Your name
+
+          .form-wrap.form-wrap_icon.linear-icon-envelope
+            input#contact2-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+            label.form-label(for="contact2-email") Your e-mail
+
+          button(type="submit").button.button-black Submit
+='\n'

@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Buttons'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  // Buttons
+  section.section-lg.bg-default.text-center
+    .container
+      .group-lg
+        .button.button-primary See Features
+        .button.button-black Buy template
+        .button.button-gray-light-outline Buy template!
+        .button.button-link read more
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-accent.text-center
+    .container
+      .group-lg
+        .button.button-gray-light-outline View now!
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

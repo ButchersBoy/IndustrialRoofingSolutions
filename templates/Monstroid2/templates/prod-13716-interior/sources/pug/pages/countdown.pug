@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Countdown'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  // Countdown
+  section.section-lg.bg-default.text-center
+    .container
+      .countdown.countdown-default(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Countdown
+  section.section-xl.bg-accent.bg-image.bg-image-bottom.text-center(style='background-image: url(images/bg-image-1.jpg);')
+    .container
+      .countdown.countdown-default(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Countdown
+  section.section-lg.bg-default.text-center
+    .container
+      .countdown.countdown-default.countdown-primary(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

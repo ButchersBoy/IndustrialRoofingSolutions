@@ -1,0 +1,202 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+	- pageName = 'Masonry Blog'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.bg-default.section-lg
+		.container
+			.posts-lists-masonry-3-cols.group-post
+				// Post classic
+				article.post-classic.post-minimal
+					+jpg('post-minimal-1-418x315')
+					
+					.post-classic-title
+						h5: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+					
+					.post-meta
+						.group
+							a(href=postImage): time(datetime='2022') Jan.20, 2022
+							a(href=postImage).meta-author by Brian Williamson
+				
+				// Post video
+				article.post-video.post-minimal
+					
+					.entry-video.ratio.ratio-16x9
+						iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+					
+					.post-classic-title
+						h5: a(href=postVideo) Site Speed and Search Engines Optimization Aspects.
+					
+					.post-meta
+						.group
+							a(href=postVideo): time(datetime='2022') Jan.20, 2022
+							a(href=postVideo).meta-author by Brian Williamson
+				
+				// Post classic
+				article.post-classic.post-minimal
+					+jpg('post-classic-1-886x668')
+					
+					.post-classic-title
+						h5: a(href=postImage) Getting to another  level of design and functionality.
+					
+					.post-meta
+						.group
+							a(href=postImage): time(datetime='2022') Jan.20, 2022
+							a(href=postImage).meta-author by Brian Williamson
+				
+				// Post Link
+				article.post-link
+					.post-classic-title
+						h5: a(href=blogPostLink) Creating Portfolio.
+					a(href="http://templatemonster.com/") http://templatemonster.com/
+				
+				// Post classic
+				article.post-classic.post-minimal
+					+jpg('post-minimal-3-418x315')
+					
+					.post-classic-title
+						h5: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+					
+					.post-meta
+						.group
+							a(href=postImage): time(datetime='2022') Jan.20, 2022
+							a(href=postImage).meta-author by Brian Williamson
+				
+				// Post quote
+				article.post-quote.post-minimal
+					// Quote default
+					a(href=postQuote).quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q.heading-4 Getting to another  level of design and functionality.
+						p.quote-default__cite Adam Smith
+				
+				// Post classic
+				article.post-minimal
+					
+					+jpg('post-minimal-4-418x315')
+					.post-classic-title
+						h5: a(href=postImage) Installing Your First HTML Template
+					
+					.post-meta
+						.group-xs
+							a(href=postImage): time(datetime='2022') Jan.20, 2022
+							a(href=postImage).meta-author by Brian Williamson
+							a(href=postImage) 3 comment(s)
+							a(href=postImage) Template
+							+tag-list({
+								list_class: 'list-inline-tag',
+								href:       postImage,
+								items:      [
+									"Style",
+									'Clean']
+							})
+					
+					.post-classic-body
+						p Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates…
+					
+					.post-minimal-footer
+						+list-inline-icon({
+							list_class: 'list-inline-sm',
+							items:      [
+								"icon-xxs fa-facebook",
+								'icon-xxs fa-twitter',
+								'icon-xxs fa-google-plus',
+								'icon-xxs fa-vimeo',
+								'icon-xxs fa-youtube',
+								'icon-xxs fa-pinterest-p']
+						})
+						
+						a(href=postImage).button.button-link View now!
+				
+				// Post slider
+				article.post-slider.post-minimal
+					+slider-blog({
+						class: 'carousel-slider-blog-post',
+						items: [
+							{
+								original_img: 'gallery-post-01-original-1354x762',
+								img_thumb:    'gallery-post-1-886x668'
+							},
+							{
+								original_img: 'gallery-post-02-original-1354x762',
+								img_thumb:    'gallery-post-2-886x668'
+							},
+							{
+								original_img: 'gallery-post-03-original-1354x762',
+								img_thumb:    'gallery-post-3-886x668'
+							}
+						]
+					})
+					.post-classic-title
+						h5: a(href=postSlider) Clean Style. Cons and Pros.
+					
+					.post-meta
+						.group
+							a(href=postSlider): time(datetime='2022') Jan.20, 2022
+							a(href=postSlider).meta-author by Brian Williamson
+				
+				// Post standard
+				article.post-classic.post-minimal
+					.post-classic-title
+						h5: a(href=postLink) How to Use Bootstrap Framework
+					
+					.post-meta
+						.group
+							a(href='#'): time(datetime='2022') Jan.20, 2022
+							a(href=postLink).meta-author by Brian Williamson
+					
+					.post-classic-body
+						p All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the...
+				
+				// Post classic
+				article.post-classic.post-minimal
+					+jpg('post-minimal-2-418x315')
+					
+					.post-classic-title
+						h5: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+					
+					.post-meta
+						.group
+							a(href=postImage): time(datetime='2022') Jan.20, 2022
+							a(href=postImage).meta-author by Brian Williamson
+				
+				// Post audio
+				article.post-audio.post-minimal
+					include ../includes/_rd-audio-track
+					
+					.post-classic-title
+						h5: a(href=postAudio) How to Use Bootstrap Framework
+					
+					.post-minimal-footer
+						.post-meta
+							.group
+								a(href=postAudio): time(datetime='2022') Jan.20, 2022
+								a(href=postAudio).meta-author by Brian Williamson
+	
+	+divider
+	section.section.novi-bg.novi-bg-img.section-md.text-center
+		.container
+			+pagination-classic(1,
+			[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+			null,
+			{
+				"title": "",
+				"href":  "#"
+			}
+			)
+	// Page Footer
+	include ../sections/_footer-corporate

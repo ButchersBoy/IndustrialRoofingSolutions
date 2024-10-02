@@ -1,0 +1,45 @@
+/** @section Flex grid */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@include media-breakpoint-down( sm ) {
+  .row-spacing-14 {
+    margin-left: -7px;
+    margin-right: -7px;
+
+    > * {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+}
+
+@include media-breakpoint-up( xl ) {
+  .container {
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+  }
+
+  .row {
+    margin-left: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width/2;
+
+    > * {
+      padding-left: $grid-gutter-width/2;
+      padding-right: $grid-gutter-width/2;
+    }
+  }
+}

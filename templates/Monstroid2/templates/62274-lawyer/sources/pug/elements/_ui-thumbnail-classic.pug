@@ -1,0 +1,6 @@
+mixin thumbnail-classic(obj)
+  .thumbnail-classic
+    +jpg(obj.img)
+    .caption
+      h5: a.thumbnail-classic-title(href=obj.link ? obj.link : 'single-service-page.html')=obj.title
+      p=obj.text

@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Single service'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  // Parallax header
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-3.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated Construction #[br] Management
+  ='\n'
+
+  // Construction Management
+  section.section-md.bg-default
+    .container
+      .row.justify-content-md-center.row-30.row-md-50
+        .col-md-11.col-lg-10.col-xl-6
+          h6.heading-decorated CONSTRUCTION PROJECT MANAGEMENT IS ESSENTIAL. WE’RE USING THE MOST TIME AND ITERATIONS EFFICIENT LIFE CYCLES FOR THAT.
+          p As you may know, the construction planning process has always been far from perfect... In the past, project schedules were unrealistically optimistic... That resulted in an average of 45% of work promised in a week actually being completed at a later date than its deadline dictated. This kind of protraction left subcontractors waiting for the previous task to be completed, even before the next stage of work could have proceeded further... To fix that issue, our construction bureau have implemented the Pull Planning process, coordinated with the trade contractors on a weekly basis. Pull Planning method estimates the scheduling in reverse.
+        .col-md-11.col-lg-10.col-xl-6
+          +jpg('service-4-652x491')
+  ='\n'
+
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

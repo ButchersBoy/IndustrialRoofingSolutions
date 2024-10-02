@@ -1,0 +1,155 @@
+/**
+ * [Table of contents]
+ *   1 Base
+ *     1.1 Reset Styles
+ *     1.2 Context Styles
+ *     1.3 Page layout
+ *     1.4 Offsets
+ *   2 Utilities
+ *     2.1 Text styling
+ *     2.2 Row spacing
+ *     2.3 Sections
+ *     2.4 Grid modules
+ *     2.5 Backgrounds
+ *     2.6 Utilities custom
+ *   3 Components
+ *     3.1 Typography
+ *     3.2 Brand
+ *     3.3 Links
+ *     3.4 Blocks
+ *     3.5 Boxes
+ *     3.6 Courses
+ *     3.7 Decorated
+ *     3.8 Events
+ *     3.9 Groups
+ *     3.10 Responsive units
+ *     3.11 Lists
+ *     3.12 Images
+ *     3.13 Icons
+ *     3.14 Tables custom
+ *     3.15 Dividers
+ *     3.16 Buttons
+ *     3.17 Forms
+ *     3.18 Posts
+ *     3.19 Quotes
+ *     3.20 Thumbnails
+ *     3.21 Testimonial
+ *     3.22 Breadcrumbs
+ *     3.23 Pagination custom
+ *     3.24 Snackbars
+ *     3.25 Services
+ *     3.26 Footers
+ *   4 Plugins
+ *     4.1 Animate
+ *     4.2 Preloader
+ *     4.3 ToTop
+ *     4.4 RD Navbar
+ *     4.5 Swiper
+ *     4.6 Google Map
+ *     4.7 Search Results
+ *     4.8 Isotope
+ *     4.9 Nav custom
+ *     4.10 Panel custom
+ *     4.11 Tooltop Custom
+ *     4.12 Twitter
+ *     4.13 Counter
+ *     4.14 Progress Bars
+ *     4.15 Progress Circle
+ *     4.16 Countdown
+ *     4.17 Owl Carousel
+ *     4.18 Lightgallery
+ *     4.19 Material Parallax
+ *     4.20 Bootstrap Modal
+ */
+
+// Bootstrap imports
+@import '../bootstrap/functions';
+@import '../bootstrap/variables';
+@import '../bootstrap/mixins';
+
+/** @group Base */
+@import 'base/functions';
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/context';
+@import 'base/page';
+@import 'base/offsets';
+
+// Mixins
+@import 'mixins/mixins';
+@import 'mixins/buttons';
+@import 'mixins/groups';
+@import 'mixins/spacing';
+@import 'mixins/grid';
+@import 'mixins/unit';
+@import 'mixins/gradients';
+@import 'mixins/links';
+
+/** @group Utilities */
+@import 'utilities/text-styling';
+@import 'utilities/row-spacing';
+@import 'utilities/sections';
+@import 'utilities/grid-modules';
+@import 'utilities/backgrounds';
+@import 'utilities/other';
+
+/** @group Components */
+@import 'components/type-custom';
+@import 'components/brand';
+@import 'components/links';
+@import 'components/blocks';
+@import 'components/boxes';
+@import 'components/courses';
+@import 'components/decorated';
+@import 'components/events';
+@import 'components/groups';
+@import 'components/units';
+@import 'components/lists';
+@import 'components/images';
+@import 'components/icons';
+@import 'components/tables';
+@import 'components/dividers';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/posts';
+@import 'components/quotes';
+@import 'components/thumbnails';
+@import 'components/testimonials';
+@import 'components/breadcrumbs';
+@import 'components/pagination-custom';
+@import 'components/snackbars';
+@import 'components/services';
+@import 'components/footers';
+
+/** @group Plugins */
+@import 'plugins/animate';
+@import 'plugins/preloader';
+@import 'plugins/ui-to-top';
+@import 'plugins/rd-navbar';
+@import 'plugins/swiper';
+@import 'plugins/google-map';
+@import 'plugins/rd-search';
+@import 'plugins/isotope';
+@import 'plugins/nav-custom';
+@import 'plugins/card-custom';
+@import 'plugins/tooltip-custom';
+@import 'plugins/twitter';
+@import 'plugins/counter';
+@import 'plugins/progress-bars';
+@import 'plugins/progress-circle';
+@import 'plugins/countdown';
+@import 'plugins/owl-carousel';
+@import 'plugins/lightgallery';
+@import 'plugins/material-parallax';
+@import 'plugins/modal';
+
+.clip-svg {
+  clip-path: url(#myClip);
+}
+
+.gel {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}

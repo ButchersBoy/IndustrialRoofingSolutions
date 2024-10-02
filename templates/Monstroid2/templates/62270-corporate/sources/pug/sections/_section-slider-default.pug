@@ -1,0 +1,32 @@
+include ../elements/_ui-rd-video
+// Swiper
+section
+	.swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='false', data-autoplay='5500' class={'swiper-slider_fullheight-minimal': minimal})
+		.swiper-wrapper
+			.swiper-slide.bg-gray-lighter(data-slide-bg='images/slider-slide-1-1920x930.jpg')
+				.swiper-slide-caption
+					.container
+						.row
+							.col-sm-10.col-xl-7
+								h1.heading-divider(data-caption-animate='fadeInUpSmall') Professional business services
+								h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Experience the highest level of business assistance
+			.swiper-slide.bg-accent(data-slide-bg='images/slider-slide-2-1920x930.jpg')
+				.swiper-slide-caption
+					.container
+						.row
+							.col-sm-10.col-xl-7
+								h1.heading-divider(data-caption-animate='fadeInUpSmall') Quality business consulting
+								h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') We provide top consulting services since 2007.
+
+			.swiper-slide.bg-gray-lighter(data-slide-bg='images/slider-slide-3-1920x930.jpg')
+				.swiper-slide-caption
+					.container
+						.row
+							.col-sm-8.col-xl-7
+								h1.heading-divider(data-caption-animate='fadeInUpSmall') Customized business solutions
+								h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Our experts know how to solve your company’s issues.
+
+		// Swiper Pagination
+		.swiper-pagination
+
+='\n'

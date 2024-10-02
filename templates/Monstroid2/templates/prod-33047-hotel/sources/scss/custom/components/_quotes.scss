@@ -1,0 +1,20 @@
+/** @section Quotes */
+
+// Quote default
+.quote-default-text {
+	font-style: italic;
+}
+
+* + .quote-default { margin-top: 40px * $xs-multiplier }
+* + .quote-default-cite { margin-top: 35px * $xs-multiplier }
+* + .quote-default-meta { margin-top: 2px }
+
+@include media-breakpoint-up( lg ) {
+	* + .quote-default { margin-top: 40px * $lg-multiplier }
+	* + .quote-default-cite { margin-top: 35px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .quote-default { margin-top: 40px }
+	* + .quote-default-cite { margin-top: 35px }
+}

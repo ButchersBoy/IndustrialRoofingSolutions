@@ -1,0 +1,138 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+
+// Search
+section.box.bg-accent.context-dark
+  h5 Search
+  // RD Search
+  form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+    .form-wrap
+      label(for="rd-search-form-input" class="form-label") Enter keyword
+      input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+    button(type="submit").button.button-icon.fa-search.button-gray-light-outline
+='\n'
+
+.section-xs.section-collapse
+  section.box.text-center
+    .thumbnail-classic-minimal
+      +jpg('coaches-1-193x193', 'img-circle')
+      h5 Julie  Collins
+      h6 Coach
+      p.small I initially took on CrossFit trainings after a spending a lifetime in professional athletics. The fact that I loved sports so much contributed a lot to my decision.
+    a(href='coach.html').button.button-sm.button-primary.button-icon read more
+='\n'
+
+// Categories
+section.section-xxs.section-collapse
+  .box.box-outline
+    h5 Categories
+    ul.list-linked
+      li: a(href='#') Retina Homepage
+      li: a(href='#') New Page Examples
+      li: a(href='#') Parallax Sections
+      li: a(href='#') Shortcode Central
+      li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-xxs
+  .box.box-outline
+    h5 Latest Posts
+    ul.list-sm
+      li
+        // Post inline
+        article.post-inline
+          .post-meta
+            div
+              a(href=postImage).meta-author by
+                span.meta-author__inner=' Amanda Smith'
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+          p.post-inline__link: a(href=postLink) Tanya Swift: New Female Athlete of the Month
+      li
+        // Post inline
+        article.post-inline
+          .post-meta
+            div
+              a(href=postImage).meta-author by
+                span.meta-author__inner=' Amanda Smith'
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+          p.post-inline__link: a(href=postLink) Tanya Swift: New Female Athlete of the Month
+='\n'
+
+
+// Archive
+section.section-xxs
+  .box.box-outline
+    h5 Archive
+
+    ul.list-linked
+      li: a(href='#') April 2017
+      li: a(href='#') February 2017
+      li: a(href='#') January 2017
+      li: a(href='#') December 2017
+      li: a(href='#') November 2017
+='\n'
+
+
+// Resent comments
+section.section-xxs
+  .box.box-outline
+    h5 Recent Comments
+
+    ul.list-sm
+      li
+        article.post-inline
+          div
+            a(href=postImage).meta-author
+              span.meta-author__inner=' Amanda Smith'
+              =' on'
+
+          p.post-inline__link: a(href=postLink) Tanya Swift: New Female Athlete of the Month
+      li
+        article.post-inline
+          div
+            a(href=postImage).meta-author
+              span.meta-author__inner=' Amanda Smith'
+              =' on'
+
+          p.post-inline__link: a(href=postLink) Tanya Swift: New Female Athlete of the Month
+
+// Tags
+section.section-xxs
+  .box.box-outline
+    h5 Tags
+    ul.list-tags
+      li: a(href='#') Retina Homepage
+      li: a(href='#') New Page Examples
+      li: a(href='#') Ultimate Font Collection
+      li: a(href='#') Parallax Sections
+      li: a(href='#') Shortcode Central
+='\n'
+
+section.section-xxs
+  h5.text-center.text-lg-left Calendar
+  include ../includes/_rd-calendar
+='\n'
+
+// Follow us
+section.section-xxs
+  .box.bg-accent.context-dark.box-subscribe
+    h5 Follow Us
+    +list-inline-icon({
+      list_class: 'list-inline-sm',
+      items: [
+        "icon-lg icon-circle icon-white fa-facebook",
+        'icon-lg icon-circle icon-white fa-twitter',
+        'icon-lg icon-circle icon-white fa-youtube',
+        'icon-lg icon-circle icon-white fa-instagram']
+    })
+
+    h5 Get Best Fitness Tips and Tricks!
+    // RD Mailform
+    form.rd-mailform.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', action="rd-mailform.php", method="POST")
+      .form-wrap
+        label(for="subscribe-email" class="form-label") Please enter your email
+        input(data-constraints='@Email' class="form-input" id="subscribe-email" type="text" name="s" autocomplete="off")
+      button(type="submit").button.button-xl.button-icon.fa-angle-right.button-gray-light-outline

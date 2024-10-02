@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Footer minimal'
+
+block page 
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-3.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName 
+
+  // About us
+  section.section-md.bg-gray-lighter
+    .container
+      .row.justify-content-md-center.row-30.row-md-50
+        .col-md-11.col-lg-10.col-xl-6
+          h4.heading-decorated About us
+          p.heading-6.text-width-1 WE ARE THE TEAM OF QUALIFIED AND SUCCESSFUL DESIGNERS AND ARCHITECTS WHO HAVE BEEN DESIGNING INTERIORS SINCE 1999
+          p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any residential design project. Since day one, we have been delivering creative and cozy interiors to our clients worldwide.
+          a.button.button-primary(href='about.html') Read more
+        .col-md-11.col-lg-10.col-xl-6
+          +jpg('post-3-1500x1125')
+  ='\n'
+  
+  include ../sections/_section-cta-1
+    
+  // Page Footer
+  include ../sections/_footer-minimal
+

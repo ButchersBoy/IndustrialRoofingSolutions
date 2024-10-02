@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Header Default Dark'
+
+block page
+  // Page header
+  include ../sections/_header-default-dark
+  include ../sections/_section-slider-default
+
+  include ../sections/_section-cta-4
+
+  include ../sections/_section-services
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

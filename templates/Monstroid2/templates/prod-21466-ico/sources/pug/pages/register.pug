@@ -1,0 +1,48 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Register'
+
+block page
+	section.section.section-single.section-relative.gradient-1.bg-vide-2
+		.section-single-inner
+			.section-single-header: .container: +logo
+
+			.section-single-main: .container
+				.form-style-2
+					h5.form-title Create an account
+					//RD Mailform
+					form.rd-mailform.rd-form
+						.form-wrap
+							label.form-label( for='register-email' ) Email
+							input#register-email.form-input( type='email' name='email' data-constraints='@Required @Email' )
+						.form-wrap
+							label.form-label( for='register-password' ) Password
+							input#register-password.form-input( type='password' name='password' data-constraints='@Required' )
+						.form-wrap
+							label.form-label( for='register-password-2' ) Repeat Password
+							input#register-password-2.form-input( type='password' name='password' data-constraints='@Required' )
+
+						label.checkbox-inline
+							input(name='input-checkbox-1' value='checkbox-1' type='checkbox')
+							| I agree to
+							=' '
+							a( href='privacy-policy.html' ) Privacy Policy
+							=' '
+							| and
+							=' '
+							a( href='#' ) Terms of Use
+							|.
+
+						button.button.button-block.button-primary.button-isi( type='submit' ) Register
+						a.button.button-block.button-icon.button-icon-left.button-default-outline-2( href='#' )
+							+img('icon-1-20x20.png')
+							span Sign up with Google
+
+					p Have an account?
+						=' '
+						a.link-1( href='login.html' ) Sign in!
+
+			.section-single-footer: .container: +rights
+
+		.bg-vide( data-vide-bg='video/video-3' data-vide-options='posterType: jpg, position: 50% 50%' )

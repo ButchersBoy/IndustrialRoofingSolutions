@@ -1,0 +1,52 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css?family=Montserrat:300,400,500%7CPlayfair+Display:700",
+		logo = {
+			default: 'logo-default-300x86.png',
+			inverse: 'logo-inverse-300x86.png',
+			name: 'LifeTime'
+		},
+		links = {
+			post: 'single-post.html',
+			getTemplate:'#get-template'
+		},
+		colors = {
+			primary: '#b6c062'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{ title: 'About' },
+			{ title: 'Online Lectures' },
+			{ title: 'Courses' },
+			{
+				title: 'News',
+				dropdown: [
+					{ title: 'Single Post' }
+				]
+			},
+			{
+			title: 'Pages',
+			link: '#',
+				dropdown: [
+					{ title: 'Typography' },
+					{ title: 'Buttons' },
+					{ title: 'Forms' },
+					{ title: 'Tabs and accordions' },
+					{ title: 'Progress bars' },
+					{ title: 'Tables' },
+					{ title: 'Grid system' },
+					{ title: 'Privacy policy' },
+					{ title: 'Under Construction' }
+				]
+			},
+			{ title: 'Contacts' }
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		self = {}

@@ -1,0 +1,125 @@
+/*
+* Posts
+*/
+
+// 
+// Table of Contents:
+// 
+// Post Classic
+//
+//
+
+//
+// Post Classic
+//
+.post-classic-counter {
+	counter-reset: post-classic;
+
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		[class*='col-'] {
+			&:nth-child(3n + 1) {
+				.post-classic {
+					margin-left: 0;
+					margin-right: auto;
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 42%;
+						right: -41%;
+						//transform: translate(calc(100% + 9px), -50%);
+						background-image: url(../images/arrow-110x14.png);
+						background-repeat: no-repeat;
+						background-position: center;
+						width: 37%;
+						height: 14px;
+						transition: $transition-base;
+					}
+				}
+			}
+
+			&:nth-child(3n + 2) {
+				.post-classic {
+					margin-left: auto;
+					margin-right: auto;
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 42%;
+						right: -41%;
+						transform: rotateX(180deg);
+						background-image: url(../images/arrow-110x14.png);
+						background-repeat: no-repeat;
+						background-position: center;
+						width: 37%;
+						height: 14px;
+					}
+				}
+			}
+
+			&:nth-child(3n) {
+				.post-classic {
+					margin-left: auto;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.post-classic {
+	width: 300px;
+	max-width: 100%;
+	padding: 37px 15px 15px 37px;
+	position: relative;
+	border-radius: 60px 4px;
+	transition: $transition-base;
+	color: $black;
+	margin: 0 auto;
+
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		padding: 51px 15px 26px 40px;
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	&::before {
+		content: counter(post-classic, decimal-leading-zero);
+		counter-increment: post-classic;
+		position: absolute;
+		top: -15px;
+		left: -11px;
+		color: $gray-500;
+		font-size: 20px;
+		font-weight: 600;
+		background-color: $white;
+		width: 58px;
+		height: 58px;
+		line-height: 58px;
+		text-align: center;
+		border-radius: 10em;
+		box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.25);
+	}
+
+}
+
+.post-classic-title {
+	letter-spacing: -.02em;
+	color: $black;
+}
+
+.post-classic-text {
+	margin-top: 10px;
+}
+
+// Context styling
+%context-dark {
+	.post-classic {
+
+	}
+}

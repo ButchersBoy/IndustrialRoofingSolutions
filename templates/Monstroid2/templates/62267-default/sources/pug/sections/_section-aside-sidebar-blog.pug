@@ -1,0 +1,443 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+
+// Search
+.section-md.section-style-1
+	h5 Search
+	// RD Search
+	form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-magnifier
+			label(for="rd-search-form-input" class="form-label") Enter  keyword
+			input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+		button(type="submit").button.button-primary Go!
+='\n'
+
+// About
+.section-md
+	h5 About
+	.thumbnail-classic-minimal
+		+jpg('aside-blog-about-1-210x210','rounded-circle')
+		.caption
+			p Mr.Williamson was born in one of Detroit’s poorest blocks, all before pursuing his successful managerial career in the future. For him, the breakthrough happened when he was able to get on Harvard University’s Law School list. After graduating from there, he was working for a few years for a number of multi-million dollar corporations, climbing up the corporate ladder and...
+			a(href='about.html').button.button-link Read more
+='\n'
+
+// Categories
+.section-md
+	h5 Categories
+	ul.list-linked
+		li: a(href='#') Retina Homepage
+		li: a(href='#') New Page Examples
+		li: a(href='#') Parallax Sections
+		li: a(href='#') Shortcode Central
+		li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+.section-md
+	h5 Latest Posts
+	ul.list-sm
+		li
+			// Post inline
+			article.post-inline
+				.post-inline__header
+					span.post-inline__time Jan.20, 2022
+					a(href=postLink).post-inline__author.meta-author by Brian Williamson
+				
+				p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+		li
+			// Post inline
+			article.post-inline
+				.post-inline__header
+					span.post-inline__time Jan.20, 2022
+					a(href=postLink).post-inline__author.meta-author by Brian Williamson
+				
+				p.post-inline__link: a(href=postLink) Getting to another level of design and functionality.
+		li
+			// Post inline
+			article.post-inline
+				.post-inline__header
+					span.post-inline__time Jan.20, 2022
+					a(href=postLink).post-inline__author.meta-author by Brian Williamson
+				
+				p.post-inline__link: a(href=postLink) Creating Portfolio.
+='\n'
+
+// Custom post
+.section-md
+	h5 Custom Posts
+	ul.list-md
+		li
+			article.unit.flex-sm-row.unit-spacing-sm
+				.unit-left
+					figure.figure-inline.text-center.text-sm-start
+						+jpg('aside-blog-custom-post-1-120x90')
+				.unit-body.post-inline
+					.post-inline__header
+						span.post-inline__time Jan.20, 2022
+						a(href=postLink).post-inline__author.meta-author by Brian Williamson
+					p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+		li
+			article.unit.flex-sm-row.unit-spacing-sm
+				.unit-left
+					figure.figure-inline.text-center.text-sm-start
+						+jpg('aside-blog-custom-post-2-120x90')
+				.unit-body.post-inline
+					.post-inline__header
+						span.post-inline__time Jan.20, 2022
+						a(href=postLink).post-inline__author.meta-author by Brian Williamson
+					
+					p.post-inline__link: a(href=postLink) 5 Things to Know Before You Buy an HTML Template
+		li
+			article.unit.flex-sm-row.unit-spacing-sm
+				.unit-left
+					figure.figure-inline.text-center.text-sm-start
+						+jpg('aside-blog-custom-post-3-120x90')
+				.unit-body.post-inline
+					.post-inline__header
+						span.post-inline__time Jan.20, 2022
+						a(href=postLink).post-inline__author.meta-author by Brian Williamson
+					
+					p.post-inline__link: a(href=postLink) Installing Your First HTML Template
+					
+					p.post-inline__text All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it.
+					
+					.post-inline__footer
+						a(href=postLink).post-inline__comment 3 comment(s)
+					a(href=postLink).button.button-link Read more
+
+// Resent comments
+.section-md
+	h5 Recent Comments
+	
+	ul.list-sm
+		li
+			article.post-inline
+				.post-inline__header
+					a(href=postLink).post-inline__author.meta-author Brian Williamson on
+				
+				p.post-inline__link: a(href=postLink) Site Speed and Search Engines Optimization Aspects
+		li
+			article.post-inline
+				.post-inline__header
+					a(href=postLink).post-inline__author.meta-author Brian Williamson on
+				
+				p.post-inline__link: a(href=postLink) 5 Things to Know Before You Buy an HTML Template
+		li
+			article.post-inline
+				.post-inline__header
+					a(href=postLink).post-inline__author.meta-author Brian Williamson on
+				
+				p.post-inline__link: a(href=postLink) Turning Your Site into a Sales Machine
+
+
+
+// Tags
+.section-md
+	h5 Tags
+	ul.list-tags
+		li: a(href='#') Retina Homepage
+		li: a(href='#') New Page Examples
+		li: a(href='#') Ultimate Font Collection
+		li: a(href='#') Parallax Sections
+		li: a(href='#') Shortcode Central
+='\n'
+
+.section-md
+	h5 Calendar
+	
+	// RD Calendar
+	.booking-calendar.booking-calendar-aside#chapters-select
+		.rdc-panel
+			.small
+				span.rdc-month
+				=' '
+				span.rdc-fullyear
+		
+		.rdc-table
+		.rdc-events
+			a.rdc-events_close
+			ul.list-unstyled
+				li.rdc-event(data-date='09/10/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span September 10, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='09/14/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span September 14, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='10/07/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span October 07, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='10/15/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span October 15, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='11/14/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span November 14, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='11/19/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span November 19, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='12/14/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span December 14, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+				
+				li.rdc-event(data-date='12/19/2022')
+					table.table.rdc-event-booking-table
+						thead
+							tr
+								th(colspan="3"): p.heading-5 Available Appointments on #[span December 19, 2022]
+						tbody
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 8:00am - 9:00am
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+							tr
+								td
+									dl.dl-horizontal-mod-1
+										dt: span.icon.novi-icon.icon-md.icon-primary.linear-icon-clock3
+										dd
+											time(datetime="2022") 10:30am - 11:00am
+								
+								td
+									span 2 time slots available
+								td: button.button.button-primary(data-bs-toggle="modal" data-bs-target="#appointment") Book Appointment
+		
+		.rdc-panel-nav
+			a.rdc-prev Prev month
+			a.rdc-next Next month
+
+='\n'
+
+// Archive
+.section-md
+	h5 Archive
+	
+	ul.list-archive
+		li: a(href='#') April 2022
+		li: a(href='#') February 2022
+		li: a(href='#') January 2022
+		li: a(href='#') December 2022
+		li: a(href='#') November 2022
+		li: a(href='#') October 2022
+='\n'
+
+// Follow us
+.section-md
+	h5 Follow Us
+	+list-inline-icon({
+		list_class: 'list-inline-sm',
+		items:      [
+			"icon-sm fa-facebook",
+			'icon-sm fa-twitter',
+			'icon-sm fa-google-plus',
+			'icon-sm fa-vimeo',
+			'icon-sm fa-youtube',
+			'icon-sm fa-pinterest-p']
+	})
+	
+	h5 Get the latest news delivered daily!
+	// RD Mailform
+	form.rd-mailform.rd-mailform_style-1.text-center.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+		.form-wrap.form-wrap_icon
+			span.novi-icon.form-icon.linear-icon-envelope
+			input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+			label.form-label(for="contact-email") Enter your e-mail
+		button(type="submit").button.button-primary Get!
+
+
+// Twitter
+.section-md
+	h5 Twitter
+	a.twitter-timeline(href="https://twitter.com/templatemonster" data-height="420") Tweets by templatemonster
+
+// Facebook
+.section-md
+	h5 Facebook
+	// Facebook Feed
+	#fb-root
+	.fb-page-responsive
+		.fb-page(data-href='https://www.facebook.com/TemplateMonster', data-tabs='timeline', data-height='212', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+			.fb-xfbml-parse-ignore
+				blockquote(cite='https://www.facebook.com/TemplateMonster')
+					a(href='https://www.facebook.com/TemplateMonster') TemplateMonster
+
+
+
+// Flickr
+.section-md
+	h5 Flickr
+	.flickr.grid-4(data-flickr-tags='html-m2', data-lightgallery="group")
+		- for(var i = 0; i < 8; i++)
+			.flickr-item(data-type="flickr-item")
+				a.thumb-minimal(data-image_b="href", data-lightgallery="item")
+					figure
+						img(src='images/_blank.png', data-image_s="src" data-title="alt", width='75', height='75', alt='')
+					.thumb-minimal__overlay
+='\n'

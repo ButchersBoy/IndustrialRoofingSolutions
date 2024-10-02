@@ -1,0 +1,262 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Classic Blog'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-lg
+    .container
+      hr.divider.divider-md.divider-primary
+      h1.text-center Blog
+      .row.row-70
+        .col-lg-7.col-xl-8
+          // Post classic
+          article.post-classic
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              +jpg('post-classic-1-886x668')
+              .post-classic-title
+                h5: a(href=postImage) Tanya Swift: New Female Athlete of the Month
+
+              .post-classic-body
+                p Since the time our fitness salon opened up its doors for the very first time, there always was a conventional feeling that fitness...
+
+              .post-meta
+                .unit.flex-row.align-items-center
+                  .unit-left
+                    +jpg('user-01-74x74', 'img-circle')
+                  .unit-body
+                    div.post-relative
+                      a(href=postImage).meta-author by
+                        span.meta-author__inner=' Amanda Smith'
+                    .group
+                      a(href=postImage): time(datetime='2017') Jan.20, 2016
+                      +tag-list({
+                        list_class: 'list-inline-tag',
+                        href: postImage,
+                        items: [
+                          "Fitness",
+                          'Sports']
+                      })
+                      a(href=postImage).meta-comments Comments: 2
+
+              .post-classic-footer
+                a(href=postImage).button.button-gray.button-sm Read more
+
+                +list-inline-icon({
+                  list_class: 'list-inline-sm',
+                  items: [
+                    "fa-facebook",
+                    'fa-twitter',
+                    'fa-google-plus',
+                    'fa-vimeo',
+                    'fa-youtube',
+                    'fa-pinterest-p']
+                })
+
+
+          // Post gallery
+          article.post-slider
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              +slider-blog({
+                class: 'owl-carousel-nav-bottom',
+                items: [
+                  {
+                    original_img: 'post-classic-1-886x668',
+                    img_thumb: 'post-classic-1-886x668'
+                  },
+                  {
+                    original_img: 'post-classic-2-886x668',
+                    img_thumb: 'post-classic-2-886x668'
+                  },
+                  {
+                    original_img: 'post-classic-3-886x668',
+                    img_thumb: 'post-classic-3-886x668'
+                  }
+                ]
+              })
+              .post-classic-title
+                h5: a(href=postSlider) If My Last Day of CrossFit Were Tomorrow…
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postSlider).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postSlider): time(datetime='2017') Jan.20, 2016
+
+          // Post video
+          article.post-video
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .entry-video.embed-responsive.embed-responsive-16by9
+                iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+              .post-classic-title
+                h5: a(href=postVideo) The Heavy Weight of Olympics: Power Lifting for the Pros
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postVideo).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postVideo): time(datetime='2017') Jan.20, 2016
+
+          // Post Link
+          article.post-wrapper.post-link
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-classic-title
+                h5: a(href=blogPostLink) Are wrist wraps useless and redundant?
+              a(href="http://templatemonster.com/") http://www.templatemonster.com/
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=blogPostLink).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=blogPostLink): time(datetime='2017') Jan.20, 2016
+
+          // Post quote
+          article.post-wrapper
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-quote
+                // Quote default
+                a(href=postQuote).quote-default
+                  +quote-mark('quote-default__mark')
+                  .quote-default__text: p.q.heading-5 Is Your Power of Will Strong and Determined Enough?
+                  p.quote-default__cite Amanda Smith
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postQuote).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postQuote): time(datetime='2017') Jan.20, 2016
+
+          // Post standard
+          article.post-classic
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-classic-title
+                h5: a(href=postLink) Meet Our New Coach
+
+              .post-classic-body
+                p Since the time our fitness salon opened up its doors for the very first time, there always was a conventional feeling that fitness...
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postLink).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postLink): time(datetime='2017') Jan.20, 2016
+
+          // Post audio
+          article.post-audio
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+
+              .post-classic-title
+                h5: a(href=postAudio) The Basics of CrossFit
+
+              // RD Audio
+              .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+                .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+                  .rd-audio-controls.text-center
+                    .rd-audio-controls-left
+                      // Play\Pause button
+                      a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+                    .rd-audio-progress-bar-wrap
+                      // Time
+                      .rd-audio-time
+                        // currentTime
+                        span.rd-audio-current-time 00:00
+                      // Progress bar
+                      .rd-audio-progress-bar
+                    // Volume button
+                    a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+                    // Volume bar
+                    .rd-audio-volume-bar
+                    .rd-audio-controls-righ.d-none
+                      // Playlist button
+                      a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+                  .rd-audio-playlist-wrap
+                    h6.rd-audio-playlist-title Playlist
+                    ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+                      li(data-rd-audio-src='audio/sound.mp3')
+
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postAudio).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postAudio): time(datetime='2017') Jan.20, 2016
+
+          // Pagination
+          .pagination-wrapper
+            +pagination-classic(1,
+            [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+            null,
+            {"title": "", "href": "#"}
+            )
+
+        .col-lg-5.col-xl-4.section__aside
+          include ../sections/_section-aside-sidebar-blog
+
+  // Modal
+  include ../sections/_section-modal
+
+  // Page Footer
+  include ../sections/_footer-minimal

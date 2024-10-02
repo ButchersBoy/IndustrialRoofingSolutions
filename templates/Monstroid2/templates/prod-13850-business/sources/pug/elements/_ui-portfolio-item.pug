@@ -1,0 +1,29 @@
+mixin portfolio-item(obj)
+	if obj.album
+		a(href=obj.href class=obj.class).img-thumbnail-variant-3
+			+jpg(obj.img)
+			span.label-custom.label-white=obj.label_text
+			.caption
+				span.icon.hover-top-element(class=obj.icon_class1)
+				ul.list-inline-tag.hover-top-element
+					each item in obj.items
+						li= item
+				p.heading-5.hover-top-element=obj.title
+				.divider
+				p.small.hover-bottom-element=obj.desc
+				span.icon.arrow-right(class=obj.icon_class2)
+
+	if obj.single_img
+		a(href=setImagePath(obj.original + '.jpg'), class='img-thumbnail-variant-' + obj.number, data-lightgallery="item")
+			figure
+				+jpg(obj.img) 
+			.caption
+				span.icon.hover-top-element(class=obj.icon_class1)
+				ul.list-inline-tag.hover-top-element
+					each item in obj.items
+						li= item
+				p.heading-5.hover-top-element=obj.title
+				.divider
+				p.small.hover-bottom-element=obj.desc
+				span.icon.arrow-right(class=obj.icon_class2)
+

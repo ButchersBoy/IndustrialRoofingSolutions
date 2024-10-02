@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Number Counter'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-md-center.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          // Box counter
+          article.box-counter
+            .box-counter__icon.linear-icon-users2
+            .box-counter__wrap
+              .counter 4578
+            p.box-counter__title Current Clients
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Box counter
+          article.box-counter
+            .box-counter__icon.linear-icon-group-work
+            .box-counter__wrap
+              .counter 4578
+            p.box-counter__title Virtual Clients
+  ='\n'
+
+  section.section-lg.bg-default
+    .section-lg.bg-accent.text-center
+      .container
+        .row.justify-content-md-center.row-50
+          .col-md-6.col-lg-3
+            // Box counter
+            article.box-counter
+              .box-counter__icon.linear-icon-coffee-cup
+              .box-counter__wrap
+                .counter 1000
+              p.box-counter__title Coffee Cups
+
+          .col-md-6.col-lg-3
+            // Box counter
+            article.box-counter
+              .box-counter__icon.linear-icon-cube
+              .box-counter__wrap
+                .counter 74
+              p.box-counter__title Projects Done
+
+          .col-md-6.col-lg-3
+            // Box counter
+            article.box-counter
+              .box-counter__icon.linear-icon-chevrons-expand-horizontal
+              .box-counter__wrap
+                .counter 5
+                span bln+
+              p.box-counter__title Lines of Code Written
+
+          .col-md-6.col-lg-3
+            // Box counter
+            article.box-counter
+              .box-counter__icon.linear-icon-mustache-glasses
+              .box-counter__wrap
+                .counter 147
+              p.box-counter__title Happy Customers
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

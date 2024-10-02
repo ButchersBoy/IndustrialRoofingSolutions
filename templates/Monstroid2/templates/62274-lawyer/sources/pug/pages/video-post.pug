@@ -1,0 +1,75 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Video post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 Plan ahead to avoid driving under the influence and DUI accidents
+            .entry-video.embed-responsive.embed-responsive-16by9
+              iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+            
+            h5 As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judg fining a woman with $1,590 for a missing decal on her car license plate … Though just a few days after, the judge has obviously changed her mind about the penalty and its amount.
+
+            p.first-letter The Atlanta Journal-Constitution last week reported on the plight of 52-year-old Fulton County resident Linda Ford and what the paper described as an “outlandish” fine that had been imposed by Grantville Municipal Court Judge Lisa R. Reeves. The woman repeatedly tried to pay the fine at once, but she just missed a deadline… To understand how the case unfolded, let’s roll back to the last fall, when Ms. Ford’s troubles began.
+
+            p It was then, when on an unfortunate occasion she’s been driving past the local police department building, as the Grantville, TX police officer pulled her over and accused of missing a plate.
+
+            h5 According to the journalist who was at the scene accidentally, that’s what happened next:
+            p She was about to attend a local church’s yard sale, where she intended to raise some money for homeless women of Grantville.
+            p While she passed the police building, the officer pulled her over, he said, because her license place cover had too much tint on it.
+            p Despite the fact that it was the dirt — not tinting — blown from the car’s exhaust which ultimately made it difficult to read her plate, the officer didn’t bother to note that down.
+            p And that was then when the story began to become eerie…
+
+            +jpg('post-standard-2-1024x682')
+
+            p Though Ms. Ford had her documents on her, showing that her vehicle registration was valid and up-to-date, she’s been charged with a $720 fine that increased to $1,590 when she missed a payment deadline for the first time.
+
+            // Quote default
+            .quote-default
+              +quote-mark('quote-default__mark')
+              .quote-default__text: p.q.heading-4 Sadly, marriages don’t always work out. Sometimes people just change and drift apart. At other times there is real damage done by abuse or other issues.
+              p.quote-default__cite Adam Smith
+
+            .post-info
+              p Joint assets accumulated while in marriage are limited to $40,000.
+              p Individual assets are limited to $40,000.
+              p Debts are limited to $6,000.
+              p There are additional requirements which must be met.  
+
+            p A summary dissolution can be fast, while it nevertheless carries a financial risk because a judge is not required to complete the process and the parties may not be assisted with a legal advice.
+
+            +jpg('post-standard-3-1024x683')
+
+            h5 According to the journalist who was at the scene accidentally, that’s what happened next:
+
+            p Once a couple has decided to divorce, one or both spouses may want to have the process move as quickly as possible. There are several factors which can slow down a divorce, one of which is the waiting period.
+
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-sm fa-facebook",
+                'icon-sm fa-twitter',
+                'icon-sm fa-google-plus',
+                'icon-sm fa-vimeo',
+                'icon-sm fa-youtube',
+                'icon-sm fa-pinterest-p']
+            })
+
+          include ../sections/_section-blog-post-comment
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

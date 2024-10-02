@@ -1,0 +1,395 @@
+/*
+* Sidebar Layout
+*/
+.rd-navbar-sidebar {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+
+  // RD Navbar Inner
+  .rd-navbar-inner {
+  }
+
+  // RD Navbar Panel
+  .rd-navbar-panel {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(space-between);
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    padding: 35px;
+  }
+
+  .rd-navbar-panel__aside {
+    @include display-flex;
+    @include flex-direction(row);
+    @include align-items(center);
+  }
+
+  // RD Navbar Brand
+  .rd-navbar-brand {
+    text-align: center;
+    transition: none;
+
+    img {
+      transition: .22s;
+      max-height: 34px;
+    }
+  }
+
+  // RD Navbar Nav Wrap
+  .rd-navbar-nav-wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 300px;
+    transform: translateX(101%);
+    transition: .36s all ease-in-out;
+    background: $white;
+    padding-top: calc(6% + 1em);
+    padding-bottom: calc(1% + 1em);
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid $rd-navbar-border;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  // RD Navbar Nav
+  .rd-navbar-nav {
+    padding: 12px;
+    li {
+      line-height: 1;
+      .rd-navbar-dropdown,
+      .rd-navbar-megamenu {
+        transition: opacity 0.3s, height 0.4s ease;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      &:not(.opened):not(.active) > a:hover + .rd-navbar-submenu-toggle::after {
+        transform: none;
+      }
+
+      &.opened {
+        > a {
+          color: $rd-navbar-dropdown-item-hover-color;
+        }
+        > .rd-navbar-dropdown,
+        > .rd-navbar-megamenu {
+          opacity: 1;
+          height: auto;
+          padding-top: 15px;
+          padding-bottom: 3px;
+        }
+
+        > .rd-navbar-submenu-toggle {
+          color: $primary;
+        }
+      }
+    }
+
+    > li > a {
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    > li + li {
+      margin-top: 25px;
+    }
+  }
+
+  // RD Navbar Submenu
+  .rd-navbar-dropdown,
+  .rd-megamenu-list {
+    > li {
+      font-size: 14px;
+      color: $rd-navbar-dropdown-item-color;
+    }
+
+    > li > a {
+      color: inherit;
+
+      &:hover {
+        color: $rd-navbar-dropdown-item-hover-color;
+      }
+    }
+  }
+
+  // RD Navbar Dropdown
+  .rd-navbar-dropdown {
+    > li {
+      > .rd-navbar-submenu-toggle {
+        position: relative;
+        display: inline-block;
+        width: 17px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 1;
+        cursor: pointer;
+        color: $rd-navbar-nav-color;
+
+        &::after {
+          content: '\f107';
+          position: relative;
+          display: inline-block;
+          font: 400 14px "FontAwesome";
+          text-align: center;
+          transition: 0.4s all ease;
+          z-index: 2;
+          will-change: transform;
+          -webkit-filter: blur(0);
+        }
+      }
+
+      &.active > .rd-navbar-submenu-toggle,
+      &.opened > .rd-navbar-submenu-toggle {
+        &::after {
+          transform: rotate(180deg);
+          color: $rd-navbar-nav-hover-color;
+        }
+      }
+    }
+
+    > li.opened {
+      > .rd-navbar-dropdown {
+        padding-top: 15px;
+        padding-bottom: 2px;
+      }
+    }
+
+    > li + li {
+      margin-top: 18px;
+    }
+
+    .rd-navbar-dropdown {
+      padding-left: 10px;
+      padding-right: 10px;
+      > li {
+        font-size: 13px;
+        color: $body-color;
+      }
+
+      > li + li {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  // RD Navbar Megamenu
+  .rd-navbar-megamenu {
+    .rd-megamenu-header {
+      font-size: 17px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 66%;
+        margin-top: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid $gray-1;
+      }
+    }
+
+    > li + li {
+      margin-top: 25px;
+    }
+  }
+  
+  .rd-megamenu-list {
+    > li + li {
+      margin-top: 13px;
+    }
+  }
+  
+  * +  .rd-megamenu-list {
+    margin-top: 15px;
+  }
+
+  // RD Navbar Top Panel
+  .rd-navbar-top-panel {
+    position: relative;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: transparent;
+  }
+
+  .rd-navbar-top-panel__main {
+    overflow: hidden;
+  }
+
+  // RD Navbar Toggle
+  .rd-navbar-toggle {
+    display: block;
+  }
+
+  // RD Navbar Search
+  .rd-navbar-search {
+    left: 35px;
+    right: 35px;
+
+    .rd-search-results-live {
+      margin-top: 2px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      .rd-search-results-live {
+        .search_list {
+          > li {
+            width: 19.8%;
+          }
+
+          .search_all {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.rd-sidebar_reverse {
+    .rd-navbar-panel {
+      @include flex-direction(row-reverse);
+      &::after { display: none; }
+    }
+
+    // RD Navbar Nav Wrap
+    .rd-navbar-nav-wrap {
+      right: auto;
+      left: 0;
+      transform: translateX(-101%);
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &.rd-navbar_inverse {
+    .rd-navbar-inner {
+      .rd-search__submit,
+      .rd-navbar-search__toggle {
+        color: $white;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .rd-navbar-items-list {
+      > li + li {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .rd-navbar-panel {
+      .rd-navbar-items-list {
+        a {
+          color: $white;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .rd-navbar-sidebar-smooth & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .rd-navbar-wrap {
+      position: absolute;
+    }
+  }
+
+  [data-x-mode="design-mode"] .rd-navbar-sidebar-smooth & {
+    position: relative;
+  }
+
+  // States
+  &.rd-navbar--is-stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    border-bottom-color: $rd-navbar-border;
+
+    .rd-navbar-top-panel {
+      display: none;
+    }
+
+    .rd-navbar-panel {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    .rd-navbar-brand img {
+      max-height: 26px;
+      width: auto;
+    }
+
+    // RD Navbar Search
+    .rd-navbar-search {
+
+      .rd-search-results-live {
+        margin-top: 7px;
+      }
+    }
+
+    &.rd-navbar_inverse {
+      background: $black;
+      border-bottom: 0;
+
+      .rd-navbar-inner {
+        .rd-search__submit,
+        .rd-navbar-search__toggle {
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .rd-navbar-panel {
+        .rd-navbar-items-list {
+          a {
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rd-navbar-sidebar-linked {
+  .rd-navbar-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+}

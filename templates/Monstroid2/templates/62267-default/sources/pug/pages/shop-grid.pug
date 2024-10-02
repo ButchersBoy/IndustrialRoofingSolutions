@@ -1,0 +1,234 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-shop-grid
+include ../elements/_ui-pagination-classic
+
+block variables
+	- pageName = 'Shop Grid'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-fix.row-60.flex-lg-row-reverse
+				.col-lg-9.section-divided__main.section-divided__main-left
+					.section-md
+						.filter-shop-box
+							p
+								| Showing 1–12 of 15 results
+							
+							.form-wrap
+								// Select 2
+								select.form-input.select-filter(data-placeholder="Default sorting" data-minimum-results-for-search="Infinity")
+									option(label='placeholder')
+									option(value="2") Sort by popularity
+									option(value="3") Sort by average rating
+									option(value="4") Sort by newness
+									option(value="5") Sort by price: low to high
+									option(value="6") Sort by price: high to low
+						
+						.row.justify-content-sm-center.row-70
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'adidas-Originals-Trefoil-Logo-Snapback-Trucker-Cap-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									class_label: 'featured',
+									label_text:  'Featured',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Shoes', 'Sport', 'Women'],
+
+									title:  'Adidas Originals Trefoil Logo Snapback Trucker Cap',
+									prices: ['48'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart',
+
+									rating_list: true
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'ASOS-Sculpt-Me-Premium-Jeans-in-Clean-Black-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									class_label: 'new',
+									label_text:  'New',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Men', 'Shoes', 'Sport', 'Women'],
+
+									title:  'ASOS ‘Sculpt Me’ Premium Jeans in Clean Black',
+									prices: ['45'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart'
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'ASOS-70s-Metal-Round-With-Flash-Flat-Lens_2-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									class_label: 'sale',
+									label_text:  'Sale',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Men', 'Women'],
+
+									title: 'ASOS 70s Metal Round With Flash Flat Lens',
+
+									price_class: 'sale-price',
+									prices:      ['45', '56'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart',
+
+									rating_list: true
+								})
+							
+							// 2 row
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'ASOS-Cat-Eye-Sunglasses_2-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Men', 'Sport', 'Women'],
+
+									title:  'ASOS Cat Eye Sunglasses',
+									prices: ['36'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart'
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'ASOS-Denim-Shrunken-Jacket-In-Washed-Black_1-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Sport', 'Women'],
+
+									title:  'ASOS Denim Shrunken Jacket In Washed',
+									prices: ['16'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart'
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'ASOS-Patch-Pocket-Woven-Shorts-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Shoes', 'Sport', 'Women'],
+
+									title:  'ASOS Patch Pocket Woven Shorts',
+									prices: ['44'],
+
+									button_class:      'button-primary',
+									button_icon_class: 'linear-icon-cart',
+									button_text:       'Add to cart',
+									rating_list:       true
+								})
+							
+							// 3 row
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'Boopacks-Mini-Boo-Backpack-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Shoes', 'Sport', 'Women'],
+
+									title:  'Boopacks Mini Boo Backpack',
+									prices: ['34'],
+
+									button_class:      'button-gray-light-outline',
+									button_icon_class: 'linear-icon-magic-wand',
+									button_text:       'Select options'
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'Calvin-Klein-Iron-Strength-Bralette-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Sport', 'Women'],
+
+									title:  'Calvin Klein Iron Strength Bralette',
+									prices: ['32'],
+
+									button_class:      'button-gray-light-outline',
+									button_icon_class: 'linear-icon-magic-wand',
+									button_text:       'Select options'
+								})
+							
+							.col-md-6.col-xl-4
+								+shop-grid({
+									href:        'single-product.html',
+									img:         'Cheap-Monday-Drift-High-Rise-Skinny-Ankle-Kick-Jeans_1-300x400',
+									icon_class1: 'linear-icon-heart',
+									icon_class2: 'linear-icon-balance',
+
+									tag_list_class: 'product-categories',
+									tag_list_items: ['Accessories', 'Shoes', 'Sport', 'Women'],
+
+									title:  'Cheap Monday Drift High Rise Skinny Ankle Kick Jeans',
+									prices: ['65'],
+
+									button_class:      'button-gray-light-outline',
+									button_icon_class: 'linear-icon-magic-wand',
+									button_text:       'Select options',
+									rating_list:       true
+								})
+					
+					// Pagination
+					.section-md
+						+pagination-classic(1,
+						[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+						null,
+						{
+							"title": "",
+							"href":  "#"
+						}
+						)
+				
+				.col-lg-3.section-divided__aside.section__aside-left.group-shop
+					include ../sections/_section-aside-sidebar-shop
+	
+	// Page Footer
+	include ../sections/_footer-corporate

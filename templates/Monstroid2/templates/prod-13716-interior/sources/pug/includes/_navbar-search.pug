@@ -1,0 +1,9 @@
+// RD Search
+.rd-navbar-search.rd-navbar-search_toggled.rd-navbar-search_not-collapsable
+  form.rd-search(action="search-results.html" method="GET", data-search-live='rd-search-results-live')
+    .form-wrap
+      input.form-input(id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off")
+      label.form-label(for="rd-navbar-search-form-input") Enter keyword
+      #rd-search-results-live.rd-search-results-live
+    button.rd-search__submit(type='submit')
+  .rd-navbar-fixed--hidden: button.rd-navbar-search__toggle(data-custom-toggle='.rd-navbar-search-wrap', data-custom-toggle-disable-on-blur='true')

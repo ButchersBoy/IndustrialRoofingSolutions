@@ -1,0 +1,70 @@
+section.pre-footer-corporate.bg-gray-dark
+  .container
+    .row.justify-content-sm-center.justify-content-md-start.row-30.row-md-60
+      .col-sm-10.col-lg-4
+        a.brand(href='index.html')
+          +png(logoInverse)
+           
+        p Aparto is a unique real estate agency located in Indianapolis, IN. We strive to find the perfect homes for a variety of clients, including those who just moved to our country. If you're looking to buy, sell, or rent a residential property and don’t want to waste your money, look no further than Aparto Real Estate Agency!
+
+      .col-sm-10.col-md-6.col-lg-4
+        h6 Recent posts
+        ul.list-sm
+          li
+            // Comment minimal
+            article.comment-minimal
+              ul.comment-minimal__meta
+                li
+                  | by&nbsp;
+                  a(href='#') Calvin Fitzgerald
+                li: a(href='#') Jan. 12
+                li: a(href=postLink) 3 comments
+              p.comment-minimal__link: a(href=postLink) Miller Residences Unveils First Seven Homes in Valley Village
+          li
+            // Comment minimal
+            article.comment-minimal
+              ul.comment-minimal__meta 
+                li
+                  | by&nbsp;
+                  a(href='#') Calvin Fitzgerald
+                li: a(href='#') Jan. 12
+                li: a(href=postLink) 3 comments
+              p.comment-minimal__link: a(href=postLink) Manhattan and Hermosa Beach Are The Hottest New SoCal Beach Towns
+
+      .col-sm-10.col-md-6.col-lg-4
+        h6 Contacts
+        ul.list-xs
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-location_on
+              .unit-body: a(href='#') 410 S Missouri St, Indianapolis, IN 46225, USA
+
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-phone
+              .unit-body: p Contact us directly at #[a(href='tel:#') +3(123) 789-5789]
+
+          li
+            .unit.flex-row.unit-spacing-xs
+              .unit-left: span.icon.icon-xxs.icon-black.material-icons-email
+              .unit-body: a.link-primary(href='mailto:#') info@demolink.org
+='\n'
+
+footer.footer-corporate.bg-gray-darker
+  .container
+    .footer-corporate__inner
+      p.rights
+        | &copy;&nbsp;
+        !=brandName
+        | &nbsp;
+        span(id="copyright-year")
+        | . All Right Reserved.
+        span &nbsp;
+        a.link-primary(href='privacy-policy.html') Privacy Policy
+        
+
+      ul.list-inline-xs
+        li: a.icon.icon-xxs.icon-default.fa.fa-facebook(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-twitter(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-instagram(href='#')
+        li: a.icon.icon-xxs.icon-default.fa.fa-youtube(href='#')

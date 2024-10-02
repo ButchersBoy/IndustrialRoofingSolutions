@@ -1,0 +1,254 @@
+/*
+*
+* Flex Grid system
+* --------------------------------------------------
+*/
+
+// Base Grid Styles
+// --------------------------------------------------
+
+.shell,
+.shell-wide {
+  @include make-shell($cell-spacing);
+}
+
+.shell,
+.shell-wide {
+  min-width: $shell-width;
+  max-width: $shell-xs-width;
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($container-max-widths, md);
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: map-get($container-max-widths, lg);
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: map-get($container-max-widths, xl);
+  }
+}
+
+.shell-wide {
+  @include media-breakpoint-up(xl) {
+    max-width: $shell-xl-width;
+  }
+}
+
+.shell-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  //max-width: 2560px;
+}
+
+.shell-flex {
+  .row > [class*='cell'] {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+  }
+
+  .cell__inner {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    padding: 35px 25px;
+    width: 100%;
+
+    > * {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .firefox & {
+    .row > [class*='cell'] {
+      overflow: hidden;
+    }
+  }
+
+  .rd-google-map {
+    @include display-flex;
+    @include align-self(stretch);
+    @include flex-grow(1);
+    @include media-breakpoint-down(sm) {
+      min-height: 300px;
+      height: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 0;
+      padding-bottom: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .cell__inner {
+      padding: 45px 35px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .cell__inner {
+      padding: 152px 15.625%;
+    }
+
+    .cell-sm-8,
+    .cell-md-8,
+    .cell-lg-8,
+    .cell-xl-8 {
+      .cell__inner {
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .shell-fluid-inset-lg-50 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+
+
+.row-spacer {
+  @include flex-basis(100%);
+}
+
+
+// Create IE 9 and below degradation styles
+html.lt-ie-10 * + .row,
+* + .row {
+  margin-top: 25px;
+}
+
+@include media-breakpoint-up(md) {
+  html.lt-ie-10 * + .row,
+  * + .row {
+    margin-top: $range-ws;
+  }
+}
+
+html.lt-ie-10 * + [class*='cell-'],
+* + [class*='cell-'],
+html.lt-ie-10 * + .row-sm,
+* + .row-sm {
+  margin-top: $range-ws-sm;
+}
+
+html.lt-ie-10 * + .row-lg,
+* + .row-lg {
+  margin-top: $range-ws-lg;
+}
+
+html.lt-ie-10 .row-condensed,
+.row-condensed {
+  margin-left: 0;
+  margin-right: 0;
+
+  > [class*='cell'] {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html .page .row-lg-condensed {
+    margin-left: 0;
+    margin-right: 0;
+
+    > [class*='cell'] {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .shell {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .row:not(.row-condensed) {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    > [class*='cell'] {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.row:not(.row-condensed).row-horizontal-10 {
+  margin-left: -5px;
+  margin-right: -5px;
+  > [class*='cell'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+html.lt-ie-10 .row-narrow,
+.row-narrow {
+  @include make-range($cell-spacing-narrow);
+
+  > [class*='cell'] {
+    @include make-cell-spacing($cell-spacing-narrow);
+  }
+
+  > * + [class*='cell'] {
+    @include make-cell-spacing($cell-spacing-narrow);
+  }
+}
+
+// Flex Grid Styles
+// --------------------------------------------------
+
+.row {
+  @include display-flex();
+  @include flex(0 1 auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  > .row {
+    @include flex-basis(100%);
+  }
+}
+
+.row-vertical {
+  @include flex-direction(column);
+}
+
+.row > [class*='cell'] {
+  @include flex(0 0 auto);
+  @include flex-basis(100%);
+}
+
+@each $resolution, $alias in (0 : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl) {
+  @media (min-width: $resolution) {
+    * + [class*='cell-#{$alias}-'] {
+      margin-top: 0;
+    }
+
+    @include make-grid-system($alias, $cell-count);
+  }
+}
+
+html.lt-ie-10 {
+  .row > {
+    @include make-fallback($cell-count);
+  }
+}

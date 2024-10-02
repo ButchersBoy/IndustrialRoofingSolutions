@@ -1,0 +1,53 @@
+/** @section Twitter */
+
+.twitter {
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tweet-icon {
+  .icon {
+    font-size: 30px;
+    color: $twitter-darken;
+  }
+}
+
+.tweet-user-name {
+  a {
+
+    &:before {
+      content: '@';
+    }
+
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    @include  link($gray-700, $primary);
+  }
+}
+
+
+.tweet-text {
+  a {
+    @include link($twitter-darken, $primary);
+  }
+}
+
+.tweet-tags {
+  li {
+    display: inline-block;
+  }
+
+  a {
+    font-weight: 400;
+    @include link($twitter-darken, $primary);
+  }
+
+  li + li { margin-left: 2px; }
+}
+
+* + .tweet-user-name { margin-top: 5px; }
+* + .tweet-text { margin-top: 6px; }
+* + .tweet-tags { margin-top: 5px; }
+* + .twitter { margin-top: 30px; }

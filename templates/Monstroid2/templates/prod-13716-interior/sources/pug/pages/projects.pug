@@ -1,0 +1,86 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Projects'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+
+  // Parallax header
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/bg-image-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated Projects 
+  ='\n'
+
+  section.section-md.bg-default
+    .container
+      .row.row-50.row-xl-110
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-1-652x491',
+            original_img: 'project-1-652x491',
+            title: 'Offices',
+            text: 'Our design studio often deals with office remodeling and redesign. We can successfully transform your office into a visually attractive center of business activity.'
+          })
+
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-2-652x491',
+            original_img: 'project-2-652x491',
+            title: 'Living Rooms',
+            text: 'We will gladly create a new stunning interior design for your living room taking into account all your wishes and considerations to make it look even better.'
+          })
+
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-3-652x491',
+            original_img: 'project-3-652x491',
+            title: 'Studios',
+            text: "While not being limited by residential projects and office remodeling, we are also eager to work on designing studios and educational centers."
+          })
+
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-4-652x491',
+            original_img: 'project-4-652x491',
+            title: 'Terraces',
+            text: 'Terraces and porches can be described as both indoor and outdoor areas and our skills and professionalism allow us to work on their visual and functional improvement.'
+          })
+
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-5-652x491',
+            original_img: 'project-5-652x491',
+            title: 'Kitchens',
+            text: "Whether it is a part of a residential house or a restaurant, a nicely structured and well-designed kitchen is vital for better experience regardless of its size."
+          })
+
+        .col-md-6.col-xl-4
+          +post-project({
+            img: 'project-6-652x491',
+            original_img: 'project-6-652x491',
+            title: 'Guest rooms',
+            text: 'Looking for an idea to create a new or transform an old guest room? Trust our exceptionally skilled designers and architects if you are aiming for the best results.'
+          })
+  ='\n'
+
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,239 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+include ../elements/_ui-thumbnail-classic-minimal
+include ../elements/_ui-portfolio-item
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-minimal 
+	+parallax({
+		src: "images/parallax-4.jpg"
+	})
+		.container
+			.section-xl
+				h1
+					span Quart
+				h3 New HTML Templates Generation
+				.group-lg.group-middle
+					a.button.button-primary( href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+					a.button.button-black( href=getTemplateLink) Buy template
+
+	// Our Services
+	section.section-md.bg-default.text-center#features
+		.container-fluid
+			.row.row-50.justify-content-md-center.justify-content-lg-start
+				.col-md-6.col-xl-3
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-feather
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Clean and Crispy Design
+							p Quart is crafted by top industry leaders with love, care and customer needs in mind. 
+
+				.col-md-6.col-xl-3
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-magic-wand
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Pixel Perfect Typography
+							p It’s impossible to ignore the fact that perfect typography is a key asset of design success.
+
+				.col-md-6.col-xl-3
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-bag2
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Advanced UI Toolkit
+							p Quart comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+							
+				.col-md-6.col-xl-3
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-bag2
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Bootstrap Framework
+							p Quart is based on Bootstrap Framework, which makes it a nice template for any purpose.
+				
+	='\n'
+
+	// About us
+	include ../sections/_section-about-us-1
+
+	
+	// portfolio
+	section.section-md.bg-default.text-center
+		h4.heading-decorated Our gallery
+		.container-fluid
+			.isotope-wrap.row
+				.col-sm-12(data-lightgallery='group')
+					.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-9-1567x1920',
+								img: 'portfolio-9-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+							
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'slider-slide-14-1280x1920',
+								img: 'portfolio-2-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-4-1920x1440',
+								img: 'portfolio-4-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-5-1920x1280',
+								img: 'portfolio-5-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-6-1920x1280',
+								img: 'portfolio-6-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-7-1920x1280',
+								img: 'portfolio-7-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-8-1536x1920',
+								img: 'portfolio-8-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+							
+						.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img: true,
+								number: 3,
+								original: 'portfolio-original-10-1920x1280',
+								img: 'portfolio-10-418x315',
+								icon_class1: 'linear-icon-picture',
+								items: ['Objects'],
+								title: 'Photo',
+								desc: 'Creating Portfolio.',
+								icon_class2: 'linear-icon-plus'
+							})
+
+	include ../sections/_section-circle-counters-dark
+		
+	include ../sections/_section-managers
+		
+	include ../sections/_section-cta-3
+		
+	section.section.section-md.bg-default.text-center
+		.container
+			h4.heading-decorated Services
+			.row.row-50
+				.col-md-6
+					+thumbnail-classic-minimal({
+						img: 'service-1-652x491',
+						title: 'Bootstrap Framework',
+						link: 'single-service.html',
+						text: 'Quart is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+					})
+				.col-md-6
+					+thumbnail-classic-minimal({
+						img: 'service-2-652x491',
+						title: 'Novi Builder',
+						link: 'single-service.html',
+						text: 'Use our Novi Builder to customize and update your website within seconds.'
+					})
+				.col-md-6
+					+thumbnail-classic-minimal({
+						img: 'service-3-652x491',
+						title: 'Responsive & Retina Ready',
+						link: 'single-service.html',
+						text: 'Quart looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+				.col-md-6
+					+thumbnail-classic-minimal({
+						img: 'service-4-652x491',
+						title: 'SEO FRIENDLY',
+						link: 'single-service.html',
+						text: 'Quart has the valid code and performance optimized framework that make SEO easy and hassle free.'
+					})
+					
+
+					
+		
+	include ../sections/_section-contact
+		
+	include ../sections/_section-clients
+		
+		
+	// Page Footer 
+	include ../sections/_footer-modern
+		
+block modals
+	include ../includes/_modal-login
+	include ../includes/_modal-register

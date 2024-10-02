@@ -1,0 +1,38 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+
+block variables
+	- var activeIndex = 6
+	- var pageName = '404 page'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.text-center
+		+parallax({
+				"img": "slider-slide-2-1920x930",
+				"addClass": 'parallax-header rd-parallax-light'
+		})
+			.parallax-header__inner: .parallax-header__content
+				.container
+					.row.justify-content-sm-center
+						.col-md-10.col-xl-8
+							h2 Page Not Found
+							p Map where your photos were taken and discover local points of interest. #[br]There’s also a flip-out.
+							a(href='index.html').button.button-gradient-intro-outline Go back
+								span.button-gradient-intro__overlay
+							
+
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

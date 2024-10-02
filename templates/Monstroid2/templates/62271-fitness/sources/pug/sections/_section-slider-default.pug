@@ -1,0 +1,40 @@
+include ../elements/_ui-rd-video
+// Swiper
+section.context-dark.section
+  .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5500')
+    .swiper-wrapper
+      .swiper-slide(data-slide-bg='images/home-01.jpg')
+        .swiper-slide-caption.text-center
+          .container
+            hr.divider.divider-md.divider-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='100')
+            h4(data-caption-animate='fadeInUpSmall', data-caption-delay='150') Brace your body…
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='200') For the World
+              br.d-none.d-lg-block
+              | of Fitness!
+            a.button.button-sm.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) View the classes
+
+      .swiper-slide(data-slide-bg='images/home-02.jpg')
+        .swiper-slide-caption.text-center
+          .container
+            hr.divider.divider-md.divider-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='100')
+            h4(data-caption-animate='fadeInUpSmall', data-caption-delay='150') New Fitness Endurance Classes
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='200') For Those Who Work
+              br.d-none.d-lg-block
+              | Out the Hardest!
+            a.button.button-sm.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) View the classes
+
+      .swiper-slide(data-slide-bg='images/home-03.jpg')
+        .swiper-slide-caption.text-center
+          .container
+            hr.divider.divider-md.divider-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='100')
+            h4(data-caption-animate='fadeInUpSmall', data-caption-delay='150') 2nd Location in LA Opens
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 15% Off for
+              br.d-none.d-lg-block
+              | All New Attendees!
+            a.button.button-sm.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) View the classes
+
+
+    // Swiper Pagination
+    .swiper-pagination
+
+='\n'

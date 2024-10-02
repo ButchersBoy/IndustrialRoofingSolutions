@@ -1,0 +1,193 @@
+/*
+* Quotes
+*/
+
+//
+// Table of Contents:
+//
+// Quote Primary
+// Quote Modern
+//
+
+// Quote Primary
+.quote-primary {
+}
+
+.quote-primary-mark {
+	position: relative;
+	top: 6px;
+	display: block;
+	width: 37px;
+	height: 27px;
+	fill: $primary;
+	flex-shrink: 0;
+}
+
+.quote-primary-body {
+	position: relative;
+	padding: 25px 0;
+	border-top: 1px solid $white-6;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 13px;
+		border-style: solid;
+		border-color: $white-6;
+	}
+
+	&::before {
+		left: 0;
+		width: 78px;
+		border-width: 1px 1px 0 0;
+	}
+
+	&::after {
+		right: 0;
+		width: calc(100% - 78px - 12px);
+		border-width: 1px 0 0 1px;
+		transform-origin: 0 0;
+		transform: skew(-45deg);
+	}
+}
+
+.quote-primary-text {
+	padding-top: 20px;
+}
+
+.quote-primary-cite {
+	font-weight: 700;
+}
+
+.quote-primary-footer {
+	padding-left: 5px;
+}
+
+* + .quote-primary {
+	margin-top: 30px;
+}
+
+* + .quote-primary-footer {
+	margin-top: 8px;
+}
+
+@include media-breakpoint-up(sm) {
+	.quote-primary-body {
+		display: flex;
+		padding: 32px 20px 40px 30px;
+	}
+
+	.quote-primary-text {
+		padding-top: 0;
+		padding-left: 20px;
+	}
+
+	.quote-primary-footer {
+		padding-left: 30px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.quote-primary-body {
+		padding-right: 40px;
+	}
+}
+
+// Quote Modern
+.quote-modern {
+	position: relative;
+	margin-left: 15px;
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-left: 48px;
+	}
+
+	p {
+		color: $black;
+	}
+}
+
+.quote-modern-header {
+	display: flex;
+	align-items: center;
+
+	+ .quote-modern-body {
+		margin-top: 42px;
+	}
+}
+
+.quote-classic-avatar {
+	overflow: hidden;
+	box-shadow: 7px 7px 10px rgba($black, 0.25);
+	border-radius: 30px;
+}
+
+.quote-classic-description {
+	margin-left: 15px;
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		margin-left: 43px;
+	}
+}
+
+.quote-classic-name {
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 0;
+
+	+ .quote-classic-position {
+		margin-top: 8px;
+	}
+}
+
+.quote-classic-position {
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-left: 7px;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -3px;
+		left: 0;
+		bottom: -1px;
+		width: 54px;
+		background-color: $primary;
+		z-index: -1;
+	}
+}
+
+.quote-modern-body {
+	font-style: italic;
+	letter-spacing: 0;
+	padding-left: 2px;
+	line-height: 1.6;
+	position: relative;
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		font-size: 22px;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 4px;
+		top: 9px;
+		left: -15px;
+		bottom: 5px;
+		background-color: $black;
+		// Medium ≥768px
+		@include media-breakpoint-up(md) {
+			left: -43px;
+		}
+	}
+}
+

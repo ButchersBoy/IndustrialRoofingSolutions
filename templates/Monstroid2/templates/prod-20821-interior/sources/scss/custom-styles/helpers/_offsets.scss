@@ -1,0 +1,177 @@
+/*
+* Offsets
+*/
+
+// Elements offset
+* + p {
+	margin-top: 15px;
+}
+
+// Headings
+
+// Headings + Paragraph
+h2 + p,
+.heading-2 + p {
+	margin-top: 28px;
+}
+
+h2 + .pretitle,
+.heading-2 + .pretitle {
+	margin-top: 12px;
+}
+
+h4 + p,
+.heading-4 + p {
+	margin-top: 8px;
+}
+
+.small + h4,
+.small + .heading-4 {
+	margin-top: 10px;
+}
+
+// Paragraph + Headings
+p + h2,
+p + .heading-2 {
+	margin-top: 15px;
+}
+
+// Tags + Tags
+p + p {
+	margin-top: 12px;
+}
+
+img + p {
+	margin-top: 15px;
+}
+
+h3 + img {
+	margin-top: 42px;
+}
+
+// Classes
+* + .row {
+	margin-top: 30px;
+}
+
+* + .big {
+	margin-top: 20px;
+}
+
+* + .text-block {
+	margin-top: 30px;
+}
+
+* + .button {
+	margin-top: 20px;
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-top: 36px;
+	}
+}
+
+.index-list + .button {
+	margin-top: 70px;
+}
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 {
+	margin-top: 80px;
+}
+
+// Classes + Classes
+.container + .container {
+	margin-top: 35px;
+}
+
+.row + .row {
+	margin-top: 35px;
+}
+
+* + .index-list {
+	margin-top: 63px;
+}
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+	* + .rd-form {
+		margin-top: 30px;
+	}
+
+	.container + .container {
+		margin-top: 60px;
+	}
+	.row + .row {
+		margin-top: 87px;
+	}
+}
+
+// Range spacing
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-37 {
+	@include grid-offset(37px);
+}
+
+.row-41 {
+	@include grid-offset(41px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+.row-60 {
+	@include grid-offset(60px);
+}
+
+@include media-breakpoint-up(md) {
+	.row-md-30 {
+		@include grid-offset(30px);
+	}
+}
+
+.maw-29 {
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		flex: 0 0 29%;
+		max-width: 29%;
+	}
+}
+
+.row.mt-112 {
+	margin-top: 60px;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 112px;
+	}
+}
+
+
+.mt-112 {
+
+	// Small <576px
+	@include media-breakpoint-down(xs) {
+		margin-top: 60px;
+	}
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 112px;
+	}
+}

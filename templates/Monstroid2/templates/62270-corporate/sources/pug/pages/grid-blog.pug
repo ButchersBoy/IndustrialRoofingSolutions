@@ -1,0 +1,46 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Grid Blog'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.bg-gray-3.section-md
+		.container
+			.row.row-60.posts-wrap
+				.col-md-6.col-xl-4 
+					include ../includes/_post-grid-classic
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-slider
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-video
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-standart
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-link
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-quote
+				.col-md-6.col-xl-4
+					include ../includes/_post-grid-audio
+								
+			include ../includes/_pagination-classic
+
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

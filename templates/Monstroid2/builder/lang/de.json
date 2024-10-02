@@ -1,0 +1,1152 @@
+{
+  "errors": {
+    "serverNotFound": "Die Anwendung konnte nicht gestartet werden, weil der lokale Server oder der Hosting-Server fehlten. Bitte laden Sie Novi Builder auf den Server und versuchen Sie es erneut",
+    "dontSaveProject": "Das Projekt ist nicht gespeichert. Die nicht gespeicherte Änderungen gehen verloren, wenn Sie die Seite verlassen.",
+    "noCurrentProject": "Das Projekt ist noch nicht festgelegt",
+    "emailFieldNotSet": "Bitte geben Sie im Textfeld Ihre E-Mail-Adresse ein!",
+    "messageCanNotBeSend": "Leider konnte Ihre Nachricht nicht versendet werden. Schicken Sie uns direkt eine Email an #{mail}",
+    "bigFileChosen": "Die ausgewählte Datei ist zu groß.",
+    "maxFileSize": "Beim Upload ist ein Fehler aufgetreten. Die Dateigröße überschreitet die maximal zulässige Größe #{size}",
+    "maxFileCount": "Beim Upload ist ein Fehler aufgetreten. \nDie Anzahl der Dateien überschreitet den angegebenen Maximalwert (#{maxFileCount}).",
+    "totalFileSize": "Beim Upload ist ein Fehler aufgetreten. \nDie Gesamtgröße der Dateien überschreitet den angegebenen Maximalwert #{humanMaxSize}.",
+    "zipExtension": "Die Datei, die Sie hochladen möchten, ist keine Zip-Datei.\nBitte erneut versuchen.",
+    "templateUpload": "Bei dem Upload vom Template ist ein Fehler aufgetreten. Bitte erneut versuchen.",
+    "openZip": "Beim Öffnen einer Zip-Datei ist ein Fehler aufgetreten. Überprüfen Sie bitte Ihren Archivdatei und versuchen Sie es erneut.",
+    "noSuchFile": "In Ihrem Projekt befinden sicht keine HTML-Dateien oder project.json Datei.",
+    "templateImporting": "Es sind Fehler beim Import aufgetreten! Bitte erneut versuchen.",
+    "projectImporting": "Es sind Fehler beim Import aufgetreten! Bitte erneut versuchen.",
+    "serverUnavailable": "Der Server ist momentan leider nicht erreichbar. Versuchen Sie es später",
+    "modSecurity": "Es scheint, als ob ModSecurity (oder ein anderes Sicherheitsframework) den Novi-Builder auf dem Server blockiert. Deaktivieren Sie es bitte oder bearbeiten Sie die Regeln manuell, um dieses Problem zu vermeiden.",
+    "failedToSave": "Fehler beim Speichern des Projektes. Bitte prüfen Sie, ob entsprechende Sicherheitseinstellungen auf dem Server vorhanden sind und auch freier Speicherplatz zur Verfügung steht. Oder wenden Sie sich bitte an Ihren Hosting-Anbieter oder Administrator und erklären Sie das Problem.",
+    "wrongFileFormat": "Falsches Dateiformat gewählt. Die folgenden Dateiformate werden unterstützt: .jpg, .png, .gif, .webm, .avi, ogg."
+  },
+  "codeEditor": {
+    "noFiles": "Es gibt keine Dateien zum Anzeigen.",
+    "autoSave": "Automatische Bereitstellung",
+    "codeError": "Fehler: #{errorText} in Zeile #{errorRow}, Column #{errorColumn}",
+    "codeErrorLink": "Gehen Sie zur Zeile #{errorLine} ",
+    "noPages": "Es gibt keine aktive Seite.",
+    "fileSelect": "Bitte Datei auswählen",
+    "fileReadOnly": "(Schreibgeschützt)",
+    "notValidHtml": "HTML-Code ist nicht gültig",
+    "notValidCss": "Eine von CSS-Dateien ist nicht gültig",
+    "editorDisabledTitle": "VISUELLE BEARBEITUNG IST BLOCKIERT",
+    "editorDisabledDescription": "Im Seitencode gibt es viele Validierungsfehler. Schauen Sie sich Ihren Code genau an, um das Problem zu lösen.",
+    "editorDisabledButtonText": "CODE-EDITOR ÖFFNEN",
+    "openStyleManager": "Stile anzeigen",
+    "closeStyleManager": "Stile ausblenden"
+  },
+  "editor": {
+    "moveLabel": "#{element} Element verschieben",
+    "moveItem": {
+      "tooltip": "Ebene verschieben",
+      "title": "Ebene verschieben"
+    },
+    "replaceItem": {
+      "tooltip": "Ebene ersetzen ",
+      "headerTitle": "Preset ersetzen",
+      "title": "Ebene ersetzen "
+    },
+    "duplicateItem": {
+      "tooltip": "Ebene duplizieren",
+      "title": "Ebene duplizieren"
+    },
+    "removeItem": {
+      "tooltip": "Ebene löschen",
+      "title": "Ebene löschen"
+    }
+  },
+  "switcher": {
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "builderLoading": {
+    "progressStep1": "Vorladen...",
+    "progressStep2": "Die nicht deklarierte Funktionen werden gesucht...",
+    "progressStep3": "Es geht gleich los..."
+  },
+  "failedLoadProjectScreen": {
+    "title": "Novi Builder kann Ihr Projekt nicht öffnen",
+    "subtitle": "Beim Laden der Datei project.json ist ein Problem aufgetreten. Dieser Fehler können Sie auf dem Server manuell beheben oder übernehmen Sie einfach die vorgeschlagenen Importoptionen. Die aktuellen Projektdateien werden überschrieben, wenn eine von Optionen ausgewählt wird.",
+    "chooseText": "Wählen Sie aus den folgenden Optionen aus:",
+    "openProjectDescription": "Laden Sie ein neues Projekt hoch. Wählen Sie ein vorbereitetes Zip-Archiv.",
+    "openProjectButton": "Novi-Projekt mportieren",
+    "openTemplateDescription": "Laden Sie ein neues Template hoch. Wählen Sie ein vorbereitetes Zip-Archiv.",
+    "openTemplateButton": "HTML-Template importieren"
+  },
+  "tooltips": {
+    "insertPreset": "Fügen Sie hier ein Preset ein",
+    "projectSave": "Projekt speichern",
+    "projectSettings": "Projekt-Einstellungen",
+    "pageSettings": "Seiteneinstellungen",
+    "previewModeTitle": "Preview-Mode",
+    "previewModeDescription": "Vorschau von Änderungen",
+    "editModeTitle": "Modus bearbeiten",
+    "editModeDescription": "Seiteninhalt ändern",
+    "designModeTitle": "Design Mode",
+    "designModeDescription": "Design und Entwicklung"
+  },
+  "startScreen": {
+    "title": "Projekt anfangen",
+    "subtitle": "Um eine Seite zu öffnen, klicken Sie auf eine unten angegebene Vorschau"
+  },
+  "iconManager": {
+    "headerTitle": "Icon Manager",
+    "searchPlaceholder": "Icons finden ...",
+    "uploadTitle": "Icon-Pack hochladen",
+    "emtySearchMessage": "Keine Icons für ",
+    "errorMessage": "Icons nicht gefunden ...",
+    "submitButton": "Icon einfügen"
+  },
+  "introduction": {
+    "slide1": {
+      "title": "Einführung von Novi Builder",
+      "subtitle": "Ihr unersetzlicher Assistent zur Erstellung \nund Pflege von HTML-Websites.",
+      "body": "Novi Builder ist ein neuartiger Visual HTML-Page-Builder, der erlaubt \nSeiten schnell aus vorgefertigten Blöcken zu erstellen und den Inhalt \nvisuell zu bearbeiten. Verwenden Sie die Funktion zum Arbeiten mit dem Quellcode Ihrer Website, \ndie nur in Novi-Builder verfügbar ist."
+    },
+    "slide2": {
+      "title": "Seiten verwalten",
+      "subtitle": "Mithilfe von “Page Manager” kann man die Webseiten-Einstellungen\n erstellen, bearbeiten, löschen und verwalten.",
+      "body": "Mit einem Mausklick kann man eine Seite öffnen/erstellen. Verwenden Sie das Kontextmenü\n auf der ausgewählten Seite, um weitere Aktionen zu löschen oder auf weitere Aktionen zuzugreifen."
+    },
+    "slide3": {
+      "title": "Getrennter Modus für jede Aufgabe",
+      "subtitle": "Mithilfe vom «Vorschau», «Bearbeiten», und «Design» Modus kann man das Design der zukünftigen Website durchsuchen, bearbeiten, entwickeln und erstellen.",
+      "bodyParagraph1": "Um das Zwischenergebnis sehen zu können, klicken Sie auf \n das #{previewIcon} Vorschaumodus.",
+      "bodyParagraph2": "Mithilfe vom #{editIcon} Bearbeitungsmodus kann man schnell auf der Seite einen Text bearbeiten und verschieben, \n Elemente erstellen oder löschen.",
+      "bodyParagraph3": "Werden Sie Designer mit dem #{designIcon} Design-Modus. Sie können mit dem Ebenenbedienfeld im Arbeitsbereich dieses Modus arbeiten (dazu drücken Sie auf der Tastatur die Taste #{commandSymbol} ) \noder den Quellcode Ihres Projekts zugreifen "
+    },
+    "slide4": {
+      "title": "Entwicklerwerkzeuge",
+      "subtitle": "Mit Entwicklertools im Modus «Entwickeln» erhalten Sie erweiterte Funktionen zum Erstellen Ihrer HTML-Website.",
+      "bodyParagraph1": "Mit visuellen HTML Page Builders machen Sie Arbeitstätigkeiten in einer neuen Weise.\n Genießen Sie die Vorteile eines HTML-, CSS- und JS-Editors \nund bearbeiten Sie den Quellcode Ihres Projekts genau so, \nwie Sie es in jedem Code-Editor getan hätten. Emmet und Code-Highlight beschleunigen ungemein die Arbeit.",
+      "bodyParagraph2": "Snippets Ihres Projekts lassen sich mit dem Preset-Manager ganz anders speichern. Wählen Sie ein verfügbares Element im Arbeitsbereich Ihrer aktiven Seite aus und speichern Sie es via #{savePresetIcon} «Als Preset speichern» im Kontextmenü.\n Die vorhandene Presets können Sie einfach auf die Seite ziehen."
+    },
+    "slide5": {
+      "title": "Sofortige Veröffentlichung",
+      "subtitle": "Dank der Möglichkeit das Projekt direkt auf dem Server mit Novi sofort zu veröffentlichen,\n halten Sie die Version Ihrer Website immer auf dem neuesten Stand.",
+      "body": "Mit dem Button #{publishIcon} 'Website veröffentlichen' kann man das Projekt direkt auf dem Servern veröffentlichen, wo sich Novi Builder befindet. Mit der Option «Pfad der Veröffentlichung» \nim «Projektkonfiguration» ändert man den Pfad \nzur Projekt-Veröffentlichung."
+    },
+    "slide6": {
+      "title": "Zusatzfunktionen",
+      "subtitle": "Durch das System Panel von Novi können Sie zusätzliche Aktionen \nmit Ihrem Projekt ausführen.",
+      "bodyParagraph1": "Ändern Sie die Arbeitsbereichgröße mit dem Button #{resizeIcon} 'Auflösung ändern'.",
+      "bodyParagraph2": "Drücken Sie auf #{settingsIcon} Einstellungen, um auf die Seiteneinstellungen, Projekteinstellungen usw. zuzugreifen.",
+      "bodyParagraph3": "Mit dem Feature 'Novi Layers' erhöhen Sie die Benutzerfreundlichkeit Ihres Projektes.\n Via Standard CSS-Selektoren können Sie die Regeln für das Einfügen,\n Verschieben, Löschen und andere Aktionen leicht erstellen",
+      "bodyParagraph4": "Mit dem Button #{downloadIcon} 'Template herunterladen' laden Sie das Template Ihres Projektes herunter,\n um es Ihren Kunden zu geben oder es auf andere Geräte zu übertragen",
+      "bodyParagraph5": "Klicken Sie auf den #{saveIcon} Button 'Projekt speichern', um auch in Zukunft alles wiederzufinden.",
+      "bodyParagraph6": "Über das Feedback-Formular können Sie ganz einfach mit uns in Kontakt treten. Lassen Sie uns \nIhre Vorschläge und Ideen wissen. Wir freuen uns darauf!"
+    },
+    "slide": "Slide",
+    "of": "von",
+    "skip": "Einleitung überspringen",
+    "next": "Nächstes Slide",
+    "end": "Novi Builder starten"
+  },
+  "mainMenu": {
+    "tooltip": "Hauptmenü öffnen",
+    "importItem": "Import...",
+    "importProjectItem": "Projekt importieren",
+    "importTemplateItem": "Template importieren",
+    "exportItem": "Export...",
+    "exportProjectItem": "Projekt exportieren",
+    "exportTemplateItem": "Template exportieren",
+    "exportError": "Interner Serverfehler. Wenden Sie sich an den Serveradministrator, um das Server- oder Netzwerkproblem zu lösen.",
+    "mediaLibraryItem": "Medienbibliothek",
+    "iconManagerItem": "Icon Manager",
+    "configurationItem": "Konfiguration",
+    "authorizationItem": "Sicherheitseinstellungen",
+    "settingsItem": "Systemeinstellungen",
+    "feedbackItem": "Feedback",
+    "aboutItem": "Über uns"
+  },
+  "mediaLibrary": {
+    "headerTitle": "Medienbibliothek",
+    "categoryAll": "Alle anzeigen",
+    "categoryImages": "Nur Bilder",
+    "categoryNew": "Neue Kategorie",
+    "categoryVideos": "Nur Videos",
+    "submitText": "Bild einfügen",
+    "categories": "Kategorien:",
+    "addCategory": "Neue Kategorie hinzufügen",
+    "uploadFiles": "Dateien hochladen",
+    "filesCount": "Dateien",
+    "insertImage": "Bild einfügen",
+    "moveLabel": "Zur kategorie hinzufügen",
+    "categoryProjectFiles": "Projektdateien",
+    "downloadProjectItemsTooltip": "Alle Mediendateien des Projektes in die Galerie hochladen",
+    "linkDescription": "Die Datei befindet sich im Projektverzeichnis",
+    "dropzoneLabel": "Dateien in die Mediengalerie hochladen",
+    "emptyLabel": "die Datei zum Anzeigen ziehen",
+    "unsplashPhotos": "Fotos von Unsplash",
+    "unsplashSearchPlaceholder": "Suche",
+    "unsplashServiceError": "Dieser Service ist derzeit nicht verfügbar. Bitte versuchen Sie es später noch einmal.",
+    "unsplashNoItemsFoundError": "Es wurden keine Artikel gefunden, die den Suchkriterien entsprechen.",
+    "unsplashDownloadTooltip": "Herunterladen",
+    "unsplashDownloadedTooltip": "Heruntergeladen",
+    "unsplashDownloadError": "Das gewählte Bild konnte nicht heruntergeladen werden. Bitte versuchen Sie es später noch einmal.",
+    "unsplashLoadMore": "Mehr laden",
+    "unsplashBack": "Zurück"
+  },
+  "pageManager": {
+    "page": "Seite",
+    "pages": "Seiten",
+    "searchPlaceholder": "Seiten filtern",
+    "addPage": "Neue Seiten hinzufügen",
+    "all": "All"
+  },
+  "breadcrumbs": {
+    "pages": "Seiten"
+  },
+  "pageStarterScreen": {
+    "title": "Lassen Sie uns eine Seite zu erstellen.",
+    "subtitle": "Klicken Sie auf ein beliebiges Preset, um einen Block hinzuzufügen."
+  },
+  "publish": {
+    "buttonText": "Website veröffentlichen",
+    "buttonTooltip": "Auf dem Server mit Novi Builder veröffentlichen",
+    "errorUnableToPublish": "Die Website konnte nicht veröffentlicht werden.",
+    "errorWrongPath": "Ihr Projekt kann hier #{publishPath} nicht veröffentlichen werden. Bitte wählen sie einen anderen Ordner oder wenden Sie sich an den Serveradministrator",
+    "errorNoPermission": "Sie besitzen nicht genügend Rechte, um das Projekt zu veröffentlichen. Wenden Sie sich an den Serveradministrator, um das Problem zu lösen ",
+    "errorZipOpen": "Fehler bei Veröffentlichung Ihrer Website. Überprüfen Sie bitte, ob es genügend Speicherplatz auf dem Hosting-Server vorhanden ist, oder wenden Sie sich an den Serveradministrator",
+    "internalServerError": "Interner Serverfehler. Wenden Sie sich an den Serveradministrator, um Server- oder Netzwerkprobleme zu lösen."
+  },
+  "repository": {
+    "itemName": "Preset",
+    "itemsName": "Preset",
+    "filterPlaceholder": "Preset filtern",
+    "addNewItem": "Neue Einstellung hinzufügen",
+    "all": "All",
+    "emptyItems": "Keine Elementen gefunden ..."
+  },
+  "textEditor": {
+    "bold": "Fett",
+    "italic": "Kursiv",
+    "underline": "Unterstrichen",
+    "linkTooltip": "Link setzen",
+    "colorTooltip": "Farbe ändern",
+    "fontTooltip": "Schriftart ändern",
+    "textAlignTooltip": "Textausrichtung ändern",
+    "textTransformTooltip": "Text Formatierung ändern",
+    "linkTool": {
+      "tooltip": "Linkänderung",
+      "header": "Linkänderung",
+      "title": "Linkänderung",
+      "body": {
+        "linkType": "Linktyp",
+        "pagesTabTitle": "Seiten",
+        "favoritesTabTitle": "Ausgewählte",
+        "customTabTitle": "URL",
+        "pagesLabel": "Seite des Projekts auswählen:",
+        "linksLabel": "Ausgewählte Links öffnen:",
+        "inputLabel": "URL:",
+        "openInNewTab": "Im neuen Tab öffnen",
+        "removeLink": "Link löschen"
+      }
+    },
+    "fontTool": {
+      "tooltip": "Schriftart ändern",
+      "title": "Schriftartänderung",
+      "fontFamily": "Schriftfamilie",
+      "fontWeight": "Fette",
+      "fontSize": "Schriftgröße",
+      "lineHeight": "Zeilenhöhe",
+      "letterSpacing": "Buchstabenabstand",
+      "addFonts": "Schriftart hinzufügen..."
+    }
+  },
+  "resizer": {
+    "tooltip": "Auflösung ändern",
+    "mobile": "Smartphone (Porträt)",
+    "mobileLandscape": "Smartphone (Landschaft)",
+    "tablet": "Tablet (Porträt)",
+    "tabletLandscape": "Tablet (Landschaft)",
+    "laptop": "Laptop",
+    "desktop": "Desktop",
+    "desktopFullHd": "Desktop FULL-HD"
+  },
+  "untitled": "Ohne Titel",
+  "copy": "Kopie",
+  "file": "Datei",
+  "files": "Dateien",
+  "contextMenu": {
+    "cut": "Ausschneiden",
+    "copy": "Kopieren",
+    "paste": "Einfügen",
+    "pasteBefore": "Einfügen vor",
+    "pasteInside": "Einfügen in",
+    "pasteAfter": "Einfügen nach",
+    "forceHover": "\"hover\" Zustand setzen",
+    "forceDefault": "Standardzustand setzen",
+    "delete": "Löschen",
+    "duplicate": "Duplizieren",
+    "sourceCode": "Quellcode",
+    "selectParent": "Eltern-Element auswählen",
+    "saveAsPreset": "Als Preset speichern",
+    "rename": "Umbenennen",
+    "setHomePage": "Als Startseite festlegen",
+    "previewAdd": "Vorschau hochladen...",
+    "pageSettings": "Seiteneinstellungen...",
+    "edit": "Bearbeiten...",
+    "projectLayers": "Projektebene...",
+    "cropImage": "Bild zuschneiden",
+    "deleteFromCategory": "#{itemText} aus der Kategorie löschen",
+    "deleteCompletely": "#{itemText} vollständig löschen",
+    "clearCategory": "Kategorie löschen",
+    "deleteCategory": "Kategorie löschen",
+    "resizeImage": "Bild verkleinern",
+    "copyLink": "Link kopieren"
+  },
+  "snackbar": [],
+  "dialogs": {
+    "insertPreset": {
+      "searchPlaceholder": "Presets filtern...",
+      "header": "Preset hinzufügen"
+    },
+    "demoMode": {
+      "header": "Demo-Einschränkungen",
+      "body": "Diese Funktion ist deaktiviert.\n Kaufen Sie Template, um Zugriff darauf zu erhalten.",
+      "cancelButton": "Ablehnen"
+    },
+    "fatalError": {
+      "header": "Fataler Fehler",
+      "submitButton": "Novi neu starten",
+      "cancelButton": "Ignorieren"
+    },
+    "error": {
+      "header": "Fehler",
+      "cancelButton": "Ignorieren"
+    },
+    "warning": {
+      "header": "Warnung",
+      "submitButton": "Novi neu starten",
+      "cancelButton": "Ignorieren"
+    },
+    "browserWarning": {
+      "header": "Warnung!",
+      "body": "Verwenden Sie lieber Google Chrome 56+ oder Safari 10+, um eine bessere Erfahrung mit dem Novi-Builder zu haben. Sie können unseren Builder weiterhin verwenden, aber einige Funktionen sind jedoch nicht verfügbar",
+      "cancelButton": "Trotzdem fortfahren"
+    },
+    "sessionChangesDiscard": {
+      "header": "Änderungen verwerfen",
+      "body": "Es gibt umgespeicherte Änderungen. Möchten Sie diese wirklich verwerfen?",
+      "submitButton": "Ja",
+      "cancelButton": "Nein"
+    },
+    "projectDoesntExists": {
+      "header": "Das Projekt existiert nicht",
+      "body": "Das Projekt '#{name}' existiert nicht.\n Überprüfen Sie Ihre Novi config.json Daten.",
+      "submitButton": "Novi neu starten"
+    },
+    "projectConfiguration": {
+      "header": "Einstellungen",
+      "body": {
+        "generalSettings": "Allgemeine",
+        "projectName": "Projektname:",
+        "publishTitle": "Veröffentlichungs",
+        "publishPathLabel": "Pfad der Veröffentlichung:",
+        "publishComputedPathLabel": "Ihre Website wird hier veröffentlicht:",
+        "publishPathValidationError": "Der angegebene Pfad ist ungültig oder führt zum anderen Server.",
+        "publishPromtSkip": "Bestätigung vor der Veröffentlichung deaktivieren",
+        "mediaDir": "Bildverzeichnis-Pfad:",
+        "videoDir": "Videoverzeichnis-Pfad:",
+        "fontDir": "Font-Verzeichnis-Pfad:",
+        "cssDir": "Verzeichnis-Pfad stylen:",
+        "codeTemplates": "Datei- und Code-Vorlagen",
+        "codeTemplatesDescription": "Geben Sie spezielle Datei- und Codevorlagen für das aktuelle Projekt an",
+        "newPageTemplate": "Vorlage einer neuen Seite:",
+        "layers": "Projektebene",
+        "layersTable": {
+          "name": "Name",
+          "element": "Element",
+          "canBeInsertedTo": "Kann eingefügt werden"
+        },
+        "pageContainer": "Container in der Seite",
+        "layersDescription": "Projektebene helfen Ihnen das Projekt zu opganizieren. Durch die Verknüpfung von Elementen über CSS-Selektoren können Sie die Elementauswahl und die Verschachtelungsregeln einschränken. Diese Regeln können jederzeit deaktiviert werden. Dazu klicken Sie einfach mit gedrückter CTRL/CMD-Taste auf die Elemente.",
+        "layerPresetsDescription": "Wenn in Ihrem Projekt ein spezielles CSS Framework zum Erstellen vom Layout und Markup eingesetzt wird, können Sie unsere vorkonfigurierten Layer anwenden:",
+        "seoTitle": "SEO",
+        "sitemapTitle": "Sitemap",
+        "sitemapDomain": "Domain-Sitemap (Damit die sitemap.xml-Datei korrekt funktioniert, sollten Sie eine gültige Domain eingeben, unter der Ihre Website zu erreichen ist)",
+        "sitemapFullPath": "Die erstellte sitemap.xml-Datei wird hier abgelegt:",
+        "homePagePriority": "Priorität der Startseite",
+        "homePageChangeFrequency": "Änderungsfrequenz der Startseite",
+        "otherPagesPriority": "Priorität anderer Seiten",
+        "otherPagesChangeFrequency": "Änderungsfrequenz anderer Seiten",
+        "generate": "Generieren",
+        "notSelected": "Nicht ausgewählt",
+        "linkToSitemap": "Link zur Sitemap",
+        "sitemapGenerated": "Ihre Sitemap wurde erfolgreich generiert.",
+        "sitemapNotGenerated": "Ihre Sitemap konnte nicht generiert werden. Überprüfen Sie Ihre Einstellungen.",
+        "sitemapIncorrectSettings": "Bitte überprüfen Sie Ihre Sitemap-Einstellungen.",
+        "recommendedRobotsTxt": "Empfohlene robots.txt-Datei",
+        "instructCrawlersToNotIndex": "Verhindern Sie, dass Webcrawler auf Ihre Website zugreifen und sie indizieren",
+        "urlToSitemap": "URL zur sitemap.xml-Datei",
+        "customCodeForRobotsTxt": "Benutzerdefinierter Code in der robots.txt-Datei",
+        "linkToRobotsTxt": "Link zur robots.txt-Datei",
+        "robotsTxtGenerated": "Ihre robots.txt-Datei wurde erfolgreich erstellt.",
+        "robotsTxtNotGenerated": "Ihre robots.txt-Datei konnte nicht generiert werden. Überprüfen Sie Ihre Einstellungen.",
+        "analyticsTitle": "Analytik",
+        "googleAnalyticsId": "Google Analytics Tracking-ID",
+        "googleAnalyticsIdDesc": "z.B. UA-1234587-77",
+        "googleWebmasterToolsTag": "Google Webmaster Tools HTML Tag",
+        "googleWebmasterToolsTagDesc": "z.B. UAdkfdsgsgFewfsdfxg",
+        "googleTagManagerId": "Google Tag Manager ID",
+        "googleTagManagerIdDesc": "z.B. GTM-A1BCDEF",
+        "facebookPixelId": "Facebook Pixel ID",
+        "facebookPixelIdDesc": "z.B. 345678909876543",
+        "projectSettingsLabel": "Projekt",
+        "systemSettingsLabel": "System",
+        "publishSkipMessage": "Dialog zur Bestätigung der Publikation nicht anzeigen",
+        "fontsDescription": "Über das Feld unten können Sie beliebige Google Fonts in Ihr Projekt einbinden. Die beliebtesten Schriftarten:&nbsp;&nbsp;",
+        "fontsTitle": "Google Fonts",
+        "fontsLabel": "Schriftarten des Projektes",
+        "fontsAdvancedLabel": "Erweiterte Einstellungen anzeigen:",
+        "fontsNotSelected": "Legen Sie eine oder mehrere Schriftarten als erweiterte Einstellungen fest",
+        "switcher": {
+          "on": "Ja",
+          "off": "Nein"
+        },
+        "systemSettings": {
+          "startupTitle": "Start/Herunterfahren",
+          "startupDescription": "Das Verhalten der Anwendung beim Starten und Herunterfahren ändern",
+          "showTipsOnStartup": "Eintrag im Startmenü einblenden",
+          "checkForUpdates": "Nach Updates suchen",
+          "languageTitle": "Sprachen",
+          "languageDescription": "Die Sprache der Anwendung ändern"
+        }
+      },
+      "cancelButton": "Abbrechen",
+      "submitButton": "Änderungen speichern"
+    },
+    "pageSettings": {
+      "header": "Seiten Einstellungen",
+      "body": {
+        "generalSettings": "Allgemeine Einstellungen",
+        "pageName": "Seitenname:",
+        "fileName": "Dateiname:",
+        "useAsHomePage": "Als Startseite verwenden?",
+        "pageNameValidationError": "Dateiname ist ungültig",
+        "pageNameDuplicationError": "Im Projekt gibt es schon eine Datei, die den selben Dateinamen hat.",
+        "favicon": "Favicon:",
+        "seoSettings": "SEO-Einstellungen",
+        "seoSettingsDescription": "Zuweisen Sie Keywords und eine Beschreibung auf diese Seite",
+        "metaKeywords": "Meta-Keywords:",
+        "metaDescription": "Meta-Beschreibung:"
+      },
+      "cancelButton": "Abbrechen",
+      "submitButton": "Änderungen speichern"
+    },
+    "securitySettings": {
+      "header": "Sicherheits-Einstellungen",
+      "body": {
+        "title": "Sicherheit",
+        "description": "Ändern Sie Ihr Passwort und die Systemstart-Optionen. Geben Sie Ihr aktuelles Passwort ein, um die Änderungen zu übernehmen",
+        "changeSettingsLabel": "Einstellungen ändern",
+        "changePasswordLabel": "Passwort ändern",
+        "oldPassLabel": "Aktuelles Passwort",
+        "passLabel": "Neues Passwort",
+        "enableAuthorization": "Passwortautorisierung aktivieren",
+        "enableDemoMode": "Demo-Modus aktivieren",
+        "authorizationError": "Ungültiger Passwort"
+      },
+      "cancelButton": "Abbrechen",
+      "submitButton": "Änderungen speichern"
+    },
+    "pageCreate": {
+      "header": "Neue Seite erstellen",
+      "body": "Geben Sie den Namen der neuen Seite ein",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Seite erstellen"
+    },
+    "deletePage": {
+      "header": "Seite löschen",
+      "body": "Sie können die Aktion nicht rückgängig machen. Sind Sie sicher?",
+      "cancelButton": "Nein",
+      "submitButton": "Ja"
+    },
+    "presetDelete": {
+      "header": "Preset löschen",
+      "body": "Sie können die Aktion nicht rückgängig machen. Sind Sie sicher?",
+      "cancelButton": "Nein",
+      "submitButton": "Ja"
+    },
+    "presetSave": {
+      "header": "Element als Preset speichern",
+      "body": {
+        "title": "Preset-Name:",
+        "category": "Keywords:",
+        "preview": "Preset-Vorschau:",
+        "code": "HTML-Code:",
+        "reload": "Laden Sie die Seite neu, nachdem Sie das Preset eingefügt haben"
+      },
+      "cancelButton": "Abbrechen",
+      "submitButton": "Preset speichern"
+    },
+    "presetValidation": {
+      "header": "Speichern des Presets ist fehlgeschlagen",
+      "body": "Speichern des Presets ist fehlgeschlagen. Alle Felder des vorherigen Dialogs\n müssen ausgefüllt werden",
+      "submitButton": "Alles klar"
+    },
+    "templateExportDownload": {
+      "header": "Template exportieren",
+      "body": "Ihr project.zip kann heruntergeladen werden.\n Laden Sie den Inhalt auf den Server hoch.",
+      "submitButton": "Herunterladen"
+    },
+    "templateExportZipping": {
+      "header": "Template exportieren",
+      "body": "Template-Archivierung.\n In der Zwischenzeit können Sie Kaffee trinken."
+    },
+    "templateExportError": {
+      "header": "Template exportieren",
+      "body": "Fehler beim Exportieren. Erstellen Sie mindestens eine Seite.",
+      "cancelButton": "Abbrechen"
+    },
+    "projectExportDownload": {
+      "header": "Projekt exportieren",
+      "body": "Ihr project.zip kann heruntergeladen werden.\n Laden Sie den Inhalt auf den Server hoch.",
+      "submitButton": "Herunterladen"
+    },
+    "projectExportZipping": {
+      "header": "Projekt exportieren",
+      "body": "Projektarchivierung.\n In der Zwischenzeit können Sie Kaffee trinken."
+    },
+    "projectExportError": {
+      "header": "Projekt exportieren",
+      "body": "Fehler beim Exportieren. Erstellen Sie mindestens eine Seite.",
+      "cancelButton": "Abbrechen"
+    },
+    "resolutionChangeError": {
+      "header": "Der Vorgang wurde blockiert",
+      "body": "Die Auflösung kann nicht geändert werden.\n Um das zu tun, öffnen Sie zuerst eine Seite.",
+      "cancelButton": "Abbrechen"
+    },
+    "nestingError": {
+      "header": "Der Vorgang wurde blockiert",
+      "body": "Der angeforderte Vorgang wurde von HTML5-Verschachtelungsregeln blockiert.\n'#{tagName}'-Element kann nicht in '#{parentTagName}' verschachtelt werden.",
+      "cancelButton": "Abbrechen"
+    },
+    "publishSuccessful": {
+      "header": "Webseite veröffentlichen",
+      "body": "Das Projekt wurde erfolgreich auf \n #{publishPath} veröffentlicht",
+      "submitButton": "Webseite öffnen"
+    },
+    "publishPromt": {
+      "header": "Webseite veröffentlichen",
+      "body": "Das Projekt wird hier #{publishPath} veröffentlicht.\n Hier werden alle Daten überschreiben. Sind Sie sicher?",
+      "submitButton": "Webseite veröffentlichen",
+      "cancelButton": "Abbrechen"
+    },
+    "publishProgress": {
+      "header": "Webseite veröffentlichen",
+      "body": "Veröffentlichung ...\n In der Zwischenzeit können Sie Kaffee trinken."
+    },
+    "templateImport": {
+      "header": "Template importieren",
+      "body": "Klicken Sie auf «Datei auswählen», um das Template hochladen und importieren. Hinweis: das Template überschreibt Ihre aktuellen Projektdateien.\nDie maximale Dateigröße ist 2GB.",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Template importieren"
+    },
+    "templateImportProgress": {
+      "header": "Template importieren",
+      "body": {
+        "uploading": "Hochladen von Dateien ...",
+        "importing": "Importierungsprozess ...",
+        "message": "\nIn der Zwischenzeit können Sie Kaffee trinken.."
+      }
+    },
+    "templateImportSuccessful": {
+      "header": "Template importieren",
+      "body": "Ihr Template wurde erfolgreich importiert.\nStarten Sie die Anwendung neu, um das neue Template zu laden.",
+      "submitButton": "Novi neu starten"
+    },
+    "projectImport": {
+      "header": "Projekt importieren",
+      "body": "Klicken Sie auf «Datei auswählen», um das Projekt hochladen und importieren. Hinweis: das Template überschreibt Ihre aktuellen Projektdateien.\nDie maximale Dateigröße ist 2GB.",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Projekt importieren"
+    },
+    "projectImportProgress": {
+      "header": "Projekt importieren",
+      "body": {
+        "uploading": "Hochladen von Dateien ...",
+        "importing": "Import ...",
+        "message": "\nIn der Zwischenzeit können Sie Kaffee trinken."
+      }
+    },
+    "projectImportSuccessful": {
+      "header": "Projekt importieren",
+      "body": "Ihr Projekt wurde erfolgreich importiert.\nDie Anwendung muss neu gestartet werden, um ein neues Projekt zu laden",
+      "submitButton": "Novi neu starten"
+    },
+    "feedback": {
+      "header": "Feedback senden",
+      "body": {
+        "title": "Kontaktieren Sie uns",
+        "description": "Senden Sie uns Ihr Feedback oder Ihre Fragen.",
+        "email": "Ihre E-Mail-Adresse",
+        "message": "Ihre Nachricht",
+        "messagePlaceholder": "Hallo, ich habe folgende Frage:\n\nHallo, Ich möchte über einen Bug berichten. Schritte zur Reproduktion:\n1. \n2. \n3. \n",
+        "emailPlaceholder": "example@gmail.com"
+      },
+      "submitButton": "Nachricht senden",
+      "cancelButton": "Abbrechen"
+    },
+    "feedbackProgress": {
+      "header": "Feedback geben",
+      "body": "Anfrage wird gesendet...\n Bitte warten."
+    },
+    "feedbackSuccessful": {
+      "header": "Feedback senden",
+      "body": "Die Nachricht wurde erfolgreich gesendet. Vielen Dank!",
+      "submitButton": "Ablehnen"
+    },
+    "feedbackLocalServerError": {
+      "header": "Feedback senden",
+      "body": "Hallo. Wenn Sie Fragen oder Anregungen haben, \n mailen Sie uns unter  #{supportMail}",
+      "submitButton": "Ablehnen"
+    },
+    "previewGeneration": {
+      "header": "Seitenerstellung",
+      "body": "Seitengenerierung gestartet ...\n In der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "frameGeneration": {
+      "header": "Vorbereitung zur Erstellung",
+      "body": "Bereinigung ...\n In der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "updateAvailable": {
+      "header": "Anwendungsupdate",
+      "body": "Die Version '#{version}' ist verfügbar.\n Installieren Sie die jetzt.",
+      "changeLogLinkTitle": "Liste der Änderungen",
+      "cancelButton": "Später erinnern",
+      "submitButton": "Jetzt aktualisieren",
+      "checkForUpdates": "Nach Update suchen"
+    },
+    "updateDownloading": {
+      "header": "Anwendungsupdate",
+      "body": "Hochladen von Updates…#{progress}%\n In der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "updateError": {
+      "header": "Anwendungsupdate",
+      "body": "Installation von Updates ist fehlgeschlagen.\n Bitte versuchen Sie es später noch einmal",
+      "cancelButton": "Abbrechen"
+    },
+    "updateInstalling": {
+      "header": "Anwendungsupdate",
+      "body": "Installation von Updates…#{progress}%\n In der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "updateSuccess": {
+      "header": "Anwendungsupdate",
+      "body": "Updates wurden erfolgreich installiert.\n Starten Sie die Anwendung neu, um die Änderungen zu aktivieren.",
+      "submitButton": "Novi neu starten"
+    },
+    "mediaUploadProgress": {
+      "header": "Datei hochladen",
+      "body": "Hochladen von Dateien ...#{progress}%\n In der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "upload": {
+      "header": "Datei hochladen",
+      "body": "Klicken Sie auf 'Datei auswählen',um Ihre Datei hochzuladen",
+      "cancelButton": "Abbrechen",
+      "maxFileSize": "\nDie maximale Dateigröße ist",
+      "submitButton": "Datei hochladen"
+    },
+    "iconsUpload": {
+      "header": "Dialogfeld beim Icons-Upload",
+      "body": "Klicken Sie auf «Datei auswählen», um das Icons-Pack hochzuladen. \nDie maximale Dateigröße ist #{humanFileSize}.",
+      "submitButton": "Icons hochladen",
+      "cancelButton": "Abbrechen",
+      "importError": "Fehlerhafter Import des Icons! Bitte überprüfen Sie alle Dateien im Archiv."
+    },
+    "iconsImportProgress": {
+      "header": "Einbindung von Icon-Fonts",
+      "body": "Einbindung vom Icon-Font...\nIn der Zwischenzeit können Sie ja Ihren Kaffee austrinken."
+    },
+    "crop": {
+      "header": "Bild hochladen",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Bild zuschneiden",
+      "error": "Es kann nicht geschnitten werden \n Das ausgewählte Bild ist zu groß. Wenn möglich erhöhen Sie das „memory limit“ in der php.ini Datei",
+      "loadingImage": "Laden vom Bild ...",
+      "keepRatio": "Original-Seitenverhältnis beibehalten",
+      "widthLabel": "B:",
+      "heightLabel": "H:",
+      "saveOriginalImage": "Kopie vom Original erstellen"
+    },
+    "checkingCrop": {
+      "header": "Bild zuschneiden",
+      "body": "Überprüfung von Servereinstellungen\n In der Zwischenzeit können Sie Kaffee trinken."
+    },
+    "cropError": {
+      "header": "Fehler",
+      "submitButton": "Originalbild einfügen",
+      "cancelButton": "Abbrechen"
+    },
+    "mediaUpload": {
+      "header": "Multimedia-Inhalt hochladen",
+      "body": "Klicken Sie auf 'Datei auswählen', um Dateien hochzuladen. \n Die maximale Dateigröße ist #{humanMaxFileSize}",
+      "submitButton": "Multimedia-Inhalt hochladen",
+      "cancelButton": "Abbrechen"
+    },
+    "linkPreview": {
+      "header": "Link-Vorschau",
+      "cancelButton": "Abbrechen"
+    },
+    "mediaItemsDeleteConfirmation": {
+      "header": "Bestätigung des Löschvorgangs",
+      "description": "Diese Aktion kann nicht rückgängig gemacht werden. Sind Sie sicher?",
+      "checkboxLabel": "Dateien aus dem Projekt entfernen",
+      "checkboxDescription": "Die eingebundene Datei wird auf Projektseiten nicht angezeigt",
+      "cancelButton": "Ja",
+      "submitButton": "Nein"
+    },
+    "mediaCopyProgress": {
+      "header": "Datei zum Projekt hinzufügen",
+      "body": "Die Datei wird jetzt kopiert ..."
+    },
+    "mediaLinkCopy": {
+      "header": "Kopieren eines Links",
+      "body": "Die Datei wurde ins Projekt kopiert",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Link kopieren"
+    },
+    "mediaImport": {
+      "submit": "Importieren",
+      "cancel": "Abbrechen",
+      "header": "Import bestätigen",
+      "description": "Dieser Vorgang kann einige Minuten dauern. Bild- und Videodateien werden aus in Einstellungen festgelegten Verzeichnissen heruntergeladen.",
+      "mediaDir": "Projektbilder -&nbsp;",
+      "videoDir": "Projektvideos -&nbsp;",
+      "linkText": "Verzeichnispfad ändern"
+    },
+    "mediaImportProgress": {
+      "header": "Importieren von Projektdateien",
+      "body": "Projektdateien werden momentan importiert... \nSie können eine Tasse Kaffe genießen."
+    },
+    "mediaChangeProgress": {
+      "header": "Änderungen anwenden",
+      "body": "Änderungen auf die Mediadatei werden angewendet"
+    },
+    "resize": {
+      "header": "Bild verkleinern",
+      "cancelButton": "Abbrechen",
+      "submitButton": "Übernehmen",
+      "error": "Das Bild ist zu groß für die Serverbearbeitung und kann nicht verkleinert werden. Erhöhen Sie das memory_limit&nbsp;in der php.ini-Datei.",
+      "saveOriginalImage": "Kopie vom Original erstellen",
+      "loadingImage": "Daten werden geladen ...",
+      "description": "Ändern Sie Bildgröße in Prozent oder in Pixeln, z.B.: 1366 x 768 Pixel",
+      "widthLabel": "B:",
+      "heightLabel": "H:"
+    }
+  },
+  "developPanel": {
+    "presetItem": "Presets",
+    "pluginItem": "Plugins"
+  },
+  "filePicker": {
+    "title": "Datei auswählen",
+    "placeholder": "Keine Datei ausgewählt"
+  },
+  "styleManager": {
+    "generalPlaceholder": "Bitte wählen Sie das Element im Viewport aus, um den Style-Manager zu laden",
+    "visualToolsPlaceholder": "Werkzeuge zur visuellen Bearbeitung werden in Kürze verfügbar sein",
+    "noStylesPlaceholder": "Es gibt keine Element Styles für \nden gewählten Status",
+    "clickForRefresh": "Klicken Sie hier, um die vorhandene Styles zu aktualisieren"
+  },
+  "plugins": {
+    "title": "Novi Plugins",
+    "compatibleWarning": "Warnung: #{brand} ver. #{dependence} ist notwendig! Jetzt verwenden Sie sie Version #{version}.",
+    "novi-plugin-background-image": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Hintergrundbild ändern",
+        "tooltip": "Hintergrundbild ändern"
+      }
+    },
+    "novi-plugin-background": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Hintergrund ändern",
+        "tooltip": "Hintergrund ändern",
+        "header": "Hintergrundfarbe ändern",
+        "body": {
+          "colorOption": "Farbe",
+          "gradientOption": "Gradient",
+          "colorPlaceholder": "Farbe:",
+          "bgFillType": "Hintergrundart"
+        }
+      }
+    },
+    "novi-plugin-camera-slider": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "replaceImage": {
+          "title": "Slide-Bild ersetzen",
+          "tooltip": "Slide-Bild ersetzen"
+        },
+        "addSlide": {
+          "title": "Neuen Slide hinzufügen",
+          "tooltip": "Slide hinzufügen"
+        },
+        "removeSlide": {
+          "title": "Slide entfernen",
+          "tooltip": "Aktiven Slide entfernen"
+        }
+      }
+    },
+    "novi-plugin-campaign-monitor": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "tooltip": "Einstellungen vom CampaignMonitor ändern",
+        "title": "Einstellungen vom CampaignMonitor",
+        "header": "CampaignMonitor Einstellungen",
+        "body": {
+          "signUpUrl": "CampaignMonitor Anmelde-Link (SignUp URL):",
+          "inputName": "CampaignMonitor Input Name:"
+        }
+      }
+    },
+    "novi-plugin-google-map": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "mapSettingsTitle": "Google-Map Einstellungen",
+        "mapSettingsTooltip": "Map Einstellungen ändern",
+        "mapSettingsHeader": "Google-Map Einstellungen",
+        "markerSettingsTitle": "Markers anpassen",
+        "markerSettingsTooltip": "Markers anpassen",
+        "markerSettingsHeader": "Einstellungen von Google-Map Markers",
+        "mapSettingsBody": {
+          "mapCenter": "Map Center:",
+          "zoom": "Zoom:",
+          "style": "Style:",
+          "defaultStyle": "Standardstil",
+          "customStyle": "Benutzerdefinierter Stil",
+          "markerIcon": "Marker Icon:",
+          "activeMarkerIcon": "Icon vom Aktiven Marker:",
+          "apiKey": "API key:"
+        },
+        "markerSettingsBody": {
+          "markers": "Markers:",
+          "markerLocation": "Marker Position*:",
+          "markerDescription": "Marker-Beschreibung:",
+          "addMarkerText": "Marker hinzufügen"
+        }
+      }
+    },
+    "novi-plugin-icon-manager": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Icon-Symbol ersetzen",
+        "tooltip": "Icon-Symbol ersetzen"
+      }
+    },
+    "novi-plugin-iframe": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Quelle vom iFrame bearbeiten",
+        "tooltip": "Quelle vom iFrame ändern"
+      }
+    },
+    "novi-plugin-image": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Bild ersetzen",
+        "tooltip": "Bild ersetzen"
+      }
+    },
+    "novi-plugin-light-gallery": {
+      "settings": {
+        "groupPlaceholder": "Das PlugIn lässt sich auf die Lightgallery-Gruppe, die den Selector entsprechen, anwenden:",
+        "albumPlaceholder": "Das PlugIn lässt sich auf den Lightgallery-Album, die den Selector entsprechen, anwenden:",
+        "itemPlaceholder": "Das PlugIn lässt sich auf die Lightgallery-Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "group": {
+          "title": "Galerie Einstellungen",
+          "tooltip": "Galerie Einstellungen",
+          "header": "Galerie Einstellungen",
+          "body": {
+            "animation": "Animation von Slides:",
+            "thumbnails": "Thumbnails:",
+            "loop": "Video nach Ende von vorne abspielen:",
+            "autoplay": "Automatische Wiedergabe:",
+            "autoplayDelay": "Verzögerung bei Wiedergabe der Galerie, in Sekunden"
+          }
+        },
+        "album": {
+          "title": "Albumeinstellungen",
+          "tooltip": "Albumeinstellungen",
+          "header": "Albumeinstellungen",
+          "body": {
+            "addItem": "Galerieelement hinzufügen"
+          }
+        },
+        "item": {
+          "title": "Galerieelement bearbeiten",
+          "tooltip": "Galerieelement bearbeiten",
+          "header": "Galerieelement",
+          "body": {
+            "src": "Bild- oder Videoquelle:",
+            "thumb": "Bildquelle vom Thumbnail:",
+            "openLibrary": "Choose from Media Library",
+            "description": "Artikelbeschreibung (HTML-Markup wird unterstützt)",
+            "backToAlbum": "Zurück zum Album"
+          },
+          "linkPreviewTooltip": "Link-Vorschau öffnen"
+        }
+      }
+    },
+    "novi-plugin-label": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Bezeichnungstext bearbeiten",
+        "tooltip": "Bezeichnungstext bearbeiten"
+      }
+    },
+    "novi-plugin-link": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern",
+        "favoriteLinksTitle": "Lieblingslink",
+        "applyToProjectElements": "Auf alle Projektlinks anwenden",
+        "applyToProjectElementsDescription": "(Alle Links, die sich im Projekt befinden, werden geändert. Alle gelöschte Links werden die Zieladresse '#' enthalten)",
+        "duplicateError": "Doppelte Links sind gefunden",
+        "linksCountLabel": "Links im Projekt:",
+        "favoriteItemLinkTitle": "Name:",
+        "favoriteItemLinkValue": "URL:"
+      },
+      "editor": {
+        "title": "Link ändern",
+        "tooltip": "Link ändern",
+        "header": "Link ändern",
+        "body": {
+          "linkType": "Link type",
+          "pagesTabTitle": "Seiten",
+          "favoritesTabTitle": "Favoriten",
+          "customTabTitle": "URL",
+          "pagesLabel": "Aus der Projektseite wählen:",
+          "linksLabel": "Zwischen Lieblingslinks wählen:",
+          "inputLabel": "URL:",
+          "openInNewTab": "Link in einem neuen Tab öffnet"
+        }
+      }
+    },
+    "novi-plugin-material-parallax": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Hintergrundbild ändern",
+        "tooltip": "Hintergrundbild ändern"
+      }
+    },
+    "novi-plugin-mailchimp": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Mailchimp Einstellungen",
+        "tooltip": "Abmeldelink von Mailchimp ändern",
+        "header": "Mailchimp Einstellungen",
+        "body": {
+          "signUpUrl": "Mailchimp Abmeldelink:"
+        }
+      }
+    },
+    "novi-plugin-owl-carousel": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "settings": {
+          "title": "Owl Carousel Einstellungen",
+          "tooltip": "Owl Carousel Einstellungen",
+          "header": "Owl Carousel Einstellungen",
+          "body": {
+            "visibleItems": "Sichtbare Elemente:",
+            "indent": "Einzug zwischen Slides (px):",
+            "loop": "Schleifenwiedergabe aktivieren (im Vorschaumodus)",
+            "autoplay": "Automatische Wiedergabe aktivieren (im Vorschaumodus)",
+            "autoplayDelay": "Autostart vom Carousel verzögern, Sekunden"
+          }
+        },
+        "addSlide": {
+          "title": "Neuen Slide erstellen",
+          "tooltip": "Slide hinzufügen"
+        },
+        "removeSlide": {
+          "title": "Slide entfernen",
+          "tooltip": "Slide entfernen"
+        },
+        "moveSlideLeft": {
+          "title": "Slide nach links verschieben",
+          "tooltip": "Slide nach links verschieben"
+        },
+        "moveSlideRight": {
+          "title": "Slide nach rechts verschieben",
+          "tooltip": "Slide nach rechts verschieben"
+        }
+      }
+    },
+    "novi-plugin-rd-facebook": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Facebook Einstellungen",
+        "tooltip": "Facebook Einstellungen ändern",
+        "header": "Facebook Einstellungen",
+        "body": {
+          "pageType": "Facebook-Seitentyp:",
+          "group": "Facebook Gruppe:",
+          "page": "Facebook-Seite:",
+          "accessToken": "Facebook Access-Token:"
+        }
+      }
+    },
+    "novi-plugin-rd-instafeed": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Instagram Einstellungen ändern",
+        "tooltip": "Instagram Einstellungen",
+        "header": "Instagram Einstellungen",
+        "body": {
+          "postType": "Instagram Beiträge von:",
+          "user": "Instagram Benutzername:",
+          "tag": "Instagram Tag:"
+        }
+      }
+    },
+    "novi-plugin-rd-mailform": {
+      "settings": {
+        "pluginElement": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "configPath": "Der Pfad zur RD Mailform Konfigurationsdatei:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Mailform-Einstellungen",
+        "tooltip": "Mailform-Einstellungen ändern",
+        "header": "RD Mailform-Einstellungen",
+        "body": {
+          "emailAddress": "Senden Sie E-Mails an: (betrifft alle RD Mailforms in Ihrer Website)",
+          "smtpUse": "Verwenden Sie den SMTP-Server zum Versenden von E-Mails:",
+          "host": "Host:",
+          "port": "Port:",
+          "userName": "Benutzername:",
+          "pass": "Passwort:"
+        }
+      }
+    },
+    "novi-plugin-rd-twitterfeed": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Twitter Einstellungen",
+        "tooltip": "Twitter Benutzername ändern",
+        "header": "RD Twitter Einstellungen",
+        "body": {
+          "userName": "Twitter Benutzername:"
+        }
+      }
+    },
+    "novi-plugin-swiper-slider": {
+      "settings": {
+        "pluginElement": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "effects": "Verfügbare Übergangseffekte:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "imageReplace": {
+          "title": "Bild im Slide ersetzen",
+          "tooltip": "Bild im Slide ersetzen"
+        },
+        "addSlide": {
+          "title": "Neuen Slide erstellen",
+          "tooltip": "Slide hinzufügen"
+        },
+        "removeSlide": {
+          "title": "Aktiven Slide löschen",
+          "tooltip": "Slide entfernen"
+        },
+        "settings": {
+          "title": "Slider Einstellungen",
+          "tooltip": "Slider Einstellungen",
+          "header": "Swiper-Slider Einstellungen",
+          "body": {
+            "effect": "Slider Übergangseffekt:",
+            "autoPlay": "Automatische Wiedergabe aktivieren (im Vorschaumodus)",
+            "autoPlayDelay": "Autostart vom Slider verzögern, Sekunden"
+          }
+        }
+      }
+    },
+    "novi-plugin-vide": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "replaceVideo": {
+          "title": "Video ersetzen",
+          "tooltip": "Video ersetzen"
+        },
+        "replacePoster": {
+          "title": "Vorschaubild ändern",
+          "tooltip": "Vorschaubild ändern"
+        }
+      }
+    },
+    "novi-plugin-countdown": {
+      "settings": {
+        "inputPlaceholder": "Das PlugIn lässt sich auf die Elemente, die den Selector entsprechen, anwenden:",
+        "submitButton": "Einstellungen speichern"
+      },
+      "editor": {
+        "title": "Countdown Einstellungen",
+        "tooltip": "Countdown Einstellungen ändern",
+        "header": "Countdown Einstellungen",
+        "body": {
+          "type": "Typ:",
+          "time": " Zeit (z.B - 1. Jan 1970 00:00):",
+          "error": "Ungültiges Zeitformat! "
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+/** @section Background */
+
+%context-dark {
+	color: $white;
+
+	#{headings()} {
+		color: $white;
+	}
+
+	a {
+		@include link(inherit, $primary);
+	}
+
+	// Logo
+	.brand {
+		.brand-logo-dark { display: none; }
+
+		.brand-logo-light { display: block; }
+	}
+
+	.button-link {
+		&:hover {
+			color: $white;
+		}
+	}
+
+	// Blurb
+	.blurb__title {
+		color: $white;
+	}
+
+	.blurb-minimal {
+		color: $body-color;
+	}
+
+	// Progress bars
+	.progress-linear,
+	.progress-bar-circle-title,
+	.progress-circle-counter {
+		color: $white;
+	}
+
+	// Thumbnails
+	.thumb__title {
+		color: $white;
+
+		a {
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	.button-gray-light-outline {
+		@include btn-variant($white, transparent, $white, $primary, $white, $white);
+	}
+}
+
+%context-light {
+	#{headings()} {
+		color: $headings-color;
+	}
+
+	// Logo
+	.brand {
+		.brand-logo-dark { display: block; }
+
+		.brand-logo-light { display: none; }
+	}
+
+	@include media-breakpoint-down(xl) {
+		&.parallax-header {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba($gray-3, .33);
+			}
+		}
+	}
+}
+
+.context-dark {
+	@extend %context-dark;
+}
+
+.context-light {
+	@extend %context-light;
+}
+
+// Background colors
+//
+.bg-default {
+	@include bg-behaviour($white);
+}
+
+.bg-gray-lighter {
+	@extend %context-light;
+	@include bg-behaviour($gray-lighter);
+}
+
+// Background image
+//
+.bg-image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.bg-image-bottom {
+	background-position: center bottom;
+}
+
+.bg-fixed {
+	.desktop & {
+		@include media-breakpoint-up(lg) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+.bg-mask {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background-color: rgba( $gray-800, .4 );
+	}
+}
+
+.bg-mask-light {
+	&::before {
+		background-color: rgba( $white, .4 );
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.bg-mask {
+		&::before {
+			display: none;
+		}
+	}
+}

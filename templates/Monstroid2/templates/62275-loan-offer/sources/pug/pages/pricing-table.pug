@@ -1,0 +1,130 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-pricing-table
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Pricing Table'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-xl-3
+          +pricing-table({
+            title: 'Starter',
+            price: '$14.89'
+          })
+            ul.list
+              li
+                span 10GB Storage amount
+              li Unlimited users
+              li 30GB Bandwidth
+              li 20 MySQL Databases
+
+        .col-md-6.col-xl-3
+            +pricing-table({
+              class: 'pricing-table-label',
+              label: 'most popular',
+              title: 'Standard',
+              price: '$32.89'
+            })
+              ul.list
+                li
+                  span 10GB Storage amount
+                li Unlimited users
+                li 30GB Bandwidth
+                li 20 MySQL Databases
+
+        .col-md-6.col-xl-3
+          +pricing-table({
+            title: 'Business',
+            price: '$76.89 '
+          })
+            ul.list
+              li
+                span 10GB Storage amount
+              li Unlimited users
+              li 30GB Bandwidth
+              li 20 MySQL Databases
+
+        .col-md-6.col-xl-3
+          +pricing-table({
+            title: 'Professional',
+            price: '$89.89'
+          })
+            ul.list
+              li
+                span 10GB Storage amount
+              li Unlimited users
+              li 30GB Bandwidth
+              li 20 MySQL Databases
+
+  +divider
+
+  section.section-lg.bg-default.text-center.text-md-left
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-md-6.col-lg-4.col-xl-3
+          .pricing-table-wrap
+            .pricing-table-custom
+              h5 Available options
+              ul.list-xxs.small
+                li Supported projects
+                li Amount of space
+                li Supported users
+                li Allowed bandwidth
+
+        .col-md-6.col-lg-4.col-xl-3
+            +pricing-table({
+                class: 'pricing-table-label',
+                label: 'most popular',
+                title: 'Standard',
+                price: '$32.89'
+            })
+              ul.list
+                li
+                  span 10GB Storage amount
+                li Unlimited users
+                li: span.icon.icon-secondary-2.linear-icon-cross2
+                li 20 MySQL Databases
+
+        .col-md-6.col-lg-4.col-xl-3
+          +pricing-table({
+              title: 'Business',
+              price: '$76.89 '
+          })
+            ul.list
+              li
+                span 10GB Storage amount
+              li Unlimited users
+              li: span.icon.icon-primary.linear-icon-check
+              li 20 MySQL Databases
+
+        .col-md-6.col-lg-4.col-xl-3
+          +pricing-table({
+              title: 'Professional',
+              price: '$89.89'
+          })
+            ul.list
+              li
+                span 10GB Storage amount
+              li Unlimited users
+              li: span.icon.icon-primary.linear-icon-check
+              li 20 MySQL Databases
+
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

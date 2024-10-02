@@ -1,0 +1,79 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+  
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Video post'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+
+
+  // Post single
+  section.section-sm.bg-default
+    .container.post-single
+      .post-single__header
+        h4.heading-decorated.heading-decorated_center Video post
+        .post-meta
+          .group
+            a(href=postLink): time(datetime='2017') Jan.20, 2017
+            a(href=postLink).meta-author by Brian Williamson
+            a(href=postLink) 3 comment(s)
+            +tag-list({
+              list_class: 'list-inline-tag',
+              href: postLink,
+              items: [
+                "Industry News",
+                'Industry News']
+            })
+  
+      .post-single__body
+        .post-video
+          .entry-video.embed-responsive.embed-responsive-16by9
+            iframe(width='886', height='496', src=videoSrc, allowfullscreen='')
+        p.first-letter
+          | Any construction business professional or an architect if they suffer from tantrums when penning their contract drawings, and you are more than likely to hear an enthusiastically frustrated, “YES!” Oh yes, the old 2D contract drawings, also called “plans” or “blueprints” or just “drawings”… They were bulky, hard to read, and difficult to be read through in between the construction site and the office. But even with all of this newfangled 3D modeling and the virtual or augmented reality devices, these blueprints continue to bring the construction industry down! But actually, there’s one quite valid reason that they won’t go away anytime soon. It’s because they are a part of the contract for every entity involved with the project.
+        p As construction professionals, we simply require at least one static version of a document, which clearly outlines our respective scopes of work. Subsequently, newer versions of these contract drawings emerge, as it happens for a majority of projects. Unsurprisingly, we struggle to keep up with all those full-sized and half-sized sets of paper plans and in keeping them updated accordingly.
+        +jpg('post-2-1500x1000')
+        p To understand how actually deep this issue is, imagine a project engineer who has just received an addendum to initial contract drawings, which replaces 50 of the 500 sheets in the set. Imagine him taking the three bolts out that bind the sheets together and then coping to locate where does exactly each sheet goes, leafing them in one by one, and then dog-earing and marking each outdated sheet as “VOID.” Think about how stupendous and monotonous a task like this is. Now imagine how would you feel if you were the manager of this project, who’s paying $50 per hour or more for the work. What’s worse, it’s not just a solo set of prints your team needs to update. Can you imagine how many other teams on this project have to do the exact same thing for each change that comes out? This image is not only horrifying; it is costly, frustrating, and very unproductive. What you just pictured is the reality of contract documents. I’ve learned that the hard way, because I’m a project engineer. So why, with all of the digital drawing solutions available, are we still using paper at all?
+        p The answer is that there are several use cases for viewing and manipulating (marking up) drawings. For example, tablets and smartphones are great for referencing while walking the construction site, while typical PC displays are fine for many tasks involving the drawings. Nevertheless, for some activities, such as takeoffs, group discussion, or even “studying the project,” construction professionals tend to prefer a full-scale format, in which we can view larger portions or all of the drawings without excessive zooming in or panning.
+        p Though the tool we now have available are touch-enabled LCD panels, provided by companies such as BoxLight and iPlanTables , which have served as a digital solution for large-sized drawings for several years and are good at what they do. However, to put a 70-100lb, the cart-mounted system in your office or cubicle may require some rearranging or may become impossible. That’s why so many constructions and architecture firms purchase just one or two to place in a centralized location in the office if they buy any of these at all.
+        +jpg('post-3-1500x1125')
+        p Resistance to behavioral patterns change is the main reason which attributes to the AEC industry being so slow in adopting to a new and better technology. That’s why what may resonate better with people like me is a paper-like experience, flat on your desk or plan table. However, using tried and true paper has its costs on today’s fast-paced construction business.
+
+        +list-inline-icon({
+          list_class: 'list-inline-sm',
+          items: [
+            "icon-sm fa-facebook",
+            'icon-sm fa-twitter',
+            'icon-sm fa-google-plus',
+            'icon-sm fa-vimeo',
+            'icon-sm fa-youtube',
+            'icon-sm fa-pinterest-p']
+        })
+
+      .post-single__aside
+        include ../sections/_section-blog-post-comment
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

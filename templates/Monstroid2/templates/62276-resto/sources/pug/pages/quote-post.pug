@@ -1,0 +1,64 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-label-list
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Quote post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            .post-meta-top
+              +label-list({
+                list_class: 'list-inline list-label-custom',
+                href: postQuote,
+                items: [
+                  "Restaurant"]
+              })
+            h4 Authentic German Bread (Bauernbrot) Cooking Classes
+            .post-meta
+              .group
+                a(href=postQuote): time(datetime='2017') Jan.20, 2016
+                a(href=postQuote) by Brian Williamson
+                a(href=postQuote) 3 comment(s)
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postQuote,
+                    items: [
+                        "Style",
+                        'Clean']
+                })
+                
+            .post-quote
+              // Quote default
+              .quote-default.quote-default_left.quote-default__border-left
+                .quote-default__text: p.q.heading-4 Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer for years before starting his own business. He and her wife Jane launched a gourmet foods and sandwich shop in 2008.
+                p.quote-default__cite Adam Smith
+            
+            include ../sections/_section-blog-post-single-content
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left.section-divided__aside-layout-1
+          include ../sections/_section-aside-sidebar-post
+
+  // Modal
+  include ../sections/_section-modal
+
+  // Page Footer
+  include ../sections/_footer-minimal

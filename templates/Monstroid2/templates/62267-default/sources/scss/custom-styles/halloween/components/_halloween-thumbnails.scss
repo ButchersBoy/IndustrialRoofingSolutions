@@ -1,0 +1,87 @@
+/** @section Thumbnails */
+
+/* Thumbnail classic */
+.halloween-thumbnail-media {
+	position: relative;
+	display: inline-block;
+	max-width: 320px;
+	background-color: $halloween;
+
+	.halloween-thumbnail-img {
+		opacity: .7;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 25px;
+		bottom: 25px;
+		z-index: 1;
+		width: 13%;
+		content: '';
+		border-color: $white;
+		border-style: solid;
+		pointer-events: none;
+		transition: .25s;
+	}
+
+	&::before {
+		left: 25px;
+		border-width: 1px 0 1px 1px;
+	}
+
+	&::after {
+		right: 25px;
+		border-width: 1px 1px 1px 0;
+	}
+}
+
+.halloween-thumbnail-title {
+	font-weight: 500;
+}
+
+.desktop {
+	.halloween-thumbnail-media {
+		.halloween-thumbnail-img {
+			opacity: 1;
+			transition: $transition-base;
+		}
+
+		&::before,
+		&::after {
+			opacity: 0;
+			transition: .25s;
+		}
+
+		&::before {
+			transform: translateX( 30px );
+		}
+
+		&::after {
+			transform: translateX( -30px );
+		}
+
+		&:hover {
+			.halloween-thumbnail-img {
+				opacity: .7;
+			}
+
+			&::before,
+			&::after {
+				opacity: 1;
+				transform: translateX( 0 );
+			}
+		}
+	}
+}
+
+
+* + .halloween-thumbnail-title { margin-top: 29px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	* + .halloween-thumbnail-title { margin-top: 29px * $halloween-lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .halloween-thumbnail-title { margin-top: 29px }
+}

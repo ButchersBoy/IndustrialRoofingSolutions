@@ -1,0 +1,362 @@
+/** @section Panel custom */
+
+// Local variables
+$accordion-corporate-color: $white;
+$accordion-corporate-background: $secondary;
+$accordion-corporate-border: rgba($white, 0.15);
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $primary;
+$accordion-corporate-arrow-background: transparent;
+$accordion-corporate-shadow: none;
+$accordion-corporate-border-radius: 6px;
+$accordion-corporate-header-padding: 24px 140px 24px 45px;
+$accordion-corporate-content-padding: 0 140px 24px nth($accordion-corporate-header-padding, 4);
+
+$accordion-classic-color: $black;
+$accordion-classic-background: $white;
+$accordion-classic-border: transparent;
+$accordion-classic-content-color: $body-color;
+$accordion-classic-arrow-color: $white;
+$accordion-classic-arrow-background: $secondary;
+$accordion-classic-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);;
+$accordion-classic-border-radius: 6px;
+$accordion-classic-header-padding: 22px 70px 22px 30px;
+$accordion-classic-content-padding: 0 70px 22px nth($accordion-classic-header-padding, 4);
+
+// Panel groups
+.card-group-custom {
+	margin-bottom: 0;
+
+	.card-header + .collapse > .card-body,
+	.card-header + .collapse > .list-group {
+		border-top: 0;
+	}
+
+	.card + .card {
+		margin-top: 0;
+	}
+}
+
+.card-group-corporate {
+
+	.card + .card { margin-top: 15px; }
+
+	@include media-breakpoint-up(md) {
+		.card + .card { margin-top: 30px; }
+	}
+}
+
+.card-group-classic {
+
+	.card + .card { margin-top: 15px; }
+
+	@include media-breakpoint-up(md) {
+		.card + .card { margin-top: 20px; }
+	}
+}
+
+.card-custom {
+	display: block;
+	margin: 0;
+	background: inherit;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: left;
+
+	a {
+		display: block;
+	}
+
+	// Panel heading
+	.card-header {
+		padding: 0;
+		border-bottom: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	// Panel contents
+	.card-body {
+		padding: 0;
+		border: 0;
+	}
+
+	.card-title {
+		margin-bottom: 0;
+	}
+}
+
+* + .card-group-custom {
+	margin-top: 35px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+}
+
+// Panel corporate
+.card-corporate {
+	text-align: left;
+	box-shadow: $accordion-corporate-shadow;
+	border: 2px solid $accordion-corporate-border;
+	border-radius: $accordion-corporate-border-radius;
+	color: $body-color;
+	overflow: hidden;
+
+	.card-header {
+		background: transparent;
+	}
+
+	.card-title a,
+	.card-body {
+		background: $accordion-corporate-background;
+	}
+
+	.card-title a {
+		position: relative;
+		padding: 15px 40px 15px 15px;
+		font-size: 16px;
+		line-height: $h6-line-height;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		color: $accordion-corporate-color;
+		border-radius: 0;
+		transition: all .3s ease;
+		z-index: 1;
+
+		// Open state
+		.card-arrow {
+			&:after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+
+			.card-arrow {
+				&::before {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	// Panel arrow
+	.card-arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 30px;
+		color: $accordion-corporate-arrow-color;
+		background: $accordion-corporate-arrow-background;
+		z-index: 2;
+
+		&::before {
+			display: inline-block;
+			content: '\f157';
+			font-size: 16px;
+			line-height: 1;
+			font-family: $mdi;
+			transition: all .3s ease;
+			z-index: 4;
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-body {
+		padding: 0 15px 15px 15px;
+	}
+
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+
+		.card-corporate {
+			border-width: 3px;
+		}
+
+		.card-body {
+			padding-right: 30px;
+		}
+	}
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+
+		.card-title a {
+			font-size: 18px;
+			padding: 20px 60px 20px 20px;
+		}
+
+		.card-body {
+			padding: 0 60px 20px 20px;
+		}
+
+		.card-arrow {
+			width: 50px;
+
+			&::before {
+				font-size: 18px;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.card-title a {
+			font-size: $h6-font-size;
+			padding: $accordion-corporate-header-padding;
+		}
+
+		.card-body {
+			padding: $accordion-corporate-content-padding;
+		}
+
+		.card-arrow {
+			width: 70px;
+
+			&::before {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+// Context style
+%context-light {
+
+}
+
+
+// Panel classic
+.card-classic {
+	text-align: left;
+	box-shadow: $accordion-classic-shadow;
+	border: none;
+	border-radius: $accordion-classic-border-radius;
+	color: rgba($black, .8);
+	overflow: hidden;
+
+	.card-header {
+		background: transparent;
+	}
+
+	.card-title a,
+	.card-body {
+		background: $accordion-classic-background;
+	}
+
+	.card-title a {
+		position: relative;
+		padding: 15px 50px 15px 15px;
+		font-size: 16px;
+		line-height: $h6-line-height;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		color: $accordion-classic-color;
+		border-radius: 0;
+		transition: all .3s ease-in-out;
+		z-index: 1;
+
+		&:hover {
+			color: $primary;
+
+			.card-arrow {
+				background: $primary;
+			}
+		}
+
+		// Open state
+		.card-arrow {
+			&:after {
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+
+			.card-arrow {
+				&::before {
+					content: '\f504';
+				}
+			}
+		}
+	}
+
+	// Panel arrow
+	.card-arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		color: $accordion-classic-arrow-color;
+		background: $accordion-classic-arrow-background;
+		transform: translateY(-50%);
+		transition: inherit;
+		z-index: 2;
+
+		&::before {
+			content: '\f465';
+			font-size: 20px;
+			line-height: 1;
+			font-family: $mdi;
+			z-index: 4;
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-body {
+		padding: 0 15px 15px 15px;
+	}
+
+	@include media-breakpoint-up(sm) {
+
+		.card-title a {
+			font-size: 18px;
+			padding-right: 60px;
+		}
+
+		.card-body {
+			padding-right: 60px;
+		}
+
+		.card-arrow {
+			right: 15px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.card-title a {
+			font-size: $h6-font-size;
+			padding: $accordion-classic-header-padding;
+		}
+
+		.card-body {
+			padding: $accordion-classic-content-padding;
+		}
+
+		.card-arrow {
+			right: 20px;
+		}
+	}
+}

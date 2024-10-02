@@ -1,0 +1,81 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-thumbnail-classic
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Services'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-default
+    .container
+      .row.row-50.justify-content-md-between
+        .col-md-5
+          h1  Private Dining, Catering & More...
+          h5 Extending your dining experience...
+          hr.divider-minimal.divider__left
+          
+        .col-md-6
+          p 
+            | Our restaurant has three beautifully decorated & intimate private dining rooms, 
+            i all of which are perfectly fit for dining, meetings, seminars and parties, for groups of 5 to 50!
+          h6 Also, besides that additional service we offer:
+          ul.list-marked
+            li Business catering
+            li Personal Catering
+            li Diet menu
+            li Food delivery
+          
+  section.section-md.bg-default
+    .container
+      .row.row-60
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-1-418x315',
+              title: 'Personal Events Catering',
+              text: 'We cater most types of private events. Starting with weddings, baby showers, bachelor parties, birthdays and finishing  with anniversaries...'
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-2-418x315',
+              title: 'Private Dining',
+              text: 'If you want to take one of our incredible dining halls for a little private rent, we\'ll be more than happy to help you make that happen!'
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-3-418x315',
+              title: 'Business Catering',
+              text: 'Our restaurant offers a business catering service that will ensure that a business meeting of any level will get both the perfect dishes and service!'
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-4-418x315',
+              title: 'Personal Menu Delivery',
+              text: 'If you\'re looking for a balanced,  well selected menu,  our tailored personal catering service will deliver it to you in no time!All of our menu items can be delivered that way!'
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-5-418x315',
+              title: 'Party Consulting',
+              text: 'As food events professionals, we\'ll be more than glad to spare one of our managers to advise you on party\'s menu, selection of beverages and the interior for any type of occassion...'
+          })
+        .col-md-6.col-xl-4
+          +thumbnail-classic({
+              img: 'services-6-418x315',
+              title: 'Diet Menu',
+              text: 'We know how hard it is to follow a diet on your own... We will customize its menu for any specific type of diet you\'re on! We\'ll even deliver it to your doorstep, 3 times a day!'
+          })
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

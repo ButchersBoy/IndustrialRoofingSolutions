@@ -1,0 +1,231 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Home Commercial'
+
+block page
+	// Page Header
+	include ../sections/_header-commercial
+	='\n'
+	
+	include ../sections/_section-slider-commercial
+	='\n'
+	
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center(id=seeFeaturesLink)
+		.container
+			.row.row-fix.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3
+						| Multiple Themes &
+						br
+						| a Variety of Features
+					p Monstroid² is a multipurpose template optimized for various niches of business. Besides neutral classic websites you can create restaurant, hotel, sport gym website and much much more. There is also a variety of useful features that are included with this template.
+			.row.row-50
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-1-418x315',
+						title: 'Bootstrap Framework',
+						text:  'Monstroid² is based on Bootstrap Framework, which makes it a nice template for any purpose.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-2-418x315',
+						title: 'Customizable Template',
+						text:  'Use our Template to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-3-418x315',
+						title: 'Responsive & Retina Ready',
+						text:  'Monstroid² looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+	='\n'
+	
+	// Consistency is the Key
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent
+		.container
+			.row.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-5
+					h3 Consistency is the Key
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+				
+				.col-md-9.col-lg-6
+					figure
+						+jpg('home-commerial-1-652x491')
+	='\n'
+	
+	// Blurbs
+	section.section.novi-bg.novi-bg-img.section-xl
+		.container
+			.row.row-50.row-lg-90
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title Built for Speed
+							p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title Flexible and Multipurpose
+							p Monstroid² allows to create various websites for complex and scalable  projects.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						.unit-body
+							p.blurb__title SEO Friendly
+							p Valid code and performance optimized framework make SEO easy and hassle-free.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-headset
+						.unit-body
+							p.blurb__title 24/7 Support
+							p 24/7 Premium technical support and great documentation are included in this template price.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title Social Integration
+							p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cart-full
+						.unit-body
+							p.blurb__title Advanced UI Kit
+							p Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+	
+	include ../sections/_section-cta-3
+	
+	// Share Your Company Testimonials
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Share Your Company Testimonials
+			// Owl Carousel
+			.owl-carousel(data-autoplay='true' data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+				
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.item
+					// Quote default
+					.quote-default
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	// Gallery
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default(data-lightgallery="group")
+		.container-fluid
+			.row.g-0
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-3-1200x906.jpg')
+						figure
+							+jpg('home-default-9-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-9-1200x905.jpg')
+						figure
+							+jpg('home-commercial-2-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-10-1200x675.jpg')
+						figure
+							+jpg('home-commercial-3-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-11-1200x1200.jpg')
+						figure
+							+jpg('home-commercial-4-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-12-1200x797.jpg')
+						figure
+							+jpg('home-commercial-5-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-13-1200x800.jpg')
+						figure
+							+jpg('home-commercial-6-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-14-1200x905.jpg')
+						figure
+							+jpg('home-commercial-7-480x361')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery="item" href='images/image-original-6-1200x905.jpg')
+						figure
+							+jpg('home-default-12-472x355')
+						.thumb-modern__overlay
+	='\n'
+	
+	include ../sections/_section-brand-carousel
+	include ../sections/_section-cta-5
+	
+	// Page Footer
+	footer.footer-minimal
+		.container
+			h5
+				| Get the latest news delivered daily!
+				br
+				|  We will send you breaking news right to your inbox.
+			// RD Mailform
+			form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+				.form-wrap.form-wrap_icon
+					span.novi-icon.form-icon.linear-icon-envelope
+					input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+					label.form-label(for="contact-email") Enter please your e-mail
+				button(type="submit").button.button-primary Subscribe!
+			
+			ul.list-inline-sm.footer-minimal__list
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-youtube(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+			
+			+rights

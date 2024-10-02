@@ -1,0 +1,365 @@
+// Contexts
+// -------------------------
+
+%context-dark {
+  color: $white;
+
+  #{headings()} {
+    color: $white;
+  }
+
+  a {
+    @include link($gray, $primary);
+  }
+
+  a.icon-primary {
+    @include link($white,  $primary);
+  }
+  
+  // Icons
+  a.icon-gray-darker {
+    color: $white;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+  
+  // Buttons
+  .button-link {
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .link-primary {
+    color: $primary;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  // Lists
+  .list-primary {
+    > li > a {
+      color: $primary;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  
+  .list-semicolon {
+    > li {
+      &:before {
+        color: $gray;
+      }
+    }
+  }
+
+  // Blurb
+  .blurb__title {
+    color: $white;
+  }
+
+  .blurb-circle {
+    &,
+    .blurb-circle__icon .icon {
+      color: $white;
+    }
+  }
+
+  .blurb-minimal {
+    color: $body-color;
+  }
+
+  // Countdown
+  .countdown-default {
+    .countdown-section {
+      border-color: $white;
+    }
+
+    .countdown-period,
+    .countdown-amount {
+      color: $white;
+    }
+  }
+
+  // Counters
+  .box-counter {
+    color: $primary;
+  }
+
+  .box-counter__title,
+  .box-counter__icon {
+    color: $white;
+  }
+
+  // Progress bars
+  .progress-linear,
+  .progress-bar-circle-title,
+  .progress-bar-circle span {
+    color: $white;
+  }
+
+  // Thumbnails
+  .thumb__title {
+    color: $white;
+
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  // Comment minimal
+  .comment-minimal__link {
+    a {
+      color: $white;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .comment-minimal__author {
+    color: rgba($white, .4);  
+  }
+
+  .list-terms-minimal {
+    color: $gray;
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($white, transparent, $white, $white, $primary, $primary);
+  }
+
+  // Swiper
+  .swiper-pagination-bullet {
+    background: rgba($gray-4, .7);
+  }
+
+  .swiper-pagination-bullet:hover,
+  .swiper-pagination-bullet-active {
+    background: $white;
+  }
+
+  .quote-default__cite {
+    color: $white;
+  }
+}
+
+%context-light {
+  #{headings()} {
+    color: $headings-color;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .parallax-header {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($gray-3, .33);
+      }
+    }
+  }
+}
+
+.context-dark {
+  @extend %context-dark;
+}
+
+.context-light {
+  @extend %context-light;
+}
+
+// Background colors
+//
+.bg-default {
+  @include bg-behaviour($white);
+}
+
+.bg-accent {
+  @include bg-behaviour($primary);
+  @extend %context-dark;
+  .button-primary {
+    @include btn-variant($black, $white, $white, $white, $black, $black);
+  }
+
+  .button-black {
+    @include btn-variant($white, $black, $black, $black, $white, $white);
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($white, transparent, $white, $black, $white, $white);
+  }
+
+  // Box counter
+  .box-counter {
+    color: $white;
+  }
+
+  // Heading decorated
+  .heading-decorated {
+    &::before {
+      background: $white;
+    }
+  }
+
+  // Divider
+  .divider-small {
+    background: $white;
+  }
+
+  // Progress bars
+  .progress-linear-modern {
+    .progress-bar-linear-wrap {
+      &:after {
+        background: $white;
+      }
+    }
+  }
+
+  // Blurb
+  .blurb-minimal {
+    &,
+    .blurb-minimal__icon .icon {
+      color: $white;
+    }
+  }
+}
+
+.bg-gray-dark {
+  @extend %context-dark;
+  @include bg-behaviour($gray-dark);
+  //color: $body-color;
+}
+
+.bg-black {
+  @extend %context-dark;
+  @include bg-behaviour($black);
+}
+
+.bg-gray-darker { 
+  @extend %context-dark;
+  @include bg-behaviour($gray-darker);
+  color: $gray;
+}
+
+.bg-gray-darkest {
+  @extend %context-dark;
+  @include bg-behaviour($gray-darkest);
+  color: $gray;
+}
+
+.bg-black {
+  @include bg-behaviour($black);
+
+  .blurb__title {
+    color: $white;
+  }
+}
+
+.bg-gray-lighter {
+  @extend %context-light;
+  @include bg-behaviour($gray-lighter);
+}
+
+// Background image
+//
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-image-bottom {
+  background-position: center bottom;
+}
+
+.bg-image-2 {
+  background-image: url("../images/bg-image-2.jpg");
+}
+
+.bg-image-3 {
+  background-image: url("../images/bg-image-3.jpg");
+}
+
+.bg-image-4 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-4.jpg");
+}
+
+.bg-image-6 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-6.jpg");
+}
+
+.bg-image-7 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-7.jpg");
+}
+.bg-image-8 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-8.jpg");
+}
+.bg-image-9 {
+  background-image: url("../images/bg-image-9.jpg");
+}
+
+
+.bg-fixed {
+  .desktop & {
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+.bg-overlay-light,
+.bg-overlay-dark,
+.bg-overlay-darker,
+.bg-overlay-darkest {
+  position: relative;
+  
+  &:before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: "";
+    background-color: rgba($white, .3);
+  }
+  
+  > * {
+    position: relative;
+  }
+}
+
+.bg-overlay-dark {
+  &:before{
+    background-color: rgba($black, .3);
+  }
+}
+
+.bg-overlay-darker {
+  &:before{
+    background-color: rgba($black, .4);
+  }
+}
+.bg-overlay-darkest { 
+  &:before{
+    background-color: rgba($black, .8);
+  }
+}
+
+.bg-accent-gradient {
+  background-image: linear-gradient(to right, $primary 5%, darken($primary, 20%));
+}

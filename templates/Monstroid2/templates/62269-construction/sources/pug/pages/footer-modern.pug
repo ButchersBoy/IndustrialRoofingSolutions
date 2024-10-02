@@ -1,0 +1,19 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Footer modern'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  include ../sections/_section-posts
+  include ../sections/_section-cta-1
+
+  // Page Footer
+  include ../sections/_footer-modern
+

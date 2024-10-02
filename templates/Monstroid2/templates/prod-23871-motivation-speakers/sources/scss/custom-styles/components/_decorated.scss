@@ -1,0 +1,92 @@
+/** @section Decorated */
+
+// Decoration
+.decor-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@include media-breakpoint-up(xl) {
+  .decor-1 {
+    top: -50px;
+
+  }
+}
+
+.decor-2 {
+  position: absolute;
+  z-index: -1;
+  right: -280px;
+  top: -260px;
+}
+
+@include media-breakpoint-up(sm) {
+  .decor-2 {
+    right: -100px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .decor-2 {
+    right: 0;
+  }
+}
+
+.decor-3 {
+  position: absolute;
+  top: calc( 100% - 190px );
+  right: 0;
+  z-index: -1;
+}
+
+.decor-4 {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+}
+
+@include media-breakpoint-up(xl) {
+  .decor-4 {
+    left: calc(50% - 642px);
+    bottom: 95px;
+  }
+}
+
+.decor-5 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.decor-6 {
+  position: absolute;
+  bottom: 25px;
+  right: 9%;
+}
+
+@include media-breakpoint-up(xl) {
+  .decor-6 {
+    right: calc(50% - 580px);
+  }
+}
+
+.decor-7 {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  z-index: -1;
+
+  img { width: 100%; }
+
+  @include media-breakpoint-up(xl) {
+    right: calc( 50% - 640px );
+  }
+}
+
+.decor-8 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}

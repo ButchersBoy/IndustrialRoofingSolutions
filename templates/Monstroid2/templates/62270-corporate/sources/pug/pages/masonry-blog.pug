@@ -1,0 +1,39 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Masonry Blog'
+
+block page
+	// Page header 
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.bg-gray-3.section-md
+		.container
+			.posts-lists-masonry-3-cols
+				include ../includes/_post-grid-classic
+				include ../includes/_post-grid-link
+				include ../includes/_post-grid-slider
+				include ../includes/_post-grid-video
+				include ../includes/_post-grid-standart
+				include ../includes/_post-grid-quote
+				include ../includes/_post-grid-audio
+
+			include ../includes/_pagination-classic
+
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

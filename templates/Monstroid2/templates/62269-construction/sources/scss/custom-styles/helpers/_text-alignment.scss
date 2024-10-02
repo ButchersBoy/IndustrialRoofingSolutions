@@ -1,0 +1,56 @@
+/*
+*
+* Text Alignment
+* --------------------------------------------------
+*/
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-middle{
+  vertical-align: middle;
+}
+
+@mixin make-text-alignment($resolution){
+  .text-#{$resolution}-left {
+    text-align: left;
+  }
+
+  .text-#{$resolution}-center {
+    text-align: center;
+  }
+
+  .text-#{$resolution}-right {
+    text-align: right;
+  }
+
+  .text-#{$resolution}-justify {
+    text-align: justify;
+  }
+}
+
+html:not(.lt-ie10) {
+  @include media-breakpoint-up(sm) {
+    @include make-text-alignment("xs");
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-text-alignment("sm");
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-text-alignment("md");
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include make-text-alignment("lg");
+  }
+}

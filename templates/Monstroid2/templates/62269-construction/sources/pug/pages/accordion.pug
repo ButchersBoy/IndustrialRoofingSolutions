@@ -1,0 +1,42 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-card
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Accordion'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-md.bg-default
+    .container
+      // Accordion
+      #accordion(role='tablist')
+        +card({ 
+          parentId: "accordion",
+          number: "1",
+          header: "Technical Support Representative"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+        +card({
+          parentId: "accordion",
+          number: "2",
+          header: "Customer Care Specialist"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+        +card({
+          parentId: "accordion",
+          number: "3",
+          header: "Interactive Art Director"
+        })
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

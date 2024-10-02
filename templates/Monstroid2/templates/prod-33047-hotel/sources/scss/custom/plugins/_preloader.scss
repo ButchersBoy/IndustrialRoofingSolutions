@@ -1,0 +1,105 @@
+/** @section Preloader */
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: $white;
+	transition: .3s all ease;
+
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.preloader-body {
+	text-align: center;
+
+	p {
+		position: relative;
+		right: -8px;
+	}
+}
+
+
+// Custom Styles
+.preloader-container {
+	width: 8em;
+	height: 4em;
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+	}
+
+	&::before {
+		left: 0;
+		width: inherit;
+		height: 2px;
+		background-color: $primary;
+	}
+
+	&::after {
+		box-sizing: border-box;
+		width: 50%;
+		height: inherit;
+		border: 2px solid $primary;
+		border-radius: 50%;
+		left: 25%;
+	}
+
+	span {
+		position: absolute;
+		width: 5%;
+		height: 10%;
+		background-color: $dark;
+		border-radius: 50%;
+		bottom: 0.2em;
+		left: -5%;
+		animation: 2s linear infinite;
+		transform-origin: 50% -1.5em;
+		animation-name: run, rotating;
+
+		&:nth-child(2) {
+			animation-delay: 0.075s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: 0.15s;
+		}
+	}
+}
+
+
+@keyframes run {
+	0% {
+		left: -5%;
+	}
+	10%, 60% {
+		left: calc((100% - 5%) / 2);
+	}
+	70%, 100% {
+		left: 100%;
+	}
+}
+
+@keyframes rotating {
+	0%, 10% {
+		transform: rotate(0deg);
+	}
+	60%, 100% {
+		transform: rotate(-1turn);
+	}
+}

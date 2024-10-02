@@ -1,0 +1,208 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Home Modern'
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar(
+			data-layout='rd-navbar-fixed',
+			data-sm-layout='rd-navbar-fixed',
+			data-sm-device-layout='rd-navbar-fixed',
+			data-md-layout='rd-navbar-fixed',
+			data-md-device-layout='rd-navbar-fixed',
+			data-lg-device-layout='rd-navbar-fixed',
+			data-xl-device-layout='rd-navbar-sidebar',
+			data-xxl-device-layout='rd-navbar-sidebar',
+			data-lg-layout='rd-navbar-fixed',
+			data-xl-layout='rd-navbar-sidebar',
+			data-xxl-layout='rd-navbar-sidebar',
+			data-stick-up-clone='false',
+			data-sm-stick-up='true'
+			data-md-stick-up='true'
+			data-lg-stick-up='true',
+			data-xl-stick-up='true',
+			data-xxl-stick-up='true',
+			data-lg-stick-up-offset='50px',
+			data-xl-stick-up-offset='50px',
+			data-xxl-stick-up-offset='50px',
+			data-body-class='rd-navbar-absolute',
+			data-md-hover-on='false',
+			data-lg-hover-on='false',
+			data-sm-auto-height='false')
+				// RD Navbar Panel
+				.rd-navbar-panel
+					button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+					
+					// RD Navbar Brand
+					.rd-navbar-brand
+						+logo
+					
+					
+					.rd-navbar-element
+				// RD Navbar Nav
+				.rd-navbar-nav-wrap
+					+navigation( menu )
+	='\n'
+	
+	include ../sections/_section-slider-modern
+	='\n'
+	
+	// Posts
+	section.section.novi-section
+		.container-fluid
+			.row.g-0
+				.col-md-6
+					// Post modern
+					article.post-modern
+						+jpg('home-modern-1-886x668')
+						.post-modern__inner
+							ul.list-inline-tag
+								li: a(href='#') Project
+								li: a(href='#') Style
+								li: a(href='#') Clean
+							h5.post-modern__title: a(href=postLink) 10 Reasons to Buy Monstroid².
+							.post-modern__divider
+				
+				.col-md-6
+					// Post modern
+					article.post-modern
+						+jpg('home-modern-2-886x668')
+						.post-modern__inner
+							ul.list-inline-tag
+								li: a(href='#') Project
+								li: a(href='#') Style
+								li: a(href='#') Clean
+							h5.post-modern__title: a(href=postLink) Turning Your Site Into a Sales Machine.
+							.post-modern__divider
+				
+				.col-md-4
+					// Post modern
+					article.post-modern
+						+jpg('home-modern-3-886x668')
+						.post-modern__inner
+							ul.list-inline-tag
+								li: a(href='#') Project
+								li: a(href='#') Style
+								li: a(href='#') Clean
+							h5.post-modern__title: a(href=postLink) Installing Your First HTML Template
+							.post-modern__divider
+				
+				.col-md-4
+					// Post modern
+					article.post-modern
+						+jpg('home-modern-4-886x668')
+						.post-modern__inner
+							ul.list-inline-tag
+								li: a(href='#') Project
+								li: a(href='#') Style
+								li: a(href='#') Clean
+							h5.post-modern__title: a(href=postLink) 100% Satisfaction Guaranteed
+							.post-modern__divider
+				
+				.col-md-4
+					// Post modern
+					article.post-modern
+						+jpg('home-modern-5-886x668')
+						.post-modern__inner
+							ul.list-inline-tag
+								li: a(href='#') Project
+								li: a(href='#') Style
+								li: a(href='#') Clean
+							h5.post-modern__title: a(href=postLink) Responsive & Retina Ready
+							.post-modern__divider
+	
+	='\n'
+	
+	// The Power of Bootstrap Toolkit
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center(id=seeFeaturesLink)
+		.container
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3 The Power of Bootstrap Toolkit
+					p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Toolkit. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards.
+	='\n'
+	
+	include ../sections/_section-brand-carousel
+	
+	// Quotes
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			// Owl Carousel
+			.owl-carousel(data-autoplay='true' data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-1-120x120')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+				
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-2-120x120')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-3-120x120')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	include ../sections/_section-found
+	
+	// Page Footer
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3 Get in touch
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+						
+						button(type="submit").button.button-primary send
+	='\n'
+	
+	// Footer minimal
+	footer.footer-minimal
+		.container
+			ul.list-inline-sm.footer-minimal__list
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-facebook(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-twitter(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-google-plus(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-vimeo(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-youtube(href='#')
+				li: a.icon.novi-icon.icon-sm.icon-primary.fa.fa-pinterest(href='#')
+			+rights

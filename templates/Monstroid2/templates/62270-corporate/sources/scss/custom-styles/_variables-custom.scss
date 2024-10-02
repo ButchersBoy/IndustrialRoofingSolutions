@@ -1,0 +1,259 @@
+//
+// Variables Custom
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+// Gray colors
+$white: #ffffff;
+$gray-100: #edeff4;
+$gray-200: #d7d7d7;
+$gray-300: #cccccc;
+$gray-400: #b7b7b7;
+$gray-500: #9b9b9b;
+$gray-600: #868e96;
+$gray-700: #2c343b;
+$gray-800: #151515;
+$gray-900: #111111;
+$black: #000000;
+
+
+$gray-darker:             #292929; //
+$gray-dark:               #333333; //
+$gray:                    #777777; //
+$gray-light:              #e0e0e2;
+$gray-lighter:            #e5e5e5; //
+
+$primary:                 #23d7b2; // 
+$secondary:               #ba5ffd; //
+$secondary-2:             #ff596d;
+$secondary-3:             #033840;
+$secondary-4:             #ffc045;
+$secondary-5:             #5dd1c1;
+$secondary-6:             #e9f8ff;
+$secondary-7:             #90dfcf;
+$secondary-8:             #e9f9f6;
+
+$gray-1:                  #ececee; //
+$gray-2:                  #888888; //
+$gray-3:                  #f7f7f7; //
+$gray-4:                  #c7c7c7;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $white;
+//** Global text color on `<body>`.
+$body-color:            $gray;
+
+//** Global textual link color.
+$link-color:            $primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      $black;
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+// Import fonts
+
+
+$font-family-sans-serif:  "Hind Siliguri", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-icons:              "Linearicons";
+
+
+$font-family-base:        $font-family-sans-serif;
+$font-family-sec:         $font-family-serif;
+
+
+// Template width (w/o units)
+$template-width:          1920;
+
+// Template width var for resizing
+$template-width-min:      ($template-width+1)*1px;
+$layout-boxed-width:      1920px;
+
+
+// Base FZ & LH (w/o units)
+$base-text-size:          18;
+$base-lh-size:            31;
+
+$base-vm-size:            (($base-text-size*100)/$template-width)*1vw;
+
+
+$font-size-base:          $base-text-size * 1px;
+$font-size-lg:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-sm:         14px;
+
+$font-weight-base:        300;
+
+//PSD FZ headers /FOR EDIT (w/o units)
+$Size-h1:                 80;
+$Size-h2:                 60;
+$Size-h3:                 40;
+$Size-h4:                 30;
+$Size-h5:                 24;
+$Size-h6:                 22;
+
+//PSD LH headers /FOR EDIT (w/o units)
+$Lh-h1:                   88;
+$Lh-h2:                   80;
+$Lh-h3:                   54;
+$Lh-h4:                   43;
+$Lh-h5:                   37;
+$Lh-h6:                   28;
+
+
+//Calculating FZ headers
+$h1-font-size:            $Size-h1*1px;
+$h2-font-size:            $Size-h2*1px;
+$h3-font-size:            $Size-h3*1px;
+$h4-font-size:            $Size-h4*1px;
+$h5-font-size:            $Size-h5*1px;
+$h6-font-size:            $Size-h6*1px;
+
+
+//** line-height for headers /FOR EDIT
+// $font-lh-h_: floor((PSD l-h / $h1-font-size));
+
+$h1-line-height:              ($Lh-h1 / $Size-h1);
+$h2-line-height:              ($Lh-h2 / $Size-h2);
+$h3-line-height:              ($Lh-h3 / $Size-h3);
+$h4-line-height:              ($Lh-h4 / $Size-h4);
+$h5-line-height:              ($Lh-h5 / $Size-h5);
+$h6-line-height:              ($Lh-h6 / $Size-h6);
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        ($base-lh-size / $base-text-size); // l-h/fz-base
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit;
+$headings-font-weight:    200;
+$headings-line-height:    1.2;
+$headings-color:          $gray-dark;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs:                  480px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+// Extra Large screen / 4k desktop
+$screen-xl:                  1600px;
+$screen-xl-min:              $screen-xl;
+$screen-xl-desktop:          $screen-xl-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs-min - 1);
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
+
+// Define media prefix
+$medias: (0: null, $screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl);
+
+$screen-height-desktop: 800px;
+$screen-height-desktop-1: 880px;
+
+//== Flex Grid system
+//
+//## Define your custom flex responsive grid.
+
+
+
+$shell-width:         300px;
+$shell-xs-width:      480px;
+$shell-sm-width:      750px;
+$shell-md-width:      970px;
+$shell-lg-width:      1400px;
+$shell-xl-width:      1800px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px
+);
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1400px,
+    xxl: 1600px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$range-ws:            35px;
+$range-ws-sm:         20px;
+$range-ws-lg:         66px;
+
+$cell-count:          12;
+$cell-spacing:        30px;
+$cell-spacing-narrow: 10px;
+
+
+//== Shadows
+//
+//##
+
+$shadow-area-ambient: 0px 0px 1px 0 rgba(0, 0, 0, 0.15);
+$shadow-area-xxs: 1px 1px 1px rgba(0, 0, 0, 0.15);
+$shadow-area-xs: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+$shadow-area-sm: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+$shadow-area-md: 0 3px 11px 0 rgba(0, 0, 0, 0.15);
+$shadow-area-lg: 0 5px 23px 0 rgba(0, 0, 0, 0.15);
+$shadow-area-xl: 0 0 57px 0 rgba(0, 0, 0,.09);
+
+
+//== Buttons variables
+//
+$btn-font-family:         $font-family-base;
+$btn-font-size:           16px;
+$btn-font-weight:         600;
+$btn-lh-size:             1.2;
+
+// Border radius
+
+$border-radius-small:     4px;
+
+$zindex-lg: 1090;
+ 

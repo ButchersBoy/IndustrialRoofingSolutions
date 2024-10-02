@@ -1,0 +1,60 @@
+/*
+*
+* Tooltip Custom
+* --------------------------------------------------
+*/
+
+
+//== Tooltips variables
+//
+//##
+
+//** Tooltip max width
+$tooltip-max-width:     253px;
+
+//** Tooltip background color
+$tooltip-bg: $primary;
+$tooltip-opacity: 1;
+
+//** Tooltip arrow width
+$tooltip-arrow-width: 5px;
+
+//** Tooltip arrow color
+$tooltip-arrow-color: $tooltip-bg;
+
+
+.tooltip-custom {
+  color: $primary;
+
+  .tooltip {
+    font-family: $font-family-base;
+
+    &.in {
+      opacity: $tooltip-opacity;
+    }
+
+    &-inner {
+      max-width: $tooltip-max-width;
+      padding: 4px 8px;
+      font-size: 14px;
+      border-radius: 0;
+      background: $tooltip-bg;
+    }
+
+    &.left .tooltip-arrow {
+      border-left-color: $tooltip-bg;
+    }
+
+    &.right .tooltip-arrow {
+      border-right-color: $tooltip-bg;
+    }
+
+    &.top .tooltip-arrow {
+      border-top-color: $tooltip-bg;
+    }
+
+    &.bottom .tooltip-arrow {
+      border-bottom-color: $tooltip-bg;
+    }
+  }
+}

@@ -1,0 +1,1158 @@
+{
+  "errors": {
+    "serverNotFound": "",
+    "dontSaveProject": "",
+    "noCurrentProject": "",
+    "emailFieldNotSet": "",
+    "messageCanNotBeSend": "",
+    "bigFileChosen": "",
+    "maxFileSize": "",
+    "maxFileCount": "",
+    "noSuchFile": "",
+    "totalFileSize": "",
+    "zipExtension": "",
+    "templateUpload": "",
+    "openZip": "",
+    "templateImporting": "",
+    "projectImporting": "",
+    "modSecurity": "",
+    "failedToSave": "",
+    "serverUnavailable": "",
+    "wrongFileFormat": ""
+
+  },
+  "codeEditor": {
+    "noFiles": "",
+    "openStyleManager": "",
+    "closeStyleManager": "",
+    "autoSave": "",
+    "codeError": "",
+    "codeErrorLink": "",
+    "noPages": "",
+    "fileSelect": "",
+    "fileReadOnly": "",
+    "notValidHtml": "",
+    "notValidCss": "",
+    "editorDisabledTitle": "",
+    "editorDisabledDescription": "",
+    "editorDisabledButtonText": ""
+  },
+  "editor": {
+    "moveLabel": "",
+    "moveItem": {
+      "tooltip": "",
+      "title": ""
+    },
+    "replaceItem": {
+      "tooltip": "",
+      "headerTitle": "",
+      "title": ""
+    },
+    "duplicateItem": {
+      "tooltip": "",
+      "title": ""
+    },
+    "removeItem": {
+      "tooltip": "",
+      "title": ""
+    }
+  },
+  "switcher": {
+    "yes": "",
+    "no": ""
+  },
+  "builderLoading": {
+    "progressStep1": "",
+    "progressStep2": "",
+    "progressStep3": ""
+  },
+  "failedLoadProjectScreen": {
+    "title": "",
+    "subtitle": "",
+    "chooseText": "",
+    "openProjectDescription": "",
+    "openProjectButton": "",
+    "openTemplateDescription": "",
+    "openTemplateButton": ""
+  },
+  "tooltips": {
+    "insertPreset": "",
+    "projectSave": "",
+    "projectSettings": "",
+    "pageSettings": "",
+    "previewModeTitle": "",
+    "previewModeDescription": "",
+    "editModeTitle": "",
+    "editModeDescription": "",
+    "designModeTitle": "",
+    "designModeDescription": ""
+  },
+  "startScreen": {
+    "title": "",
+    "subtitle": ""
+  },
+  "iconManager": {
+    "headerTitle": "",
+    "searchPlaceholder": "",
+    "uploadTitle": "",
+    "emtySearchMessage": "",
+    "errorMessage": "",
+    "submitButton": ""
+  },
+  "introduction": {
+    "slide1": {
+      "title": "",
+      "subtitle": "",
+      "body": ""
+    },
+    "slide2": {
+      "title": "",
+      "subtitle": "",
+      "body": ""
+    },
+    "slide3": {
+      "title": "",
+      "subtitle": "",
+      "bodyParagraph1": "",
+      "bodyParagraph2": "",
+      "bodyParagraph3": ""
+    },
+    "slide4": {
+      "title": "",
+      "subtitle": "",
+      "bodyParagraph1": "",
+      "bodyParagraph2": ""
+    },
+    "slide5": {
+      "title": "",
+      "subtitle": "",
+      "body": ""
+    },
+    "slide6": {
+      "title": "",
+      "subtitle": "",
+      "bodyParagraph1": "",
+      "bodyParagraph2": "",
+      "bodyParagraph3": "",
+      "bodyParagraph4": "",
+      "bodyParagraph5": "",
+      "bodyParagraph6": ""
+    },
+    "slide": "",
+    "of": "",
+    "skip": "",
+    "next": "",
+    "end": ""
+  },
+  "mainMenu": {
+    "tooltip": "",
+    "importItem": "",
+    "importProjectItem": "",
+    "importTemplateItem": "",
+    "exportItem": "",
+    "exportProjectItem": "",
+    "exportTemplateItem": "",
+    "exportError": "",
+    "mediaLibraryItem": "",
+    "iconManagerItem": "",
+    "configurationItem": "",
+    "authorizationItem": "",
+    "settingsItem": "",
+    "feedbackItem": "",
+    "aboutItem": ""
+  },
+  "mediaLibrary": {
+    "headerTitle": "",
+    "categoryAll": "",
+    "categoryImages": "",
+    "categoryNew": "",
+    "categoryVideos": "",
+    "categoryProjectFiles": "",
+    "submitText": "",
+    "categories": "",
+    "addCategory": "",
+    "uploadFiles": "",
+    "filesCount": "",
+    "insertImage": "",
+    "moveLabel": "",
+    "linkDescription": "",
+    "dropzoneLabel": "",
+    "emptyLabel": "",
+    "downloadProjectItemsTooltip": "",
+    "unsplashPhotos": "",
+    "unsplashSearchPlaceholder": "",
+    "unsplashServiceError": "",
+    "unsplashNoItemsFoundError": "",
+    "unsplashDownloadTooltip": "",
+    "unsplashDownloadedTooltip": "",
+    "unsplashDownloadError": "",
+    "unsplashLoadMore": "",
+    "unsplashBack": ""
+  },
+  "pageManager": {
+    "page": "",
+    "pages": "",
+    "searchPlaceholder": "",
+    "addPage": "",
+    "all": ""
+  },
+  "breadcrumbs": {
+    "pages": ""
+  },
+  "pageStarterScreen": {
+    "title": "",
+    "subtitle": ""
+  },
+  "publish": {
+    "buttonText": "",
+    "buttonTooltip": "",
+    "errorUnableToPublish": "",
+    "errorWrongPath": "",
+    "errorNoPermission": "",
+    "errorZipOpen": "",
+    "internalServerError": ""
+  },
+  "repository": {
+    "itemName": "",
+    "itemsName": "",
+    "filterPlaceholder": "",
+    "addNewItem": "",
+    "all": "",
+    "emptyItems": ""
+  },
+  "textEditor": {
+    "bold": "",
+    "italic": "",
+    "underline": "",
+    "linkTooltip": "",
+    "colorTooltip": "",
+    "textAlignTooltip": "",
+    "textTransformTooltip": "",
+    "linkTool": {
+      "title": "",
+      "tooltip": "",
+      "header": "",
+      "body": {
+        "linkType": "",
+        "pagesTabTitle": "",
+        "favoritesTabTitle": "",
+        "customTabTitle": "",
+        "pagesLabel": "",
+        "linksLabel": "",
+        "inputLabel": "",
+        "openInNewTab": "",
+        "removeLink": ""
+      }
+    },
+    "fontTool": {
+      "tooltip": "",
+      "title": "",
+      "fontFamily": "",
+      "fontWeight": "",
+      "fontSize": "",
+      "lineHeight": "",
+      "letterSpacing": "",
+      "addFonts": ""
+    }
+  },
+  "resizer": {
+    "tooltip": "",
+    "mobile": "",
+    "mobileLandscape": "",
+    "tablet": "",
+    "tabletLandscape": "",
+    "laptop": "",
+    "desktop": "",
+    "desktopFullHd": ""
+  },
+  "untitled": "",
+  "copy": "",
+  "file": "",
+  "files": "",
+  "contextMenu": {
+    "cut": "",
+    "copy": "",
+    "paste": "",
+    "pasteBefore": "",
+    "pasteInside": "",
+    "pasteAfter": "",
+    "forceHover": "",
+    "forceDefault": "",
+    "delete": "",
+    "duplicate": "",
+    "sourceCode": "",
+    "selectParent": "",
+    "saveAsPreset": "",
+    "rename": "",
+    "setHomePage": "",
+    "previewAdd": "",
+    "pageSettings": "",
+    "edit": "",
+    "projectLayers": "",
+    "cropImage": "",
+    "resizeImage": "",
+    "copyLink": "",
+    "deleteFromCategory": "",
+    "deleteCompletely": "",
+    "clearCategory": "",
+    "deleteCategory": ""
+  },
+  "snackbar": {
+    "linkCopied": "",
+    "projectSaved": "",
+    "securitySettingsSaved": ""
+  },
+  "dialogs": {
+    "insertPreset": {
+      "searchPlaceholder": "",
+      "header": ""
+    },
+    "demoMode": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "fatalError": {
+      "header": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "success": {
+      "header": "",
+      "cancelButton": ""
+    },
+    "error": {
+      "header": "",
+      "cancelButton": ""
+    },
+    "warning": {
+      "header": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "browserWarning": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "sessionChangesDiscard": {
+      "header": "",
+      "body": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "projectDoesntExists": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "projectConfiguration": {
+      "header": "",
+      "body": {
+        "projectSettingsLabel": "",
+        "systemSettingsLabel": "",
+        "generalSettings": "",
+        "projectName": "",
+        "publishTitle": "",
+        "publishPathLabel": "",
+        "publishComputedPathLabel": "",
+        "publishPathValidationError": "",
+        "publishSkipMessage": "",
+        "mediaDir": "",
+        "videoDir": "",
+        "fontDir": "",
+        "cssDir": "",
+        "codeTemplates": "",
+        "codeTemplatesDescription": "",
+        "newPageTemplate": "",
+        "layers": "",
+        "layersTable": {
+          "name": "",
+          "element": "",
+          "canBeInsertedTo": ""
+        },
+        "pageContainer": "",
+        "layersDescription": "",
+        "layerPresetsDescription": "",
+        "seoTitle": "",
+        "sitemapTitle": "",
+        "sitemapDomain": "",
+        "sitemapFullPath": "",
+        "homePagePriority": "",
+        "homePageChangeFrequency": "",
+        "otherPagesPriority": "",
+        "otherPagesChangeFrequency": "",
+        "generate": "",
+        "notSelected": "",
+        "linkToSitemap": "",
+        "sitemapGenerated": "",
+        "sitemapNotGenerated": "",
+        "sitemapIncorrectSettings": "",
+        "recommendedRobotsTxt": "",
+        "instructCrawlersToNotIndex": "",
+        "urlToSitemap": "",
+        "customCodeForRobotsTxt": "",
+        "linkToRobotsTxt": "",
+        "robotsTxtGenerated": "",
+        "robotsTxtNotGenerated": "",
+        "analyticsTitle": "",
+        "googleAnalyticsId": "",
+        "googleAnalyticsIdDesc": "",
+        "googleWebmasterToolsTag": "",
+        "googleWebmasterToolsTagDesc": "",
+        "googleTagManagerId": "",
+        "googleTagManagerIdDesc": "",
+        "facebookPixelId": "",
+        "facebookPixelIdDesc": "",
+        "fontsDescription": "",
+        "fontsTitle": "",
+        "fontsLabel": "",
+        "fontsAdvancedLabel": "",
+        "fontsNotSelected": "",
+        "switcher": {
+          "on": "",
+          "off": ""
+        },
+        "systemSettings": {
+          "startupTitle": "",
+          "startupDescription": "",
+          "showTipsOnStartup": "",
+          "checkForUpdates": "",
+          "languageTitle": "",
+          "languageDescription": ""
+        }
+      },
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "pageSettings": {
+      "header": "",
+      "body": {
+        "generalSettings": "",
+        "pageName": "",
+        "useAsHomePage": "",
+        "favicon": "",
+        "seoSettings": "",
+        "seoSettingsDescription": "",
+        "metaKeywords": "",
+        "metaDescription": "",
+        "fileName": "",
+        "pageNameValidationError": "",
+        "pageNameDuplicationError": ""
+      },
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "securitySettings": {
+      "header": "",
+      "body": {
+        "title": "",
+        "description": "",
+        "changeSettingsLabel": "",
+        "changePasswordLabel": "",
+        "oldPassLabel": "",
+        "passLabel": "",
+        "enableAuthorization": "",
+        "enableDemoMode": "",
+        "authorizationError": ""
+      },
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "pageCreate": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "deletePage": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "presetDelete": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "presetSave": {
+      "header": "",
+      "body": {
+        "title": "",
+        "category": "",
+        "preview": "",
+        "code": "",
+        "reload": ""
+      },
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "presetValidation": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "templateExportDownload": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "templateExportZipping": {
+      "header": "",
+      "body": ""
+    },
+    "templateExportError": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "projectExportDownload": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "projectExportZipping": {
+      "header": "",
+      "body": ""
+    },
+    "projectExportError": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "resolutionChangeError": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "nestingError": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "publishSuccessful": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "publishPromt": {
+      "header": "",
+      "body": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "publishProgress": {
+      "header": "",
+      "body": ""
+    },
+    "templateImport": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "templateImportProgress": {
+      "header": "",
+      "body": {
+        "uploading": "",
+        "importing": "",
+        "message": ""
+      }
+    },
+    "templateImportSuccessful": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "projectImport": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "projectImportProgress": {
+      "header": "",
+      "body": {
+        "uploading": "",
+        "importing": "",
+        "message": ""
+      }
+    },
+    "projectImportSuccessful": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "feedback": {
+      "header": "",
+      "body": {
+        "title": "",
+        "description": "",
+        "email": "",
+        "message": "",
+        "messagePlaceholder": "",
+        "emailPlaceholder": ""
+      },
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "feedbackProgress": {
+      "header": "",
+      "body": ""
+    },
+    "feedbackSuccessful": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "feedbackLocalServerError": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "previewGeneration": {
+      "header": "",
+      "body": ""
+    },
+    "frameGeneration": {
+      "header": "",
+      "body": ""
+    },
+    "updateAvailable": {
+      "header": "",
+      "body": "",
+      "changeLogLinkTitle": "",
+      "cancelButton": "",
+      "submitButton": "",
+      "checkForUpdates": ""
+    },
+    "updateDownloading": {
+      "header": "",
+      "body": ""
+    },
+    "updateError": {
+      "header": "",
+      "body": "",
+      "cancelButton": ""
+    },
+    "updateInstalling": {
+      "header": "",
+      "body": ""
+    },
+    "updateSuccess": {
+      "header": "",
+      "body": "",
+      "submitButton": ""
+    },
+    "mediaUploadProgress": {
+      "header": "",
+      "body": ""
+    },
+    "mediaItemsDeleteConfirmation": {
+      "header": "",
+      "description": "",
+      "checkboxLabel": "",
+      "checkboxDescription": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "mediaCopyProgress": {
+      "header": "",
+      "body": ""
+    },
+    "upload": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "maxFileSize": "",
+      "submitButton": ""
+    },
+    "mediaLinkCopy": {
+      "header": "",
+      "body": "",
+      "cancelButton": "",
+      "submitButton": ""
+    },
+    "iconsUpload": {
+      "header": "",
+      "body": "",
+      "submitButton": "",
+      "cancelButton": "",
+      "importError": ""
+    },
+    "iconsImportProgress": {
+      "header": "",
+      "body": ""
+    },
+    "mediaImport": {
+      "submit": "",
+      "cancel": "",
+      "header": "",
+      "description": "",
+      "mediaDir": "",
+      "videoDir": "",
+      "linkText": ""
+    },
+    "mediaImportProgress": {
+      "header": "",
+      "body": ""
+    },
+    "mediaChangeProgress": {
+      "header": "",
+      "body": ""
+    },
+    "crop": {
+      "header": "",
+      "cancelButton": "",
+      "submitButton": "",
+      "error": "",
+      "loadingImage": "",
+      "keepRatio": "",
+      "widthLabel": "",
+      "heightLabel": "",
+      "saveOriginalImage": ""
+    },
+    "resize": {
+      "header": "",
+      "cancelButton": "",
+      "submitButton": "",
+      "error": "",
+      "loadingImage": "",
+      "description": "",
+      "widthLabel": "",
+      "heightLabel": "",
+      "saveOriginalImage": ""
+    },
+    "checkingCrop": {
+      "body": "",
+      "header": ""
+    },
+    "cropError": {
+      "header": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "mediaUpload": {
+      "header": "",
+      "body": "",
+      "submitButton": "",
+      "cancelButton": ""
+    },
+    "linkPreview": {
+      "header": "",
+      "cancelButton": ""
+    }
+  },
+  "developPanel": {
+    "presetItem": "",
+    "pluginItem": ""
+  },
+  "filePicker": {
+    "title": "",
+    "placeholder": ""
+  },
+  "styleManager": {
+    "generalPlaceholder": "",
+    "clickForRefresh": "",
+    "noStylesPlaceholder": ""
+  },
+  "plugins": {
+    "title": "",
+    "compatibleWarning": "",
+    "novi-plugin-background-image": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-background": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "colorOption": "",
+          "gradientOption": "",
+          "colorPlaceholder": "",
+          "bgFillType": ""
+        }
+      }
+    },
+    "novi-plugin-camera-slider": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "replaceImage": {
+          "title": "",
+          "tooltip": ""
+        },
+        "addSlide": {
+          "title": "",
+          "tooltip": ""
+        },
+        "removeSlide": {
+          "title": "",
+          "tooltip": ""
+        }
+      }
+    },
+    "novi-plugin-campaign-monitor": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "tooltip": "",
+        "title": "",
+        "header": "",
+        "body": {
+          "signUpUrl": "",
+          "inputName": ""
+        }
+      }
+    },
+    "novi-plugin-google-map": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "mapSettingsTitle": "",
+        "mapSettingsTooltip": "",
+        "mapSettingsHeader": "",
+        "markerSettingsTitle": "",
+        "markerSettingsTooltip": "",
+        "markerSettingsHeader": "",
+        "mapSettingsBody": {
+          "mapCenter": "",
+          "zoom": "",
+          "style": "",
+          "defaultStyle": "",
+          "customStyle": "",
+          "markerIcon": "",
+          "activeMarkerIcon": "",
+          "apiKey": ""
+        },
+        "markerSettingsBody": {
+          "markers": "",
+          "markerLocation": "",
+          "markerDescription": "",
+          "addMarkerText": ""
+        }
+      }
+    },
+    "novi-plugin-icon-manager": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-iframe": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-image": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-light-gallery": {
+      "settings": {
+        "groupPlaceholder": "",
+        "albumPlaceholder": "",
+        "itemPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "group": {
+          "title": "",
+          "tooltip": "",
+          "header": "",
+          "body": {
+            "animation": "",
+            "thumbnails": "",
+            "loop": "",
+            "autoplay": "",
+            "autoplayDelay": ""
+          }
+        },
+        "album": {
+          "title": "",
+          "tooltip": "",
+          "header": "",
+          "body": {
+            "addItem": ""
+          }
+        },
+        "item": {
+          "title": "",
+          "tooltip": "",
+          "header": "",
+          "body": {
+            "src": "",
+            "thumb": "",
+            "openLibrary": "",
+            "description": "",
+            "backToAlbum": ""
+          },
+          "linkPreviewTooltip": ""
+        }
+      }
+    },
+    "novi-plugin-label": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-link": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": "",
+        "favoriteLinksTitle": "",
+        "applyToProjectElements": "",
+        "applyToProjectElementsDescription": "",
+        "duplicateError": "",
+        "linksCountLabel": "",
+        "favoriteItemLinkTitle": "",
+        "favoriteItemLinkValue": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "linkType": "",
+          "pagesTabTitle": "",
+          "favoritesTabTitle": "",
+          "customTabTitle": "",
+          "pagesLabel": "",
+          "linksLabel": "",
+          "inputLabel": "",
+          "openInNewTab": ""
+        }
+      }
+    },
+    "novi-plugin-material-parallax": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": ""
+      }
+    },
+    "novi-plugin-mailchimp": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "signUpUrl": ""
+        }
+      }
+    },
+    "novi-plugin-owl-carousel": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "settings": {
+          "title": "",
+          "tooltip": "",
+          "header": "",
+          "body": {
+            "visibleItems": "",
+            "indent": "",
+            "loop": "",
+            "autoplay": "",
+            "autoplayDelay": ""
+          }
+        },
+        "addSlide": {
+          "title": "",
+          "tooltip": ""
+        },
+        "removeSlide": {
+          "title": "",
+          "tooltip": ""
+        },
+        "moveSlideLeft": {
+          "title": "",
+          "tooltip": ""
+        },
+        "moveSlideRight": {
+          "title": "",
+          "tooltip": ""
+        }
+      }
+    },
+    "novi-plugin-rd-facebook": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "pageType": "",
+          "group": "",
+          "page": "",
+          "accessToken": ""
+        }
+      }
+    },
+    "novi-plugin-rd-instafeed": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "postType": "",
+          "user": "",
+          "tag": ""
+        }
+      }
+    },
+    "novi-plugin-rd-mailform": {
+      "settings": {
+        "pluginElement": "",
+        "configPath": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "emailAddress": "",
+          "smtpUse": "",
+          "host": "",
+          "port": "",
+          "userName": "",
+          "pass": ""
+        }
+      }
+    },
+    "novi-plugin-rd-twitterfeed": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "userName": ""
+        }
+      }
+    },
+    "novi-plugin-swiper-slider": {
+      "settings": {
+        "pluginElement": "",
+        "effects": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "imageReplace": {
+          "title": "",
+          "tooltip": ""
+        },
+        "addSlide": {
+          "title": "",
+          "tooltip": ""
+        },
+        "removeSlide": {
+          "title": "",
+          "tooltip": ""
+        },
+        "settings": {
+          "title": "",
+          "tooltip": "",
+          "header": "",
+          "body": {
+            "effect": "",
+            "autoPlay": "",
+            "autoPlayDelay": ""
+          }
+        }
+      }
+    },
+    "novi-plugin-vide": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "replacePoster": {
+          "title": "",
+          "tooltip": ""
+        },
+        "replaceVideo": {
+          "title": "",
+          "tooltip": ""
+        }
+      }
+    },
+    "novi-plugin-countdown": {
+      "settings": {
+        "inputPlaceholder": "",
+        "submitButton": ""
+      },
+      "editor": {
+        "title": "",
+        "tooltip": "",
+        "header": "",
+        "body": {
+          "type": "",
+          "time": "",
+          "error": ""
+        }
+      }
+    }
+  }
+}

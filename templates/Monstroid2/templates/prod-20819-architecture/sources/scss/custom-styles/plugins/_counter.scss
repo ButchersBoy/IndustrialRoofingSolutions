@@ -1,0 +1,91 @@
+/*
+* Counter
+*/
+
+//
+// Table of Contents:
+//
+// Counter Classic
+//
+//
+
+
+
+//
+// Counter Classic
+//
+
+.counter-classic {
+	text-align: center;
+}
+
+.counter-classic-title {
+
+	&::after {
+		display: block;
+		content: '';
+		margin-left: auto;
+		margin-right: auto;
+		width: 18px;
+		height: 4px;
+		margin-top: 6px;
+		background: $primary;
+	}
+}
+
+* + .counter-classic-text {	margin-top: 10px; }
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.counter-classic {
+		text-align: left;
+	}
+
+	.counter-classic-header {
+		display: flex;
+		align-items: flex-end;
+		@include group(16px, 8px);
+	}
+
+	.counter-classic-number {
+		line-height: .7;
+	}
+
+	.counter-classic-title {
+		line-height: 1;
+
+		&::after {
+			margin-left: 0;
+			margin-right: 0;
+			height: 5px;
+			margin-top: 8px;
+		}
+	}
+
+	* + .counter-classic-text {	margin-top: 16px; }
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.counter-classic-title {
+
+		&::after {
+			height: 6px;
+			margin-top: 10px;
+		}
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.counter-classic-title {
+
+		&::after {
+			height: 7px;
+			margin-top: 12px;
+		}
+	}
+}

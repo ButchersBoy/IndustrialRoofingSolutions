@@ -1,0 +1,40 @@
+footer
+	.footer-corporate.bg-primary-light
+		.container.text-start
+			.row.row-30.row-md-60
+				.col-sm-8.col-md-6.col-lg-3.col-xl-3
+					ul.list-xxs
+						li.h3: a.link-primary-inverse(href='index.html') Home
+						li.h3: a.link-primary-inverse(href='about-our-farm.html') About Our Farm
+						li.h3: a.link-primary-inverse(href='products.html') Our Products
+						li.h3: a.link-primary-inverse(href='quality-control.html') Quality Control
+						li.h3: a.link-primary-inverse(href='careers.html') Careers
+						li.h3: a.link-primary-inverse(href='contacts.html') Contacts
+				.col-sm-4.col-md-6.col-lg-3
+					ul.list.mt-lg-2
+						li: a.link-primary-inverse(href='#') Facebook
+						li: a.link-primary-inverse(href='#') Instagram
+						li: a.link-primary-inverse(href='#') YouTube
+						li: a.link-primary-inverse(href='#') LinkedIn
+						li: a.link-primary-inverse(href='#') Twitter
+						li: a.link-primary-inverse(href='#') FAQ
+				.col-sm-10.col-md-10.col-lg-5.offset-lg-1
+					h3 Newsletter Signup
+					form#footer-form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+						.form-wrap
+							input#contact-email-footer.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email-footer") Enter your e-mail
+						button(type="submit").button.button-primary.button-icon.button-full-circle.mb-n2
+							+icon-aright
+					label.checkbox-inline.checkbox-footer.text-uppercase
+						input(type='checkbox' name='remember' form='footer-form' checked)
+						| By clicking the button you agree to the
+						br
+						a(href='privacy-policy.html') Privacy Policy
+						span &nbsp;and&nbsp;
+						a(href='#') Terms of Service
+			.row
+				.col-12
+					+rights
+				
+

@@ -1,0 +1,11 @@
+mixin quote-classic( obj )
+	article.quote-classic( class= obj.mod )&attributes(attributes)
+		.quote-classic-text: .q= obj.text
+		.unit.unit-spacing-md.align-items-center.text-left.d-inline-flex
+			.unit-left: .quote-classic-figure: +jpg( obj.img )
+			.unit-body
+				.quote-classic-author= obj.author
+				.quote-classic-status= obj.status
+		.quote-classic-decor-wrap
+			.quote-classic-decor
+			.quote-classic-decor

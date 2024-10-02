@@ -1,0 +1,68 @@
+header.page-header
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar_transparent.rd-navbar_boxed(data-layout='rd-navbar-fixed',
+    data-sm-layout='rd-navbar-fixed',
+    data-sm-device-layout='rd-navbar-fixed',
+    data-md-layout='rd-navbar-fixed',
+    data-md-device-layout='rd-navbar-fixed',
+    data-lg-device-layout='rd-navbar-fixed',
+    data-lg-layout='rd-navbar-static',
+    data-xl-device-layout='rd-navbar-static',
+    data-xl-layout='rd-navbar-static',
+    data-xxl-device-layout='rd-navbar-static',
+    data-xxl-layout='rd-navbar-static',
+    data-stick-up-clone='false',
+    data-sm-stick-up='true'
+    data-md-stick-up='true'
+    data-lg-stick-up='true',
+    data-md-stick-up-offset='115px',
+    data-lg-stick-up-offset='35px',
+    data-body-class='rd-navbar-absolute')
+      // RD Navbar Top Panel
+      .rd-navbar-top-panel
+        .rd-navbar-top-panel__main
+          .rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-top-panel__main'): span
+          .rd-navbar-top-panel__content
+            .rd-navbar-top-panel__left
+              ul.rd-navbar-items-list
+                li
+                  .unit.flex-row.align-items-center.unit-spacing-xs
+                    .unit__left: span.icon.icon-sm.icon-primary.linear-icon-map-marker
+                    .unit__body: p: a(href='#') Address: 4578 Marmora Road, Glasgow, D04 89GR
+                li
+                  .unit.flex-row.align-items-center.unit-spacing-xs
+                    .unit__left: span.icon.icon-sm.icon-primary.linear-icon-telephone
+                    .unit__body: ul.list-semicolon
+                      li: a(href='tel:#') (800) 123-0045
+                      li: a(href='tel:#') (800) 123-0045
+
+
+            .rd-navbar-top-panel__right 
+              ul.list-inline-xxs
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-facebook(href='#')
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-twitter(href='#')
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-google-plus(href='#')
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-vimeo(href='#')
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-youtube(href='#')
+                li: a.icon.icon-xxs.icon-gray-darker.fa.fa-pinterest-p(href='#')
+
+      .rd-navbar-inner.rd-navbar-search-wrap
+        // RD Navbar Panel
+        .rd-navbar-panel.rd-navbar-search-lg_collapsable
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          // RD Navbar Brand
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              +png(logoDefault)(srcset=logoDefaultRetina)
+
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap.rd-navbar-search_not-collapsable
+          // RD Navbar Nav
+          .rd-navbar__element.rd-navbar-search_collapsable
+            button.rd-navbar-search__toggle.rd-navbar-fixed--hidden(data-rd-navbar-toggle='.rd-navbar-search-wrap')
+
+          include ../includes/_navbar-search
+          .rd-navbar-search_collapsable
+            include ../includes/_nav

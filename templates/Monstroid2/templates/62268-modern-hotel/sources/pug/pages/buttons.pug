@@ -1,0 +1,39 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Buttons'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Buttons
+  section.section-lg.bg-default.text-center
+    .container
+      .group-lg
+        .button.button-primary Book a room
+        .button.button-black Book a room
+        .button.button-primary-outline Book a room
+        .button.button-gray-light-outline Book a room
+        .button.button-link Book a room
+  ='\n'
+
+  // Buttons
+  section.section-lg.bg-accent.text-center
+    .container
+      .group-lg
+        .button.button-primary-outline Book a room
+        .button.button-gray-light-outline Book a room
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,308 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Button General Styles
+.button {
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	border: 1px solid;
+	border-radius: 20px;
+	@include btn-size(12px, 35px, $input-btn-font-size, 17px);
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	letter-spacing: $btn-letter-spacing;
+	transition: .33s all ease;
+	white-space: normal;
+	text-transform: $btn-text-transform;
+	cursor: pointer;
+	text-align: center;
+}
+
+span.button {
+	cursor: default;
+}
+
+// Appearance style
+// --------------------------------------------------
+.button-primary {
+	@include btn-variant($white, $primary, $primary, $white, $black, $black);
+}
+
+.page {
+	.button-default {
+		@include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+	}
+	
+	.button-black {
+		@include btn-variant($white, $black, $black, $white, $primary, $primary);
+	}
+	
+	.button-gray-dark {
+		@include btn-variant($white, $gray-dark, $gray-dark, $white, $primary, $primary);
+	}
+	
+	.button-primary {
+		@include btn-variant($white, $primary, $primary, $white, $black, $black);
+	}
+	
+	.button-gray-light-outline {
+		@include btn-variant($black, transparent, $gray-light, $white, $primary, $primary);
+	}
+	
+	span.button-gray-light-outline {
+		@include btn-variant($black, transparent, $gray-light, $black, transparent, $gray-light);
+	}
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+	@include btn-size(5px, 25px, 12px, 22px);
+}
+
+.button-sm {
+	@include btn-size(6px, 25px, 13px, 24px);
+}
+
+.button-lg {
+	@include btn-size(18px, 45px, 16px, 24px);
+	
+	@include media-breakpoint-up(xl) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+
+.button-xl {
+	@include btn-size(20px, 50px, 18px, 28px);
+	
+	@include media-breakpoint-up(xl) {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+	border-radius: 35px;
+}
+
+.button-square {
+	border-radius: 0;
+}
+
+.button-round-2 {
+	border-radius: 8px;
+}
+
+// Button Types
+// --------------------------------------------------
+.button-link {
+	border: 0;
+	padding: 0;
+	font-family: $font-family-sec;
+	font-size: 14px;
+	line-height: 1.4;
+	letter-spacing: .06em;
+	@include link($primary, $black);
+	text-decoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.page .button {
+	&.button-icon {
+		.icon {
+			position: relative;
+			top: -3px;
+			display: inline-block;
+			vertical-align: middle;
+			color: inherit;
+			font-size: 1.85em;
+			line-height: 0;
+		}
+		
+		&-left {
+			.icon {
+				padding-right: 11px;
+			}
+		}
+		
+		&-right {
+			.icon {
+				float: right;
+				padding-left: 11px;
+			}
+		}
+	}
+}
+
+// Button other styles
+// --------------------------------------------------
+.button-block {
+	display: block;
+	width: 100%;
+}
+
+// bootstrap buttons
+
+.btn-primary:active:hover {
+	background-color: $primary;
+	border-color: $primary;
+}
+
+.context-dark .btn-nina,
+.btn-nina,
+a.btn-nina,
+button.btn-nina {
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.3s;
+	border: none;
+	letter-spacing: 0.08em;
+	
+	&, &:focus, &:active {
+		background: $primary;
+		color: $white;
+		> span {
+			color: $white;
+		}
+	}
+	
+	> span {
+		display: inline-block;
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: transform 0.3s, opacity 0.3s;
+		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	}
+	
+	> span:empty {
+		padding: 2px;
+	}
+	
+	&::before {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s, opacity 0.3s;
+		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+		transition-delay: 0.2s;
+	}
+	&:hover {
+		color: $white;
+		background-color: $gray-dark;
+	}
+	&:hover::before {
+		opacity: 0;
+		transform: translateY(100%);
+		transition-delay: 0.1s;
+	}
+	&:hover > span {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	
+	
+	&-black {
+		&, &:focus, &:active {
+			background: $black;
+			color: $white;
+			
+			> span {
+				color: $white;
+			}
+		}
+		
+		&:hover {
+			color: $white;
+			background-color: $primary;
+		}
+	}
+	.bg-accent &-white,
+	.bg-gray-dark &-white,
+	.context-dark &-white,
+	&-white {
+		
+		&, &:focus, &:active {
+			color: $black;
+			background-color: $white;
+			
+			> span {
+				color: $black;
+			}
+		}
+		
+		
+		
+		&:hover {
+			color: $white;
+			background-color: $primary;
+			
+			> span {
+				color: $white;
+			}
+		}
+	}
+}
+
+.context-dark {
+	.btn-nina {
+		color: $white;
+		&-black {
+			color: $white;
+		}
+	}
+}
+
+.lt-ie10 {
+	.btn-nina {
+		&:before {
+			display: none;
+		}
+		> span {
+			transform: translateY(0);
+			color: #ffffff;
+			opacity: 1;
+		}
+		&:hover {
+			> span {
+				color: #666666;
+			}
+		}
+	}
+}
+
+.tablet {
+	.btn-nina {
+		&:before {
+			display: none;
+		}
+		> span {
+			transform: translateY(0);
+			color: #ffffff;
+			opacity: 1;
+		}
+		&:hover {
+			> span {
+				color: $white;
+			}
+		}
+	}
+}

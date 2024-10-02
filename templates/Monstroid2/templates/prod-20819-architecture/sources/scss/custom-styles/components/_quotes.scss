@@ -1,0 +1,148 @@
+/*
+* Quotes
+*/
+
+//
+// Table of Contents: 
+//
+// Quote Classic
+//
+
+
+
+//
+// Quote Classic
+//
+.quote-classic {
+	position: relative;
+	text-align: center;
+	color: $black;
+	padding-top: 40px;
+}
+
+.quote-classic-text {
+	font-size: 18px;
+	line-height: $h3-line-height;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: -0.02em;
+	color: $headings-color;
+}
+
+.quote-classic-figure {
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 10px 10px 20px rgba($black, .25);
+}
+
+.quote-classic-author {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.quote-classic-decor-wrap {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	font-size: 0;
+	line-height: 0;
+	transform: translate3d(-50%, 0, 0);
+}
+
+.quote-classic-decor {
+	display: inline-block;
+
+	&::before {
+		display: block;
+		content: '';
+		width: 16px;
+		height: 14px;
+		background: $primary;
+	}
+	
+	&::after {
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 8px 8px 0 0;
+		border-color: $primary transparent transparent transparent;
+	}
+}
+
+.quote-classic-decor + .quote-classic-decor {	margin-left: 10px; }
+
+.quote-classic-status { color: $primary; }
+
+.quote-classic-text + .unit { margin-top: 20px; }
+* + .quote-classic-status { margin-top: 4px; }
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+
+	.quote-classic {
+		text-align: left;
+	}
+
+	.quote-classic-decor-wrap {
+		left: 0;
+		transform: none;
+	}
+
+	.quote-classic-text {
+		font-size: 20px;
+	}
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.quote-classic {
+		padding-top: 26px;
+		padding-left: 14.5%;
+	}
+
+	.quote-classic-decor {
+
+		&::before {
+			width: 21px;
+			height: 18px;
+		}
+
+		&::after {
+			border-width: 10px 10px 0 0;
+		}
+	}
+
+	.quote-classic-text {
+		font-size: 22px;
+	}
+
+	.quote-classic-text + .unit { margin-top: 30px; }
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.quote-classic-text {
+		font-size: 26px;
+	}
+
+	.quote-classic-text + .unit { margin-top: 40px; }
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.quote-classic-text {
+		font-size: $h3-font-size;
+	}
+}
+
+// Context styling
+%context-dark {
+
+	.quote-classic { color: $white; }
+	.quote-classic-text { color: inherit;	}
+}

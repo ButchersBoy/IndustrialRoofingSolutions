@@ -1,0 +1,261 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/events
+
+
+block variables
+  - pageName = 'Online Lectures'
+
+block page
+  include ../sections/_header-classic
+
+  +breadcrumbs
+
+  // Featured Lectures
+  section.section.section-md.section-relative.bg-transparent.text-center
+    .container
+      h6 event spaces
+      h3 Featured Lectures
+      .row.row-30.row-xl-40( data-lightgallery="group" )
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-01-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Achieving Better Business Balance'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: Hearst Expo, Seattle'
+            },
+            video: {
+              link: 'https://youtu.be/7dTve2Hsl_0',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-02-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Learning to Love Your Employees'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: BRG Center, NYC'
+            },
+            video: {
+              link: 'https://youtu.be/T_pQf2dm504',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-03-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Becoming a More Effective Manager'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: 5th Floor Studios, Dallas'
+            },
+            video: {
+              link: 'https://youtu.be/7Iw9KueqZxs',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-04-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'The Dos and Don’ts of Business'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: South Hotel, San Diego'
+            },
+            video: {
+              link: 'https://youtu.be/7dTve2Hsl_0',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-05-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Enhance Your Teamwork'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: TopBiz Conference, Atlanta'
+            },
+            video: {
+              link: 'https://youtu.be/T_pQf2dm504',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-06-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Getting Better Relationships'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: ArtStyle Hotel, Philadelphia '
+            },
+            video: {
+              link: 'https://youtu.be/7Iw9KueqZxs',
+              text: 'view now'
+            }
+          })
+
+  // Motivational
+  section.section.section-md.section-relative.bg-transparent.text-center
+    .container
+      h3 Motivational
+      .row.row-30.row-xl-40( data-lightgallery="group" )
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-07-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Better Daily Communication'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: TXC Center, Washington'
+            },
+            video: {
+              link: 'https://youtu.be/7dTve2Hsl_0',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-08-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Developing Success Skills'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: MIT, Boston'
+            },
+            video: {
+              link: 'https://youtu.be/T_pQf2dm504',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-09-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Optimal Thinking'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: EDU Conference Hall, Nashville'
+            },
+            video: {
+              link: 'https://youtu.be/7Iw9KueqZxs',
+              text: 'view now'
+            }
+          })
+  // Leadership
+  section.section.section-md.section-relative.bg-transparent.text-center
+    .container
+      h3 Leadership
+      .row.row-30.row-xl-40( data-lightgallery="group" )
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-10-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Proper Communication Skills'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: ICF Business Hall, Chicago'
+            },
+            video: {
+              link: 'https://youtu.be/7dTve2Hsl_0',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-11-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Easy Conflict Resolution '
+            },
+            address: {
+              link: links.post,
+              title: 'Location: Landis Hotel, Denver'
+            },
+            video: {
+              link: 'https://youtu.be/T_pQf2dm504',
+              text: 'view now'
+            }
+          })
+        .col-md-6.col-lg-4
+          +event-default({
+            img: {
+              name: 'event-12-370x282',
+              link: links.post
+            },
+            title: {
+              link: links.post,
+              text: 'Effective Delegation'
+            },
+            address: {
+              link: links.post,
+              title: 'Location: PeakBiz Conference, Detroit'
+            },
+            video: {
+              link: 'https://youtu.be/7Iw9KueqZxs',
+              text: 'view now'
+            }
+          })
+
+  include ../sections/_footer-classic

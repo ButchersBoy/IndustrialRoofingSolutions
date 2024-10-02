@@ -1,0 +1,244 @@
+// Contexts
+// -------------------------
+
+%context-dark {
+  color: $white;
+
+  #{headings()} {
+    color: $white;
+  }
+
+  a {
+    @include link(inherit, $primary);
+  }
+
+  .button-link {
+    &:hover {
+      color: $white;
+    }
+  }
+
+  // Blurb
+  .blurb__title {
+    color: $white;
+  }
+
+  .blurb-circle {
+    &,
+    .blurb-circle__icon .icon {
+      color: $white;
+    }
+  }
+
+  .blurb-minimal {
+    color: $body-color;
+  }
+
+  // Countdown
+  .countdown-default {
+    .countdown-section {
+      border-color: $white;
+    }
+
+    .countdown-period,
+    .countdown-amount {
+      color: $white;
+    }
+  }
+
+  // Counters
+  .box-counter {
+    color: $white;
+  }
+
+  .box-counter__icon {
+    color: $white;
+  }
+
+  // Progress bars
+  .progress-linear,
+  .progress-bar-circle-title,
+  .progress-bar-circle span {
+    color: $white;
+  }
+
+  // Thumbnails
+  .thumb__title {
+    color: $white;
+
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .button-gray-light-outline {
+    border: 1px solid;
+    @include btn-variant($white, transparent, $white, $white, $primary, $primary);
+  }
+
+  .button-gradient-intro {
+    color: $white;
+    &:hover {
+      color: inherit;
+    }
+  }
+  
+}
+
+%context-light {
+  #{headings()} {
+    color: $headings-color;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .parallax-header {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($gray-3, .33);
+      }
+    }
+  }
+}
+
+.context-dark {
+  @extend %context-dark;
+}
+
+.context-light {
+  @extend %context-light;
+}
+
+// Background colors
+//
+.bg-default {
+  @include bg-behaviour($white);
+}
+
+.bg-accent,
+.bg-secondary-7 {
+  @extend %context-dark;
+  .button-primary {
+    @include btn-variant($black, $white, $white, $white, $black, $black);
+  }
+
+  .button-black {
+    @include btn-variant($white, $black, $black, $black, $white, $white);
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($white, transparent, $white, $black, $white, $white);
+  }
+
+  // Progress bars
+  .progress-linear-modern {
+    .progress-bar-linear-wrap {
+      &:after {
+        background: $white;
+      }
+    }
+  }
+
+  // Blurb
+  .blurb-minimal {
+    &,
+    .blurb-minimal__icon .icon {
+      color: $white;
+    }
+  }
+}
+
+.bg-accent {
+  @include bg-behaviour($primary);
+}
+
+.bg-secondary-7 {
+  @include bg-behaviour($secondary-7);
+}
+
+.bg-secondary-8 {
+  @include bg-behaviour($secondary-8);
+}
+
+.bg-gray-dark {
+  @extend %context-dark;
+  @include bg-behaviour($gray-dark);
+}
+.bg-black {
+  @extend %context-dark;
+  @include bg-behaviour($black);
+}
+
+.bg-gray-darker {
+  @extend %context-dark;
+  @include bg-behaviour($gray-dark);
+}
+
+.bg-gray-3 {
+  @include bg-behaviour($gray-3);
+}
+
+.bg-black {
+  @include bg-behaviour($black);
+
+  .blurb__title {
+    color: $white;
+  }
+}
+
+.bg-gray-lighter {
+  @extend %context-light;
+  @include bg-behaviour($gray-lighter);
+}
+
+// Background image
+//
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-image-bottom {
+  background-position: center bottom;
+}
+
+.bg-image-2 {
+  background-image: url("../images/bg-image-2.jpg");
+}
+
+.bg-image-3 {
+  background-image: url("../images/bg-image-3.jpg");
+}
+
+.bg-image-4 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-4.jpg");
+}
+
+.bg-image-6 {
+  @extend %context-dark;
+  background-image: url("../images/bg-image-6.jpg");
+}
+
+
+.bg-fixed {
+  .desktop & {
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+.bg-gray-3 {
+  .panel,
+  .panel-custom .panel-custom-title > a.collapsed {
+    background-color: $gray-3;
+  }
+}

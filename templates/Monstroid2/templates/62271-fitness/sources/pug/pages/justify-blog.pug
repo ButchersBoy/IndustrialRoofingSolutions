@@ -1,0 +1,265 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Justify Blog'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section.bg-default.section-md
+    .container
+      .row.row-60
+        .col-md-6.col-lg-4
+          // Post classic
+          article.post-classic.post-minimal
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              img(src='images/post-classic-2-886x668.jpg', alt='')
+              .post-classic-title
+                h5
+                  a(href=postImage)
+                    | 10 Reasons to Buy Monstroid
+                    sup 2
+                    | .
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-lg-8
+          // Post slider
+          article.post-slider.post-minimal
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              img(src='images/post-minimal-1.jpg', alt='')
+              .post-classic-title
+                h5
+                  a(href=postImage) Clean Style. Cons and Pros.
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-lg-7.col-xl-8
+          // Post video
+          article.post-video.post-minimal.post-video-wrap
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .entry-video.embed-responsive.embed-responsive-16by9
+                iframe(width='886', height='320', src='//www.youtube.com/embed/ccuQoF0vKYU', allowfullscreen='')
+              .post-classic-title
+                h5
+                  a(href=postVideo) Site Speed and Search Engines Optimization Aspects.
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postVideo).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postVideo): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-lg-5.col-xl-4
+          // Post classic
+          article.post-classic.post-minimal
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              img(src='images/post-classic-1-886x668.jpg', alt='', width='886', height='668')
+              .post-classic-title
+                h5
+                  a(href=postImage) Getting to another  level of design and functionality.
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postImage).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-xl-4
+          // Post Link
+          article.post-link
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-classic-title
+                h5
+                  a(href=blogPostLink) Creating Portfolio.
+              a(href='http://templatemonster.com/') http://templatemonster.com/
+            .post-classic-footer
+              .post-meta
+                .unit.flex-row.align-items-center
+                  .unit-left
+                    +jpg('user-01-74x74', 'img-circle')
+                  .unit-body
+                    div.post-relative
+                      a(href=blogPostLink).meta-author by
+                        span.meta-author__inner=' Amanda Smith'
+                    .group
+                      a(href=blogPostLink): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-xl-4
+          // Post quote
+          article.post-minimal
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              // Quote default
+              .post-quote
+                a.quote-default(href=postQuote)
+                  svg.quote-default__mark(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484', xml:space='preserve')
+                    g
+                      path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959              c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246              c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885              c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723              c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984              c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635              s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426              s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+                  .quote-default__text
+                    p.q.heading-4 Getting to another  level of design and functionality.
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postQuote).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postQuote): time(datetime='2017') Jan.20, 2016
+        .col-md-6.col-xl-4
+          // Post standard
+          article.post-classic.post-minimal
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-classic-title
+                h5
+                  a(href=postLink) How to Use Bootstrap Framework
+              .post-classic-footer
+                .post-meta
+                  .unit.flex-row.align-items-center
+                    .unit-left
+                      +jpg('user-01-74x74', 'img-circle')
+                    .unit-body
+                      div.post-relative
+                        a(href=postLink).meta-author by
+                          span.meta-author__inner=' Amanda Smith'
+                      .group
+                        a(href=postLink): time(datetime='2017') Jan.20, 2016
+            .post-classic-body
+              p
+                | All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it.
+        .col-md-6.col-xl-4
+          // Post classic
+          article.post-minimal
+            .post-inner
+              .post-label
+                a(href='#').label.label-primary Fitness
+              img(src='images/post-classic-2-886x668.jpg', alt='')
+              .post-classic-title
+                h5
+                  a(href=postImage) Installing Your First HTML Template
+            .post-classic-body
+              p
+                | Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll...
+            .post-classic-footer
+              .post-meta
+                .unit.flex-row.align-items-center
+                  .unit-left
+                    +jpg('user-01-74x74', 'img-circle')
+                  .unit-body
+                    div.post-relative
+                      a(href=postImage).meta-author by
+                        span.meta-author__inner=' Amanda Smith'
+                    .group
+                      a(href=postImage): time(datetime='2017') Jan.20, 2016
+
+        .col-md-6.col-xl-8
+          // Post audio
+          article.post-audio.post-minimal
+            .post-inner
+              .post-label.post-label-static
+                a(href='#').label.label-primary Fitness
+              .post-classic-title
+                h5
+                  a(href=postAudio) How to Use Bootstrap Framework
+
+              // RD Audio
+              .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+                .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+                  .rd-audio-controls.text-center
+                    .rd-audio-controls-left
+                      // Play\Pause button
+                      a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+                    .rd-audio-progress-bar-wrap
+                      // Time
+                      .rd-audio-time
+                        // currentTime
+                        span.rd-audio-current-time 00:00
+                      // Progress bar
+                      .rd-audio-progress-bar
+                    // Volume button
+                    a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+                    // Volume bar
+                    .rd-audio-volume-bar
+                    .rd-audio-controls-righ.d-none
+                      // Playlist button
+                      a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+                  .rd-audio-playlist-wrap
+                    h6.rd-audio-playlist-title Playlist
+                    ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+                      li(data-rd-audio-src='audio/sound.mp3')
+              .post-minimal-footer
+                .post-classic-footer
+                  .post-meta
+                    .unit.flex-row.align-items-center
+                      .unit-left
+                        +jpg('user-01-74x74', 'img-circle')
+                      .unit-body
+                        div.post-relative
+                          a(href=postAudio).meta-author by
+                            span.meta-author__inner=' Amanda Smith'
+                        .group
+                          a(href=postAudio): time(datetime='2017') Jan.20, 2016
+
+      +pagination-classic(1,
+      [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+      null,
+      {"title": "", "href": "#"}
+      )
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

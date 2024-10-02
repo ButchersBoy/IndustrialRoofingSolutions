@@ -1,0 +1,172 @@
+include ../sections/_section-slider-default
+
+//Human Resources Planning
+section.section-lg.bg-gray-3.text-center.text-md-left
+	.container
+		.row.row-50.row-md-80
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-group-work
+				h4: a(href='single-service-page.html')  Human Resources Planning
+				p Human Resources Planning (HRP) ensures that the organization has the right number of human resources.
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-library
+				h4: a(href='single-service-page.html')  Business Plan Consulting
+				p We work closely with you to understand your goals and aims, and then develop a new business plan
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-exit
+				h4: a(href='single-service-page.html')  Exit Planning
+				p Often referred to as business succession strategy, exit planning is far more complex.
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-chart-growth
+				h4: a(href='single-service-page.html')  Market Research
+				p The majority of market market search services tend to be used by for the industry leaders - big corporations.
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-power
+				h4: a(href='single-service-page.html')  Conflict Management
+				p Our team of experts can help you succeed in managing any kind of conflicts.
+			.col-md-4.icon-wrap
+				span.icon-gradient-outline
+					span.linear-icon-pie-chart
+				h4: a(href='single-service-page.html')  Mergers & Acquisitions
+				p Corp provides unmatched expertise with mergers & acquisitions - transactions in which the ownership of companies is transferred or combined.
+
+//Welcome to Corp
+section.bg-gray-dark.text-center
+	+parallax({
+		"img": "bg-image-1920x683",
+		"addClass": 'rd-parallax-light'
+	})
+		.section-md
+			.container
+				h3.heading-divider Welcome to Corp
+				.row.text-md-left
+					.col-md-6
+						p
+							span.text-sbold Mostly your business runs smoothly and worry-free.
+							| Your employees finish their tasks, sales are going only upwards, and you lead in the run with your competition. But quite often and unexpectedly changes big enough occur. Then the things you’ve always been doing are no longer working. Performance of your team fades, sales decrease and your competitors cut their prices in order to attract your customers, succeeding in that. How do you reclaim your business grounds, focus and lead the pack again? Especially when you feel like you’re no longer in a controlling position?
+					.col-md-6
+						p The opposite of that may be when everything is going alright. Your company is growing quickly, and with that growth new challenges emerge. Miscellaneous brand new choices and opportunities are all around. So what do you do in such a confusing new business environment? Do you expand into a new market? Extend your product offering? Go for an acquisition of smaller competitions or even consider a merger with your main market rivals? These are the decisions that will determine the long-term success of your firm. How do you make sure the path you’re about to take is the right one?
+				a.button.button-gradient-intro(href='about-us.html') Read More
+					span.button-gradient-intro__overlay
+='\n'
+
+section.section-md.bg-gray-3
+	include ../includes/_team-carousel
+
+="\n"
+
+include ../sections/_section-parallax-intro
+
+// Our Clients
+section.section-lg.bg-gray-3
+	h3.heading-divider.text-center Our Clients
+	// Owl Carousel 
+	.owl-carousel.owl-carousel-thumb.owl-carousel-dots(data-autoplay='true', data-items='1', data-md-items='2' data-lg-items='3' data-dots='true' data-nav='false' data-stage-padding='15', data-dots-each='1' data-loop='true', data-margin='30' data-xl-margin='50')
+		.item
+			// Quote default
+			.quote-default
+				.quote-default__image.quote-default__image-custom
+					+jpg('home-icon-01-87x87', 'rounded-circle')
+				.quote-default__text.quote-secondary__text: p.q I’ve been a CEO for my multi-national holding for over 48 years. So when the time came to pass business affairs to next generation, I asked for Corp’s advisors’ help to get everything thought through and set up, which they did brilliantly and flawlessly!
+				h6.quote-secondary__cite Anotoro
+
+		.item
+			// Quote default
+			.quote-default
+				.quote-default__image.quote-default__image-custom
+					+jpg('home-icon-02-87x87', 'rounded-circle')
+				.quote-default__text.quote-secondary__text: p.q With the release of our new big product, we were in a desperate need for a decent market research. Corp’s advisors gave us a helping hand at that and assisted us in reaching our targeted audience across the globe.
+				h6.quote-secondary__cite Volter
+
+		.item
+			// Quote default
+			.quote-default
+				.quote-default__image.quote-default__image-custom
+					+jpg('home-icon-03-87x87', 'rounded-circle')
+				.quote-default__text.quote-secondary__text: p.q When me and my friends had this brilliant startup idea 5 years ago, we were at a loss on how to get it to become a reality. Corp’s advices and support helped us to pen a profound business plan and attract first angel investors.
+				h6.quote-secondary__cite Pentaca
+='\n'
+ 
+section
+	.owl-carousel.owl-carousel-condensed(data-autoplay='true', data-items='1', data-xm-items='2' data-md-items='2' data-lg-items='3' data-xl-items='4' data-dots='true' data-nav='false' data-stage-padding='0', data-dots-each='1' data-loop='true', data-margin='0')
+		.item
+			article.team-box.team-box-condensed
+				.team-box-image
+					+jpg('home-08-480x362')
+				.team-box-content
+					.team-box-content-inner
+						.team-box-title
+							h4: a(href='standard-post.html')  Fuel Your Business by Answering
+						.team-box-meta
+							ul.list-inline
+								li
+									span.team-box-time Jan.20, 2016
+								li
+									span by
+									="\t"
+									a.team-box-cite(href='standard-post.html') Brian Williamson  
+						.team-box-link
+							a.link-classic(href='standard-post.html') Read More 
+		.item
+			article.team-box.team-box-condensed
+				.team-box-image
+					+jpg('home-09-480x362')
+				.team-box-content
+					.team-box-content-inner
+						.team-box-title
+							h4
+								a(href='standard-post.html')  Need a Business Idea?
+									br.d-none.d-xxl-block
+									="\t"
+									| Here are 55
+						.team-box-meta
+							ul.list-inline
+								li
+									span.team-box-time Jan.20, 2016
+								li
+									span by
+									="\t"
+									a.team-box-cite(href='standard-post.html') Brian Williamson  
+						.team-box-link
+							a.link-classic(href='standard-post.html') Read More 
+		.item
+			article.team-box.team-box-condensed
+				.team-box-image
+					+jpg('home-10-480x362')
+				.team-box-content
+					.team-box-content-inner
+						.team-box-title
+							h4: a(href='standard-post.html')  Even popular changes to DOL fiduciary rule
+						.team-box-meta
+							ul.list-inline
+								li
+									span.team-box-time Jan.20, 2016
+								li
+									span by
+									="\t"
+									a.team-box-cite(href='standard-post.html') Brian Williamson  
+						.team-box-link
+							a.link-classic(href='standard-post.html') Read More 
+		.item
+			article.team-box.team-box-condensed
+				.team-box-image
+					+jpg('home-11-480x362')
+				.team-box-content
+					.team-box-content-inner
+						.team-box-title
+							h4: a(href='standard-post.html')  Doubling your money with passive investing
+						.team-box-meta
+							ul.list-inline
+								li
+									span.team-box-time Jan.20, 2016
+								li
+									span by
+									="\t"
+									a.team-box-cite(href='standard-post.html') Brian Williamson  
+						.team-box-link
+							a.link-classic(href='standard-post.html') Read More 

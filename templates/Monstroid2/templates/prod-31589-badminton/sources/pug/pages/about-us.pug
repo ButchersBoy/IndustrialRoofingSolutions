@@ -1,0 +1,164 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'About us'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "background-05.jpg"
+	}).text-center.parallax-header.context-dark.bg-mask
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h3 About Us
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-50
+				.col-md-6
+					h4 Our Mission
+					p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.
+				.col-md-6
+					h4 Our Vision
+					p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+	
+	include ../sections/_section-cta-2
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-50.row-lg-90
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						p.blurb__title Effective Coaching
+						p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						p.blurb__title 10+ Courts
+						p Et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						p.blurb__title Gear Rentals
+						p Laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-headset
+						p.blurb__title Regular Tournaments
+						p Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+						p.blurb__title Affordable Training
+						p Id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cart-full
+						p.blurb__title Classes for Any Age
+						p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Meet Our Team
+			p
+				| Repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+				br.d-none.d-xl-block
+				|  at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.
+			.row.row-30.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('team-01-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Senior Coach, Founder
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('team-02-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Sam Johnson
+							p.thumb__subtitle Teen Coach
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+img('team-03-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Instructor
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-classic

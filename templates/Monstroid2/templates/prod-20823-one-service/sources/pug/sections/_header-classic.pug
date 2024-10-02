@@ -1,0 +1,72 @@
+header#programs.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-classic.context-dark(
+		data-layout=                'rd-navbar-fixed'
+		data-sm-layout=             'rd-navbar-fixed'
+		data-md-layout=             'rd-navbar-fixed'
+		data-lg-layout=             'rd-navbar-fixed'
+		data-xl-layout=             'rd-navbar-static'
+		data-xxl-layout=            'rd-navbar-static'
+		data-md-device-layout=      'rd-navbar-fixed'
+		data-lg-device-layout=      'rd-navbar-fixed'
+		data-xl-device-layout=      'rd-navbar-static'
+		data-xxl-device-layout=     'rd-navbar-static'
+		data-lg-stick-up-offset=    '10px'
+		data-xl-stick-up-offset=    '10px'
+		data-xxl-stick-up-offset=   '10px'
+		data-lg-stick-up=           'true'
+		data-xl-stick-up=           'true'
+		data-xxl-stick-up=          'true'
+		)
+			
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					
+					//RD Navbar Panel
+					.rd-navbar-panel
+						
+						//RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+					
+					.rd-navbar-nav-wrap
+						+navigation( menu )
+				
+			button.rd-navbar-aside-open-toggle(data-custom-toggle="#rd-navbar-aside")
+		
+			.rd-navbar-aside#rd-navbar-aside
+				h3 Complete your order
+				//RD Mailform
+				form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+					.row.row-22
+						
+						.col-12
+							.form-wrap
+								// Select 2
+								select.form-input.select(data-placeholder='Choose a food package' data-constraints='@Required')
+									option(label='Choose a food package')
+									option(value='1') Detox
+									option(value='2') Balanced
+									option(value='3') Vegan
+						
+						.col-12
+							.form-wrap
+								input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+								label.form-label(for='contact-email') E-mail
+						
+						.col-12
+							.form-wrap
+								input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+								label.form-label(for='contact-phone') Phone
+						
+						.col-12
+							.form-wrap
+								label.form-label(for='contact-message') Comment
+								textarea#contact-message.form-input(name='message' data-constraints='@Required')
+						
+						.col-12
+							button.button.button-primary(type='submit') order now

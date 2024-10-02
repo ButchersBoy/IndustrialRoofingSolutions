@@ -1,0 +1,41 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-pagination-classic
+
+
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Video post'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+breadcrumbs({
+			path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	section.bg-gray-3.section-md
+		.container.text-center.single-post
+
+			//Post Title and meta
+			h3.heading-divider Video Post
+			include ../includes/_post-content-before
+			//Video
+			.video-wrap
+				.entry-video.embed-responsive.embed-responsive-16by9
+					iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+			include ../includes/_post-content-after
+
+	include ../sections/_section-blog-post-comment
+	// Page Footer
+	include ../sections/_footer-corporate
+

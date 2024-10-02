@@ -1,0 +1,70 @@
+//
+// Profile
+// --------------------------------------------------
+.profile-corporate {
+  text-align: center;
+}
+
+.profile-corporate__image {
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-corporate__caption {
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-corporate__title {
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: $black;
+}
+
+.profile-corporate__subtitle {
+  @include small;
+  font-style: italic;
+}
+
+* + .profile-corporate__caption { margin-top: 30px; }
+* + .profile-corporate__title { margin-top: 30px; }
+.profile-corporate__title + .profile-corporate__subtitle { margin-top: 5px; }
+
+@include media-breakpoint-up(md) {
+  .profile-corporate__title {
+    font-size: 32px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .profile-corporate__caption {
+    * + p { margin-top: 30px; }
+    * + .profile-corporate__caption { margin-top: 40px; }
+    * + .profile-corporate__title { margin-top: 40px; }
+    * + .profile-corporate__list { margin-top: 30px; }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .profile-corporate__image {
+    max-width: 886px;
+  }
+
+  .profile-corporate__caption {
+    max-width: 975px;
+  }
+
+  .profile-corporate__title {
+    font-size: $h3-font-size;
+  }
+}
+
+@media (min-width: map_get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+  * + .profile-corporate__caption { margin-top: 60px; }
+  * + .profile-corporate__title { margin-top: 60px; }
+}

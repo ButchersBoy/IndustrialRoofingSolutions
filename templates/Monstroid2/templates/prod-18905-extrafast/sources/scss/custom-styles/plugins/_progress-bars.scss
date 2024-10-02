@@ -1,0 +1,98 @@
+/*
+*
+* Progress Bars
+* --------------------------------------------------
+*/
+
+// Linear Progress Bars
+// --------------------------------------------------
+
+.progress-linear {
+  position: relative;
+  color: $gray-dark;
+  text-align: left;
+
+  .progress-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: -12px;
+    margin-right: -12px;
+    font-family: $font-family-sec;
+    font-weight: 400;
+    letter-spacing: .06em;
+
+    > * {
+      padding: 0 12px;
+    }
+
+    > * + * {
+      margin-top: 0;
+    }
+  }
+
+  .progress-bar-linear-wrap {
+    background: $gray-lighter;
+    padding: 6px;
+    border-radius: 2px;
+  }
+
+  .progress-bar-linear {
+    height: 7px;
+    width: 0;
+    background-color: $primary;
+    transition: .5s all ease-in-out;
+  }
+
+  .progress-value {
+    &:after {
+      content: "%";
+    }
+  }
+
+  * + .progress-bar-linear-wrap {
+    margin-top: 10px;
+  }
+}
+
+.progress-linear-modern {
+  .progress-bar-linear-wrap {
+    position: relative;
+    padding: 0;
+    background: transparent;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $black;
+    }
+  }
+
+  .progress-bar-linear {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+* + .progress-linear { margin-top: 35px; }
+
+
+.progress-bar-linear-limited {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* + .progress-bar-linear-limited {
+  margin-top: 35px;
+}
+
+@include media-breakpoint-up(md) {
+  * + .progress-bar-linear-limited {
+    margin-top: 50px;
+  }
+}

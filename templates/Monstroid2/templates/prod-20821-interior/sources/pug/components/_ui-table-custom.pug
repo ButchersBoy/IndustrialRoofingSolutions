@@ -1,0 +1,11 @@
+//- table - Responsive Table object
+mixin table-custom(table, tableAttr, responsive)
+	.table-custom-wrap
+		table.table-custom(class= tableAttr)
+			each row, i in table
+				tr
+					each col in row
+						if (i === 0)
+							th= col
+						else
+							td= col

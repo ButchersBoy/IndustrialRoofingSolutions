@@ -1,0 +1,413 @@
+/*
+*
+* Owl Carousel
+* --------------------------------------------------
+*/
+
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+  
+  h4 + & {
+    margin-top: 30px;
+  }
+  // Extra large ≥1200px
+  @include media-breakpoint-up(xl) {
+    h4 + & {
+      margin-top: 50px;
+    }
+  } 
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  font: 400 40px/80px 'FontAwesome';
+  cursor: pointer;
+  z-index: 1;
+  transition: scale 100ms ease;
+  &:before {
+    content: '\f144';
+  }
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/*
+ * Owl Navigation
+ */
+
+.owl-carousel[data-nav='true'] {
+  @include media-breakpoint-up(md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.owl-nav {
+  
+  &.disabled { 
+    display: none;
+  }
+} 
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Linearicons';
+  color: #c7c7c7;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.owl-prev {
+  left: 0;
+
+  &:before {
+    content: '\e93b';
+  }
+}
+
+.owl-next {
+  right: 0;
+
+  &:before {
+    content: '\e93c';
+  }
+}
+
+/*
+ * Owl Pagination
+ */
+
+.owl-dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.owl-dot {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  transition: .2s;
+
+  &:only-child {
+    display: none;
+  }
+
+  &:hover,
+  &.active {
+    background-color: $primary;
+  }
+
+  & + & {
+    margin-left: 15px;
+  }
+}
+
+.owl-carousel.owl-carousel-light-dots {
+  .owl-dot {
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+
+    &.active {
+      background-color: $white;
+    }
+  }
+}
+
+.carousel-post-gallery {
+  overflow: hidden;
+
+  &[data-nav='true'] {
+    padding-left: 0;
+    padding-right: 0;
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+      bottom: 30px;
+    }
+  }
+
+  .item {
+    .img-thumbnail-variant-1 {
+      width: 100%;
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    text-align: center;
+    margin-top: -25px;
+    z-index: 10;
+    cursor: pointer;
+    color: $gray-1;
+    transition: .33s;
+    font-size: 30px;
+
+    &:hover {
+      color: $primary;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .owl-prev {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+    transform: translateX(-100%);
+  }
+
+  .owl-next {
+    right: -1px;
+    border-radius: 4px 0 0 4px;
+    transform: translateX(100%);
+  }
+
+  &:hover {
+    .owl-prev,
+    .owl-next {
+      transform: translateX(0);
+    }
+  }
+
+}
+
+.carousel-blog-post-minimal {
+  max-height: 320px;
+
+  .item {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 75%;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-right: -1px;
+
+    > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100%;
+      min-width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 36%;
+    }
+  }
+}
+
+.owl-carousel-spacing-1 {
+  @include media-breakpoint-down(sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .owl-prev {
+      left: -5px;
+    }
+
+    .owl-next {
+      right: -5px;
+    }
+  }
+}
+
+.owl-carousel-spacing-2 {
+  .owl-stage-outer {
+    padding-top: 15px;
+  }
+}

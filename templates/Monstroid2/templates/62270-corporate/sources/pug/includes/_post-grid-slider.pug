@@ -1,0 +1,51 @@
+//- Includes
+include ../elements/_ui-slider-blog
+//Post Grid Slider
+article.post-slider.post-classic.post-grid
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postSlider) The Most Innovative Companies of 2016
+		.post-meta
+			.group
+				a(href=postSlider): time(datetime='2017') Jan.20, 2016
+				a(href=postSlider).meta-author Brian Williamson
+
+	+slider-blog({
+		class: 'carousel-slider-blog-post',
+		items: [
+			{
+				original_img: 'gallery-post-01-original-1000x667',
+				img_thumb: 'gallery-post-1-886x501'
+			},
+			{
+				original_img: 'gallery-post-02-original-1000x667',
+				img_thumb: 'gallery-post-2-886x501'
+			},
+			{
+				original_img: 'gallery-post-03-original-1000x667',
+				img_thumb: 'gallery-post-3-886x501'
+			}
+		]
+	})
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand...
+		.post-meta
+			.group
+				a.post-meta__comment(href=postSlider) 3 comment(s)
+				a(href=postSlider) Theme
+				+tag-list({
+					list_class: 'list-inline-tag',
+					href: postSlider,
+					items: [
+						"Style",
+						'Clean']
+				})
+
+		.post-classic-footer
+			ul.list-inline.list-inline-lg
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-facebook(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-twitter(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-google-plus(href='#')
+
+			a(href=postSlider).button.button-link Read More

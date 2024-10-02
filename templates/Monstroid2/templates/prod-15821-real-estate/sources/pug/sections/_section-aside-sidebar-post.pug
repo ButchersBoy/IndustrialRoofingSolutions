@@ -1,0 +1,63 @@
+// Categories
+section.section-sm
+  h5 Categories
+  ul.list-linked
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+    li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-sm
+  h5 Latest Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2018
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+
+        p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2018
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+
+        p.post-inline__link: a(href=postLink) Getting to another level of design and functionality.
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2018
+          a(href=postLink).post-inline__author.meta-author by Calvin Fitzgerald
+
+        p.post-inline__link: a(href=postLink) Creating Portfolio.
+='\n'
+
+// Tags
+section.section-sm
+  h5 Tags
+  ul.list-tags
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Ultimate Font Collection
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+='\n'
+
+// Flickr
+section.section-sm
+  h5 Flickr
+  .flickr.grid-4(data-flickr-tags='html-m2', data-photo-swipe-gallery='gallery')
+    - for(var i = 0; i < 8; i++)
+      .flickr-item(data-type="flickr-item")
+        a.thumb-minimal(data-image_b="href", data-photo-swipe-item)
+          figure
+            img(src='images/_blank.png', data-image_s="src" data-title="alt", width='75', height='75', alt='')
+          .thumb-minimal__overlay
+='\n'

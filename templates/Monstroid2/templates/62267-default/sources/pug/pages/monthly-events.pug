@@ -1,0 +1,134 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Monthly Events'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-60
+				.col-sm-12
+					.calendar-box-search
+						.calendar-box-search-inner
+							form.rd-mailform.rd-mailform_style-1.rd-mailform-inline-flex()
+								.form-wrap.form-wrap_icon
+									label.form-label-outside(for="event-date") Events In
+									span.novi-icon.form-icon.form-wrap_icon__label-outside.linear-icon-calendar-31
+									input#event-date.form-input(type="text" name="name" placeholder='Date' data-time-picker='date')
+								.form-wrap.form-wrap_icon
+									label.form-label-outside(for="event-search") Search
+									span.novi-icon.form-icon.form-wrap_icon__label-outside.linear-icon-magnifier
+									input#event-search.form-input(type="text" name="phone" placeholder='Search')
+								button(type="submit").button.button-primary Find events
+						
+						.calendar-box-search-inner.text-center
+							h6
+								a(href='#', data-bs-target='.calendar-box-list-view', data-bs-toggle="collapse") View As
+							ul.calendar-box-list-view.list-xxs
+								li
+									span.icon.novi-icon.linear-icon-calendar-full
+									| Month
+								li
+									a(href='event-list.html')
+										span.icon.novi-icon.linear-icon-clipboard-text
+										| List
+				
+				.col-sm-12.text-center
+					// RD Calendar
+					.rd-calendar
+						.rdc-panel
+							h3
+								| Events for
+								=' '
+								span.rdc-month
+								=' '
+								span.rdc-fullyear
+						.rdc-table
+						.rdc-events
+							a.rdc-events_close
+							ul
+								li.rdc-event(data-date='09/10/2024')
+									.thumbnail-classic
+										+jpg('services-3-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title The Power of Bootstrap Toolkit
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+								
+								li.rdc-event(data-date='09/14/2024')
+									.thumbnail-classic
+										+jpg('services-2-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title Great for Any Device
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p Use our Template to customize and update your website within seconds.
+								
+								li.rdc-event(data-date='10/07/2024')
+									.thumbnail-classic
+										+jpg('services-3-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title The Power of Bootstrap Toolkit
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+								
+								li.rdc-event(data-date='10/15/2024')
+									.thumbnail-classic
+										+jpg('services-2-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title Template
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p Use our Template to customize and update your website within seconds.
+								
+								li.rdc-event(data-date='11/14/2024')
+									.thumbnail-classic
+										+jpg('services-3-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title The Power of Bootstrap Toolkit
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+								
+								li.rdc-event(data-date='11/19/2024')
+									.thumbnail-classic
+										+jpg('services-2-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title Template
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p Use our Template to customize and update your website within seconds.
+								
+								li.rdc-event(data-date='12/14/2024')
+									.thumbnail-classic
+										+jpg('services-3-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title The Power of Bootstrap Toolkit
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+								
+								li.rdc-event(data-date='12/19/2024')
+									.thumbnail-classic
+										+jpg('services-2-418x315')
+										.caption
+											h6: a(href='single-event.html').thumbnail-classic-title Template
+											time.thumbnail-classic-time(datetime='2024') October 30, 2024 @ 8:00 am - November 5, 2024 @ 5:00 pm
+											p Use our Template to customize and update your website within seconds.
+						
+						.rdc-panel-nav
+							a.rdc-prev Prev month
+							h5.d-none.d-md-block Calendar Month Navigation
+							a.rdc-next Next month
+				
+				.col-sm-12.text-end
+					a(href='#').button.button-black  EXPORT MONTH'S EVENTS
+	
+	
+	// Page Footer
+	include ../sections/_footer-corporate

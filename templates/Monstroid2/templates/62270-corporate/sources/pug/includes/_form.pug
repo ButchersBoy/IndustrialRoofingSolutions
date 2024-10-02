@@ -1,0 +1,20 @@
+// RD Mailform
+form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+	.form-wrap
+		input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+		label.form-label(for="contact-name") Your name *
+
+	.form-wrap
+		input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+		label.form-label(for="contact-email") Your e-mail *
+
+	.form-wrap
+		input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+		label.form-label(for="contact-phone") Your phone *
+
+	.form-wrap
+		textarea#contact-message.form-input(name="message" data-constraints="@Required")
+		label.form-label(for="contact-message") Your message *
+
+	button(type="submit").button.button-gradient-intro Submit
+		span.button-gradient-intro__overlay

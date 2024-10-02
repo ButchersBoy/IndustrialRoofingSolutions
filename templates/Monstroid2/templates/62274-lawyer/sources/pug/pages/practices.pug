@@ -1,0 +1,118 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-post
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Practices'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.bg-accent-2
+    +parallax({
+      "src": "images/parallax-6.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-md-center
+            .col-md-10.col-xl-8
+              h1.heading-decorated.heading-decorated_center Practices
+  ='\n'
+
+  include ../sections/_section-advantages
+
+  // Our Legal Practice Areas:
+  section.section-lg.bg-gray-lighter.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3.heading-decorated Our Legal Practice Areas:
+          p Our law firm has always been providing an as wide range of civil and commercial litigation services, as possible. Here's a shortlist out of more than 2 dozens of services we have:
+
+      ul.list-indexed
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Labor & Employment Law
+          p We'll be glad to deal with any kind of employment litigation issues, such as unlawful termination, wage hack or discrimination of any kind, which you might have encountered at your workplace...
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Real Estate Law
+          p The real property market nuances and the laws regulating it (such as estate taxing, e.g.) are one of our biggest field of work. We will be protecting your best interest whatever the case is!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Personal Injury
+          p We're working with personal injuries, which are basically minor wrongful conduct torts, thus being out of the criminal hearings reach. We will become your defenders in any of  such civil litigations cases!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Business Litigation & Arbitration
+          p We'll be glad to deal with any kind of employment litigation issues, such as unlawful termination, wage hack or discrimination of any kind, which you might have encountered at your workplace...
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Insurance Law
+          p The insurance marketplace has a lot of restrictions and limitations, which the insurance companies oftentimes try to use as the loopholes for getting away with not paying you. We will change that!
+
+        li
+          .list-indexed__index
+          h5.list-indexed__title: a(href=singlePractice) Mergers & Acquisitions
+          p The commercial world of mergers & acquisitions is a harsh one. You'd better have a just as harsh team of sharky lawyers so that your business emerges as the winner in the court!
+  ='\n'
+
+  include ../sections/_section-free-legal-consultation
+
+  // Real Cases
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          h3.heading-decorated Real Cases
+          p Basically, when people say that their efficiency cannot be measured, be aware that they're simply lying to you... We know it very well, as our track record of almost 10, 000 cases has a striking, 98% mark of cases won or settled in client's favor. See these short list of our most recent legal victories to date*:
+
+      .row.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-1-301x301',
+            title: 'Mary Lewis',
+            text: 'When our law firm was dealing with this case, it was about an African American Nurse put through a Mandatory unpaid Overtime at work. Besides that she also told about a Hostile Work Environment situation. She reported the organization and the company targeted her.  Our firm challenged that unlawful action.',
+            result: 'Case won.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-2-301x301',
+            title: 'Gary Winkler',
+            text: "When an employee asked us to represent his interests in a case of a sexual harassment by another male colleague - we were eager to take on it. The harassment happened while he was on a business trip. The unprovoked touching  was reported to supervisors, but they've tried to keep the thing down.  Our lawyers have sent a detailed settlement offer to the company that their attorneys responded to favorably.  ",
+            result: 'Favorable confidential settlement.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-3-301x301',
+            title: 'Hexi Co.',
+            text: "While working with this company we've been handling soem patent lawsuits that the Hexi Co. company filed against their competitors in the market. We''ve had a long and arduous fight. As our whole intellectual property and patent rights division of lawyers and paralegals showcased their skills, we eventually were able to win. ",
+            result: 'Victory.'
+          })
+
+        .col-md-6.col-lg-4.col-xl-3
+          +post({
+            img: 'cases-4-301x301',
+            title: 'Walter Mayham',
+            text: "When a mental health condition client has asked us to protect him against being accused of shoplifting gadgetry from a major shopping store location. Our client continually insisted on his innocence. Negotiations were difficult because the client had a prior history of thefts.",
+            result: 'Won, thanks to the full assessment and repeal of accusations...'
+          })
+      .row.row-50: .col-sm-12: a.button.buttom-primary-outline(href='won-cases.html') See all
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

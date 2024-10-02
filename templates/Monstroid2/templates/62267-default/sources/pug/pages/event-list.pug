@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Event List'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.bg-default.section-xl
+		.container
+			.row.row-fix.row-60
+				.col-sm-12
+					.calendar-box-search
+						.calendar-box-search-inner
+							form.rd-mailform.rd-mailform_style-1.rd-mailform-inline-flex()
+								.form-wrap.form-wrap_icon
+									label.form-label-outside(for="event-date") Date
+									span.novi-icon.form-icon.form-wrap_icon__label-outside.linear-icon-calendar-31
+									input#event-date.form-input(type="text" name="name" placeholder='Date' data-time-picker='date')
+								.form-wrap.form-wrap_icon
+									label.form-label-outside(for="event-search") Search
+									span.novi-icon.form-icon.form-wrap_icon__label-outside.linear-icon-magnifier
+									input#event-search.form-input(type="text" name="phone" placeholder='Search')
+								button(type="submit").button.button-primary Find events
+						
+						.calendar-box-search-inner.text-center
+							h6
+								a(href='#', data-bs-target='.calendar-box-list-view', data-bs-toggle="collapse") View As
+							ul.calendar-box-list-view.list-xxs
+								li
+									span.icon.novi-icon.linear-icon-clipboard-text
+									| List
+								li
+									a(href='monthly-events.html')
+										span.icon.novi-icon.linear-icon-calendar-full
+										| Month
+				
+				.col-sm-12.text-center.group-event
+					h3 Events
+					
+					.divider-wrap
+						time(datetime='2022').text-accent September 2022
+					
+					.row.row-fix.row-30.post-event
+						.col-md-6
+							+jpg('list-event-1-652x491')
+						.col-md-6.text-md-start.post-event-body
+							h4: a(href='single-event.html').thumbnail-classic-title  HTML Widgets – A to Z
+							time(datetime='2022').thumbnail-classic-time September 28, 2022 @ 8:00 am - October 5, 2022 @ 5:00 pm
+							.events-detail
+								address
+									span Big Theatre, 378, Main Street, San-Francisco, CA United States
+									a(href='#') + Google Map
+							p When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile… Assuming that you will go the easy way and choose a template for your HTML website, the overall number of characteristics that you will need to keep in mind narrows down significantly. But how do you stay focused on what kind of a template you need and what do you want…
+							span.button.button-lg.button-gray-light-outline $100
+							a(href='single-event.html').button.button-link  Find out more
+					
+					.divider-wrap
+						time(datetime='2022').text-accent September 2022
+					
+					.row.row-fix.row-30.post-event
+						.col-md-6
+							+jpg('list-event-2-652x491')
+						.col-md-6.text-md-start.post-event-body
+							h4: a(href='single-event.html').thumbnail-classic-title  HTML Plugins Explained
+							time(datetime='2022').thumbnail-classic-time September 28, 2022 @ 8:00 am - October 5, 2022 @ 5:00 pm
+							.events-detail
+								address
+									span Big Theatre, 378, Main Street, San-Francisco, CA United States
+									a(href='#') + Google Map
+							p When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile… Assuming that you will go the easy way and choose a template for your HTML website, the overall number of characteristics that you will need to keep in mind narrows down significantly. But how do you stay focused on what kind of a template you need and what do you want…
+							span.button.button-lg.button-gray-light-outline $100
+							
+							a(href='single-event.html').button.button-link  Find out more
+	
+	section
+		+divider
+	
+	section.section.novi-bg.novi-bg-img.bg-default.section-sm
+		.container
+			.row.row-10
+				.col-md-6.text-md-start
+					h5 Events List Navigation
+				.col-md-6.text-md-end
+					a(href='#').button.button-black  EXPORT MONTH'S EVENTS
+	
+	
+	// Page Footer
+	include ../sections/_footer-corporate

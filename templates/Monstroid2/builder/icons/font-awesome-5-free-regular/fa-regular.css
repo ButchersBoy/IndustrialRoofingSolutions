@@ -1,0 +1,711 @@
+/*!
+ * Font Awesome Free 5.0.9 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fa-regular-400.eot");
+  src: url("fa-regular-400.eot?#iefix") format("embedded-opentype"), url("fa-regular-400.woff2") format("woff2"), url("fa-regular-400.woff") format("woff"), url("fa-regular-400.ttf") format("truetype"), url("fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free Regular';
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.0.9 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em;
+}
+
+.fa-xs {
+  font-size: .75em;
+}
+
+.fa-sm {
+  font-size: .875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: .3em;
+}
+
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: .3em;
+}
+
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  transform: scale(1, -1);
+}
+
+.fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
+
+.fa-address-book:before {
+  content: "\f2b9";
+}
+
+.fa-address-card:before {
+  content: "\f2bb";
+}
+
+.fa-arrow-alt-circle-down:before {
+  content: "\f358";
+}
+
+.fa-arrow-alt-circle-left:before {
+  content: "\f359";
+}
+
+.fa-arrow-alt-circle-right:before {
+  content: "\f35a";
+}
+
+.fa-arrow-alt-circle-up:before {
+  content: "\f35b";
+}
+
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+.fa-bell-slash:before {
+  content: "\f1f6";
+}
+
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+.fa-building:before {
+  content: "\f1ad";
+}
+
+.fa-calendar:before {
+  content: "\f133";
+}
+
+.fa-calendar-alt:before {
+  content: "\f073";
+}
+
+.fa-calendar-check:before {
+  content: "\f274";
+}
+
+.fa-calendar-minus:before {
+  content: "\f272";
+}
+
+.fa-calendar-plus:before {
+  content: "\f271";
+}
+
+.fa-calendar-times:before {
+  content: "\f273";
+}
+
+.fa-caret-square-down:before {
+  content: "\f150";
+}
+
+.fa-caret-square-left:before {
+  content: "\f191";
+}
+
+.fa-caret-square-right:before {
+  content: "\f152";
+}
+
+.fa-caret-square-up:before {
+  content: "\f151";
+}
+
+.fa-chart-bar:before {
+  content: "\f080";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+.fa-check-square:before {
+  content: "\f14a";
+}
+
+.fa-circle:before {
+  content: "\f111";
+}
+
+.fa-clipboard:before {
+  content: "\f328";
+}
+
+.fa-clock:before {
+  content: "\f017";
+}
+
+.fa-clone:before {
+  content: "\f24d";
+}
+
+.fa-closed-captioning:before {
+  content: "\f20a";
+}
+
+.fa-comment:before {
+  content: "\f075";
+}
+
+.fa-comment-alt:before {
+  content: "\f27a";
+}
+
+.fa-comments:before {
+  content: "\f086";
+}
+
+.fa-compass:before {
+  content: "\f14e";
+}
+
+.fa-copy:before {
+  content: "\f0c5";
+}
+
+.fa-copyright:before {
+  content: "\f1f9";
+}
+
+.fa-credit-card:before {
+  content: "\f09d";
+}
+
+.fa-dot-circle:before {
+  content: "\f192";
+}
+
+.fa-edit:before {
+  content: "\f044";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+
+.fa-eye-slash:before {
+  content: "\f070";
+}
+
+.fa-file:before {
+  content: "\f15b";
+}
+
+.fa-file-alt:before {
+  content: "\f15c";
+}
+
+.fa-file-archive:before {
+  content: "\f1c6";
+}
+
+.fa-file-audio:before {
+  content: "\f1c7";
+}
+
+.fa-file-code:before {
+  content: "\f1c9";
+}
+
+.fa-file-excel:before {
+  content: "\f1c3";
+}
+
+.fa-file-image:before {
+  content: "\f1c5";
+}
+
+.fa-file-pdf:before {
+  content: "\f1c1";
+}
+
+.fa-file-powerpoint:before {
+  content: "\f1c4";
+}
+
+.fa-file-video:before {
+  content: "\f1c8";
+}
+
+.fa-file-word:before {
+  content: "\f1c2";
+}
+
+.fa-flag:before {
+  content: "\f024";
+}
+
+.fa-folder:before {
+  content: "\f07b";
+}
+
+.fa-folder-open:before {
+  content: "\f07c";
+}
+
+.fa-frown:before {
+  content: "\f119";
+}
+
+.fa-futbol:before {
+  content: "\f1e3";
+}
+
+.fa-gem:before {
+  content: "\f3a5";
+}
+
+.fa-hand-lizard:before {
+  content: "\f258";
+}
+
+.fa-hand-paper:before {
+  content: "\f256";
+}
+
+.fa-hand-peace:before {
+  content: "\f25b";
+}
+
+.fa-hand-point-down:before {
+  content: "\f0a7";
+}
+
+.fa-hand-point-left:before {
+  content: "\f0a5";
+}
+
+.fa-hand-point-right:before {
+  content: "\f0a4";
+}
+
+.fa-hand-point-up:before {
+  content: "\f0a6";
+}
+
+.fa-hand-pointer:before {
+  content: "\f25a";
+}
+
+.fa-hand-rock:before {
+  content: "\f255";
+}
+
+.fa-hand-scissors:before {
+  content: "\f257";
+}
+
+.fa-hand-spock:before {
+  content: "\f259";
+}
+
+.fa-handshake:before {
+  content: "\f2b5";
+}
+
+.fa-hdd:before {
+  content: "\f0a0";
+}
+
+.fa-heart:before {
+  content: "\f004";
+}
+
+.fa-hospital:before {
+  content: "\f0f8";
+}
+
+.fa-hourglass:before {
+  content: "\f254";
+}
+
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+
+.fa-id-card:before {
+  content: "\f2c2";
+}
+
+.fa-image:before {
+  content: "\f03e";
+}
+
+.fa-images:before {
+  content: "\f302";
+}
+
+.fa-keyboard:before {
+  content: "\f11c";
+}
+
+.fa-lemon:before {
+  content: "\f094";
+}
+
+.fa-life-ring:before {
+  content: "\f1cd";
+}
+
+.fa-lightbulb:before {
+  content: "\f0eb";
+}
+
+.fa-list-alt:before {
+  content: "\f022";
+}
+
+.fa-map:before {
+  content: "\f279";
+}
+
+.fa-meh:before {
+  content: "\f11a";
+}
+
+.fa-minus-square:before {
+  content: "\f146";
+}
+
+.fa-money-bill-alt:before {
+  content: "\f3d1";
+}
+
+.fa-moon:before {
+  content: "\f186";
+}
+
+.fa-newspaper:before {
+  content: "\f1ea";
+}
+
+.fa-object-group:before {
+  content: "\f247";
+}
+
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+
+.fa-paper-plane:before {
+  content: "\f1d8";
+}
+
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+
+.fa-play-circle:before {
+  content: "\f144";
+}
+
+.fa-plus-square:before {
+  content: "\f0fe";
+}
+
+.fa-question-circle:before {
+  content: "\f059";
+}
+
+.fa-registered:before {
+  content: "\f25d";
+}
+
+.fa-save:before {
+  content: "\f0c7";
+}
+
+.fa-share-square:before {
+  content: "\f14d";
+}
+
+.fa-smile:before {
+  content: "\f118";
+}
+
+.fa-snowflake:before {
+  content: "\f2dc";
+}
+
+.fa-square:before {
+  content: "\f0c8";
+}
+
+.fa-star:before {
+  content: "\f005";
+}
+
+.fa-star-half:before {
+  content: "\f089";
+}
+
+.fa-sticky-note:before {
+  content: "\f249";
+}
+
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+
+.fa-sun:before {
+  content: "\f185";
+}
+
+.fa-thumbs-down:before {
+  content: "\f165";
+}
+
+.fa-thumbs-up:before {
+  content: "\f164";
+}
+
+.fa-times-circle:before {
+  content: "\f057";
+}
+
+.fa-trash-alt:before {
+  content: "\f2ed";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+
+

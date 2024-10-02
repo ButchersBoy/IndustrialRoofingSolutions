@@ -1,0 +1,44 @@
+header.page-header
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.novi-bg.novi-bg-img(
+			data-layout=              'rd-navbar-fixed',
+			data-sm-layout=           'rd-navbar-fixed',
+			data-md-layout=           'rd-navbar-fixed',
+			data-lg-layout=           'rd-navbar-fixed',
+			data-xl-layout=           'rd-navbar-static',
+			data-xxl-layout=          'rd-navbar-static',
+			
+			data-sm-device-layout=    'rd-navbar-fixed',
+			data-md-device-layout=    'rd-navbar-fixed',
+			data-lg-device-layout=    'rd-navbar-fixed',
+			data-xl-device-layout=    'rd-navbar-static',
+			data-xxl-device-layout=   'rd-navbar-static',
+			
+			data-stick-up-clone=      'false',
+			data-sm-stick-up=         'true'
+			data-md-stick-up=         'true'
+			data-lg-stick-up=         'true',
+			data-xl-stick-up=         'true',
+			data-xxl-stick-up=        'true',
+			data-lg-stick-up-offset=  '69px',
+			data-xl-stick-up-offset=  '1px',
+			data-xxl-stick-up-offset= '1px'
+		)
+			.rd-navbar-inner
+				// RD Navbar Panel
+				.rd-navbar-panel
+					button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+					
+					// RD Navbar Brand
+					.rd-navbar-brand
+						+logo
+				
+				// RD Navbar Nav
+				.rd-navbar-nav-wrap
+					.rd-navbar-nav-wrap__element
+						a.button.button-primary.button-icon.button-sm( href='tel:#' )
+							svg(width='16' height='16' viewBox='0 0 16 16')
+								path(d='M9.5 0H9V1H9.5C10.2604 1 10.974 1.14583 11.6406 1.4375C12.3073 1.71875 12.8906 2.10938 13.3906 2.60938C13.8906 3.10938 14.2812 3.69271 14.5625 4.35938C14.8542 5.02604 15 5.73958 15 6.5V7H16V6.5C16 5.60417 15.8281 4.76042 15.4844 3.96875C15.151 3.17708 14.6875 2.48958 14.0938 1.90625C13.5104 1.3125 12.8229 0.848958 12.0312 0.515625C11.2396 0.171875 10.3958 0 9.5 0ZM13 7V6.5C13 6.02083 12.9062 5.56771 12.7188 5.14062C12.5417 4.71354 12.2917 4.34375 11.9688 4.03125C11.6562 3.70833 11.2865 3.45833 10.8594 3.28125C10.4323 3.09375 9.97917 3 9.5 3H9V4H9.5C10.1875 4 10.776 4.24479 11.2656 4.73438C11.7552 5.22396 12 5.8125 12 6.5V7H13ZM12.5938 16L14.8438 13.7344C14.9479 13.6406 15 13.526 15 13.3906C15 13.2448 14.9479 13.1198 14.8438 13.0156L11.8906 10.0625C11.7969 9.96875 11.6771 9.92188 11.5312 9.92188C11.3958 9.92188 11.2812 9.96875 11.1875 10.0625L8.92188 12.3281L3.67188 7.07812L5.9375 4.8125C6.03125 4.71875 6.07812 4.60417 6.07812 4.46875C6.07812 4.32292 6.03125 4.20312 5.9375 4.10938L2.98438 1.15625C2.88021 1.05208 2.75521 1 2.60938 1C2.47396 1 2.35938 1.05208 2.26562 1.15625L0 3.40625C0 5.14583 0.328125 6.78125 0.984375 8.3125C1.65104 9.84375 2.55208 11.1771 3.6875 12.3125C4.82292 13.4479 6.15625 14.3438 7.6875 15C9.21875 15.6667 10.8542 16 12.5938 16Z')
+							span 123-456-7890
+					+navigation( menu )

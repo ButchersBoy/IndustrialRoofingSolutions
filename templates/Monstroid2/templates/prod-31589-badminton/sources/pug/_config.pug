@@ -1,0 +1,59 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap",
+		novi = true,
+
+		logo = {
+			default:  'logo-default-260x72.png',
+			inverse:  'logo-inverse-260x72.png',
+			name:     'Racket'
+		},
+
+		googleApi = 'AIzaSyBl5VaAdEr01_e544aHdSdnKZLtcwRmXhk',
+		postLink = 'standard-post.html',
+		postImage = 'image-post.html',
+		teamMember = 'team-member-profile.html',
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About us',
+				dropdown: [
+					{ title: 'Our team' },
+					{ title: 'Team member profile' }
+				]
+			},
+			{
+				title: 'Pages',
+				subtitle: 'Text',
+				link: '#',
+				dropdown: [
+					{ title: 'Privacy policy' },
+					{ title: '404 page' },
+					{ title: 'Coming soon' },
+					{ title: 'Tabs' },
+					{ title: 'Circles counter' },
+					{ title: 'Buttons' },
+					{ title: 'Typography' }
+				]
+			},
+			{
+				title: 'Gallery',
+				link: '#',
+				dropdown: [
+					{ title: 'Portfolio' },
+					{ title: 'Single Portfolio' }
+				]
+			},
+			{
+				title: 'Contact us'
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		self = self || {};

@@ -1,0 +1,42 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Tabs'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-md.bg-default
+    .container 
+      // Bootstrap tabs
+      #tabs-1.tabs-custom.tabs-horizontal
+        // Nav tabs
+        ul.nav.nav-custom.nav-custom-tabs
+          li: a.nav-link.active(href='#tabs-1-1' data-toggle='tab') Responsive Design
+          li: a.nav-link(href='#tabs-1-2' data-toggle='tab') Retina Ready
+
+      .tab-content.text-left
+        div#tabs-1-1.tab-pane.fade.show.active
+          h5 Responsive Design
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time.
+          h5 Details
+          ul.list-marked
+            li 10 Reasons to Buy Monstroid2.
+            li Getting to another  level of design
+            li Clean Style. Cons and Pros.
+        div#tabs-1-2.tab-pane.fade
+          h5 Responsive & Retina Ready
+          p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+          h5 Details
+          ul.list-marked
+            li 10 Reasons to Buy Monstroid2.
+            li Getting to another level of design
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

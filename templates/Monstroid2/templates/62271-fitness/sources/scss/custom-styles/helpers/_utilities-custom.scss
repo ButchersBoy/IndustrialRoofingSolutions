@@ -1,0 +1,100 @@
+//
+// Utilities custom
+// --------------------------------------------------
+.height-fill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+.block-top-level {
+  position: relative;
+  z-index: 10;
+}
+
+.block-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-width-1 {
+  max-width: 540px;
+}
+
+.text-width-2 {
+  max-width: 620px;
+}
+
+.grid-4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 370px;
+  @include spacing(8px, 10px);
+
+  > * {
+    width: 25%;
+  }
+}
+
+.object-displacement-1 {
+  @include media-breakpoint-up(lg) {
+    margin-top: -45px;
+  }
+}
+
+// Mods
+@include media-breakpoint-up(xxl) {
+  .row.row-50 {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    > [class*='col-'] {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  // [converter] extracted a& to a.label
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  &:focus { color: $white; }
+}
+
+.small { font-weight: inherit; }
+
+.img-circle { border-radius: 50%; }

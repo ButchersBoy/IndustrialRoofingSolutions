@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-panel
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Contacts'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link]]
+  })
+  
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-1.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2 Contacts
+  ='\n'
+
+  section.section-md.bg-default
+    .container
+      .row.row-50
+        .col-md-5.col-lg-4
+          ul.list-md.contact-info
+            li
+              h4 Address:
+              p 410 S Missouri St, Indianapolis, IN 46225, USA
+
+            li
+              h4 Reservations:
+              ul.list
+                li: a(href='mailto:#') info@demolink.org
+                li: p 
+                  | Toll Free phone number:
+                  a(href='tel:#') +1.777.999.5000
+
+            li
+              h4 Front Desk:
+              ul.list
+                li: a(href='mailto:#') info@demolink.org
+                li: p
+                  | Toll Free phone number:
+                  a(href='tel:#') + 1.777.999.5050
+                li: p
+                  | Fax:
+                  a(href='tel:#') + 1.777.999.5051
+                  
+        .col-md-7.col-lg-8
+          h4 Contact Form
+          p.small Required fields are followed by*
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              label.form-label-outside(for="contact-first-name") First Name:*
+              input#contact-first-name.form-input(type="text" name="first-name" data-constraints='@Required', placeholder='First Name')
+              
+            .form-wrap
+              label.form-label-outside(for="contact-last-name") Last Name:* 
+              input#contact-last-name.form-input(type="text" name="last-name" data-constraints='@Required', placeholder='Last Name')
+
+            .form-wrap
+              label.form-label-outside(for="contact-email") Email:*
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required", placeholder='Email')
+
+            .form-wrap
+              label.form-label-outside(for="contact-phone") Phone:*
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric @Required', placeholder='Phone')
+
+            .form-wrap
+              label.form-label-outside(for="contact-message") Message:*
+              textarea#contact-message.form-input(name="message" data-constraints="@Required", placeholder='Message')
+
+            button(type="submit").button.button-primary Submit
+  ='\n'
+
+  section
+    include ../sections/_section-gmap
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

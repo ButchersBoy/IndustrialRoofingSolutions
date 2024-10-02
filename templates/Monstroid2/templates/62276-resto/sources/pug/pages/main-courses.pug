@@ -1,0 +1,108 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Main courses'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+  
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-07.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Main Courses
+
+  section.section-sm.bg-default
+    .container
+      
+      ul.menu-wrap.menu-wrap__two-columns
+        li
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Hot Grilled Chicken Breast With French Fries
+              span.menu-inner-price 2.45
+            .menu-inner
+              span with pecan ‘épicé’ & passe crassane pear
+              span 320g
+              
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Grand champion pear
+              span.menu-inner-price 5.45
+            .menu-inner
+              span with truffles & hollandaise
+              span 320g
+        
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Catriona potato gnocchi
+              span.menu-inner-price 8.71
+            .menu-inner
+              span with black truffles
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Stuffed Peppers
+              span.menu-inner-price 5.55
+            .menu-inner
+              span with ground beef, bell peppers, and white rice
+              span 320g
+        //column2
+        li
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Prosciutto and French Fries
+              span.menu-inner-price 5.45
+            .menu-inner
+              span sunny side up egg on breaded pork chops
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Old Style Potato Pancakes
+              span.menu-inner-price 3.27
+            .menu-inner
+              span with beef stew, pickle, cream
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Breaded Camembert Cheese
+              span.menu-inner-price 9.25
+            .menu-inner
+              span with cranberry and pineapple
+              span 320g
+        
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Shrimp Scampi
+              span.menu-inner-price 7.09
+            .menu-inner
+              span with garlic cloves, shrimps, and dry white wine
+              span 320g
+            
+  section.section-sm  
+  
+  // Page Footer
+  include ../sections/_footer-minimal
+

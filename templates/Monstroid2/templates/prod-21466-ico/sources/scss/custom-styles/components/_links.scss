@@ -1,0 +1,109 @@
+/** @section Links */
+
+// Standard link style
+a {
+	transition: $transition-base;
+
+	&,
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: $link-decoration;
+	}
+
+	@include link($link-color, $link-hover-color);
+
+	&[href*='tel'],
+	&[href*='mailto'] {
+		white-space: nowrap;
+	}
+}
+
+.link-hover {
+	color: $link-hover-color;
+}
+
+.link-press {
+	color: $link-press-color;
+}
+
+.privacy-link {
+	display: inline-block;
+	@include link($white, $primary);
+}
+
+* + .privacy-link { margin-top: 30px; }
+
+
+// Link 1
+.link-1 {
+	text-decoration: underline;
+
+	&,
+	&:focus,
+	&:active,
+	&:hover {
+		color: inherit;
+	}
+}
+
+// Link 2
+.link-2 {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 7px 12px;
+	min-width: 220px;
+	font-size: 12px;
+	line-height: 2;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $black;
+	border: 1px solid $gray-3;
+	border-radius: 4px;
+	background: #EDFBFF;
+
+	@include link(inherit, $primary);
+
+	.icon {
+		font-size: 18px;
+		margin-left: 7px;
+	}
+
+	> * + * {	margin-left: 20px }
+}
+
+.link-2-right {
+	color: $turquoise-2;
+
+	> * {
+		vertical-align: middle;
+	}
+}
+
+// Link tag
+.link-tag {
+	display: inline-block;
+	padding: 7px 15px;
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: 1px solid;
+	border-radius: 4px;
+
+	&,
+	&:focus,
+	&:active {
+		color: inherit;
+	}
+
+	&:hover {
+		color: $white;
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 13px;
+		padding: 9px 20px;
+	}
+}

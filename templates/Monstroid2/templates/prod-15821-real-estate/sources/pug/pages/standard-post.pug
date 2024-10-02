@@ -1,0 +1,89 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Standard post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md 
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 A Definitive Guide to the Best Dining and Drinking Venues in the City
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2018') Jan.20, 2018
+                a(href=postLink).meta-author by Calvin Fitzgerald
+                a(href=postLink) 3 comment(s)
+                +tag-list({
+                  list_class: 'list-inline-tag',
+                  href: postLink,
+                  items: [
+                    "City Guide",
+                    'Special Offers']
+                })
+
+            +jpg('single-post-1-886x661')
+
+            p.first-letter
+              | With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list.
+
+            p We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat and drink.
+
+            h4 An ultimate list of the city’s venues looks like this:
+            
+            ul.list-lg
+              li
+                h5 #1: Cafe Patachou
+                p Thiscontender, located at the city’s airport offers a wide choice of organic dishes, with a big emphasis put on vegetarian and gluten free meals…
+              li
+                h5 #2: St. Elmo Steak House
+                p When visiting a typical farming Midwest state like Indiana, enjoying a steak and fried farm vegetables on the side would make perfect sense!
+                
+            +jpg('single-post-2-886x661', 'img-bordered')
+                
+            ul.list-lg
+              li
+                h5 #3: Repeal Restaurant
+                p Being one of the oldest bars & restaurants in the city and serving as a main bootlegging venue during the Prohibition era, this one has a lot of beverages and burgers to offer!
+              li 
+                h5 #4: Shapiro’s Delicatessen
+                p A traditionally Italian deli place, also serving some Jewish desserts as well, Shapiro’s is by far the Indy’s top rated bakery of them all!
+              li
+                h5 #5: Scotty’s Brewhouse
+                p Good craft & draft beer, on par with incredible meat burgers and steaks, will make your visit worthwhile and yummy!
+                
+            p So while deciding next time where to go for a lunch try to choose just one of these 5 delicious locations!
+            
+            +list-inline-icon({
+              list_class: 'list-inline-sm list-default',
+              items: [
+                "icon-xxs fa-facebook",
+                'icon-xxs fa-twitter',
+                'icon-xxs fa-google-plus',
+                'icon-xxs fa-vimeo',
+                'icon-xxs fa-youtube',
+                'icon-xxs fa-pinterest-p']
+            })
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-blog
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,111 @@
+/** @section Products */
+
+// Discount Time
+.discount-time {
+	text-align: left;
+	padding: 10px;
+	background: $secondary-15;
+	border: 2px solid rgba($white, 0.08);
+	border-radius: 8px;
+}
+
+.discount-time-icon {
+	font-size: 24px;
+	line-height: 1;
+	color: $primary;
+}
+
+.discount-time-title {
+	font-weight: 500;
+}
+
+.discount-details-title {
+	color: $white;
+	font-weight: 600;
+}
+
+.discount-details-list {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+* + .discount-time-text { margin-top: 4px; }
+* + .discount-details-list { margin-top: 8px; }
+* + .discount-time-wrap { margin-top: 30px; }
+* + .discount-details { margin-top: 30px; }
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	.discount-time {
+		padding: 20px;
+	}
+
+	.discount-time-icon {
+		font-size: 30px;
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.discount-time {
+		padding: 20px 30px 20px 25px;
+	}
+
+	.discount-time-icon {
+		font-size: 36px;
+	}
+
+	* + .discount-time-wrap { margin-top: 45px; }
+	* + .discount-details { margin-top: 36px; }
+}
+
+//
+// Box sale
+//
+.box-sale {
+	text-align: center;
+	padding: 30px 10px;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+	background: $white;
+}
+
+.box-sale-title {
+	font-weight: 500;
+}
+
+.box-sale-subtitle {
+	font-size: 15px;
+	font-weight: 700;
+	font-style: italic;
+	color: $turquoise-2;
+}
+
+.box-sale-title + .countdown { margin-top: 20px; }
+
+// Offsets
+* + .box-sale { margin-top: 30px; }
+.box-sale-subtitle + .box-sale { margin-top: 18px; }
+
+// Media
+
+@media (min-width: 340px) {
+	.box-sale {
+		padding: 30px 15px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.box-sale {
+		padding: 40px 25px 65px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.box-sale {
+		padding-bottom: 85px;
+	}
+}

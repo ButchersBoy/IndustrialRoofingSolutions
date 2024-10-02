@@ -1,0 +1,95 @@
+//- Image
+	@param {string} name
+mixin img( name, options )
+	-
+		var size = getImageSize( name );
+		if( options && options.retina ) size[0] = ~~(size[0]/2); size[1] = ~~(size[1]/2);
+	img( src= procImg( name ), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+
+//- Loop without indexing mixin
+	@param {number} iterations - number of iterations
+mixin loop( iterations )
+	- for ( var i = 0; i < iterations; i++ )
+		block
+
+
+//- Parallax Section
+	@param {object} obj - parameters storage
+	@param {string} obj.img - image path
+	@param {string} obj.innerClass - content wrapper class
+mixin parallax( obj )
+	section.parallax-container( data-parallax-img= procImg( obj.img ) )&attributes( attributes )
+		.parallax-content( class= obj.innerClass )
+			block
+
+
+//- Breadcrumbs
+	@param {Array}  [path] - other navigation path
+	@example +breadcrumbs([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumbs( obj )
+
+	// Breadcrumbs
+	section.breadcrumbs-custom
+		.container
+			.headings-default
+				.headings-default-subtitle= obj.subtitle ? obj.subtitle : pageName
+				h3= obj.text
+
+//- Main Navigation
+mixin navigation( menu, type )
+	if( !type )
+		ul.rd-navbar-nav&attributes( attributes )
+			each item in menu
+				li.rd-nav-item( class= { active: item.active } )
+					a.rd-nav-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+					if( item.megamenu )
+						+navigation( item.megamenu, 'megamenu' )
+
+	else if( type === 'dropdown' )
+		ul.rd-menu.rd-navbar-dropdown
+			each item in menu
+				li.rd-dropdown-item( class= { active: item.active } )
+					a.rd-dropdown-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+
+	else if( type === 'megamenu' )
+		ul.rd-menu.rd-navbar-megamenu
+			each item in menu
+				li.rd-megamenu-item
+					if ( item.title )
+						h6.rd-megamenu-title= item.title
+					if ( item.list )
+						+navigation( item.list, 'list' )
+
+	else if( type === 'list' )
+		ul.rd-megamenu-list
+			each item in menu
+				li.rd-megamenu-list-item
+					a.rd-megamenu-list-link( href= item.link )= item.title
+
+
+//- Logo
+mixin logo
+	//Brand
+	a.brand( href='index.html' )&attributes( attributes )
+		+img( logo.default, { retina: true } ).brand-logo-light
+
+
+//- Copyright
+mixin rights
+	p.rights&attributes( attributes )
+		span &copy;&nbsp; 
+		span.copyright-year
+		span &nbsp;
+		span= logo.name
+		span .&nbsp;
+		a( href='privacy-policy.html' ) Privacy Policy
+		| . Design&nbsp;by&nbsp;#[a(href="https://zemez.io/") Zemez]
+
+mixin wave
+	svg.wave( x='0px', y='0px', width='1920px', height='74px', viewBox='0 0 1920 74' preserveAspectRatio="xMidYMid slice" )
+		path.wave-svg-path( fill='#fff', d='M0 46 Q315 -40 640 37 Q900 90 1100 50 Q1350 10 1550 50 T 1920 46 V74 H0 Z' )

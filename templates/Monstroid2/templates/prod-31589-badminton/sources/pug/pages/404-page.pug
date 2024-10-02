@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = '404 page'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "background-05.jpg"
+	}).text-center.parallax-header.context-dark.bg-mask
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-6
+						h3 Page Not Found
+						p The page requested couldn't be found - this could be due to a spelling error in the URL or a removed page.
+						a(href='index.html').button.button-gray-light-outline Go back
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-classic

@@ -1,0 +1,83 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Team member profile'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  // Team member profile
+  section.section-lg.bg-default
+    .container
+      // Profile Corporate
+      article.profile-corporate
+        +jpg('jerry-robinson-405x405', 'profile-corporate__image')
+
+        h2.heading-decorated.heading-decorated_center.profile-corporate__title Jerry Robinson
+        h3.profile-corporate__subtitle Lawyer
+
+        .profile-corporate__caption
+          h6.first-letter Jerry represents and counsels owners and investors in a range of complex commercial real estate transactions throughout the United States, including the representation of owners in connection with the acquisition and disposition of office, hotel, multifamily and land development projects; developers and investors in connection with  the formation of project ventures; developers and investors in connection with the development of office, hotel, multifamily and single family projects; owners in connection with debt financings and refinancings; and landlords and tenants in connection with office, retail and industrial leases.
+  ='\n'
+
+  // Main Info
+  section.section-lg.bg-gray-lighter
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          article.post-info
+            h5.heading-decorated Education
+            p p J.D., University of Virginia School of Law 2002
+            p B.B.A., accounting, Texas Tech University 1999
+            p summa cum laude, with honors Highest-Ranking Graduate, College of Business Administration
+
+        .col-md-6.col-lg-4
+          h5.heading-decorated Practices
+          ul.list-marked
+            li Real Estate and Construction
+            li Real Estate Acquisitions and Dispositions
+            li Real Estate Financings and Refinancings
+            li Industrial and Energy Related to Real Estate
+            li Investment Funds
+
+        .col-md-6.col-lg-4
+          h5.heading-decorated Admission & Affiliations
+          ul.list-marked
+            li State Bar of Texas
+            li Dallas Association of Young Lawyers
+            li Dallas Bar Association
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-telephone
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+              label.form-label(for="contact-phone") Your phone
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

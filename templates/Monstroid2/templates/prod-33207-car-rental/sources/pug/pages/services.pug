@@ -1,0 +1,123 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Services'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-04.jpg"
+	}).parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h1 A wide variety of high quality services
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-40.row-md-60
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-1-360x269',
+						title: 'Car with personal driver',
+						text:  'Virtute dosent a reprimique at pertinaxet en salutandi quo nec elit utinam fierent. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-2-360x269',
+						title: 'MPV rental',
+						text:  'Cras tristique semper convallis. Cras efficitur sagittis erat. Fusce pellentesque ligula vitae tellus.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-3-360x269',
+						title: 'Limousine rental',
+						text:  'Fusce pellentesque ligula vitae tellus facilisis fringilla. Pellentesque sit amet massa at diam tempus faucibus. Nunc eleifend, ipsum nec maximus.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-4-360x269',
+						title: 'SUV rental',
+						text:  'Nunc eleifend, ipsum nec maximus vehicula, leo lorem mollis nunc, at facilisis justo nisi eu erat. Cras elit purus, aliquet ac auctor in, semper at odio.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-5-360x269',
+						title: 'Car leasing',
+						text:  'Pertinaxet en salutandi quo nec elit utinam fierent. Lorem ipsum dolor sit amet, consectetur.'
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-classic({
+						img:   'services-6-360x269',
+						title: 'One-way car rental',
+						text:  'Cras elit purus, aliquet ac auctor in, semper at odio. Ut semper justo ultricies, pulvinar odio eu, suscipit dui.'
+					})
+	='\n'
+
+	include ../sections/_section-cta-1
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-60
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('percent-01-48x48.svg')
+						h3.heading-4.blurb__title Low prices
+						p Salutandi quo nec elit utinam facerі pertinax. Maecenas elementum arcu ut arcu condimentum egestas.
+						
+						ul.list-marked.list-marked-sm
+							li Vivamus eu ullamco
+							li Vivamus pretium ligula
+							li Quis sem varius, eget
+						
+						a(href='single-service.html').button.button-primary Read more
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('user-msg-01-48x48.svg')
+						h3.heading-4.blurb__title Experienced staff
+						p Facer pertinax salutandi quo nec elit utinam fierent, virtute.
+						
+						ul.list-marked.list-marked-sm
+							li Cras tristique semper
+							li Cras efficitur sagittis erat
+							li Fusce pellentesque
+							li Ligula vitae tellus
+						
+						a(href='single-service.html').button.button-primary Read more
+				
+				.col-sm-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon
+							+img('msg-01-48x48.svg')
+						h3.heading-4.blurb__title Reliable support
+						p Virtute dosent a reprimique at pertinax en salutandi. Vivamus nec nisl massa.
+						
+						ul.list-marked.list-marked-sm
+							li Fusce vel mauris tristique
+							li Egestas velit eurt
+							li Commodo sapienet
+							li Quisque ut euismod
+						
+						a(href='single-service.html').button.button-primary Read more
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

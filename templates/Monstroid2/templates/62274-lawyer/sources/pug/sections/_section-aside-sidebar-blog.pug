@@ -1,0 +1,235 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+
+// Search
+section.section-sm.section-style-1
+  h5 Search
+  // RD Search
+  form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+    .form-wrap.form-wrap_icon.linear-icon-magnifier
+      label(for="rd-search-form-input" class="form-label") Enter  keyword
+      input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+    button(type="submit").button.button-primary Go!
+='\n'
+
+// About
+section.section-sm
+  h5 About
+  .thumbnail-classic-minimal
+    +jpg('blog-sidebar-1-210x210','img-circle')
+    .caption
+      p Founded by Steven Pfeiffer, Lesley Dingle and Gerald Harrison back in 1989, today their Houston-based law firm is currently the #1 in both yearly cases dealt with and the percentage of all those cases being won.
+      a(href='about-us.html').button.button-link Read more
+='\n'
+
+// Categories
+section.section-sm
+  h5 Categories
+  ul.list-linked
+    li: a(href='#') Construction Law & Litigation
+    li: a(href='#') Family Law
+    li: a(href='#') Intellectual Property
+    li: a(href='#') Labor & Employment Laws
+    li: a(href='#') Liability Litigation
+    li: a(href='#') Maritime Law
+    li: a(href='#') Medical Malpractice
+    li: a(href='#') Mergers & Acquisitions
+    li: a(href='#') Tips for Business Litigation
+    li: a(href='#') Uncategorized
+    li: a(href='#') USERRA
+='\n'
+
+// Posts
+section.section-sm
+  h5 Latest Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        p.post-inline__link: a(href=postLink) How Couples Decide To Divorce
+        p.post-inline__time December 3, 2016
+    li
+      // Post inline
+      article.post-inline
+        p.post-inline__link: a(href=postLink) Financial Assistance Other Than Child Support
+        p.post-inline__time December 3, 2016
+    li
+      // Post inline
+      article.post-inline
+        p.post-inline__link: a(href=postLink) What the federal legal consequences of Florida’s shooting wlll be?
+        p.post-inline__time December 3, 2016
+='\n'
+
+// Custom post
+section.section-sm
+  h5 Custom Posts
+  ul.list-md
+    li
+      article.unit.flex-sm-row.unit-spacing-sm
+        .unit__left
+          figure.figure-inline.text-center.text-sm-left
+            +jpg('post-aside-1-120x90')
+        .unit__body.post-inline
+          .post-inline__header
+            span.post-inline__time  Jan.20, 2016
+            a(href=postLink).post-inline__author.meta-author by Adam Smith
+          p.post-inline__link: a(href=postLink) How Couples Decide To Divorce
+    li
+      article.unit.flex-sm-row.unit-spacing-sm
+        .unit__left
+          figure.figure-inline.text-center.text-sm-left
+            +jpg('post-aside-2-120x90')
+        .unit__body.post-inline
+          .post-inline__header
+            span.post-inline__time  Jan.20, 2016
+            a(href=postLink).post-inline__author.meta-author by Adam Smith
+
+          p.post-inline__link: a(href=postLink) Financial Assistance Other Than Child Support
+    li
+      article.unit.flex-sm-row.unit-spacing-sm
+        .unit__left
+          figure.figure-inline.text-center.text-sm-left
+            +jpg('post-aside-3-120x90')
+        .unit__body.post-inline
+          .post-inline__header
+            span.post-inline__time  Jan.20, 2016
+            a(href=postLink).post-inline__author.meta-author by Adam Smith
+
+          p.post-inline__link: a(href=postLink) 2016 Texas Employment Law Update
+
+          p.post-inline__text As recently as this month, we’ve stumbled upon a curious legal case study. It all started with a Texas municipal court judge fining a woman with $1,590 for a missing decal on her car license plate...
+
+          .post-inline__footer
+            a(href=postLink).post-inline__comment 3 comment(s)
+          a(href=postLink).button.button-link Read more
+
+// Recent comments
+section.section-sm
+  h5 Recent Comments
+
+  ul.list-sm
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Adam Smith on
+
+        p.post-inline__link: a(href=postLink) How Couples Decide To Divorce
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Adam Smith on
+
+        p.post-inline__link: a(href=postLink) How Couples Decide To Divorce
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Adam Smith on
+
+        p.post-inline__link: a(href=postLink) What the federal legal consequences of Florida’s shooting wlll be?
+
+
+
+// Tags
+section.section-sm
+  h5 Tags
+  ul.list-tags
+    li: a(href='#') Court
+    li: a(href='#') Judge
+    li: a(href='#') Law
+    li: a(href='#') Legal
+    li: a(href='#') Litigation
+    li: a(href='#') Verdict
+='\n'
+
+// Archives
+section.section-sm
+  h5 Archives 
+  ul.list-xxs.list-default
+    li: a(href='#') December 2016
+    li: a(href='#') November 2016
+    li: a(href='#') October 2016
+='\n'
+
+mixin rdc-event(obj)
+  li.rdc-event(data-date=obj.date)
+    table.table.rdc-event-booking-table
+      thead
+        tr
+          th(colspan="3"): p.heading-6 Available Appointments on&nbsp;
+            =  obj.dateText
+      tbody.rdc-inline-event-list
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 8:00am - 9:00am
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 10:30am - 11:00am
+
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment
+
+// Calendar
+section.section-sm
+  h6 Calendar
+
+  // RD Calendar
+  .rd-calendar.booking-calendar.booking-calendar-aside#chapters-select(data-events-inline='true')
+    .rdc-panel
+      .small
+        span.rdc-month
+        =' '
+        span.rdc-fullyear
+
+    .rdc-table
+    .rdc-events
+      a.rdc-events_close
+      ul.list-unstyled
+        +rdc-event({ date: '10/16/2017', dateText: 'October 16, 2017' })
+        +rdc-event({ date: '11/22/2017', dateText: 'November 22, 2017' })
+        +rdc-event({ date: '12/07/2017', dateText: 'December 7, 2017' })
+        +rdc-event({ date: '01/31/2018', dateText: 'January 31, 2018' })
+        +rdc-event({ date: '02/13/2018', dateText: 'February 13, 2018' })
+        +rdc-event({ date: '03/20/2018', dateText: 'March 20, 2018' })
+        +rdc-event({ date: '04/24/2018', dateText: 'April 24, 2018' })
+        +rdc-event({ date: '05/08/2018', dateText: 'May 8, 2018' })
+        +rdc-event({ date: '06/14/2018', dateText: 'June 14, 2018' })
+        +rdc-event({ date: '07/11/2018', dateText: 'Jule 11, 2018' })
+        +rdc-event({ date: '08/20/2018', dateText: 'Jule 20, 2018' })
+        +rdc-event({ date: '09/05/2018', dateText: 'September 20, 2018' })
+        +rdc-event({ date: '10/31/2018', dateText: 'October 20, 2018' })
+
+    .rdc-panel-nav
+      button.rdc-prev Prev month
+      button.rdc-next Next month
+
+='\n'
+
+// Legal Tips on Social Media
+section.section-sm
+  h5 Legal Tips on Social Media
+  +list-inline-icon({
+      list_class: 'list-inline-sm',
+      items: [
+          "icon-sm fa-facebook",
+          'icon-sm fa-twitter',
+          'icon-sm fa-google-plus', 
+          'icon-sm fa-vimeo',
+          'icon-sm fa-youtube',
+          'icon-sm fa-pinterest-p']
+  })
+
+  h5 Need lawyer's help? 
+  p Sign up for our legal news digest. It is always informative of the current state of affairs in the state's and federal legal systems...
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-center.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+    .form-wrap.form-wrap_icon.linear-icon-envelope
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email") Email
+    button(type="submit").button.button-primary Subscribe

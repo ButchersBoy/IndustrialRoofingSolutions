@@ -1,0 +1,149 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-quote-centered
+
+block variables
+	- var activeIndex = 6
+	- var pageName = 'Typography'
+
+block page
+	// Page header 
+	include ../sections/_header-default
+
+	+breadcrumbs({
+		path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+	})
+
+	.section-sm.section-divided
+		.container
+			.row.row-50.row-sm-75
+				.col-lg-8.section-divided__main
+					// Base typography
+					section.section-sm
+						h5 Typography
+						ul.list-md
+							li
+								h1 H1 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							li
+								h2 H2 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+							li
+								h3 H3 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+							li
+								h4 H4 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+							li
+								h5 H5 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+							li
+								h6 H6 Heading
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					='\n'
+
+					// Unordered list
+					section.section-sm
+						h5 Unordered list
+						ul.list-marked
+							li Market opportunities
+							li Existing customers
+							li Prospects
+					='\n'
+
+					// Ordered list
+					section.section-sm
+						h5 Ordered list
+						ul.list-ordered
+							li Market opportunities
+							li Existing customers
+							li Prospects
+					='\n'
+
+					// Blockquotes
+					section.section-sm
+						h5 Blockquotes
+						+quote-centered({
+							text: "The success of your business depends solely on you. We can give any assistance you need to reach new heights.",
+							cite: "Adam Smith"
+						})
+					='\n'
+
+					// Some other styles
+					section.section-sm
+						h5 Some other styles
+						p.first-letter Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation have been thoroughly thought out.
+
+						ul.list-xxs
+							li
+								dl.list-terms-inline
+									dt.text-medium Bold Text
+									dd: span.text-medium Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt.text-medium Italic
+									dd: span.font-italic Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt.text-medium Strike-through
+									dd: span.text-strike Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt.text-medium Link
+									dd: a(href='#') Whether you found me on YouTube
+							li
+								dl.list-terms-inline
+									dt.text-medium Inline Code
+									dd: code Whether you found me on YouTube
+					='\n'
+
+					// Centre aligned image
+					section.section-sm
+						h5 Centre aligned image
+						p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						figure.figure.figure-centered
+							+jpg('typography-1-300x145', 'img-default')
+					='\n'
+
+					// Left aligned image
+					section.section-sm
+						h5 Left aligned image
+						.row.flex-row-md-reverse.row-30
+							.col-md-6
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							.col-md-6
+								figure.figure
+									+jpg('typography-2-1920x930', 'img-default')
+					='\n'
+
+					// Right aligned image
+					section.section-sm
+						h5 Right aligned image
+						.row.row-30
+							.col-md-6
+								p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+							.col-md-6
+								figure.figure
+									+jpg('typography-2-1920x930', '')
+					='\n'
+
+					// Large image should always fit
+					section.section-sm
+						h5 Large image should always fit
+						p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+						figure.figure
+							+jpg('typography-2-1920x930')
+					
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

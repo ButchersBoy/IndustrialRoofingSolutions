@@ -1,0 +1,241 @@
+//
+// Quotes
+// --------------------------------------------------
+
+// Quote left
+.quote-left {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  text-align: left;
+}
+
+.quote-left__text {
+  .q {
+    font-family: $font-family-sec;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: $primary;
+  }
+}
+
+.quote-left__mark {
+  display: inline-block;
+  fill: $secondary;
+}
+
+.quote-left__cite {
+  font-family: $font-family-sec;
+  color: $secondary;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+* + .quote-left__cite {
+  margin-top: 10px;
+}
+
+@include media-breakpoint-up(md) {
+  .quote-left__text {
+    .q {
+      font-size: 24px;
+      line-height: (43 / 30);
+    }
+  }
+
+  .quote-left__cite {
+    font-size: 18px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-left {
+    max-width: 760px;
+  }
+
+  .quote-left__text {
+    .q {
+      font-size: 30px;
+    }
+  }
+}
+
+// Quote default
+.quote-default {
+  @include responsive-block;
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-default {
+    max-width: 865px;
+  }
+}
+
+.quote-default__mark {
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  fill: $primary;
+}
+
+.quote-default__image {
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.quote-default__cite {
+  font-family: $headings-font-family;
+  font-size: 18px;
+  color: $secondary;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+* + .quote-default__mark {
+  margin-top: 30px;
+}
+
+* + .quote-default__text {
+  margin-top: 20px;
+}
+
+* + .quote-default__cite {
+  margin-top: 15px;
+}
+
+* + .quote-default__caption {
+  margin-top: 0;
+}
+
+// Modificators
+.quote-default.quote-default_left {
+  text-align: left;
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+.quote-default.quote-default_left-v2 {
+  text-align: left;
+
+  .quote-default__image {
+    text-align: center;
+  }
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  * + .quote-default__text {
+    margin-top: 30px;
+  }
+}
+
+// Quote bordered
+//
+.quote-bordered {
+  padding: 20px;
+  border: 1px solid $gray-1;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.quote-bordered__mark {
+  display: block;
+  fill: $primary;
+  text-align: left;
+  .icon {
+    font-size: 32px;
+    color: $primary;
+  }
+}
+
+.quote-bordered__image {
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.quote-bordered__cite {
+  font-family: $headings-font-family;
+  font-size: 18px;
+  color: $secondary;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+.quote-bordered__small {
+  @include small;
+}
+
+* + .quote-bordered__image {
+  margin-top: 15px;
+}
+
+* + .quote-bordered__small {
+  margin-top: 0;
+}
+
+* + .quote-bordered__mark {
+  margin-top: 25px;
+}
+
+* + .quote-bordered__text {
+  margin-top: 15px;
+}
+
+* + .quote-bordered__caption {
+  margin-top: 15px;
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-bordered {
+    padding: 40px;
+  }
+
+  * + .quote-bordered__mark {
+    margin-top: 40px;
+  }
+
+  * + .quote-bordered__caption {
+    margin-top: 20px;
+  }
+}

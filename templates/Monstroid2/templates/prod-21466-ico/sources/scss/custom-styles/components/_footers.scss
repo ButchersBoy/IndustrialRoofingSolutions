@@ -1,0 +1,96 @@
+/** @section Footers */
+
+// Footer Classic
+.footer-classic {
+	position: relative;
+	text-align: center;
+	padding: 30px 0;
+	color: $body-color;
+	background: $white;
+	
+	&::before {
+		position: absolute;
+		top: -8px;
+		left: 50%;
+		content: '';
+		width: 24px;
+		height: 24px;
+		border-radius: 3px;
+		background: inherit;
+		transform: translate3d(-50%, 0, 0) rotate(45deg);
+	}
+
+	.rights {
+		color: rgba($black, .7);
+
+		a:hover {
+			color: $secondary;
+		}
+	}
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		padding: 50px 0;
+	}
+
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		padding: 60px 0;
+	}
+}
+
+
+
+// Footer modern
+.footer-modern {
+	text-align: center;
+	color: $white;
+
+	* + .rights {	margin-top: 50px; }
+}
+
+.footer-modern-list {
+	@include group(20px, 12px);
+
+	a {
+		@include link($white, $primary)
+	}
+
+	> li {
+		display: inline-block;
+	}
+}
+
+.footer-modern-brand + * { margin-top: 20px; }
+
+@include media-breakpoint-up(sm) {
+	.footer-modern {
+		text-align: left;
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	* + .rights {	margin-top: 60px; }
+}
+
+@include media-breakpoint-up(lg) {
+	.footer-modern {
+		* + .rights {	margin-top: 70px; }
+	}
+
+	.footer-modern-brand {
+		margin-left: -15px;
+	}
+
+	.footer-modern-list {
+		> li { display: block; }
+	}
+}
+
+@include media-breakpoint-up(xl) {
+
+	.footer-modern {
+		* + .rights {	margin-top: 85px; }
+	}
+}

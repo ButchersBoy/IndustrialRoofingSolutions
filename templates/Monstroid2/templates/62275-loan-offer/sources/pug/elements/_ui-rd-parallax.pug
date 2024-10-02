@@ -1,0 +1,6 @@
+//- Parallax Section
+mixin parallax(obj)
+  section.section.parallax-container(data-parallax-img='images/' + obj.img + '.jpg')
+    .parallax-content(class=obj.addClass)
+      block
+  ="\n"

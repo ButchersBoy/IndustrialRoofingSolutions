@@ -1,0 +1,144 @@
+/*
+*
+* RD Google Map
+* --------------------------------------------------
+*/
+
+$map-height: 200px;
+$map-xs-height: 300px;
+$map-lg-height: 640px;
+
+.google-map {
+  width: 100%;
+  color: $black;
+  height: $map-height;
+  
+  img {
+    max-width: none !important;
+  }
+  
+  @include media-breakpoint-up(sm) {
+    height: $map-xs-height;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    height: $map-lg-height;
+  }
+}
+
+.map_locations {
+  display: none;
+}
+
+.page {
+  .gm-style-iw {
+    & > div:nth-child(1) {
+      border: 0 !important;
+      @include media-breakpoint-up(xl) {
+        padding-top: 15px;
+        padding-left: 23px;
+      }
+    }
+  }
+}
+
+.gm-wrapper {
+  > div {
+    > div > div:nth-child(2) {
+      background-color: $white !important;
+    }
+    > div > div:last-of-type {
+      background-color: transparent !important;
+    }
+    > div {
+      & > div:nth-child(3) {
+        display: none;
+      }
+      & > div:nth-child(1) {
+        border-top: 14px solid $white !important;
+        z-index: 9;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .page {
+    .gm-style-iw {
+      width: 390px !important;
+      > div {
+        max-width: 390px !important;
+      }
+    }
+  }
+  .gm-wrapper {
+    > div {
+      width: 390px !important;
+      > div > div:nth-child(2) {
+        width: 390px !important;
+        box-shadow: 0 0 57px rgba($black, .09) !important;
+        border-radius: 6px !important;
+      }
+      > div > div:last-of-type {
+        width: 340px !important;
+      }
+    }
+  }
+}
+
+.iw-content {
+  
+  > * {
+    color: $gray;
+  }
+  
+  dl {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 7px 0 0;
+  }
+  
+  dt,
+  dd {
+    display: inline;
+    
+    a {
+      color: $gray;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  
+}
+
+.google-map-footer {
+  
+  // Extra large ≥1200px
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    left: 0;
+    right: calc((-100vw + 1170px)/2);
+    top: -80px;
+    bottom: -80px;
+    overflow: hidden;
+    
+    .google-map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  // Large ≥1400px
+  @include media-breakpoint-up(xxl) {
+    right: calc((-100vw + 1400px)/2);
+  }
+  @media (min-width: map-get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+    top: -120px;
+    bottom: -120px;
+  }
+}
+

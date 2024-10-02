@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-centered
+
+block variables
+	- pageName = 'Text'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	// Base typography
+	section.section.novi-bg.novi-bg-img.section-lg
+		.container
+			ul.list-md
+				li
+					h1 H1 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+				li
+					h2 H2 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+				
+				li
+					h3 H3 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+				
+				li
+					h4 H4 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+				
+				li
+					h5 H5 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+				li
+					h6 H6 Heading
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

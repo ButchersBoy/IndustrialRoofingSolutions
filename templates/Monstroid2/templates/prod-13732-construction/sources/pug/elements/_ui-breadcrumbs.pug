@@ -1,0 +1,15 @@
+mixin breadcrumbs(obj)
+  - var activeMenuItem = obj.path.pop()[0];
+
+  section.breadcrumbs-custom
+    .container
+      .breadcrumbs-custom__inner
+        p.breadcrumbs-custom__title=obj.title ? obj.title: activeMenuItem
+
+        ul.breadcrumbs-custom__path
+          li: a(href='index.html')=menu[0].title
+
+          - for (var i = 0; i < obj.path.length; i++)
+            li: a(href=obj.path[i][1])=obj.path[i][0]
+
+          li.active=activeMenuItem

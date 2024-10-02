@@ -1,0 +1,58 @@
+// pagination classic
+//--------------------------------------------------------
+.pagination-classic {
+  margin: 0;
+  li {
+    display: inline-block;
+    a,
+    span{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      font-size: 12px;
+      line-height: 50px;
+      font-weight: 300;
+      font-family: $font-family-base;
+      background-color: $gray-lighter;
+      border: 1px solid $gray-lighter;
+      color: $gray;
+      text-align: center;
+      transition: .4s;
+      border-radius: $border-radius-small;
+
+      &.icon {
+        width: 35px;
+        font-size: 14px;
+        background-color: transparent;
+        border: 0;
+
+        &:hover{
+          color: $primary;
+        }
+      }
+    }
+
+    &.active a,
+    &.active a:hover,
+    a:focus,
+    a:hover {
+      background-color: transparent;
+      border-color: $gray-1;
+    }
+    &.active span,
+    &.active span:hover{
+      background-color: transparent;
+      border-color: $gray-1;
+    }
+
+    &.disabled a,
+    &.disabled a:hover,
+    &.disabled span,
+    &.disabled span:hover{
+      background-color: transparent;
+      border-color: $gray-1;
+    }
+    & + li { margin-left: 7px; }
+  }
+}

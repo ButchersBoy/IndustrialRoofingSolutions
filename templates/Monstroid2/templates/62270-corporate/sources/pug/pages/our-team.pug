@@ -1,0 +1,31 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Our Team'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-md.bg-gray-3.text-center
+    .container
+      h3.heading-divider Our Team
+    include ../includes/_team-carousel
+
+  ="\n"
+
+  include ../sections/_section-parallax-intro
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

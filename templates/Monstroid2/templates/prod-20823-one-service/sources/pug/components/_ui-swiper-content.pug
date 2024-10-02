@@ -1,0 +1,12 @@
+mixin swiper-content( obj )
+	.swiper-slide( data-circle-cx='.855', data-circle-cy='.5', data-circle-r='.39' )
+		.swiper-slide-caption.section-md
+			.container
+				.row.row-50.align-items-center.swiper-custom-row
+					.col-lg-5
+						h3.subtitle( data-swiper-anime!={ animation: 'swiperContentRide', duration: 900, delay: 900 })= obj.subtitle
+						h1( data-swiper-anime!={ animation: 'swiperContentRide', duration: 1000, delay: 1000 } data-subtext= obj.subtext )= obj.title
+						p.big( data-swiper-anime!={ animation: 'swiperContentRide', duration: 1100, delay: 1100 })= obj.text
+						p.postitle( data-swiper-anime!={ animation: 'swiperContentRide', duration: 1200, delay: 1200 })= obj.postitle
+					.box-round-wrap
+						+img(`${obj.img}.png`)(data-swiper-anime!={ animation: 'swiperContentFade', duration: 1000, delay: 1000 })

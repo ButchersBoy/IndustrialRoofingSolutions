@@ -1,0 +1,29 @@
+/** @section Images */
+
+// Standard img style
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.image-custom-wrap {
+  display: none;
+}
+
+@include media-breakpoint-up(xl) {
+  .image-custom-wrap {
+    display: block;
+    position: absolute;
+    top: -115px;
+    left: calc(50% - 216px);
+  }
+}
+
+.img-shadow {
+  box-shadow: 0 0 16px 0 rgba($black, .16);
+}

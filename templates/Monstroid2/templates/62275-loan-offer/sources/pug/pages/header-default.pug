@@ -1,0 +1,51 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Header default'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], ['Headers', '#'], [pageName]]
+  })
+
+  section.section-xl.bg-default.text-center
+    .container
+      .row.row-70
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-1-418x315')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-2-418x315')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-3-418x315')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-4-418x315')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-5-418x315')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('brand-6-418x315')
+  ='\n'
+
+  section.section-xl.bg-default
+    .container-fluid
+      .row.no-gutters
+        .col-md-8
+          +jpg('images-10-1280x640', 'img-responsive')
+        .col-md-4
+          +jpg('images-11-640x640', 'img-responsive')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

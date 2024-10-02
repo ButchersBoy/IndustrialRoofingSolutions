@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-card
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Contacts'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+
+  section.section-md.bg-default
+    .container
+      .row.row-50
+        .col-md-5.col-lg-4
+          h4.heading-decorated Contact Details
+          ul.list-sm.contact-info
+            li
+              dl.list-terms-inline
+                dt Address
+                dd 4578 Marmora Road, Glasgow, D04 89GR
+
+            li
+              dl.list-terms-inline
+                dt Phones
+                dd: ul.list-semicolon
+                  li: a(href='callto:#') (800) 123-0045
+                  li: a(href='callto:#') (800) 123-0045
+
+            li
+              dl.list-terms-inline
+                dt We are open
+                dd Mn-Fr: 10 am-8 pm
+            li
+              +list-inline-icon({
+                  list_class: 'list-inline-sm',
+                  items: [
+                      "icon-sm fa-facebook",
+                      'icon-sm fa-twitter', 
+                      'icon-sm fa-google-plus',
+                      'icon-sm fa-vimeo',
+                      'icon-sm fa-youtube',
+                      'icon-sm fa-pinterest-p']
+              })
+        .col-md-7.col-lg-8
+          h4.heading-decorated Get in Touch
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  section
+    include ../sections/_section-gmap
+
+  // Page Footer
+  include ../sections/_footer-corporate-2
+

@@ -1,0 +1,64 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- var activeIndex = 2
+	- var pageName = 'About'
+
+block page
+	// Page header
+	include ../sections/_header-default
+
+	+parallax({
+		"src": "images/parallax-1.jpg",
+		"class": 'parallax-header'
+	})
+		.parallax-header__inner.context-dark.text-center: .parallax-header__content
+			.container
+				.row.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2.heading-decorated About
+
+	//features
+	include ../sections/_section-features
+
+	// About us
+	include ../sections/_section-about-us-2
+
+	// services
+	include ../sections/_section-services-2
+
+	// Counters
+	include ../sections/_section-counters
+
+	// Testimonials
+	section.section-md.bg-default.text-center
+		.container
+			h4.heading-decorated WHAT PEOPLE SAY
+			.row.row-50
+				.col-md-6
+					// Quote default
+					.quote-default.quote-default_left
+						.quote-default__image
+							+jpg('deborah-quagmire-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q In our case, there couldn’t be any business without our new website! Quart provided us with the template that satisfied all our needs and they were the only company that within the first meeting made me feel very confident and comfortable that they understood and could produce what we envisioned. It’s been a terrific experience working with them. 
+						p.quote-default__cite Jane Smith
+
+				.col-md-6
+					// Quote default 
+					.quote-default.quote-default_left
+						.quote-default__image
+							+jpg('benedict-arnold-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q My company just launched our completely revamped website based on your template and I couldn't be any happier with the way it turned out, and our experience with Quart. We purchased your template and transformed our old website into a modern and incredibly attractive site. Their team is a perfect mix of left and right brains as they provided me with everything I wanted to know.
+						p.quote-default__cite James Wilson
+
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate
+

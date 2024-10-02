@@ -1,0 +1,181 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Person'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('jerry-robinson-301x301')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Jerry Robinson
+              p.thumb__subtitle CEO Lawyer
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('leslie-gross-301x301')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Leslie Gross
+              p.thumb__subtitle Lawyer
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('dana-sims-301x301')
+
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Dana Sims
+              p.thumb__subtitle Lawyer
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            .thumb-corporate__main
+              +jpg('kimberly-barker-301x301')
+              .thumb-corporate__overlay
+                +list-inline-icon({
+                  list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                  items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus'
+                  ]
+                })
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Kimberly Barker
+              p.thumb__subtitle Lawyer
+  ='\n'
+
+  +divider
+
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('jerry-robinson-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Jerry Robinson
+              p.thumb__subtitle CEO Lawyer
+              p Jerry represents and counsels owners and investors in a range of complex commercial real estate transactions throughout the United States, including the representation of owners
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('leslie-gross-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Leslie Gross
+              p.thumb__subtitle Lawyer
+              p Leslie Lesley is our managing partner, co-founder, and Texas' leading civil litigation lawyer... She is a proof that female lawyers are just as good and
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('dana-sims-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Dana Sims
+              p.thumb__subtitle Lawyer
+              p Dana is Lesley's brother, an Ivy League graduate and a proven lawyer, who've worked both in NYC and Texas during his 45 years long career...
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+
+        .col-md-6.col-lg-4.col-xl-3
+          // Thumb corporate
+          .thumb.thumb-corporate
+            +jpg('kimberly-barker-301x301')
+
+            .thumb-corporate__caption
+              p.thumb__title: a(href=teamMember) Kimberly Barker
+              p.thumb__subtitle Lawyer
+              p Kimberly comes from a real legal dynasty. Just like the previous 7 generations of her kin, she's a lawyer and a pretty good one. Her
+
+              +list-inline-icon({
+                list_class: ['list-inline-sm', 'thumb-corporate__list'],
+                items: [
+                  "icon-sm fa-facebook",
+                  'icon-sm fa-twitter',
+                  'icon-sm fa-google-plus'
+                ]
+              })
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

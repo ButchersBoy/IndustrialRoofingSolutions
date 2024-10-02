@@ -1,0 +1,108 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Starters'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[pageName]]
+  })
+  
+  section.text-center
+    +parallax({
+      "backgroundSpeed": "0.35",
+      "attrType": "media",
+      "src": "images/parallax-06.jpg",
+      "htmlSpeed": "0.1",
+      "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h1 Starters
+              
+  section.section-sm.bg-default
+    .container
+      
+      ul.menu-wrap.menu-wrap__two-columns
+        li
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Mille-feuille of wild mushrooms
+              span.menu-inner-price 4.89
+            .menu-inner
+              span with truffles & hollandaise
+              span 320g
+              
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Sauté of salsify
+              span.menu-inner-price 8.45
+            .menu-inner
+              span with tema artichoke & celeriac with caper butter
+              span 320g
+        
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Potato Pancakes
+              span.menu-inner-price 5.45
+            .menu-inner
+              span with apple sauce a side
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Hot Basil Chicken Cups
+              span.menu-inner-price 6.45
+            .menu-inner
+              span with minced chicken, fresh basil, and red chilies
+              span 320g
+        //column2
+        li
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Stuffed Mushrooms
+              span.menu-inner-price 1.25
+            .menu-inner
+              span with vegetables and prosutto
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Italian fennel
+              span.menu-inner-price 7.28
+            .menu-inner
+              span with English watercress & hazelnuts
+              span 320g
+          
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Thyme Soup with Cream
+              span.menu-inner-price 5.45
+            .menu-inner
+              span with Winter black truffles from Piedmont
+              span 320g
+        
+          .menu-inner-wrap
+            .menu-inner.menu-inner__heading
+              a(href='single-product.html') Chicken Balls
+              span.menu-inner-price 7.19
+            .menu-inner
+              span with cheese, chili powder, eggs, and oil
+              span 320g
+            
+  section.section-sm  
+  
+  
+  // Page Footer
+  include ../sections/_footer-minimal

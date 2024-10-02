@@ -1,0 +1,17 @@
+//- Posts
+mixin post( obj )
+	// Post
+	article.post&attributes( attributes )
+		a.post-figure( href='blog-post.html' ): +img( obj.img )
+		.post-body
+			.post-info-panel
+				ul.list-inline
+					li: time.post-time( datetime= obj.time.datetime )= obj.time.datetext
+					li: a.post-tag( href='#' )= obj.tag
+			.post-share
+				.post-share-button( data-custom-toggle='' data-custom-toggle-disable-on-blur='true' )
+				ul.post-social-list
+					li: a.icon.mdi.mdi-facebook( href='#' )
+					li: a.icon.mdi.mdi-twitter( href='#' )
+			h6.post-title: a( href='blog-post.html' )= obj.title
+			p.post-text= obj.text

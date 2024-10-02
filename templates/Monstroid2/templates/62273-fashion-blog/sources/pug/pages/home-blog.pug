@@ -1,0 +1,121 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home Blog'
+
+block page
+  // Page Header
+  header.page-header
+    // RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-sidebar_reverse.rd-navbar_inverse(data-layout='rd-navbar-fixed',
+      data-sm-layout='rd-navbar-fixed',
+      data-sm-device-layout='rd-navbar-fixed',
+      data-md-layout='rd-navbar-fixed',
+      data-md-device-layout='rd-navbar-fixed',
+      data-lg-layout='rd-navbar-sidebar',
+      data-lg-device-layout='rd-navbar-fixed',
+      data-xl-device-layout='rd-navbar-sidebar',
+      data-xl-layout='rd-navbar-sidebar',
+      data-xxl-device-layout='rd-navbar-sidebar',
+      data-xxl-layout='rd-navbar-sidebar',
+      data-stick-up-clone='false',
+      data-sm-stick-up='true'
+      data-md-stick-up='true'
+      data-lg-stick-up='true',
+      data-xl-stick-up='true',
+      data-xxl-stick-up='true',
+      data-lg-stick-up-offset='50px',
+      data-xl-stick-up-offset='50px',
+      data-xxl-stick-up-offset='50px',
+      data-body-class='rd-navbar-absolute',
+      data-md-hover-on='false',
+      data-lg-hover-on='false')
+
+        .rd-navbar-inner.rd-navbar-search-wrap.rd-navbar-search-collapsable-wrap
+          // RD Navbar Panel
+          .rd-navbar-panel.rd-navbar-search_not-collapsable
+            .rd-navbar-panel__aside
+              button.rd-navbar-toggle.rd-navbar-search_collapsable(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+            .rd-navbar-panel__main.rd-navbar-search_collapsable
+              // RD Navbar Brand
+              .rd-navbar-brand
+                a.brand-name(href='index.html')
+                  +png(logoInverse2)
+
+          // RD Navbar Nav
+          .rd-navbar-nav-wrap
+            include ../includes/_nav
+
+  section.rd-parallax
+    .rd-parallax-layer(data-type='html', data-speed='1')
+      .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5500')
+        .swiper-wrapper
+          .swiper-slide.bg-gray-lighter.custom-parallax-wrap(data-slide-bg='images/slider-slide-09-1920x1080.jpg')
+            .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true')
+              .container
+                .row.justify-content-md-center.text-center
+                  .col-md-10.col-xl-7
+                    h1(data-caption-animate='fadeInLeftSmall')
+                      span Monstroid
+                      sup 2
+                    h3(data-caption-animate='fadeInLeftSmall', data-caption-delay='200') New HTML Templates Generation
+                    .group-lg.group-middle
+                      a.button.button-gray-light-outline(data-caption-animate='fadeInLeftSmall', data-caption-delay='350', href=getTemplateLink) Buy theme
+
+          .swiper-slide.bg-default.custom-parallax-wrap.bg-accent(data-slide-bg='images/slider-slide-10-1920x1080.jpg')
+            .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true')
+              .container.text-right
+                .row.justify-content-md-end
+                  .col-md-10.col-xl-7
+                    h2(data-caption-animate='fadeInLeftSmall')
+                      | Discover the Full Potential
+                      | of Bootstrap
+                    a.button.button-gray-light-outline(data-caption-animate='fadeInLeftSmall', data-caption-delay='200', href=getTemplateLink) Buy theme
+
+          .swiper-slide.bg-secondary-8.custom-parallax-wrap(data-slide-bg='images/slider-slide-11-1920x1080.jpg' style='background-position: center top;')
+            .swiper-slide-caption.custom-parallax(data-speed='0.5', data-fade='true')
+              .container
+                h2(data-caption-animate='fadeInLeftSmall')
+                  | Built by geeks
+                  br
+                  | & used by humans
+                h5.text-width-2(data-caption-animate='fadeInLeftSmall', data-caption-delay='200') Monstroid#[sup 2] aims to satisfy real need of real projects. We've got a pack of useful tools for that.
+                .group-lg.group-middle
+                  a.button.button-gray-light-outline(data-caption-animate='fadeInLeftSmall', data-caption-delay='350', href=getTemplateLink) Buy theme
+
+        // Swiper Pagination
+        .swiper-pagination
+
+        // Swiper Navigation
+        .swiper-button-prev.linear-icon-chevron-left
+        .swiper-button-next.linear-icon-chevron-right
+  ='\n'
+    
+  section.bg-default.section-lg
+    .container
+      .row.row-70
+        .col-lg-7.col-xl-8.section-divided__main
+          include ../sections/_section-main-blog
+
+        .col-lg-5.col-xl-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-blog
+
+  // Modal
+  include ../sections/_section-modal
+    
+  section.bg-default
+    include ../sections/_section-carousel-post
+  ='\n'
+  
+  // Page Footer 
+  include ../sections/_footer-corporate

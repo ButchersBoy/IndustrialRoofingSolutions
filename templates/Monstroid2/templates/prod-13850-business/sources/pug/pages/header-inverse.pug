@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Header Inverse'
+
+block page
+  // Page header
+  include ../sections/_header-inverse 
+
+  include ../sections/_section-slider-default
+
+  include ../sections/_section-cta-4
+
+  include ../sections/_section-services
+
+  // Page Footer
+  include ../sections/_footer-corporate
+
+
+block modals
+  include ../includes/_modal-login
+  include ../includes/_modal-register

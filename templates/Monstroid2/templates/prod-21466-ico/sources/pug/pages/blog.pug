@@ -1,0 +1,56 @@
+extends ../_skeleton
+include ../components/_post
+include ../components/_pagination
+
+block variables
+	- pageName = 'Blog'
+
+block page
+	include ../sections/_header-classic
+
+	.gradient-1.bg-vide-2
+		.bg-vide( data-vide-bg='video/video-3' data-vide-options='posterType: jpg, position: 50% 50%' )
+
+		+breadcrumbs({
+			text: 'Latest News'
+		})
+
+	.gradient-2
+		section.section.section-md.text-sm-left
+			.container: .row.row-30.row-md-60
+				.col-lg-8.post-wrap
+					+post({
+						img: 'post-1-773x311',
+						time: { datetime: '2019', datetext: 'December 10, 2019' },
+						tag: 'Blockchain',
+						title: 'Pros & Cons of Premined Cryptocurrencies',
+						text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis'
+					})
+					+post({
+						img: 'post-2-773x311',
+						time: { datetime: '2019', datetext: 'November 10, 2019' },
+						tag: 'Cryptocurrency',
+						title: 'New Qualifier Program for the ICO',
+						text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis'
+					})
+					+post({
+						img: 'post-3-773x311',
+						time: { datetime: '2019', datetext: 'December 10, 2019' },
+						tag: 'News',
+						title: 'How to participate in the ICO',
+						text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis'
+					})
+
+					.pagination-wrap.text-center
+						+pagination-bootstrap([
+							{ prev: '#', disabled: true },
+							{ link: '#', active: true },
+							{ link: '#' },
+							{ link: '#' },
+							{ next: '#' }
+						])
+
+				.col-lg-4: include ../includes/_blog-sidebar
+
+	include ../sections/_footer-info
+	include ../sections/_footer-classic

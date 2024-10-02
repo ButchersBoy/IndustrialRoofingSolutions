@@ -1,0 +1,340 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+include ../components/_ui-team
+include ../components/_ui-counter
+include ../components/_ui-projects
+include ../components/_ui-posts
+include ../components/_ui-quote
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+	// Page Header
+	include ../sections/_header-sidebar
+
+	section.section.novi-background.bg-cover.section-horace
+		.section-horace-left.bg-gray-800
+			.section-horace-left-content.text-center
+				article.project-classic.project-classic-2
+					.project-classic-title Designing
+						br
+						| & building
+					h6.project-classic-text Modern energy
+						br
+						| efficient houses
+						br
+						| from 150 sq. m.
+					+button-jerry({ class: 'button-primary-outline', text: 'Contact Us' })
+
+			.section-horace-left-panel
+				.swiper-custom-nav
+					// Swiper Navigation
+					#swiper-prev.swiper-button-prev.mdi.mdi-arrow-left
+					#swiper-next.swiper-button-next.mdi.mdi-arrow-right
+
+		// Swiper
+		.swiper-container.swiper-slider.swiper-slider-1( data-loop='true' data-autoplay='5000' data-simulate-touch='false' data-custom-prev='#swiper-prev' data-custom-next='#swiper-next' data-slide-effect='fade' )
+			.swiper-wrapper.text-center
+				.swiper-slide.context-dark( data-slide-bg='images/slide-1-1339x729.jpg' )
+					.swiper-slide-caption.project-modern
+						ul.project-modern-info
+							li.heading-6.project-modern-info-item.project-modern-address( data-caption-animate='fadeInDown' data-caption-delay='200' ) 2750 Duffy St
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='100' ) 200 sq. m.
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='0' ) $ 240 000
+						.project-modern-decor( data-caption-animate='fadeInRight' data-caption-delay='0' )
+
+				.swiper-slide.context-dark( data-slide-bg='images/slide-2-1339x729.jpg' )
+					.swiper-slide-caption.project-modern
+						ul.project-modern-info
+							li.heading-6.project-modern-info-item.project-modern-address( data-caption-animate='fadeInDown' data-caption-delay='200' ) 5032 Hewes Ave
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='100' ) 290 sq. m.
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='0' ) $ 390 000
+						.project-modern-decor( data-caption-animate='fadeInRight' data-caption-delay='0' )
+
+				.swiper-slide.context-dark( data-slide-bg='images/slide-3-1339x729.jpg' )
+					.swiper-slide-caption.project-modern
+						ul.project-modern-info
+							li.heading-6.project-modern-info-item.project-modern-address( data-caption-animate='fadeInDown' data-caption-delay='200' ) 2239 Wilmar Farm Rd
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='100' ) 350 sq. m.
+							li.heading-6.project-modern-info-item( data-caption-animate='fadeInDown' data-caption-delay='0' ) $ 340 000
+						.project-modern-decor( data-caption-animate='fadeInRight' data-caption-delay='0' )
+
+			.project-modern-counter 54+ works
+
+			// Swiper Pagination
+			//.swiper-pagination
+
+	section#about.section.novi-background.bg-cover.section-xl.bg-white.parallax-scene-js
+		.container: .row.row-50.align-items-center.justify-content-md-between
+			.col-md-4.col-lg-3: .row.row-40.row-md-60
+				.col-sm-4.col-md-12.col-xl-11.wow.fadeInLeft
+					+box-icon-classic({
+						icon: 'linearicons-apartment',
+						title: 'Architecture',
+						text: 'We provide high-quality architecture services.'
+					})
+				.col-sm-4.col-md-12.col-xl-11.wow.fadeInLeft( data-wow-delay='.05s' )
+					+box-icon-classic({
+						icon: 'linearicons-pen2',
+						title: 'Interior design',
+						text: 'Our team offers unique and stylish architecture solutions.'
+					})
+				.col-sm-4.col-md-12.col-xl-11.wow.fadeInLeft( data-wow-delay='.1s' )
+					+box-icon-classic({
+						icon: 'linearicons-lamp',
+						title: 'Lighting design',
+						text: 'Let our team design unique lighting for your home.'
+					})
+			.col-md-7.col-lg-6: .inset-xl-left-35
+				h3.wow.fadeInRight Find out the price
+					br
+					| of your home
+				h6.title-style-1.wow.fadeInRight( data-wow-delay='.05s' ) We will contact you within 24 hours
+				.form-style-1.context-dark.wow.blurIn
+					// RD Mailform
+					form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap
+							label.form-label( for='contact-name' ) Name
+							input.form-input( id='contact-name' type='text' name='name' data-constraints='@Required' )
+						.form-wrap
+							label.form-label( for='contact-email' ) Email
+							input.form-input( id='contact-email' type='email' name='email' data-constraints='@Required @Email' )
+						.form-wrap
+							label.form-label( for='contact-phone' ) Phone
+							input.form-input( id='contact-phone' type='text' name='phone' data-constraints='@Required @PhoneNumber' )
+						.form-button
+							+button-jerry-2({ text: 'Submit' })
+
+		.layer-wrap.layer-1: .layer( data-depth='0.4' ): +png('index-7-694x539')
+
+	section.section.novi-background.bg-cover.section-xl.bg-gray-800.decoration-1
+		#tabs-1.tabs-custom.container( data-view-triggerable='true' )
+			.row.row-30.row-md-40.justify-content-lg-between
+				.col-lg-5
+					h6.title-style-1.wow.fadeInLeft 4 steps to a new home
+					h1.wow.fadeInLeft( data-wow-delay='.05s' ) How we
+						br.d-none.d-lg-block
+						| Do #[span.font-weight-light It]
+
+					// Tab panes
+					.tab-content.wow.fadeInLeft( data-wow-delay='.1s' )
+						#tabs-1-1.tab-pane.fade
+							h3.title-style-1 Meet and define goals
+							p The first thing we do is meeting with our clients and talk through their goals on a future project. During this meeting, feel free to communicate your ideas and ask lots of questions.
+							p This stage is highly decisive as you can evaluate the work of your potential architect by browsing their portfolio. As a client, you may also assess whether the architect listens to your needs and confirms that he or she understands them.
+						#tabs-1-2.tab-pane.fade
+							h3.title-style-1 Working on the Concept
+							p The next step of our cooperation lies in developing the concept of your future home. It helps us define every single factor that makes the construction process of your home successful.
+							p Our team of designers and architects has to plan every single step of the project to make sure that the final result will meet not only your requirements but also international construction and safety standards. This is when monitoring & control begin.
+						#tabs-1-3.tab-pane.fade
+							h3.title-style-1 Building Your Home
+							p There’s no doubt that the most important and responsible part of building a home is its construction process. As we work with reliable contractors, a great result is guaranteed.
+							p This stage is one of the most complex ones as it includes a variety of tasks that must be controlled - from preparing the construction site to installing insulation and completing drywall as well as working on exterior.
+						#tabs-1-4.tab-pane.fade.show.active
+							h3.title-style-1 Completing a project
+							p When the project gets to its final stage, our quality control team conducts the final check of the building to make sure everything has been carried out the proper way.
+							p Our employees will also make sure that all interior elements & fixtures are correctly installed  during this final step. After everything is completed, we invite our client to assess the final result and experience the quality performance of our project.
+
+				.col-lg-7.col-xl-6: .inset-xl-left-35
+					ul.nav.nav-style-1
+						li.nav-item.wow.blurIn( role='presentation' ): a.nav-link.active( href='#tabs-1-1' data-toggle='tab' ) Acquaintance with the customer
+						li.nav-item.wow.blurIn( role='presentation' data-wow-delay='.05s' ): a.nav-link( href='#tabs-1-2' data-toggle='tab' ) Project Concept Development
+						li.nav-item.wow.blurIn( role='presentation' data-wow-delay='.1s' ): a.nav-link( href='#tabs-1-3' data-toggle='tab' ) Working on Interior and Exterior
+						li.nav-item.wow.blurIn( role='presentation' data-wow-delay='.15s' ): a.nav-link( href='#tabs-1-4' data-toggle='tab' ) Finishing Touches for your future home
+
+					.project-creative.wow.blurIn
+						.project-creative-figure.active( data-view-trigger='#tabs-1-1' ): +jpg('index-1-531x327')
+						.project-creative-figure( data-view-trigger='#tabs-1-2' ): +jpg('index-2-531x327')
+						.project-creative-figure( data-view-trigger='#tabs-1-3' ): +jpg('index-3-531x327')
+						.project-creative-figure( data-view-trigger='#tabs-1-4' ): +jpg('index-4-531x327')
+
+	section#team.section.novi-background.bg-cover.section-lg.bg-gray-100.text-center
+		.container
+			h3.wow.fadeInLeft Our team
+			h6.title-style-1.wow.fadeInRight People behind our success
+			// Owl Carousel
+			.owl-carousel( data-items='1' data-sm-items='2' data-md-items='3' data-xl-items='4' data-margin='5' data-dots='true' data-mouse-drag='false' )
+				+team-classic({
+					img: 'team-1-290x284',
+					name: 'Mary Scott',
+					status: 'Lead Interior Designer'
+				}).wow.fadeInUp( data-wow-delay='.1s' )
+				+team-classic({
+					img: 'team-2-290x284',
+					name: 'John Balmer',
+					status: 'Senior Architect'
+				}).wow.fadeInUp
+				+team-classic({
+					img: 'team-3-290x284',
+					name: 'Ann Smith',
+					status: 'Exterior & Landscape Designer'
+				}).wow.fadeInUp( data-wow-delay='.05s' )
+				+team-classic({
+					img: 'team-4-290x284',
+					name: 'Kate McMillan',
+					status: 'Project Manager'
+				}).wow.fadeInUp( data-wow-delay='.15s' )
+
+	section.section.novi-background.bg-cover.section-lg.section-inset-3.bg-white.parallax-scene-js
+		.container: .row.row-50.justify-content-md-between
+			.col-md-6
+				h3.wow.fadeInRight Award-winning
+					br
+					| Architecture company
+				h6.title-style-1.wow.fadeInRight( data-wow-delay='.05s' ) We deliver the best solutions
+
+				article.video-classic.wow.blurIn
+					.video-classic-figure: +jpg('index-5-533x362')
+					a.video-classic-link( data-lightgallery='item' href='https://www.youtube.com/watch?v=1UWpbtUupQQ' ): span.icon.mdi.mdi-play
+
+			.col-md-4.col-xl-3.inset-xl-top-70: .row.row-30.row-md-50.justify-content-center.justify-content-md-start
+				.col-6.col-sm-4.col-md-12.col-lg-11.wow.fadeInRight
+					+counter-classic({
+						number: '7',
+						title: 'Years',
+						text: 'We have been working in the industry since 2011.'
+					})
+				.col-6.col-sm-4.col-md-12.col-lg-11.wow.fadeInRight( data-wow-delay='.05s' )
+					+counter-classic({
+						number: '54',
+						title: 'Projects',
+						text: 'To this day, we have designed 54 residential projects.'
+					})
+				.col-6.col-sm-4.col-md-12.col-lg-11.wow.fadeInRight( data-wow-delay='.1s' )
+					+counter-classic({
+						number: '11',
+						title: 'Awards',
+						text: 'Spectrum has been awarded for creativity many times.'
+					})
+				.col-xl-12.wow.fadeInUp: +button-jerry({ text: 'Contact Us' })
+		.layer-wrap.layer-2: .layer( data-depth='0.4' ): +png('index-8-853x574')
+
+	section#portfolio.section.novi-background.bg-cover.section-lg.section-inset-2.bg-gray-100
+		.container
+			.caption-classic
+				.caption-classic-group
+					h1.caption-classic-title.wow.fadeInLeft Pro
+						span.font-weight-light jects
+					p.caption-classic-text.wow.fadeInRight Below you can take a look at our featured and recent projects that have been numerously awarded for our unique architectural approach.
+				.caption-classic-decor.wow.blurIn
+
+			// Owl Carousel
+			.owl-carousel.owl-style-1( data-autoplay='false' data-items='1' data-margin='30' data-xl-margin='90' data-nav='true' data-dots='true' data-mouse-drag='false' data-smart-speed='600' )
+				+project-mary({
+					img: 'project-1-775x524',
+					imgOriginal: 'project-1-1200x800-original',
+					time: { datetime: '2018-03-15', datetext: 'March 15, 2018' },
+					tag: 'Architecture',
+					title: '3119 Mulberry Ln, Newcastle, OK',
+					text: 'We have worked on this project for three months to completely extend and redesign the old 2-storey house.'
+				})
+
+				+project-mary({
+					img: 'project-2-775x524',
+					imgOriginal: 'project-2-1200x800-original',
+					time: { datetime: '2018-06-19', datetext: 'June 19, 2018' },
+					tag: 'Exterior design',
+					title: '4367 Liberty St, irving, TX',
+					text: 'Our team of exterior designers and architects integrated the latest innovations in this residential project.'
+				})
+
+				+project-mary({
+					img: 'project-3-775x524',
+					imgOriginal: 'project-3-1200x800-original',
+					time: {datetime: '2018-01-10', datetext: 'January 10, 2018'},
+					tag: 'Landscape design',
+					title: '2560 Russell st, Boston, MA',
+					text: 'As one of our first projects in 2018, this house features unique landscape design solutions and work on exterior.'
+				})
+
+	section.section.novi-background.bg-cover.section-xl.bg-white.text-center.decoration-1
+		.container
+			h3.wow.fadeInRight Find new ideas and
+				br
+				| inspiration in our blog
+			h6.title-style-1.wow.fadeInLeft Latest blog posts
+			.row.row-xl.row-30.justify-content-center.justify-content-xl-between
+				.col-sm-6.col-md-4.col-xl-3.wow.fadeInUp( data-wow-delay='.05s' )
+					+post-classic({
+						time: { datetime: '2018-06-19', datetext: 'June 19, 2018' },
+						img: 'post-1-270x182',
+						title: 'How Art Influences Modern Architecture',
+						text: 'Looking through our recent, impactful projects, we set out to ask the designers about their opinion...'
+					})
+				.col-sm-6.col-md-4.col-xl-3.wow.fadeInUp
+					+post-classic({
+						time: { datetime: '2018-05-30', datetext: 'May 30, 2018' },
+						img: 'post-2-270x182',
+						title: 'New Trends in Architecture: overview',
+						text: 'Architecture is constantly evolving based on changes in our culture, society and the environment. While...'
+					})
+				.col-sm-6.col-md-4.col-xl-3.wow.fadeInUp( data-wow-delay='.05s' )
+					+post-classic({
+						time: { datetime: '2018-04-15', datetext: 'April 15, 2018' },
+						img: 'post-3-270x182',
+						title: 'Working with an Architect: 10 useful tips',
+						text: 'A skilled architect will elevate the work you do to your home from the ordinary to the wonderful. Here’s...'
+					})
+
+	section.section.novi-background.bg-cover.section-xl.section-inset-2.bg-gray-800.bg-image( style='background-image: url(images/bg-image-1.jpg)' )
+		.container
+			// Owl Carousel
+			.owl-carousel.owl-style-2( data-loop='true' data-autoplay='true' data-items='1' data-margin='30' data-dots='true' data-mouse-drag='false' data-animation-in='fadeIn' data-animation-out='fadeOut' )
+				+quote-classic({
+					text: 'I have worked with many companies offering design & architecture services, and out of all you were one who really stood out from the rest and did a great job.',
+					img: 'user-1-80x80',
+					author: 'kate williams',
+					status: 'Entrepreneur'
+				})
+				+quote-classic({
+					text: 'I was looking for top-notch creativity and quality service and I found what I needed in your team. You took all my ideas and demands into consideration and made a great project.',
+					img: 'user-2-80x80',
+					author: 'Ann Lee',
+					status: 'Freelancer'
+				})
+				+quote-classic({
+					text: 'I selected Spectrum because of their architects’ rigorous design background and education. They exceeded my expectations and did a great a job on extending and redesigning my house.',
+					img: 'user-3-80x80',
+					author: 'Sam McMillan',
+					status: 'Manager'
+				})
+
+			.inset-md-left-custom-1.text-sm-left
+				h5.title-style-2 Trusted by
+				.clients-classic-wrap.wow.fadeInUp
+					a.clients-classic( href='#' ): +png('clients-1-87x54')
+					a.clients-classic( href='#' ): +png('clients-2-112x45')
+					a.clients-classic( href='#' ): +png('clients-3-146x28')
+					a.clients-classic( href='#' ): +png('clients-4-84x47')
+					a.clients-classic( href='#' ): +png('clients-5-131x29')
+
+	section.section.novi-background.bg-cover.bg-white.section-inset-1.parallax-scene-js
+		.container: .row.justify-content-center
+			.col-lg-6.d-none.d-lg-block.wow.fadeInLeft: +png('index-6-538x694')
+			.col-md-8.col-lg-6: .inset-xl-left-35.section-sm
+				h3.wow.fadeInRight Get in touch with
+					br
+					| our team
+				h6.title-style-1.wow.fadeInRight( data-wow-delay='.05s' ) Let’s work together!
+				.form-style-1.context-dark.wow.blurIn
+					// RD Mailform
+					form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap
+							label.form-label( for='contact-name-2' ) Name
+							input.form-input( id='contact-name-2' type='text' name='name' data-constraints='@Required' )
+						.form-wrap
+							label.form-label( for='contact-email-2' ) Email
+							input.form-input( id='contact-email-2' type='email' name='email' data-constraints='@Required @Email' )
+						.form-wrap
+							label.form-label( for='contact-phone-2' ) Phone
+							input.form-input( id='contact-phone-2' type='text' name='phone' data-constraints='@Required @PhoneNumber' )
+						.form-button
+							+button-jerry-2({ text: 'Submit' })
+
+		.layer-wrap.layer-3: .layer( data-depth='0.4' ): +png('index-9-1047x531')
+
+	include ../sections/_footer-classic

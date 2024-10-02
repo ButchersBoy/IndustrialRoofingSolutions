@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+	- pageName = 'Single Portfolio'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Badminton Gear
+			p Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+			
+			.slick-gallery
+				// Slick Carousel
+				.slick-slider.carousel-parent(
+					data-arrows="true",
+					data-loop="false",
+					data-dots="false",
+					data-swipe="true",
+					data-items="1"
+					data-child="#child-carousel",
+					data-for="#child-carousel",
+					data-lightgallery="group"
+				)
+					.item
+						+img('portfolio-single-1-1200x800')
+					.item
+						+img('portfolio-single-2-1200x800')
+					.item
+						+img('portfolio-single-3-1200x800')
+					.item
+						+img('portfolio-single-4-1200x800')
+					.item
+						+img('portfolio-single-5-1200x800')
+					.item
+						+img('portfolio-single-6-1200x800')
+					.item
+						+img('portfolio-single-7-1200x800')
+					.item
+						+img('portfolio-single-8-1200x800')
+					.item
+						+img('portfolio-single-9-1200x800')
+				
+				.slick-slider#child-carousel(
+					data-for=".carousel-parent",
+					data-arrows="true",
+					data-loop="false",
+					data-dots="false",
+					data-swipe="true",
+					data-items="2",
+					data-xs-items="3",
+					data-sm-items="4",
+					data-md-items="5",
+					data-lg-items="6",
+					data-xl-items="8",
+					data-slide-to-scroll="1"
+				)
+					.item
+						+img('portfolio-single-thumb-1-168x112')
+					.item
+						+img('portfolio-single-thumb-2-168x112')
+					.item
+						+img('portfolio-single-thumb-3-168x112')
+					.item
+						+img('portfolio-single-thumb-4-168x112')
+					.item
+						+img('portfolio-single-thumb-5-168x112')
+					.item
+						+img('portfolio-single-thumb-6-168x112')
+					.item
+						+img('portfolio-single-thumb-7-168x112')
+					.item
+						+img('portfolio-single-thumb-8-168x112')
+					.item
+						+img('portfolio-single-thumb-9-168x112')
+	
+	// Page Footer
+	include ../sections/_footer-classic

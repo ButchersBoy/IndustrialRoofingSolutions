@@ -1,0 +1,113 @@
+section.section-sm
+  .row.row-60.justify-content-md-between
+    .col-md-5.text-md-left
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit__left
+          span.icon.icon-md.linear-icon-arrow-left
+        .unit__body
+          p.small Can you be fined with $1600 for missing a license plate decal?
+          
+    .col-md-5.text-md-right
+      a(href=postVideo).unit.flex-row.unit-spacing-md.align-items-center 
+        .unit__body
+          p.small Plan ahead to avoid driving under the influence and DUI accidents
+        .unit__right
+          span.icon.icon-md.linear-icon-arrow-right
+
+section.section-sm
+  h5 Latest Posts
+  .row.row-60
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('post-classic-1-886x668')
+  
+        .post-classic-title
+          h5: a(href='nonstandard-post.html') 2016 Texas Employment Law Update
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Adam Smith
+  
+    .col-md-6
+      // Post classic
+      article.post-classic.post-minimal
+        +jpg('gallery-post-1-886x668')
+  
+        .post-classic-title
+          h5: a(href=postImage) Welcome to Jerry Robinson's Law office
+  
+        .post-meta
+          .group
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Adam Smith
+          
+section.section-sm
+  // Blurb minimal
+  article.blurb: .unit.flex-sm-row.unit-spacing-md
+    .unit__left
+      +jpg('post-author-109x109', 'img-circle')
+    .unit__body
+      p.blurb__title About the author
+      p.small Mr.Williamson was born in one of Detroit’s poorest blocks, all before pursuing his successful managerial career in the future. For him, the breakthrough happened when he was able to get on Harvard University’s Law School list. After graduating from there, he was working for a few years for a number of multi-million dollar corporations, climbing up the corporate ladder and...
+
+section.section-sm
+  h5 3 Comments
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          h6 Adam Smith
+          time(datetime='2017') Jul 18, 2016
+          p It doesn’t get any more difficult to divorce and split the property than in the Bear state…
+          a(href='#') Reply
+
+  .box-comment.box-comment-reply
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left
+        +jpg('box-comment-1-70x70', 'rounded-circle')
+      .unit__body(style='width: 100%')
+        .box-comment__body
+          h6 Adam Smith
+          time(datetime='2017') Jul 18, 2016
+          p Believe me, as a divorce lawyer in Alabama I strongly disagree!
+          a(href='#') Reply
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          h6 Tom
+          time(datetime='2017') Jul 18, 2016
+          p Wow, it's very important information.
+          a(href='#') Reply
+
+section.section-sm
+  h3 Leave a reply
+  p Your email address will not be published. Required fields are marked *
+
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+    .form-wrap.form-wrap_icon.linear-icon-man
+      input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+      label.form-label(for="contact-name") Your name *
+
+    .form-wrap.form-wrap_icon.linear-icon-envelope
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email") Your e-mail *
+
+    .form-wrap.form-wrap_icon.linear-icon-earth
+      input#contact-website.form-input(type="text" name="website")
+      label.form-label(for="contact-website") Your website
+
+    .form-wrap.form-wrap_icon.linear-icon-feather
+      textarea#contact-message.form-input(name="message" data-constraints="@Required")
+      label.form-label(for="contact-message") Your message *
+
+    button(type="submit").button.button-primary SUBMIT COMMENT

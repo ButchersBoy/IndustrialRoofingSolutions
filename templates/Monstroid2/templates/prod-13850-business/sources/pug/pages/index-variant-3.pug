@@ -1,0 +1,116 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-corporate
+	include ../sections/_section-slider-default
+
+	include ../sections/_section-cta-3
+
+	// Impressive Features
+	section.section-md.bg-gray-lighter#features
+		.container
+			.row.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-6
+					h4.heading-decorated What We Offer
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Made for People
+							p Quart is built for real users that enjoy easy website development.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Advanced UI Kit
+							p Quart comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title.heading-6: a(href=singleService) Responsive & Retina Ready
+							p Quart looks great on any screen resolution and on any device due to its responsiveness.
+
+				.col-md-7.col-lg-5
+					figure.image-sizing-1
+						+jpg('blog-image-1-886x668')
+	='\n'
+
+	// About us
+	include ../sections/_section-about-us-2
+
+	include ../sections/_section-features
+
+	// services
+	include ../sections/_section-services-2
+
+	//cta
+	include ../sections/_section-cta-2
+
+	include ../sections/_section-portfolio
+
+	include ../sections/_section-circle-counters-light
+
+	// Meet Our Team
+	section.section-md.bg-default.text-center
+		.container
+			h4.heading-decorated Meet Our Team
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('calvin-fitzerald-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Calvin Fitgerald
+							p.thumb-flat__subtitle Founder, Managing Director
+							p Calvin’s love for website development started in 1993 when at the age of 12 he learned HTML and secured his first dot-com. After graduating from the University of Minnesota in 2005, Calvin incorporated Quart as a way to advance his career, drive his passion for website development, and help other small business owners with their online presence.
+
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('taylor-wilson-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Taylor Wilson
+							p.thumb-flat__subtitle Senior Designer
+							p Taylor joined the Quart team in August of 2016, shortly after relocating to Minneapolis from Chicago. He has been working in the sphere of web design for 9 years. He has extensive experience with creating responsive HTML websites that are built to increase sales in all industries. He believes quality websites are great for conveying important information.
+
+				.col-md-6.col-lg-4
+					// Thumb flat
+					article.thumb-flat
+						+jpg('josh-wagner-418x315', 'thumb-flat__image')
+						.thumb-flat__body
+							p.heading-6: a(href='team-member-profile.html') Josh Wagner
+							p.thumb-flat__subtitle Lead Developer
+							p Josh has a background in Information Technology and Geographic Information Systems. He began his career in Isle of Wight, Virginia where he started working as the County’s GIS Technician and ended up running the Information Technology Department six years later. He has a unique combination of database experience, network and software support skills.
+
+
+	include ../sections/_section-contact
+
+	include ../sections/_section-posts
+
+	//testimonials
+	include ../sections/_section-testimonials
+
+
+	// Page Footer 
+	include ../sections/_footer-modern
+
+block modals
+	include ../includes/_modal-login
+	include ../includes/_modal-register

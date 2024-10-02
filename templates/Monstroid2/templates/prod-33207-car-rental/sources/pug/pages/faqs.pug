@@ -1,0 +1,54 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'FAQs'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	// Privacy Policy
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			// Accordion
+			#accordion1( role='tablist' )
+				+card({
+					parentId: 'accordion1',
+					title: 'Can I rent a car at 18?'
+				}).card-classic
+					p Cras tristique semper convallis. Cras efficitur sagittis erat. Fusce pellentesque ligula vitae tellus facilisis fringilla. Pellentesque sit amet massa at diam tempus faucibus. Nunc eleifend, ipsum nec maximus vehicula.
+				
+				+card({
+					parentId: 'accordion1',
+					title: 'What forms of payment do you accept?'
+				}).card-classic
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate ea enim esse facilis fuga fugit harum incidunt ipsam nam odit officiis, quam quo quod ratione rerum ullam, ut vero.
+
+				+card({
+					parentId: 'accordion1',
+					title: 'How do I cancel my reservation?'
+				}).card-classic
+					p Assumenda ipsum magnam nemo omnis quibusdam repudiandae similique? Aliquam consequuntur culpa dicta fuga impedit officia quae. Accusamus accusantium asperiores explicabo necessitatibus sequi vero. Illum in obcaecati omnis vel? Accusamus ad eius provident!
+
+				+card({
+					parentId: 'accordion1',
+					title: 'Can I add an additional driver to my rental?'
+				}).card-classic
+					p Animi aperiam autem commodi consequuntur distinctio dolorum, eius impedit in ipsa iste libero nam nemo porro reprehenderit saepe sequi temporibus! Blanditiis commodi culpa cupiditate, eveniet facilis odio praesentium quo recusandae tempore totam.
+
+				+card({
+					parentId: 'accordion1',
+					title: 'How do I rent a car?'
+				}).card-classic
+					p Architecto, cum. Accusamus animi debitis deserunt dicta et expedita, hic incidunt molestiae nemo neque nesciunt nihil nostrum odit officiis omnis praesentium quis ratione repellendus reprehenderit repudiandae sint sunt, tempora totam velit vitae. Esse, incidunt.
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

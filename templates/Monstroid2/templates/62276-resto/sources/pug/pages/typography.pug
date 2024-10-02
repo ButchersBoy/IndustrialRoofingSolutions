@@ -1,0 +1,194 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-quote-centered
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Typography'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+  
+  .section-sm
+    .container
+      .row.row-50.row-md-75
+        .col-lg-12
+          // Base typography
+          section.section-sm
+            h5 Typography
+            ul.list-md
+              li
+                h1 H1 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+                  
+              li
+                h2 H2 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+
+              li
+                h3 H3 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+
+              li
+                h4 H4 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+
+              li
+                h5 H5 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+
+              li
+                h6 H6 Heading
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+          ='\n'
+
+          // Unordered list
+          section.section-sm
+            h5 Unordered list
+            ul.list-marked
+              li 10 Reasons to Buy Monstroid2.
+              li Getting to another  level of design
+              li Clean Style. Cons and Pros.
+          ='\n'
+
+          // Ordered list
+          section.section-sm
+            h5 Ordered list
+            ul.list-ordered
+              li 10 Reasons to Buy Monstroid2.
+              li Getting to another  level of design
+              li Clean Style. Cons and Pros.
+          ='\n'
+
+          // Blockquotes
+          section.section-sm
+            h5 Blockquotes
+            +quote-centered({
+              text: "It’s perfect to display the members of your staff, team or working force. Within Monstroid theme you. ",
+              cite: "Adam Smith"
+            })
+          ='\n'
+
+          // Some other styles
+          section.section-sm
+            h5 Some other styles
+            p.first-letter
+              | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+              i the best dishes and drinks from across the range of European cuisines.
+              | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+              i Honest food and honest drinks set the foundation of our place's menu!
+
+            ul.list-xxs
+              li
+                dl.list-terms-inline
+                  dt Bold Text
+                  dd: span.font-weight-bold Whether you found me on YouTube
+              li
+                dl.list-terms-inline
+                  dt Italic
+                  dd: span.font-italic Whether you found me on YouTube
+              li
+                dl.list-terms-inline
+                  dt Strike-through
+                  dd: span.text-strike Whether you found me on YouTube
+              li
+                dl.list-terms-inline
+                  dt Link
+                  dd: a(href='#') Whether you found me on YouTube
+              li
+                dl.list-terms-inline
+                  dt Inline Code
+                  dd: code Whether you found me on YouTube
+          ='\n'
+
+          // Centre aligned image
+          section.section-sm
+            h5 Centre aligned image
+            p 
+              | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+              i the best dishes and drinks from across the range of European cuisines.
+              | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+              i Honest food and honest drinks set the foundation of our place's menu!
+
+            figure.figure.figure-inline.text-center
+              +jpg('index-5-418x315')
+          ='\n'
+
+          // Left aligned image
+          section.section-sm
+            h5 Left aligned image
+            .row.flex-md-row-reverse.row-30
+              .col-md-8
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+              .col-md-4
+                figure.figure
+                  +jpg('index-6-418x315')
+          ='\n'
+
+          // Right aligned image
+          section.section-sm
+            h5 Right aligned image
+            .row.row-30
+              .col-md-8
+                p 
+                  | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+                  i the best dishes and drinks from across the range of European cuisines.
+                  | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                  i Honest food and honest drinks set the foundation of our place's menu!
+              .col-md-4
+                figure.figure
+                  +jpg('index-7-418x315')
+          ='\n'
+
+          // Large image should always fit
+          section.section-sm
+            h5 Large image should always fit
+            p 
+              | Resto Restaurant & Bar is a traditional European cuisine venue, serving
+              i the best dishes and drinks from across the range of European cuisines.
+              | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+              i Honest food and honest drinks set the foundation of our place's menu!
+
+            figure.figure.thumb-default
+              +jpg('index-4-982x652')
+          ='\n'
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal

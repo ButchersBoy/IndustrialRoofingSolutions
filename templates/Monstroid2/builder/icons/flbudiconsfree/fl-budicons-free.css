@@ -1,0 +1,171 @@
+/**
+ * Title: Budicons free Flaticon Pack
+ * Author: Budi Tanrim
+ * Source: http://www.flaticon.com/packs/budicons-free
+ * License:  CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/)
+ */
+
+@font-face {
+	font-family: "fl-budicons-free";
+	src: url("fl-budicons-free.eot");
+	src: url("fl-budicons-free.eot#iefix") format("embedded-opentype"),
+	url("fl-budicons-free.woff") format("woff"),
+	url("fl-budicons-free.ttf") format("truetype"),
+	url("fl-budicons-free.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fl-budicons-free-ico,
+[class^="fl-budicons-free-"]:before, [class*=" fl-budicons-free-"]:before,
+[class^="fl-budicons-free-"]:after, [class*=" fl-budicons-free-"]:after {   
+	font-family: 'fl-budicons-free';
+    font-size: inherit;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.fl-budicons-free-add156:before {
+	content: "\e000";
+}
+.fl-budicons-free-analogic3:before {
+	content: "\e001";
+}
+.fl-budicons-free-bag32:before {
+	content: "\e002";
+}
+.fl-budicons-free-bookmark31:before {
+	content: "\e003";
+}
+.fl-budicons-free-chat58:before {
+	content: "\e004";
+}
+.fl-budicons-free-circle95:before {
+	content: "\e005";
+}
+.fl-budicons-free-closet:before {
+	content: "\e006";
+}
+.fl-budicons-free-cloud262:before {
+	content: "\e007";
+}
+.fl-budicons-free-cold11:before {
+	content: "\e008";
+}
+.fl-budicons-free-comment46:before {
+	content: "\e009";
+}
+.fl-budicons-free-cross84:before {
+	content: "\e00a";
+}
+.fl-budicons-free-delete70:before {
+	content: "\e00b";
+}
+.fl-budicons-free-design22:before {
+	content: "\e00c";
+}
+.fl-budicons-free-down67:before {
+	content: "\e00d";
+}
+.fl-budicons-free-download149:before {
+	content: "\e00e";
+}
+.fl-budicons-free-electrical18:before {
+	content: "\e00f";
+}
+.fl-budicons-free-email75:before {
+	content: "\e010";
+}
+.fl-budicons-free-file72:before {
+	content: "\e011";
+}
+.fl-budicons-free-folder174:before {
+	content: "\e012";
+}
+.fl-budicons-free-folder175:before {
+	content: "\e013";
+}
+.fl-budicons-free-heart284:before {
+	content: "\e014";
+}
+.fl-budicons-free-label26:before {
+	content: "\e015";
+}
+.fl-budicons-free-left161:before {
+	content: "\e016";
+}
+.fl-budicons-free-lifeline14:before {
+	content: "\e017";
+}
+.fl-budicons-free-location37:before {
+	content: "\e018";
+}
+.fl-budicons-free-logout12:before {
+	content: "\e019";
+}
+.fl-budicons-free-music223:before {
+	content: "\e01a";
+}
+.fl-budicons-free-musical102:before {
+	content: "\e01b";
+}
+.fl-budicons-free-notebook47:before {
+	content: "\e01c";
+}
+.fl-budicons-free-paper124:before {
+	content: "\e01d";
+}
+.fl-budicons-free-person308:before {
+	content: "\e01e";
+}
+.fl-budicons-free-photo186:before {
+	content: "\e01f";
+}
+.fl-budicons-free-photo187:before {
+	content: "\e020";
+}
+.fl-budicons-free-placeholder22:before {
+	content: "\e021";
+}
+.fl-budicons-free-portfolio27:before {
+	content: "\e022";
+}
+.fl-budicons-free-quit2:before {
+	content: "\e023";
+}
+.fl-budicons-free-rain31:before {
+	content: "\e024";
+}
+.fl-budicons-free-right163:before {
+	content: "\e025";
+}
+.fl-budicons-free-shape6:before {
+	content: "\e026";
+}
+.fl-budicons-free-share29:before {
+	content: "\e027";
+}
+.fl-budicons-free-speech102:before {
+	content: "\e028";
+}
+.fl-budicons-free-tag49:before {
+	content: "\e029";
+}
+.fl-budicons-free-two327:before {
+	content: "\e02a";
+}
+.fl-budicons-free-up119:before {
+	content: "\e02b";
+}
+.fl-budicons-free-upload96:before {
+	content: "\e02c";
+}
+.fl-budicons-free-verify5:before {
+	content: "\e02d";
+}
+.fl-budicons-free-verify6:before {
+	content: "\e02e";
+}
+.fl-budicons-free-wheel29:before {
+	content: "\e02f";
+}

@@ -1,0 +1,145 @@
+/*
+*
+* Flex Grid system
+* --------------------------------------------------
+*/
+
+// Base Grid Styles
+// --------------------------------------------------
+
+.shell,
+.shell-wide {
+  @include make-shell($cell-spacing);
+}
+
+
+.shell,
+.shell-wide {
+  min-width: $shell-width;
+  max-width: $shell-xs-width;
+  
+  @include media-breakpoint-up(md) {
+    max-width: $shell-sm-width;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    max-width: $shell-md-width;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    max-width: $shell-lg-width;
+  }
+}
+
+
+.shell-wide {
+  @include media-breakpoint-up(xl) {
+    max-width: $shell-xl-width;
+  }
+}
+
+.shell-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  //max-width: 2560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shell-limit {
+  max-width: 1910px;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row-spacer {
+  @include flex-basis(100%);
+}
+
+// Create IE 9 and below degradation styles
+html.lt-ie-10 * + .row,
+* + .row {
+  margin-top: 25px;
+}
+
+
+@include media-breakpoint-up(md) {
+  html.lt-ie-10 * + .row,
+  * + .row {
+    margin-top: $range-ws;
+  }
+}
+
+
+html.lt-ie-10 * + [class*='cell-'],
+* + [class*='cell-'],
+html.lt-ie-10 * + .row-md,
+* + .row-md {
+  margin-top: $range-ws-sm;
+}
+
+
+html.lt-ie-10 * + .row-xl,
+* + .row-xl {
+  margin-top: $range-ws-lg;
+}
+
+
+html.lt-ie-10 .row-condensed,
+.row-condensed {
+  margin-left: 0;
+  margin-right: 0;
+  
+  > [class*='cell'] {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+  }
+}
+
+
+@include media-breakpoint-up(xl) {
+  html .page .row-xl-condensed {
+    margin-left: 0;
+    margin-right: 0;
+    
+    > [class*='cell'] {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+
+@include media-breakpoint-up(xl) {
+  .shell {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+
+@include media-breakpoint-up(xxl) {
+  .row:not(.no-gutters) {
+    margin-left: -25px;
+    margin-right: -25px;
+    
+    > [class*='cell'] {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.row:not(.no-gutters).row-horizontal-10 {
+  margin-left: -5px;
+  margin-right: -5px;
+  > [class*='cell'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

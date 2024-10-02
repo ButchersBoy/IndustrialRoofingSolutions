@@ -1,0 +1,103 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+
+
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Gallery post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  include ../elements/_ui-parallax
+  section
+    +parallax({
+      "src": "images/parallax-1.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+
+  section.bg-default.section-lg
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-md.post-single-body
+            h4.heading-decorated Clean Style. Cons and Pros.
+            .post-meta
+              .group
+                a(href=postLink): time(datetime='2018') Jan.20, 2018
+                span by Brian Williamson
+                a(href=postLink) 3 comment(s)
+                a(href=postLink) Theme
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postLink,
+                    items: [
+                        "Style",
+                        'Clean']
+                })
+                
+            +slider-blog({
+                class: 'carousel-slider-blog-post',
+                items: [
+                    {
+                        original_img: 'portfolio-single-1-1200x800',
+                        img_thumb: 'portfolio-single-1-1200x800'
+                    },
+                    {
+                        original_img: 'portfolio-single-2-1200x800',
+                        img_thumb: 'portfolio-single-2-1200x800'
+                    },
+                    {
+                        original_img: 'portfolio-single-3-1200x800',
+                        img_thumb: 'portfolio-single-3-1200x800'
+                    }
+                ]
+            })
+                
+                
+            p.first-letter
+              | All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the 
+              =' '
+              a(href='#') HTML Template
+              =' '
+              | that is based on your business’ or a closely related field. Either way, thanks to all the diversity here you will be able to choose a  template that can be either of a formal color scheme with some light colors in it or a more vivid one, featuring bold textures and hues!              
+
+            // Quote default
+            .quote-default
+              +quote-mark('quote-default__mark')
+              .quote-default__text: p.q.heading-4 Quart is perfect to display the members of your staff, team or working force.
+              p.quote-default__cite Adam Smith
+
+            p Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates… Due to the fact that this is a HTML Template, the process of installing it and using it is truly as easy as it gets! Read our documentation to understand how fast you can go from purchasing a TemplateMonster HTML Template to actually using it as a live skin for your company’s webpage. Also, our Novi Builder allows you to easily change the content (text; multimedia; blocks; pages) of any part of your new template!
+            
+            +list-inline-icon({
+                list_class: 'list-inline-sm',
+                items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p']
+            })
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+  
+  // Page Footer
+  include ../sections/_footer-corporate
+

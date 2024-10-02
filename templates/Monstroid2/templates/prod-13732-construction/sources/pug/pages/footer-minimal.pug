@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Footer minimal'
+
+block page 
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-3.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName 
+
+  // Our History
+  section.section-md.bg-gray-lighter
+    .container
+      .row.justify-content-md-center.row-30.row-md-50
+        .col-md-11.col-lg-10.col-xl-6
+          h4.heading-decorated Our History
+          p.heading-6.text-width-1 Our construction company has been founded 10 years ago, at the very peak of the building frenzy in the US...
+          p Since then we've built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and correlating that were all involved in completing each separate project, then our productivity is immense! 
+          a.button.button-primary(href='about.html') Read more
+        .col-md-11.col-lg-10.col-xl-6
+          +jpg('post-3-1500x1125')
+  ='\n'
+  
+  include ../sections/_section-cta-1
+    
+  // Page Footer
+  include ../sections/_footer-minimal
+

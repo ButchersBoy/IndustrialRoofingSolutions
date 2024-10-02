@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Buttons'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	// Buttons
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.group-lg
+				.button.button-primary See Features
+				.button.button-black Buy template
+				.button.button-gray-light-outline Buy template!
+				.button.button-link read more
+	='\n'
+	
+	// Buttons
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent.text-center
+		.container
+			.group-lg
+				.button.button-gray-light-outline View now!
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

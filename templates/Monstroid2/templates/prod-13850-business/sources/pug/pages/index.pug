@@ -1,0 +1,204 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-parallax 
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-default 
+	include ../sections/_section-slider-default
+
+	// Our Services
+	section.section-md.bg-default.text-center#features
+		.container
+			h4.heading-decorated Our Services
+			.row.row-50.justify-content-md-center.justify-content-lg-start
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-feather
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Clean and Crispy Design
+							p Quart is crafted by top industry leaders with love, care and customer needs in mind. 
+
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-magic-wand
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Pixel Perfect Typography
+							p It’s impossible to ignore the fact that perfect typography is a key asset of design success.
+
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-bag2
+						.unit-body
+							p.blurb__title: a(href='services.html').heading-6 Advanced UI Toolkit
+							p Quart comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+
+	// About us
+	section.bg-gray-lighter.object-wrap
+		.section-lg
+			.container
+				.row.justify-content-end
+					.col-lg-5
+						h4.heading-decorated About us
+						p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any residential design project. Since day one, we have been delivering creative and cozy interiors to our clients worldwide.
+						.row.row-30
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-menu3
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Bootstrap Framework
+										p Quart is based on Bootstrap Framework, which makes it a nice template for any purpose.
+
+							.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.linear-icon-users2
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Clean and Crispy Design
+										p Quart is crafted by top industry leaders with love, care and customer needs in mind.
+
+		.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+	section.section-md.bg-default
+		.container
+			.row.justify-content-md-center.justify-content-lg-between.row-50.align-items-center
+				.col-md-8.col-lg-6
+					h4.heading-decorated Impressive Features
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-rocket
+						.unit-body
+							p.blurb__title.heading-6 Built for Speed
+							p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-equalizer
+						.unit-body
+							p.blurb__title.heading-6 Flexible and Multipurpose
+							p Quart allows to create various websites for complex and scalable  projects.
+
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+						.unit-body
+							p.blurb__title.heading-6 Social Integration
+							p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+
+				.col-md-7.col-lg-4
+					figure.image-sizing-1
+						+png('home-business-1-391x642') 
+
+	include ../sections/_section-cta-3
+
+	include ../sections/_section-portfolio
+		
+	include ../sections/_section-counters
+
+	// Meet Our Team
+	section.section-md.bg-gray-lighter.text-center
+		.container
+			h4.heading-decorated Meet Our Team
+			.row.row-50.offset-top-1
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('calvin-fitzerald-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('luis-maxwell-418x415')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('josh-wagner-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+
+	
+	include ../sections/_section-posts
+		
+	// pricing table
+	include ../sections/_section-pricing-table-1
+	
+	include ../sections/_section-testimonials
+
+	include ../sections/_section-clients
+		
+	// Page Footer 
+	include ../sections/_footer-corporate-2

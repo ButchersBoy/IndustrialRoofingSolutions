@@ -1,0 +1,307 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home Default'
+
+block page
+  // Page header
+  include ../sections/_header-transparent
+
+  section.fullwidth-page.bg-accent.text-center.section-first-screen.bg-image(style="background-image: url('images/index-1-1920x1080.jpg')")
+    .container.section-xxl
+      .row.justify-content-sm-center
+        .col-md-10.col-xl-8
+          h1(style='overflow: hidden;')
+            span.wow.fadeInUpSmall(data-wow-delay='2.2s') Welcome to 
+          .brand-name.view-animate
+            span The
+            include ../includes/_brand-name-index
+
+          ul(style='overflow: hidden;')
+            li.font-italic.wow.fadeInDownSmall(data-wow-delay='2.2s')
+              | Alexandria, 32 Washington str, 22303
+
+            li.font-italic.wow.fadeInDownSmall(data-wow-delay='2.4s')
+              dl.list-terms-minimal
+                dt Opening hours: 
+                dd Mo-Fr 11:00-00:00, Sa-Sa 15:00-00:00
+
+            li.wow.fadeInDownSmall(data-wow-delay='2.6s')
+              dl.list-terms-minimal
+                dt Call
+                dd: a(href='callto:#') (555)123-4567    
+          hr.divider-minimal.wow.fadeInDownSmall(data-wow-delay='2.8s')
+  
+  section.section-xl.bg-default
+    .container-fluid.container-limit
+      .row.row-50.justify-content-sm-center.align-items-xxl-center
+        .col-lg-6
+          .row.justify-content-center.justify-content-lg-end
+            .col-11.col-xl-9
+              h1 The Resto #[br] Restaurant
+              h5 The perfect place to enjoy the life and food.
+              hr.divider-minimal.divider__left
+              p
+                | Resto Restaurant & Bar is a traditional European cuisine venue, serving 
+                i the best dishes and drinks from across the range of European cuisines. 
+                | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+                i Honest food and honest drinks set the foundation of our place's menu!
+
+              .group-lg.text-center.text-md-left
+                figure.figure-inline
+                  +png('about-2-123x124')
+                figure.figure-inline
+                  +png('about-3-129x121')
+              
+        .col-lg-6
+          .row
+            .col-xl-6
+              .row.row-50
+                .col-md-6.col-lg-12
+                  figure
+                    +jpg('index-1-433x315')
+                .col-md-6.col-lg-12
+                  figure
+                    +jpg('index-2-433x313')
+            .col-xl-6.d-none.d-xl-block
+              figure
+                +jpg('index-3-453x700')
+                
+  
+  section.section-xl.bg-default.text-center
+    .container-fluid
+      .row.no-gutters.align-items-lg-center.flex-lg-row-reverse
+        .col-lg-6.section-sm
+          .row.justify-content-sm-center
+            .col-sm-11.col-md-9
+              h1 Since 1982
+              h5 Resto is proud to be serving fine European dishes for more than 30 years!
+              hr.divider-minimal
+              
+        .col-lg-6
+          +jpg('index-4-982x652', 'img-fullwidth')
+  ='\n'
+  
+
+  // menu
+  section.section-xl.bg-default.text-center
+    .container
+      h1 Menu
+      .row.row-60
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-5-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Thyme Soup with Cream
+                span.menu-inner-price 5.45
+              .menu-inner
+                span with Winter black truffles from Piedmont
+                span 320g
+                
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-6-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Hot Grilled Chicken Breast 
+                span.menu-inner-price 2.45
+              .menu-inner
+                span with pecan ‘épicé’ & passe crassane pear
+                span 320g
+                
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-7-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Big Smokey Burger
+                span.menu-inner-price 8.45
+              .menu-inner
+                span with ground beef sirloin and adobo sauce
+                span 320g
+                
+        //2 row
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-8-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Blue Cheese Burger
+                span.menu-inner-price 5.45
+              .menu-inner
+                span with sun-dried tomatoes and lean ground beef
+                span 320g
+                
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-9-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Catriona potato gnocchi
+                span.menu-inner-price 8.71
+              .menu-inner
+                span with black truffles
+                span 320g
+                
+        .col-md-6.col-lg-4
+          .thumbnail-classic
+            figure.figure-main-menu
+              +jpg('index-10-418x315')
+            .label-main-menu
+              | Chef’s
+              | Special
+            .caption
+              .menu-inner.menu-inner__heading
+                a(href='single-product.html') Fruit Pie
+                span.menu-inner-price 6.45
+              .menu-inner
+                span with raisins, chopped pecans, and coconut
+                span 320g 
+                
+    a(href='menu.html').button.button-gray-light-outline: span See menu
+     
+  ='\n'
+
+  // Blurbs
+  section.section-xl.bg-default
+    .container-fluid
+      .row.row-50.justify-content-sm-center
+        .col-sm-8.col-md-6.col-lg-4
+          .img-thumbnail-variant-1
+            figure
+              +jpg('index-11-605x606')
+            .caption.img-thumbnail-text
+              h1 Kitchen
+              h5 Our modern kitchen is the heart of Resto.
+              hr.divider-minimal
+              
+        .col-sm-8.col-md-6.col-lg-4
+          .img-thumbnail-variant-1
+            figure
+              +jpg('index-12-605x606')
+            .caption.img-thumbnail-text
+              h1 Interior
+              h5 Do you value relaxing, friendly atmosphere?
+              hr.divider-minimal
+              
+        .col-sm-8.col-md-6.col-lg-4
+          .img-thumbnail-variant-1
+            figure
+              +jpg('index-13-605x606')
+            .caption.img-thumbnail-text
+              h1 Exterior
+              h5 We have very attractive and comfortable exterior.
+              hr.divider-minimal
+          
+  ='\n'
+
+  section.section-xl.bg-default.text-center
+    .container
+      h1 Our Visitors Just Love #[br.visible-lg-inline]Our Food!
+      hr.divider-minimal
+      .row.row-50
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q I've been eating their business lunches for the past 7 years. Not even once have I had any unpleasant experience. And the dishes always taste fresh and good!
+            p.quote-default__cite Amanda
+            span.quote-default__source posted on TripAdvisor
+
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The prices are as good as the menu! Each time I spend less money, than anywhere else and get a fresh, tasty, homemade dinner!
+            p.quote-default__cite Sam
+            span.quote-default__source posted on foursquare
+  ='\n'
+
+  // Gallery
+  section.section-lg.bg-default(data-lightgallery='group')
+    .container-fluid
+      .row.row-50
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/portfolio-single-3-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-1-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-2-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-2-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-3-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-3-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-4-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-4-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-5-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-5-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/portfolio-single-6-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-6-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-7-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-7-442x332')
+            .thumb-modern__overlay
+
+        .col-md-4.col-xl-3
+          a.thumb-modern(data-lightgallery='item', href='images/image-original-8-1200x800.jpg', data-size='1200x800')
+            figure
+              +jpg('index-gallery-8-442x332')
+            .thumb-modern__overlay
+  ='\n'
+
+  
+
+  // Page Footer 
+  include ../sections/_footer-minimal

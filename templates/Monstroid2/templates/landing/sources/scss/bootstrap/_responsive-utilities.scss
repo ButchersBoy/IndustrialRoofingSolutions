@@ -1,0 +1,179 @@
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+
+
+// IE10 in Windows (Phone) 8
+//
+// Support for responsive views via media queries is kind of borked in IE10, for
+// Surface/desktop in split view and for Windows Phone 8. This particular fix
+// must be accompanied by a snippet of JavaScript to sniff the user agent and
+// apply some conditional CSS to *only* the Surface/desktop Windows 8. Look at
+// our Getting Started page for more information on this bug.
+//
+// For more information, see the following:
+//
+// Issue: https://github.com/twbs/bootstrap/issues/10497
+// Docs: http://getbootstrap.com/getting-started/#support-ie10-width
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+
+// Visibility utilities
+// Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
+
+@include responsive-invisibility('.visible-xs');
+@include responsive-invisibility('.visible-sm');
+@include responsive-invisibility('.visible-md');
+@include responsive-invisibility('.visible-lg');
+
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+@include media-breakpoint-down(sm) {
+  @include responsive-visibility('.visible-xs');
+}
+.visible-xs-block {
+  @include media-breakpoint-down(sm) {
+    display: block !important;
+  }
+}
+.visible-xs-inline {
+  @include media-breakpoint-down(sm) {
+    display: inline !important;
+  }
+}
+.visible-xs-inline-block {
+  @include media-breakpoint-down(sm) {
+    display: inline-block !important;
+  }
+}
+
+@include media-breakpoint-between(md, lg) {
+  @include responsive-visibility('.visible-sm');
+}
+.visible-sm-block {
+  @include media-breakpoint-between(md, lg) {
+    display: block !important;
+  }
+}
+.visible-sm-inline {
+  @include media-breakpoint-between(md, lg) {
+    display: inline !important;
+  }
+}
+.visible-sm-inline-block {
+  @include media-breakpoint-between(md, lg) {
+    display: inline-block !important;
+  }
+}
+
+@include media-breakpoint-between(lg, xl) {
+  @include responsive-visibility('.visible-md');
+}
+.visible-md-block {
+  @include media-breakpoint-between(lg, xl) {
+    display: block !important;
+  }
+}
+.visible-md-inline {
+  @include media-breakpoint-between(lg, xl) {
+    display: inline !important;
+  }
+}
+.visible-md-inline-block {
+  @include media-breakpoint-between(lg, xl) {
+    display: inline-block !important;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  @include responsive-visibility('.visible-lg');
+}
+.visible-lg-block {
+  @include media-breakpoint-up(xl) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  @include media-breakpoint-up(xl) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  @include media-breakpoint-up(xl) {
+    display: inline-block !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @include responsive-invisibility('.hidden-xs');
+}
+
+@include media-breakpoint-between(md, lg) {
+  @include responsive-invisibility('.hidden-sm');
+}
+
+@include media-breakpoint-between(lg, xl) {
+  @include responsive-invisibility('.hidden-md');
+}
+
+@include media-breakpoint-up(xl) {
+  @include responsive-invisibility('.hidden-lg');
+}
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+// Note: Deprecated .visible-print as of v3.2.0
+
+@include responsive-invisibility('.visible-print');
+
+@media print {
+  @include responsive-visibility('.visible-print');
+}
+.visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  @include responsive-invisibility('.hidden-print');
+}

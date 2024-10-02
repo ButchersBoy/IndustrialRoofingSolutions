@@ -1,0 +1,115 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Contact Forms'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	// Forms
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Default Form
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+						
+						button(type="submit").button.button-primary send
+	='\n'
+	
+	.divider
+	
+	// Forms
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Form with Captcha
+			.row.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					// RD Mailform
+					form.rd-mailform.rd-mailform_style-3.text-start(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-man
+							input#contact-captcha-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-captcha-name") Your name
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-envelope
+							input#contact-captcha-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-captcha-email") Your e-mail
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-telephone
+							input#contact-captcha-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-captcha-phone") Your phone
+						
+						.form-wrap.form-wrap_icon
+							span.novi-icon.form-icon.linear-icon-feather
+							textarea#contact-captcha-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-captcha-message") Your message
+						
+						.form-wrap.form-validation-left
+							// Google captcha
+							.recaptcha#captcha1(data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt")
+						
+						button(type="submit").button.button-primary send
+	='\n'
+	
+	.divider
+	
+	section.section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container: .row.row-fix.justify-content-md-center: .col-md-9.col-lg-8.col-xl-7
+			h3 MailChimp
+			p.big Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+			
+			// Mailchimp
+			form.rd-form.rd-mailform_sizing-1.mailchimp-mailform.rd-mailform-inline-flex(data-form-output='form-output-global' action='https://templatemonster.us1.list-manage.com/subscribe/post?u=1e39a6d114a4cc130a4edbe43&id=9fc9ef194a' method='post')
+				.form-wrap.form-wrap_icon
+					span.novi-icon.form-icon.linear-icon-envelope
+					label.form-label(for='mailchimp-email') Enter your e-mail
+					input#mailchimp-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+				
+				button.button.button-primary(type='submit') Subscribe
+	
+	.divider
+	
+	section.section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container: .row.row-fix.justify-content-md-center: .col-md-9.col-lg-8.col-xl-7
+			h3 Campaign Monitor
+			p.big Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+			
+			// Campaign Monitor
+			form.rd-form.rd-mailform_sizing-1.campaign-mailform.rd-mailform-inline-flex(data-form-output='form-output-global' action='https://templatermonster.createsend.com/t/j/s/zjjikd/' method='post')
+				.form-wrap.form-wrap_icon
+					span.novi-icon.form-icon.linear-icon-envelope
+					label.form-label(for='campaign-email') Enter your e-mail
+					input#campaign-email.form-input(type='email' name='cm-zjjikd-zjjikd' data-constraints='@Email @Required')
+				
+				button.button.button-primary(type='submit') Subscribe
+	
+	// Page Footer
+	include ../sections/_footer-corporate

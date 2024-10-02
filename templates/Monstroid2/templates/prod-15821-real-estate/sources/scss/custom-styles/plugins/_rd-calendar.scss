@@ -1,0 +1,834 @@
+// RD Calendar
+// --------------------------------------------------
+
+// Controls
+.rdc-next, 
+.rdc-prev, 
+.rdc-events_close {
+  margin-top: 0;
+  cursor: pointer;
+  transition: .3s all ease;
+  color: $black;
+  vertical-align: baseline;
+
+  &:after, 
+  &:before {
+    font: 400 24px/38px "Material Icons";
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.rdc-next {
+  right: 0;
+  &:after {
+    content: '\e5cc';
+  }
+}
+
+.rdc-prev {
+  left: 0;
+  &:before {
+    content: '\e5cb';
+  }
+}
+
+.rdc-panel-nav,
+.rdc-panel {
+  position: relative;
+}
+
+.rdc-panel-nav {
+  font-size: 0;
+  line-height: 0;
+  
+  > * {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  > *::before,
+  > *::after {
+    position: relative;
+    top: 7px;
+    line-height: 1.4;
+  }
+}
+
+* + .rdc-panel-nav {
+  margin-top: 5px;
+}
+
+.rdc-events_close {
+  position: absolute;
+  top: -3px;
+  right: 10px;
+  color: $gray;
+  &:before {
+    content: '\e5cd';
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 3px;
+    right: 10px;
+    
+    &:before {
+      font-size: 24px;
+    }
+  }
+}
+
+// Events
+.rdc-events {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  min-width: 275px;
+  opacity: 0;
+  padding: 25px 15px;
+  visibility: hidden;
+  transition: .4s all ease-in-out;
+  background: $white;
+  box-shadow: $shadow-area-xl;
+  z-index: 1;
+
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+    width: auto;
+  }
+
+  .rd-calendar.show-events & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.rdc-event {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Table
+.rdc-table {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 40px;
+  }
+  table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  td {
+    position: relative;
+    padding-bottom: 45px;
+    width: auto;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 65px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 85px;
+    }
+  }
+}
+
+.rdc-table_day {
+  padding: 5px 0;
+  font-family: $font-family-sans-serif-2;
+  color: $black;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    padding: 10px 0;
+  }
+}
+
+.rdc-table_date {
+  font-family: $font-family-sec;
+  height: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 3px;
+  text-align: center;
+  box-sizing: border-box;
+  color: $black;
+  
+  @include media-breakpoint-up(md) {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.rdc-table_today {
+  position: relative;
+  z-index: 1;
+  background-color: $black;
+  color: $white;
+}
+
+.rdc-table_events-count {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-indent: -100000px;
+}
+
+.rd-calendar-info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.desktop {
+  @include media-breakpoint-up(lg) {
+    .rd-calendar-info {
+      display: block;
+      position: absolute;
+      visibility: visible;
+      left: 50%;
+      bottom: 100%;
+      z-index: 11;
+      margin-bottom: 4px;
+      transform: translate3d(-50%, 0, 0) scale(0);
+      max-width: 200px;
+      min-width: 80px;
+      padding: 5px;
+      background: $white;
+      box-shadow: $shadow-area-sm;
+      text-align: center;
+      transition: .33s;
+      opacity: 0;
+      will-change: opacity;
+      -webkit-filter: blur(0);
+      font-size: 14px;
+      line-height: 1.3;
+      color: $black;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -7px;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 7px 0 7px;
+        border-color: $white transparent transparent transparent;
+      }
+    }
+  }
+
+  .rdc-events {
+    display: none;
+  }
+
+  .rdc-table_has-events {
+    &:hover {
+      .rd-calendar-info {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0) scale(1);
+      }
+    }
+  }
+}
+
+.rdc-table_has-events {
+  position: relative;
+  cursor: pointer;
+  .rdc-table_date {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.rdc-table_event {
+  transition: .3s all ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.rdc-events {
+  .rd-calendar-info {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.rdc-table_next,
+.rdc-table_prev {
+  opacity: .5;
+
+  & ~ .rdc-table_events-count {
+    opacity: .5;
+  }
+}
+
+// booking calendar
+//
+
+.booking-calendar {
+
+  * + & {
+    margin-top: 60px;
+  }
+  .rdc-month {
+    text-align: right;
+  }
+
+  .rdc-fullyear {
+    text-align: left;
+  }
+
+  // Panel
+  .rdc-panel {
+    position: relative;
+    padding: 10px 22px;
+    text-align: center;
+    background: $gray-lighter;
+    font-size: 20px;
+    
+    > * {
+      margin-top: 0;
+    }
+    
+    h5 {
+      font-weight: 700;
+    }
+  }
+
+  .rdc-table_event {
+    &,
+    .mobile &,
+    .tablet & {
+      display: block;
+    }
+  }
+
+  .rdc-month,
+  .rdc-fullyear {
+    display: inline-block;
+    color: $black;
+  }
+
+  // Controls
+  .rdc-next,
+  .rdc-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .rdc-events_close {
+    &:before {
+      content: '\f00d';
+    }
+  }
+  
+  .rdc-prev {
+    left: 10px;
+  }
+  
+  .rdc-next {
+    right: 10px;
+  }
+
+  // Events
+  .rdc-events {
+    display: none;
+  }
+
+  .rdc-table_has-events {
+
+    .rdc-table_date {
+      position: relative;
+      z-index: 1;
+      color: $white; 
+      background-color: $primary;
+      cursor: pointer;
+    }
+
+    @include media-breakpoint-up(xl) {
+      &.opened .rdc-table_date {
+        padding-bottom: 27px;
+        z-index: 20;
+      }
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      width: 100%;
+      left: 4px;
+      right: 4px;
+      @media (min-width: 768px) {
+        left: 11px;
+        right: 11px;
+      }
+    }
+    .rdc-table_events-count {
+      position: static;
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .rdc-table_event {
+    display: block;
+    background-color: $white;
+    border: 1px solid $gray-1;
+    padding: 20px 10px;
+
+    @include media-breakpoint-up(md) {
+      padding: 30px 38px;
+      
+      > * {
+        max-width: 100%;
+      }
+    }
+    
+    @include media-breakpoint-between(lg, lg) {
+      padding: 25px 20px;
+    }
+
+    .table-responsive {
+      border: none;
+    }
+
+    .icon-md {
+      font-size: 24px;
+    }
+  }
+
+  [id*='calendarEvent'] {
+    .rdc-table_events {
+      margin-top: -12px;
+    }
+  }
+
+  .rdc-event {
+
+    &.active {
+      display: block;
+    }
+  }
+
+  // Table
+  .rdc-table {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+
+    table {
+      border-spacing: 4px;
+      border-collapse: separate;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        border-spacing: 11px;
+      }
+    }
+
+    td {
+      position: static;
+      padding-bottom: 0;
+      border: 0;
+      vertical-align: top;
+    }
+  }
+
+  table.rdc-event-booking-table {
+    border-collapse: collapse;
+    margin-bottom: 0;
+    text-align: center;
+    thead {
+      th {
+        border-bottom: 0;
+        padding: 0;
+        text-align: center;
+        
+      }
+    }
+
+    tr {
+
+      & + tr {
+        border-top: 1px solid $gray-1;
+      }
+
+      > td:first-of-type {
+        @media (min-width: 768px) {
+          position: relative;
+          padding-left: 0;
+
+          &:before {
+            position: absolute;
+            top: 13px;
+            bottom: 13px;
+            right: 0;
+            border-left: 1px solid $gray-1;
+            content: '';
+            display: inline-block;
+
+            .ie-10 &,
+            .ie-11 &,
+            .ie-edge & {
+              height: 100%;
+            }
+          }
+        }
+        @media (min-width: 1200px) {
+          width: 20%;
+        }
+      }
+      > td:last-of-type {
+        padding-right: 0;
+      }
+    }
+    td {
+      display: block;
+      border: none;
+      padding: 18px 25px;
+      vertical-align: middle;
+
+      > span {
+        font-style: italic;
+        font-size: 12px;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+
+        .dl-horizontal-mod-1 {
+          dt, dd {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          dt {
+            padding-right: 7px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  .rdc-table_day {
+    padding: 5px 0;
+  }
+
+  .rdc-table_event {
+    color: $gray;
+  }
+
+  .rdc-table_date {
+    height: auto;
+    padding: 5px;
+    color: $black;
+    text-align: left;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+      padding: 15px 18px;
+    }
+  }
+
+  .rdc-table_today {
+    position: relative;
+    z-index: 1; 
+    background-color: $secondary;
+    color: $white;
+  }
+
+  .rdc-table_next,
+  .rdc-table_prev {
+    opacity: 1;
+    color: rgba($gray, .5);
+
+    & ~ .rdc-table_events-count {
+      color: rgba($gray, .5);
+    }
+  }
+
+  &.booking-calendar-aside {
+
+    .rdc-month,
+    .rdc-fullyear {
+      color: $black;
+    }
+
+    [id*='calendarEvent'] {
+      .rdc-table_events {
+        margin-top: 0;
+      }
+    }
+
+    .rdc-table {
+      margin-top: 0;
+    }
+    .rdc-table_day {
+      font-size: 14px;
+      text-align: center;
+    }
+    .rdc-table_date {
+      text-align: center;
+      font-size: 18px;
+      line-height: 20px;
+      @include media-breakpoint-up(md) {
+        
+        padding: 5px 5px 7px;
+      }
+      @include media-breakpoint-up(xl) {
+        padding: 5px 10px 6px 10px;
+      }
+    }
+    .rdc-table > table {
+      border-spacing: 3px;
+      @include media-breakpoint-up(xl) {
+        margin-left: -15px;
+      }
+      @media (min-width: 1600px) {
+        border-spacing: 10px;
+      }
+    }
+    
+    .rdc-table_has-events.opened .rdc-table_date {
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 9px;
+      }
+    }
+
+    .rdc-table_has-events ul {
+      left: 0;
+      right: 0;
+      @include media-breakpoint-up(xl) {
+        right: 7px;
+      }
+    }
+
+    table.rdc-event-booking-table td {
+      display: block;
+      text-align: center;
+      padding: 10px 5px;
+
+      &:first-of-type {
+        width: auto;
+      }
+    }
+    table.rdc-event-booking-table tr > td:first-of-type:before {
+      content: none;
+    }
+
+    .button {
+      white-space: nowrap;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+//modal window
+#appointment {
+  .modal-dialog {
+    max-width: 650px;
+    box-shadow: $shadow-area-sm;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+      margin: 5% auto;
+    }
+    .radio {
+      label {
+        input[type="radio"] {
+          margin-top: 8px;
+          &:focus {
+            outline: none;
+          }
+          &:active {
+            outline: none;
+          }
+        }
+
+      }
+    }
+  }
+
+  .icon-md {
+    font-size: 24px;
+    line-height: 28px;
+    vertical-align: middle;
+    padding-right: 8px;
+  }
+
+  .modal-header {
+    padding: 30px 30px 0;
+    border: none;
+  }
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .radio {
+    label {
+      padding-left: 30px;
+      font-style: normal;
+      font-weight: 300;
+    }
+  }
+
+  .radio-custom-dummy {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    margin-left: -30px;
+    background: $gray-1;
+    &:after {
+      background: $black;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      left: 5px;
+    }
+  }
+
+  .modal-body {
+    padding: 20px 30px 30px;
+    p + * {
+      margin-top: 20px;
+    }
+    * + .register-form,
+    * + .login-form,
+    * + hr {
+      margin-top: 30px;
+    }
+
+    .group-xl + * {
+      margin-top: 15px; 
+    }
+
+    .register-form {
+      .btn-sm {
+        padding: 11px 12px;
+        @include media-breakpoint-up(lg) {
+          padding: 11px 26px;
+        }
+      }
+    }
+    form {
+      .form-wrap {
+        &:nth-child(1),
+        &:nth-child(2) {
+          @include media-breakpoint-up(md) {
+            display: inline-block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .login-form {
+    display: none;
+  }
+}
+
+.calendar-availability {
+  // Table
+  .rdc-table {
+    position: relative;
+    width: 100%;
+
+    table {
+      border-spacing: 4px;
+      border-collapse: separate;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        border-spacing: 11px;
+      }
+    }
+
+    td {
+      padding-bottom: 0;
+      border: 0;
+      vertical-align: top;
+    }
+  }
+  
+  * + .rdc-table {
+    margin-top: 15px;
+  }
+
+  
+  // Controls
+  
+
+  .rdc-month,
+  .rdc-fullyear {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .rdc-month {
+    text-align: right;
+  }
+
+  .rdc-fullyear {
+    text-align: left;
+  }
+  
+  .rdc-next,
+  .rdc-prev {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .rdc-next {
+    right: (100% / 16);
+  }
+
+  .rdc-prev {
+    left: (100% / 16);
+  }
+  
+  @include media-breakpoint-up(md) {
+    * + .rdc-table {
+      margin-top: 35px;
+    }
+  }
+}
+
+* + .calendar-availability {
+  margin-top: 30px;
+  
+  @include media-breakpoint-up(md) {
+    margin-top: 45px;
+  }
+}

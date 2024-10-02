@@ -1,0 +1,13 @@
+mixin box-pricing( obj )
+	.row.justify-content-center.row-37
+		.col-12
+			.pricing-box= obj.price
+		each image in obj.images
+			.col-md-4
+				.thumbnail: a(href='#')
+					+jpg(image)
+		.col-xl-8.col-lg-10
+			p.pretitle.text-white What influences the budget
+			ul.list-decorative
+				each item in obj.items
+					li= item

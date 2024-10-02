@@ -1,0 +1,45 @@
+/*
+* Static Layout
+*/
+
+.rd-navbar-static {
+  display: block;
+
+  .rd-navbar-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .rd-navbar-aside-right{
+    display: flex;
+  }
+
+  .rd-navbar-top-panel{
+    text-align: left;
+  }
+
+  .rd-navbar-nav{
+    > li {
+      & + li{
+        margin-left: 14px;
+
+        @media (min-width: 1400px) {
+          margin-left: $navbar-static-nav-indent;
+        }
+      }
+    }
+  }
+
+  &.rd-navbar--is-stuck,
+  &.rd-navbar--is-clone{
+    .rd-navbar-inner{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+

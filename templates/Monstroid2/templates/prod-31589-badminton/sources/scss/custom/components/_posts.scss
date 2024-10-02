@@ -1,0 +1,58 @@
+/** @section Posts */
+
+.first-letter {
+  &:first-letter {
+    float: left;
+    display: block;
+    padding: 22px 30px;
+    margin-right: 20px;
+    margin-top: 8px;
+    line-height: 40px;
+    font-size: 40px;
+    border-radius: 4px;
+    background-color: $primary;
+    color: $white;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+// Post
+.post-inline {
+  > * + * { margin-top: 5px; }
+}
+
+.post-inline__header,
+.post-inline__footer {
+  font-size: 12px;
+  line-height: 1.4;
+  @include spacing(20px, 5px);
+
+  > * {
+    display: inline-block;
+  }
+}
+
+.post-inline__time,
+.post-inline__comment {
+  color: $primary;
+}
+
+.post-inline__link {
+  @include small;
+  color: $black;
+
+  a { @include link(inherit, $primary); }
+}
+
+.post-inline__text {
+  @include small;
+}
+
+// Post classic
+//
+
+* + .button-link {
+  margin-top: 20px;
+}

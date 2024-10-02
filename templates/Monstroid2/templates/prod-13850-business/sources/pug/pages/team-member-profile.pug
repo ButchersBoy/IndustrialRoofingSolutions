@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-parallax
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Team member profile'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  section
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    }) 
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8 
+              h2.heading-decorated Team member profile 
+  ='\n'
+
+  // Team member profile
+  section.section-lg.bg-default
+    .container
+      // Profile Corporate
+      article.profile-corporate
+        +jpg('taylor-wilson-980x980', 'profile-corporate__image')
+
+        .profile-corporate__caption 
+          h3.profile-corporate__title TAYLOR WILSON
+          p.profile-corporate__subtitle Director
+          p Brian is the heart and soul of our team, and his responsibilities involve overseeing all the current projects our designers and developers have as well as managing our work and leading the negotiations with our partners.
+  ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10.col-xl-8
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-telephone
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+              label.form-label(for="contact-phone") Your phone
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

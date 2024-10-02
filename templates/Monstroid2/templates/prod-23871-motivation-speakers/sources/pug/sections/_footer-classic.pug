@@ -1,0 +1,64 @@
+// Brands
+section.section.section-sm.bg-gray-700.text-center.section-relative
+  .container
+    .group-flex
+      a.image-link(href='#'): +img('brand-01-155x43.png')
+      a.image-link(href='#'): +img('brand-02-200x47.png')
+      a.image-link(href='#'): +img('brand-03-117x42.png')
+      a.image-link(href='#'): +img('brand-04-115x39.png')
+      a.image-link(href='#'): +img('brand-05-168x48.png')
+
+.section.section-md.bg-gray-800.footer-classic-pre.section-relative
+  .container
+    .row.row-30
+      .col-sm-6.col-md-4.col-lg-3
+        h6 latest posts
+        ul.list.list-lg
+          li
+            article.post-latest
+              .post-latest-title: a( href= links.post ) Difference Between Business Coaching and Mentoring
+              .post-latest-time: a( href= links.post ) Oct 18, 2019
+          li
+            article.post-latest
+              .post-latest-title: a( href= links.post ) How to Become More Successful in Everyday Activities
+              .post-latest-time: a( href= links.post ) Oct 18, 2019
+      .col-sm-6.col-md-4.col-lg-3
+        h6 Services
+        ul.list.list-xs
+          li: a(href='#') Time Management
+          li: a(href='#') Personal Development
+          li: a(href='#') Leadership
+          li: a(href='#') Business Training
+          li: a(href='#') Public Speaking
+          li: a(href='#') Sales Training
+      .col-sm-4.col-lg-2
+        h6 Quick Links
+        ul.list.list-xs
+          li: a(href='index.html' class=(pageName === 'Home' ? 'active' : '') ) Home
+          li: a(href='about.html' class=(pageName === 'About' ? 'active' : '') ) About
+          li: a(href='courses.html' class=(pageName === 'Courses' ? 'active' : '') ) Courses
+          li: a(href='online-lectures.html' class=(pageName === 'Online Lectures' ? 'active' : '') ) Online Lectures
+          li: a(href='events.html' class=(pageName === 'News' ? 'active' : '') ) News
+          li: a(href='contacts.html' class=(pageName === 'Contacts' ? 'active' : '') ) Contacts
+      .col-sm-8.col-md-12.col-lg-4
+        h6 Make an Appointment
+        form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+          .form-wrap
+            label.form-label(for="footer-name") Name
+            input#footer-name.form-input(type="text" name="name" data-constraints='@Required')
+          .form-wrap
+            label.form-label(for="footer-email") E-Mail
+            input#footer-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+          .form-button.group-sm.text-center.text-sm-left
+            button(type="submit").button.button-primary.button-circle.button-shadow Send
+
+
+
+footer.footer-classic.section.bg-gray-900.text-center.section-relative
+  .container
+    .row.row-15.align-items-center
+      .col-md-4.text-md-left
+        .brand
+          a(href='index.html'): +img( logo.inverse, {retina: true}  )
+      .col-md-8.text-md-right
+        +rights

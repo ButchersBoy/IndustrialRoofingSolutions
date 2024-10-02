@@ -1,0 +1,33 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+include ../components/_ui-counter
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+	// Page Header
+	include ../sections/_header-classic
+	//Main section
+	include ../sections/_main-section
+	//Service
+	include ../sections/_services-section
+	//CTA section
+	include ../sections/_section-cta
+	//Gallery section
+	include ../sections/_gallery-section
+	//CTA section 2
+	include ../sections/_section-cta-2
+	//Slider Modern
+	include ../sections/_slider-modern
+	//Counters
+	include ../sections/_counters
+	// Slider Creative
+	include ../sections/_slider-creative
+	//Blog
+	include ../sections/_blog-section
+	//Footer
+	include ../sections/_footer-classic

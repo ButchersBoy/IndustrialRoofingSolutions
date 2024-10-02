@@ -1,0 +1,11 @@
+/** @section Testimonial */
+
+.testimonial {
+
+}
+
+.testimonial-position { color: $gray-700 }
+
+* + .testimonial-text { margin-top: 20px; }
+* + .testimonial-name { margin-top: 20px; }
+* + .testimonial-position { margin-top: 5px; }

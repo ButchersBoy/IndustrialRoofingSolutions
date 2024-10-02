@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Coming soon'
+
+block page
+  section.bg-accent.text-center.bg-image.bg-image-bottom.fullwidth-page(style='background-image: url(images/bg-image-5.jpg);')
+    .section-sm
+      .container
+        .row.justify-content-sm-center
+          .col-md-10.col-xl-8
+            h3 This Site is Coming Soon
+            .countdown.countdown-default(data-type='until', data-time='31 Jan 2019 16:00', data-format='dhms')
+            h5 Sign up to Receive Updates
+            p Get both our special offers and our oral health maintenance tips directly to your inbox!
+            form.rd-mailform.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap.form-wrap_icon.linear-icon-man
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your Name')
+              .form-wrap.form-wrap_icon.linear-icon-envelope
+                input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder="Your e-mail")
+              button(type="submit").button.button-gray-light-outline send

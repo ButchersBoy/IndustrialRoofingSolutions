@@ -1,0 +1,92 @@
+// Slider Creative
+section.section.slider-creative.bg-gray-lighten
+	.container
+		.row.justify-content-lg-between.justify-content-center.dots-creative
+			.col-xl-6.col-md-12.col-12.wow.fadeInLeft
+				h2.creative-title What our
+					span  clients say
+				.slider-creative-content
+					// Slick Carousel
+					.slick-slider.carousel-parent(data-arrows='true' data-loop='true' data-dots='false' data-swipe='false' data-items='1'  data-child='#child-carousel' data-for='#child-carousel')
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p The coaches are knowledgeable and sincerely dedicated to helping everyone scale to their current ability, improve strength, and have fun.
+								.creative-text
+									| Jack Wilson
+
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p I came here to acquire the shape of my body I had half a year ago. I was quite surprised with a range of services and assistance they offered me.
+								.creative-text
+									| Judith Patterson
+
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p I have had the phenomenal pleasure of working out with your coaches as a client and friend throughout the course of the last year.
+								.creative-text
+									| Nancy Jackson
+
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p The coaches are knowledgeable and sincerely dedicated to helping everyone scale to their current ability, improve strength, and have fun.
+								.creative-text
+									| Jack Wilson
+
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p I came here to acquire the shape of my body I had half a year ago. I was quite surprised with a range of services and assistance they offered me.
+								.creative-text
+									| Judith Patterson
+
+						.slide-creative
+							.slide-content
+								.quotes-creative
+									span.top-quote.icon.linearicons-quote-close
+									span.bottom-quote.icon.linearicons-quote-open
+									p I have had the phenomenal pleasure of working out with your coaches as a client and friend throughout the course of the last year.
+								.creative-text
+									| Nancy Jackson
+
+				a(href="#").button.button-primary.button-md leave your Review
+
+			.col-xl-4.col-md-12.col-sm-12.col-12.wow.fadeInRight
+				.slick-slider.slick-child#child-carousel(data-for='.carousel-parent'  data-arrows='false' data-loop='true' data-dots='true' data-swipe='false' data-items='2' data-sm-items='2' data-xl-items='1' data-lg-items='3' data-md-items='2')
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-1')
+						span - 44 lbs
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-2')
+						span - 55 lbs
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-3')
+						span - 61 lbs
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-1')
+						span - 44 lbs
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-2')
+						span - 55 lbs
+					.slide-creative-small
+						.preview-wrap
+							+jpg('slider-item-3')
+						span - 61 lbs

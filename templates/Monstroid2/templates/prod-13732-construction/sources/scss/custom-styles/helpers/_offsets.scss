@@ -1,0 +1,259 @@
+/*
+*
+* Offsets
+* --------------------------------------------------
+*/
+
+// Element offset
+* + p { margin-top: 16px; }
+
+p + * { margin-top: 22px; }
+
+// Headings
+
+// Tags + Tags
+p + p { margin-top: 16px; }
+
+h2 + h6,
+h3 + h6 {
+  margin-top: 23px;
+}
+
+// Tags + Classes
+
+// Classes
+* + .button { margin-top: 20px; }
+
+* + .list-xs { margin-top: 16px; }
+
+* + .list-small { margin-top: 15px; }
+
+* + .list-md { margin-top: 20px; }
+
+* + .list-marked { margin-top: 15px; }
+
+* + .list-ordered { margin-top: 15px; }
+
+* + .list-linked { margin-top: 23px; }
+
+* + .quote-centered { margin-top: 25px; }
+
+* + .group-lg { margin-top: 35px; }
+
+* + .figure { margin-top: 30px; }
+
+* + [class*=list-inline-] { margin-top: 38px; }
+
+* + .rd-mailform { margin-top: 38px; }
+
+* + .contact-info { margin-top: 30px; }
+
+* + .table-responsive { margin-top: 25px; }
+
+* + .blurb-minimal { margin-top: 40px; }
+
+* + .quote-default { margin-top: 40px; }
+* + .button.button-link { margin-top: 20px; }
+.divider-small + * { margin-top: 20px; }
+
+* + .row { margin-top: 25px; }
+
+
+
+// Classes + Tags
+h5 + p,
+.heading-5 + p {
+  margin-top: 18px;
+}
+
+h6 + p,
+.heading-6 + p {
+  margin-top: 10px;
+}
+
+.icon-xxl + h3,
+.icon-xxl + .heading-3 {
+  margin-top: 35px;
+}
+
+// Classes + Classes
+.row + .row { margin-top: 40px; }
+
+h1 + h3,
+.heading-1 + h3,
+h1 + .heading-3,
+.heading-1 + .heading-3 {
+  margin-top: 20px;
+}
+
+h1 + h4,
+.heading-1 + h4,
+h1 + .heading-4,
+.heading-1 + .heading-4 {
+  margin-top: 15px;
+}
+
+h2 + h6,
+.heading-2 + h6,
+h2 + .heading-6,
+.heading-2 + .heading-6 {
+  margin-top: 15px;
+}
+
+h4 + h6,
+.heading-4 + h6,
+h4 + .heading-6,
+.heading-4 + .heading-6 {
+  margin-top: 20px;
+}
+
+h3 + .owl-carousel,
+.heading-3 + .owl-carousel {
+  margin-top: 35px;
+}
+
+.blurb-minimal + .blurb-minimal { margin-top: 35px; }
+
+.post-event + .divider-wrap,
+.divider-wrap + .post-event {
+  @include media-breakpoint-up(md) {
+    margin-top: 55px;
+  }
+}
+
+.table-responsive + .row {
+  margin-top: 50px;
+}
+
+// Media offsets
+@include media-breakpoint-up(md) {
+   * + .row { margin-top: 40px; }
+  .divider-small + * { margin-top: 40px; }
+}
+
+@include media-breakpoint-up(lg) {
+  * + p { margin-top: 28px; }
+  * + .button { margin-top: 45px; }
+  * + .quote-centered { margin-top: 50px; }
+  * + .figure { margin-top: 40px; }
+  * + .group-lg { margin-top: 50px; }
+
+  h2 + h6,
+  .heading-2 + h6,
+  h2 + .heading-6,
+  .heading-2 + .heading-6 {
+    margin-top: 35px;
+  }
+
+  h4 + h6,
+  .heading-4 + h6,
+  h4 + .heading-6,
+  .heading-4 + .heading-6 {
+    margin-top: 30px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  
+  * + .quote-default { margin-top: 65px; }
+  .divider-small + * { margin-top: 55px; }
+  .row + .row { margin-top: 40px; }
+  
+  h4 + h6,
+  .heading-4 + h6,
+  h4 + .heading-6,
+  .heading-4 + .heading-6 {
+    margin-top: 45px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  * + .button { margin-top: 60px; }
+}
+
+html .page {
+  * + .offset-top-1 {
+    margin-top: 35px;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    * + .offset-top-1 {
+      margin-top: 65px;
+    } 
+  }
+}
+
+// Range spacing
+// -------------------------------
+html {
+  .row-10 {
+    @include grid-offset(10px);
+  }
+
+  .row-20 {
+    @include grid-offset(20px);
+  }
+
+  .row-30 {
+    @include grid-offset(30px);
+  }
+  
+  .row-40 {
+    @include grid-offset(40px);
+  }
+
+  .row-50 {
+    @include grid-offset(50px);
+  }
+
+  .row-60 {
+    @include grid-offset(50px);
+  }
+
+  .row-70 {
+    @include grid-offset(50px);
+  }
+
+  @include media-breakpoint-up(md) {
+    .row-60 {
+      @include grid-offset(60px);
+    }
+    
+    .row-70 {
+      @include grid-offset(70px);
+    }
+    
+    .row-md-50 {
+      @include grid-offset(50px);
+    }
+
+    .row-md-75 {
+      @include grid-offset(75px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .row-lg-90 {
+      @include grid-offset(90px);
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+    .row-70 {
+      @include grid-offset(70px);
+    }
+
+    .row-xl-110 {
+      @include grid-offset(110px);
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .row-xxl-50 {
+      @include grid-offset(50px);
+    }
+  }
+}
+
+// Insets
+// -------------------------

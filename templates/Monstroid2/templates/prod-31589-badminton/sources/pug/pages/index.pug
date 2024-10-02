@@ -1,0 +1,214 @@
+extends ../_skeleton
+
+block page
+	include ../sections/_header-classic-absolute
+
+	// Intro
+	section.section.section-intro.bg-image.bg-fixed( style='background-image:url(images/background-02.jpg)' )
+		.section-intro-inner.section-md
+			.container
+				.row
+					.col-md-10.col-lg-9.col-xl-8
+						h1 Badminton club and academy
+						+link-arrow(['Read more', 'about-us.html'])
+
+	// Offers
+	section.section.section-lg.bg-default.text-center.text-md-start
+		.container
+			.block-lg: h3 Our badminton club offers top-notch services
+			.owl-carousel(
+				data-items='1',
+				data-sm-items='2',
+				data-md-items='3',
+				data-margin='30',
+				data-lg-margin='40',
+				data-autoplay='true',
+				data-owl= {
+					smartSpeed: 1000,
+					dots: true
+				}
+			)
+				+thumbnail-default({
+					img: 'home-02-400x505',
+					title: 'Badminton court rent',
+					text: 'At our club, you can easily rent a badminton court at an affordable price.'
+				})
+				+thumbnail-default({
+					img: 'home-03-400x505',
+					title: 'Personal trainings',
+					text: 'Book your first personal training at Racket club and start improving badminton skills.'
+				})
+				+thumbnail-default({
+					img: 'home-04-400x505',
+					title: 'Classes for kids and teens',
+					text: 'Our badminton classes for kids are a great way to improve their flexibility and agility.'
+				})
+
+	// Lists
+	section.section.section-lg.bg-default.text-center.text-sm-start
+		.container
+			.row.row-30.flex-sm-row-reverse.justify-content-xl-between.align-items-center
+				.col-sm-6
+					.img-responsive.wow.fadeIn: +img( 'home-05-620x685' )
+				.col-sm-6.col-xl-5
+					h3 Benefits our  members get
+					ul.list-marked-1.heading-5
+						li 14 badminton courts
+						li Professional coaches
+						li Personal wardrobe
+						li Training grounds
+						li Club tournaments
+
+	// Single offer
+	section.section.section-lg.bg-default.text-center.text-sm-start
+		.container
+			.row.row-30.justify-content-lg-between.align-items-center
+				.col-sm-6
+					.img-responsive.wow.fadeIn: +img( 'home-06-620x685' )
+				.col-sm-6.col-lg-5
+					h3 Free personal training
+					p Our club offers a wide range of personal badminton training programs tailor-made to fit your needs. Get your first free training session at Racket club today!
+					+link-arrow(['Read more'])
+
+	// Why us
+	section.section.section-lg.text-center.text-sm-start.bg-image.bg-fixed.context-dark( style='background-image:url(images/background-01.jpg)' )
+		.container
+			h3 Why us
+			.row.row-30.row-xl-40.row-xxl-50.list-count.row-content-1
+				.col-xs-6.col-md-4
+					+blurb-number({
+						title: 'Flexible scheduling',
+						text: 'Our badminton classes are provided on a flexible schedule to match the pace of your life the best way so that you could get the most out of them.'
+					})
+				.col-xs-6.col-md-4
+					+blurb-number({
+						title: 'Professional coaches',
+						text: 'We are a team of highly experienced badminton coaches who are always glad to help you advance in this sport at any age.'
+					})
+				.col-xs-6.col-md-4
+					+blurb-number({
+						title: 'Badminton shop',
+						text: 'Looking for new badminton gear or apparel to meet your needs? Look no further as you can find it at our shop at an affordable price.'
+					})
+				.col-xs-6.col-md-4
+					+blurb-number({
+						title: 'Club tournaments',
+						text: 'The Racket badminton club organizes regular tournaments for registered members. And if you lack proper training, we will be glad to help.'
+					})
+				.col-xs-6.col-md-4
+					+blurb-number({
+						title: 'Structured programs',
+						text: 'The programs our club provides are well-structured and tailored to meet your goals, even if you don’t know where to start.'
+					})
+
+	// Gallery
+	section.section.section-lg.bg-default
+		.container.isotope-wrap
+			h3 Our club’s gallery
+			.row.row-15.row-sm-20.row-xl-30.row-spacing-14.isotope( data-isotope-layout='masonry', data-column-class='.col-1', data-lightgallery='group', data-lg-animation='lg-slide-circular' )
+				.col-1.isotope-item.isotope-sizer
+				.col-6.col-sm-4.isotope-item
+					+thumbnail-gallery({
+						img: 'home-07-400x736',
+						imgOriginal: 'home-07-original'
+					}).wow.fadeIn
+				.col-6.col-sm-3.isotope-item
+					+thumbnail-gallery({
+						img: 'home-08-290x420',
+						imgOriginal: 'home-08-original'
+					}).wow.fadeIn( data-wow-delay='.15s' )
+				.col-6.col-sm-5.isotope-item
+					+thumbnail-gallery({
+						img: 'home-09-510x736',
+						imgOriginal: 'home-09-original'
+					}).wow.fadeIn( data-wow-delay='.3s' )
+				.col-6.col-sm-3.isotope-item
+					+thumbnail-gallery({
+						img: 'home-10-290x286',
+						imgOriginal: 'home-10-original'
+					}).wow.fadeIn
+
+	// Pricing
+	section.section.section-lg.bg-default
+		.container
+			h3 Membership cost
+			.owl-carousel.owl-carousel-shadow(
+				data-items='1',
+				data-sm-items='2',
+				data-lg-items='3',
+				data-margin='30',
+				data-lg-margin='40',
+				data-owl= {
+					dots: true
+				}
+			)
+				+pricing({
+					title: 'Badminton academy',
+					value: '29',
+					period: 'per month',
+					list: [
+						'Group classes',
+						'Gear rental included',
+						'3 classes per week',
+						'Club court',
+						'Free gym access'
+					]
+				}).pricing-accent
+				+pricing({
+					title: 'Badminton court rent',
+					value: '69',
+					period: 'per month',
+					list: [
+						'Monthly court access',
+						'Gear & apparel rentals',
+						'Shop access',
+						'3 different courts',
+						'Club members only'
+					]
+				})
+				+pricing({
+					title: 'Private lessons',
+					value: '99',
+					period: 'per month',
+					list: [
+						'2 hours per lesson',
+						'11 lessons per month',
+						'Regular tournaments',
+						'Private court',
+						'Free access gym access'
+					]
+				})
+
+	// Offers
+	section.section.section-lg.bg-default.text-center
+		.container
+			section.vide( data-vide-bg='video/video', data-vide-options='posterType: jpg' )
+			h3#testimonials 500+ Satisfied members
+			.owl-carousel.owl-carousel-1(
+				data-items='1',
+				data-margin='30',
+				data-lg-margin='40',
+				data-autoplay='true',
+				data-owl= {
+					smartSpeed: 1000,
+					nav: true,
+					dots: true
+				}
+			)
+				+quote({
+					text: 'Attending this club’s group badminton classes was the best decision I’v ever made. Now I’m planning to take part in the first club tournament.',
+					img: 'person-01-100x100',
+					cite: 'Sam Williams'
+				})
+				+quote({
+					text: 'The club’s atmosphere and friendly staff are why I keep coming back every time. Of course, the quality of provided classes is unmatched as well.',
+					img: 'person-02-100x100',
+					cite: 'Emma Adams'
+				})
+				+quote({
+					text: 'This badminton club is the #1 place me & my family visit regularly. Racket also has one of the best apparel and gear shops for badminton.',
+					img: 'person-03-100x100',
+					cite: 'Andrew Smith'
+				})
+
+	include ../sections/_footer-classic

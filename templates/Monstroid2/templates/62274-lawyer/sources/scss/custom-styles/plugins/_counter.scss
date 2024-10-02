@@ -1,0 +1,48 @@
+/*
+*
+* Counter
+* --------------------------------------------------
+*/
+
+.counter-modern {
+  text-align: center;
+ 
+  
+  .counter-modern__value,
+  .counter-modern__title {
+    color: $primary;
+  }
+
+  .counter-modern__value {
+    span {
+      display: inline;
+      margin: 0;
+    }
+  }
+}
+
+.counter-modern__title {
+  font-family: $font-family-sec;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+* + .counter-modern__title {
+  margin-top: 10px;
+}
+
+@include media-breakpoint-up(lg) {
+  .counter-modern__title {
+    font-size: 24px;
+  }
+
+  * + .counter-modern__title {
+    margin-top: 10px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .counter-modern__value {
+    font-size: 40px;
+  }
+}

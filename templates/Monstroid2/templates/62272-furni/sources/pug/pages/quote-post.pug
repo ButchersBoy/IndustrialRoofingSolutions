@@ -1,0 +1,59 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Quote post'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-md
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-sm.post-single-body
+            h3 BUY SMART: HOW TO BUY A DURABLE RECLINER CHAIR
+            .post-meta
+              .group
+                a(href=postQuote): time(datetime='2017') Jan.20, 2016
+                a(href=postQuote) by Brian Williamson
+                a(href=postQuote) 3 comment(s)
+                a(href=postQuote) Kids Room
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postQuote,
+                    items: [
+                      "Armchair",
+                      'Chair']
+                })
+                
+            // Quote default
+            .quote-default
+              +quote-mark('quote-default__mark')
+              .quote-default__text: p.q.heading-4 Getting to another  level of design and functionality.
+
+              p.quote-default__cite Adam Smith
+              
+            include ../sections/_section-post-single-content
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+            
+  
+  // Page Footer
+  include ../sections/_footer-corporate
+    

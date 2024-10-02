@@ -1,0 +1,96 @@
+// pagination classic
+//--------------------------------------------------------
+.pagination-classic {
+  margin: 0;
+  li {
+    display: inline-block;
+    a,
+    span{
+      display: inline-block;
+      width: 43px;
+      height: 43px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 43px;
+      font-weight: 400;
+      font-family: $font-family-base;
+      background-color: $white;
+      border: 1px solid $black;
+      color: $black;
+      text-align: center;
+      transition: .4s;
+      border-radius: 0;
+      box-shadow: 2px 3px 0 0;
+
+      &.icon {
+        //width: 35px;
+        margin-left: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        &:before{
+          content: none;
+        }
+
+        &:focus,
+        &:hover{
+          color: $gray;
+        }
+      }
+
+      &:before{
+        position: absolute;
+        bottom: 0;
+        top: 100%;
+        left: 100%;
+        right: 0;
+        content: "";
+        display: inline-block;
+        background-color: $black;
+        transition: .28s all ease;
+        z-index: -1;
+      }
+      
+    }
+
+    &.active a,
+    &.active a:hover,
+    a:focus,
+    a:hover { 
+      color: $white;
+      box-shadow: 0 0;
+      transform: translate3d(2px, 3px, 5px);
+      &:before{
+        top: 0;
+        left: 0;
+      }
+    }
+    &.active span,
+    &.active span:hover{
+      color: $white;
+      box-shadow: 0 0;
+      transform: translate3d(2px, 3px, 5px);
+      &:before{
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.disabled a,
+    &.disabled a:hover,
+    &.disabled span,
+    &.disabled span:hover{
+      color: $white;
+      box-shadow: 0 0;
+      transform: translate3d(2px, 3px, 5px);
+      &:before{
+        top: 0;
+        left: 0;
+      }
+    }
+    & + li { margin-left: 4px; }
+  }
+}

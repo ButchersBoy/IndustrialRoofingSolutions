@@ -1,0 +1,154 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Home Creative'
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-sidebar_reverse.rd-navbar_inverse(
+			data-layout='rd-navbar-fixed',
+			data-sm-layout='rd-navbar-fixed',
+			data-sm-device-layout='rd-navbar-fixed',
+			data-md-layout='rd-navbar-fixed',
+			data-md-device-layout='rd-navbar-fixed',
+			data-lg-device-layout='rd-navbar-fixed',
+			data-xl-device-layout='rd-navbar-sidebar',
+			data-xxl-device-layout='rd-navbar-sidebar',
+			data-lg-layout='rd-navbar-fixed',
+			data-xl-layout='rd-navbar-sidebar',
+			data-xxl-layout='rd-navbar-sidebar',
+			data-stick-up-clone='false',
+			data-sm-stick-up='true'
+			data-md-stick-up='true'
+			data-lg-stick-up='true',
+			data-xl-stick-up='true',
+			data-xxl-stick-up='true',
+			data-lg-stick-up-offset='1px',
+			data-xl-stick-up-offset='1px',
+			data-xxl-stick-up-offset='1px',
+			data-body-class='rd-navbar-absolute',
+			data-md-hover-on='false',
+			data-lg-hover-on='false')
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel.context-dark
+						.rd-navbar-panel__aside
+							button.rd-navbar-toggle.rd-navbar-search_collapsable(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+						
+						.rd-navbar-panel__main.rd-navbar-search_collapsable
+							// RD Navbar Brand
+							.rd-navbar-brand
+								+logo2
+					
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						+navigation( menu )
+	
+	include ../sections/_section-slider-creative
+	
+	// Presentation
+	section.section.novi-section(id=seeFeaturesLink)
+		.container-fluid.container-flex
+			.row.g-0
+				.col-md-6.col-lg-4
+					// Thumb centered
+					.thumb-centered
+						+jpg('home-creative-1-640x640')
+				.col-md-6.col-lg-8: .col__inner.novi-bg.novi-bg-img
+					h3 Consistency is the Key
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+				
+				.col-md-6.col-lg-4: .col__inner.novi-bg.novi-bg-img.bg-accent
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-magic-wand
+						.unit-body
+							p.blurb__title Pixel Perfect Typography
+							p It’s impossible to ignore the fact that perfect typography is a key asset of design success. We concentrated on classic proportions, great readability and better user experience to produce modern and user friendly template that adds value to any project.
+				
+				.col-md-6.col-lg-4: .col__inner.novi-bg.novi-bg-img.bg-gray-lighter
+					// Blurb minimal
+					article.blurb.blurb-minimal.blurb-minimal_black: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+						.unit-body
+							p.blurb__title Great for Any Device
+							p This template is fully responsive and Retina-ready, which means its ability to be displayed on any modern gadgets, from computers and laptops to smartphones and tablets. It is also perfectly optimized for high-resolution displays and other devices.
+				.col-md-6.col-lg-4
+					// Thumb centered
+					.thumb-centered
+						+jpg('home-creative-2-640x640')
+						.thumb-centered__caption
+							p.heading-1
+								span.counter 9
+								| +
+							p.heading-5 Pre-made layouts
+				
+				.col-md-6.col-lg-8
+					.thumb-centered.thumb-centered-md__rect
+						+jpg('images-10-1280x640')
+				.col-md-6.col-lg-4
+					.thumb-centered
+						+jpg('images-11-640x640')
+				
+				.col-md-6.col-lg-4: .col__inner.novi-bg.novi-bg-img.bg-gray-lighter
+					.row.row-50.align-items-sm-center
+						.col-6: a.link-transparent(href='#')
+							+png('brand-1-128x111')
+						.col-6: a.link-transparent(href='#')
+							+png('brand-2-129x102')
+						.col-6: a.link-transparent(href='#')
+							+png('brand-6-134x122')
+						.col-6: a.link-transparent(href='#')
+							+png('brand-4-129x86')
+				
+				.col-md-6.col-lg-8: .col__inner.novi-bg.novi-bg-img
+					// Owl Carousel
+					.owl-carousel(data-autoplay='true' data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-sm-margin='15', data-lg-margin='30', data-dots='true')
+						.item
+							// Quote default
+							.quote-default
+								.quote-default__image
+									+jpg('testimonials-1-120x120')
+								.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+								p.quote-default__cite Jane Smith
+						
+						.item
+							// Quote default
+							.quote-default
+								.quote-default__image
+									+jpg('testimonials-2-120x120')
+								.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+								p.quote-default__cite James Wilson
+						
+						.item
+							// Quote default
+							.quote-default
+								.quote-default__image
+									+jpg('testimonials-3-120x120')
+								.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+								p.quote-default__cite Sam Lee
+				
+				.col-md-6.col-lg-4
+					// Thumb centered
+					.thumb-centered
+						+jpg('home-creative-3-640x640')
+				.col-md-6.col-lg-4
+					// Thumb centered
+					.thumb-centered
+						+jpg('home-creative-4-640x640')
+				.col-md-6.col-lg-4
+					include ../sections/_section-gmap
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-minimal

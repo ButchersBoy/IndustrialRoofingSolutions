@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-progress-bar-linear
+
+block variables
+	- pageName = 'Maintenance'
+
+block page
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent.text-center
+		.container
+			.icon.novi-icon.icon-xxl.linear-icon-hammer-wrench
+			h3 Website will be online again soon. #[br]Currently it undergoes a regular health checkup.
+			.progress-bar-linear-limited
+				+progress-bar-linear({
+					title:   "Website Update Progress",
+					valueTo: "49"
+				})
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cog
+						p.blurb__title Maintenance check
+						p From time to time we put our website on maintenance to check if everything works OK!
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cloud-download
+						p.blurb__title Feature updates
+						p We just love to roll out new features to our website. That’s what we’re doing right now! :-)
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-wrench
+						p.blurb__title Bug fixes
+						p Any website might stumble upon some bugs. Those need to be fixed!
+	='\n'

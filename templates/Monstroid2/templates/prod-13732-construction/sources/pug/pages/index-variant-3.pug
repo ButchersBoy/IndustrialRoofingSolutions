@@ -1,0 +1,463 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Home'
+
+block page
+  include ../sections/_header-corporate
+  include ../sections/_section-slider-default
+
+  section.section-xs.section-cta.bg-accent.text-center.text-md-left
+    .container
+      .row.row-30.justify-content-between.align-items-center
+        .col-12.col-md-8
+          h4 FAST AND RELIABLE SERVICE FOR YOUR PROJECT!
+        .col-12.col-md-4.text-md-right
+          a.button.button-primary(href='about.html') Read more
+          
+  // Impressive Features
+  section.section-md.bg-gray-lighter
+    .container
+      .row.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+        .col-md-9.col-lg-6
+          h4.heading-decorated Why Choose Us
+
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-rocket
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Expertise
+              p With 30+ years in the building industry, we have the knowledge for various building projects.
+
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-equalizer
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Safety
+              p We are sincerely interested in the safety of our employees, the public, and our operations.
+
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Technology
+              p We implement the newest technology in communication and construction processes.
+
+        .col-md-7.col-lg-5
+          figure.image-sizing-1
+            +jpg('blog-image-1-886x668')
+  ='\n'
+
+  // About us
+  section.bg-default.object-wrap
+    .section-lg
+      .container
+        .row
+          .col-lg-5
+            h4.heading-decorated Our History
+            p Since then we've built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and correlating that were all involved in completing each separate project, then our productivity is immense! 
+            .row.row-30
+              .col-md-6.col-lg-12.col-xl-6
+                // Blurb minimal
+                article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+                  .unit-left
+                    .blurb-minimal__icon: span.icon.linear-icon-menu3
+                  .unit-body
+                    p.blurb__title.heading-6: a(href=singleService) Years of experience
+                    p Our company has more than 50 years of experience in construction sphere.
+
+              .col-md-6.col-lg-12.col-xl-6
+                // Blurb minimal
+                article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+                  .unit-left
+                    .blurb-minimal__icon: span.icon.linear-icon-users2
+                  .unit-body
+                    p.blurb__title.heading-6: a(href=singleService) Dedicated team
+                    p Our team is absolutely dedicated to successful construction project completion.
+
+            .row.justify-content-md-center
+              .col-md-12
+                +progress-bar-linear({
+                  title: "Construction",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "49"
+                })
+
+                +progress-bar-linear({
+                  title: "Project Management",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "29"
+                })
+
+                +progress-bar-linear({
+                  title: "3D Modeling",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "86"
+                })
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+      
+  // Our Services
+  section.section-md.bg-gray-lighter.text-center
+    .container
+      h4.heading-decorated Our Services
+      .row.row-50.justify-content-md-center.justify-content-lg-start
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-pencil-ruler
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Pre-construction Services
+              p We take our time on initial planning before any construction begins, to balance all the financial and efficiency issues beforehand...
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-users
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) General Contracting
+              p We have a long list of professional contractors, whom our engineers and architects enjoy to work with on a majority of our projects!
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-wall
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Construction Services
+              p Our customers love the pace/quality tempo that we show during each of the principal construction processes!
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-apartment
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Construction Management
+              p Construction project management is essential. We're using the most time and iterations efficient life cycles methods for that.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-home4
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Building Information Modeling (BIM)
+              p Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format.
+
+        .col-md-6.col-xl-4
+          // Blurb circle 
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-pencil-ruler2
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Design-Build
+              p If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of the construction shorter
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-magic-wand
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Cost Containment
+              p It is vital for any contractor not to exceed the budget and that is why we pay utmost attention to cost containment.
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-menu3
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Quality Assurance
+              p Every project we work on is checked for quality assurance to satisfy the needs of the modern society.
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-users2
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Equipment Installation
+              p Our professional team can install all kinds of equipment in the finished building as a part of post-construction services.
+  ='\n'
+
+  //cta
+  include ../sections/_section-cta-2
+    
+  // Projects
+  section.section-lg.bg-default.text-center
+    .container
+      h4.heading-decorated Our Projects
+      .row.row-30
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 COMMERCIAL
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) COMMERCIAL
+                p It’s probably the most diverse category of construction to work in. But we’ve got experience…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 CULTURAL / LIFESTYLE
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) CULTURAL / LIFESTYLE
+                p Working on a socially important building, such as a park involves additional landscape construction expertise.…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 DATA / TECHNOLOGY
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) DATA / TECHNOLOGY
+                p While building a headquarters building for an IT company is relatively easy, we’ve also…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 EDUCATIONAL
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) EDUCATIONAL
+                p Educational institutions can be much more creative than your regular school or a college campus!…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 GOVERNMENT / MILITARY
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) GOVERNMENT / MILITARY
+                p The US military and States governments used our expertise and manpower to build numerous military-grade…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 HEALTHCARE
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) HEALTHCARE
+                p We can build any type of healthcare buildings. From a small private medical clinic to…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 ENTERTAINMENT
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) ENTERTAINMENT
+                p Working on a construction project for the entertainment sphere can be a real struggle but we know…
+                a.button.button-link(href=projectCategory) View projects
+
+        .col-sm-6.col-lg-4.col-xl-3 
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 WAREHOUSE / LOGISTICS
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) WAREHOUSE / LOGISTICS
+                p While building a warehouse for an e-store is no easy feat itself, think about building…
+                a.button.button-link(href=projectCategory) View projects
+                
+
+  section.rd-parallax.bg-gray-dark.text-center
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-3.jpg",
+      "htmlSpeed": "0.1"
+    })
+      .section-lg.text-center
+        .container
+          .row.justify-content-sm-center.row-60
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.45", data-gradient="#f6d014, #f6d014", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title Innovations
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.60", data-gradient="#f6d014, #f6d014", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title Reliability
+            .col-md-4.col-xl-3
+              // Circle Progress Bar
+              .progress-bar-circle(data-value="0.80", data-gradient="#f6d014, #f6d014", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                span
+              .progress-bar-circle-title Experience
+  
+  // Executive managers
+  section.section-md.bg-default.text-center
+    .container
+      h4.heading-decorated Executive managers
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('calvin-fitzerald-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Calvin Fitzgerald
+              p.thumb-flat__subtitle President
+              p Calvin Fitzgerald is an established and well-respected expert in the construction industry. With more than 35 years of practical experience in the business, Calvin has built his career on bringing the most outlandish conceptual visions from blueprints to a street next to yours... His leadership skills cemented our dominating positions among our competitors.
+
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('taylor-wilson-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Taylor Wilson
+              p.thumb-flat__subtitle Chief Executive Officer
+              p Taylor's been involved in the construction business since the 1970's... His profound experience in building miscellaneous types of projects and his innovative mindset makes him the leading force in our company. The BIM and Db methods that he implemented are now the lynchpins of our business operations with all of our clients...
+
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('josh-wagner-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Josh Wagner
+              p.thumb-flat__subtitle Chief Design Officer
+              p Josh leads our creative team of designers and engineers...His proven ability to manage the most complex projects and bring the craziest concepts to life is what makes him as efficient as he is. Together, this creative team can be the launchpad of any project, giving it a head start at the earliest stages of the construction project's planning.
+
+  // get a quote
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row.justify-content-end
+          .col-lg-5
+            h4.heading-decorated Get a Quote
+            // RD Mailform
+            form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                label.form-label(for="contact-name") Your name
+
+              .form-wrap
+                input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                label.form-label(for="contact-email") Your e-mail
+
+              .form-wrap
+                textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                label.form-label(for="contact-message") Your message
+
+              button(type="submit").button.button-primary send
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+
+  include ../sections/_section-posts
+
+  //testimonials
+  section.section-lg.bg-image.context-dark.text-center(style='background-image: url(images/bg-image-2.jpg)')
+    .container
+      h4.heading-decorated WHAT PEOPLE SAY
+      // Owl Carousel
+      .owl-carousel(data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true' data-nav='true')
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('deborah-quagmire-120x120')
+            .quote-default__text: p.q Your versatility and experience with complex construction enabled your team to meet the aggressive schedule while achieving our high quality and safety standards. I appreciate all work you have completed on our project.
+            p.quote-default__cite Jane Smith
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('benedict-arnold-120x120')
+            .quote-default__text: p.q When we needed a design and construction specialist, this company was there for us. From the beginning, they knew how to implement our ideas, and we appreciate it a lot. If you are still looking for a reliable construction company, they are what you need!
+            p.quote-default__cite James Wilson
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('deborah-quagmire-120x120')
+            .quote-default__text: p.q Your versatility and experience with complex construction enabled your team to meet the aggressive schedule while achieving our high quality and safety standards. I appreciate all work you have completed on our project.
+            p.quote-default__cite Jane Smith
+
+  // Page Footer 
+  include ../sections/_footer-modern
+
+block modals
+  include ../includes/_modal-login
+  include ../includes/_modal-register

@@ -1,0 +1,142 @@
+/** @section Courses */
+
+.course {
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  transform: translateY(0);
+  transition: .3s ease-out transform;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    .course-body {
+      box-shadow: 0 0 23px 0 rgba($black, .22);
+    }
+  }
+}
+
+.course-img {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  img {
+    transform: scale(1);
+    transition: .3s ease-out all;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($primary, .4);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: .3s ease-out all;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.course-body {
+  padding: 24px 22px 25px;
+  background-color: $white;
+  box-shadow: 0 0 16px 0 rgba($black, .16);
+  transition: .3s ease-out box-shadow;
+}
+
+.course-body-meta {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  img {
+    border-radius: 50%;
+  }
+
+  a {
+    @include link($gray-600, $primary);
+  }
+
+}
+
+.course-price {
+  margin-left: 10px;
+  font-weight: 400;
+  color: $primary;
+
+  a {
+    @include link($primary, $gray-700);
+  }
+}
+
+.course-divider {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 0;
+  line-height: 0;
+  border-top: 1px solid rgba($gray-600, .2);
+}
+
+
+.course-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+.course-rating {
+
+  font-size: 0;
+  line-height: 0;
+
+  > li {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .icon {
+    font-size: 14px;
+    line-height: 1;
+    color: $primary;
+  }
+}
+
+.course-amount {
+  .icon {
+    font-size: 14px;
+    color: $gray-700;
+    vertical-align: baseline;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 5px;
+    @include link($gray-600, $primary);
+  }
+
+}
+
+* + .course-title { margin-top: 18px; }

@@ -1,0 +1,55 @@
+/*
+* Posts
+*/
+
+// 
+// Table of Contents:
+// 
+// Post Classic
+//
+//
+
+//
+// Post Classic
+//
+.post-classic {
+	max-width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post-classic-time {
+	color: $gray-300;
+}
+
+.post-classic-figure {
+	display: block;
+
+	img {
+		width: 100%;
+	}
+}
+
+* + .post-classic-figure { margin-top: 10px; }
+* + .post-classic-title { margin-top: 18px; }
+* + .post-classic-text { margin-top: 8px; }
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.post-classic {
+		text-align: left;
+	}
+
+	* + .post-classic-figure { margin-top: 14px; }
+	* + .post-classic-title { margin-top: 20px; }
+	* + .post-classic-text { margin-top: 14px; }
+}
+
+// Context styling
+%context-dark {
+
+	.post-classic {
+
+	}
+}

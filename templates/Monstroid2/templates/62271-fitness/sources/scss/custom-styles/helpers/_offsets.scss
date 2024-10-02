@@ -1,0 +1,282 @@
+/*
+*
+* Offsets
+* --------------------------------------------------
+*/
+
+// Element offset
+* + p { margin-top: 16px; }
+
+p + * { margin-top: 22px; }
+
+// Headings
+
+// Tags + Tags
+p + p { margin-top: 19px; }
+
+h2 + h6,
+h3 + h6 { margin-top: 23px; }
+h5 + h5 { margin-top: 40px; }
+img + h5 { margin-top: 30px; }
+h2 + h4.heading-thin { margin-top: 18px; }
+p + h5{ margin-top: 40px; }
+h4.heading-thin + p { margin-top: 20px; }
+
+
+// Tags + Classes
+
+h2 + .owl-carousel{ margin-top: 53px; }
+h6 + .small{ margin-top: 23px; }
+h5 + .list{ margin-top: 20px; }
+h5 + .list-sm { margin-top: 20px; }
+h5 + .list-tags{ margin-top: 20px; }
+h1 + .row { margin-top: 55px; }
+h5 + .list-terms-wrapper { margin-top: 25px; }
+.list-terms-wrapper + .row {
+  margin-top: 50px;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 75px;
+  }
+}
+
+// Classes
+* + .row { margin-top: 25px; }
+
+* + .list-xs { margin-top: 16px; }
+
+* + .posts-lists-masonry-3-cols{ margin-top: 60px; }
+
+* + .list-small { margin-top: 15px; }
+
+* + .list-md { margin-top: 20px; }
+
+* + .list-marked { margin-top: 15px; }
+
+* + .list-ordered { margin-top: 15px; }
+
+* + .pagination-classic{ margin-top: 30px; }
+
+* + .list-linked { margin-top: 23px; }
+
+* + .quote-centered { margin-top: 25px; }
+
+* + .group-lg { margin-top: 35px; }
+
+* + .figure { margin-top: 30px; }
+
+* + [class*=list-inline-] { margin-top: 38px; }
+
+* + .rd-mailform { margin-top: 38px; }
+
+* + .contact-info { margin-top: 30px; }
+
+* + .table-responsive { margin-top: 25px; }
+
+* + .blurb-minimal { margin-top: 40px; }
+
+* + .quote-default { margin-top: 40px; }
+
+// Classes + Tags
+.divider-sm + h2{ margin-top: 24px; }
+h5 + p,
+.heading-5 + p {
+  margin-top: 18px;
+}
+
+h6 + p,
+.heading-6 + p {
+  margin-top: 10px;
+}
+
+.small + h5 { margin-top: 22px; }
+
+.icon-xxl + h3,
+.icon-xxl + .heading-3 {
+  margin-top: 35px;
+}
+
+.divider-sm + *{
+  margin-top: 12px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 32px;
+  }
+}
+
+.divider-md + *{
+  margin-top: 10px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 32px;
+  }
+}
+
+// Classes + Classes
+.row + .row { margin-top: 40px; }
+
+h1 + h3,
+.heading-1 + h3,
+h1 + .heading-3,
+.heading-1 + .heading-3 {
+  margin-top: 20px;
+}
+
+h2 + h5,
+.heading-2 + h5,
+h2 + .heading-5,
+.heading-2 + .heading-5 {
+  margin-top: 15px;
+}
+
+h3 + .owl-carousel,
+.heading-3 + .owl-carousel {
+  margin-top: 35px;
+}
+
+.blurb-minimal + .blurb-minimal { margin-top: 35px; }
+
+.heading-1 + .heading-sup{
+  margin-top: 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -18px;
+  }
+}
+
+.post-event + .divider-wrap,
+.divider-wrap + .post-event {
+  @include media-breakpoint-up(md) {
+    margin-top: 55px;
+  }
+}
+
+.table-responsive + .row {
+  margin-top: 50px;
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+  .posts-lists-masonry-3-cols + .pagination-classic{ margin-top: -20px; }
+
+  * + .row { margin-top: 35px; }
+}
+
+// Media offsets
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+  * + p { margin-top: 22px; }
+  * + .quote-centered { margin-top: 50px; }
+  * + .figure { margin-top: 40px; }
+  * + .group-lg { margin-top: 50px; }
+  h4.heading-thin + p { margin-top: 40px; }
+  * + .pagination-classic{ margin-top: 50px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .quote-default { margin-top: 65px; }
+  .row + .row { margin-top: 60px; }
+}
+
+html .page {
+  * + .offset-top-1 {
+    margin-top: 35px;
+  }
+}
+
+// Range spacing
+// -------------------------------
+html {
+  .row-10 {
+    @include grid-offset(10px);
+  }
+
+  .row-20 {
+    @include grid-offset(20px);
+  }
+
+  .row-30 {
+    @include grid-offset(30px);
+  }
+
+  .row-both-30 {
+    margin-left: -15px;
+    margin-right: -15px;
+    @include grid-offset(30px);
+
+    > [class*='cell'] {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .row-50 {
+    @include grid-offset(50px);
+  }
+
+  .row-60 {
+    @include grid-offset(50px);
+  }
+
+  .row-70 {
+    @include grid-offset(50px);
+  }
+
+  @include media-breakpoint-up(md) {
+    .row-60 {
+      @include grid-offset(60px);
+    }
+    .row-70 {
+      @include grid-offset(70px);
+    }
+
+    .row-md-75 {
+      @include grid-offset(75px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .row-lg-90 {
+      @include grid-offset(90px);
+    }
+  }
+
+  @media (min-width: 1200px) and (min-height: $screen-height-desktop) {
+    .row-70 {
+      @include grid-offset(70px);
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .row-xxl-50 {
+      @include grid-offset(50px);
+    }
+
+    .row-xxl-both-50 {
+      margin-left: -50px;
+      margin-right: -50px;
+      @include grid-offset(50px);
+
+      > [class*='cell'] {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(xl) {
+    .row-xl-100 {
+      @include grid-offset(100px);
+    }
+
+    .row-xl-120 {
+      @include grid-offset(120px);
+    }
+  }
+}
+
+// Insets
+// -------------------------

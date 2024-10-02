@@ -1,0 +1,156 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-quote-centered
+include ../components/service
+
+block page
+	// Page Header
+	include ../sections/_header
+	='\n'
+	
+	// Intro
+	section.section.section-xl.bg-secondary
+		.container
+			.row.row-30
+				.col-lg-6.offset-lg-1.col-md-6
+					h1 Leading Exterior Design Agency
+					.offset-left-xl-110.offset-top-22
+						p Welcome to Pland, the #1 exterior design agency in the US creating comfortable spaces since 2005.
+						a.button.button-dot( href=links.about ) Read more
+				.col-lg-5.col-md-6
+					.hero-image
+						+img( 'home-01-500x687' )
+	='\n'
+	
+	// Services
+	section.section.section-lg.bg-transparent.section-services
+		.container
+			.row.row-fix.justify-content-lg-center
+				.col-lg-10
+					h6 Services
+					.row.row-20.align-items-center
+						.col-md-6
+							h2.text-primary Quality exterior design solutions
+						.col-md-6
+							p.box-440 At Pland, we provide a wide variety of exterior design services that make your home or office look spectacular. Here are the most popular services our team offers on a regular basis.
+					.row.row-50
+						.col-md-4
+							+service({
+								number: '01',
+								title:  'Decorating',
+								text:   'Our decorating & painting services will help you transform your house and protect it against weather.',
+								img:    'home-02-280x367'
+							}).service-1
+						.col-md-4
+							+service({
+								number: '02',
+								title:  'Garden design',
+								text:   'We design custom-made gardens and outdoor spaces that work for you, your family, and your lifestyle.',
+								img:    'home-03-280x450'
+							}).service-2
+						.col-md-4
+							+service({
+								number: '03',
+								title:  'Project planning',
+								text:   'You can fully rely on our professional project planning services that guarantee the best results.',
+								img:    'home-04-280x367'
+							}).service-3
+	='\n'
+	
+	// About us
+	section.section.section-lg.bg-secondary
+		.container
+			.row.row-fix.justify-content-lg-center
+				.col-lg-10
+					h6 About us
+					.row.row-20
+						.col-md-6
+							h2.box-440 Delivering impressive exteriors
+						.col-md-6
+							h4 Founded in 2005, we deliver the most creative exterior design solutions. We always aim to create cozy exteriors.
+							p Pland is the full service exterior design firm. We believe that first impressions start at the curb. Our team and associates seamlessly blend outdoor living spaces to flow and function in conjunction with their interiors.
+							p Our systematic approach allows us to create beautiful properties while adhering to timelines and budgeting. We take on all kinds of projects regardless of their size.
+							a.button.button-dot( href=links.about ) Read more
+	='\n'
+	
+	// Our projects
+	section.section.section-lg.bg-transparent
+		.container
+			.row
+				.col-lg-5.offset-xl-1
+					h6 our projects
+					h2.text-primary Splendid exterior design for everyone
+			.row.row-30.align-items-center
+				.col-xl-5.offset-xl-1.col-md-6
+					.project-figure-custom
+						+img('home-05-875x530')
+				.col-xl-5.col-md-6
+					.project
+						h3.project-title 1049 Ridge Road
+						p.project-text One of our recent projects includes traditional exterior design style combined with innovative approach to decorating solutions.
+						ul.project-description-list
+							li.project-description-item
+								span.project-description-title Area
+								span.project-description-text 2.474 acres
+							li.project-description-item
+								span.project-description-title Contractor
+								span.project-description-text ADR projects
+							li.project-description-item
+								span.project-description-title Architect
+								span.project-description-text George Smith
+			.row.row-30.align-items-center.flex-md-row-reverse
+				.col-xl-5.offset-xl-1.col-md-6
+					+img('home-06-500x530')
+				.col-xl-5.col-md-6
+					.project
+						h3.project-title 2198 Edgewood Lane
+						p.project-text This is a project we did for a small residential house in San Francisco, CA. It included landscape design services as well as painting & decorating.
+						ul.project-description-list
+							li.project-description-item
+								span.project-description-title Area
+								span.project-description-text 2.571 acres
+							li.project-description-item
+								span.project-description-title Contractor
+								span.project-description-text Exaura
+							li.project-description-item
+								span.project-description-title Architect
+								span.project-description-text Adam Peterson
+			.row.row-30.align-items-center
+				.col-xl-5.offset-xl-1.col-md-6
+					+img('home-07-500x530')
+				.col-xl-5.col-md-6
+					.project
+						h3.project-title 3795  Old House Drive
+						p.project-text For this award-winning projects of Pland, our team decided to completely revamp the exterior to achieve old-fashioned style that fits the building.
+						ul.project-description-list
+							li.project-description-item
+								span.project-description-title Area
+								span.project-description-text 2.123 acres
+							li.project-description-item
+								span.project-description-title Contractor
+								span.project-description-text Constructor
+							li.project-description-item
+								span.project-description-title Architect
+								span.project-description-text Emma Wilson
+				
+			.row.justify-content-center
+				.col-auto
+					a.button.button-dot( href='portfolio.html' ) More projects
+	='\n'
+	
+	// Testimonials
+	+parallax({ img: 'home-08-1920x800' }).context-dark.section-md
+		.container
+			.row.justify-content-center
+				.col-xl-8.col-lg-10
+					+quote-centered({
+						text: 'The team of Pland is highly professional, friendly, hard-working, and neat. Their designers and architects listened and did everything we asked and took care of all the details down to the smallest item.',
+						cite: "Edward Smith"
+					})
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer

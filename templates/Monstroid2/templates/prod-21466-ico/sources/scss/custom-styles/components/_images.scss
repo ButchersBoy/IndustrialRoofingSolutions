@@ -1,0 +1,94 @@
+/** @section Images */
+
+// Standard img style
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+
+
+//
+// Image Styles
+//
+
+// Image Style 1
+.img-style-1 {
+	position: relative;
+
+	img {
+		width: 100%;
+	}
+
+	&::before {
+		position: absolute;
+		top: 18%;
+		left: 41%;
+		content: '';
+		width: 4.5%;
+		height: 6.9%;
+		background: url("../images/coin-32x36.png");
+		background-size: cover;
+		animation: coinY 2s infinite linear;
+		pointer-events: none;
+	}
+	
+	&::after {
+		position: absolute;
+		top: 11.4%;
+		left: 38%;
+		content: '';
+		width: 9.93%;
+		height: 19.96%;
+		background: url("../images/image-4-71x104.png");
+		background-size: cover;
+		pointer-events: none;
+	}
+}
+
+@keyframes coinY{
+	0% {
+		transform: none;
+	}
+
+	25% {
+		transform: translate3d(0, -40%, 0);
+	}
+
+	50% {
+		transform: none;
+	}
+
+	75% {
+		transform: translate3d(0, 60%, 0);
+	}
+}
+
+// Image Style 2
+.img-style-2 {
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-left: -300px;
+	}
+
+	// Extra large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-left: -70px;
+	} 
+}
+
+// Image Style 3
+.img-style-3 {
+	margin-left: 25px;
+
+	// Mega large ≥1600px
+	@include media-breakpoint-up(xxl) {
+		margin-right: -170px;
+	}
+}

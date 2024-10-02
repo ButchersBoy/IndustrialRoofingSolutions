@@ -1,0 +1,68 @@
+//events
+//
+
+.post-event {
+  .button-lg {
+    padding-left: 38px;
+    padding-right: 38px;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+
+.post-event-body {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    .button-lg {
+      align-self: flex-start;
+    }
+    .button-link {
+      margin-top: auto;
+      align-self: flex-end;
+      
+      .ie-10 &,
+      .ie-11 &,
+      .ie-edge & {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.events-detail {
+  address {
+    font-size: 12px;
+    font-style: italic;
+  }
+  * + & {
+    margin-top: 5px;
+  }
+}
+
+
+//day event
+//
+
+.events-single-time {
+  display: block;
+  color: $primary;
+
+  * + & {
+    margin-top: 25px;
+  }
+}
+
+.post-event-single-body {
+  * + & {
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      margin-top: 50px;
+    }
+  }
+
+  & + * {
+    margin-top: 40px;
+  }
+}

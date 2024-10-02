@@ -1,0 +1,130 @@
+/** @section Panel custom */
+
+// Panel groups
+.card-group-custom {
+	margin-bottom: 0;
+
+	.card-header + .collapse > .card-body,
+	.card-header + .collapse > .list-group {
+		border-top: 0;
+	}
+}
+
+.card-custom {
+	display: block;
+	margin: 0;
+	background: inherit;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: left;
+
+	a {
+		display: block;
+	}
+
+	// Panel heading
+	.card-header {
+		padding: 0;
+		border-bottom: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		background-color: transparent;
+	}
+
+	// Panel contents
+	.card-body {
+		padding: 0;
+		border: 0;
+	}
+
+	.card-title {
+		margin-bottom: 0;
+	}
+}
+// Panel corporate
+.card-corporate {
+	padding: 30px * $lg-multiplier 0;
+	text-align: left;
+	border-bottom: 1px solid $gray-400;
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	.card-title a {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		color: $link-color;
+
+		// Collapsed state
+		&.collapsed {
+			color: $headings-color;
+
+			&:hover {
+				color: $link-color;
+			}
+
+			.card-arrow {
+				transform: rotateX( 0deg );
+
+				&::before {
+					content: '\f504';
+				}
+			}
+		}
+	}
+
+	.card-arrow {
+		display: inline-block;
+		margin-left: 40px * $xs-multiplier;
+		transition: .3s transform;
+
+		&::before {
+			content: '\f465';
+		}
+	}
+
+	.card-body {
+		padding-top: 19px * $xs-multiplier;
+	}
+}
+
+* + .card-group-corporate { margin-top: 60px * $xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	.card-corporate {
+		padding: 30px * $lg-multiplier 0;
+
+		.card-body {
+			padding-top: 19px * $lg-multiplier;
+		}
+
+		.card-arrow {
+			margin-left: 40px * $lg-multiplier;
+		}
+	}
+
+	* + .card-group-corporate { margin-top: 60px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.card-corporate {
+		padding: 30px 0;
+
+		.card-body {
+			padding-top: 19px;
+		}
+
+		.card-arrow {
+			margin-left: 40px;
+		}
+	}
+
+	* + .card-group-corporate { margin-top: 60px }
+}

@@ -1,0 +1,5 @@
+mixin service-default(obj)
+  .services
+    span.icon.icon-xl.icon-primary( class= obj.icon )
+    h4.services-title: a(href='#')= obj.title
+    p.services-text= obj.text

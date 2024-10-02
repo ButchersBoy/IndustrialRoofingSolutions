@@ -1,0 +1,121 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Reservation'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-sm.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-lg-10
+          h1 Table Reservation
+          h5 Resto Restaurant is the place for any food-accompanied occasion!
+          hr.divider-minimal
+          p Be it a business meeting lunch, a family birthday dinner, anniversary or a proposal romantic dinner or any other event... We will make sure the atmosphere and dishes do the justice!
+          
+  section.section-sm.bg-default.text-center.plan-reservation-box
+    .container
+      h1 Choose seats on the floor plan
+      .row.row-50.row-md-75.justify-content-between
+        .col-sm-2.col-xl-3.text-md-left
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-1-142x184')
+            span 1
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-10-183x184')
+            span 10
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-11-183x184')
+            span 11
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-12-183x184')
+            span 12
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-13-183x184')
+            span 13
+          
+      .row.row-50.row-md-75.align-items-md-center
+        .col-sm-2
+          .row.row-20.row-md-75.text-md-left
+            .col-sm-12
+              .plan-reservation-inner.plan-reservation-active
+                +png('table-2-142x184')
+                span.icon.icon-white.linear-icon-check
+            .col-sm-12
+              a(href='table-reservation.html').plan-reservation-inner
+                +png('table-3-142x184')
+                span 3
+        .col-sm-10.text-md-right
+          a(href='table-reservation.html').plan-reservation-inner.plan-reservation-inner__custom-1
+            +png('table-14-1004x335')
+          
+      .row.row-50.row-md-75.justify-content-between
+        .col-sm-2.text-md-left
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-4-142x184')
+            span 4
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-5-142x184')
+            span 5
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-6-142x184')
+            span 6
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-7-142x184')
+            span 7
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-8-142x184')
+            span 8
+        .col-sm-2
+          a(href='table-reservation.html').plan-reservation-inner
+            +png('table-9-142x184')
+            span 9
+
+  section.section-sm.bg-default.text-center
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-8
+          h5 Or send us email request
+          h1 Reservation
+          hr.divider-minimal
+          p We are always ready to meet all your needs and requirements during the night time. Please call #[a(href='callto:#') 555.329.0632] or fill out the contact form and we will call back to you ASAP.
+          
+          // RD Mailform
+          form.rd-mailform.text-center(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required' placeholder='Your name')
+              label.form-label(for="contact-name")
+
+            .form-wrap
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric' placeholder='Your phone')
+              label.form-label(for="contact-phone")
+
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required" placeholder='Your e-mail')
+              label.form-label(for="contact-email")
+
+            button(type="submit").button.button-gray-light-outline: span Submit
+  section.section-sm.bg-default
+  // Page Footer
+  include ../sections/_footer-minimal

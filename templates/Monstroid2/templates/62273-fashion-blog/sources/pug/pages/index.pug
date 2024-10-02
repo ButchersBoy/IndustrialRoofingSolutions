@@ -1,0 +1,337 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-post-fashion
+include ../elements/_ui-pagination-classic
+
+block variables
+	- var activeIndex = 0
+	- var footerLink = true
+	- var pageName = 'Home Default'
+
+block page
+	// Page Header
+	header.page-header
+		// RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-sidebar_reverse.rd-navbar_inverse(data-layout='rd-navbar-fixed',
+			data-sm-layout='rd-navbar-fixed',
+			data-sm-device-layout='rd-navbar-fixed',
+			data-md-layout='rd-navbar-fixed',
+			data-md-device-layout='rd-navbar-fixed',
+			data-lg-layout='rd-navbar-sidebar',
+			data-lg-device-layout='rd-navbar-fixed',
+			data-xl-device-layout='rd-navbar-sidebar',
+			data-xl-layout='rd-navbar-sidebar',
+			data-xxl-device-layout='rd-navbar-sidebar',
+			data-xxl-layout='rd-navbar-sidebar',
+			data-stick-up-clone='false',
+			data-sm-stick-up='true'
+			data-md-stick-up='true'
+			data-lg-stick-up='true',
+			data-xl-stick-up='true',
+			data-xxl-stick-up='true',
+			data-lg-stick-up-offset='50px',
+			data-xl-stick-up-offset='50px',
+			data-xxl-stick-up-offset='50px',
+			data-body-class='rd-navbar-absolute',
+			data-md-hover-on='false',
+			data-lg-hover-on='false')
+
+				.rd-navbar-inner.rd-navbar-search-wrap.rd-navbar-search-collapsable-wrap
+					// RD Navbar Panel
+					.rd-navbar-panel.rd-navbar-search_not-collapsable
+						.rd-navbar-panel__aside
+							button.rd-navbar-toggle.rd-navbar-search_collapsable(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+						.rd-navbar-panel__main.rd-navbar-search_collapsable
+							// RD Navbar Brand
+							.rd-navbar-brand
+								a.brand-name(href='index.html')
+									+png(logoInverse2)
+					// RD Navbar Nav
+					.rd-navbar-nav-wrap
+						include ../includes/_nav
+
+	include ../sections/_section-slider-modern
+
+	section.text-center
+		.container-fluid
+			.row.no-gutters
+				.col-lg-6
+					+post-fashion({
+						class: 'post-fashion-style-big',
+						img: 'index-1-960x724',
+						title: 'KYLIE JENNER\'S SEXY WRAP DRESS IS…',
+						time: 'Nov. 8, 2016',
+						author: 'by admin'
+					})
+				.col-lg-6.bg-accent
+					.row.no-gutters
+						.col-md-6
+							+post-fashion({
+								img: 'index-2-480x362',
+								title: 'THESE ARE MIRANDA KERR\'S FAVORITE…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+							+post-fashion({
+								img: 'index-3-480x362',
+								title: 'SIDE EFFECTS OF FAST FASHION CULTU…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+
+						.col-md-6
+							+post-fashion({
+								img: 'index-4-480x362',
+								title: 'SUIT OF THE WEEK: BRIGHT TOUCHES T…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+							+post-fashion({
+								img: 'index-5-480x362',
+								title: 'EXCLUSIVE: ASHLEY GRAHAM IS THE NE…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+
+	='\n'
+
+	section.section-lg.bg-default
+		.container
+			.row.isotope-wrap
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal.text-center
+						li: a.active(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Fashion
+						li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') Life Style
+
+					.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							+post-fashion({
+								class: 'post-fashion-style-medium',
+								img: 'index-isotope-1-652x492',
+								title: 'SKIN UNDERTONE HIDDEN SEC…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							+post-fashion({
+								class: 'post-fashion-style-medium',
+								img: 'index-isotope-2-652x492',
+								title: 'THURSDAY’S WORKWEAR REPOR…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-3-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) SIDE EFFECTS OF FAST FASH…
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-4-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) BEST MAKEUP ARTISTS ADVIS…
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-5-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) KYLIE JENNER'S SEXY WRAP…
+						.col-12.col-md-6.isotope-item(data-filter='Category 1')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-6-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) 11 FASHION TIPS TO FLATTE…
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							+post-fashion({
+								class: 'post-fashion-style-medium',
+								img: 'index-isotope-7-652x492',
+								title: 'SASHA AND MALIA OBAMA\'S S…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							+post-fashion({
+								class: 'post-fashion-style-medium',
+								img: 'index-isotope-8-652x492',
+								title: 'THESE ARE MIRANDA KERR\'S…',
+								time: 'Nov. 8, 2016',
+								author: 'by admin'
+							})
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-9-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) SELENA GOMEZ MAKES LEGGIN…
+
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-10-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) SUIT OF THE WEEK: BRIGHT…
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-11-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) WEDNESDAY’S WORKWEAR REPO…
+						.col-12.col-md-6.isotope-item(data-filter='Category 2')
+							article.unit.flex-sm-row.unit-spacing-sm.post-classic__img-left
+								.unit-left
+									figure.figure-inline.text-center.text-sm-left
+										+jpg('index-isotope-12-301x226')
+								.unit-body.post-inline
+									.post-inline__header
+										.post-inline__header-meta
+											span.post-inline__time Jan.20, 2016
+											a(href=postLink).post-inline__author.meta-author by Brian
+										h5: a(href=postLink) EXCLUSIVE: ASHLEY GRAHAM…
+
+	='\n'
+
+
+	section.bg-default.section-md
+		include ../sections/_section-carousel-post
+	='\n'
+
+
+	section.bg-default.text-center.section-lg
+		.container
+			.row.row-60
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-1-418x315')
+						.post-classic-title
+							h5: a(href=postLink) KYLIE JENNER'S SEXY WRAP DRESS IS STILL AVAILABLE FOR UNDER $70
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-2-418x315')
+						.post-classic-title
+							h5: a(href=postLink) SKIN UNDERTONE HIDDEN SECRETS: WHY IT MATTERS FOR HOW THE MAKEUP LOOKS ON YOU
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-3-418x315')
+						.post-classic-title
+							h5: a(href=postLink) THURSDAY’S WORKWEAR REPORT: SILK BLEND CARDIGAN
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-4-418x315')
+						.post-classic-title
+							h5: a(href=postLink) COFFEE BREAK: KNOTTED CASHMERE HEMMED RUANA
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-5-418x315')
+						.post-classic-title
+							h5: a(href=postLink) BEST MAKEUP ARTISTS ADVISE ON WHICH "RED" IS A "GOOD RED" FOR YOUR LIPSTICK
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal.thumbnail-classic
+
+						+jpg('post-minimal-6-418x315')
+						.post-classic-title
+							h5: a(href=postLink) SASHA AND MALIA OBAMA'S STYLE EVOLUTION
+
+						.post-meta
+							.post-inline__header-meta
+								a(href=postLink): time(datetime='2017') Jan.20, 2016
+								a(href=postLink) by Brian Williamson
+
+				.col-sm-12
+					+pagination-classic(1,
+					[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+					null,
+					{"title": "", "href": "#"}
+					)
+	='\n'
+
+	+divider
+
+	// Page Footer
+	include ../sections/_footer-minimal

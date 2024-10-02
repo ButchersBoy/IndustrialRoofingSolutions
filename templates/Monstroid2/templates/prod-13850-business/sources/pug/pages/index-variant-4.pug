@@ -1,0 +1,185 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+include ../elements/_ui-parallax
+include ../elements/_ui-card
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- var activeIndex = 0
+	- var pageName = 'Home'
+
+block page
+	include ../sections/_header-default-dark
+	include ../sections/_section-slider-personal
+
+	include ../sections/_section-cta-1
+		
+	section.section-md.bg-default#features
+		.container
+			.row.row-60
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'service-1-652x491',
+						title: 'Bootstrap Framework',
+						text: 'Quart is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'service-2-652x491',
+						title: 'Novi Builder',
+						text: 'Use our Novi Builder to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img: 'service-3-652x491',
+						title: 'Responsive & Retina Ready',
+						text: 'Quart looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+
+	// Impressive Features
+	section.section-md.bg-gray-lighter
+		.container
+			.row.justify-content-md-center.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-6
+					h4.heading-decorated About us
+					p Quart boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+					.row.row-30
+						.col-md-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-rocket
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Made for People
+									p Quart is built for real users that enjoy easy website development.
+						.col-md-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-equalizer
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Advanced UI Kit
+									p Quart comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+						.col-md-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-arrow-down-square
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Responsive & Retina Ready
+									p Quart looks great on any screen resolution and on any device due to its responsiveness.
+						.col-md-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-feather
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Built by professionals
+									p Quart is crafted by top industry leaders with love, care and customer needs in mind. 
+
+				.col-md-7.col-lg-5
+					+thumbnail-classic({
+						img: 'blog-image-1-886x668',
+						title: 'Who we are',
+						text: 'We are a team of passionate web designers and developers bringing you the best website templates.'
+					})
+					
+	='\n'
+	
+	// portfolio
+	include ../sections/_section-portfolio-2
+
+	section.section-lg.bg-gray-lighter.text-center
+		.container
+			.row.justify-content-xl-center.row-50
+				.col-xl-9
+					h4.heading-decorated Represent Your Staff
+					p Quart is perfect to display the members of your staff, team or working force. Within our template you can present your team members in the best well made and interface with special design and multiple styling options.
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('ken-ferguson-418x415')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('luis-maxwell-418x415')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('edward-elliot-418x315')
+
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items: [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+	
+
+	//cta
+	include ../sections/_section-cta-2
+
+	include ../sections/_section-posts
+
+	//testimonials
+	include ../sections/_section-testimonials
+
+
+	// Page Footer 
+	include ../sections/_footer-corporate-2
+		

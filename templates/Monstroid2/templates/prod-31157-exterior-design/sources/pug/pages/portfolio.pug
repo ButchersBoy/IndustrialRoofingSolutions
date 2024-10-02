@@ -1,0 +1,120 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+	- pageName = 'Portfolio'
+
+block page
+	// Page header
+	include ../sections/_header
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Portfolio
+			.isotope-wrap.row.row-70
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal
+						li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+						li: a(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Advantages
+						li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') Services
+					
+					.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-1-original',
+								img:         'services-1-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Advantages'],
+								title:       'Professional Staff',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-2-original',
+								img:         'services-2-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Advantages'],
+								title:       'High-Quality Materials',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-3-original',
+								img:         'services-3-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Services'],
+								title:       'Exterior Design',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-4-original',
+								img:         'services-4-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Services'],
+								title:       'Project Planning',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-5-original',
+								img:         'services-5-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Services'],
+								title:       'Exterior Renovation',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+				
+				
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'services-6-original',
+								img:         'services-6-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Services'],
+								title:       'Landscape Design',
+								desc:        'Creating stunning exteriors.',
+								icon_class2: 'linear-icon-plus'
+							})
+				
+				
+				.col-sm-12
+					+pagination-classic(1,
+					[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+					null,
+					{
+						"title": "",
+						"href":  "#"
+					}
+					)
+	
+	// Page Footer
+	include ../sections/_footer

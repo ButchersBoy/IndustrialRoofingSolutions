@@ -1,0 +1,140 @@
+//
+// Isotope
+// --------------------------------------------------
+$isotope-default-color: $body-color;
+$isotope-default-color-active: $black;
+$isotope-default-border: $isotope-default-color-active;
+$isotope-nav-spacing: 5px;
+
+$isotope-inverse-color: $white;
+$isotope-inverse-color-active: $black;
+$isotope-inverse-border: $isotope-inverse-color-active;
+
+[data-isotope-layout] {
+  z-index: 0;
+  display: block;
+  min-height: 160px;
+  transition: .4s all ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    margin-top: 15px;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    background-image: url("../images/isotope-loader.png");
+    background-position: -1152px 0;
+    animation: 0.7s sprite-animation steps(18) infinite;
+    transition: .4s all ease;
+    transform: translate(-50%, -50%);
+  }
+
+  [class*="col-"] {
+    display: block;
+    opacity: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: .1s opacity ease-in;
+    margin-top: 30px;
+  }
+  @include media-breakpoint-up(md) {
+    [class*="col-"] {
+      margin-top: 50px;
+    }
+  }
+
+  &.isotope--loaded {
+    [class*="col-"] {
+      opacity: 1;
+    }
+
+    &:after {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+[data-x-mode='true'] {
+  [data-isotope-layout] {
+    [class*="col-"] {
+      opacity: 1;
+    }
+
+    &:after {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.isotope-range-default {
+  @include grid-offset(30px);
+}
+
+.isotope-wrap {
+  * + .isotope {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-up(md) {
+    * + .isotope {
+      margin-top: 45px;
+    }
+  }
+}
+
+// Isotope defaults
+.isotope-filters {
+  $value: 10px;
+
+  > li {
+    font-family: $font-family-sans-serif-2;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  @include media-breakpoint-up(lg) {
+    > li a {
+      &,
+      &:active,
+      &:focus {
+        color: $isotope-default-color;
+      }
+
+      &:hover,
+      &.active {
+        color: $isotope-default-color-active;
+      }
+    }
+
+    .isotope-filters-trigger {
+      display: none;
+    }
+  }
+}
+
+* + .isotope-wrap {
+  margin-top: 50px;
+  @include media-breakpoint-up(xl) {
+    margin-top: 60px;
+  }
+}
+
+.isotope-filters-toggle {
+  display: block;
+  border: 0;
+  outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.isotope-item {
+  width: 100%;
+}

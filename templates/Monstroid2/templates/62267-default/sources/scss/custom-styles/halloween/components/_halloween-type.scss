@@ -1,0 +1,136 @@
+/** @section Typography */
+
+// Headings
+.halloween-section {
+	font-size: $halloween-font-size-body;
+	line-height: $halloween-line-height-base;
+	font-weight: $halloween-font-weight-base;
+	color: $halloween-body-color;
+
+	#{headings()} {
+		margin-bottom: 0;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: $halloween;
+			}
+		}
+	}
+
+	h1, .h1 {
+		font-weight: 700;
+		font-size: $halloween-font-size-body * 2.2;
+		line-height: 1.2;
+
+		@include media-breakpoint-up( sm ) {
+			font-size: $halloween-font-size-body * 2.6;
+			line-height: $halloween-h1-line-height;
+		}
+
+		@include media-breakpoint-up( md ) {
+			font-size: $halloween-h1-font-size * .65;
+		}
+
+		@include media-breakpoint-up( lg ) {
+			font-size: $halloween-h1-font-size * .8;
+		}
+
+		@include media-breakpoint-up( xl ) {
+			font-size: $halloween-h1-font-size;
+		}
+	}
+
+	h2, .h2 {
+		font-weight: bold;
+		font-size: $halloween-font-size-body * 2;
+		line-height: 1.2;
+
+		@include media-breakpoint-up( lg ) {
+			font-size: $halloween-h2-font-size * .84;
+			line-height: $halloween-h2-line-height;
+		}
+
+		@include media-breakpoint-up( xxl ) {
+			font-size: $halloween-h2-font-size;
+		}
+	}
+
+	h3, .h3 {
+		font-size: $halloween-font-size-body * 1.6;
+		line-height: 1.25;
+
+		@include media-breakpoint-up( xl ) {
+			font-size: $halloween-h3-font-size;
+			line-height: $halloween-h3-line-height;
+		}
+	}
+
+	h4, .h4 {
+		font-weight: 400;
+		font-size: $halloween-font-size-body * 1.4;
+		line-height: $halloween-h4-line-height;
+		text-transform: uppercase;
+
+		@include media-breakpoint-up( xl ) {
+			font-size: $halloween-h4-font-size;
+		}
+	}
+
+	h5, .h5 {
+		font-size: $halloween-font-size-body * 1.2;
+		line-height: 1.35;
+
+		@include media-breakpoint-up( xl ) {
+			font-size: $halloween-h5-font-size;
+			line-height: $halloween-h5-line-height;
+		}
+	}
+
+	h6, .h6 {
+		font-weight: 500;
+		font-size: $halloween-h6-font-size;
+		line-height: $halloween-h6-line-height;
+	}
+
+	.text-custom {
+		font-weight: 700;
+		font-size: 46px;
+		line-height: .9;
+		text-transform: uppercase;
+
+		span {
+			font-size: .87em;
+		}
+	}
+
+	// Emphasis
+	small,
+	.small {
+		display: block;
+		font-size: $halloween-font-size-sm;
+		line-height: $halloween-line-height-sm;
+	}
+
+	// Big text
+	.big {
+		font-size: $halloween-font-size-lg;
+		line-height: $halloween-line-height-lg;
+	}
+
+	// Links
+	a {
+		color: $halloween;
+
+		&:hover,
+		&:focus {
+			color: $halloween-dark;
+		}
+	}
+
+	// Text styling
+	.text-halloween {
+		color: $halloween;
+	}
+}

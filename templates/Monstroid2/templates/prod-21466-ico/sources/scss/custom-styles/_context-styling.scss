@@ -1,0 +1,39 @@
+/** @section Context Styles */
+%context-dark {
+	&,
+	#{headings()} {
+		color: $body-color;
+	}
+}
+
+%context-light {
+	color: $gray-4;
+
+	#{headings()} {
+		color: $black;
+	}
+
+	.button-default-outline {
+
+		&,
+		&:focus {
+			color: $secondary;
+			border-color: $gray-200;
+		}
+
+		&:hover,
+		&:active,
+		&.active {
+			color: $secondary;
+			border-color: $secondary;
+		}
+	}
+
+	.button-primary-2.button-isi,
+	.button-primary.button-isi {
+		&:hover {
+			color: $black;
+			border-color: $black;
+		}
+	}
+}

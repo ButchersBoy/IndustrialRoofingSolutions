@@ -1,0 +1,37 @@
+- var navbarTexts = true
+
+header.page-header
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar_creative(
+			data-layout=            'rd-navbar-fixed',
+			data-sm-layout=         'rd-navbar-fixed',
+			data-md-layout=         'rd-navbar-fixed',
+			data-lg-layout=         'rd-navbar-fixed',
+			data-xl-layout=         'rd-navbar-static',
+			data-xxl-layout=        'rd-navbar-static',
+		
+			data-sm-device-layout=  'rd-navbar-fixed',
+			data-md-device-layout=  'rd-navbar-fixed',
+			data-lg-device-layout=  'rd-navbar-fixed',
+			data-xl-device-layout=  'rd-navbar-static',
+			data-xxl-device-layout= 'rd-navbar-static',
+			
+			data-body-class='rd-navbar_creative'
+		)
+			include ../includes/_navbar-default-top-panel
+			
+			.rd-navbar-inner
+				// RD Navbar Panel
+				.rd-navbar-panel
+					button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+					
+					// RD Navbar Brand
+					.rd-navbar-brand
+						a.brand-name(href='index.html')
+							+png(logoDefault)
+				
+				// RD Navbar Nav
+				.rd-navbar-nav-wrap
+					include ../includes/_nav
+='\n'

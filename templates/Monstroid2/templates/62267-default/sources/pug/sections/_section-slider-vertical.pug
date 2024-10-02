@@ -1,0 +1,42 @@
+include ../elements/_ui-rd-video
+// Swiper
+section.section
+	.swiper-container.swiper-slider.swiper-vertcal(data-simulate-touch="false", data-loop='false', data-direction='vertical')
+		.swiper-wrapper
+			.swiper-slide.bg-gray-lighter(data-slide-bg='images/slider-slide-1-1920x980.jpg')
+				.swiper-slide-caption.text-center
+					.container
+						h1(data-caption-animate='fadeInUpSmall')
+							span Monstroid
+							sup.text-accent 2
+						h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') New HTML Templates Generation
+						.group-lg.group-middle
+							a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+							a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink target='_blank') Buy template
+			
+			.swiper-slide.bg-accent(data-slide-bg='images/slider-slide-2-1920x980.jpg')
+				.swiper-slide-caption
+					.container
+						h2(data-caption-animate='fadeInLeftSmall')
+							| The Power of Bootstrap
+							br.d-none.d-lg-block
+							|  Discover it with Monstroid²
+						a.button.button-gray-light-outline(data-caption-animate='fadeInLeftSmall', data-caption-delay='200', href=getTemplateLink target='_blank') Buy template
+			
+			.swiper-slide.swiper-slide_video.context-dark.video-bg-overlay
+				+vide-bg({
+					"src": "video/video-lg"
+				})
+					.swiper-slide-caption.text-center
+						.container
+							h2(data-caption-animate='fadeInUpSmall') Built by geeks & used by humans
+							h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Monstroid#[sup 2] aims to satisfy real needs of real projects. We've got a pack of tools for that.
+							.group-lg.group-middle
+								a.button.button-black(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href='#' + seeFeaturesLink, data-custom-scroll-to=seeFeaturesLink) See Features
+								a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink target='_blank') Buy template
+		
+		// Swiper Pagination
+		.swiper-pagination
+
+
+='\n'

@@ -1,0 +1,152 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Rooms'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Room
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-30.align-items-lg-center
+				.col-md-5
+					h2: a( href='single-room.html' ) Superior Room
+					.terms-table
+						.terms-table-title bed:
+						.terms-table-text twin bed
+						.terms-table-title capacity:
+						.terms-table-text 2 adults, 1 children
+						.terms-table-title room size:
+						.terms-table-text 30m²
+						.terms-table-title view:
+						.terms-table-text sea view
+						.terms-table-title recommend:
+						.terms-table-text great for business trip
+						.terms-table-footer
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $199
+					.row.row-30.row-offset-1.justify-content-center.justify-content-xs-start( data-lightgallery='group' )
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'home-01-200x200',
+								imgOriginal: 'home-01-1200x800',
+							})
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'home-02-200x200',
+								imgOriginal: 'home-02-1200x800',
+							})
+				.col-md-7
+					.img-responsive
+						+img( 'room-01-700x788' )
+
+	// Room
+	section.section.section-lg.section-half-bg.section-half-bg-right.text-center.text-md-start
+		.container
+			.row.row-30.align-items-lg-center.flex-md-row-reverse
+				.col-md-5
+					h2: a( href='single-room.html' ) Deluxe Room
+					.terms-table
+						.terms-table-title bed:
+						.terms-table-text king bed
+						.terms-table-title capacity:
+						.terms-table-text 3 adults, 1 children
+						.terms-table-title room size:
+						.terms-table-text 55m²
+						.terms-table-title view:
+						.terms-table-text city view
+						.terms-table-title recommend:
+						.terms-table-text great for families with children
+						.terms-table-footer
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $249
+					.row.row-30.row-offset-1.justify-content-center.justify-content-xs-start( data-lightgallery='group' )
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-03-200x200',
+								imgOriginal: 'room-03-original',
+							})
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-04-200x200',
+								imgOriginal: 'room-04-original',
+							})
+				.col-md-7
+					.img-responsive
+						+img( 'room-02-634x788' )
+
+	// Room
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-30.align-items-lg-center
+				.col-md-5
+					h2: a( href='single-room.html' ) Signature Room
+					.terms-table
+						.terms-table-title bed:
+						.terms-table-text king bed
+						.terms-table-title capacity:
+						.terms-table-text 3 adults, 2 children
+						.terms-table-title room size:
+						.terms-table-text 70m²
+						.terms-table-title view:
+						.terms-table-text city view
+						.terms-table-title recommend:
+						.terms-table-text great for a group of friends
+						.terms-table-footer
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $299
+					.row.row-30.row-offset-1.justify-content-center.justify-content-xs-start( data-lightgallery='group' )
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-05-200x200',
+								imgOriginal: 'room-05-original',
+							})
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-06-200x200',
+								imgOriginal: 'room-06-original',
+							})
+				.col-md-7
+					.img-responsive
+						+img( 'room-07-700x788' )
+
+	// Room
+	section.section.section-lg.section-half-bg.section-half-bg-right.text-center.text-md-start
+		.container
+			.row.row-30.align-items-lg-center.flex-md-row-reverse
+				.col-md-5
+					h2: a( href='single-room.html' ) Luxury Suite Room
+					.terms-table
+						.terms-table-title bed:
+						.terms-table-text king bed
+						.terms-table-title capacity:
+						.terms-table-text 4 adults, 2 children
+						.terms-table-title room size:
+						.terms-table-text 120m²
+						.terms-table-title view:
+						.terms-table-text city view
+						.terms-table-title recommend:
+						.terms-table-text great for families with children
+						.terms-table-footer
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $399
+					.row.row-30.row-offset-1.justify-content-center.justify-content-xs-start( data-lightgallery='group' )
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-09-200x200',
+								imgOriginal: 'room-09-original',
+							})
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'room-10-200x200',
+								imgOriginal: 'room-10-original',
+							})
+				.col-md-7
+					.img-responsive
+						+img( 'room-08-634x788' )
+
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

@@ -1,0 +1,77 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-card
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Circles Counter'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  .section-lg.bg-default
+    section.rd-parallax.bg-gray-dark.text-center
+      .rd-parallax-layer(data-speed='0.4', data-type='media', data-url='images/parallax-1.jpg')
+      .rd-parallax-layer(data-speed='0', data-type='html')
+        .section-lg.text-center
+          .container
+            .row.justify-content-sm-center.row-60
+              .col-md-4.col-xl-3
+                // Circle Progress Bar
+                .progress-bar-circle(data-value="0.45", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                  span
+                .progress-bar-circle-title Pixel perfect typography
+              .col-md-4.col-xl-3
+                // Circle Progress Bar
+                .progress-bar-circle(data-value="0.60", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                  span
+                .progress-bar-circle-title Interior Planning
+              .col-md-4.col-xl-3
+                // Circle Progress Bar
+                .progress-bar-circle(data-value="0.80", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#fff", data-size="141", data-thickness="5")
+                  span
+                .progress-bar-circle-title Made for community
+    ='\n'
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-sm-center.row-60
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.45", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#00bcd4", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Pixel perfect typography
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.60", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#00bcd4", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Interior Planning
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.80", data-gradient="#00bcd4, #00bcd4", data-empty-fill="#00bcd4", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Made for community
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

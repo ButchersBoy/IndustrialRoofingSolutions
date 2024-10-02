@@ -1,0 +1,62 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Contacts'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-5.col-lg-4
+          h3.heading-decorated Contacts
+          address.address.font-secondary 22 St. Black Road Raleigh, PA 34578
+          dl.list-terms-minimal.font-secondary
+            dt Tel
+            dd: a.link-default(href='callto:#') 555.123.2323
+
+          p Opening Hours
+          dl.list-terms-minimal
+            dt Monday – Friday
+            dd 9am-6pm
+          dl.list-terms-minimal
+            dt Saturday
+            dd 10am-4pm
+          dl.list-terms-minimal
+            dt Sunday
+            dd 10am-1pm
+
+          a.button.button-primary(href=appointmentLink) BOOK AN APPOINTMENT
+
+        .col-md-7.col-lg-8
+          h3.heading-decorated Get in Touch with Us
+          // RD Mailform
+          form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap.form-wrap_icon.linear-icon-man
+              input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              label.form-label(for="contact-name") Your name
+
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-telephone
+              input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+              label.form-label(for="contact-phone") Your phone
+
+            .form-wrap.form-wrap_icon.linear-icon-feather
+              textarea#contact-message.form-input(name="message" data-constraints="@Required")
+              label.form-label(for="contact-message") Your message
+
+            button(type="submit").button.button-primary send
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

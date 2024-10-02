@@ -1,0 +1,108 @@
+/*
+*
+* Pagination custom
+* --------------------------------------------------
+*/
+
+//== Pagination variables
+//
+
+$pagination-padding-vertical: 10px;
+$pagination-padding-horizontal: 10px;
+
+$pagination-font-size: 14px;
+$pagination-lh-size: 20px;
+$pagination-border-w: 2px;
+
+$pagination-color:                     $link-color;
+$pagination-bg:                        #fff;
+$pagination-border:                    #ddd;
+
+$pagination-hover-color:               #fff;
+$pagination-hover-bg:                  #ccc;
+$pagination-hover-border:              #ccc;
+
+$pagination-active-color:              #fff;
+$pagination-active-bg:                 $primary;
+$pagination-active-border:             $primary;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               #fff;
+$pagination-disabled-border:           #ddd;
+
+
+.pagination-custom {
+  font-size: 0;
+
+  > li {
+    margin: 0 3px;
+
+    &,
+    > a,
+    > span{
+      display: inline-block;
+    }
+
+    > a,
+    > span {
+      padding: $pagination-padding-vertical $pagination-padding-horizontal;
+      font-size: $pagination-font-size;
+      line-height: $pagination-lh-size;
+    }
+  }
+
+  > li > a,
+  > li > span {
+    min-width: $pagination-padding-vertical*2 + $pagination-border-w*2 + $pagination-lh-size;
+    font-weight: 700;
+    transition: .3s;
+    text-align: center;
+    background-color: transparent;
+    color: $pagination-color;
+    border: $pagination-border-w solid $pagination-border;
+    //box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.10);
+  }
+
+  > li:first-child,
+  > li:last-child {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    a, span {
+      span {
+        position: relative;
+        font-size: 11px;
+        line-height: 1;
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
+      box-shadow: none;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      color: $pagination-active-color;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border;
+      box-shadow: none;
+    }
+  }
+}
+

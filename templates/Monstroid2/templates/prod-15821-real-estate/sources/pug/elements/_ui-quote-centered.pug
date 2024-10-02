@@ -1,0 +1,9 @@
+mixin quote-centered(obj)
+  // Quote centered
+  .quote-centered
+    +quote-mark('quote-centered__mark')
+
+    .quote-centered__text
+      p.q=obj.text
+
+    p.quote-centered__cite=obj.cite

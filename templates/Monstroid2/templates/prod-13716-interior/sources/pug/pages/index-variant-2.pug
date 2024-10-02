@@ -1,0 +1,508 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-post-project
+include ../elements/_ui-pricing-table
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Home'
+
+block page
+  include ../sections/_header-transparent
+  include ../sections/_section-slider-commercial
+
+  section.section-xs.section-cta.bg-gray-dark.text-center.text-md-left
+    .container
+      .row.row-30.justify-content-between.align-items-center
+        .col-12.col-md-8
+          h4 Comfortable and affordable interior design projects
+        .col-12.col-md-4.text-md-right
+          a.button.button-primary(href='about.html') Read more
+
+  // About us
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row
+          .col-lg-5
+            h4.heading-decorated About us
+            p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any residential design project. Since day one, we have been delivering creative and cozy interiors to our clients worldwide.
+            .row.row-30
+              .col-md-6.col-lg-12.col-xl-6
+                // Blurb minimal
+                article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+                  .unit-left
+                    .blurb-minimal__icon: span.icon.linear-icon-menu3
+                  .unit-body
+                    p.blurb__title.heading-6: a(href=singleService) Award-winning designs
+                    p We have received numerous awards for our designs, concepts, and ideas.
+
+              .col-md-6.col-lg-12.col-xl-6
+                // Blurb minimal
+                article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+                  .unit-left
+                    .blurb-minimal__icon: span.icon.linear-icon-users2
+                  .unit-body
+                    p.blurb__title.heading-6: a(href=singleService) Expert team
+                    p We are a team of dedicated interior design and remodeling professionals.
+
+            .row.justify-content-md-center
+              .col-md-12
+                +progress-bar-linear({
+                  title: "Interior Design",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "49"
+                })
+
+                +progress-bar-linear({
+                  title: "Interior Planning",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "29"
+                })
+
+                +progress-bar-linear({
+                  title: "Consultations",
+                  progressStyle: "progress-linear-modern",
+                  valueTo: "86"
+                })
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+
+  // running projects
+  section.section-md.bg-default.text-center
+    .container
+      h4.heading-decorated What we work on
+      .row.row-50
+        .col-12
+          // Owl Carousel
+          .owl-carousel(data-autoplay='true', data-items='1',data-sm-items='2',data-lg-items='3', data-dots='true' data-nav='false' data-stage-padding='15', data-loop='true', data-margin='30', data-mouse-drag="false")
+            .owl-item
+              +post-project({
+                img: 'project-1-652x491',
+                original_img: 'project-1-652x491',
+                title: 'Offices',
+                text: 'Our design studio often deals with office remodeling and redesign. We can successfully transform your office into a visually attractive center of business activity.'
+              })
+
+            .owl-item
+              +post-project({
+                img: 'project-2-652x491',
+                original_img: 'project-2-652x491',
+                title: 'Living Rooms',
+                text: 'We will gladly create a new stunning interior design for your living room taking into account all your wishes and considerations to make it look even better.'
+              })
+
+            .owl-item
+              +post-project({
+                img: 'project-3-652x491',
+                original_img: 'project-3-652x491',
+                title: 'Studios',
+                text: "While not being limited by residential projects and office remodeling, we are also eager to work on designing studios and educational centers."
+              })
+
+            .owl-item
+              +post-project({
+                img: 'project-4-652x491',
+                original_img: 'project-4-652x491',
+                title: 'Terraces',
+                text: 'Terraces and porches can be described as both indoor and outdoor areas and our skills and professionalism allow us to work on their visual and functional improvement.'
+              })
+
+            .owl-item
+              +post-project({
+                img: 'project-5-652x491',
+                original_img: 'project-5-652x491',
+                title: 'Kitchens',
+                text: "Whether it is a part of a residential house or a restaurant, a nicely structured and well-designed kitchen is vital for better experience regardless of its size."
+              })
+
+            .owl-item
+              +post-project({
+                img: 'project-6-652x491',
+                original_img: 'project-6-652x491',
+                title: 'Guest rooms',
+                text: 'Looking for an idea to create a new or transform an old guest room? Trust our exceptionally skilled designers and architects if you are aiming for the best results.'
+              })
+
+
+  // Our Services
+  section.section-md.bg-gray-lighter.text-center
+    .container
+      h4.heading-decorated Our Services
+      .row.row-50.justify-content-md-center.justify-content-lg-start
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-pencil-ruler
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Interior Design
+              p We develop and implement better interior design concepts for you so that you and all your guests could enjoy the unique atmosphere of your home.  
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-users
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Space Planning
+              p We create better interior experiences through space planning services. They are vital for a successful interior design project of your home or office.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-wall
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Consultations
+              p Our specialists are ready to consult you on any interior design related topic. All you have to do is to contact us and we will organize a free consultation.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-apartment
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Feng Shui Design
+              p With years of experience, our experts can help you design your interior according to the ancient Feng Shui  philosophy while saving time.
+
+        .col-md-6.col-xl-4
+          // Blurb circle
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-home4
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Landscape Design
+              p Our designers will team with you to create your ideal landscape design plan. Their expert advice and solutions will deliver a plan to meet your needs.
+
+        .col-md-6.col-xl-4
+          // Blurb circle 
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-pencil-ruler2
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Decorative Services
+              p Our professional decorators will be happy to help you change your house’s inner look without spending too much money on interior design.
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-magic-wand
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Interior Architecture
+              p We believe that architecture should provide a seamless experience, from outside to inside. The starting point is to gain an understanding of a client’s needs and the way in which a room or sequence of spaces will be used. That’s exactly what our Interior Architecture service offers.
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-menu3
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Soft Furnishings
+              p Sometimes things just can’t be bought from the shops, and need to be handmade. That’s why our customers value us as a No. 1 soft furnishing supplier and manufacturer. We can give you any furniture and or soft furnishing you can imagine.
+
+        .col-md-6.col-lg-4
+          // Blurb minimal
+          article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+            .unit-left
+              .blurb-minimal__icon: span.icon.linear-icon-users2
+            .unit-body
+              p.blurb__title.heading-6: a(href=singleService) Lighting
+              p Molder’s experienced team of LIF qualified Lighting Designers use the latest lighting calculation and design software to provide you with a FREE comprehensive and complete lighting design proposal. We create dynamic and intelligent lighting designs for our customers.
+  ='\n'
+
+  //cta
+  include ../sections/_section-cta-2
+    
+  // Projects
+  section.section-lg.bg-default.text-center
+    .container
+      h4.heading-decorated Our Projects
+      .row.row-30
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Office Center
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-1-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Office Center
+                p We have recently finished a new project of redesigning an old building into an office center…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Art Gallery
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-2-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Art Gallery
+                p Smith’s Art Gallery offered us an opportunity to design a new interior for the oldest fine arts…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Museum
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-3-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Museum
+                p Two months ago we have finished remodeling of one of the history museums that included space…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Local café
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-4-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Local café
+                p This project was our first try to design something special for a local café. It eventually became…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Bus station
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-5-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Bus station
+                p Our designers did an amazing job on this project. It included a complete redesign of the interior for…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Residential house
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-6-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Residential house
+                p Residential interior design remains our specialization for more than 10 years and we have worked…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Penthouse
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-7-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Penthouse
+                p One of the unique projects we have ever done consisted of remodeling a penthouse of a top model…
+                a.button.button-link(href=projectCategory) VIEW MORE
+
+        .col-sm-6.col-lg-4.col-xl-3
+          // Thumb creative
+          .thumb-creative: .thumb-creative__inner
+            .thumb-creative__front
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6 Hotel
+
+            .thumb-creative__back
+              figure.thumb-creative__image-wrap
+                +jpg('project-8-480x361', 'thumb-creative__image')
+              .thumb-creative__content
+                h6.thumb-creative__title: a(href=projectCategory) Hotel
+                p Bryson Hotel ordered a complete refurbishing and space planning of their interior, We completed…
+                a.button.button-link(href=projectCategory) VIEW MORE
+                
+  
+  section.section-lg.bg-gray-lighter.text-center.text-md-left
+    .container
+      .row.row-50.justify-content-lg-center
+        .col-md-6.col-lg-4.col-xl-3
+          .pricing-table-wrap
+            .pricing-table-custom
+              h5 Available options
+              ul.list-xxs.small
+                li Interior Design
+                li Space Planning
+                li Landscape Design
+                li Additional Services
+
+        .col-md-6.col-lg-4.col-xl-3
+          +pricing-table({
+            class: 'pricing-table-label',
+            label: 'most popular',
+            title: 'Standard',
+            price: '$32.89'
+          })
+            ul.list
+              li
+                span Basic Remodeling
+              li 2D Plans
+              li: span.icon.icon-secondary-2.linear-icon-cross2
+              li Decorating 
+
+        .col-md-6.col-lg-4.col-xl-3
+          +pricing-table({
+            title: 'Business',
+            price: '$76.89 '
+          })
+            ul.list
+              li
+                span Office Redesign
+              li 3D Plans
+              li: span.icon.icon-primary.linear-icon-check
+              li Lighting
+
+        .col-md-6.col-lg-4.col-xl-3
+          +pricing-table({
+            title: 'Professional',
+            price: '$89.89'
+          })
+            ul.list
+              li
+                span Full Interior Refurbishing
+              li 3D Plans + Expert Advice
+              li: span.icon.icon-primary.linear-icon-check
+              li Landscape Design
+
+  // Meet Our Team
+  section.section-md.bg-default.text-center
+    .container
+      h4.heading-decorated Meet Our Team
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('calvin-fitzerald-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Calvin Fitgerald
+              p.thumb-flat__subtitle Founder, Managing Director
+              p Calvin brings 20 years of experience as an interior designer, architect, and manager to his role as Founder of our studio. Invested in the continued renewal of downtown of our city, Mr. Fitzgerald is an advocate for high-performance creative office and residential space and sustainable urban development. He is our #1 advisor when solving the most complex tasks.
+
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('taylor-wilson-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Taylor Wilson
+              p.thumb-flat__subtitle Senior Interior Designer
+              p For Taylor, good design is the result of curiosity, careful listening and asking far too many questions. He is driven to fully understand the needs, aspirations, and frustrations of clients and end users in order to create spaces where people truly want to be. After 16 years of design and project leadership experience, he is an expert in bringing a client’s ideas to life.
+
+        .col-md-6.col-lg-4
+          // Thumb flat
+          article.thumb-flat
+            +jpg('josh-wagner-418x315', 'thumb-flat__image')
+            .thumb-flat__body
+              p.heading-6: a(href='team-member-profile.html') Josh Wagner
+              p.thumb-flat__subtitle Lead Architect
+              p Josh is one of our lead specialists in remodeling and redesign of all kinds of spaces. A Registered Architect, he has led teams as project architect/project manager on a broad range of project types and sizes. Having joined us in 2000, Josh Wagner brings significant professional expertise to his role on the Interior Design firmwide Technical Committee.
+
+  // get a quote
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row.justify-content-end
+          .col-lg-5
+            h4.heading-decorated Get a Quote
+            // RD Mailform
+            form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                label.form-label(for="contact-name") Your name
+
+              .form-wrap
+                input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                label.form-label(for="contact-email") Your e-mail
+
+              .form-wrap
+                textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                label.form-label(for="contact-message") Your message
+
+              button(type="submit").button.button-primary send
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-1.jpg)')
+
+
+  include ../sections/_section-posts
+
+  //testimonials
+  section.section-lg.bg-image.context-dark.text-center(style='background-image: url(images/bg-image-2.jpg)')
+    .container
+      h4.heading-decorated WHAT PEOPLE SAY
+      // Owl Carousel
+      .owl-carousel(data-autoplay='true', data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true' data-nav='true')
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('deborah-quagmire-120x120')
+            .quote-default__text: p.q Since I’m not a real pro in web design, I love to use these ready-made and beautifully looking templates. They are available at very affordable prices and they save you a lot of time, and deliver from a lot of sweat and tears!
+            p.quote-default__cite Jane Smith
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('benedict-arnold-120x120')
+            .quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+            p.quote-default__cite James Wilson
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            .quote-default__text: p.q This studio’s professional guidance gave me results that far exceeded my expectations. My clients thoroughly enjoy the fun, relaxing ambiance that the interior design creates. Their amazement began at the opening and have not ceased yet.
+            p.quote-default__cite Kate McMillan
+  ='\n'
+  
+
+  // Page Footer 
+  include ../sections/_footer-minimal

@@ -1,0 +1,58 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Header default'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [['Headers', '#'], [pageName]]
+  })
+
+  section.section-xl.bg-default
+    .container
+      .row.row-50
+        .col-md-6
+          +jpg('about-1-652x492')
+        .col-md-6
+          h1 The Resto Restaurant
+          h5 The perfect place to enjoy the life and food.
+          hr.divider-minimal.divider__left
+          p
+            | Resto Restaurant & Bar is a traditional European cuisine venue, serving 
+            i the best dishes and drinks from across the range of European cuisines. 
+            | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience in a casual setting to guests from all walks of life. 
+            i Honest food and honest drinks set the foundation of our place's menu!
+
+          .group
+            figure.figure-inline
+              +png('about-2-123x124')
+            figure.figure-inline
+              +png('about-3-129x121')
+
+  section.section-xl.bg-default
+    .object-wrap
+      .section-xl-bottom
+        .container
+          .row
+            .col-lg-5
+              h1 Since 1982
+              h5 Resto is proud to be serving fine European dishes for more than 30 years!
+              hr.divider-minimal.divider__left
+              p
+                | It resonates very nice with the fact of how universally cozy and welcoming our atmosphere is. 
+                i All our customers say that when they eat at Resto, they feel like having a nice dinner at home. 
+                | These are sweet words, which just melt our hearts with joy!
+
+      .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/about-4-985x652.jpg)')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

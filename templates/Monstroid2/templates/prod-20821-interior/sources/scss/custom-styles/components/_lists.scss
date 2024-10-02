@@ -1,0 +1,276 @@
+/*
+* Lists
+*/
+
+/*
+* Vertical list
+*/
+.list {
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+.list-xs > li + li {
+	margin-top: 5px;
+}
+
+.list-sm > li + li {
+	margin-top: 10px;
+}
+
+.list-md > li + li {
+	margin-top: 18px;
+}
+
+.list-lg > li + li {
+	margin-top: 24px;
+}
+
+.list-xl > li + li {
+	margin-top: 30px;
+}
+
+@include media-breakpoint-up(md) {
+	.list-xl > li + li {
+		margin-top: 60px;
+	}
+}
+
+/*
+* List inline
+*/
+.list-inline {
+	> li {
+		display: inline-block;
+	}
+}
+
+html {
+	.list-inline-md {
+		@include spacing(20px, 8px);
+
+		@include media-breakpoint-up(lg) {
+			@include spacingX(44px);
+		}
+	}
+}
+
+/*
+* List terms
+*/
+.list-terms {
+	dt + dd {
+		margin-top: 5px;
+	}
+	dd + dt {
+		margin-top: 25px;
+	}
+}
+
+* + .list-terms {
+	margin-top: 25px;
+}
+
+/*
+* Index list
+*/
+.index-list {
+	counter-reset: li;
+
+	> li {
+		.list-index-counter {
+			&:before {
+				content: counter(li, decimal-leading-zero);
+				counter-increment: li;
+			}
+		}
+	}
+}
+
+/*
+* Marked list
+*/
+.list-marked {
+	padding-left: 25px;
+	text-align: left;
+
+	> li {
+		text-indent: -25px;
+		padding-left: 25px;
+		&::before {
+			position: relative;
+			display: inline-block;
+			left: 25px;
+			top: -1px;
+			min-width: 25px;
+			content: '\f105';
+			font: 400 14px/24px 'FontAwesome';
+			color: $gray-400;
+		}
+	}
+
+	> li + li {
+		margin-top: 4px;
+	}
+}
+
+* + .list-marked {
+	margin-top: 15px;
+}
+
+p + .list-marked {
+	margin-top: 10px;
+}
+
+/*
+* Ordered List
+*/
+.list-ordered {
+	counter-reset: li;
+	padding-left: 25px;
+	text-align: left;
+
+	> li {
+		position: relative;
+		padding-left: 25px;
+
+		&:before {
+			content: counter(li, decimal) '.';
+			counter-increment: li;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			color: $gray-400;
+		}
+	}
+
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+* + .list-ordered {
+	margin-top: 15px;
+}
+
+/*
+* Classic List
+*/
+.list-classic-wrap {
+	li + li {
+		margin-top: 46px;
+	}
+}
+
+.list-classic {
+
+	.unit-left {
+		position: relative;
+		width: 66px;
+		height: 66px;
+
+		&::before {
+			position: absolute;
+			left: 9px;
+			top: 2px;
+			font-weight: 600;
+		}
+	}
+
+	.icon {
+		position: absolute;
+		right: -9px;
+		bottom: -8px;
+	}
+}
+
+.list-classic-rectangle {
+
+	$thickness: 8px;
+	$long: 50%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: $thickness solid $primary;
+	border-top: 0;
+	border-left: 0;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		background-color: $primary;
+	}
+
+	&::before {
+		width: $long;
+		height: $thickness;
+		top: 0;
+		right: -$thickness/2;
+	}
+
+	&::after {
+		width: $thickness;
+		height: $long;
+		bottom: -$thickness/2;
+		left: 0;
+	}
+}
+
+/*
+* Decorative List
+*/
+* + .list-decorative {
+	margin-top: 37px;
+}
+
+.list-decorative {
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align-last: left;
+	@include groupY(17px);
+	li {
+		position: relative;
+		width: 100%;
+		max-width: 200px;
+		padding-left: 14px;
+		color: $white-7;
+
+		// Medium ≥768px
+		@include media-breakpoint-up(md) {
+			flex-basis: 33%;
+			width: 33%;
+			max-width: 33%;
+		}
+
+		// Extra large ≥1200px
+		@include media-breakpoint-up(xl) {
+			flex-basis: 26%;
+			width: 26%;
+			max-width: 26%;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			left: 0;
+			top: 40%;
+			transform: translate3d(0, -50%, 0);
+			border-style: solid;
+			border-width: 4px 0 4px 8px;
+			border-color: transparent transparent transparent $primary;
+		}
+	}
+}

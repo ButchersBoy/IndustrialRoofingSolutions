@@ -1,0 +1,53 @@
+/*
+*
+* Circle Progress Bars
+* --------------------------------------------------
+*/
+
+.progress-circle {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.2;
+}
+
+.progress-circle-block {
+	position: relative;
+}
+
+.progress-circle-bg {
+	fill: transparent;
+	stroke: $primary;
+	stroke-width: 1px;
+}
+
+.progress-circle-fg {
+	fill: transparent;
+	stroke: $primary;
+	stroke-width: 5px;
+}
+
+.progress-circle-counter {
+	position: absolute;
+	top: 50%;
+	left: 51%;
+	font-weight: 100;
+	font-size: 40px;
+	line-height: 40px;
+	transform: translate(-50%, -50%);
+	color: $black;
+
+	&::after {
+		content: "%";
+	}
+}
+
+.progress-bar-circle-title {
+	font-size: 24px;
+	font-weight: 300;
+	color: $black;
+	line-height: 1.4;
+
+	* + & {
+		margin-top: 10px;
+	}
+}

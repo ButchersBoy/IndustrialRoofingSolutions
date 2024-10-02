@@ -1,0 +1,35 @@
+// Post video
+article.post-classic.post-video
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postVideo) Meet Richard White
+		.post-meta
+			.group
+				a(href=postVideo): time(datetime='2017') Jan.20, 2016
+				a(href=postVideo).meta-author Brian Williamson
+
+	.entry-video.embed-responsive.embed-responsive-16by9
+		iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand...
+		.post-meta
+			.group
+				a.post-meta__comment(href=postVideo) 3 comment(s)
+				a(href=postVideo) Theme
+				+tag-list({
+					list_class: 'list-inline-tag',
+					href: postVideo,
+					items: [
+						"Style",
+						'Clean']
+				})
+
+		.post-classic-footer
+			ul.list-inline.list-inline-lg
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-facebook(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-twitter(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-google-plus(href='#')
+
+			a(href=postVideo).button.button-link Read More

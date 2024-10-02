@@ -1,0 +1,34 @@
+include ../elements/_ui-tag-list
+
+mixin shop-list(obj)
+  .product.product-list.unit.flex-md-row.unit-spacing-lg(class=obj.class)
+    .unit__left.product-img-wrap
+      +jpg(obj.img)
+      .product-label-wrap
+        span(class=obj.class_label)=obj.label_text
+    .unit__body.product-caption
+      +tag-list({
+        list_class: obj.tag_list_class,
+        href: "#",
+        items: obj.tag_list_items
+      })
+      h5.product-title: a(href=obj.href)=obj.title
+      p.product-price(class=obj.price_class)
+        each price in obj.prices
+          span= price
+      ul.rating-list
+        li: span.icon.linear-icon-star.icon-secondary-4
+        li: span.icon.linear-icon-star.icon-secondary-4
+        li: span.icon.linear-icon-star.icon-secondary-4
+        li: span.icon.linear-icon-star.icon-secondary-4
+        li: span.icon.linear-icon-star.icon-gray-4
+
+      p.product-text=obj.product_desc
+      a(href=obj.href class=obj.button_class).button.button-icon.button-icon-left
+        span.icon.icon-md(class=obj.button_icon_class)
+        span=obj.button_text
+
+      .product-icon-wrap
+        span.icon.icon-md(data-toggle='tooltip' data-original-title='Add to Wishlist')(class=obj.icon_class1)
+        span.icon.icon-md(data-toggle='tooltip' data-original-title='Add to Compare')(class=obj.icon_class2)
+

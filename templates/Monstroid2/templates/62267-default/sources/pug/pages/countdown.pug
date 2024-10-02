@@ -1,0 +1,37 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/countdown
+
+block variables
+	- pageName = 'Countdown'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	// Countdown
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			+countdown({ to: '2024-12-31' })
+	='\n'
+	
+	// Countdown
+	section.section.novi-bg.novi-bg-img.section-xxl.bg-accent.bg-image.bg-image-bottom.text-center(style='background-image: url(images/bg-image-1.jpg);')
+		.container
+			+countdown({ to: '2024-12-31' })
+	='\n'
+	
+	// Countdown
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			+countdown({ to: '2024-12-31' }).countdown-primary
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate
+

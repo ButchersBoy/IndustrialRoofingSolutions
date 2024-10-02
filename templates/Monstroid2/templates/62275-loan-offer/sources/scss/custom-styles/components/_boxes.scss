@@ -1,0 +1,45 @@
+//
+// Boxes
+// --------------------------------------------------
+.box-counter {
+  text-align: center;
+  color: $black;
+}
+
+.box-counter__icon {
+  font-size: 44px;
+  line-height: 1;
+  color: $primary;
+}
+
+.box-counter__title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.box-counter__wrap {
+  > * {
+    display: inline;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+}
+
+* + .box-counter__title {
+  margin-top: 10px;
+}
+
+* + .box-counter__wrap {
+  margin-top: 20px;
+}
+
+@include media-breakpoint-up(xl) {
+  .box-counter__title {
+    font-size: $h5-font-size;
+  }
+
+  * + .box-counter__wrap {
+    margin-top: 30px;
+  }
+}

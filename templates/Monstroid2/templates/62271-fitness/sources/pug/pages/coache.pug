@@ -1,0 +1,154 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Coach'
+
+block page
+  // Page header
+  header.page-header.section
+    include ../sections/_header-default
+
+  section.section.section-xl.bg-accent.context-dark.text-center.text-lg-left
+    .container
+      .row
+        .col-lg-4
+          +jpg('coach-single-1-348x348', 'img-circle')
+        .col-lg-8
+          hr.divider.divider-md.divider-left
+          h1 Steven Ayokee
+          p Coach Steven – Owner/Head Coach
+          ul.list-inline-sm.footer-minimal__list
+            li: a.icon.icon-circle.icon-white.icon-lg.fa-facebook(href='#')
+            li: a.icon.icon-circle.icon-white.icon-lg.fa-twitter(href='#')
+            li: a.icon.icon-circle.icon-white.icon-lg.fa-instagram(href='#')
+            li: a.icon.icon-circle.icon-white.icon-lg.fa-youtube(href='#')
+
+  section.section-lg.section.bg-default
+    .container
+      .row.row-50
+        .col-xl-4.col-md-6
+          h5 About
+          p.
+            12 Years ago I lost 80lbs with the help of a personal coach and it completely changed my way of life. Since then, it’s been my mission to influence other people to start taking CrossFit classes. To begin improving their health and strength the performance!
+            My belief is that if the workout is easy, it’s not a good workout then. A real workout should always be challenging and exhausting. I’ve always been known as one of the toughest coaches. With my end goal in mind, such severity is aimed to help you! Because this tough love will get you accomplishing something you thought you could never do.
+            That’s where the value of the CrossFit comes to. The process of getting closer to that goal is actually the least enjoyable experience…
+            But the first real results can bring tears of joy even to harsh, pumped men!
+            So keep in mind, that since the moment you walk into my GYM you become my client, whether you decide to join or not.
+        .col-xl-4.col-md-6
+          h5 Experience
+          ul.list-marked
+            li 13 Years of experience as a Personal Trainer and Group Training Coach
+            li CrossFit Level 1 Certified
+            li CrossFit Powerlifting Certified
+            li CrossFit Gymnastics Certified
+            li CrossFit Kettlebell Certified
+            li USAW Level 1 Certified Instructor
+            li NASM Corrective Exercise Certified Therapist
+            li NFPT Certified Personal Trainer
+            li APEX Certified Personal Trainer
+        .col-xl-4.col-lg-12
+          .row.row-50
+            .col-lg-6.col-xl-12
+              h5 Coach Schedule
+
+              .row
+                .col-lg-12.col-md-6
+                  .box
+                    h6
+                      a(href='schedule.html') CrossFit
+                    .box-inner
+                      p.box__left Friday
+                      p.box__right
+                        span.mdi.mdi-clock.icon
+                        | 09 AM. —  10 AM.
+                    .box-inner
+                      p.box__left Saturday
+                      p.box__right
+                        span.mdi.mdi-clock.icon
+                        | 12 PM. —  13 PM.
+                .col-lg-12.col-md-6
+                  .box.box-offset
+                    h6
+                      a(href='schedule.html') Personal Training
+                    .box-inner
+                      p.box__left Friday
+                      p.box__right
+                        span.mdi.mdi-clock.icon
+                        | 09 AM. —  10 AM.
+                    .box-inner
+                      p.box__left Saturday
+                      p.box__right
+                        span.mdi.mdi-clock.icon
+                        | 12 PM. —  13 PM.
+
+            .col-lg-6.col-xl-12
+              h5.text-center.text-lg-left Book an Appointment
+              include ../includes/_rd-calendar
+
+  include ../sections/_section-instagram
+
+  // Page Footer
+  include ../sections/_footer-minimal
+  // Modal
+  #appointment.modal.fade.text-left(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal')
+            span.icon.icon-md.linear-icon-cross
+          h5.modal-title Request Appointment
+        .modal-body
+          .group
+            span
+              span.icon.icon-md.icon-primary.linear-icon-calendar-full
+              | August 11, 2017
+            span
+              span.icon.icon-md.icon-primary.linear-icon-clock3
+              | 10:00 am – 12:00 am
+          div.meta-info
+            label.radio-inline
+              input(type='radio', name='optradio', value='login', checked='checked')
+              | I am a new customer
+          div
+            label.radio-inline
+              input(type='radio', name='optradio', value='register')
+              | I am a current customer
+          hr
+          .register-form
+            h5
+              | Registration:
+              span.text-primary *
+            p Your first name and an email address are required.
+            // Login form
+            form
+              .form-wrap
+                label.form-label(for='name-2') First Name
+                input#name-2.form-input(type='text', name='name', data-constraints='@Required')
+              .form-wrap
+                label.form-label(for='email') E-mail
+                input#email.form-input(type='email', name='email', data-constraints='@Email @Required')
+              .form-wrap
+                label.form-label(for='password-2') Password
+                input#password-2.form-input(type='password', name='password', data-constraints='@Required')
+              .group
+                button.button.button-sm.button-primary(type='submit') Book Appointment
+                button.button.button-sm.button-black(type='button', data-dismiss='modal') close
+          .login-form
+            h5 Login
+            // Login form
+            form
+              .form-wrap
+                label.form-label(for='name') Username or e-mail
+                input#name.form-input(type='text', name='name', data-constraints='@Required')
+              .form-wrap
+                label.form-label(for='password') Password
+                input#password.form-input(type='password', name='password', data-constraints='@Required')
+              .group
+                button.button.button-sm.button-primary(type='submit') Book Appointment
+                button.button.button-sm.button-black(type='button', data-dismiss='modal') close

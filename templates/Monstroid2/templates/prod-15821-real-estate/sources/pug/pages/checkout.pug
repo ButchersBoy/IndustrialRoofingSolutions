@@ -1,0 +1,178 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Checkout'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Checkout
+  section.section-lg.section-lg_smaller-top.bg-default
+    .container: .row.justify-content-lg-center: .col-lg-10.col-xl-8
+      h2.text-center Checkout
+      
+      .divider
+
+      // Room Details
+      h4 Room Details
+      dl.list-terms
+        dt Room Type
+        dd Comfort Triple room
+
+      dl.list-terms
+        dt Guests
+        dd 1 Adult
+
+      dl.list-terms
+        dt Check-In Date
+        dd October 12, 2018
+
+      dl.list-terms
+        dt Check-Out Date
+        dd November 23, 2018
+
+      .divider
+
+      // Choose Rate
+      h4 Choose Rate
+      ul.list-lg
+        li
+          label.radio-inline
+            input.radio-custom(type='radio', form='checkout-form', name='rate')
+            | BASIC, $70
+          p.small This offer includes accommodation offer in the room you selected with 1 free breakfast per day of your stay at our hotel. More information is available at reception.
+  
+        li
+          label.radio-inline
+            input.radio-custom(type='radio', form='checkout-form', name='rate')
+            | EXTENDED, $120
+          p.small This set of services offers you full accommodation with a wide variety of dining services at our restaurant. Room service is provided free of charge from 9 AM to 10 PM.
+  
+        li
+          label.radio-inline
+            input.radio-custom(type='radio', form='checkout-form', name='rate')
+            | FULL, $150
+          p.small Full Rate includes everything Basic and Extended Rates do with some extra services (e.g. ironing facilities access or babysitter service), which you can select on our site when booking a room.
+  
+      .divider
+          
+      // Choose Additional Services
+      h4 Choose Additional Services
+      ul.list-xs
+        li
+          label.checkbox-inline
+            input.checkbox-custom(type='checkbox', form='checkout-form', name='service-1' checked)
+            | Baggage storage (Free)
+        
+        li
+          label.checkbox-inline
+            input.checkbox-custom(type='checkbox', form='checkout-form', name='service-2')
+            | Safe ($25 Once)
+        
+        li
+          label.checkbox-inline
+            input.checkbox-custom(type='checkbox', form='checkout-form', name='service-3')
+            | Bicycle rent ($15 Per Night)
+        
+      .divider
+        
+      // Price Breakdown:
+      h4 Price Breakdown:
+      .table-custom-responsive
+        table.table-custom.table-custom_condensed.table-custom_striped
+          caption Room ( Basic )
+          thead
+            tr
+              td Date
+              td Price
+              
+          tbody
+            tr 
+              td October 12, 2018
+              td $70
+            tr 
+              td October 13, 2018
+              td $70
+            tr 
+              td October 14, 2018
+              td $70
+            tr 
+              td October 15, 2018
+              td $70
+            tr 
+              td October 16, 2018
+              td $70
+            tr 
+              td October 17, 2018
+              td $70
+          tfoot
+            tr 
+              td Room Subtotal:
+              td $420
+            tr 
+              td Total
+              td $420
+              
+      .divider 
+        
+      // Customer Details
+      h4 Customer Details
+      p.small 
+        | Required fields are followed by 
+        span.text-primary *
+        
+      
+      // RD Mailform
+      form.rd-mailform.rd-mailform_style-1#checkout-form(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+        .form-wrap
+          label.form-label-outside(for="checkout-first-name") 
+            | First name:
+            span.text-primary *
+          input#checkout-first-name.form-input(type="text" name="first-name" data-constraints='@Required', placeholder='First Name')
+
+        .form-wrap
+          label.form-label-outside(for="checkout-last-name") 
+            | Last name:
+            span.text-primary * 
+          input#checkout-last-name.form-input(type="text" name="last-name" data-constraints='@Required', placeholder='Last Name')
+
+        .form-wrap
+          label.form-label-outside(for="checkout-email") 
+            | Email:
+            span.text-primary *
+          input#checkout-email.form-input(type="email" name="email" data-constraints="@Email @Required", placeholder='Email')
+
+        .form-wrap
+          label.form-label-outside(for="checkout-phone") 
+            | Phone:
+            span.text-primary *
+          input#checkout-phone.form-input(type="text" name="phone" data-constraints='@Numeric @Required', placeholder='Phone')
+
+        .form-wrap
+          label.form-label-outside(for="checkout-message") 
+            | Message:
+            span.text-primary *
+          textarea#checkout-message.form-input(name="message" data-constraints="@Required", placeholder='Message')
+
+        h4 Total Price:	
+        .price
+          span.price__aside-top $
+          span.price_main 2,940
+          
+        button(type="submit").button.button-primary REQUEST A QUOTE
+  ='\n'
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

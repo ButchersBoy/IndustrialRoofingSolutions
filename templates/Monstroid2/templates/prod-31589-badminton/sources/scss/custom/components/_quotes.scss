@@ -1,0 +1,146 @@
+/** @section Quotes */
+
+// Quote centered
+.quote-centered {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.quote-centered__text {
+
+  .q {
+    font-size: 16px;
+    color: $black;
+  }
+}
+
+.quote-centered__mark {
+  display: inline-block;
+  fill: $primary;
+}
+
+.quote-centered__cite {
+  color: $gray;
+  vertical-align: middle;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 14px;
+    border-top: 1px solid;
+  }
+}
+
+* + .quote-centered__cite {
+  margin-top: 10px;
+}
+
+* + .quote-centered__text { margin-top: 10px }
+
+@include media-breakpoint-up(md) {
+  .quote-centered__text {
+    .q {
+      font-size: 24px;
+      line-height: (43 / 30);
+    }
+  }
+
+  * + .quote-centered__text { margin-top: 15px }
+}
+
+@include media-breakpoint-up(xl) {
+  .quote-centered {
+    max-width: 760px;
+  }
+
+  .quote-centered__text {
+    .q {
+      font-size: 30px;
+    }
+  }
+
+  * + .quote-centered__text { margin-top: 20px }
+}
+
+// Modificators
+.quote-default.quote-default_left {
+  text-align: left;
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+.quote-default.quote-default_left-v2 {
+  text-align: left;
+
+  .quote-default__image {
+    text-align: center;
+  }
+
+  .quote-default__mark {
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  * + .quote-default__text {
+    margin-top: 30px;
+  }
+}
+
+/* Quote */
+.quote {
+  max-width: 1000px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  q {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.quote-cite-img {
+  border-radius: 50%;
+}
+
+.quote-cite {
+  display: inline-block;
+}
+
+.quote-cite-text {
+  display: block;
+  font-weight: 600;
+  color: $primary;
+}
+
+* + .quote-cite { margin-top: 40px * $xs-multiplier }
+* + .quote-cite-text { margin-top: 12px * $xs-multiplier }
+
+@include media-breakpoint-up( sm ) {
+  .quote { max-width: 90%; }
+}
+
+@include media-breakpoint-up( lg ) {
+  .quote { max-width: 80%; }
+
+  * + .quote-cite { margin-top: 40px * $lg-multiplier }
+  * + .quote-cite-text { margin-top: 12px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+  .quote { max-width: 1000px; }
+
+  * + .quote-cite { margin-top: 40px }
+  * + .quote-cite-text { margin-top: 12px }
+}

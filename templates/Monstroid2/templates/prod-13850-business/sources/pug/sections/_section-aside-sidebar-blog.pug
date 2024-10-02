@@ -1,0 +1,186 @@
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+
+// Search
+section.section-sm.section-style-1
+  h6 Search
+  // RD Search
+  form.rd-search.rd-mailform-inline-flex.text-center(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+    .form-wrap.form-wrap_icon.linear-icon-magnifier
+      label.form-label(for="rd-search-form-input" ) Enter keyword
+      input.form-input(id="rd-search-form-input" type="text" name="s" autocomplete="off")
+    button(type="submit").button.button-primary Go!
+='\n'
+
+// About
+section.section-sm
+  h6 About
+  .thumbnail-classic-minimal
+    +jpg('aside-blog-about-1-210x210','rounded-circle')
+    .caption
+      p Mr.Williamson was born in one of Detroit’s poorest blocks, all before pursuing his successful managerial career in the future. For him, the breakthrough happened when he was able to get on Harvard University’s Law School list. After graduating from there, he was working for a few years for a number of multi-million dollar corporations, climbing up the corporate ladder and...
+      a.button.button-link(href='about.html') Read more
+='\n'
+
+// Categories
+section.section-sm
+  h6 Categories
+  ul.list-xxs.small
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+    li: a(href='#') Ultimate Font Collection
+='\n'
+
+// Posts
+section.section-sm
+  h6 Latest Posts
+  ul.list-sm
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2018
+          a(href=postLink).post-inline__author.meta-author by Brian Williamson
+
+        p.post-inline__link: a(href=postLink) How to Use Bootstrap Framework
+    li
+      // Post inline
+      article.post-inline
+        .post-inline__header
+          span.post-inline__time Jan.20, 2018
+          a(href=postLink).post-inline__author.meta-author by Brian Williamson
+
+        p.post-inline__link: a(href=postLink) Getting to another level of design and functionality.
+='\n'
+
+// recent comments
+section.section-sm
+  h6 Recent comments
+  ul.list-xs
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Brian Williamson on
+
+        p.post-inline__link: a(href=postLink) Site Speed and Search Engines Optimization Aspects
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Brian Williamson on
+
+        p.post-inline__link: a(href=postLink) 5 Things to Know Before You Buy an HTML Template
+    li
+      article.post-inline
+        .post-inline__header
+          a(href=postLink).post-inline__author.meta-author Brian Williamson on
+
+        p.post-inline__link: a(href=postLink) Turning Your Site into a Sales Machine
+
+// Tags
+section.section-sm
+  h6 Tags
+  ul.list-tags
+    li: a(href='#') Retina Homepage
+    li: a(href='#') New Page Examples
+    li: a(href='#') Ultimate Font Collection
+    li: a(href='#') Parallax Sections
+    li: a(href='#') Shortcode Central
+='\n'
+
+// Archive
+section.section-sm
+  h6 Archive 
+  ul.list-archive
+    li: a(href='#') April 2018
+    li: a(href='#') February 2018
+    li: a(href='#') January 2018
+    li: a(href='#') December 2018
+    li: a(href='#') November 2018
+    li: a(href='#') October 2018
+='\n'
+
+mixin rdc-event(obj)
+  li.rdc-event(data-date=obj.date)
+    table.table.rdc-event-booking-table
+      thead
+        tr
+          th(colspan="3"): p.heading-6 Available Appointments on&nbsp;
+            =  obj.dateText
+      tbody.rdc-inline-event-list
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 8:00am - 9:00am
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 10:30am - 11:00am
+
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment
+
+
+// Calendar
+section.section-sm
+  h6 Calendar
+
+  // RD Calendar
+  .booking-calendar.booking-calendar-aside#chapters-select(data-events-inline='true')
+    .rdc-panel
+      .small
+        span.rdc-month
+        =' '
+        span.rdc-fullyear
+
+    .rdc-table
+    .rdc-events
+      a.rdc-events_close
+      ul.list-unstyled
+        +rdc-event({ date: '10/16/2018', dateText: 'October 16, 2018' })
+        +rdc-event({ date: '11/22/2018', dateText: 'November 22, 2018' })
+        +rdc-event({ date: '12/07/2018', dateText: 'December 7, 2018' })
+        +rdc-event({ date: '01/31/2018', dateText: 'January 31, 2018' })
+        +rdc-event({ date: '02/13/2018', dateText: 'February 13, 2018' })
+        +rdc-event({ date: '03/20/2018', dateText: 'March 20, 2018' })
+        +rdc-event({ date: '04/24/2018', dateText: 'April 24, 2018' })
+        +rdc-event({ date: '05/08/2018', dateText: 'May 8, 2018' })
+        +rdc-event({ date: '06/14/2018', dateText: 'June 14, 2018' })
+        +rdc-event({ date: '07/11/2018', dateText: 'Jule 11, 2018' })
+        +rdc-event({ date: '08/20/2018', dateText: 'Jule 20, 2018' })
+        +rdc-event({ date: '09/05/2018', dateText: 'September 20, 2018' })
+        +rdc-event({ date: '10/31/2018', dateText: 'October 20, 2018' })
+
+    .rdc-panel-nav
+      button.rdc-prev Prev month
+      button.rdc-next Next month
+
+='\n'
+
+// Follow us
+section.section-sm
+  h6 Follow Us
+  +list-inline-icon({
+      list_class: 'list-inline-sm',
+      items: [
+          "icon-sm fa-facebook",
+          'icon-sm fa-twitter',
+          'icon-sm fa-google-plus',
+          'icon-sm fa-vimeo',
+          'icon-sm fa-youtube',
+          'icon-sm fa-pinterest-p']
+  })
+
+  h6 Get the latest news delivered daily!
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-center.rd-mailform-inline-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+    .form-wrap.form-wrap_icon.linear-icon-envelope
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email") Enter please your e-mail
+    button(type="submit").button.button-gray-dark Get

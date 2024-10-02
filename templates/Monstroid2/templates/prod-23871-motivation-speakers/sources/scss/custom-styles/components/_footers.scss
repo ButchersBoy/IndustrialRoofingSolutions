@@ -1,0 +1,17 @@
+/** @section Footers */
+
+// Footer Classic
+.footer-classic {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.footer-classic-pre {
+	h6 + * { margin-top: 20px; }
+	h6 + .list-xs { margin-top: 15px; }
+
+	@include media-breakpoint-up(xl) {
+		h6 + * { margin-top: 30px; }
+		h6 + .list-xs { margin-top: 23px; }
+	}
+}

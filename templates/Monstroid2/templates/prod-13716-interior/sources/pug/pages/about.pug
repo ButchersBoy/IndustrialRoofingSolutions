@@ -1,0 +1,134 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'About'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+
+  section.text-center
+    +parallax({
+      "src": "images/parallax-2.jpg",
+      "class": 'parallax-header parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated About
+              p.heading-6 During all this time we stayed true to one and the same principles of interior design.
+  ="\n"
+
+  section.section-md.bg-default
+    .container
+      .row.row-50.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left
+              .blurb-circle__icon: span.icon.linear-icon-flag3
+            .unit__body
+              p.heading-6.blurb__title Core Values
+              p Construction's core values have been shaped over more than 10 years of delivering the finest construction services to our clients. They stood to the test of time and these principles remain our bedrock lynchpins. We never tried to cut on either quality, the pace of work or any other construction aspect. We stay true to our full promise of efficiency!
+
+        .col-md-9.col-lg-6
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left
+              .blurb-circle__icon: span.icon.linear-icon-rocket
+            .unit__body
+              p.heading-6.blurb__title Pace
+              p Our love for detailed, bullet-point preparations, as well as to open and clear project management and communication is what makes us faster than the competition. Recently we compared a technically similar 10-stories building that we built, and the other built by our main competitor. Their price and pace was 2 times lower than hours!
+
+        .col-md-9.col-lg-6
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left
+              .blurb-circle__icon: span.icon.linear-icon-trophy2
+            .unit__body
+              p.heading-6.blurb__title Quality
+              p Quality is focal in every little aspect of the construction. The mindset of both our senior employees and all the way to our on-site contractors and construction workers centers on attention. It's out attention to details that allows us to work on a multitude of projects simultaneously, while staying on schedule!
+
+        .col-md-9.col-lg-6
+          // Blurb circle
+          article.blurb.blurb-circle: .unit.flex-sm-row.unit-spacing-md
+            .unit__left
+              .blurb-circle__icon: span.icon.linear-icon-leaf
+            .unit__body
+              p.heading-6.blurb__title Environmental standards
+              p Besides valuing your time, your money and your vision for the project, we also value the Mother Nature as well...It cannot be denied anymore, that even the small construction implements the nature in a bad way... That's why we're leading the effort to use only eco-friendly materials and comply with keeping the environment unpollluted by the work we do!
+
+  // Counters
+  section.rd-parallax.bg-gray-dark.text-center
+    .rd-parallax-layer(data-speed='0.4', data-type='media', data-url='images/parallax-1.jpg')
+    .rd-parallax-layer(data-speed='0', data-type='html')
+      .section-lg.text-center
+        .container
+          .row.justify-content-md-center.row-50
+            .col-md-6.col-lg-3
+              // Box counter
+              article.box-counter
+                .box-counter__wrap
+                  .counter 250
+                p.box-counter__title Projects Completed
+
+            .col-md-6.col-lg-3
+              // Box counter
+              article.box-counter
+                .box-counter__wrap
+                  .counter 302
+                p.box-counter__title Staff members
+
+            .col-md-6.col-lg-3
+              // Box counter
+              article.box-counter
+                .box-counter__wrap
+                  .counter 15
+                p.box-counter__title Million Man-hours
+
+            .col-md-6.col-lg-3
+              // Box counter
+              article.box-counter
+                .box-counter__wrap
+                  .counter 99
+                p.box-counter__title Awards won
+  ='\n'
+
+  include ../sections/_section-managers
+
+  include ../sections/_section-projects
+    
+  // Testimonials
+  section.section-md.bg-default.text-center
+    .container
+      h4.heading-decorated WHAT PEOPLE SAY
+      .row.row-50
+        .col-md-6 
+          // Quote default
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('deborah-quagmire-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q As an official fro North Dakota's state government, I want to thank Our construction company. On behalf of the citizens of the state, we're so grateful for this new, innovative building! This allows North Dakota to hold its legislative operations in a contemporary, progressive architectural environment!
+            p.quote-default__cite Jane Smith
+
+        .col-md-6
+          // Quote default 
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('benedict-arnold-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q This bridge project was funded by small and medium business of Rhode Island, as well as by its private citizens. After the hurricane hit our shores recently, we all were concerned for the Okaloppo river not having a proper landline connection. But now, after Construction company finished the project, the county can enjoy its new, beautiful infrastructure!
+            p.quote-default__cite James Wilson
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

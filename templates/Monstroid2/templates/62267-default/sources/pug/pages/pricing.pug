@@ -1,0 +1,111 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+	- pageName = 'Pricing'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-50.justify-content-sm-center
+				.col-md-10
+					h3 Pricing
+					p Monstroid supports a huge list of plugins developed both by Templatemonster.com and 3rd party developers. Create events, make schedules, book appointments, build restaurant menus, run community, start your features rich online shop and do so many other things with Monstroid#[sup 2] plugins pack.
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Starter',
+						price: '$14.89'
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li Unlimited users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						class: 'pricing-table-label',
+						label: 'most popular',
+						title: 'Standard',
+						price: '$32.89'
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li Unlimited users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Business',
+						price: '$76.89 '
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li Unlimited users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Professional',
+						price: '$89.89'
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li Unlimited users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+	
+	// Quotes
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			// Owl Carousel
+			.owl-carousel( data-autoplay='true' data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-1-120x120')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Adam Smith
+				
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-2-120x120')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.item
+					// Quote default
+					.quote-default
+						.quote-default__image
+							+jpg('testimonials-3-120x120')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	include ../sections/_section-found
+	
+	// Page Footer
+	include ../sections/_footer-corporate

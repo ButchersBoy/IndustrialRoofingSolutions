@@ -1,0 +1,26 @@
+// RD Navbar Top Panel
+.rd-navbar-top-panel.rd-navbar-search-wrap
+	.rd-navbar-top-panel__main
+		.rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1.rd-navbar-static--hidden(data-rd-navbar-toggle='.rd-navbar-top-panel__main'): span
+		.rd-navbar-top-panel__content
+			.rd-navbar-top-panel__left: p Effective Business Performance
+			.rd-navbar-top-panel__right: ul.rd-navbar-items-list
+				li: ul.list-inline-md
+					li
+						p
+							span.icon.linear-icon-map-marker 
+							a(href='#') 6036 Richmond hwy., Alexandria, VA 22303
+					li
+						p
+							span.icon.linear-icon-telephone 
+							span Let's talk
+							="\t"
+							a(href='callto:#') (703) 329-06-32 
+					li
+						p
+							span.icon.linear-icon-clock3 
+							="\t"
+							span We are open:  Mn-Fr: 10 am-8 pm
+
+
+	include _navbar-search

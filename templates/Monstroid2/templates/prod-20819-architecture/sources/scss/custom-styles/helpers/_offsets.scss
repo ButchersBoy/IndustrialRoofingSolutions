@@ -1,0 +1,151 @@
+/*
+* Offsets
+*/
+
+// Elements offset
+* + p { margin-top: 16px; }
+
+// Headings + Headings
+h1 + h3 { margin-top: 30px; }
+h3 + h6 { margin-top: 12px; }
+h6 + h1 { margin-top: 12px; }
+
+// Headings + Paragraph
+h1 + p { margin-top: 12px; }
+h2 + p { margin-top: 12px; }
+h3 + p { margin-top: 12px; }
+h4 + p { margin-top: 12px; }
+h5 + p { margin-top: 12px; }
+h6 + p { margin-top: 12px; }
+
+// Paragraph + Headings
+p + h2,
+p + .heading-2 {
+	margin-top: 15px;
+}
+
+// Tags + Tags
+p + p { margin-top: 12px; }
+img + p { margin-top: 15px; }
+h3 + img { margin-top: 42px; }
+
+// Classes
+* + .row { margin-top: 30px; }
+* + .big { margin-top: 20px; }
+* + .text-block {	margin-top: 30px; }
+* + .button {	margin-top: 20px; }
+* + .owl-carousel {	margin-top: 30px; }
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 {
+	margin-top: 80px;
+}
+
+// Classes + Classes
+.container + .container { margin-top: 35px; }
+.row + .row { margin-top: 35px; }
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	// Headings + Headings
+	h3 + h6 { margin-top: 18px; }
+
+	// Classes
+	* + .row {	margin-top: 40px; }
+	* + .row-sm {	margin-top: 35px; }
+	* + .button {	margin-top: 30px; }
+	* + .owl-carousel {	margin-top: 40px; }
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	* + .button {	margin-top: 40px; }
+	* + .owl-carousel {	margin-top: 50px; }
+
+	// Tags + Tags
+	p + p { margin-top: 28px; }
+
+	// Headings + Paragraph
+	h1 + p { margin-top: 20px; }
+	h2 + p { margin-top: 20px; }
+	h3 + p { margin-top: 20px; }
+	h4 + p { margin-top: 20px; }
+	h5 + p { margin-top: 20px; }
+	h6 + p { margin-top: 20px; }
+}
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+
+	// Classes
+	// Classes
+	* + .row-lg { margin-top: 50px;	}
+	* + .row-xl { margin-top: 60px;	}
+	* + .row-xxl { margin-top: 70px; }
+	* + .rd-form { margin-top: 30px; }
+	* + .button {	margin-top: 50px; }
+	* + .owl-carousel {	margin-top: 60px; }
+
+	// Classes + Classes
+	.container + .container { margin-top: 60px; }
+	.row + .row { margin-top: 60px; }
+}
+
+// Range spacing
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+.row-60 {
+	@include grid-offset(60px);
+}
+
+.row-70 {
+	@include grid-offset(70px);
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.row-md-40 {
+		@include grid-offset(40px);
+	}
+
+	.row-md-50 {
+		@include grid-offset(50px);
+	}
+
+	.row-md-60 {
+		@include grid-offset(60px);
+	}
+}
+
+@include media-breakpoint-up(lg) {
+
+	.row-lg-30 {
+		@include grid-offset(30px);
+	}
+}

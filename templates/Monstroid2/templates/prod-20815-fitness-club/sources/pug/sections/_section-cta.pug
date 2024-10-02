@@ -1,0 +1,26 @@
+//CTA section
+section.section.cta-section#join-now(style="background-image:url('images/background-2.png')")
+	.container
+		.row
+			.col-xl-5.col-sm-10.col-12.col-md-8.wow.fadeInLeft
+				.cta-wrap
+					h2.creative-title
+						| start
+						span  your
+							br
+						span workout
+						|  now
+					p Enter your name and email in the form below to get your first free workout at Profit.
+					.cta-event-time only 5 days
+		.row
+			.col-xl-5.col-sm-10.col-12.col-md-8.wow.fadeInUp(data-wow-delay='.2s')
+				form.rd-form.rd-mailform.rd-form-centered(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+					.form-wrap
+						input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+						label.form-label(for='contact-name') Your Name
+
+					.form-wrap
+						input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+						label.form-label(for='contact-email') E-mail
+
+					button.button.button-primary.button-md(type='submit') Join now

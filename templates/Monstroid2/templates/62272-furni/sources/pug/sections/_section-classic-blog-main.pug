@@ -1,0 +1,203 @@
+// Post classic
+.section-sm
+  article.post-classic
+    .post-classic-title
+      h4: a(href=postImage) HOW LAIDBACK AN OFFICE CHAIR SHOULD BE?
+    +jpg('post-classic-1-886x668')
+
+    .post-meta
+      .group
+        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        a(href=postImage).meta-author by Brian Williamson
+        a(href=postImage) 3 comment(s)
+        a(href=postImage) Bedroom
+        +tag-list({
+            list_class: 'list-inline-tag',
+            href: postImage,
+            items: [
+                "Armchair",
+                'Table',
+                'Chair']
+        })
+
+    .post-classic-footer
+      +list-inline-icon({
+          list_class: 'list-inline-sm',
+          items: [
+              "icon-xxs fa-facebook",
+              'icon-xxs fa-twitter',
+              'icon-xxs fa-google-plus',
+              'icon-xxs fa-vimeo',
+              'icon-xxs fa-youtube',
+              'icon-xxs fa-pinterest-p']
+      })
+
+      a(href=postImage).button.button-link Read more
+
+// Post gallery
+.section-sm
+  article.post-slider
+    .post-classic-title
+      h4: a(href=postSlider) BUY SMART: HOW TO BUY A DURABLE RECLINER CHAIR
+
+    +slider-blog({
+        class: 'carousel-slider-blog-post',
+        items: [
+            {
+                original_img: 'gallery-post-01-original-1200x800',
+                img_thumb: 'gallery-post-1-886x668'
+            },
+            {
+                original_img: 'gallery-post-02-original-1200x800',
+                img_thumb: 'gallery-post-2-886x668'
+            },
+            {
+                original_img: 'gallery-post-03-original-1200x800',
+                img_thumb: 'gallery-post-3-886x668'
+            }
+        ]
+    })
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postSlider): time(datetime='2017') Jan.20, 2016
+          a(href=postSlider).meta-author by Brian Williamson
+          a(href=postSlider) 3 comment(s)
+          a(href=postSlider) Bedroom
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postSlider,
+            items: [
+              "Armchair",
+              'Table',
+              'Chair']
+          })
+      a(href=postSlider).button.button-link Read more
+
+// Post video
+.section-sm
+  article.post-video
+    .post-classic-title
+      h4: a(href=postVideo) NOT ENOUGH CLOSET SPACE? CLOTHES RACKS TO THE RESCUE
+
+    .entry-video.embed-responsive.embed-responsive-16by9
+      iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postVideo): time(datetime='2017') Jan.20, 2016
+          a(href=postVideo).meta-author by Brian Williamson
+          a(href=postVideo) 3 comment(s)
+          a(href=postVideo) Bedroom
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postVideo,
+              items: [
+              "Armchair",
+              'Table',
+              'Chair']
+          })
+      a(href=postVideo).button.button-link Read more
+
+// Post Link
+.section-sm
+  article.post-link
+    .post-classic-title
+      h4: a(href=blogPostLink) FURNITURE STYLES PROFILE: ART DECO
+    a(href="http://templatemonster.com/") http://templatemonster.com/
+
+// Post quote
+.section-sm
+  article.post-quote
+    // Quote default
+    a(href=postQuote).quote-default
+      +quote-mark('quote-default__mark')
+      .quote-default__text: p.q.heading-4 Getting to another  level of design and functionality.
+      p.quote-default__cite Adam Smith
+
+// Post standard
+.section-sm
+  article.post-classic
+    .post-classic-title
+      h4: a(href=postLink) THE INTERSECTION OF LEFTOVERS AND HAND-CRAFTED FURNITURE
+      
+    .post-classic-body
+      p Also new: wall-saver recliners, which will need only about six inches of space between chair and wall, compared to a foot or more needed for larger traditional versions (though the price is about the same).
+      
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postLink): time(datetime='2017') Jan.20, 2016
+          a(href=postLink).meta-author by Brian Williamson
+          a(href=postLink) 3 comment(s)
+          a(href=postLink) Bedroom
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postLink,
+              items: [
+              "Armchair",
+              'Table',
+              'Chair']
+          })
+      a(href=postLink).button.button-link Read more
+      
+// Post audio
+.section-sm
+  article.post-audio
+    .post-classic-title
+      h4: a(href=postAudio) INTERESTING DESIGN FOR A DUAL-ACTION DESK DRAWER
+
+    // RD Audio
+    .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+      .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+        .rd-audio-controls.text-center
+          .rd-audio-controls-left
+            // Play\Pause button
+            a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+          .rd-audio-progress-bar-wrap
+            // Time
+            .rd-audio-time
+              // currentTime
+              span.rd-audio-current-time 00:00
+            // Progress bar
+            .rd-audio-progress-bar
+          // Volume button
+          a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+          // Volume bar
+          .rd-audio-volume-bar
+          .rd-audio-controls-righ.d-none
+            // Playlist button
+            a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+        .rd-audio-playlist-wrap
+          h6.rd-audio-playlist-title Playlist
+          ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+            li(data-rd-audio-src='audio/sound.mp3')
+
+
+    .post-classic-footer
+      .post-meta
+        .group
+          a(href=postAudio): time(datetime='2017') Jan.20, 2016
+          a(href=postAudio).meta-author by Brian Williamson
+          a(href=postAudio) 3 comment(s)
+          a(href=postAudio) Bedroom
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postAudio,
+              items: [
+              "Armchair",
+              'Table',
+              'Chair']
+          })
+      a(href=postAudio).button.button-link Read more
+
+// Pagination
+.section-sm
+  +pagination-classic(1,
+    [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+    null,
+    {"title": "", "href": "#"}
+  )

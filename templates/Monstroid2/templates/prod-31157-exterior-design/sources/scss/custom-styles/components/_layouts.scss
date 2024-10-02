@@ -1,0 +1,49 @@
+//
+// Layouts
+// --------------------------------------------------
+
+// Footer
+.footer {
+	padding: 80px 0;
+
+	@include media-breakpoint-up(xl) {
+		padding: 120px 0 130px;
+	}
+
+	h2 + h4 {
+		margin-top: 17px;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: inherit !important;
+			text-decoration: underline;
+		}
+
+		&[href*='mailto'] {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.small + .small {
+		margin-top: 13px;
+	}
+
+	.row + .row {
+		@include media-breakpoint-up(xl) {
+			margin-top: 120px;
+		}
+	}
+}
+
+.footer-link-item {
+	& + & {
+		margin-top: 10px;
+	}
+}

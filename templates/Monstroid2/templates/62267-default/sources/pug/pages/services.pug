@@ -1,0 +1,117 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+
+block variables
+	- pageName = 'Services'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-04.jpg"
+	}).parallax-header.context-light
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2 A Wide Variety of High Quality Services
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-60
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-1-418x315',
+						title: 'Bootstrap Framework',
+						text:  'Monstroid² is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-2-418x315',
+						title: 'Template',
+						text:  'Use our Template to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-3-418x315',
+						title: 'Responsive & Retina Ready',
+						text:  'Monstroid² looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-4-418x315',
+						title: 'Tons of Tools for Real Needs',
+						text:  'Events calendar, bookings and schedule  are just some of tools that come on board.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-5-418x315',
+						title: 'Thought Through Layout',
+						text:  'Huge number of content layouts allow to assemble unique pages with great flexibility.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-6-418x315',
+						title: 'Clean and Crispy Design',
+						text:  'Monstroid² is crafted by top industry leaders with love, care and customer needs in mind. '
+					})
+	
+	include ../sections/_section-cta-1
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-60.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						p.blurb__title Built For Speed
+						p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+						
+						ul.list-marked-primary
+							li Amazing Performance
+							li Improved Stability
+							li Optimized Page Load Time
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						p.blurb__title Flexible and Multipurpose
+						p Monstroid² allows to create a various websites for complex and scalable project.
+						
+						ul.list-marked-primary
+							li Lots of Predesigned Pages
+							li Extended Bootstrap Framework
+							li Clean Interface
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						p.blurb__title SEO Friendly
+						p Valid code and performance optimized framework make SEO easy and hassle free.
+						
+						ul.list-marked-primary
+							li Indexable Content
+							li Vast Keyword Application
+							li On-Page Optimization
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

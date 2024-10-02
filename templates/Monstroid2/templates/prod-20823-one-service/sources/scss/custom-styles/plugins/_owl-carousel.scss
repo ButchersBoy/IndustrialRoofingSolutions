@@ -1,0 +1,432 @@
+/*
+ * Owl Carousel
+ */
+
+// Local variables
+$owl-base: $gray-800;
+$owl-primary: $primary;
+
+// Core styles (editing is not recommended)
+.owl-carousel {
+	display: none;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+	/* position relative and z-index fix webkit rendering fonts issue */
+	position: relative;
+	z-index: 1;
+
+	.owl-stage {
+		position: relative;
+		-ms-touch-action: pan-Y;
+		touch-action: manipulation;
+		-moz-backface-visibility: hidden; /* fix firefox animation glitch */
+	}
+
+	.owl-stage:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+
+	.owl-stage-outer {
+		position: relative;
+		overflow: hidden;
+		/* fix for flashing background */
+		-webkit-transform: translate3d(0px, 0px, 0px);
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+	.owl-wrapper,
+	.owl-item {
+		backface-visibility: hidden;
+		transform: translate3d(0, 0, 0);
+	}
+
+	.owl-item {
+		position: relative;
+		min-height: 1px;
+		float: left;
+		backface-visibility: hidden;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+	.owl-item img {
+		display: block;
+		width: 100%;
+	}
+
+	.owl-nav,
+	.owl-dots {
+		-webkit-tap-highlight-color: transparent;
+
+		&.disabled {
+			display: none;
+		}
+	}
+
+	.owl-prev,
+	.owl-next,
+	.owl-dot {
+		cursor: pointer;
+		user-select: none;
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+	}
+
+	&.owl-loaded {
+		display: block;
+	}
+
+	&.owl-loading {
+		opacity: 0;
+		display: block;
+	}
+
+	&.owl-hidden {
+		opacity: 0;
+	}
+
+	&.owl-refresh .owl-item {
+		visibility: hidden;
+	}
+
+	&.owl-drag .owl-item {
+		touch-action: pan-y;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	&.owl-grab {
+		cursor: grab;
+	}
+
+	&.owl-rtl {
+		direction: rtl;
+	}
+
+	&.owl-rtl .owl-item {
+		float: right;
+	}
+}
+
+// Theme styles
+.owl-carousel {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		pointer-events: none;
+	}
+
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 3px;
+		font-size: 40px;
+		line-height: 1;
+		cursor: pointer;
+		pointer-events: auto;
+		background: $owl-primary;
+		color: $owl-base;
+
+		&::before,
+		&::after {
+			display: block;
+			font-family: $fa;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background: $owl-base;
+			color: $owl-primary;
+		}
+
+		&.disabled {
+			opacity: .5;
+			cursor: default;
+		}
+	}
+
+	.owl-prev {
+		left: 10px;
+
+		&::before {
+			content: '\f104';
+		}
+	}
+
+	.owl-next {
+		right: 10px;
+
+		&::before {
+			content: '\f105';
+		}
+	}
+
+	// Styling dots
+	.owl-dots {
+		text-align: center;
+	}
+
+	.owl-dot {
+		display: inline-block;
+		zoom: 1;
+		margin: 0 5px;
+
+		span {
+			width: 10px;
+			height: 10px;
+			background: $owl-base;
+			display: block;
+			-webkit-backface-visibility: visible;
+			transition: opacity 200ms ease;
+			border-radius: 5px;
+		}
+
+		&.active,
+		&:hover {
+			span {
+				background: $owl-primary;
+			}
+		}
+	}
+}
+
+.owl-carousel-classic {
+	padding-left: 40px;
+	// Medium ≥576px
+	@include media-breakpoint-up(sm) {
+		padding-left: 70px;
+	}
+
+	.owl-dots {
+		padding-top: 15px;
+		margin-left: -10px;
+		text-align: left;
+		// Medium ≥768px
+		@include media-breakpoint-up(md) {
+			padding-top: 43px;
+		}
+	}
+
+	.owl-dot {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		height: 28px;
+		width: 28px;
+		border: 0;
+		border-radius: 0;
+		transition: all 0.3s ease-in-out;
+		margin-left: 13px;
+		margin-right: 13px;
+
+		span {
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: $black;
+
+			:hover & {
+
+				span {
+					background-color: transparent;
+				}
+			}
+		}
+
+		&.active {
+			width: 43px;
+			span {
+				height: 2px;
+				background-color: #000000;
+			}
+		}
+	}
+}
+
+.owl-pagination-custom {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border-radius: 10em;
+		background-color: $primary;
+		animation-iteration-count: infinite;
+		// Small <576px
+		@include media-breakpoint-down(xs) {
+			opacity: .3;
+		}
+	}
+
+	&::before {
+		top: 13%;
+		left: 39%;
+		width: 24px;
+		height: 24px;
+		animation-name: animate-dot-1;
+		animation-duration: 15s;
+		// Large 992  ≤ 1200 Extra Large
+		@include media-breakpoint-between(lg, lg) {
+			left: 15%;
+		}
+		// Large <991px
+		@include media-breakpoint-down(md) {
+			top: 0;
+			left: 33%;
+		}
+	}
+
+	&::after {
+		top: 47%;
+		left: 68%;
+		width: 61px;
+		height: 61px;
+		animation-name: animate-dot-2;
+		animation-duration: 20s;
+		// Large 992  ≤ 1200 Extra Large
+		@include media-breakpoint-between(lg, lg) {
+			top: 42%;
+		}
+		// Large <991px
+		@include media-breakpoint-down(md) {
+			width: 24px;
+			height: 24px;
+			top: auto;
+			bottom: 0;
+			left: 66%;
+		}
+	}
+}
+
+@keyframes animate-dot-1 {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: scale(1.1) translate(-10px, -10px);
+	}
+	40% {
+		transform: scale(.9) translate(-10px, -10px);
+	}
+	60% {
+		transform: scale(1.1) translate(-10px, 10px);
+	}
+	80% {
+		transform: scale(.9) translate(10px, -10px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes animate-dot-2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: scale(.9) translate(10px, 10px);
+	}
+	40% {
+		transform: scale(1.1) translate(-10px, -10px);
+	}
+	60% {
+		transform: scale(.9) translate(10px, -10px);
+	}
+	80% {
+		transform: scale(1.1) translate(-10px, 10px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.data-dots-custom {
+	position: relative;
+	border-radius: 10em;
+	cursor: pointer;
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		max-width: 26%;
+	}
+
+	img {
+		position: relative;
+	}
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		&:nth-of-type(odd) {
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+		&:nth-of-type(even) {
+			margin-top: -22px;
+			margin-bottom: -51px;
+		}
+
+		&:nth-of-type(1) {
+			margin-right: 76px;
+		}
+
+		&:nth-of-type(3) {
+			margin-right: 35px;
+		}
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		border: 4px solid $secondary-3;
+		border-radius: 10em;
+		transition: $transition-base;
+	}
+
+	&:hover,
+	&.active {
+		&::before {
+			top: -11px;
+			left: -11px;
+			right: -11px;
+			bottom: -11px;
+		}
+	}
+
+	// Large 992  ≤ 1200 Extra Large
+	@include media-breakpoint-between(lg, lg) {
+		max-width: 50%;
+	}
+
+}

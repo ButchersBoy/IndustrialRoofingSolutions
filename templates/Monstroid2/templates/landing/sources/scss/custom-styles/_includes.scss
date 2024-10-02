@@ -1,0 +1,157 @@
+//
+// Includes
+// --------------------------------------------------
+
+
+/*
+*
+* Components
+* ==================================================
+*/
+
+@import "components/icons";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/lists";
+@import "components/posts";
+@import "components/thumbnails";
+@import "components/tooltip";
+@import "components/snackbars";
+@import "components/navigation";
+@import "components/preloader";
+@import "components/breadcrumbs";
+@import "components/panel-custom";
+@import "components/pagination-custom";
+
+
+/*
+*
+* Box
+* --------------------------------------------------
+*/
+
+.box{
+  border: 1px solid #d2d2d2;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/*
+*
+* Label
+* --------------------------------------------------
+*/
+
+.label{
+  padding: .4em .7em .6em;
+  border-radius: .5em;
+  font-weight: 700;
+  background-color: $primary;
+  color: $white;  
+  font-size: 10px;
+
+  @include media-breakpoint-up(lg) {
+    letter-spacing: 0.04em;
+    font-size: 14px;
+  }
+}
+
+h2{
+  .label{
+    margin-left: 10px;
+    vertical-align: top;
+  }
+}
+
+
+/*
+*
+* Text Rotators
+* --------------------------------------------------
+*/
+
+.text-rotator {
+  display: inline-block;
+
+  @include media-breakpoint-up(xl) {
+    margin-left: -20px;
+  }
+}
+
+.rotate-list {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0; }
+.rotate-list span {
+  display: inline-block;
+  white-space: nowrap; }
+
+.rotate-area {
+  animation-delay: .5s;
+  display: inline-block;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  white-space: nowrap; }
+
+
+/*
+*
+* Helpers
+* ==================================================
+*/
+
+@import "helpers/text-alignment";
+@import "helpers/text-styling";
+//@import "helpers/visibility-responsive";
+@import "helpers/groups";
+@import "helpers/context-styling";
+@import "helpers/sections";
+@import "helpers/offsets";
+
+
+/*
+*
+* Modules
+* ==================================================
+*/
+
+@import "modules/flex-grid";
+@import "modules/unit-responsive";
+
+
+/*
+*
+* Plugins
+* ==================================================
+*/
+
+@import "plugins/animate";
+@import "plugins/isotope";
+@import "plugins/owl-carousel";
+@import "plugins/rd-navbar";
+//@import "plugins/rd-parallax";
+@import "plugins/material-parallax";
+@import "plugins/rd-google-map";
+@import "plugins/rd-search";
+@import "plugins/ui-to-top";
+@import "plugins/tabs";
+//@import "plugins/photoswipe";
+@import "plugins/lightgallery";
+@import "plugins/progress-bars";
+@import "plugins/counter";
+@import "plugins/jquery-circle-progress";
+@import "plugins/timecircles";
+@import "plugins/swiper";
+@import "plugins/rd-video";
+@import "plugins/beforeafter";
+
+/*
+*
+* Fonts
+* ==================================================
+*/
+
+@import "fonts/font-awesome";
+@import "fonts/mdi";
+@import "fonts/thin";

@@ -1,0 +1,256 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Testimonials'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-autoplay='true', data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-nav='true')
+        .item
+          // Quote default
+          .quote-default.quote-default__border-left
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Linda Smith
+
+        .item
+          // Quote default
+          .quote-default.quote-default__border-left
+            .quote-default__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+            p.quote-default__cite Jourdan Saint-Yves
+
+        .item
+          // Quote default
+          .quote-default.quote-default__border-left
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-autoplay='true', data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Linda Smith
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            .quote-default__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+            p.quote-default__cite Jourdan Saint-Yves
+
+        .item
+          // Quote default
+          .quote-default
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      // Owl Carousel
+      .owl-carousel(data-autoplay='true', data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-dots='true')
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Linda Smith
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+            p.quote-default__cite Jourdan Saint-Yves
+
+        .item
+          // Quote default
+          .quote-default
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates...
+            p.quote-default__cite Linda Smith
+
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and ...
+            p.quote-default__cite Jourdan Saint-Yves
+
+        .col-md-6.col-lg-4
+          // Quote default
+          .quote-default.quote-default_left-v2
+            .quote-default__image
+              +jpg('testimonials-3-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates...
+            p.quote-default__cite Adam Smith
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('testimonials-1-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            p.quote-default__cite Linda Smith
+
+        .col-md-6
+          // Quote default
+          .quote-default.quote-default_left
+            .quote-default__image
+              +jpg('testimonials-2-120x120')
+            +quote-mark('quote-default__mark')
+            .quote-default__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+            p.quote-default__cite Jourdan Saint-Yves
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-1-120x120')
+            .quote-bordered__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            .quote-bordered__caption
+              p.quote-bordered__cite Linda Smith
+              p.quote-bordered__small Designer
+
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-2-120x120')
+            .quote-bordered__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+            .quote-bordered__caption
+              p.quote-bordered__cite Jourdan Saint-Yves
+              p.quote-bordered__small Designer
+
+        .col-md-6.col-lg-4
+          // Quote bordered
+          .quote-bordered
+            +quote-mark('quote-bordered__mark')
+            .quote-bordered__image
+              +jpg('testimonials-3-120x120')
+            .quote-bordered__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+            .quote-bordered__caption
+              p.quote-bordered__cite Adam Smith
+              p.quote-bordered__small Designer
+  ='\n'
+
+  +divider
+
+  // Quotes
+  section.section-lg.bg-default
+    .container
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-1-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Linda Smith
+                p.quote-classic__small Designer
+
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q The customer service is fantastic! Templates are affordable, they give Flash and HTML, that are easy to use and they have wide selection of templates!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-2-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Jourdan Saint-Yves
+                p.quote-classic__small Designer
+
+        .col-md-6.col-lg-4
+          // Quote classic
+          .quote-classic
+            .quote-classic__main
+              +quote-mark('quote-classic__mark')
+              .quote-classic__text: p.q Since I’m not a real programmer I love to use these already made and beautifully made templates. They are available at very affordable prices and they save you a lot of time, a lot of sweat and tears!
+
+            .quote-classic__caption
+              .quote-classic__image.quote-classic__caption-aside
+                +jpg('testimonials-3-120x120')
+              .quote-classic__caption-main
+                p.quote-classic__cite Adam Smith
+                p.quote-classic__small Designer
+  ='\n'
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+
+block variables
+  - var activeIndex = 4
+  - var pageName = '404 page'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  section.section-full-height.text-center.section(style="background: url('images/parallax-02.jpg'); background-size: cover;")
+    .parallax-header.material-parallax-light
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2 Page Not Found
+              p Map where your photos were taken and discover local points of interest. #[br]There’s also a flip-out.
+              a(href='index.html').button.button-primary Go back
+
+
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

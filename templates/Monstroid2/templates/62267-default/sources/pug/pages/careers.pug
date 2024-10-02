@@ -1,0 +1,47 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'Careers'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Our Current Vacancies List
+			// Accordion
+			#accordion3.text-start(role='tablist')
+				+card({
+					parentId: "accordion3",
+					title:   "Technical Support Representative"
+				})
+					p Under general supervision, in a 24/7 in-bound call center environment, Technical Support Representative provides technical and network problem resolution to end-users (customers) by performing a question diagnosis while guiding users through step-by-step solutions.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion3",
+					title:   "Customer Care Specialist"
+				})
+					p Customer Care Specialists works closely with the Design and Development Department to ensure the highest standards of service are met for all of our customers. They respond to inquiries via telephone, live chat and email, ensuring clear, friendly, professional and timely replies to all questions.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion3",
+					title:   "Interactive Art Director"
+				})
+					p The interactive art director takes the lead role in the research, development, and launch of new web-based products and services meant to serve the marketing and promotional goals of our company. This person supervises a staff of  graphic designers, who specialize in online content creation
+					a(href='#').button.button-primary APPLY NOW
+	
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

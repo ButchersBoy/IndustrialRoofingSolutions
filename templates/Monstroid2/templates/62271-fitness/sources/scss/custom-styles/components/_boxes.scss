@@ -1,0 +1,191 @@
+//
+// Boxes
+// --------------------------------------------------
+.box-counter {
+  text-align: center;
+  color: $black;
+
+  .counter{
+    display: inline-block;
+
+    width: 88px;
+    height: 88px;
+    line-height: 98px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 50%;
+
+    font-size: 36px;
+    font-weight: 700;
+    background-color: $primary;
+    color: $white;
+
+    @include media-breakpoint-up(md) {
+      width: 148px;
+      height: 148px;
+
+      line-height: 154px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 60px;
+    }
+  }
+}
+
+.bg-accent{
+  .box-counter {
+    .counter{
+      background-color: #fff;
+      color: $primary;
+    }
+  }
+}
+
+.box-counter__icon {
+  font-size: 44px;
+  line-height: 1;
+  color: $primary;
+}
+
+.box-counter__title {
+  margin-top: 10px;
+}
+
+.box-counter__wrap {
+  > * {
+    display: inline;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+}
+
+* + .box-counter__title {
+  margin-top: 15px;
+}
+
+* + .box-counter__wrap {
+  margin-top: 20px;
+}
+
+@include media-breakpoint-up(xl) {
+  .box-counter__title {
+    font-size: $h5-font-size;
+  }
+
+  * + .box-counter__title {
+    margin-top: 30px;
+  }
+
+  * + .box-counter__wrap {
+    margin-top: 30px;
+  }
+}
+
+.box{
+  background-color: #f3f3f3;
+  font-size: 14px;
+  padding: 40px 20px;
+
+  @include media-breakpoint-up(md) {
+    padding: 40px 40px;
+  }
+
+  .list-inline-sm{
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  p + p{
+    margin-top: 0;
+  }
+
+  h6{
+    margin-bottom: 12px;
+  }
+
+  &__left{
+    font-weight: 700;
+    color: $gray-dark;
+    flex: 1;
+  }
+
+  &__right{
+    flex: 1;
+    flex-basis: 30%;
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 30px;
+      border-left: 1px solid #dadada;
+    }
+
+    .icon{
+      margin-right: 6px;
+      font-size: 16px;
+      color: $primary;
+    }
+  }
+
+  .box-inner{
+    margin-top: 6px;
+
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      margin-top: 0;
+    }
+  }
+
+  & + &{
+    margin-top: 10px;
+  }
+
+  &.box-offset{
+    margin-top: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 10px;
+    }
+  }
+
+  .rd-mailform-inline-flex{
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.box.box-outline{
+  background-color: transparent;
+  border: 1px solid #eaeaea;
+}
+
+.box-link{
+  display: block;
+  padding: 25px;
+  background-color: #333;
+  color: $white;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+
+  .icon{
+    font-size: 28px;
+  }
+
+  &:hover,
+  &:focus{
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.box.box-subscribe{
+  .rd-mailform-inline-flex{
+    margin-top: 0;
+  }
+}

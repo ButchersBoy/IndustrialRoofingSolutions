@@ -1,0 +1,24 @@
+mixin rdc-event(obj)
+  li.rdc-event(data-date=obj.date)
+    table.table.rdc-event-booking-table
+      thead
+        tr
+          th(colspan="3"): p.heading-6 Available Appointments on
+            =  obj.dateText
+      tbody.rdc-inline-event-list
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 8:00am - 9:00am
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment
+
+        tr
+          td
+            dl.dl-horizontal-mod-1
+              dt: span.icon.icon-md.icon-primary.linear-icon-clock3
+              dd: time(datetime=obj.date.split('/')[2]) 10:30am - 11:00am
+
+          td: span 2 time slots available
+          td.rd-calendar-button-wrap: button.button.button-primary(data-toggle="modal" data-target="#appointment") Book an Appointment

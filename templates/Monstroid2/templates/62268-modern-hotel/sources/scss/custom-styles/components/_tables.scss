@@ -1,0 +1,142 @@
+//
+// Table custom
+// --------------------------------------------------
+
+$table-head-padding:            33px 24px;
+$table-cell-padding:            17px 24px 18px;
+$table-condensed-cell-padding:  5px;
+
+$table-bg:                      $white;
+$table-bg-accent:               $gray-lighter;
+$table-bg-hover:                $secondary;
+$table-bg-active:               $table-bg-hover;
+
+$table-border-color:            #d9d9d9;
+
+.table-custom {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  background: $table-bg;
+  table-layout: fixed;
+
+  th,
+  td {
+    color: $black;
+    background: $table-bg;
+  }
+
+  th {
+    padding: 25px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      padding: $table-head-padding;
+    }
+  }
+
+  caption,
+  td {
+    padding: $table-cell-padding;
+  }
+  
+  caption {
+    background: #ebebeb;
+  }
+
+  caption,
+  thead td,
+  tfoot td {
+    font-family: $font-family-sans-serif-2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: $black;
+  }
+  
+  td + td {
+    border-left: 1px solid #e5e5e5;
+  }
+}
+
+// Styles
+.table-custom-secondary {
+  th {
+    color: $white;
+    background: $secondary;
+  }
+}
+
+.table-custom-bordered {
+  border: 1px solid $table-border-color;
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  tbody > tr:first-of-type > td {
+    border-top: 0;
+  }
+}
+
+.table-custom_condensed {
+  caption,
+  td {
+    padding: 13px 18px;
+  }
+}
+
+.table-custom_striped {
+  tbody tr:nth-of-type(even) td,
+  tfoot tr:nth-of-type(even) td {
+    background: transparent;
+  }
+
+  tbody tr:nth-of-type(odd) td,
+  tfoot tr:nth-of-type(odd) td {
+    background: $table-bg-accent;
+  }
+}
+
+// Modificators
+.table-round {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.table-custom-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $table-border-color;
+
+    // Tighten up spacing
+    > .table-custom {
+      table-layout: auto;
+      // Ensure the content doesn't wrap
+      caption {
+        white-space: nowrap;
+      }
+      
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

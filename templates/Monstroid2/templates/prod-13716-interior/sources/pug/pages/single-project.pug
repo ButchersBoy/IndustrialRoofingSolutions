@@ -1,0 +1,121 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-parallax
+include ../elements/_ui-post-project
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Single Project'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  section.bg-gray-dark
+    +parallax({
+      "src": "images/parallax-2.jpg",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated Single Project
+  ='\n'
+
+  // Project single
+  section.section-md.bg-default
+    .container.post-strict
+      .row.row-70
+        .col-sm-12.text-center
+          h4.heading-decorated Roland Office Center
+          .post-strict__header 
+            span.post-strict__time Jan.20, 2017
+            a(href=postLink).post-strict__author.meta-author by Brian Williamson
+        .col-sm-12
+          .slick-gallery
+            // Slick Carousel
+            .slick-slider.carousel-parent(data-arrows="true", data-loop="false", data-dots="false", data-swipe="true", data-items="1" data-child="#child-carousel", data-for="#child-carousel" data-lightgallery='group')
+              .item
+                +jpg('project-category-1_original-1200x800')
+              .item
+                +jpg('project-category-2_original-1200x800')
+              .item
+                +jpg('project-category-3_original-1200x800')
+              .item
+                +jpg('project-category-4_original-1200x800')
+              .item
+                +jpg('project-category-5_original-1200x800')
+              .item
+                +jpg('project-category-6_original-1200x800') 
+              .item
+                +jpg('project-category-7_original-1200x800')
+    
+            .slick-slider.child-carousel#child-carousel(data-for=".carousel-parent", data-arrows="true",
+            data-loop="false", data-dots="false", data-swipe="true",
+            data-items="3", data-sm-items="4", data-md-items="5",
+            data-lg-items="6", data-xl-items="6", data-slide-to-scroll="1")
+              .item
+                +jpg('project-category-1_original-1200x800')
+              .item
+                +jpg('project-category-2_original-1200x800')
+              .item
+                +jpg('project-category-3_original-1200x800')
+              .item
+                +jpg('project-category-4_original-1200x800')
+              .item
+                +jpg('project-category-5_original-1200x800')
+              .item
+                +jpg('project-category-6_original-1200x800')
+              .item
+                +jpg('project-category-7_original-1200x800')
+        .col-sm-12
+          .row.row-40
+            .col-md-8.col-lg-5
+              ul.list-sm
+                li: dl.list-terms-inline
+                  dt Final Budget:
+                  dd $9,500,000
+                  
+                li: dl.list-terms-inline
+                  dt PROJECT SIZE:
+                  dd 57,000 sq.ft.
+                  
+                li: dl.list-terms-inline
+                  dt PROJECT STATUS:
+                  dd Completed 2017
+                  
+                li: dl.list-terms-inline
+                  dt OWNER:
+                  dd Roland Business Corporation
+                  
+                li: dl.list-terms-inline
+                  dt DESIGNER:
+                  dd Ken Ferguson
+                  
+                li: dl.list-terms-inline
+                  dt LOCATION:
+                  dd San Diego, CA
+      
+            .col-md-10.col-lg-6.col-xl-7
+              p Our construction company served as the Construction Manager for this 150-beds hospital, located in the northern part of Albuquerqe, NM. Extensive on-site work, including pilings, was required for this project. We've faced a brutal winter weather, along with the hospital location along the Rio Grande shoreline. Though such forces of nature challenged the construction team, we managed to build the project few weeks ahead of the schedule!
+              h6 SOME OF THE TASKS THAT WE SUCCESSFULLY completed:
+              ul.list-marked
+                li New emergency room complex with eight emergency examining rooms, two trauma rooms, and auxiliary areas
+                li Twelve (12) new patient rooms
+                li Four new (4) labor and delivery rooms
+                li New nursery
+                li New administrative, maintenance, housekeeping and training rooms
+                li New ambulance entrance with heated concrete
+                li New helicopter landing pad (heated aluminum deck) above the E.R. entrance with an 8,500 lb. capacity. The only one of its kind in a 60-mile radius.
+                li Heated sidewalks, driveways, and receiving dock
+                li Renovation of the Radiology Department
+                li The new addition totaled 47,000 sq.ft. and renovations encompassed approximately 10,000 sq.ft.
+  ='\n'
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

@@ -1,0 +1,22 @@
+header.page-header
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar_corporate(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-sm-device-layout='rd-navbar-fixed', data-md-layout='rd-navbar-static', data-md-device-layout='rd-navbar-fixed', data-lg-device-layout='rd-navbar-static', data-lg-layout='rd-navbar-static', data-stick-up-clone='false', data-sm-stick-up='true' data-md-stick-up='true' data-lg-stick-up='true', data-md-stick-up-offset='120px', data-lg-stick-up-offset='1px')
+      .rd-navbar-inner.rd-navbar-search-wrap
+        // RD Navbar Panel
+        .rd-navbar-panel.rd-navbar-search_lg-collapsable
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+          // RD Navbar Brand
+          .rd-navbar-brand 
+            a.brand__name(href='index.html')
+              +png(logoDefault)
+               
+
+        // RD Navbar Nav
+        .rd-navbar-nav-wrap.rd-navbar-search_not-collapsable
+          .rd-navbar-search_collapsable
+            button.rd-navbar-search__toggle.rd-navbar-fixed--hidden(data-rd-navbar-toggle='.rd-navbar-search-wrap')
+          include ../includes/_navbar-search
+          .rd-navbar-search_collapsable
+            include ../includes/_nav

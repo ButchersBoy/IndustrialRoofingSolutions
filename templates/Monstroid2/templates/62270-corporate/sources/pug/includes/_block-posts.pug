@@ -1,0 +1,212 @@
+//- Includes
+include ../elements/_ui-slider-blog
+// Post classic
+article.post-classic
+	.post-classic__header
+		.post-classic-title.post-classic-title-icon.linear-icon-star
+			h4: a(href=postImage) How our market research system works
+		.post-meta
+			.group
+				a(href=postImage): time(datetime='2017') Jan.20, 2016
+				a(href=postImage).meta-author Brian Williamson
+	+jpg('post-classic-1-886x501')
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand, work mostly with the SMB companies. Our team uncovers market opportunities, and sometimes, marketing challenges, that remain unseen by competitors.
+		.post-meta
+			.group
+				a.post-meta__comment(href=postImage) 3 comment(s)  
+				a(href=postImage) Theme
+				+tag-list({
+					list_class: 'list-inline-tag',
+					href: postImage,
+					items: [
+						"Style",
+						'Clean']
+				})
+
+		.post-classic-footer
+			ul.list-inline.list-inline-lg
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-facebook(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-twitter(href='#')
+				li: a.icon.icon-sm.icon-secondary.icon-secondary-divider.fa.fa-google-plus(href='#')
+
+			a(href=postImage).button.button-link Read More
+
+// Post gallery
+article.post-slider.post-classic
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postSlider) The Most Innovative Companies of 2016
+		.post-meta
+			.group
+				a(href=postSlider): time(datetime='2017') Jan.20, 2016
+				a(href=postSlider).meta-author Brian Williamson
+
+	+slider-blog({
+		class: 'carousel-slider-blog-post',
+		items: [
+			{
+				original_img: 'gallery-post-01-original-1000x667',
+				img_thumb: 'gallery-post-1-886x501'
+			},
+			{
+				original_img: 'gallery-post-02-original-1000x667',
+				img_thumb: 'gallery-post-2-886x501'
+			},
+			{
+				original_img: 'gallery-post-03-original-1000x667',
+				img_thumb: 'gallery-post-3-886x501'
+			}
+		]
+	})
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand, work mostly with the SMB companies. Our team uncovers market opportunities, and sometimes, marketing challenges, that remain unseen by competitors.
+		.post-classic-footer
+			.post-meta
+				.group
+					a.post-meta__comment(href=postSlider) 3 comment(s) 
+					a(href=postSlider) Theme
+					+tag-list({
+						list_class: 'list-inline-tag',
+						href: postSlider,
+						items: [
+							"Style",
+							'Clean']
+					})
+			a(href=postSlider).button.button-link Read more
+
+// Post video
+article.post-classic.post-video
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postVideo) Meet Richard White
+		.post-meta
+			.group
+				a(href=postVideo): time(datetime='2017') Jan.20, 2016
+				a(href=postVideo).meta-author Brian Williamson
+
+	.entry-video.embed-responsive.embed-responsive-16by9
+		iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand, work mostly with the SMB companies. Our team uncovers market opportunities, and sometimes, marketing challenges, that remain unseen by competitors. 
+
+		.post-classic-footer
+			.post-meta
+				.group
+					a.post-meta__comment(href=postVideo) 3 comment(s) 
+					a(href=postVideo) Theme
+					+tag-list({
+						list_class: 'list-inline-tag',
+						href: postVideo,
+						items: [
+							"Style",
+							'Clean']
+					})
+			a(href=postVideo).button.button-link Read more
+
+// Post standard
+article.post-classic.post-classic-simple
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postLink) Managing Human Resources
+		.post-meta
+			.group
+				a(href=postLink): time(datetime='2017') Jan.20, 2016
+				a(href=postLink).meta-author Brian Williamson
+
+	.post-classic-body
+		p The majority of market researching companies tend to work for the industry leaders - big corporations. We, on the other hand, work mostly with the SMB companies. Our team uncovers market opportunities, and sometimes, marketing challenges, that remain unseen by competitors. 
+
+		.post-classic-footer
+			.post-meta
+				.group
+					a.post-meta__comment(href=postLink) 3 comment(s)  
+					a(href=postLink) Theme
+					+tag-list({
+						list_class: 'list-inline-tag',
+						href: postLink,
+						items: [
+							"Style",
+							'Clean']
+					})
+			a(href=postLink).button.button-link Read more
+
+// Post Link
+article.post-link.post-classic
+	.post-classic-title
+		h4: a(href=blogPostLink) Launching Your Business
+	a(href='https://www.templatemonster.com/d/?utm_expid=2187874-92.i_6LOCbGRI-RabxtUctdMA.1&utm_referrer=https%3A%2F%2Fwww.templatemonster.com%2Fd%2F') http://templatemonster.com/
+
+// Post audio
+article.post-audio.post-classic
+	.post-classic__header
+		.post-classic-title
+			h4: a(href=postAudio) How to Manage Conflicts
+		.post-meta
+			.group
+				a(href=postAudio): time(datetime='2017') Jan.20, 2016
+				a(href=postAudio).meta-author Brian Williamson
+
+	// RD Audio
+	.rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+		.rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+			.rd-audio-controls.text-center
+				.rd-audio-controls-left
+					// Play\Pause button
+					a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+				.rd-audio-progress-bar-wrap
+					// Time
+					.rd-audio-time
+						// currentTime
+						span.rd-audio-current-time 00:00
+					// Progress bar
+					.rd-audio-progress-bar
+				// Volume button
+				a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+				// Volume bar
+				.rd-audio-volume-bar
+				.rd-audio-controls-righ.d-none
+					// Playlist button
+					a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+			.rd-audio-playlist-wrap
+				h6.rd-audio-playlist-title Playlist 
+				ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+					li(data-rd-audio-src='audio/sound.mp3')
+
+	.post-classic-body
+		.post-classic-footer
+			.post-meta
+				.group
+					a.post-meta__comment(href=postAudio) 3 comment(s)  
+					a(href=postAudio) Theme
+					+tag-list({
+						list_class: 'list-inline-tag',
+						href: postAudio,
+						items: [
+							"Style",
+							'Clean']
+					})
+			a(href=postAudio).button.button-link Read more
+
+// Post quote
+article.post-quote.post-classic
+	// Quote default
+	a(href=postQuote).quote-default
+		+quote-mark('quote-default__mark')
+		.quote-default__text: p.q.heading-4 The success of your business depends solely on you. We can give any assistance you need to reach new heights.
+		p.quote-default__cite Adam Smith
+
+// Pagination
+nav
+	ul.pagination-classic
+		li.active: span 1
+		li: a(href='#') 2
+		li: a(href='#') 3 
+		li: a(href='#') 4
+		li: span ..
+		li: a(href='#') 12
+		li: a.icon(href='#') Next

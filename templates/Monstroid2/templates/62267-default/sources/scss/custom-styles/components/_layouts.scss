@@ -1,0 +1,168 @@
+//
+// Layouts
+// --------------------------------------------------
+
+// Footer corporate,
+.pre-footer-corporate,
+.footer-corporate {
+  font-size: 14px;
+  line-height: (24 / 14);
+}
+
+.pre-footer-corporate {
+  padding: 50px 0;
+  background: $gray-lighter;
+
+  h6 + *,
+  .heading-6 + * {
+    margin-top: 18px;
+  }
+}
+
+.footer-corporate {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-corporate .footer-corporate__inner {
+  > * + * {
+    margin-top: 5px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .footer-corporate {
+    text-align: left;
+
+    .footer-corporate__inner {
+      > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .footer-corporate__inner {
+    @include display-flex;
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    margin-left: -15px;
+    margin-right: -15px;
+
+    > * {
+      padding: 0 15px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pre-footer-corporate {
+    padding: 80px 0;
+
+    h6 + *,
+    .heading-6 + * {
+      margin-top: 22px;
+    }
+  }
+}
+
+
+@media (min-width: map_get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+  .pre-footer-corporate {
+    padding: 120px 0;
+  }
+}
+
+// Footer minimal
+.footer-minimal {
+  padding: 60px 0;
+  text-align: center;
+  @include small;
+
+  * + .footer-minimal__list {
+    margin-top: 40px;
+  }
+  .footer-minimal__list + * {
+    margin-top: 20px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .footer-minimal {
+    padding: 80px 0;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .footer-minimal {
+    * + .footer-minimal__list,
+    .footer-minimal__list + * {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (min-width: map_get($grid-breakpoints, xl)) and (min-height: $screen-height-desktop) {
+  .footer-minimal {
+    padding: 130px 0;
+  }
+}
+
+// Footer modern
+.footer-modern {
+  background: $white;
+  padding: 1px 0;
+
+  .footer-modern__layer {
+    > * + * {
+      margin-top: 25px;
+    }
+  }
+}
+
+[class*='section'].bg-default + .footer-modern {
+  border-top: 1px solid $gray-1;
+}
+
+.footer-modern__layer {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include small;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+
+  > * {
+    padding: 0 15px;
+  }
+
+  &_top {
+    padding: 40px 0;
+  }
+
+  &_bottom {
+    padding: 20px 0;
+  }
+}
+
+.footer-modern__layer + .footer-modern__layer {
+  border-top: 1px solid $gray-1;
+}
+
+@include media-breakpoint-up(xl) {
+  .footer-modern__layer {
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+  }
+
+  .footer-modern {
+    .footer-modern__layer {
+      > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+}

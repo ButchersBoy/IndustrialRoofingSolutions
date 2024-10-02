@@ -1,0 +1,77 @@
+/**
+*
+* RD Navbar Classic
+* =====================================================
+*/
+
+.rd-navbar-wrap {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.rd-navbar-classic {
+	background-color: transparent;
+	// Static
+	&.rd-navbar-static {
+		border-bottom: 1px solid transparent;
+
+		.rd-navbar-aside-outer,
+		.rd-navbar-main-outer {
+			padding-left: $grid-gutter-width / 2;
+			padding-right: $grid-gutter-width / 2;
+		}
+
+		.rd-navbar-aside,
+		.rd-navbar-main {
+			max-width: $rd-navbar-static-width;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.rd-navbar-main {
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding: 35px 0;
+		}
+
+		// RD Navbar Brand
+		.rd-navbar-brand {
+			img {
+				max-width: 200px;
+				max-height: 200px;
+			}
+		}
+
+		.rd-navbar-nav-wrap {
+			display: flex;
+			align-items: center;
+			margin-left: 65px;
+		}
+
+		&.rd-navbar--is-stuck,
+		&.rd-navbar--is-clone {
+			border-bottom-color: nth($rd-navbar-border, 3);
+			.rd-navbar-aside-outer {
+				display: none;
+			}
+
+			.rd-navbar-main {
+				padding: 17px 0;
+			}
+
+			.rd-navbar-nav-item {
+				> .rd-navbar-submenu {
+					margin-top: 17px;
+				}
+			}
+		}
+	}
+
+	// Fixed 
+	&.rd-navbar-fixed {
+
+	}
+}

@@ -1,0 +1,6 @@
+include ../elements/_ui-thumbnail-flickr
+section.section.bg-gray-dark 
+  // Owl Carousel  
+  .owl-carousel.owl-carousel_flex.flickr.carousel-flickr(data-autoplay='true' data-flickr-tags='tm62268', data-items='2', data-sm-items='3', data-md-items='4', data-lg-items='5', data-xl-items='6', data-xxl-items='8' data-loop='false', data-dots='false'  data-mouse-drag="true", data-lightgallery="group")
+    - for(var i = 0; i < 8; i++) 
+      +flickr-item

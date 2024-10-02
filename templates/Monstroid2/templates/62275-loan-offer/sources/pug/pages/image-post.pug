@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+
+
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Image post'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-lg
+    .container
+      .row.row-60.justify-content-sm-center
+        .col-lg-8.section-divided__main
+          section.section-md.post-single-body
+            h3 How to Use Bootstrap Framework
+            .post-meta
+              .group
+                a(href=postImage): time(datetime='2017') Jan.20, 2016
+                a(href=postImage).meta-author by Brian Williamson
+                a(href=postImage) 3 comment(s)
+                a(href=postImage) Template
+                +tag-list({
+                    list_class: 'list-inline-tag',
+                    href: postImage,
+                    items: [
+                        "Style",
+                        'Clean']
+                })
+                
+            +img-thumbnail({
+                number: 1,
+                original:'post-classic-1-886x668',
+                img:'post-classic-1-886x668'
+            })
+            p.first-letter
+              | All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the
+              =' '
+              a(href='#') HTML Template
+              =' '
+              | that is based on your business’ or a closely related field. Either way, thanks to all the diversity here you will be able to choose a  template that can be either of a formal color scheme with some light colors in it or a more vivid one, featuring bold textures and hues!
+              
+
+            +jpg('nonstandart-post-1-886x668')
+
+            p
+              | When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a template for your HTML website, the overall number of characteristics that you will need to keep in mind narrows down significantly. But how do you stay focused on what kind of a template you need and what do you want to get from that template? We recommend focusing on 4 most essential characteristics, each vital for your company’s to have an efficient and long-standing online presence!
+              
+
+            // Quote default
+            .quote-default
+              +quote-mark('quote-default__mark')
+              .quote-default__text: p.q.heading-4 Monstroid² is perfect to display the members of your staff, team or working force.
+              p.quote-default__cite Adam Smith
+
+            p Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates… Due to the fact that this is a HTML Template, the process of installing it and using it is truly as easy as it gets! Read our documentation to understand how fast you can go from purchasing a TemplateMonster HTML Template to actually using it as a live skin for your company’s webpage. Also, our Novi Builder allows you to easily change the content (text; multimedia; blocks; pages) of any part of your new template!
+            
+            +list-inline-icon({
+                list_class: 'list-inline-sm',
+                items: [
+                    "icon-sm fa-facebook",
+                    'icon-sm fa-twitter',
+                    'icon-sm fa-google-plus',
+                    'icon-sm fa-vimeo',
+                    'icon-sm fa-youtube',
+                    'icon-sm fa-pinterest-p']
+            })
+
+          include ../sections/_section-blog-post-comment
+
+        .col-lg-4.section-divided__aside.section-divided__aside-left
+          include ../sections/_section-aside-sidebar-post
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

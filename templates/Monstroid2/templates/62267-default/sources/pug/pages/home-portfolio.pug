@@ -1,0 +1,502 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-portfolio-item
+
+block variables
+	- pageName = 'Home Portfolio'
+
+block page
+	// Page Header
+	include ../sections/_header-default
+	='\n'
+	
+	// Swiper
+	section.rd-parallax
+		.rd-parallax-layer(data-type='html', data-speed='1')
+			.swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5500')
+				.swiper-wrapper
+					.swiper-slide.bg-default(data-slide-bg='images/slider-slide-14-1920x1080.jpg')
+						.swiper-slide-caption(data-speed='0.5', data-fade='true').text-center
+							.container
+								h2(data-caption-animate='fadeInUpSmall') Discover the Full Potential of Bootstrap
+								h2(data-caption-animate='fadeInUpSmall') with Monstroid²
+								a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='200', href=getTemplateLink target = '_blank') Buy template
+					
+					.swiper-slide.bg-gray-lighter(data-slide-bg='images/slider-slide-13-1920x1080.jpg')
+						.swiper-slide-caption(data-speed='0.5', data-fade='true').text-center
+							.container
+								h1(data-caption-animate='fadeInUpSmall')
+									span Monstroid
+									sup 2
+								h3(data-caption-animate='fadeInUpSmall', data-caption-delay='200') New HTML Templates Generation
+								.group-lg.group-middle
+									a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink target='_blank') Buy template
+					
+					.swiper-slide.bg-secondary-8(data-slide-bg='images/slider-slide-12-1920x1080.jpg' style='background-position: center top;')
+						.swiper-slide-caption(data-speed='0.5', data-fade='true').text-center
+							.container
+								h2(data-caption-animate='fadeInUpSmall')
+									| Build by geeks
+									br
+									| & used by humans
+								h5.text-width-2.block-centered(data-caption-animate='fadeInUpSmall', data-caption-delay='200') Monstroid² aims to satisfy real needs of real projects. We've got a pack of useful tools for that.
+								.group-lg.group-middle
+									a.button.button-primary(data-caption-animate='fadeInUpSmall', data-caption-delay='350', href=getTemplateLink target='_blank') Buy template
+				
+				// Swiper Pagination
+				.swiper-pagination
+				
+				// Swiper Navigation
+				.swiper-button-prev.linear-icon-chevron-left
+				.swiper-button-next.linear-icon-chevron-right
+	='\n'
+	
+	// Our Services
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Our Services
+			.row.row-60.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						p.blurb__title Built For Speed
+						p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+						
+						ul.list-marked-primary
+							li Amazing Performance
+							li Improved Stability
+							li Optimized Page Load Time
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						p.blurb__title Flexible and Multipurpose
+						p Monstroid² allows to create a various websites for complex and scalable project.
+						
+						ul.list-marked-primary
+							li Lots of Predesigned Pages
+							li Extended Bootstrap Framework
+							li Clean Interface
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						p.blurb__title SEO Friendly
+						p Valid code and performance optimized framework make SEO easy and hassle free.
+						
+						ul.list-marked-primary
+							li Indexable Content
+							li Vast Keyword Application
+							li On-Page Optimization
+						
+						a(href='single-service-page.html').button.button-gray-light-outline read more
+	// About us
+	section.section.novi-bg.bg-gray-lighter.object-wrap
+		.section-lg
+			.container
+				.row.row-fix
+					.col-lg-5
+						h3 About us
+						p We are a team of professional, energetic individuals with talented designers and experienced managers available to guide our clients through the flawless and timely execution of any web design project. Since day one, we have been delivering impressive websites to our clients worldwide.
+						.row.row-30
+							.col-md-6.col-lg-12.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Award-winning designs
+										p We have received numerous awards for our designs, concepts, and ideas.
+							
+							.col-md-6.col-lg-12.col-xl-6
+								// Blurb minimal
+								article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+									.unit-left
+										.blurb-minimal__icon: span.icon.novi-icon.linear-icon-users2
+									.unit-body
+										p.blurb__title.heading-6: a(href=singleService) Expert team
+										p We are a team of dedicated web design and development professionals.
+						
+						.row.row-fix.justify-content-md-center
+							.col-md-12.group-progress
+								+progress-bar-linear({
+									title:         "UI Design",
+									progressStyle: "progress-linear-modern",
+									valueTo:       "98"
+								})
+								
+								+progress-bar-linear({
+									title:         "UX Design",
+									progressStyle: "progress-linear-modern",
+									valueTo:       "90"
+								})
+								
+								+progress-bar-linear({
+									title:         "Front End Development",
+									progressStyle: "progress-linear-modern",
+									valueTo:       "86"
+								})
+		
+		.novi-bg-img.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/image-original-13-1200x800.jpg)')
+	
+	// running projects
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Why Choose Monstroid²
+			.row.row-50
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-1-418x315',
+						title: 'Bootstrap Framework',
+						link:  'single-service-page.html',
+						text:  'Monstroid² is based on Bootstrap Framework, which makes it a nice template for any purpose. '
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-2-418x315',
+						title: 'Customizable Template',
+						link:  'single-service-page.html',
+						text:  'Use our Template to customize and update your website within seconds.'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-3-418x315',
+						title: 'Responsive & Retina Ready',
+						link:  'single-service-page.html',
+						text:  'Monstroid² looks great on any screen resolution and on any device due to its responsiveness.'
+					})
+	
+	// Counters
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent.text-center
+		.container
+			.row.justify-content-md-center.row-50
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-coffee-cup
+						.box-counter__wrap
+							.counter 1000
+						p.box-counter__title Coffee Cups
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-cube
+						.box-counter__wrap
+							.counter 74
+						p.box-counter__title Projects Done
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-chevrons-expand-horizontal
+						.box-counter__wrap
+							.counter 5
+							span bln+
+						p.box-counter__title Lines of Code Written
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-mustache-glasses
+						.box-counter__wrap
+							.counter 147
+						p.box-counter__title Happy Customers
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Portfolio
+			.isotope-wrap.row.row-70
+				.col-sm-12
+					ul.list-nav.isotope-filters.isotope-filters-horizontal
+						li: a.active(data-isotope-filter='*', data-isotope-group='gallery' href='#') All
+						li: a(data-isotope-filter='Category 1', data-isotope-group='gallery' href='#') Web Design
+						li: a(data-isotope-filter='Category 2', data-isotope-group='gallery' href='#') Web Development
+					
+					.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-1-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['Web Design'],
+								title:       'iStep Co.',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'slider-slide-14-1920x1080',
+								img:         'portfolio-2-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Web Design'],
+								title:       'Fabricator Ltd.',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-3-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['Web Design'],
+								title:       'Fresh Market',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'image-original-6-1200x905',
+								img:         'portfolio-4-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Web Design'],
+								title:       'Accessories Inc.',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								album:       true,
+								href:        'single-portfolio.html',
+								img:         'portfolio-5-418x315',
+								label_text:  'Album',
+								icon_class1: 'linear-icon-folder-picture',
+								items:       ['Web Development'],
+								title:       'CorpAdvise',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-arrow-right'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'portfolio-orginal-6-1200x675',
+								img:         'portfolio-6-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Web Development'],
+								title:       'GreenBiz',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'gallery-post-1-886x668',
+								img:         'portfolio-7-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Web Development'],
+								title:       'InDivine',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-plus'
+							})
+						
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+portfolio-item({
+								single_img:  true,
+								number:      3,
+								original:    'day-events-1-886x668',
+								img:         'portfolio-8-418x315',
+								icon_class1: 'linear-icon-picture',
+								items:       ['Web Development'],
+								title:       'InterFashion',
+								desc:        'Professional creative solutions.',
+								icon_class2: 'linear-icon-plus'
+							})
+	
+	include ../sections/_section-cta-2
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.justify-content-xl-center.row-50
+				.col-xl-9
+					h3 Represent Your Staff
+					p This section perfect to display the members of your staff, team or working force. Within Monstroid template you can present your team members in the best well made and interface with special design and multiple styling options.
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('brian-king-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('amanda-smith-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('george-nelson-418x315')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+	
+	// get a quote
+	section.section.novi-bg.bg-gray-lighter.object-wrap
+		.section-lg
+			.container
+				.row.row-fix.justify-content-end
+					.col-lg-5
+						h3 Get a Quote
+						// RD Mailform
+						form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+								label.form-label(for="contact-name") Your name
+							
+							.form-wrap
+								input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+								label.form-label(for="contact-email") Your e-mail
+							
+							.form-wrap
+								textarea#contact-message.form-input(name="message" data-constraints="@Required")
+								label.form-label(for="contact-message") Your message
+							
+							button(type="submit").button.button-primary send
+		
+		.novi-bg-img.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/parallax-05.jpg)')
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.text-center
+				h3 Testimonials
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							+quote-mark('quote-classic__mark')
+							.quote-classic__text: p.q Since I’m not a real pro in web design, I love to use these ready-made and beautifully looking templates. They are available at very affordable prices and can save you a lot of time.
+						
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-1-120x120')
+							.quote-classic__caption-main
+								p.quote-classic__cite Jane Smith
+								p.quote-classic__small Designer
+				
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							+quote-mark('quote-classic__mark')
+							.quote-classic__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-2-120x120')
+							.quote-classic__caption-main
+								p.quote-classic__cite James Wilson
+								p.quote-classic__small Designer
+				
+				.col-md-6.col-lg-4
+					// Quote classic
+					.quote-classic
+						.quote-classic__main
+							+quote-mark('quote-classic__mark')
+							.quote-classic__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated!
+						
+						.quote-classic__caption
+							.quote-classic__image.quote-classic__caption-aside
+								+jpg('testimonials-3-120x120')
+							.quote-classic__caption-main
+								p.quote-classic__cite Sam Lee
+								p.quote-classic__small Designer
+	='\n'
+	+divider
+	section.section.novi-bg.novi-bg-img.section-md.text-center.bg-default
+		.container
+			// Owl Carousel
+			.owl-carousel.text-center(data-autoplay='true' data-items='1', data-sm-items='2', data-md-items='4', data-lg-items='5', data-xl-items='6', data-stage-padding='15', data-loop='true', data-margin='30', data-mouse-drag="false", data-dots='true')
+				.item: a.link-transparent(href='#')
+					+png('brand-1-128x111')
+				.item: a.link-transparent(href='#')
+					+png('brand-2-129x102')
+				.item: a.link-transparent(href='#')
+					+png('brand-3-143x110')
+				.item: a.link-transparent(href='#')
+					+png('brand-4-129x86')
+				.item: a.link-transparent(href='#')
+					+png('brand-5-142x102')
+				.item: a.link-transparent(href='#')
+					+png('brand-6-134x122')
+	
+	// Page Footer 
+	include ../sections/_footer-corporate

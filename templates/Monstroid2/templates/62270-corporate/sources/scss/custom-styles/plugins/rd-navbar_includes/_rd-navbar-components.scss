@@ -1,0 +1,156 @@
+/*
+* Navbar components
+*/
+
+// RD Navbar
+.rd-navbar {
+  background: $rd-navbar-background;
+}
+
+// RD Navbar Toggle
+.rd-navbar-toggle {
+  @include make-toggle (
+                  $rd-navbar-toggle-preset,
+                  $rd-navbar-min-line-height,
+                  22px,
+                  $rd-navbar-fixed-toggle-color
+  );
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+// RD Navbar Brand
+.rd-navbar-brand {
+  line-height: 1;
+}
+
+.rd-navbar-search {
+  position: relative;
+
+  .rd-search {
+    background: $rd-navbar-background;
+
+    .form-input {
+      padding-left: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      min-height: 48px;
+      background-color: transparent;
+      border: 0;
+    }
+
+    .form-label {
+      left: 2px;
+      font-size: 12px;
+      font-style: normal;
+      top: 25px;
+    }
+  }
+
+  .rd-search__submit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 10;
+
+    $size: 22px;
+    width: 36px;
+    height: $size;
+    line-height: $size;
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &::before {
+      content: '\e922';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      font: 400 19px 'Linearicons';
+      line-height: inherit;
+      text-align: center;
+      color: inherit;
+    }
+  }
+}
+
+.rd-navbar .rd-navbar-search__toggle {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: $gray-4;
+
+  width: 26px;
+  height: 26px;
+  transition: .33s all ease;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    padding: 2px;
+    font-family: 'Linearicons';
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    will-change: transform;
+  }
+
+  &::before {
+    margin-right: -2px;
+    content: '\e922';
+    font-size: 19px;
+  }
+
+  &::after {
+    margin-top: -1px;
+    content: '\e92a';
+    font-size: 22px;
+  }
+
+
+  .desktop & {
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.rd-navbar {
+  .rd-search {
+    .form-input {
+      padding: 10px;
+    }
+
+    .form-label {
+      left: 10px;
+    }
+
+    .form-input,
+    .form-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: $body-color;
+    }
+  }
+}
+
+.rd-navbar {
+  button.rd-search__submit,
+  button.rd-navbar-search__toggle {
+    @include reset-button;
+  }
+}

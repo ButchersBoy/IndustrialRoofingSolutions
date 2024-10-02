@@ -1,0 +1,91 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Single room'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Single Room
+	section.section.section-lg.section-half-bg.text-center.text-md-start
+		.container
+			.row.row-40.align-items-lg-center
+				.col-md-5
+					h2 Superior Room
+					.terms-table
+						.terms-table-title bed:
+						.terms-table-text twin bed
+						.terms-table-title capacity:
+						.terms-table-text 2 adults, 1 children
+						.terms-table-title room size:
+						.terms-table-text 30m²
+						.terms-table-title view:
+						.terms-table-text sea view
+						.terms-table-title recommend:
+						.terms-table-text great for business trip
+						.terms-table-footer
+							span.terms-table-footer-text From
+							span.h2.terms-table-footer-total $199
+					.row.row-30.row-offset-1.justify-content-center.justify-content-xs-start( data-lightgallery='group' )
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'home-01-200x200',
+								imgOriginal: 'home-01-1200x800',
+							})
+						.col-5.col-xs-6
+							+thumbnail-gallery({
+								img: 'home-02-200x200',
+								imgOriginal: 'home-02-1200x800',
+							})
+				.col-md-7
+					.img-responsive
+						+img( 'room-01-700x788' )
+
+	// Single Room
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-right.section-half-bg-custom-5.text-center.text-sm-start
+		.container
+			.row.row-40.justify-content-between
+				.col-sm-6.col-lg-5
+					.block-lg
+						h2 Great Choice for a Relaxing Vacation
+						p Sed urna quam, laoreet a orci id, pretium ornanunc. Maecenas massa tortor, porttitor id felis quis, dignissim gravida tortor. Nam vitae porta ante, eu.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel molestie nisl. Duis ac mi leo. Mauris at convallis erat. Aliquam interdum semper luctus. Aenean ex tellus, gravida ut rutrum dignissim, malesuada vitae nulla. Sed viverra, nisl dapibus lobortis porttitor.
+						a.btn.btn-primary.btn-ujarak.btn-offset-1( href='#' ) Book now
+				.col-sm-6.col-lg-5
+					h2 Amenities
+					ul.list-md
+						li Free-to-use smartphone (Free)
+						li Safe-deposit box (Free)
+						li Luggage storage (Free)
+						li Childcare ($60 / Once / Per Accommodation)
+						li Massage ($15 / Once / Per Guest)
+						li 40-inch LED TV
+						li Iron and ironing board
+						li Mini bar
+						li Non-smoking
+						li Wired and wireless broadband Internet access
+						li Work desk
+
+	// Gallery
+	section.section.section-lg.text-center.text-md-start
+		.container
+			.row.row-40.justify-content-center
+				.col-9.col-md-11.col-lg-10.col-xxl-12
+					.owl-carousel.owl-carosel-1(
+						data-items='1',
+						data-sm-items='2',
+						data-md-items='3',
+						data-autoplay='false',
+						data-owl= {
+							nav: true
+						}
+					)
+						.img-responsive: +img( 'single-room-01-370x467' )
+						.img-responsive: +img( 'single-room-02-370x467' )
+						.img-responsive: +img( 'single-room-03-370x467' )
+						.img-responsive: +img( 'home-05-370x467' )
+
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

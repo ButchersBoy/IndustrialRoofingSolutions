@@ -1,0 +1,35 @@
+footer.section.footer-modern.bg-decor.wow.fadeInUp
+	.section-md: .container.wow.fadeInUp
+		.row.row-30.row-md-50.justify-content-md-between
+			.col-sm-5.col-md-4.col-lg-2.order-first.order-lg-0
+				.footer-modern-brand: +logo
+				ul.list-inline.list-inline-md.list-social.list-social-2
+					li: a.icon.mdi.mdi-twitter( href='#' )
+					li: a.icon.mdi.mdi-facebook-messenger( href='#' )
+					li: a.icon.mdi.mdi-telegram( href='#' )
+			.col-sm-5.col-lg-2
+				ul.footer-modern-list
+					li: a( href='#' ) News
+					li: a( href='#' ) About
+					li: a( href='#' ) Contacts
+					li: a( href='#' ) FAQ
+					li: a( href='#' ) Our Team
+			.col-sm-7.col-lg-5.order-first.order-lg-0: .inset-right-xl-85
+				p Get notified about the details of our Token Sales and other important updates.
+				form.rd-mailform.rd-form.rd-form-inline-2( data-form-output='form-output-global' data-form-type='subscribe' method='post' action='bat/rd-mailform.php' )
+					.form-wrap
+						input.form-input( id='subscribe-form-email' type='email' name='email' data-constraints='@Email @Required' )
+						label.form-label( for='subscribe-form-email' ) E-mail
+					.form-button
+						button.button.button-sm.button-primary.button-isi( type='submit' ) Submit
+			.col-sm-7.col-lg-3
+				ul.footer-modern-list
+					li: a( href='#' ) Watch Demo
+					li: a( href='#' ) Integration & API
+					li: a( href='#' ) iOS App
+					li: a( href='#' ) Android  App
+					li: a( href='#' ) Join Us
+
+		+rights.text-center
+
+	.bg-decor-line

@@ -1,0 +1,122 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-pricing-table
+
+block variables
+	- pageName = 'Single Service'
+
+block page
+	// Page header
+	include ../sections/_header
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "home-08-1920x800"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2 Exterior Design
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			.row.row-50.justify-content-sm-center
+				.col-md-10
+					h5 Tailor-made exteriors since 2005
+					p Te nam vero facilisis eloquentiam, antiopam repudiare ad has. Harum clita id eum, aeque putent eum in. Ex vel omnesque epicurei molestiae, feugiat nonumes volutpat ius et, cu his quem torquatos. Tritani detraxit mandamus vis eu, iuvaret expetendis mel in. Ea equidem consetetur sit, discere accumsan menandri eos no, sed primis viderer signiferumque id.
+				.col-md-10
+					h5 Design your home with confidence
+					p Melius commodo suscipiantur ad usu, eligendi interpretaris quo ex. Mea no vidit simul audiam, pro solum legere ut, qui ea quidam docendi. Nam te labore accusam, vim ad errem vivendo consectetuer. In duo paulo mediocrem, ea est reque labitur, adipisci conceptam at quo. Has no postea maiorum rationibus.
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-50
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Starter',
+						price: '$14.89'
+					})
+						ul.list
+							li 1 Project
+							li Exterior Renovation
+							li Siding
+							li Phone Support
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						class: 'pricing-table-label',
+						label: 'most popular',
+						title: 'Standard',
+						price: '$32.89'
+					})
+						ul.list
+							li 2 Projects
+							li Roofing
+							li Decorating
+							li Email Support
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Premium',
+						price: '$76.89 '
+					})
+						ul.list
+							li 3 Projects
+							li Home Repairs
+							li Garden Design
+							li Chat Support
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Professional',
+						price: '$89.89'
+					})
+						ul.list
+							li 4 Projects
+							li Exterior Design
+							li Landscape Design
+							li Online Support
+	
+	section.section-lg.bg-secondary
+		.container
+			.row
+				.col-md-4
+					h3 Haven’t found what you like? Browse our other services
+				.col-md-8
+					p Id lorem invidunt vix. Has ei quod audire accusam, ei duo labitur ceteros praesent. Vix brute congue ex. Sea probo detracto pertinacia cu, erant integre propriae eum eu. Aliquam pericula reprehendunt in sea
+					a(href='#' ).button.button-gray-light-outline View now!
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-60
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-1-418x315',
+						title: 'Landscape design',
+						link:  "#",
+						text:  'Est in ullum tibique, vim id latine dolorum periculis. Altera dicunt facilis eos ad. Eu nusq'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-2-418x315',
+						title: 'Decorating',
+						link:  "#",
+						text:  'Id wisi aliquid vim, est id detraxit vulputate, everti graecis ei mea. Causae vivendum facil'
+					})
+				.col-md-6.col-xl-4
+					+thumbnail-classic({
+						img:   'services-3-418x315',
+						title: 'Project planning',
+						link:  "#",
+						text:  'Te nam vero facilisis eloquentiam, antiopam repudiare ad has. Harum clita id eum, aeque pute'
+					})
+	
+	
+	// Page Footer
+	include ../sections/_footer

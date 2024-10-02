@@ -1,0 +1,164 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'About our farm'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	+parallax({
+		img: "parallax-03.jpg"
+	}).text-center.parallax-header.context-dark
+		.parallax-header__inner: .parallax-header__content
+			.container
+				.row.row-fix.justify-content-sm-center
+					.col-md-10.col-xl-8
+						h2 About Our Farm
+						p Adipiscing inciderint est in. Ius nusquam oportere et, ius ea mazim definiebas scribentur, ne putent verterem necessitatibus quo. No quem nulla graece quo. Duo erat dicat consequuntur no, sed in graeco lucilius omittantur, vim inani saperet definiebas te. Oporteat tractatos nam cu, et eam idque
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			.row.row-50
+				.col-md-6
+					h3 Our Mission
+					p Eu dico principes consequat his. Euismod constituam sed te. At est sensibus scriptorem, sint aperiam volumus eam ut, pro audire euismod necessitatibus ei. An tale veri errem duo, no quod probatus adipiscing mei. Eos graeci recusabo eu, tempor nostrud
+				.col-md-6
+					h3 Our Vision
+					p Mel tale nonumy ea. Illum dicunt usu te. Ne iisque equidem definitionem usu, vis facer labitur suscipit cu. Et principes splendide deseruisse vis, vim praesent urbanitas voluptatibus ne. Pri id case definiebas
+	
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-primary-light
+		.container
+			.row.row-50.row-lg-90
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+						p.blurb__title Years of Experience
+						p Ei solum iisque saperet quo, quot tamquam dissentiunt sea ne, ne per accusam lucilius
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+						p.blurb__title Professional Approach
+						p Eu dico principes consequat his. Euismod constituam sed te. At est sensibus scriptorem
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-file-search
+						p.blurb__title Customer-Oriented Service
+						p Est in ullum tibique, vim id latine dolorum periculis. Altera dicunt facilis eos ad
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-headset
+						p.blurb__title Reliable Team
+						p Id wisi aliquid vim, est id detraxit vulputate, everti graecis ei mea. Causae vivendum
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+						p.blurb__title High-Quality Products
+						p Te nam vero facilisis eloquentiam, antiopam repudiare ad has. Harum clita id eum, aeque
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal
+						.blurb-minimal__icon: span.icon.novi-icon.linear-icon-cart-full
+						p.blurb__title Affordable Prices
+						p Id lorem invidunt vix. Has ei quod audire accusam, ei duo labitur ceteros praesent
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Our Team
+			p
+				| Appetere abhorreant duo no, ne elit voluptua vim, iisque sensibus vim id. Cu tation appetere patrioque pri, mel ad oratio
+				br.d-none.d-xl-block
+				|  eirmod. No errem assueverit nam, mei error quidam rationibus an. Te eos fabulas suscipiantur
+			.row.row-30.justify-content-sm-center
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('brian-king-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title  Brian King
+							p.thumb__subtitle Founder, Farm Manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('amanda-smith-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title  Amanda Smith
+							p.thumb__subtitle Field Supervisor
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('george-nelson-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title  George Nelson
+							p.thumb__subtitle Field Assistant
+	
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

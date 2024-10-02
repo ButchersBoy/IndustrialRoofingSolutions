@@ -1,0 +1,46 @@
+// RD Navbar
+.rd-navbar-wrap
+  nav.rd-navbar(
+  data-body-class=              'rd-navbar-static-smooth'
+  data-layout=                  'rd-navbar-fixed',
+  data-sm-layout=               'rd-navbar-fixed',
+  data-md-layout=               'rd-navbar-fixed',
+  data-md-device-layout=        'rd-navbar-fixed',
+  data-lg-layout=               'rd-navbar-static',
+  data-lg-device-layout=        'rd-navbar-fixed',
+  data-xl-layout=               'rd-navbar-static',
+  data-xl-device-layout=        'rd-navbar-static',
+  data-xxl-layout=              'rd-navbar-static',
+  data-xxl-device-layout=       'rd-navbar-static',
+  data-lg-stick-up-offset=      '69px',
+  data-xl-stick-up-offset=      '35px',
+  data-xxl-stick-up-offset=     '35px',
+  data-lg-stick-up=             'true',
+  data-xl-stick-up=             'true',
+  data-xxl-stick-up=            'true'
+  )
+    .rd-navbar-inner
+      // RD Navbar Panel
+      .rd-navbar-panel
+        button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+        // RD Navbar Brand
+        .rd-navbar-brand
+          a.brand-name(href='index.html')
+            +png('logo-1770x398')
+
+      // RD Navbar Nav
+      .rd-navbar-nav-wrap
+        include ../includes/_nav
+
+      .rd-navbar-static--hidden.rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1(data-rd-navbar-toggle='.rd-navbar-top-panel__content'): span
+      .rd-navbar-top-panel__content
+        p
+          span.icon.fa-phone
+          =" Let's talk "
+          a(href='callto:#') (703) 329-06-32
+        .unit.flex-row.align-items-center.unit-spacing-xs
+          .unit-left
+            span.icon.fa-map-marker
+          .unit-body
+            a(href='#').navbar-link-default 6036 Richmond hwy., Alexandria, VA 22303"

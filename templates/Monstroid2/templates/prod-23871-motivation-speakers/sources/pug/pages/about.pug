@@ -1,0 +1,114 @@
+extends ../_skeleton
+
+//- Includes
+include ../components/progress-linear
+include ../components/testimonial
+
+block variables
+	- pageName = 'About'
+
+block page
+	include ../sections/_header-classic
+
+	+breadcrumbs
+
+	// About
+	section.section.section-lg.section-relative.bg-transparent
+		.container
+			.row.row-30.flex-lg-row-reverse.align-items-center
+				.col-md-6.col-lg-7
+					.block-sm
+						h6 About
+						h3 A Few Words About Me
+						p.lead-custom “Aonides, spatii, et danista. Eheu, valebat! Eheu, fermium! Abaculuss sunt caculas de bi-color diatria. Bi-color, bassus aususs sapienter visum de.
+						p Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat justo ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante nisi, elementum vel rutrum.
+						p Nam lobortis odio vitae ex egestas, et volutpat justo ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante nisi, elementum vel rutrum eu, accumsan.
+
+				.col-md-6.col-lg-5: +img('home-02-470x547')
+
+	// My skills
+	section.section.section-md.bg-transparent.section-relative
+		.decor-7: +img('decor-07-1570x1751.png')
+		.container
+			.row.row-30.justify-content-between.align-items-md-end
+				.col-md-7.col-lg-6
+					h6 My skills
+					h3 Personal Qualities
+					p Vivamus ac purus pharetra, laoreet libero eu, pellentesque purus. Nam lobortis odio vitae ex egestas, et volutpat justo ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante nisi.
+					ul.list-marked
+						li Cum pulchritudine velum, omnes quadraes vitare.
+						li Lumens sunt calcarias de clemens era.
+						li Secundus, dexter amors grauiter demitto de pius.
+						li Sunt homoes visum lotus, grandis solemes.
+				.col-md-5.col-lg-5
+					+progress-linear({
+						title: 'Counselling',
+						value: '85'
+					})
+					+progress-linear({
+						title: 'Understanding',
+						value: '45'
+					})
+					+progress-linear({
+						title: 'Communication',
+						value: '90'
+					})
+					+progress-linear({
+						title: 'Cooperation',
+						value: '71'
+					})
+
+	// My new book
+	section.section.section-md.bg-transparent.section-relative
+		.container
+			.row.row-30.align-items-center
+				.col-md-6.col-lg-5.text-lg-right
+					+img('about-01-375x455')(class='img-shadow')
+				.col-md-6.col-lg-7
+					.block-sm
+						h6 My new book
+						h3 New 2018 Book
+							br
+							| by
+							=" "
+							span.text-primary John Doe
+						p Rumors trabem, tanquam neuter victrix. Cum bulla manducare, omnes sagaes pugna rusticus, nobilis liberies. Ecce, calcaria! Hercle, fluctui placidus!, xiphias! Noster, barbatus nixs superbe desiderium de domesticus, teres detrius. Cum humani generis.
+						p.lead-custom Ubi est magnum fraticinida? Sunt agripetaes demitto primus, mirabilis historiaes. Cum heuretes volare, omnes lixaes contactus.
+						a.button.button-primary.button-circle.button-shadow.button-icon.button-icon-right(href='#') Download Book
+							span.icon.fa-download
+
+	// Tweets
+	section.section.section-md.bg-transparent.section-relative.text-center
+		.decor-8: +img('decor-08-600x1031.png')
+		.container
+			h3 What People Say
+			.owl-carousel.owl-carousel-testimonials(
+				data-items='1'
+				data-dots='true'
+				data-nav='false'
+				data-stage-padding='0'
+				data-loop='false'
+				data-margin='0'
+				data-mouse-drag="false"
+				data-dots-each='1'
+				data-autoplay='6000')
+				+testimonial({
+					img: 'people-01-101x101',
+					text: 'Abactus superbus historia est. Castors sunt seculas de rusticus amor. Est neuter tus, cesaris. Cur itineris tramitem resistere? Sunt verpaes captis ferox, gratis cedriumes. Bi-color classiss ducunt ad mons. Amicitia studeres, tanquam dexter idoleum. Onuss sunt genetrixs.',
+					name: 'Ann McMillan',
+					position: 'Regular Client'
+				})
+				+testimonial({
+					img: 'people-02-101x101',
+					text: 'Fraticinida de camerarius consilium, aperto amor! Lanistas resistere, tanquam fortis tabes. Eheu, navis! Barcass volare, tanquam castus ventus. Rumor, habena, et historia. Extums sunt speciess de emeritis eleates. Boreas, genetrix, et musa. Cum lapsus resistere, omnes.',
+					name: 'Ronald Wood',
+					position: 'Regular Client'
+				})
+				+testimonial({
+					img: 'people-03-101x101',
+					text: 'Cadunt foris ducunt ad teres contencio. Bullas favere in hortus! Heu, pius mensa! Gluten germanus genetrix est. Sensorems sunt classiss de grandis lactea. Eheu. Fatalis usus aegre visums visus est. Cum lanista experimentum, omnes dominaes dignus regius, rusticus vortexes.',
+					name: 'Maria Perry',
+					position: 'Regular Client'
+				})
+
+	include ../sections/_footer-classic

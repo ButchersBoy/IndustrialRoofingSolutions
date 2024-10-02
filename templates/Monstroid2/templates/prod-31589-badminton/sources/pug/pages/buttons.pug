@@ -1,0 +1,24 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Buttons'
+
+block page
+	// Page header
+	include ../sections/_header-classic
+	
+	+breadcrumbs
+	='\n'
+	
+	// Buttons
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.group-lg
+				.button.button-primary View Details
+				.button.button-black Book a Class
+				.button.button-gray-light-outline Get in Touch
+				.button.button-link read more
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-classic

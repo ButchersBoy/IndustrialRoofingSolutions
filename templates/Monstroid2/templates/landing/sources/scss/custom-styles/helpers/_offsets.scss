@@ -1,0 +1,165 @@
+/*
+*
+* Offsets
+* --------------------------------------------------
+*/
+
+.offset-top-40{
+  margin-top: 40px;
+}
+
+// Element offset
+* + p {
+  margin-top: 14px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 24px;
+  }
+}
+p + p { margin-top: 12px; }
+
+
+// Headings
+
+
+// Headings + Paragraph
+
+
+// Paragraph + Headings
+
+
+// Tags + Tags
+h3 + h5{
+  margin-top: 20px;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 35px;
+  }
+}
+
+
+svg + h2,
+img + h2{
+  margin-top: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 55px;
+  }
+}
+
+h2 + p{
+  margin-top: 24px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 42px;
+  }
+}
+
+
+// Tags + Classes
+p + .button{
+  margin-top: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 40px;
+  }
+}
+
+// Classes
+* + .rd-mailform { }
+.page * + .row{
+  margin-top: 45px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 80px;
+  }
+}
+
+// Classes + Tags
+.icon-circle.icon-lg + h5{
+  margin-top: 18px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 28px;
+  }
+}
+
+
+// Classes + Classes
+.container + .container { margin-top: 60px; }
+.row + .row { margin-top: 60px; }
+
+
+// Media offsets
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+
+html .page {
+  .offset-top-0{
+    margin-top: 0;
+  }
+
+  .offset-top-24{
+    margin-top: 24px;
+  }
+
+  .offset-top-60{
+    margin-top: 60px;
+  }
+
+  // Range spacing
+  .row-60 {
+    @include grid-offset(60px);
+  }
+
+  .row-15 {
+    @include grid-offset(15px);
+  }
+
+  .row-30 {
+    @include grid-offset(30px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    .row-lg-90 {
+      @include grid-offset(90px);
+    }
+  }
+
+
+
+  @include media-breakpoint-up(xl) {
+    .row-xl-80{
+      @include grid-offset(80px);
+    }
+
+    .row-xl-60 {
+      @include grid-offset(60px);
+    }
+  }
+
+  .row-50 {
+    @include grid-offset(50px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    .row-lg-30 {
+      @include grid-offset(30px);
+    }
+  }
+}

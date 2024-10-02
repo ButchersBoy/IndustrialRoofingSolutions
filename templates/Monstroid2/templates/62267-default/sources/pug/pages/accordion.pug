@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/card
+
+block variables
+	- pageName = 'Accordion'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default
+		.container
+			// Accordion
+			#accordion2(role='tablist')
+				+card({
+					parentId: "accordion2",
+					title:   "Technical Support Representative"
+				})
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion2",
+					title:   "Customer Care Specialist"
+				})
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					a(href='#').button.button-primary APPLY NOW
+				
+				+card({
+					parentId: "accordion2",
+					title:   "Interactive Art Director"
+				})
+					p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+					a(href='#').button.button-primary APPLY NOW
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

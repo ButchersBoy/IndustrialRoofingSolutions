@@ -1,0 +1,59 @@
+/** @section Boxes */
+
+/* Box banner */
+.halloween-box {
+	width: 100%;
+	min-height: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 20px;
+	background-size: cover;
+	background-position: center;
+	color: $halloween-dark;
+}
+
+.halloween-box-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.1;
+}
+
+.halloween-box-text {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.4;
+	letter-spacing: .1em;
+}
+
+.halloween-box-light {
+	color: $white;
+	text-transform: uppercase;
+}
+
+* + .halloween-box-text { margin-top: 9px * $halloween-xs-multiplier }
+* + .halloween-box-btn { margin-top: 24px * $halloween-xs-multiplier }
+
+@include media-breakpoint-up( lg ) {
+	.halloween-box {
+		padding: 60px 30px;
+	}
+
+	* + .halloween-box-text { margin-top: 9px * $halloween-lg-multiplier }
+	* + .halloween-box-btn { margin-top: 24px * $halloween-lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.halloween-box {
+		padding: 82px 40px 70px;
+	}
+
+	.halloween-box-title {
+		font-size: 50px;
+		line-height: 1;
+	}
+
+	* + .halloween-box-text { margin-top: 9px }
+	* + .halloween-box-btn { margin-top: 24px }
+}

@@ -1,0 +1,21 @@
+//- title - counter title
+//- titleAttr - counter title classes
+//- counter - {counter} Object
+mixin counter-creative(obj)
+	.counter-creative(class=obj.mod)
+		.counter-creative-number
+			span.counter=obj.number
+		h6.counter-creative-title=obj.title
+
+mixin counter(title, titleAttr, counter, titleSize)
+	.counter-wrap
+		if (counter.preffix !== null)
+			div(class=titleSize)
+				span.counter(class= titleAttr data-speed= counter.dataSpeed)= counter.dataTo
+				span.counter-preffix(class= counter.preffixStyle)= counter.preffix
+
+		else
+			div(class=titleSize)
+				span.counter(class= titleAttr data-step= counter.dataSpeed)= counter.dataTo
+		if (title !== null)
+			p(class= counter.attr)= title

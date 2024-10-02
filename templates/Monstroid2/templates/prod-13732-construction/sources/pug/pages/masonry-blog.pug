@@ -1,0 +1,246 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Masonry Blog'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  include ../elements/_ui-parallax
+  section.bg-gray-dark
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-3.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName 
+
+  section.bg-default.section-md
+    .container
+      .row: .col-sm-12.text-center: h4.heading-decorated Blog 
+      .posts-lists-masonry-3-cols
+        // Post classic
+        article.post-classic.post-minimal
+          +jpg('blog-image-1-886x668')
+
+          .post-classic-title.post-classic-title-icon.linear-icon-star
+            h6: a(href=postImage) The art and science of color planning for performance requirements
+
+          .post-meta
+            .group
+              a(href=postImage): time(datetime='2017') Jan.20, 2017
+              a(href=postImage).meta-author by Brian Williamson
+
+          .post-classic-body
+            p Inorganic pigments are typically used to meet high performance requirements but typically include fewer bright colors.
+
+        // Post slider
+        article.post-slider.post-minimal
+
+          +slider-blog({
+            class: 'carousel-slider-blog-post',
+            items: [
+              {
+                original_img: 'project-category-1-original-1200x800',
+                img_thumb: 'project-category-1-original-1200x800'
+              },
+              {
+                original_img: 'project-category-2-original-1200x800',
+                img_thumb: 'project-category-2-original-1200x800'
+              },
+              {
+                original_img: 'project-category-3-original-1200x800',
+                img_thumb: 'project-category-3-original-1200x800'
+              }
+            ]
+          })
+
+          .post-classic-title
+            h6: a(href=postSlider) FUTURE PROOFING HOSPITALS
+
+          .post-meta
+            .group
+              a(href=postSlider): time(datetime='2017') Jan.20, 2017
+              a(href=postSlider).meta-author by Brian Williamson
+
+          .post-classic-body
+            p By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…
+
+        // Post video
+        article.post-slider.post-minimal
+          .entry-video.embed-responsive.embed-responsive-16by9
+            iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+          .post-classic-title
+            h6: a(href=postVideo) TOP 40 MILITARY CONSTRUCTION FIRMS
+
+          .post-meta
+            .group
+              a(href=postVideo): time(datetime='2017') Jan.20, 2017
+              a(href=postVideo).meta-author by Brian Williamson
+
+          .post-classic-body
+            p Fluor Corp., The Walsh Group, and Hensel Phelps top Building Design+Construction’s annual ranking of the nation’s largest military sector construction and construction management firms, as reported in the 2017 Giants 300 Report.
+
+        // Post Link
+        article.post-link
+          .post-classic-title
+            h6: a(href=blogPostLink) TOP 30 SPORTS FACILITY ENGINEERING FIRMS
+          a(href=blogPostLink) http://templatemonster.com/
+
+        // Post standard
+        article.post-classic.post-minimal
+          .post-classic-title
+            h6: a(href=postLink) US EMBASSY IN UKRAINE
+
+          .post-meta
+            .group
+              a(href=postLink): time(datetime='2017') Jan.20, 2017
+              a(href=postLink).meta-author by Brian Williamson
+
+          .post-classic-body
+            p This project turned out to be exciting from the very beginning… To start with its complexity, besides designing a regular…
+          .post-minimal-footer
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-xxs fa-facebook",
+                'icon-xxs fa-twitter',
+                'icon-xxs fa-google-plus',
+                'icon-xxs fa-vimeo',
+                'icon-xxs fa-youtube',
+                'icon-xxs fa-pinterest-p']
+            })
+
+            a(href=postLink).button.button-link View now!
+
+        // Post quote
+        article.post-quote.post-minimal
+          a(href=postQuote)
+            // Quote centered
+            .quote-centered
+              +quote-mark('quote-centered__mark')
+
+              .quote-centered__text
+                p.heading-6 How to save 10 grand a year with digital blueprints
+
+              p.quote-centered__cite Adam Smith
+
+        // Post classic
+        article.post-minimal
+          +jpg('blog-image-4-415x315')
+          .post-classic-title
+            h6: a(href=postImage) TOP 30 SPORTS FACILITY ENGINEERING FIRMS
+
+          .post-meta
+            .group-xs
+              a(href=postImage): time(datetime='2017') Jan.20, 2017
+              a(href=postImage).meta-author by Brian Williamson
+              a(href=postImage) 3 comment(s)
+              +tag-list({
+                list_class: 'list-inline-tag',
+                href: postImage,
+                items: [
+                  "Industry News"]
+              })
+
+          .post-classic-body
+            p AECOM, Thornton Tomasetti, and ME Engineers top Building Design+Construction’s annual ranking of the nation’s largest sports facility sector engineering and…
+
+        // Post classic
+        article.post-minimal
+          +jpg('blog-image-3-415x315')
+          .post-classic-title
+            h6: a(href=postImage) SOLAR PANELS REQUIRED BY LAW?
+
+          .post-meta
+            .group-xs
+              a(href=postImage): time(datetime='2017') Jan.20, 2017
+              a(href=postImage).meta-author by Brian Williamson
+              a(href=postImage) 3 comment(s)
+              +tag-list({
+                list_class: 'list-inline-tag',
+                href: postImage,
+                items: [
+                  "Industry News"]
+              })
+
+          .post-classic-body
+            p Newest development in the CA state legislature made it obligatory to add a solar panel or two atop of any…
+
+        // Post classic
+        article.post-minimal
+          +jpg('blog-image-5-415x315')
+          .post-classic-title
+            h6: a(href=postImage) TOP 40 MILITARY CONSTRUCTION FIRMS
+
+          .post-meta
+            .group-xs
+              a(href=postImage): time(datetime='2017') Jan.20, 2017
+              a(href=postImage).meta-author by Brian Williamson
+              a(href=postImage) 3 comment(s)
+              +tag-list({
+                list_class: 'list-inline-tag',
+                href: postImage,
+                items: [
+                  "Industry News"]
+              })
+
+          .post-classic-body
+            p Fluor Corp., The Walsh Group, and Hensel Phelps top Building Design+Construction’s annual ranking of the nation’s largest military sector construction…
+
+        // Post audio
+        article.post-audio.post-minimal
+          include ../includes/_rd-audio-track
+
+          .post-classic-title
+            h6: a(href=postAudio) BIKE PARTS WAREHOUSE, DE
+
+          .post-classic-body
+            p Delaware proved to be a very friendly place to work at… While invited there for completing a mid-sized warehouse for…
+
+          .post-minimal-footer
+            .post-meta
+              .group
+                a(href=postAudio): time(datetime='2017') Jan.20, 2017
+                a(href=postAudio).meta-author by Brian Williamson
+                
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-xxs fa-facebook",
+                'icon-xxs fa-twitter',
+                'icon-xxs fa-google-plus',
+                'icon-xxs fa-vimeo',
+                'icon-xxs fa-youtube',
+                'icon-xxs fa-pinterest-p']
+            })
+
+            a(href=postAudio).button.button-link View now!
+
+  +divider
+  section.section-sm.text-center
+    .container
+      +pagination-classic(1,
+      [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+      null,
+      {"title": "", "href": "#"}
+      )
+
+
+  // Page Footer
+  include ../sections/_footer-corporate

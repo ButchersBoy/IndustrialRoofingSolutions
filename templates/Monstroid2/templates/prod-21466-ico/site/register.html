@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span><span class="cssload-dots"></span>
+        </div><img src="images/logo-default-324x88.png" alt="" width="162" height="44"/>
+      </div>
+    </div>
+    <div class="page">
+      <section class="section section-single section-relative gradient-1 bg-vide-2">
+        <div class="section-single-inner">
+          <div class="section-single-header">
+            <div class="container">
+              <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-light" src="images/logo-default-324x88.png" alt="" width="162" height="44"/></a>
+            </div>
+          </div>
+          <div class="section-single-main">
+            <div class="container">
+              <div class="form-style-2">
+                <h5 class="form-title">Create an account</h5>
+                <!--RD Mailform-->
+                <form class="rd-mailform rd-form">
+                  <div class="form-wrap">
+                    <label class="form-label" for="register-email">Email</label>
+                    <input class="form-input" id="register-email" type="email" name="email" data-constraints="@Required @Email">
+                  </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="register-password">Password</label>
+                    <input class="form-input" id="register-password" type="password" name="password" data-constraints="@Required">
+                  </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="register-password-2">Repeat Password</label>
+                    <input class="form-input" id="register-password-2" type="password" name="password" data-constraints="@Required">
+                  </div>
+                  <label class="checkbox-inline">
+                    <input name="input-checkbox-1" value="checkbox-1" type="checkbox">I agree to <a href="privacy-policy.html">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+                  </label>
+                  <button class="button button-block button-primary button-isi" type="submit">Register</button><a class="button button-block button-icon button-icon-left button-default-outline-2" href="#"><img src="images/icon-1-20x20.png" alt="" width="20" height="10"/><span>Sign up with Google</span></a>
+                </form>
+                <p>Have an account? <a class="link-1" href="login.html">Sign in!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="section-single-footer">
+            <div class="container">
+              <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Crypto</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://zemez.io/">Zemez</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-vide" data-vide-bg="video/video-3" data-vide-options="posterType: jpg, position: 50% 50%"></div>
+      </section>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+/*
+* Fixed Layout
+*/
+.rd-navbar-fixed {
+  display: block;
+
+
+  // Reveal nav panel toggle
+  .rd-navbar-toggle {
+    display: inline-block;
+  }
+
+  .rd-navbar-button{
+    position: fixed;
+    top: 7px;
+    right: 4px;
+    z-index: 999;
+    display: none;
+
+    @media (min-width: 400px) {
+      display: block;
+    }
+
+    .button{
+      padding: 12px 29px 9px;
+    }
+  }
+
+
+  // RD Navbar Brand
+  .rd-navbar-brand {
+    position: relative;
+    margin-left: 6px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+
+    font-size: 22px;
+    line-height: 46px;
+
+    img{
+      max-width: 140px;
+      height: auto;
+    }
+  }
+
+
+  // RD Navbar Panel
+  .rd-navbar-panel {
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    padding: ($rd-navbar-fixed-height - $rd-navbar-fixed-line-height) / 2;
+    height: $rd-navbar-fixed-height;
+    color: $rd-navbar-fixed-panel-color;
+    z-index: 999;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: $rd-navbar-fixed-shadow;
+      background: $rd-navbar-fixed-panel-background;
+    }
+
+    > *{
+      z-index: 1;
+    }
+  }
+
+
+  // Base search style
+  .rd-navbar-search{
+    position: fixed;
+    right: 46px;
+    top: ($rd-navbar-fixed-height - $rd-navbar-fixed-line-height) / 2;
+
+    display: inline-flex;
+
+    z-index: 1000; // More than .rd-navbar-panel
+
+    .rd-search{
+      position: absolute;
+      right: 4px;
+      top: calc(100% + 12px);
+      width: 240px;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      transform: translateX(-10px);
+    }
+
+    .rd-search-results-live{
+      display: none;
+    }
+
+    .form-input{
+      padding-right: 50px;
+    }
+
+    .rd-search-form-submit{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      width: 50px;
+      padding: 0;
+      border: none;
+
+      background-color: transparent;
+      color: $black;
+
+      &:hover{
+        color: $primary;
+      }
+    }
+
+    &.active{
+      .rd-search{
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+    }
+  }
+
+  // Search toggle
+  .rd-navbar-search-toggle{
+    display: inline-flex;
+    color: $rd-navbar-panel-color;
+
+    &:hover{
+      color: $primary;
+    }
+
+    @include toggle-icons-via-rotation(48px, 48px, 26px, '\f43b', '\f24c', 'Material Design Icons', 'Material Design Icons');
+  }
+
+
+  // Nav wrap and Search into nav wrap styles
+  .rd-navbar-nav-wrap {
+    @extend %rd-navbar-transition;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    color: $rd-navbar-fixed-nav-color;
+    background: $rd-navbar-fixed-nav-background;
+    transform: translateX(-120%);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+
+  // RD Navbar nav
+  .rd-navbar-nav {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      height: 8px;
+    }
+
+    li {
+      > a {
+        display: block;
+        padding: 11px 56px 11px 16px;
+        color: $rd-navbar-fixed-nav-color;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      &:hover,
+      &.active,
+      &.opened{
+        > a{
+          background: $rd-navbar-fixed-nav-active-background;
+          color: $rd-navbar-fixed-nav-active-color;
+        }
+        > .rd-navbar-submenu-toggle {
+          color: $rd-navbar-fixed-nav-active-color;
+        }
+      }
+
+      &.opened {
+        > .rd-navbar-submenu-toggle {
+          &:after {
+            transform : rotate(180deg);
+          }
+        }
+      }
+
+      & + li{
+        margin-top: 4px;
+      }
+    }
+
+    .rd-navbar-submenu-toggle {
+      cursor: pointer;
+      color: $rd-navbar-fixed-nav-color;
+
+      &::after {
+        content: '\f236';
+        position: absolute;
+        top: 22px;
+        right: 0;
+        margin-top: -22px;
+        width: 65px;
+        height: 48px;
+        font: 400 28px "Material Design Icons";
+        line-height: 48px;
+        text-align: center;
+        transition: 0.3s transform ease;
+        z-index: 2;
+      }
+    }
+  }
+
+
+  // RD navbar submenu styles
+  .rd-navbar-dropdown,
+  .rd-navbar-megamenu {
+    display: none;
+    margin-top: 4px;
+  }
+
+  .rd-navbar-submenu {
+    position: relative;
+    @extend %rd-navbar-transition;
+
+    .rd-navbar-dropdown > li > a {
+      padding-left: 30px;
+    }
+
+    .rd-navbar-dropdown li li > a,
+    .rd-navbar-megamenu ul li li > a {
+      padding-left: 48px;
+    }
+
+    &.opened {
+      > .rd-navbar-dropdown,
+      > .rd-navbar-megamenu {
+        display: block;
+      }
+    }
+  }
+
+
+  // RD Navbar Collapse
+  .rd-navbar-collapse{
+    position: fixed;
+    right: 4px;
+    top: $rd-navbar-fixed-height + 8px;
+    transform: translateX(-10px);
+
+    padding: 5px 10px;
+    width: 280px;
+
+    border-radius: 3px;
+    background-color: $rd-navbar-fixed-panel-background;
+    box-shadow: $rd-navbar-shadow;
+    text-align: left;
+    font-size: 14px;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: .3s;
+
+    &.active{
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-toggle {
+      position: fixed;
+      right: 4px;
+      top: 4px;
+      display: inline-block;
+      z-index: 1000; // More than .rd-navbar-panel
+    }
+
+    &,
+    a{
+      color: $rd-navbar-fixed-panel-color;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  // RD Navbar States
+  &.active {
+    .rd-navbar-nav {
+      transform: translateX(0);
+    }
+  }
+
+  &.rd-navbar--is-clone {
+    display: none;
+  }
+
+  .rd-navbar-fixed--visible {
+    display: block;
+  }
+
+  .rd-navbar-fixed--hidden {
+    display: none;
+  }
+}
+
+html.rd-navbar-fixed-linked {
+  .page {
+    padding-top: 55px;
+  }
+}

@@ -1,0 +1,79 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+
+block variables
+	- pageName = 'Location'
+
+block page
+	// Page header
+	include ../sections/_header-modern
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section
+		include ../sections/_section-gmap
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-50
+				.col-md-6
+					h2 Contact details
+					h3.heading-6 Find us
+					address 27 Rainbow Rd#[br] Los Angeles, CA#[br] California 90017
+					ul.list-inline-sm.list-social
+						li: a.icon.novi-icon.icon-sm-bigger.fa.fa-facebook(href='#')
+						li: a.icon.novi-icon.icon-sm-bigger.fa.fa-instagram(href='#')
+						li: a.icon.novi-icon.icon-sm-bigger.fa.fa-youtube-play(href='#')
+						li: a.icon.novi-icon.icon-sm-bigger.fa.fa-twitter(href='#')
+						li: a.icon.novi-icon.icon-sm-bigger.fa.fa-linkedin(href='#')
+					dl.list-terms.text-sm-start
+						dt.heading-6 General:
+						dd: ul
+							li: a(href='tel:#') +1 (480) 555-0103
+							li: a.text-decoration-underline(href='mailto:#') info@demolink.org
+
+						dt.heading-6 Other inquiries:
+						dd: ul
+							li: a(href='tel:#') +1 (800) 475-9123
+							li: a.text-decoration-underline(href='mailto:#') mail@demolink.org
+				.col-md-6
+					h2 Let’s get in touch
+					p(style='max-width: 460px;') Mauris sit amet dolor vitae augue pharetra eleifend. Aenean vitae tempus justo. Sed nec ex nisi.
+					// RD Mailform
+					form.rd-mailform.form-lg.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						label.form-label-outside(for="contact-name") * Full Name
+						.form-wrap
+							input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							label.form-label(for="contact-name") Your name
+
+						label.form-label-outside(for="contact-phone") * Phone number
+						.form-wrap
+							input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+							label.form-label(for="contact-phone") Your phone number
+
+						label.form-label-outside(for="contact-email") * E-mail
+						.form-wrap
+							input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							label.form-label(for="contact-email") Your e-mail address
+
+
+						label.form-label-outside(for="contact-message") * Your message here
+						.form-wrap
+							textarea#contact-message.form-input(name="message" data-constraints="@Required")
+							label.form-label(for="contact-message") Your message
+
+						.form-wrap-sm
+							label.checkbox-inline
+								input(type='checkbox' name='remember')
+								| By clicking the button you agree to the #[a.link-gray-700.text-decoration-underline(href='privacy-policy.html') Privacy Policy] and Terms of Service
+
+						button(type="submit").button.button-primary Contact us
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

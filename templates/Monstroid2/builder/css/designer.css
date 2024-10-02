@@ -1,0 +1,60 @@
+[data-x-mode="true"].select-disable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important; }
+
+[data-x-mode="true"] * {
+  cursor: default !important;
+  -webkit-user-drag: none !important; }
+
+[data-x-mode="true"] .x-empty {
+  min-height: 1rem;
+  min-width: 1rem;
+  outline: 1px dashed rgba(0, 0, 0, 0.3);
+  vertical-align: middle; }
+
+[data-x-mode="true"] .x-dragging {
+  opacity: 0.5 !important; }
+
+[data-x-mode="true"] [data-x-text][contenteditable]:hover,
+[data-x-mode="true"] [data-x-text][contenteditable]:focus,
+[data-x-mode="true"] [data-x-text][contenteditable]:focus [contenteditable] {
+  outline: none !important;
+  cursor: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important; }
+
+[data-x-mode="true"] [data-x-text][contenteditable]::selection,
+[data-x-mode="true"] [data-x-mutation][contenteditable]::selection {
+  background: #ACCEF7;
+  color: inherit; }
+
+[data-x-mode="true"] [data-x-text][contenteditable].hide-select::selection,
+[data-x-mode="true"] [data-x-mutation][contenteditable].hide-select::selection,
+[data-x-mode="true"] [data-x-text][contenteditable].hide-select *::selection,
+[data-x-mode="true"] [data-x-mutation][contenteditable].hide-select *::selection {
+  background: transparent; }
+
+[data-x-mode="true"] [data-x-id]::selection {
+  background-color: transparent; }
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #0c0e13; }
+
+body::-webkit-scrollbar-thumb {
+  height: 6px;
+  width: 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 4px;
+  background-color: #109DF7; }
+
+body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none; }

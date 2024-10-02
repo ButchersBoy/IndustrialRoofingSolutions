@@ -1,0 +1,12 @@
+mixin team-classic( obj )
+	article.team-classic( class= obj.mod )&attributes(attributes)
+		.team-classic-figure: +jpg( obj.img )
+		.team-classic-body: h5.team-classic-name: a( href='#' )= obj.name
+		.team-classic-footer
+			.team-classic-status= obj.status
+			.team-classic-list-panel
+				ul.team-classic-list-social.list-inline
+					li: a.icon.novi-icon.mdi.mdi-facebook( href='#' )
+					li: a.icon.novi-icon.mdi.mdi-instagram( href='#' )
+					li: a.icon.novi-icon.mdi.mdi-youtube-play( href='#' )
+				.heading-1.team-classic-placeholder= obj.name.split(' ')[0]

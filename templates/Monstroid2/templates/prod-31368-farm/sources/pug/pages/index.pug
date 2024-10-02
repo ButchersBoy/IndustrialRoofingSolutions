@@ -1,0 +1,223 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block page
+	// Page Header
+	include ../sections/_header-default
+	='\n'
+
+	='\n'
+	// Intro
+	section.section.section-inset-1.novi-bg.novi-bg-img.bg-primary.context-dark.text-center
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					h1 Welcome to our diversified family farm that produces beyond-organic, nutrient dense foods.
+			.row.justify-content-center
+				.col-lg-10
+					.box-img
+						+vide-bg({
+							"src": "video/video-lg",
+						})
+
+
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-inset-2.bg-default.text-center
+		.container
+			.row
+				.col-12
+					h2 Milk and more!
+						br
+						| fresh. local. delivered.
+			.row.row-30
+				.col-sm-6.col-lg-3
+					.box-icon
+						.box-icon-img
+							+icon-food.icon-primary
+						h4.box-icon-header HEALTHY FOOD
+						p.box-icon-text  We provide healthy and organic food to all our clients & visitors.
+				.col-sm-6.col-lg-3
+					.box-icon
+						.box-icon-img
+							+icon-workers.icon-primary
+						h4.box-icon-header dedicated farmers
+						p.box-icon-text  Our team is dedicated to bringing the best food to your table.
+				.col-sm-6.col-lg-3
+					.box-icon
+						.box-icon-img
+							+icon-natural.icon-primary
+						h4.box-icon-header NATURAL & ORGANIC
+						p.box-icon-text  Whatever milk products you prefer, rest assured they are organic.
+				.col-sm-6.col-lg-3
+					.box-icon
+						.box-icon-img
+							+icon-products.icon-primary
+						h4.box-icon-header Best products
+						p.box-icon-text  We guarantee the quality of all products we provide at Farmey.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-30
+				.col-md-6
+					+img('index-01-560x700').img-big
+					.block-lg
+						h4 Our farm is a diversified "pasture farm" providing our customers with grass-fed beef, milk and dairy products
+						p  We are the leading producer and processor of store-brand organic dairy products for U.S. retailers. Based in California, we deliver high-quality dairy products that are nationally recognized and loved by our customers and partners.
+				.col-md-6.col-xl-5.offset-xl-1
+					.row.row-30.row-md-60.row-xl-120.justify-content-center.text-center
+						.col-8.mt-5
+							+img('index-02-260x260', {lazy: 'disabled'})
+						.col-12
+							+img('index-03-460x460')
+
+	include ../sections/_section-object
+	include ../sections/_section-object-reverse
+
+	// Quality
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row
+				.col-12
+					h2.text-center.text-lg-start Our product quality
+						br.d-none.d-md-block
+						| is always on top
+			.row.row-30
+				.col-lg-5.text-center.text-lg-start
+					+img('index-06-460x740')
+				.col-lg-6.offset-lg-1
+					.box-feature
+						.box-feature-number 01
+						.box-feature-wrap
+							h3.box-feature-header What we produce
+							.box-feature-body
+								p Farmey provides all kinds of dairy products as well as grass-fed beef for food businesses and individual consumers.
+								a.button-link(href='products.html') Learn more
+					.box-feature
+						.box-feature-number 02
+						.box-feature-wrap
+							h3.box-feature-header Where to buy our products
+							.box-feature-body
+								p Our dairy products are available from selected stores and suppliers throughout the states as well as directly from our farm.
+								a.button-link(href='products.html') Learn more
+					.box-feature
+						.box-feature-number 03
+						.box-feature-wrap
+							h3.box-feature-header Work with us
+							.box-feature-body
+								p If you’d like to become our partner, feel free to contact us via our website. We’ll be happy to work with you.
+								a.button-link(href='products.html') Learn more
+
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-30.row-md-60.align-items-md-end.justify-content-center.justify-content-xl-between
+				.col-12.col-xl-5
+					h2 organic Cheese,
+						br.d-none.d-sm-block
+						| cream & Butter
+					p Farmey butter, Cream & cheese is made here on the farm from  Organic Grade A milk. Grassfed butter has a deep yellow color from naturally high levels of the antioxidant beta-carotene in grass, which are turned into retinol Vitamin D3.
+					a.button-link(href='products.html') Learn More
+				.col-md-6.offset-xl-1
+					+img('index-08-560x315')
+
+	// Location
+	section.section.novi-bg.novi-bg-img.section-xl.section-xl_bigger.bg-accent
+		.container.text-center
+			.row
+				.col-12
+					h2 Visit our farms to buy the best
+						br.d-none.d-sm-block
+						| organic dairy products
+			.row.justify-content-center
+				.col-xl-10
+					.row.row-30
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header California
+								.box-icon-text
+									ul.list
+										li 2000 Sierra Point Rd
+											br
+											| Brisbane, CA, 94005
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header Montana
+								.box-icon-text
+									ul.list
+										li 15851 33rd St
+											br
+											| Fairview, MT, 59221
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+						.col-md-4
+							.box-icon.box-icon-2
+								.box-icon-img
+									+icon-cow.icon-white
+								h4.box-icon-header new York
+								.box-icon-text
+									ul.list
+										li 66 Ackert Hook Rd
+											br
+											| Rhinebeck, NY, 12572
+										li Monday-Saturday 8am-7pm
+											br
+											| Sunday 9am-7pm
+
+			.row
+				.col-12.text-center
+					button.button-super( data-bs-toggle="modal" data-bs-target="#contact") Get in touch
+						br
+						| with us
+
+
+	// Page Footer
+	include ../sections/_footer-corporate
+
+	// Modal
+	#contact.modal.fade(tabindex='-1', role='dialog', aria-labelledby='contact', aria-hidden='true')
+		.modal-dialog.modal-lg.modal-dialog-centered(role='document')
+			.modal-content.bg-whisper
+				.modal-header
+					h3 Get in touch with us
+					button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+
+
+				.modal-body
+					//- RD Mailform
+					form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-30
+							.col-md-6
+								.form-wrap
+									input#feedback-2-first-name.form-input(type="text" name="first-name" data-constraints="@Required")
+									label.form-label(for="feedback-2-first-name") First Name
+							.col-md-6
+								.form-wrap
+									input#feedback-2-last-name.form-input(type="text" name="last-name" data-constraints="@Required")
+									label.form-label(for="feedback-2-last-name") Last Name
+
+							.col-md-6
+								.form-wrap
+									input#feedback-2-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="feedback-2-email") Email
+							.col-md-6
+								.form-wrap
+									input#feedback-2-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+									label.form-label(for="feedback-2-phone") Phone
+							.col-sm-12
+								.form-wrap
+									textarea#feedback-2-message.form-input(name="message" data-constraints="@Required")
+									label.form-label(for="feedback-2-message") Message
+							.col-md-6
+								button(type="submit").button.button-primary.btn-block Send

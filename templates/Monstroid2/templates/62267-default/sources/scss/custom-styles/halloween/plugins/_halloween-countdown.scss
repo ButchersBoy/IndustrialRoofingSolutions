@@ -1,0 +1,78 @@
+/** @section Countdown */
+
+.halloween-section {
+	.countdown {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1.2;
+		text-align: center;
+		@include group(10px);
+	}
+
+	.countdown-block {
+		position: relative;
+		//flex: 1 1 33.33%;
+	}
+
+	.countdown-block-seconds {
+		display: none;
+
+		@include media-breakpoint-up(sm) {
+			display: block;
+		}
+	}
+
+	.countdown-inner {
+		position: relative;
+	}
+
+	.countdown-wrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.countdown-circle {
+		fill: transparent;
+	}
+
+	.countdown-circle-bg {
+		stroke: white;
+		stroke-width: 2px;
+	}
+
+	.countdown-circle-fg {
+		stroke: $white;
+		stroke-width: 2px;
+	}
+
+	.countdown-counter {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 1;
+		letter-spacing: 0;
+		color: $halloween;
+	}
+
+	.countdown-title {
+		font-weight: 700;
+		font-size: 9px;
+		line-height: 1.2;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+
+	* + .countdown {
+		margin-top: 35px;
+	}
+
+	* + .countdown-title {
+		margin-top: 11px;
+	}
+}

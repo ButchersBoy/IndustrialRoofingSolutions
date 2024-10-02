@@ -1,0 +1,153 @@
+//-
+//- Common usage mixins
+//- --------------------------------------------------
+
+//- Img image
+mixin img( name, options )
+	-
+		var size = getImageSize( name );
+		if( options && options.retina ) { size[0] = ~~(size[0]/2); size[1] = ~~(size[1]/2); }
+	img( src= procImg( name ), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+//- Jpg image
+mixin jpg(name, className)
+	- var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+	img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=className)
+
+//- Png image
+mixin png(name, className)
+	- var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+	img(src='images/' + name + '.png', alt='', width=size[0], height=size[1], class=className)
+
+//- Parallax Section
+	@param {object} obj - parameters storage
+	@param {string} obj.img - image path
+	@param {string} obj.innerClass - content wrapper class
+mixin parallax( obj )
+	section.section.parallax-container( data-parallax-img= procImg( obj.img ) )&attributes( attributes )
+		.parallax-content( class= obj.innerClass )
+			block
+
+//- Quote mark
+mixin quote-mark(objClass)
+	svg(class=objClass, version='1.1', baseprofile='tiny', x='0px', y='0px', width='30.234px', height='23.484px', viewbox='0 0 30.234 23.484')
+		g
+			path(d='M12.129,0v1.723c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959\ c0,0.445,0.07,0.773,0.211,0.984c0.093,0.141,0.199,0.211,0.316,0.211c0.117,0,0.293-0.082,0.527-0.246\ c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.519,0.545,3.551,1.635c1.031,1.09,1.547,2.385,1.547,3.885\ c0,1.57-0.592,2.953-1.775,4.148c-1.184,1.195-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426\ C0.715,19.441,0,17.274,0,14.555c0-3.164,0.972-6,2.918-8.508C4.863,3.539,7.933,1.524,12.129,0z M29.039,0v1.723\ c-2.438,0.891-4.348,2.291-5.73,4.201c-1.383,1.911-2.074,3.897-2.074,5.959c0,0.445,0.07,0.773,0.211,0.984\ c0.094,0.141,0.199,0.211,0.316,0.211s0.293-0.082,0.527-0.246c0.75-0.539,1.699-0.809,2.848-0.809c1.336,0,2.52,0.545,3.551,1.635\ s1.547,2.385,1.547,3.885c0,1.57-0.592,2.953-1.775,4.148s-2.619,1.793-4.307,1.793c-1.969,0-3.668-0.809-5.098-2.426\ s-2.145-3.785-2.145-6.504c0-3.164,0.973-6,2.918-8.508C21.773,3.539,24.844,1.524,29.039,0z')
+
+//- Divider
+mixin divider
+	// Divider
+	.container: .divider
+	='\n'
+
+//- Thumbnail
+//- Original image naming format: pagename-{X}-1200x600_original.jpg
+mixin img-thumbnail(obj)
+	a(href='images/' + obj.original + '.jpg', class='img-thumbnail-variant-' + obj.number, data-lightgallery="item")
+		figure
+			+jpg(obj.img)
+		.caption
+			span.icon.novi-icon.icon-lg.linear-icon-magnifier
+
+//- progress - object{progress}
+mixin progress-bar-linear(progress)
+	// Linear progress bar
+	.progress-linear( class= progress.progressStyle data-duration= progress.duration)
+		.progress-header
+			p=progress.title
+			span.progress-value( class= progress.style )= progress.valueTo
+		.progress-bar-linear-wrap
+			.progress-bar-linear
+
+//- Breadcrumbs
+	@param {Array}  [path] - other navigation path
+	@example +breadcrumbs([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumbs( path )
+	-
+		if ( !path ) {
+			if ( breadcrumbs && breadcrumbs.length ) path = breadcrumbs;
+			else path = [{ title: pageName }];
+		}
+
+	// Breadcrumbs
+	section.section.novi-bg.novi-bg-img.breadcrumbs-custom
+		.container
+			.breadcrumbs-custom__inner
+				p.breadcrumbs-custom__title= path[ path.length - 1 ].title
+				if ( path[0].title.toLowerCase() !== 'home' )
+					ul.breadcrumbs-custom__path
+						li: a( href='index.html' ) Home
+						- for ( var i = 0; i < path.length; i++ )
+							if ( i === path.length - 1 )
+								li.active= path[i].title
+							else
+								li: a( href= path[i].link )= path[i].title
+
+//- Main Navigation
+mixin navigation( menu, type )
+	if( !type )
+		ul.rd-navbar-nav&attributes( attributes )
+			each item in menu
+				li.rd-nav-item( class= { active: item.active } )
+					a.rd-nav-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+					if( item.megamenu )
+						+navigation( item.megamenu, 'megamenu' )
+
+	else if( type === 'dropdown' )
+		ul.rd-menu.rd-navbar-dropdown
+			each item in menu
+				li.rd-dropdown-item( class= { active: item.active } )
+					a.rd-dropdown-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+
+	else if( type === 'megamenu' )
+		ul.rd-menu.rd-navbar-megamenu
+			each item in menu
+				li.rd-megamenu-item
+					if ( item instanceof Array )
+						+navigation( item, 'column' )
+					else
+						+navigation( item, 'block' )
+
+	else if( type === 'column' )
+		each item in menu
+			+navigation( item, 'block' )
+
+	else if( type === 'block' )
+		if (menu.title && menu.link)
+			p.rd-megamenu-header: a( href= menu.link )= menu.title
+		else if (menu.title)
+			p.rd-megamenu-header= menu.title
+		if (menu.list)
+			+navigation( menu.list, 'list' )
+
+	else if( type === 'list' )
+		ul.rd-megamenu-list
+			each item in menu
+				li.rd-megamenu-list-item
+					a.rd-megamenu-list-link( href= item.link )= item.title
+
+//- Logo
+mixin logo
+	// Brand
+	a.brand( href='index.html' )&attributes( attributes )
+		+img( logo.default, { retina: true } ).brand-logo-dark
+		+img( logo.inverse, { retina: true } ).brand-logo-light
+
+//- Logo
+mixin logo2
+	// Brand
+	a.brand( href='index.html' )&attributes( attributes )
+		+img( logo.default, { retina: true } ).brand-logo-dark
+		+img( logo.inverse2, { retina: true } ).brand-logo-light
+
+//- Copyright
+mixin rights
+	p.rights&attributes( attributes )
+		span!=logo.name
+		span &nbsp;
+		span.copyright-year
+		| .

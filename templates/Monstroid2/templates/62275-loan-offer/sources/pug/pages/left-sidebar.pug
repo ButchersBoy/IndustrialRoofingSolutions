@@ -1,0 +1,243 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+
+block variables
+  - var activeIndex = 6
+  - var pageName = 'Left Sidebar'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-default.section-lg
+    .container
+      .row.flex-lg-row-reverse.row-70
+        .col-lg-7.col-xl-8.section-divided__main.section-divided__main-left
+          // Post classic
+          .section-md
+            article.post-classic
+              .post-classic-title.post-classic-title-icon.linear-icon-star
+                h4: a(href=postImage) 10 Reasons to Buy Monstroid#[sup 2].
+              +jpg('post-classic-1-886x668')
+
+              .post-classic-body
+                p When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a template for your HTML website, the overall number of characteristics that you will need to keep in mind narrows down significantly.
+
+              .post-meta
+                .group
+                  a(href=postImage): time(datetime='2017') Jan.20, 2016
+                  a(href=postImage).meta-author by Brian Williamson
+                  a(href=postImage) 3 comment(s)
+                  a(href=postImage) Template
+                  +tag-list({
+                      list_class: 'list-inline-tag',
+                      href: postImage,
+                      items: [
+                          "Style",
+                          'Clean']
+                  })
+
+              .post-classic-footer
+                +list-inline-icon({
+                    list_class: 'list-inline-sm',
+                    items: [
+                        "icon-xxs fa-facebook",
+                        'icon-xxs fa-twitter',
+                        'icon-xxs fa-google-plus',
+                        'icon-xxs fa-vimeo',
+                        'icon-xxs fa-youtube',
+                        'icon-xxs fa-pinterest-p']
+                })
+
+                a(href=postImage).button.button-link Read more
+
+          // Post slider
+          .section-md
+            article.post-slider
+              .post-classic-title
+                h4: a(href=postSlider) Getting to another level of design and functionality.
+
+              +slider-blog({
+                  class: 'carousel-slider-blog-post',
+                  items: [
+                      {
+                          original_img: 'gallery-post-01-original-1354x762',
+                          img_thumb: 'gallery-post-1-886x668'
+                      },
+                      {
+                          original_img: 'gallery-post-02-original-1354x762',
+                          img_thumb: 'gallery-post-2-886x668'
+                      },
+                      {
+                          original_img: 'gallery-post-03-original-1354x762',
+                          img_thumb: 'gallery-post-3-886x668'
+                      }
+                  ]
+              })
+
+              .post-classic-body
+                p All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it.
+
+              .post-classic-footer
+                .post-meta
+                  .group
+                    a(href=postSlider): time(datetime='2017') Jan.20, 2016
+                    a(href=postSlider).meta-author by Brian Williamson
+                    a(href=postSlider) 3 comment(s)
+                    a(href=postSlider) Theme
+                    +tag-list({
+                        list_class: 'list-inline-tag',
+                        href: postSlider,
+                        items: [
+                            "Style",
+                            'Clean']
+                    })
+                a(href=postSlider).button.button-link Read more
+
+          // Post video
+          .section-md
+            article.post-video
+              .post-classic-title
+                h4: a(href=postVideo) Creating Portfolio.
+
+              .entry-video.embed-responsive.embed-responsive-16by9
+                iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+
+              .post-classic-body
+                p We recommend focusing on 4 most essential characteristics, each vital for your company’s to have an efficient and long-standing online presence!
+
+              .post-classic-footer
+                .post-meta
+                  .group
+                    a(href=postVideo): time(datetime='2017') Jan.20, 2016
+                    a(href=postVideo).meta-author by Brian Williamson
+                    a(href=postVideo) 3 comment(s)
+                    a(href=postVideo) Theme
+                    +tag-list({
+                        list_class: 'list-inline-tag',
+                        href: postVideo,
+                        items: [
+                            "Style",
+                            'Clean']
+                    })
+                a(href=postVideo).button.button-link Read more
+
+          // Post Link
+          .section-md
+            article.post-link
+              .post-classic-title
+                h4: a(href=blogPostLink) Creating Portfolio.
+              a(href='http://templatemonster.com/') http://templatemonster.com/
+
+          // Post quote
+          .section-md
+            article.post-quote
+              // Quote default
+              a(href=postQuote).quote-default
+                +quote-mark('quote-default__mark')
+                .quote-default__text: p.q.heading-4 Getting to another  level of design and functionality.
+                p.quote-default__cite Adam Smith
+
+          // Post standard
+          .section-md
+            article.post-classic
+              .post-classic-title
+                h4: a(href=postLink) How to Use Bootstrap Framework
+
+              .post-classic-body
+                p All the HTML templates that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the...
+
+              .post-classic-footer
+                .post-meta
+                  .group
+                    a(href=postLink): time(datetime='2017') Jan.20, 2016
+                    a(href=postLink).meta-author by Brian Williamson
+                    a(href=postLink) 3 comment(s)
+                    a(href=postLink) Theme
+                    +tag-list({
+                        list_class: 'list-inline-tag',
+                        items: [
+                            "Style",
+                            'Clean']
+                    })
+                a(href=postLink).button.button-link Read more
+
+          // Post audio
+          .section-md
+            article.post-audio
+              .post-classic-title
+                h4: a(href=postAudio) Installing Your First HTML Template
+
+              // RD Audio
+              .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+                .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+                  .rd-audio-controls.text-center
+                    .rd-audio-controls-left
+                      // Play\Pause button
+                      a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+                    .rd-audio-progress-bar-wrap
+                      // Time
+                      .rd-audio-time
+                        // currentTime
+                        span.rd-audio-current-time 00:00
+                      // Progress bar
+                      .rd-audio-progress-bar
+                    // Volume button
+                    a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+                    // Volume bar
+                    .rd-audio-volume-bar
+                    .rd-audio-controls-righ.d-none
+                      // Playlist button
+                      a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+                  .rd-audio-playlist-wrap
+                    h6.rd-audio-playlist-title Playlist
+                    ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+                      li(data-rd-audio-src='audio/sound.mp3')
+
+              .post-classic-body
+                p Each business niche may require a unique functionality of its own. With that notion in mind, our team of professional HTML coders has been working day and night to roll out a definitive collection of built-in HTML plugins, that come with each of our HTML templates…
+
+              .post-classic-footer
+                .post-meta
+                  .group
+                    a(href=postAudio): time(datetime='2017') Jan.20, 2016
+                    a(href=postAudio).meta-author by Brian Williamson
+                    a(href=postAudio) 3 comment(s)
+                    a(href=postAudio) Theme
+                    +tag-list({
+                        list_class: 'list-inline-tag',
+                        href: postAudio,
+                        items: [
+                            "Style",
+                            'Clean']
+                    })
+                a(href=postAudio).button.button-link Read more
+
+          // Pagination
+          .section-md
+            +pagination-classic(1,
+              [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+              null,
+              {"title": "", "href": "#"}
+            )
+
+
+        .col-lg-5.col-xl-4.section-divided__aside.section__aside-left
+          include ../sections/_section-aside-sidebar-blog
+
+  // Modal
+  include ../sections/_section-modal
+  // Page Footer
+  include ../sections/_footer-corporate
+

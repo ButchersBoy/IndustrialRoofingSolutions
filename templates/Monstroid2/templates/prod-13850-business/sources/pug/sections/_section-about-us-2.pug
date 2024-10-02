@@ -1,0 +1,49 @@
+include ../elements/_ui-progress-bar-linear
+	
+section.bg-default.object-wrap
+	.section-lg
+		.container
+			.row
+				.col-lg-5
+					h4.heading-decorated About us
+					p Quart boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+					.row.row-30
+						.col-xl-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-menu3
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Award-winning designs
+									p We have received numerous awards for our designs, concepts, and ideas.
+
+						.col-xl-6
+							// Blurb minimal
+							article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+								.unit-left
+									.blurb-minimal__icon: span.icon.linear-icon-users2
+								.unit-body
+									p.blurb__title.heading-6: a(href=singleService) Expert team
+									p We are a team of dedicated interior design and remodeling professionals.
+
+					.row.justify-content-md-center
+						.col-md-12
+							+progress-bar-linear({
+								title: "Innovative Technologies",
+								progressStyle: "progress-linear-modern",
+								valueTo: "49"
+							})
+
+							+progress-bar-linear({
+								title: "Flexible and Multipurpose",
+								progressStyle: "progress-linear-modern",
+								valueTo: "29"
+							})
+
+							+progress-bar-linear({
+								title: "Made for People",
+								progressStyle: "progress-linear-modern",
+								valueTo: "86"
+							})
+
+	.object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right.bg-image(style='background-image: url(images/bg-image-1.jpg)')

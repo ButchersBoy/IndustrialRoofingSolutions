@@ -1,0 +1,106 @@
+/*
+*
+* Sections
+* --------------------------------------------------
+*/
+
+
+// Section Spacing
+// -------------------------
+
+$insets: (0px, 30px, 60px, 80px, 90px, 110px, 140px);
+
+.page{
+  @include indent-responsive(section, '', (padding-top, padding-bottom), $grid-breakpoints, $insets);
+  @include indent-responsive(section, top, padding-top, $grid-breakpoints, $insets);
+  @include indent-responsive(section, bottom, padding-bottom, $grid-breakpoints, $insets);
+}
+
+
+$insets-2: (80px);
+
+@include indent-responsive(inset, left, padding-left, $grid-breakpoints, $insets);
+@include indent-responsive(inset, right, padding-right, $grid-breakpoints, $insets);
+
+
+// Section Spacing
+// -------------------------
+
+.section-sm {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-md {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.section-lg {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+
+// Section Styles
+// -------------------------
+
+.section-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.section-cta{
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+
+  h3{
+    font-size: 28px;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 32px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 40px;
+    }
+  }
+
+  h5{
+    font-size: 18px;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 24px;
+    }
+
+  }
+
+
+  h3 + h5{
+    margin-top: 15px;
+
+    @media (min-width: 1600px) {
+      margin-top: 35px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1600px) {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+}

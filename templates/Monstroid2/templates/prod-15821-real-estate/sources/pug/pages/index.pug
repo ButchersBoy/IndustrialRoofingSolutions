@@ -1,0 +1,191 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-menu-item
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+  - var pageName = 'Home'
+
+block page
+  include ../sections/_header-default
+  include ../sections/_section-slider-default
+
+  // Welcome to the Best Indianapolis Hotel!
+  section.section-lg.bg-gray-lighter
+    .container
+      .row.row-50.justify-content-md-center 
+        .col-md-10.col-lg-6
+          h6 Welcome to the
+          h2 Best Real Estate Agency
+          p.text-width-2 Aparto is a full-service, luxury real estate brokerage and lifestyle company representing clients worldwide in a broad spectrum of classes, including residential, new development, resort real estate, residential leasing and luxury vacation rentals. Since our inception in 2011, we have redefined the business of real estate, modernizing and advancing the industry by fostering a culture of partnership, in which all clients and listings are represented by our agents. 
+          a.button.button-primary-outline(href='about.html') read more
+
+        .col-md-10.col-lg-6
+          figure.figure-fullwidth
+            +jpg('about-1-622x456', 'img-bordered')
+  ='\n'
+  
+  // Plenty of room...
+  section.section-lg.bg-default.text-center
+    .container
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8
+        h6 SELECTED BY OUR AGENTS
+        h2 Featured Properties
+        p Aparto has more than 100 elegantly furnished and air-conditioned properties that are sure to fit your lifestyle and personal needs. Here are some of them.
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-1-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-property.html') 401 Biscayne Boulevard, Miami
+              .price
+                span.price__aside-top $
+                span.price__main 530
+                span.price__aside-bottom /month
+              ul.list-marked
+                li 3 bedrooms
+                li 2 bathrooms
+                
+              a.button.button-primary(href='single-property.html') READ MORE
+
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-2-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-property.html') 225 Maywood Dr, San Francisco
+              .price
+                span.price__aside-top $
+                span.price__main 390
+                span.price__aside-bottom /month
+              ul.list-marked
+                li 2 bedrooms
+                li 1 bathroom
+              a.button.button-primary(href='single-property.html') READ MORE
+
+        .col-md-6.col-lg-4
+          // Post
+          article.post-product
+            figure.post-product__image-wrap
+              +jpg('home-3-418x313')
+            .post-product__body
+              h3.post-product__title: a(href='single-property.html') 623 Willow Rd, Dallas
+              .price
+                span.price__aside-top $
+                span.price__main 930
+                span.price__aside-bottom /month
+              ul.list-marked
+                li 5 bedrooms
+                li 3 bathrooms
+              a.button.button-primary(href='single-property.html') READ MORE
+
+  ='\n'
+
+  section.section-md.bg-gray-lighter.text-center 
+    .container
+      h6 Just a few reasons to choose
+      h2 The Aparto as Your Real Estate Agency
+      .row.row-50.justify-content-md-center.offset-top-1
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-wifi
+            h4.box-icon__title Free WiFi
+
+        .col-md-3
+          // Box icon 
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-vpn_key
+            h4.box-icon__title Protected Properties
+
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-directions_car
+            h4.box-icon__title Garages & Parking
+
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-access_time
+            h4.box-icon__title Available for Long-term Rental
+
+  // Amenities
+  section.section-lg.bg-accent
+    .container
+      .row.justify-content-lg-center: .col-lg-10.col-xl-8.text-center
+        h6 A little extra...
+        h2 Featured Offer
+        p Our agency offers a variety of additional services to our clients, from discounts on furniture and household materials to some special deals from our partners. Below is one of the most popular offers from us.
+        
+      .row.row-50.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center
+        .col-md-10.col-lg-6
+          h3
+            | Rent a New Apartment
+            br
+            |  Get FREE Furniture
+          p That's correct! We're so determined to make your experience at our properties better that we will even provide you with free furniture from the store of your choice!
+          h4 Prices start at
+          .price
+            span.price__aside-top $
+            span.price__main 249
+            span.price__aside-bottom /month
+            
+          a.button.button-primary-outline(href=bookingLink) Rent now!
+
+        .col-md-10.col-lg-6
+          +jpg('home-4-652x486', 'img-bordered')
+  ='\n'
+    
+  include ../sections/_section-testimonials
+
+  // Driving Directions
+  section.bg-gray-lighter.object-wrap
+    .section-lg
+      .container
+        .row
+          .col-lg-5
+            h6 Location & Map
+            h2 Driving Directions
+            p Follow the 14th street and then turn right.
+            
+            .row.row-30
+              .col-sm-6
+                p.heading-2 5.4 km
+                p.heading-4 Away from the Downtown 
+              .col-sm-6
+                p.heading-2 18 km
+                p.heading-4 Away from the Airport
+                
+
+    .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-right
+      include ../sections/_section-gmap
+  ='\n'
+  
+  // Subscribe form
+  section.section-md.bg-accent.text-center.text-lg-left
+    .container
+      .row.row-30.justify-content-md-center.align-items-lg-center.justify-content-xl-between
+        .col-md-10.col-lg-6
+          h3 Sign Up for a Newsletter...
+          p.heading-6 ...and never miss OUR special offers and news!
+          
+        .col-md-10.col-lg-6.col-xl-5
+          // RD Mailform
+          form.rd-mailform.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Enter your e-mail
+            button(type="submit").button.button-primary-outline Subscribe!
+  ='\n' 
+  
+  include ../sections/_section-flickr 
+
+  // Page Footer 
+  include ../sections/_footer-corporate

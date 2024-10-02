@@ -1,0 +1,323 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-tag-list
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-slider-blog
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-label-list
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Masonry Blog'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+      path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+  
+  section.section-md
+    .container
+      .posts-lists-masonry-3-cols
+        // Post classic
+        article.post-classic.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postImage,
+              items: [
+                "Restaurant"]
+            })
+
+          .post-classic-title
+            h5: a(href=postImage) A perfect place to enjoy
+
+          +jpg('post-minimal-1-418x315')
+
+          .post-meta
+            .group
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+          .post-minimal-footer
+            a(href=postImage).button.button-gray-light-outline: span read more
+
+        // Post video
+        article.post-video.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postVideo,
+              items: [
+                "Restaurant"]
+            })
+          .post-classic-title
+            h5: a(href=postVideo) A perfect place to enjoy
+          .entry-video.embed-responsive.embed-responsive-16by9
+            iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+          .post-meta
+            .group
+              a(href=postVideo): time(datetime='2017') Jan.20, 2016
+              a(href=postVideo).meta-author by Brian Williamson
+
+          .post-minimal-footer
+            a(href=postVideo).button.button-gray-light-outline: span read more
+
+        // Post classic
+        article.post-classic.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postImage,
+              items: [
+                "Restaurant"]
+            })
+
+          .post-classic-title
+            h5: a(href=postImage) A perfect place to enjoy
+
+          +jpg('post-classic-1-886x668')
+
+          .post-meta
+            .group
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+          .post-minimal-footer
+            a(href=postImage).button.button-gray-light-outline: span read more
+
+
+        // Post Link
+        article.post-link
+          .post-classic-title
+            h5: a(href=blogPostLink) A perfect place to enjoy
+          a(href="http://templatemonster.com/") http://templatemonster.com/
+
+        // Post classic
+        article.post-classic.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postImage,
+              items: [
+                "Restaurant"]
+            })
+
+          .post-classic-title
+            h5: a(href=postImage) A perfect place to enjoy
+
+          +jpg('post-minimal-2-418x315')
+
+          .post-meta
+            .group
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+
+          .post-minimal-footer
+            a(href=postImage).button.button-gray-light-outline: span read more
+
+
+        // Post quote
+        article.post-quote.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postQuote,
+              items: [
+                "Restaurant"]
+            })
+          // Quote default
+          .quote-default.quote-default_left.quote-default__border-left
+            .quote-default__text: p.q.heading-4 Born in Brooklyn in 1960, Albert worked in restaurants and as a caterer ...
+            p.quote-default__cite Adam Smith
+            
+          .post-meta
+            .group
+              a(href=postQuote): time(datetime='2017') Jan.20, 2016
+              a(href=postQuote).meta-author by Brian Williamson
+              a(href=postQuote) 3 comment(s)
+
+              +tag-list({
+                list_class: 'list-inline-tag',
+                href: postQuote,
+                items: [
+                  "Style",
+                  'Clean']
+              })
+              
+          .post-minimal-footer
+            a(href=postQuote).button.button-gray-light-outline: span read more
+          
+
+        // Post classic
+        article.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postImage,
+              items: [
+                "Restaurant"]
+            })
+          .post-classic-title
+            h5: a(href=postImage) A perfect place to enjoy
+
+          +jpg('post-minimal-4-418x315')
+
+          .post-classic-body
+            p
+              | Resto Restaurant & Bar is a traditional European cuisine venue, serving 
+              i the best dishes and drinks from across the range of European cuisines. 
+              | A definitive neighborhood joint in Davis Square, Resto ...
+
+          .post-meta
+            .group
+              a(href=postImage): time(datetime='2017') Jan.20, 2016
+              a(href=postImage).meta-author by Brian Williamson
+              a(href=postImage) 3 comment(s)
+              +tag-list({
+                list_class: 'list-inline-tag',
+                href: postImage,
+                items: [
+                  "Style",
+                  'Clean']
+              })
+
+          .post-minimal-footer
+            +list-inline-icon({
+              list_class: 'list-inline-sm',
+              items: [
+                "icon-xxs fa-facebook",
+                'icon-xxs fa-twitter',
+                'icon-xxs fa-google-plus',
+                'icon-xxs fa-vimeo',
+                'icon-xxs fa-youtube',
+                'icon-xxs fa-pinterest-p']
+            })
+
+            a(href=postImage).button.button-gray-light-outline: span read more
+
+        // Post slider
+        article.post-slider.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postSlider,
+              items: [
+                "Restaurant"]
+            })
+
+          .post-classic-title
+            h5: a(href=postSlider) A perfect place to enjoy
+
+          +slider-blog({
+            class: 'carousel-slider-blog-post',
+            items: [
+              {
+                original_img: 'gallery-post-01-original-1354x762',
+                img_thumb: 'gallery-post-1-886x668'
+              },
+              {
+                original_img: 'gallery-post-02-original-1354x762',
+                img_thumb: 'gallery-post-2-886x668'
+              },
+              {
+                original_img: 'gallery-post-03-original-1354x762',
+                img_thumb: 'gallery-post-3-886x668'
+              }
+            ]
+          })
+
+          .post-meta
+            .group
+              a(href=postSlider): time(datetime='2017') Jan.20, 2016
+              a(href=postSlider).meta-author by Brian Williamson
+          .post-minimal-footer
+            a(href=postSlider).button.button-gray-light-outline: span read more
+
+        // Post standard
+        article.post-classic.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postLink,
+              items: [
+                "Restaurant"]
+            })
+          .post-classic-title
+            h5: a(href=postLink) A perfect place to enjoy
+
+          .post-meta
+            .group
+              a(href=postLink): time(datetime='2017') Jan.20, 2016
+              a(href=postLink).meta-author by Brian Williamson
+
+          .post-classic-body
+            p
+              | Resto Restaurant & Bar is a traditional European cuisine venue, serving 
+              i the best dishes and drinks from across the range of European cuisines. 
+              | A definitive neighborhood joint in Davis Square, Resto offers a laid-back dining experience.
+
+          .post-minimal-footer
+            a(href=postLink).button.button-gray-light-outline: span read more
+
+        // Post audio
+        article.post-audio.post-minimal
+          .post-meta-top
+            +label-list({
+              list_class: 'list-inline list-label-custom',
+              href: postAudio,
+              items: [
+                "Restaurant"]
+            })
+
+          .post-classic-title
+            h5: a(href=postAudio) A perfect place to enjoy
+
+          // RD Audio
+          .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+            .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+              .rd-audio-controls.text-center
+                .rd-audio-controls-left
+                  // Play\Pause button
+                  a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+                .rd-audio-progress-bar-wrap
+                  // Time
+                  .rd-audio-time
+                    // currentTime
+                    span.rd-audio-current-time 00:00
+                  // Progress bar
+                  .rd-audio-progress-bar
+                // Volume button
+                a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+                // Volume bar
+                .rd-audio-volume-bar
+                .rd-audio-controls-righ.d-none
+                  // Playlist button
+                  a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+              .rd-audio-playlist-wrap
+                h6.rd-audio-playlist-title Playlist
+                ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+                  li(data-rd-audio-src='audio/sound-1.mp3')
+
+          .post-minimal-footer
+            .post-meta
+              .group
+                a(href=postAudio): time(datetime='2017') Jan.20, 2016
+                a(href=postAudio).meta-author by Brian Williamson
+
+  +divider
+  section.section-sm.text-center
+    .container
+      +pagination-classic(1,
+      [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+      null,
+      {"title": "Next", "href": "#"}
+      )
+      
+  // Page Footer
+  include ../sections/_footer-minimal

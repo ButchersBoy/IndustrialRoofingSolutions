@@ -1,0 +1,60 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-card
+include ../elements/_ui-parallax
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Accordion'
+
+block page
+  // Page header
+  include ../sections/_header-default 
+    
+  // Parallax header
+  section
+    +parallax({
+      "attrType": "media",
+      "src": "images/parallax-1.jpg",
+      "htmlSpeed": "0.1",
+      "class": ['parallax-header']
+    })
+      .parallax-header__inner.context-dark: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2.heading-decorated=pageName
+  ='\n'
+
+  section.section-md.bg-default
+    .container
+      .row.justify-content-center
+        .col-10
+          // Accordion
+          #accordion(role='tablist')
+            +card({ 
+              parentId: "accordion",
+              number: "1",
+              header: "Technical Support Representative"
+            })
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+    
+            +card({
+              parentId: "accordion",
+              number: "2",
+              header: "Customer Care Specialist"
+            })
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+    
+            +card({
+              parentId: "accordion",
+              number: "3",
+              header: "Interactive Art Director"
+            })
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

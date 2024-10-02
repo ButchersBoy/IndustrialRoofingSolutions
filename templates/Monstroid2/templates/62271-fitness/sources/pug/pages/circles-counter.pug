@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Circles Counter'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  include ../sections/_section-circle-counters-dark
+
+  section.section-lg.bg-default.text-center.section
+    .container
+      .row.justify-content-sm-center.row-60
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.45", data-gradient="#f54f15, #f54f15", data-empty-fill="#f54f15", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Pixel perfect typography
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.60", data-gradient="#f54f15, #f54f15", data-empty-fill="#f54f15", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Novi Builder
+        .col-md-4.col-xl-3
+          // Circle Progress Bar
+          .progress-bar-circle(data-value="0.80", data-gradient="#f54f15, #f54f15", data-empty-fill="#f54f15", data-size="141", data-thickness="5")
+            span
+          .progress-bar-circle-title Made for People
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

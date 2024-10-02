@@ -1,0 +1,339 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-video
+include ../elements/_ui-list-inline-icon
+
+block page
+	// Page Header
+	include ../sections/_header-default
+	='\n'
+	
+	// Swiper
+	include ../sections/_section-slider-default
+	='\n'
+
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center(id=seeFeaturesLink)
+		.container
+			.row.row-fix.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3 Consistency is the key
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+	='\n'
+	
+	include ../sections/_section-object
+	
+	// Content Driven Design
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-5
+					h3 Content Driven Design
+					p Unlike many other templates, Monstroid² is built around user content but not vice versa. Thus you may be sure when you add your own texts and images the template will look same cool and appealing.
+				
+				.col-md-9.col-lg-6
+					+jpg('home-default-2-652x491')
+	='\n'
+	
+	// Blurbs
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-magic-wand
+						.unit-body
+							p.blurb__title Pixel Perfect Typography
+							p It’s impossible to ignore the fact that perfect typography is a key asset of design success. We concentrated on classic proportions, great readability and better user experience to produce modern and user friendly template that adds value to any project.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-menu3
+						.unit-body
+							p.blurb__title Great for Any Device
+							p This template is fully responsive and Retina-ready, which means its ability to be displayed on any modern gadgets, from computers and laptops to smartphones and tablets. It is also perfectly optimized for high-resolution displays and other devices.
+				
+				.col-md-6.col-lg-4
+					// Blurb minimal
+					article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+						.unit-left
+							.blurb-minimal__icon: span.icon.novi-icon.linear-icon-users2
+						.unit-body
+							p.blurb__title Made for People
+							p Monstroid² is built for real users that enjoy easy website development and at the same are looking for a clear and stunning design. Our template can provide you with lots of child themes so you don’t need to buy other templates and adapt your website to them.
+	='\n'
+	
+	// GPL3 License advantages
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-fix.row-50.align-items-lg-center.justify-content-lg-between
+				.col-lg-5
+					h3 Control Your Website
+					p Monstroid² gives you an ultimate set of tools that allow you to take full  control of your site with responsive & retina-ready design, various child themes, social integration, SEO optimization and other important and powerful features.
+				
+				.col-lg-6
+					.row.gallery-wrap
+						.col-6
+							+jpg('home-default-3-301x227')
+						.col-6
+							+jpg('home-default-4-301x227')
+						.col-6
+							+jpg('home-default-5-301x227')
+						.col-6
+							+jpg('home-default-6-301x227')
+	='\n'
+	
+	include ../sections/_section-cta-1
+	
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			.row.row-fix.row-30.justify-content-lg-center
+				.col-lg-11.col-xl-9
+					h3 Represent Your Staff
+					p You can easily display the members of your staff, team or workforce. Within Monstroid² template you can present your team members using the perfectly looking and easy-to-use interface with special design and multiple styling options.
+			.row.row-50.offset-top-1
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('brian-king-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Brian King
+							p.thumb__subtitle Director
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('amanda-smith-480x362')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) Amanda Smith
+							p.thumb__subtitle Marketing manager
+				
+				.col-md-6.col-lg-4
+					// Thumb corporate
+					.thumb.thumb-corporate
+						.thumb-corporate__main
+							+jpg('george-nelson-418x315')
+							
+							.thumb-corporate__overlay
+								+list-inline-icon({
+									list_class: ['list-inline-sm', 'thumb-corporate__list'],
+									items:      [
+										"icon-sm fa-facebook",
+										'icon-sm fa-twitter',
+										'icon-sm fa-google-plus',
+										'icon-sm fa-vimeo',
+										'icon-sm fa-youtube',
+										'icon-sm fa-pinterest-p'
+									]
+								})
+						
+						.thumb-corporate__caption
+							p.thumb__title: a(href=teamMember) George Nelson
+							p.thumb__subtitle Designer
+	='\n'
+	
+	// Gallery
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default(data-lightgallery="group")
+		.container-fluid
+			.row.row-10.row-horizontal-10
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-1-1200x905.jpg')
+						figure
+							+jpg('home-default-7-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-2-1200x905.jpg')
+						figure
+							+jpg('home-default-8-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-3-1200x906.jpg')
+						figure
+							+jpg('home-default-9-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-4-1200x905.jpg')
+						figure
+							+jpg('home-default-10-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-5-1200x905.jpg')
+						figure
+							+jpg('home-default-11-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-6-1200x905.jpg')
+						figure
+							+jpg('home-default-12-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-7-1200x906.jpg')
+						figure
+							+jpg('home-default-13-472x355')
+						.thumb-modern__overlay
+				
+				.col-md-4.col-xl-3
+					a.thumb-modern(data-lightgallery='item', href='images/image-original-8-1200x906.jpg')
+						figure
+							+jpg('home-default-14-472x355')
+						.thumb-modern__overlay
+	='\n'
+	
+	// Post Your Latest News
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Post Your Latest News
+			.row.row-50
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal
+						
+						+jpg('post-minimal-1-418x315')
+						.post-classic-title
+							h5: a(href=postLink) 10 Reasons to Buy Monstroid²
+						
+						.post-meta
+							.group-xs
+								a(href=postLink): time(datetime='2022') Jan.20, 2022
+								span by Brian Williamson
+						
+						.post-classic-body
+							p In this article, we would like to share with you why we think Monstroid² is a perfect template for your website and why you should buy it.
+						.post-minimal-footer
+							a(href=postLink).button.button-link read more
+				
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal
+						
+						+jpg('post-minimal-5-418x315')
+						.post-classic-title
+							h5: a(href=postLink) How to Use Bootstrap Framework
+						
+						.post-meta
+							.group-xs
+								a(href=postLink): time(datetime='2022') Jan.20, 2022
+								span by Brian Williamson
+						
+						.post-classic-body
+							p Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. Here’s how you can use it.
+						.post-minimal-footer
+							a(href=postLink).button.button-link read more
+				
+				.col-md-6.col-xl-4
+					// Post classic
+					article.post-minimal
+						
+						+jpg('post-minimal-2-418x315')
+						.post-classic-title
+							h5: a(href=postLink) Clean Style: Cons and Pros
+						
+						.post-meta
+							.group-xs
+								a(href=postLink): time(datetime='2022') Jan.20, 2022
+								span by Brian Williamson
+						
+						.post-classic-body
+							p Every website  requires clean design. It is the  basis of interfaces that are easy to interact with. Let’s discuss pros and cons of such approach.
+						.post-minimal-footer
+							a(href=postLink).button.button-link read more
+	='\n'
+	
+	// Share Your Company Testimonials
+	section.section.novi-bg.novi-bg-img.section-lg.bg-gray-lighter.text-center
+		.container
+			h3 Share Your Company Testimonials
+			// Owl Carousel
+			.owl-carousel.owl-carousel-spacing-1(data-autoplay='true' data-items='1', data-stage-padding='15', data-loop='true', data-margin='30', data-nav='true')
+				.item
+					// Quote default
+					.quote-default
+						if(novi)
+							+img('quote-31x24.png')
+						else
+							+quote-mark('quote-default__mark')
+						.quote-default__text: p.q I love to use your ready-made and beautifully looking templates. They are available at very affordable prices and they save me a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Jane Smith
+				
+				.item
+					// Quote default
+					.quote-default
+						if(novi)
+							+img('quote-31x24.png')
+						else
+							+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.item
+					// Quote default
+					.quote-default
+						if(novi)
+							+img('quote-31x24.png')
+						else
+							+quote-mark('quote-default__mark')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated, thank you!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	include ../sections/_section-cta-2
+	
+	// Subscribe form
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h5
+				| Get the latest news delivered daily!
+				br
+				|  We will send you breaking news right to your inbox.
+			// RD Mailform
+			form.rd-mailform.rd-mailform_style-1.rd-mailform_sizing-1.rd-mailform-inline-flex.text-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+				.form-wrap.form-wrap_icon
+					span.novi-icon.form-icon.linear-icon-envelope
+					input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+					label.form-label(for="contact-email") Enter please your e-mail
+				button(type="submit").button.button-primary Subscribe!
+	='\n'
+	
+	// Page Footer
+	include ../sections/_footer-corporate

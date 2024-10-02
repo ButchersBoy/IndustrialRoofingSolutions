@@ -1,0 +1,68 @@
+/** @section Services */
+
+.services {
+  position: relative;
+  max-width: 270px;
+  padding: 40px 25px 45px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: $white;
+  transition: .3s ease-out background-color;
+
+  .icon {
+    transition: .3s ease-out color;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    box-shadow: 0 0 16px 0 rgba($black, .16%);
+    transition: .3s ease-out all;
+  }
+}
+
+.services:hover {
+  color: $white;
+
+  &:before {
+    top: -10px;
+    bottom: -10px;
+    left: -5px;
+    right: -5px;
+    background-color: $gray-700;
+  }
+
+  .icon {
+    color: $white;
+  }
+
+  .services-title {
+    &, &:focus, &:active {
+      color: $white;
+    }
+  }
+}
+
+.services-title {
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-text {
+  transition: .3s ease-out color;
+}
+
+* + .services-title { margin-top: 15px; }
+* + .services-text { margin-top: 15px; }

@@ -1,0 +1,245 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-pricing-table
+
+block variables
+	- pageName = 'Home Business'
+
+block page
+	// Page Header
+	include ../sections/_header-corporate
+	='\n'
+	
+	include ../sections/_section-slider-business
+	='\n'
+	
+	// Presentation
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center(id=seeFeaturesLink)
+		.container
+			.row.row-fix.justify-content-lg-center
+				.col-lg-10.col-xl-8
+					h3 Consistency is the key
+					p Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-feather
+						p.blurb__title Clean and Crispy Design
+						p Monstroid² is crafted by top industry leaders with love, care and customer needs in mind.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-menu3
+						p.blurb__title Customizable Template
+						p Use our Template to customize and update your website within seconds.
+				
+				.col-md-6.col-lg-4
+					// Blurb circle
+					article.blurb.blurb-circle.blurb-circle_centered
+						.blurb-circle__icon: span.icon.novi-icon.linear-icon-bag2
+						p.blurb__title Advanced UI Toolkit
+						p Monstroid² comes with a powerful and flexible extended toolkit in addition to basic Bootstrap.
+	='\n'
+	
+	// Impressive Features
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-fix.justify-content-md-center.flex-lg-row-reverse.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-6
+					h3 Impressive Features
+					.group-blurb.blurb-minimal
+						// Blurb minimal
+						article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-minimal__icon: span.icon.novi-icon.linear-icon-rocket
+							.unit-body
+								p.blurb__title Built for Speed
+								p Built for speed and performance. Get the best results at GTmetrix and Google PageSpeed.
+						
+						// Blurb minimal
+						article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-minimal__icon: span.icon.novi-icon.linear-icon-equalizer
+							.unit-body
+								p.blurb__title Flexible and Multipurpose
+								p Monstroid² allows to create various websites for complex and scalable  projects.
+						
+						// Blurb minimal
+						article.blurb.blurb-minimal: .unit.flex-row.unit-spacing-md
+							.unit-left
+								.blurb-minimal__icon: span.icon.novi-icon.linear-icon-arrow-down-square
+							.unit-body
+								p.blurb__title Social Integration
+								p You can easily integrate your Twitter and Facebook accounts with the website using the social widgets.
+					
+				.col-md-7.col-lg-4
+					figure.image-sizing-1
+						+png('home-business-1-388x608')
+	='\n'
+	
+	// Content Driven Design
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-md-center.align-items-lg-center.justify-content-lg-between.row-50
+				.col-md-9.col-lg-5
+					h3 Content Driven Design
+					p Unlike many other templates Monstroid² is built around user content but not vice versa. Thus you may be sure when you add your own texts and images the template will look same cool and appealing.
+				
+				.col-md-9.col-lg-6
+					.row.gallery-wrap
+						.col-6
+							figure
+								+jpg('home-default-3-301x227')
+						.col-6
+							figure
+								+jpg('home-default-4-301x227')
+						.col-6
+							figure
+								+jpg('home-default-5-301x227')
+						.col-6
+							figure
+								+jpg('home-default-6-301x227')
+	='\n'
+	
+	// Counters
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent.text-center
+		.container
+			.row.justify-content-md-center.row-50
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-coffee-cup
+						.box-counter__wrap
+							.counter 1000
+						p.box-counter__title Coffee Cups
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-cube
+						.box-counter__wrap
+							.counter 74
+						p.box-counter__title Projects Done
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-chevrons-expand-horizontal
+						.box-counter__wrap
+							.counter 5
+							span bln+
+						p.box-counter__title Lines of Code Written
+				
+				.col-md-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__icon.linear-icon-mustache-glasses
+						.box-counter__wrap
+							.counter 147
+						p.box-counter__title Happy Customers
+	='\n'
+	
+	// Pricing Table
+	section.section.novi-bg.novi-bg-img.section-lg.bg-default.text-center
+		.container
+			h3 Pricing Table
+			.row.row-50
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Starter',
+						price: '$14.89'
+					})
+						ul.list
+							li
+								span 10GB Storage amount
+							li 15 Users
+							li 30GB Bandwidth
+							li 20 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						class: 'pricing-table-label',
+						label: 'most popular',
+						title: 'Standard',
+						price: '$32.89'
+					})
+						ul.list
+							li
+								span 20GB Storage amount
+							li 25 Users
+							li 40GB Bandwidth
+							li 30 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Business',
+						price: '$76.89'
+					})
+						ul.list
+							li
+								span 30GB Storage amount
+							li 35 Users
+							li 50GB Bandwidth
+							li 40 MySQL Databases
+				
+				.col-md-6.col-xl-3
+					+pricing-table({
+						title: 'Professional',
+						price: '$89.89'
+					})
+						ul.list
+							li
+								span 40GB Storage amount
+							li Unlimited users
+							li 60GB Bandwidth
+							li 50 MySQL Databases
+	='\n'
+	
+	include ../sections/_section-cta-1
+	
+	// Share Your Company Testimonials
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default.text-center
+		.container
+			h3 Share Your Company Testimonials
+			.row.row-50
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-1-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q Since I’m not a real pro in web design, I love to use these ready-made and beautifully looking templates. They are available at very affordable prices and they save you a lot of time, and deliver from a lot of sweat and tears!
+						p.quote-default__cite Jane Smith
+				
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-2-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q This template has everything I was looking for my business website to have. From easy-to-customize pages to flawlessly working web tools, Monstroid² is my number one choice!
+						p.quote-default__cite James Wilson
+				
+				.col-md-6.col-lg-4
+					// Quote default
+					.quote-default.quote-default_left-v2
+						.quote-default__image
+							+jpg('testimonials-3-120x120')
+						+quote-mark('quote-default__mark')
+						.quote-default__text: p.q It’s great that there are such templates that are available to both professional and beginner web developers at affordable price. The job you did with this template is surely appreciated!
+						p.quote-default__cite Sam Lee
+	='\n'
+	
+	include ../sections/_section-cta-6
+	include ../sections/_section-brand-carousel
+	
+	// Page Footer
+	include ../sections/_footer-corporate
+
+block modals 
+	include ../includes/_modal-login
+	include ../includes/_modal-register

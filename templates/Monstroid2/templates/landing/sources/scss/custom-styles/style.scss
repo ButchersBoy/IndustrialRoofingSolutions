@@ -1,0 +1,443 @@
+@charset "UTF-8";
+
+/*
+*
+* Trunk version 1.1.6
+*
+*/
+
+/**
+* Template Style
+*
+* [Table of contents]
+*   1. Custom styles
+*     1.1 Main Styles
+*     1.2 Typography
+*     1.3 Backgrounds
+*     1.4 Colors
+*     1.5 Main layout
+*
+*   2. Components
+*     2.1 Icons
+*     2.2 Buttons
+*     2.3 Forms
+*     2.4 Tables
+*     2.5 Lists
+*     2.6 Post
+*     2.7 Thumbnail
+*     2.8 Tooltip
+*     2.9 Snackbars
+*     2.10 Navigation
+*     2.11 Preloader
+*     2.12 Breadcrumbs
+*     2.13 Panel custom
+*     2.14 Pagination custom
+*
+*   3. Helpers
+*     3.1 Text-alignment
+*     3.2 Text-styling
+*     3.3 Visibility responsive
+*     3.4 Groups
+*     3.5 Context Styling
+*     3.6 Sections
+*     3.7 Offsets
+*
+*   4. Modules
+*     4.1 Flex grid
+*     4.2 Unit-responsive
+*
+*   5 Plugins
+*     5.1 Animate
+*     5.2 Isotope
+*     5.3 Owl Carousel
+*     5.4 RD Navbar
+*     5.5 RD Parallax
+*     5.6 RD Google-Map
+*     5.7 RD Search
+*     5.8 To top
+*     5.9 Tabs
+*     5.10 Photoswipe
+*     5.11 Progress-bars
+*     5.12 Counter
+*     5.13 jquery-circle-progress
+*     5.14 Timecircles
+*     5.15 Swiper
+*
+*   6. Fonts
+*     6.1 FontAwesome
+*     6.2 MDI
+**/
+
+
+// Import Bootstrap
+@import "../bootstrap/_functions";
+@import "../bootstrap/_variables";
+@import "../bootstrap/_mixins";
+
+// Import variables
+@import "_variables_custom"; 
+// Import mixins
+@import "mixins";
+// Import reset styles
+@import "reset";
+
+
+/*
+*
+* Main Styles
+* ==================================================
+*/
+
+// Body
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+  font-size: 16px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base;
+  }
+}
+
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    outline: none;
+  }
+
+  &[href*='callto'],
+  &[href*='mailto'] {
+    white-space: nowrap;
+  }
+}
+
+.link-hover{
+  color: $link-hover-color;
+}
+
+.link-press{
+  color: $link-press-color;
+}
+
+.p a:hover,
+.list a:hover{
+  text-decoration: underline;
+}
+
+
+// Images
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.image-wrapper{
+  position: relative;
+  padding-top: 80px;
+
+  .image__item{
+    @media (min-width: 1470px) {
+      margin-bottom: -55px;
+      max-width: none;
+    }
+  }
+}
+
+.image-wrapper-2{
+  position: relative;
+
+  .image__item{
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+    }
+
+    @media (min-width: 1500px) {
+      max-width: none;
+    }
+  }
+}
+
+
+.image-wrapper-3{
+  position: relative;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 80px;
+  }
+
+  .image__item{
+    @media (min-width: 1470px) {
+      margin-bottom: -88px;
+      max-width: none;
+    }
+  }
+}
+
+
+/*
+*
+* Typography
+* ==================================================
+*/
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+
+  a {
+    transition: .3s all ease;
+  }
+
+  a:hover {
+    color: darken($primary, 15%);
+  }
+}
+
+h1,
+.heading-1 {
+  font-size: 38px;
+  line-height: 1.35;
+  font-weight: 700;
+
+  @include media-breakpoint-up(md) {
+    font-size: 52px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h1-line-height;
+    font-size: $h1-font-size;
+  }
+}
+
+h2,
+.heading-2 {
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 200;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h2-line-height;
+    font-size: $h2-font-size;
+  }
+}
+
+h3,
+.heading-3 {
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 200;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h3-line-height;
+    font-size: $h3-font-size;
+  }
+}
+
+h4,
+.heading-4 {
+  font-size: 24px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(lg) {
+    line-height: $h4-line-height;
+    font-size: $h4-font-size;
+  }
+}
+
+h5,
+.heading-5 {
+  font-size: 20px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h5-line-height;
+    font-size: $h5-font-size;
+
+    &.big{
+      font-size: 26px;
+    }
+  }
+}
+
+h6,
+.heading-6 {
+  font-size: 17px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(lg) {
+    line-height: $h6-line-height;
+    font-size: $h6-font-size;
+  }
+}
+
+
+.font-accent{
+  font-family: $font-family-sec;
+}
+
+
+// Big text
+.text-big {
+  font-size: $font-size-lg;
+}
+
+
+// Small text
+small,
+.small {
+  display: block;
+  font-size: $font-size-sm;
+}
+
+
+// Divider
+// -------------------------
+
+hr{
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $gray-lighter;
+}
+
+.divider {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+
+  height: 2px;
+  width: 60px;
+  background-color: $black;
+}
+
+
+/*
+*
+* Backgrounds
+* ==================================================
+*/
+// bg-behaviour() off padding top if two section with same bg that are beside
+
+.bg-default {
+  @include bg-behaviour($white);
+}
+
+.bg-accent {
+  @include bg-behaviour($primary);
+
+  // Change color of primary button on primary bg
+  .btn-primary {
+    @include btn-variant($primary, $white, $white, $primary, darken($white, 5%), darken($white, 5%));
+  }
+}
+
+.bg-gray-lighter{
+  @include bg-behaviour($gray-lighter);
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+html.desktop {
+  .bg-fixed {
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+
+/*
+*
+* Colors
+* ==================================================
+*/
+
+.page {
+  @include text-variant('.text-black', $black, $primary);
+  @include text-variant('.text-gray-darker', $gray-darker, $primary);
+  @include text-variant('.text-gray-dark', $gray-dark, $primary);
+  @include text-variant('.text-gray', $gray, $primary);
+  @include text-variant('.text-gray-light', $gray-light, $primary);
+  @include text-variant('.text-gray-lighter', $gray-lighter, $primary);
+  @include text-variant('.text-primary', $primary, darken($primary, 10%));
+  @include text-variant('.text-secondary', $secondary, darken($secondary, 10%));
+  @include text-variant('.text-white', $white, darken($white, 10%));
+}
+
+
+/*
+*
+* Main layout
+* ==================================================
+*/
+
+// Page
+//
+
+.page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh!important;
+}
+
+
+// Page header
+//
+
+.page-header {
+  //Kill bootstrap style
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+
+
+}
+
+
+// Page footer
+//
+
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+
+// Components & modules & plugins & helpers & fonts
+//
+
+@import "includes";

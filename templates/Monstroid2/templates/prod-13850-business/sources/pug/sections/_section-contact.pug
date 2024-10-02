@@ -1,0 +1,24 @@
+// get a quote
+section.bg-gray-lighter.object-wrap
+ .section-lg
+   .container
+     .row.justify-content-end
+       .col-lg-5
+         h4.heading-decorated Get a Quote
+         // RD Mailform
+         form.rd-mailform.rd-mailform_style-1(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+           .form-wrap
+             input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+             label.form-label(for="contact-name") Your name
+
+           .form-wrap
+             input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+             label.form-label(for="contact-email") Your e-mail
+
+           .form-wrap
+             textarea#contact-message.form-input(name="message" data-constraints="@Required")
+             label.form-label(for="contact-message") Your message
+
+           button(type="submit").button.button-primary send
+
+ .object-wrap__body.object-wrap__body-sizing-1.object-wrap__body-md-left.bg-image(style='background-image: url(images/bg-image-3.jpg)')

@@ -1,0 +1,207 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-material-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'About'
+
+block page
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.bg-gray-dark.text-center
+    +material-parallax({
+      "src": "images/parallax-1.jpg",
+      "class": 'parallax-header rd-parallax-light'
+    })
+    
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h6 Welcome to the
+              h2 Best Indianapolis Hotel!
+              p While the Modern Hotel is neither the oldest nor the biggest one in Indianapolis or Indiana, we've got our own considerably long history of upholding a benchmark level of quality. Our biggest advantage over other hotels in the city is our balanced approach. With just 35 rooms, we're a quiet place to stay at.
+  ='\n'
+
+  // Main info
+  section.section-lg.bg-default.text-center
+    .container
+      .row.row-50.justify-content-md-center.align-items-lg-center.justify-content-xl-between
+        .col-lg-6.col-xl-5
+          h6 About us
+          h2 The Modern Hotel
+          p 4 different types of rooms from singles to suites offer a variety of choice, just as much as our excellent dining & our lobby bar... Additional services and amenities, on par with reasonable prices, make us stand out and win over both Indiana visiting tourists and businessmen on a go...
+
+        .col-md-9.col-lg-6
+          +jpg('about-1-622x456', 'img-bordered')
+  ='\n'
+
+  // Just a few reasons to choose
+  section.section-md.bg-accent.text-center
+    .container
+      h6 Just a few reasons to choose
+      h2 The Modern Hotel while staying in Indiana... 
+      .row.row-50.justify-content-md-center.offset-top-1
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-wifi
+            h4.box-icon__title Free WiFi
+ 
+        .col-md-3
+          // Box icon 
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-vpn_key
+            h4.box-icon__title Room Service 
+
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-directions_car
+            h4.box-icon__title Free Parking Lots
+
+        .col-md-3
+          // Box icon
+          article.box-icon
+            span.icon.icon-primary.icon-lg.material-icons-access_time
+            h4.box-icon__title Early check-in, late check-out
+  ='\n'
+
+  // Testimonials
+  section.section-md.bg-default.text-center
+    .container
+      h6 Read the Reviews, Written by
+      h2 Our Hotel Guests
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Quote review
+          article.quote-review
+            +jpg('guest-1-96x96', 'quote-review__image')
+            h4 Superb!
+            ul.list-rating
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+
+            .quote-review__body
+              p While staying in Indianapolis on my business affairs I always stay at this place. The price/quality ratio here is just outstanding, allowing me to save more money for other spends while visiting… My rating is 5 out of 5!
+              p.cite Martin van Buuren
+
+        .col-md-6.col-lg-4
+          // Quote review
+          article.quote-review
+            +jpg('guest-2-96x96', 'quote-review__image')
+            h4 Incredible!
+            ul.list-rating
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+
+            .quote-review__body
+              p Choosing a hotel is always challenging, especially if you’re on a hectic schedule and are visiting the place for the first time. That’s why I was so happy that my guess with this hotel was definitely a lucky one.
+              p.cite Mary Johnson
+
+        .col-md-6.col-lg-4
+          // Quote review
+          article.quote-review
+            +jpg('guest-3-96x96', 'quote-review__image')
+            h4 Exceptional!
+            ul.list-rating
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+              li.icon.material-icons-star
+
+            .quote-review__body
+              p I’ve been visiting Indianapolis last year while touring across the Midwest with my family. The Family room is just great, the hotel’s restaurant (and bar) are nice and overall, even the price was very reasonable…
+              p.cite Theodore Roosevelt
+      a.button.button-primary-outline(href='#') See all testimonials
+  ='\n'
+
+  // Rated by
+  section.section-md.bg-gray-lighter.text-center
+    .container
+      h2 Rated with 4 Stars by
+      // Owl Carousel
+      .owl-carousel.owl-carousel_centered.text-center(data-autoplay='true' data-items='1', data-sm-items='2', data-md-items='4', data-stage-padding='15', data-loop='true', data-margin='30', data-mouse-drag="false", data-dots='true' data-nav='false')
+        .item: a.link-transparent(href='#')
+          +png('brand-1-140x132')
+        .item: a.link-transparent(href='#')
+          +png('brand-2-192x83')
+        .item: a.link-transparent(href='#')
+          +png('brand-3-175x89')
+        .item: a.link-transparent(href='#')
+          +png('brand-4-170x104')
+  ='\n'
+
+  // Special Offers, City Guides & More!
+  section.bg-default.section-md.text-center
+    .container
+      h6 Special Offers, City Guides & More!
+      h2 See Our Hotel Blog
+      .row.row-50
+        .col-md-6.col-lg-4
+          // Post
+          article.post
+            +jpg('post-1-418x313', 'post__image')
+            ul.post__tags
+              li: a(href='#') City Guide
+            h4.post__title: a(href=postLink) A Definitive Guide to the Best Dining and Drinking Venues in the City
+            ul.post__meta
+              li
+                | by&nbsp;
+                a(href=postLink).meta-author Calvin Fitzgerald 
+              li: a(href=postLink): time(datetime='2017') Jan. 12
+              li: a(href=postLink) 3 comments
+              
+            a.button.button-primary-outline(href=postLink) read more
+            
+        .col-md-6.col-lg-4
+          // Post
+          article.post
+            +jpg('post-2-418x313', 'post__image')
+            ul.post__tags
+              li: a(href='#') City Guide
+            h4.post__title: a(href=postLink) Top Indiana Cities to See Besides Indianapolis and Fort Wayne
+            ul.post__meta
+              li
+                | by&nbsp;
+                a(href=postLink).meta-author Calvin Fitzgerald 
+              li: a(href=postLink): time(datetime='2017') Jan. 12
+              li: a(href=postLink) 3 comments
+              
+            a.button.button-primary-outline(href=postLink) read more
+            
+        .col-md-6.col-lg-4
+          // Post
+          article.post
+            +jpg('post-3-418x313', 'post__image')
+            ul.post__tags
+              li: a(href='#') City Guide
+            h4.post__title: a(href=postLink) Best Things to See While Staying in Indianapolis
+            ul.post__meta
+              li
+                | by&nbsp;
+                a(href=postLink).meta-author Calvin Fitzgerald 
+              li: a(href=postLink): time(datetime='2017') Jan. 12
+              li: a(href=postLink) 3 comments
+              
+            a.button.button-primary-outline(href=postLink) read more
+  ='\n'
+
+  include ../sections/_footer-corporate
+

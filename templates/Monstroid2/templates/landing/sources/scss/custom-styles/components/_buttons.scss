@@ -1,0 +1,155 @@
+/*
+*
+* Buttons
+* --------------------------------------------------
+*/
+
+
+// Button General Styles
+
+.button {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  transition: 250ms all ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: 600;
+  padding: 19px 42px 17px;
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none;
+  }
+
+  .caret{
+    margin-left: 8px;
+  }
+}
+
+.button-block{
+  display: block;
+  width: 100%;
+}
+
+[data-custom-toggle-goal]{
+  &.active{
+    display: inherit !important;
+  }
+}
+
+#goal-2{
+    &.active{
+      display: none;
+    }
+}
+
+
+// Appearance style
+// --------------------------------------------------
+
+.button-default {
+  @include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+}
+
+.button-white {
+  @include btn-variant($white, transparent, $white, $black, $white, $white);
+}
+
+.button-white-style-1 {
+  @include btn-variant($primary, $white, $white, $white, transparent, $white);
+}
+
+.button-primary {
+  @include btn-variant($white, $primary, $primary, $white, darken($primary, 10%), darken($primary, 10%));
+}
+
+
+// Btn with shadow
+.button-shadow{
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.15);
+
+  &:hover{
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(7px, 28px, 14px, 24px, 0);
+}
+
+.button-sm {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(10px, 22px, 14px, 24px, 0);
+}
+
+.button-lg {
+  // btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)
+  @include btn-size(18px, 30px, 18px, 22px, 0);
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+  border-radius: 30px;
+}
+
+.button-ellipse {
+  &-md {
+    border-radius: 5px;
+  }
+
+  &-lg {
+    border-radius: 10px;
+  }
+}
+
+
+// Button Icon styles
+// --------------------------------------------------
+
+.button {
+  &.button-icon {
+    padding-left: 17px;
+    padding-right: 17px;
+
+    .icon {
+      font-size: 16px;
+      line-height: inherit;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    &-left {
+      .icon {
+        float: left;
+        padding-right: 10px;
+      }
+    }
+
+    &-right {
+      .icon {
+        float: right;
+        padding-left: 10px;
+      }
+    }
+  }
+}

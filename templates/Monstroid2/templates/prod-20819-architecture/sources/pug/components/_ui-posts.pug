@@ -1,0 +1,6 @@
+mixin post-classic( obj )
+	article.post-classic( class= obj.mod )&attributes( attributes )
+		.heading-3.post-classic-time: time( datetime= obj.time.datetime )= obj.time.datetext
+		a.post-classic-figure( href='#' ): +jpg( obj.img )
+		h5.post-classic-title: a( href='#' )= obj.title
+		p.post-classic-text= obj.text

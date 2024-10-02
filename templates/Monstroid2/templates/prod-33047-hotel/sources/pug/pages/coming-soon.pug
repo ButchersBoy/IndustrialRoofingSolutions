@@ -1,0 +1,26 @@
+extends ../_skeleton
+include ../components/countdown
+
+block variables
+	- pageName = 'Coming soon'
+
+block page
+	// Coming soon
+	section.section-fullheight.bg-mask.bg-image.context-dark.text-center( style='background-image:url(images/background-01.jpg)' )
+		.section-fullheight-inner.section-sm.justify-content-between
+			.container
+				+logo
+			.section-sm
+				.container
+					.row.justify-content-center.text-center
+						.col-xl-11
+							h2 We're getting ready to launch in
+							.countdown-container
+								+countdown({to: '2023-12-31'})
+							p: span.d-inline-block( style="max-width:600px" ) Our website is under construction, we are working very hard to give you the best experience on our new website.
+							.btn-group-1
+								a.btn.btn-primary-fill( href='index.html' ) Go to Home
+								a.btn.btn-white( href='contacts.html' ) Contacts
+
+			.container
+				+rights

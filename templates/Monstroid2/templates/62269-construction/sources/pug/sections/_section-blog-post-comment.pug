@@ -1,0 +1,132 @@
+section.section-sm
+  .row.row-60.justify-content-md-between
+    .col-md-5.text-md-left
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit__left
+          span.icon.icon-md.linear-icon-arrow-left
+        .unit__body
+          p.small The art and science of color planning for performance requirements
+          
+    .col-md-5.text-md-right
+      a(href=postLink).unit.flex-row.unit-spacing-md.align-items-center
+        .unit__body
+          p.small How to save 10 grand a year with digital blueprints
+        .unit__right
+          span.icon.icon-md.linear-icon-arrow-right
+
+section.section-sm
+  h5 Latest Posts
+  .row.row-60
+    .col-md-6
+      // Post classic
+      article.post-minimal
+        +jpg('blog-image-4-415x315')
+        .post-classic-title
+          h6: a(href=postImage) TOP 30 SPORTS FACILITY ENGINEERING FIRMS
+
+        .post-meta
+          .group-xs
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+            a(href=postImage) 3 comment(s)
+            +tag-list({
+              list_class: 'list-inline-tag',
+              href: postImage,
+              items: [
+                "Industry News"]
+            })
+  
+    .col-md-6
+      // Post classic
+      article.post-minimal
+        +jpg('blog-image-3-415x315')
+        .post-classic-title
+          h6: a(href=postImage) SOLAR PANELS REQUIRED BY LAW?
+
+        .post-meta
+          .group-xs
+            a(href=postImage): time(datetime='2017') Jan.20, 2016
+            a(href=postImage).meta-author by Brian Williamson
+            a(href=postImage) 3 comment(s)
+            +tag-list({
+              list_class: 'list-inline-tag',
+              href: postImage,
+              items: [
+                "Industry News"]
+            })
+
+
+section.section-sm
+  // Blurb minimal
+  article.blurb: .unit.flex-sm-row.unit-spacing-md
+    .unit__left
+      +jpg('post-author-109x109', 'rounded-circle')
+    .unit__body
+      h6.blurb__title About the author
+      p.small Construction`s core values have been shaped over more than 10 years of delivering the finest construction services to our clients. They stood to the test of time and these principles remain our bedrock lynchpins. We never tried to cut on either quality or any other construction aspect. We stay true to our full promise of efficiency!
+
+section.section-sm
+  h5 3 Comments
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          .box-comment__header
+            .box-comment__header-left
+              p.box-comment__title Adam Smith
+              time(datetime='2017') Jul 18, 2016
+            .box-comment__header-right: a(href='#') Reply
+          p I’ve been thinking about this for years! Now I have not just the courage, but also the motivation to go full digital with the blueprints!
+         
+
+  .box-comment.box-comment-reply
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left
+        +jpg('post-author-109x109', 'rounded-circle')
+      .unit__body
+        .box-comment__body
+          .box-comment__header
+            .box-comment__header-left
+              p.box-comment__title Brian Williamson
+              time(datetime='2017') Jul 18, 2016
+            .box-comment__header-right: a(href='#') Reply
+          p I work for this company, and I’m so incredibly glad we’ve switched to storing and viewing all the blueprints in an easily accessible, digital format
+
+  .box-comment
+    .unit.flex-sm-row.unit-spacing-md
+      .unit__left 
+        .box-comment__icon: span.icon.linear-icon-man
+      .unit__body
+        .box-comment__body
+          .box-comment__header
+            .box-comment__header-left
+              p.box-comment__title Tom
+              time(datetime='2017') Jul 18, 2016
+            .box-comment__header-right: a(href='#') Reply
+          p Wow, it's very important information.
+
+section.section-sm
+  h5 Leave a reply
+
+  // RD Mailform
+  form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+    .form-wrap.form-wrap_icon.linear-icon-man
+      input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+      label.form-label(for="contact-name") Your name
+
+    .form-wrap.form-wrap_icon.linear-icon-envelope
+      input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+      label.form-label(for="contact-email") Your e-mail
+
+    .form-wrap.form-wrap_icon.linear-icon-telephone
+      input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+      label.form-label(for="contact-phone") Your phone
+
+    .form-wrap.form-wrap_icon.linear-icon-feather
+      textarea#contact-message.form-input(name="message" data-constraints="@Required")
+      label.form-label(for="contact-message") Your message
+
+    button(type="submit").button.button-primary SUBMIT COMMENT

@@ -1,0 +1,212 @@
+// Post classic
+.section-sm
+  article.post-classic
+    .post-classic-title.post-classic-title-icon.linear-icon-star
+      h4: a(href=postImage) SKIN UNDERTONE HIDDEN SECRETS: WHY IT MATTERS FOR HOW THE MAKEUP LOOKS ON YOU
+    +jpg('blog10-886x668')
+
+    .post-classic-body
+      p This newly famous jewelry master Mark Armstrong Peddigrew is also an avid traveller. Born in the land of most spectacular North America’s landscapes – namely city of St John, Newfoundland in Canada – he nurtured a fancy for everything antique all the way back from his childhood.
+
+    .post-meta
+      .post-inline__header-meta
+        a(href=postImage): time(datetime='2017') Jan.20, 2016
+        a(href=postImage).meta-author by Brian Williamson
+        a(href=postImage) 3 comment(s)
+        +tag-list({
+            list_class: 'list-inline-tag',
+            href: postImage,
+            items: [
+                "Style",
+                'Fashion']
+        })
+
+    .post-classic-footer
+      +list-inline-icon({
+          list_class: 'list-inline-sm',
+          items: [
+              "icon-xxs fa-facebook",
+              'icon-xxs fa-twitter',
+              'icon-xxs fa-google-plus',
+              'icon-xxs fa-vimeo',
+              'icon-xxs fa-youtube',
+              'icon-xxs fa-pinterest-p']
+      })
+
+      a(href=postImage).button.button-link Read more
+
+// Post gallery
+.section-sm
+  article.post-slider
+    .post-classic-title
+      h4: a(href=postSlider) THURSDAY’S WORKWEAR REPORT: SILK BLEND CARDIGAN
+
+    +slider-blog({
+        class: 'carousel-slider-blog-post',
+        items: [
+            {
+                original_img: 'gallery-post-01-original-1200x800',
+                img_thumb: 'blog5-886x668'
+            },
+            {
+                original_img: 'gallery-post-02-original-1200x800',
+                img_thumb: 'blog17-886x668'
+            },
+            {
+                original_img: 'gallery-post-03-original-1200x800',
+                img_thumb: 'blog18-886x668'
+            }
+        ]
+    })
+
+    .post-classic-footer
+      .post-meta
+        .post-inline__header-meta
+          a(href=postSlider): time(datetime='2017') Jan.20, 2016
+          a(href=postSlider).meta-author by Brian Williamson
+          a(href=postSlider) 3 comment(s)
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postSlider,
+              items: [
+                  "Style",
+                  'Fashion']
+          })
+      a(href=postSlider).button.button-link Read more
+
+// Post video
+.section-sm
+  article.post-video
+    .post-classic-title
+      h4: a(href=postVideo) COFFEE BREAK: KNOTTED CASHMERE HEMMED RUANA
+
+    .entry-video.embed-responsive.embed-responsive-16by9
+      iframe(width='886', height='668', src=videoSrc, allowfullscreen='')
+
+    .post-classic-footer
+      .post-meta
+        .post-inline__header-meta
+          a(href=postVideo): time(datetime='2017') Jan.20, 2016
+          a(href=postVideo).meta-author by Brian Williamson
+          a(href=postVideo) 3 comment(s)
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postVideo,
+              items: [
+                  "Style",
+                  'Fashion']
+          })
+      a(href=postVideo).button.button-link Read more
+
+// Post Link
+.section-sm
+  article.post-link
+    .post-classic-title
+      h4: a(href=blogPostLink) Multiple skins
+    a(href="http://templatemonster.com/") http://templatemonster.com/
+
+// Post quote
+.section-sm
+  article.post-quote
+    // Quote default
+    .quote-default.quote-default__border-left
+      .quote-default__text
+        p.q FASHION IS NOT NECESSARILY ABOUT LABELS. IT’S NOT ABOUT BRANDS. IT’S ABOUT SOMETHING ELSE THAT COMES FROM WITHIN YOU.
+
+      p.quote-default__cite Adam Smith
+      
+    .post-classic-footer
+      .post-meta
+        .post-inline__header-meta
+          a(href=postQuote): time(datetime='2017') Jan.20, 2016
+          a(href=postQuote).meta-author by Brian Williamson
+          a(href=postQuote) 3 comment(s)
+          +tag-list({
+            list_class: 'list-inline-tag',
+            href: postQuote,
+            items: [
+              "Style",
+              'Fashion']
+          })
+      a(href=postQuote).button.button-link Read more
+
+// Post standard
+.section-sm
+  article.post-classic
+    .post-classic-title
+      h4: a(href=postLink) KYLIE JENNER'S SEXY WRAP DRESS IS STILL AVAILABLE FOR UNDER $70
+
+    .post-classic-body
+      p This newly famous jewelry master Mark Armstrong Peddigrew is also an avid traveller. Born in the land of most spectacular North America’s landscapes – namely city of St John, Newfoundland in Canada – he nurtured a fancy for everything antique all the way back from his childhood.
+
+    .post-classic-footer
+      .post-meta
+        .post-inline__header-meta
+          a(href=postLink): time(datetime='2017') Jan.20, 2016
+          a(href=postLink).meta-author by Brian Williamson
+          a(href=postLink) 3 comment(s)
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postLink,
+              items: [
+                  "Style",
+                  'Fashion']
+          })
+      a(href=postLink).button.button-link Read more
+
+// Post audio
+.section-sm
+  article.post-audio
+    .post-classic-title
+      h4: a(href=postAudio) EXCLUSIVE: ASHLEY GRAHAM IS THE NEW FACE OF H&M STUDIO
+
+    // RD Audio
+    .rd-audio-wrap.rd-audio-dark.rd-audio-horizontal
+      .rd-audio(data-rd-audio-playlist-name='rd-playlist01', data-rd-volume-bar-type='horizontal')
+        .rd-audio-controls.text-center
+          .rd-audio-controls-left
+            // Play\Pause button
+            a.rd-audio-play-pause.fa.fa-play.rd-audio-icon.has-controls(href='#')
+          .rd-audio-progress-bar-wrap
+            // Time
+            .rd-audio-time
+              // currentTime
+              span.rd-audio-current-time 00:00
+            // Progress bar
+            .rd-audio-progress-bar
+          // Volume button
+          a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href='#')
+          // Volume bar
+          .rd-audio-volume-bar
+          .rd-audio-controls-righ.d-none
+            // Playlist button
+            a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href='#')
+        .rd-audio-playlist-wrap
+          h6.rd-audio-playlist-title Playlist
+          ul.rd-audio-playlist(data-rd-audio-playlist='rd-playlist01', data-rd-audio-play-on='li')
+            li(data-rd-audio-src='audio/sound.mp3')
+
+    
+
+    .post-classic-footer
+      .post-meta
+        .post-inline__header-meta
+          a(href=postAudio): time(datetime='2017') Jan.20, 2016
+          a(href=postAudio).meta-author by Brian Williamson
+          a(href=postAudio) 3 comment(s)
+          +tag-list({
+              list_class: 'list-inline-tag',
+              href: postAudio,
+              items: [
+                  "Style",
+                  'Fashion']
+          })
+      a(href=postAudio).button.button-link Read more
+
+// Pagination
+.section-sm
+  +pagination-classic(1,
+    [{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}],
+    null,
+    {"title": "", "href": "#"}
+  )

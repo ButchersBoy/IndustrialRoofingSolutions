@@ -1,0 +1,33 @@
+// Mixins
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Disable padding - top on two similar backgrounds
+@mixin bg-behaviour($bg-color) {
+  background-color: $bg-color;
+
+  & + & {
+    padding-top: 0;
+  }
+}
+
+// Text variant
+@mixin text-variant($parent, $color, $hover-color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover,
+  a#{$parent}:focus {
+    color: $hover-color;
+  }
+}

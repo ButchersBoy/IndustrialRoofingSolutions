@@ -1,0 +1,15 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Header transparent'
+
+block page 
+  // Page header
+  include ../sections/_header-transparent
+  include ../sections/_section-slider-commercial
+  include ../sections/_section-posts
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

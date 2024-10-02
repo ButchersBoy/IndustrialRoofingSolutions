@@ -1,0 +1,53 @@
+//- Services
+mixin service-default( obj )
+	// Service default
+	.service-default&attributes( attributes )
+		.service-default-icon( class= obj.icon )
+		.service-default-caption
+			.heading-6.service-default-title: a( href='#' )= obj.title
+			p.service-default-text= obj.text
+
+mixin service-classic( obj )
+	// Service classic
+	.service-classic&attributes( attributes )
+		.unit.unit-spacing-xl( class= obj.unit )
+			.unit-left: .service-classic-icon: span( class= obj.icon )
+			.unit-body
+				.heading-5.service-classic-title: a( href='#' )= obj.title
+				p.service-classic-text= obj.text
+
+//- Team
+mixin team-default( obj )
+	// Team default
+	.team-default&attributes( attributes )
+		a.team-default-figure( href='#' ): +img( obj.img ).team-default-img.img-duotone( data-gradient-map="#002ba7, #FFFFFF" )
+		.heading-6.team-default-name: a( href='#' )= obj.name
+		.team-default-status= obj.status
+		a.team-default-social.mdi.mdi-linkedin( href='#' )
+
+mixin team-creative( obj )
+	// Team creative
+	.team-creative&attributes( attributes )
+		.team-creative-figure
+			a( href='#' ): +img( obj.img )
+			ul.list-social.list-social-2.team-creative-list-social
+				li: a.icon.mdi.mdi-linkedin( href='#' )
+				li: a.icon.mdi.mdi-telegram( href='#' )
+				li: a.icon.mdi.mdi-twitter( href='#' )
+
+		.team-creative-caption
+			.heading-6.team-creative-name: a( href='#' )= obj.name
+			.team-creative-status= obj.status
+
+mixin box-minimal( obj )
+	// Box minimal
+	.box-minimal&attributes( attributes )
+		.heading-6.box-minimal-title= obj.title
+		.box-minimal-text= obj.text
+
+mixin quote-classic( obj )
+	// Quote Classic
+	.quote-classic&attributes( attributes )
+		.quote-classic-figure: +img( obj.img )
+		.heading-6.quote-classic-title= obj.title
+		.quote-classic-text= obj.text

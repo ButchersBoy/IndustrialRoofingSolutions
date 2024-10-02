@@ -1,0 +1,53 @@
+/*
+*
+* ToTop
+*/
+
+.ui-to-top {
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 100;
+	width: $form-input-height;
+	height: $form-input-height;
+	font-size: 20px;
+	line-height: $form-input-height - 4px;
+	color: $black;
+	background: $primary;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	transition: $transition-base;
+	transform: translate3d(0, 100px, 0);
+	box-shadow: 3px 8px 20px 0 rgba($primary, 0.2);
+	border-radius: $btn-border-radius;
+
+	&:hover {
+		color: $white;
+		background: $gray-900;
+		text-decoration: none;
+		box-shadow:3px 4px 10px 0 rgba($gray-700, 0.2);
+	}
+
+	&:focus {
+		color: $white;
+	}
+
+	&.active {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top {
+	display: none !important;
+}
+
+@include media-breakpoint-up(sm) {
+	.ui-to-top {
+		right: 40px;
+		bottom: 40px;
+	}
+}
+
+

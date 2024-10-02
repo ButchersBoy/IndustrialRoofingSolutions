@@ -1,0 +1,96 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'About'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// About me
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-custom-3.text-center.text-md-start
+		.container
+			.row.row-40.align-items-lg-center
+				.col-md-6.col-xl-7
+					.img-responsive
+						+img( 'user-01-584x630' )
+
+				.col-md-6.col-xl-5
+					.thumbnail-person.thumbnail-person-1
+						.h2.thumbnail-person-title The Best Place to Enjoy Your Life
+						.thumbnail-person-text.text-primary.fw-medium Welcome to Norliva, one of the best hotels to stay at. Established in 2005, today our hotel provides accommodation services of the utmost level.
+						.thumbnail-person-text Norliva Hotel offers its guests a modern accommodation combined with the top-level selection of additional services. We strive to be the first choice in the mind of guests, owners, and talent. In our journey to achieve this, we practice strong beliefs and actions that respect the diversity of people, the community, ethics, and the planet.
+						.thumbnail-person-footer
+							.thumbnail-person-footer-item
+								h4.thumbnail-person-title Ricard Morgan
+								.thumbnail-person-title-caption General Manager
+							.thumbnail-person-footer-item
+								+img( 'sign-106x63.png' ).thumbnail-person-sign
+
+	// Gallery
+	section.section.section-lg.section-lg-1.section-half-bg.section-half-bg-right.section-half-bg-custom-4.text-center.text-md-start
+		.container
+			.row.row-40
+				.col-md-6.col-xl-5
+					.block-sm
+						h2 Restaurant
+						p Our culinary craftspeople invite you to join them at the Norliva Restaurant around the table as they bring the most remarkable dining experiences to life.
+					.img-responsive.img-wrap-2
+						+img( 'about-01-469x558' )
+
+				.col-md-6.col-xl-7.text-md-end
+					.block-sm.text-md-start
+						h2 Accommodation
+						p We offer contemporary accommodation that is luxury yet affordable and includes a varied choice of rooms. Our hotels are characterized by the top-notch service, high level of comfort, and a wide range of amenities that our guests have come to expect.
+					.row.row-30.row-offset-1.justify-content-center( data-lightgallery='group' )
+						.col-5.col-xs-4.col-md-6.col-lg-4
+							+thumbnail-gallery({
+								img: 'about-02-200x200',
+								imgOriginal: 'about-02-original',
+							})
+						.col-5.col-xs-4.col-md-6.col-lg-4
+							+thumbnail-gallery({
+								img: 'about-03-200x200',
+								imgOriginal: 'about-03-original',
+							})
+						.col-5.col-xs-4.col-md-6.col-lg-4
+							+thumbnail-gallery({
+								img: 'about-04-200x200',
+								imgOriginal: 'about-04-original',
+							})
+
+	// Team
+	section.section.section-lg.section-lg-3.bg-default.text-center.text-md-start
+		.container
+			.row.row-40.justify-content-end
+				.col-md-7.col-lg-5
+					h2 Professional Team
+					p Our hotel employs the best people in the industry - from waiters to receptionists.
+			.owl-carousel.owl-carosel-1(
+				data-items='1',
+				data-sm-items='2',
+				data-md-items='3',
+				data-loop='false',
+				data-owl= {
+					dots: true
+				}
+			)
+				+thumbnail-boxed({
+					img: 'user-02-370x467',
+					title: 'Harold Barnett',
+					meta: 'General Manager',
+				})
+				+thumbnail-boxed({
+					img: 'user-03-370x467',
+					title: 'Donna Miller',
+					meta: 'Front Desk Manager',
+				})
+				+thumbnail-boxed({
+					img: 'user-04-370x467',
+					title: 'Fred Cox',
+					meta: 'Concierge',
+				})
+
+	include ../sections/_contact-form
+	include ../sections/_footer-classic

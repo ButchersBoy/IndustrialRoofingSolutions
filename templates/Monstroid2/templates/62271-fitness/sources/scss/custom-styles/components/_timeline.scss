@@ -1,0 +1,254 @@
+//timeline
+//
+
+.timeline-heading {
+  img {
+    width: auto;
+  }
+
+  * + h6 {
+    margin-top: 23px;
+  }
+
+  * + & {
+    margin-top: 30px;
+    @include media-breakpoint-up(md) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.timeline-title {
+  &:hover{
+    color: $primary;
+  }
+}
+
+.page {
+  .timeline-variant-1,
+  .timeline-variant-2 {
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(md) {
+
+    //timeline 1
+    //
+    .timeline-variant-1 {
+      flex-direction: column;
+
+      > [class*=cell-] {
+        &:nth-child(odd) {
+          align-self: flex-end;
+          text-align: left;
+
+          .timeline-inner-box {
+            padding-left: 46px;
+          }
+        }
+        &:nth-child(even) {
+          align-self: flex-start;
+          text-align: right;
+
+          .timeline-inner-box {
+            padding-right: 46px;
+
+            &:before {
+              left: auto;
+              right: -1px;
+            }
+            &:after {
+              left: auto;
+              right: -10px;
+            }
+          }
+        }
+      }
+    }
+
+    //timeline 2
+    //
+    .timeline-variant-2 {
+      flex-direction: column;
+
+      > [class*=cell-] {
+        align-self: flex-end;
+        text-align: left;
+        flex-basis: auto;
+
+        .timeline-inner-box {
+          padding-left: 46px;
+        }
+      }
+    }
+  }
+
+  //timeline 3
+  //
+  .timeline-variant-3 {
+    padding-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 85px;
+    }
+
+    .item {
+      padding-bottom: 10px;
+    }
+
+    .timeline-inner-box {
+      p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:before,
+      &:after {
+        content: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        &:before {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: calc(99% - 85px);
+          bottom: 0;
+          border-bottom: 1px solid $gray-1;
+          border-left:0;
+          content: "";
+          display: inline-block;
+        }
+
+        &:after {
+          position: absolute;
+          top: calc(99% - 9px);
+          left: calc(50% - 9px);
+          display: inline-block;
+          width: 19px;
+          height: 19px;
+          background: $primary;
+          border-radius: 50%;
+          content: '';
+        }
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      top: auto;
+      bottom: 0;
+    }
+
+    .owl-prev {
+      left: calc(50% - 35px);
+    }
+    .owl-next {
+      right: calc(50% - 40px);
+    }
+  }
+}
+
+//fix ie
+//
+
+.ie-11,
+.ie-10,
+.ie-edge {
+  @include media-breakpoint-up(md) {
+    .timeline-variant-1 {
+      > [class*=cell-] {
+        flex-basis: auto;
+      }
+    }
+  }
+}
+
+//timeline inner box
+//
+.timeline-inner-box {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 35px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: -4px;
+    left: 0;
+    border-left: 1px solid $gray-1;
+    content: "";
+    display: inline-block;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: $primary;
+    border-radius: 50%;
+    content: '';
+  }
+
+  time {
+    display: block;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 26px;
+    color: $primary;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 0 20px 55px;
+
+    &:before,
+    &:after {
+      top: 4px;
+    }
+
+  }
+}
+
+//timeline animation
+//
+
+//@include media-breakpoint-up(md) {
+//
+//  .timeline-inner-box {
+//    &.view-animate {
+//      &:after {
+//        transform: scale(0);
+//        transition: 350ms ease-in;
+//      }
+//      &:before {
+//        bottom: 100%;
+//        transition: 650ms 350ms ease-in;
+//      }
+//
+//      .timeline-content-wrap {
+//        overflow: hidden;
+//      }
+//
+//      .timeline-content {
+//        opacity: 0;
+//        transform: translate3d(-80px, 0, 0);
+//        transition: 1500ms 600ms ease-in-out;
+//      }
+//    }
+//
+//    &.active {
+//      &:after {
+//        transform: scale(1);
+//      }
+//      &:before {
+//        bottom: -4px;
+//      }
+//      .timeline-content {
+//        opacity: 1;
+//        transform: translate3d(0, 0, 0);
+//      }
+//    }
+//  }
+//}

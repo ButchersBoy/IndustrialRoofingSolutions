@@ -1,0 +1,72 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-list-inline-icon
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'About'
+
+block page
+  // Page header
+  include ../sections/_header-sidebar-inverse
+
+  section.text-center
+    +parallax({
+        "backgroundSpeed": "0.35",
+        "attrType": "media",
+        "src": "images/parallax-03.jpg",
+        "htmlSpeed": "0.1",
+        "class": 'parallax-header rd-parallax-light'
+    })
+      .parallax-header__inner: .parallax-header__content
+        .container
+          .row.justify-content-sm-center
+            .col-md-10.col-xl-8
+              h2 About
+  ='\n'
+  
+  section.section-md.bg-default
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-xl-8.section-divided__main
+          .section-sm
+            p.first-letter 
+              | Hello, my dear readers! I’d like to tell you more about myself, my fashion tastes and the origins of my inspiration for all things lifestyle and beauty. I’ve been working for almost 15 years in different, nationwide fashion and lifestyle magazines, such as Vogue; Elle; Pink. Such experience gave me a professional expertise and a personal passion for everything related to all topics a modern woman needs to stay updated on! Because of that I think of myself more as a lifestyle journalist than a fashion editor or a fashion blogger, because that’s what I’ve spent most of my time being. Being a fashion editor doesn’t require journalistic approach.
+            +jpg('about-1-886x668')
+            p A fashion editor has just one concern – to get the best image for a cover. I’ve never done that. I’ve never done a fashion shoot in my life, so obviously that doesn’t feel very natural to me at all. Additionally I can say for sure, that there are some topics more important for me, than the ones I’ve been working on in a magazine. It was one of the reasons I began to pursue my own writing routine here – to write more about what I like best. To tell more about traveling, lifestyle events, unusual clothes and so many other things you can find here in my personal blog!
+            +jpg('about-2-886x668')
+            
+          .section-sm
+            h5 Leave a reply
+
+            // RD Mailform
+            form.rd-mailform.rd-mailform_style-1.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap.form-wrap_icon.linear-icon-man
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                label.form-label(for="contact-name") Your name
+
+              .form-wrap.form-wrap_icon.linear-icon-envelope
+                input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                label.form-label(for="contact-email") Your e-mail
+
+              .form-wrap.form-wrap_icon.linear-icon-telephone
+                input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+                label.form-label(for="contact-phone") Your phone
+
+              .form-wrap.form-wrap_icon.linear-icon-feather
+                textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                label.form-label(for="contact-message") Your message
+
+              button(type="submit").button.button-gray-light-outline Submit comment
+
+  ='\n'
+
+  section.section-sm.bg-default
+    include ../sections/_section-carousel-post
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

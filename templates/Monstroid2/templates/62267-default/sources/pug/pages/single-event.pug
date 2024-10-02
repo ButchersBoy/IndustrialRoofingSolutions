@@ -1,0 +1,79 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Single Event'
+
+block page
+	// Page header
+	include ../sections/_header-default
+	='\n'
+	
+	+breadcrumbs
+	='\n'
+	
+	section.section.novi-bg.novi-bg-img.bg-default.section-xl.text-center
+		.container
+			.row.row-fix.justify-content-sm-center
+				article.col-md-10.col-xl-8.post-event.section-divided__main
+					section.post-event-single.section-md
+						h3 The Power of Bootstrap Toolkit
+						time(datetime='2022').events-single-time September 28, 2022 @ 8:00 am - October 5, 2022 @ 5:00 pm
+						span.button.button-lg.button-gray-light-outline $100
+						.post-event-single-body.text-md-start
+							+jpg('day-events-1-886x668')
+							p We’ve made a huge effort to provide you with the extreme power of site building via Bootstrap Framework. It is one of the most modern and flexible solutions for everyone who wants their website working properly and according to the latest standards. With Bootstrap, your website will look attractive and informative…
+						.group
+							a(href='#').button.button-black GOOGLE CALENDAR
+							a(href='#').button.button-black ICAL EXPORT
+					
+					section.text-md-start.section-md
+						.row
+							.col-md-6
+								h5 Details
+								ul.list-xs
+									li
+										dl.list-terms-minimal
+											dt Start
+											dd: time(datetime='2022') September 28, 2022 @ 8:00 am
+									li
+										dl.list-terms-minimal
+											dt End
+											dd: time(datetime='2022') October 5, 2022 @ 5:00 pm
+									li
+										dl.list-terms-minimal
+											dt Cost
+											dd $100
+									li
+										dl.list-terms-minimal
+											dt Event Category
+											dd Design
+									li
+										dl.list-terms-minimal
+											dt Event Tags
+											dd events
+									li
+										dl.list-terms-minimal
+											dt Website
+											dd: a(href='http://www.demolink.org') http://www.demolink.org
+							
+							.col-md-6
+								h5 Organizer
+								ul.list-xs
+									li Brian Adams
+									li
+										dl.list-terms-minimal
+											dt Phones
+											dd
+												a(href='tel:#') (800) 123-0045
+												='; '
+												a(href='tel:#') (800) 123-0046
+					
+					section.text-md-start.section-md
+						h5 Venue
+						p
+							| Big Theatre 378, Main Street  San-Francisco, CA United States
+							=' '
+							a(href="#") + Google Map
+	
+	// Page Footer
+	include ../sections/_footer-corporate

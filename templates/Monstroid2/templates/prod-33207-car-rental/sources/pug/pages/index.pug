@@ -1,0 +1,255 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-list-inline-icon
+include ../elements/_ui-pricing-table
+
+block page
+	// Page Header
+	include ../sections/_header-modern
+	='\n'
+	
+	// Swiper
+	include ../sections/_section-parallax
+	='\n'
+
+	// Blurbs
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-center.text-center
+				.col-md-10.col-xl-8
+					h2 Why choose our service?
+					p At GoDrive, our expert staff offer lots of benefits and advantages to our clients. With us,  you’ll receive a class-leading car rental service from local experts.
+			.row.row-30
+				.col-sm-6.col-lg-3
+					// Blurb minimal
+					article.blurb.blurb-minimal.blurb-minimal_centered
+						.blurb-minimal__icon
+							+img('percent-01-48x48.svg')
+						h3.heading-4.blurb__title Low prices
+						p.small.text-secondary GoDrive provides top-class services at an affordable price.
+
+				.col-sm-6.col-lg-3
+					// Blurb minimal
+					article.blurb.blurb-minimal.blurb-minimal_centered
+						.blurb-minimal__icon
+							+img('user-msg-01-48x48.svg')
+						h3.heading-4.blurb__title Experienced staff
+						p.small.text-secondary We hire the best experts in everything concerning car rental.
+
+				.col-sm-6.col-lg-3
+					// Blurb minimal
+					article.blurb.blurb-minimal.blurb-minimal_centered
+						.blurb-minimal__icon
+							+img('msg-01-48x48.svg')
+						h3.heading-4.blurb__title Reliable support
+						p.small.text-secondary Our team guarantees reliable support in addition to the offered services.
+
+				.col-sm-6.col-lg-3
+					// Blurb minimal
+					article.blurb.blurb-minimal.blurb-minimal_centered
+						.blurb-minimal__icon
+							+img('marker-01-48x48.svg')
+						h3.heading-4.blurb__title Convenient location
+						p.small.text-secondary You can find our car rental offices throughout the US.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-gray-lighter
+		.container
+			.row.row-40.justify-content-md-between
+				.col-md-5
+					+img('img-01-460x614')
+				.col-md-6
+					h2 Our advantages
+					p Renting a car at GoDrive offers lots of advantages.
+					p Driving a rented car from us provides an unforgettable and positive experience. With our services, you’ll also get:
+					article.blurb.blurb-circle.ms-0: .unit.unit-spacing-xl
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.fa-check
+						.unit-body
+							h3.heading-4.blurb__title Mobile phone reservation
+							p.small.text-secondary.text-width-3 Book your rental car in advance with mobile phone reservation services or by using our app.
+
+					article.blurb.blurb-circle.ms-0: .unit.unit-spacing-xl
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.fa-check
+						.unit-body
+							h3.heading-4.blurb__title One-way car rentals
+							p.small.text-secondary.text-width-3 GoDrive offers easy and convenient one-way car rentals between many of its locations in the US.
+
+					article.blurb.blurb-circle.ms-0: .unit.unit-spacing-xl
+						.unit-left
+							.blurb-circle__icon: span.icon.novi-icon.fa-check
+						.unit-body
+							h3.heading-4.blurb__title Fast help
+							p.small.text-secondary.text-width-3 If you need fast and reliable support, our team members will be ready to help at any time.
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.row-40.justify-content-md-between.flex-column-reverse.flex-md-row
+				.col-md-5
+					h2 Quality guaranteed
+					p GoDrive provides quality car rental solutions.
+					p When it comes to renting a car, the options can be overwhelming and hard to sift through. Rest assured that whatever you’re looking for, we can provide it.
+					p From top-notch customer service to a vast selection of rental cars, you can expect the best from our team.
+					a.button.button-primary(href='about.html') More info
+				.col-md-6
+					+img('img-02-560x418')
+	='\n'
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-accent
+		.container
+			.row.row-40
+				.col-sm-6.col-lg-3
+					// Box counter
+					article.box-counter
+						.box-counter__wrap
+							.counter 2000
+							.counter-postfix +
+						.box-counter__divider
+						p.box-counter__title Rented cars
+						p.small.text-secondary Annually, we provide lots of cars and vehicles for rental throughout the United States.
+				.col-sm-6.col-lg-3
+					article.box-counter
+						.box-counter__wrap
+							.counter 1800
+							.counter-postfix +
+						.box-counter__divider
+						p.box-counter__title Satisfied customers
+						p.small.text-secondary We try to achieve the highest level of customer satisfaction by meeting the needs of our clients.
+				.col-sm-6.col-lg-3
+					article.box-counter
+						.box-counter__wrap
+							.counter 54
+						.box-counter__divider
+						p.box-counter__title Cities
+						p.small.text-secondary We have car rental offices in 54 cities and all states of the USA, so that you could rent a car almost anywhere.
+				.col-sm-6.col-lg-3
+					article.box-counter
+						.box-counter__wrap
+							.counter 5000
+						.box-counter__divider
+						p.box-counter__title Car Models
+						p.small.text-secondary We work in partnership with various carmakers to provide our clients with the best and most reliable cars.
+	='\n'
+
+	// Pricing
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			h2.text-center Cost of car rental
+			.row.row-20.row-sm-40
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '4 hours',
+						price: '$12'
+					})
+						ul.list-marked.list-marked-sm
+							li Sedans & hatchbacks
+							li Unlimited mileage
+							li Basic insurance
+							li Free cancellation
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 day',
+						price: '$20'
+					})
+						ul.list-marked.list-marked-sm
+							li Coupes and universals
+							li Protection against injuries
+							li GPS
+							li Additional driver
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 week',
+						price: '$78'
+					})
+						ul.list-marked.list-marked-sm
+							li Minivans & pickups
+							li Child seat
+							li Snow chains
+							li Smart cover protection
+
+				.col-sm-6.col-xl-3
+					+pricing-table({
+						title: '1 month',
+						price: '$299'
+					})
+						ul.list-marked.list-marked-sm
+							li Roadsters & sport cars
+							li Total protection
+							li Car pooling up to 5 drivers
+							li Animal care
+
+	include ../sections/_section-cta-1
+
+	// Testimonials
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			h2.text-center What our customers #[br]have to say
+			p.text-center Take a look at the recent testimonials submitted by our clients.
+			// Owl Carousel
+			.owl-carousel(data-autoplay='false' data-items='1', data-md-items='2', data-loop='true', data-margin='20', data-sm-margin='40', data-dots='true')
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q This was the most friendly, quick, and efficient experiences that I have ever experienced. I will definitely be using your services again.
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 5.0
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-1-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Adam Jordan
+							p.quote-classic__small June 21, 2023
+
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q My rental was upgraded with no extra charge, they had a shuttle running around the clock with helpful staff and checking out was quick and painless. The car was clean, fully fueled, stocked with water bottles and a guide to LA, so no extra stops were needed.
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 4.5
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-2-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Jerome Bell
+							p.quote-classic__small June 21, 2023
+
+				.quote-classic
+					.quote-classic__main
+						.quote-classic__text: q This was the most friendly, quick, and efficient experiences that I have ever experienced. I will definitely be using your services again.
+						.quote-classic__meta
+							.quote-classic__meta-item.quote-classic-rating
+								span ★
+								span 5.0
+					.quote-classic__caption
+						.quote-classic__image.quote-classic__caption-aside
+							+jpg('testimonials-1-72x72')
+						.quote-classic__caption-main
+							p.quote-classic__cite Adam Jordan
+							p.quote-classic__small June 21, 2023
+	='\n'
+
+	+divider
+
+	section.section.novi-bg.novi-bg-img.section-xl.bg-default
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-7.text-center
+					h2 The most popular car brands that we rent
+			.owl-carousel.owl-offset-2(data-autoplay='false' data-items='1', data-sm-items='2', data-md-items='4', data-xl-items='6', data-loop='true', data-margin='20', data-sm-margin='40', data-dots='true')
+				a.link-image-2(href='#'): +img('brand-1-160x100.png')
+				a.link-image-2(href='#'): +img('brand-2-160x100.png')
+				a.link-image-2(href='#'): +img('brand-3-160x100.png')
+				a.link-image-2(href='#'): +img('brand-4-160x100.png')
+				a.link-image-2(href='#'): +img('brand-5-160x100.png')
+				a.link-image-2(href='#'): +img('brand-6-160x100.png')
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer-corporate

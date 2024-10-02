@@ -1,0 +1,15 @@
+//- Counter
+	@param {object} obj
+	@param {number} obj.value
+	@param {string} [obj.title]
+	@param {string} [obj.postfix]
+	@param {number} [obj.duration]
+mixin counter( obj )
+	.counter-wrap&attributes( attributes )
+		h2
+			span.counter( data-speed= obj.duration || '3000' )= obj.value
+			if ( obj.postfix )
+				span.counter-postfix= obj.postfix
+
+		if ( obj.title )
+			h5= obj.title

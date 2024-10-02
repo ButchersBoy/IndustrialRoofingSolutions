@@ -1,0 +1,93 @@
+// Swiper
+section.swiper-form-wrap
+  .swiper-container.swiper-slider.swiper-slider_fullheight(data-simulate-touch="false", data-loop='true', data-autoplay='5500') 
+    .swiper-wrapper
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-1.jpg')
+        .swiper-slide-caption 
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+            
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') Welcome to
+            h1.swiper-brand(data-caption-animate='fadeInUpSmall', data-caption-delay='100') Aparto
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              | We are the nation’s leading real estate agency providing sustainable 
+              br.d-none.d-md-block 
+              |  properties all over the country. 
+            
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-2.jpg')
+        .swiper-slide-caption
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+           
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') A VARIETY OF
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='100') New Properties
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              |  We daily update our property catalog with new properties of all kinds to help you find your dream house.
+            
+      .swiper-slide.bg-gray-darker.text-center(data-slide-bg='images/slider-slide-3.jpg')
+        .swiper-slide-caption
+          .container: .row.justify-content-lg-center: .col-lg-10.col-xl-7
+            
+            h6(data-caption-animate='fadeInUpSmall', data-caption-delay='0') WE OFFER LOTS OF
+            h1(data-caption-animate='fadeInUpSmall', data-caption-delay='100') Luxury Amenities
+            p(data-caption-animate='fadeInUpSmall', data-caption-delay='200') 
+              | Every property we sell has numerous amenities that only add to your comfort and create a great atmosphere.
+
+    // Swiper Pagination
+    .swiper-pagination 
+      
+  .container.section-form: .section-form__inner: .section-form__content
+    // RD Mailform
+    form.rd-mailform.rd-mailform_boxed.rd-mailform_modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+      .rd-mailform_boxed__inner 
+        .box-element.box-element_md: .form-wrap
+          label.form-label-outside(for="location") LOCATION:
+          // Select 2
+          select#location.form-input.select-filter(data-placeholder="LOCATION:" name="location" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option(disabled)
+            option(value="2") Chicago, IL
+            option(value="3") Seattle, WA
+            option(value="4") Miami, FL
+            option(value="5") Dallas, TX
+            option(value="6") Atlanta, GA
+            option(value="7") New York, NY
+              
+ 
+        .box-element.box-element_md: .form-wrap
+          label.form-label-outside(for="property") PROPERTY TYPE:
+          // Select 2
+          select#property.form-input.select-filter(data-placeholder="PROPERTY TYPE:" name="property" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option(disabled)
+            option(value="2") Single-Family
+            option(value="3") Multi-Unit
+            option(value="4") Modular Home
+            option(value="5") Townhouse
+            option(value="6") Condominium
+            option(value="7") Vacation Home
+
+        .box-element.box-element_xs: .form-wrap
+          label.form-label-outside(for="beds") BEDS:
+          // Select 2
+          select#beds.form-input.select-filter(data-placeholder="1" name="beds" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option(disabled)
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
+            option(value="6") 6
+            option(value="7") 7
+          
+
+        .box-element.box-element_xs: .form-wrap
+          label.form-label-outside(for="baths") BATHS:
+          // Select 2
+          select#baths.form-input.select-filter(data-placeholder="0" name="baths" data-minimum-results-for-search="Infinity" data-constraints="@Required")
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+            option(value="5") 5
+            option(value="6") 6
+           
+
+        .box-element.box-element_sm: a.button.button-primary(href='property-search-results.html') FIND YOUR PROPERTY 
+
+='\n'

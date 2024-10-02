@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Grid System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,500%7CPlayfair+Display:700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-sidebar" data-xl-device-layout="rd-navbar-sidebar" data-xxl-layout="rd-navbar-sidebar" data-xxl-device-layout="rd-navbar-sidebar" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="1x" data-xxl-stick-up-offset="1px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-300x86.png" alt="" width="150" height="43"/><img class="brand-logo-light" src="images/logo-inverse-300x86.png" alt="" width="150" height="43"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="online-lectures.html">Online Lectures</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="courses.html">Courses</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="news.html">News</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-post.html">Single Post</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Pages</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="typography.html">Typography</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="buttons.html">Buttons</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="forms.html">Forms</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="tabs-and-accordions.html">Tabs and accordions</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="progress-bars.html">Progress bars</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="tables.html">Tables</a>
+                          </li>
+                          <li class="rd-dropdown-item active"><a class="rd-dropdown-link" href="grid-system.html">Grid system</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="privacy-policy.html">Privacy policy</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="under-construction.html">Under Construction</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs-->
+      <section class="breadcrumbs-custom bg-transparent">
+        <div class="container">
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li class="active">Grid system</li>
+          </ul>
+        </div>
+      </section>
+      <!--Full-Width Grid System-->
+      <section class="section section-md bg-default">
+        <div class="container-fluid grid-demo grid-demo-bordered">
+          <h3 class="text-center">Full-Width Grid System</h3>
+          <div class="row">
+            <div class="col-12">
+              <h6>1/1</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h6>1/2</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely</p>
+            </div>
+            <div class="col-6">
+              <h6>1/2</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <h6>2/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Boxed Grid System-->
+      <section class="section section-md bg-default">
+        <div class="container grid-demo grid-demo-underlined">
+          <h3 class="text-center">Boxed Grid System</h3>
+          <div class="row">
+            <div class="col-12">
+              <h6>1/1</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h6>1/2</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+            <div class="col-6">
+              <h6>1/2</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login</p>
+            </div>
+            <div class="col-3">
+              <h6>1/4</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+            <div class="col-2">
+              <h6>1/6</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <h6>2/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages</p>
+            </div>
+            <div class="col-4">
+              <h6>1/3</h6>
+              <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Brands-->
+      <section class="section section-sm bg-gray-700 text-center section-relative">
+        <div class="container">
+          <div class="group-flex"><a class="image-link" href="#"><img src="images/brand-01-155x43.png" alt="" width="155" height="43"/></a><a class="image-link" href="#"><img src="images/brand-02-200x47.png" alt="" width="200" height="47"/></a><a class="image-link" href="#"><img src="images/brand-03-117x42.png" alt="" width="117" height="42"/></a><a class="image-link" href="#"><img src="images/brand-04-115x39.png" alt="" width="115" height="39"/></a><a class="image-link" href="#"><img src="images/brand-05-168x48.png" alt="" width="168" height="48"/></a></div>
+        </div>
+      </section>
+      <div class="section section-md bg-gray-800 footer-classic-pre section-relative">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <h6>latest posts</h6>
+              <ul class="list list-lg">
+                <li>
+                  <article class="post-latest">
+                    <div class="post-latest-title"><a href="single-post.html">Difference Between Business Coaching and Mentoring</a></div>
+                    <div class="post-latest-time"><a href="single-post.html">Oct 18, 2019</a></div>
+                  </article>
+                </li>
+                <li>
+                  <article class="post-latest">
+                    <div class="post-latest-title"><a href="single-post.html">How to Become More Successful in Everyday Activities</a></div>
+                    <div class="post-latest-time"><a href="single-post.html">Oct 18, 2019</a></div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <h6>Services</h6>
+              <ul class="list list-xs">
+                <li><a href="#">Time Management</a></li>
+                <li><a href="#">Personal Development</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Business Training</a></li>
+                <li><a href="#">Public Speaking</a></li>
+                <li><a href="#">Sales Training</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-lg-2">
+              <h6>Quick Links</h6>
+              <ul class="list list-xs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="online-lectures.html">Online Lectures</a></li>
+                <li><a href="events.html">News</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-8 col-md-12 col-lg-4">
+              <h6>Make an Appointment</h6>
+              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="form-wrap">
+                  <label class="form-label" for="footer-name">Name</label>
+                  <input class="form-input" id="footer-name" type="text" name="name" data-constraints="@Required">
+                </div>
+                <div class="form-wrap">
+                  <label class="form-label" for="footer-email">E-Mail</label>
+                  <input class="form-input" id="footer-email" type="email" name="email" data-constraints="@Required @Email">
+                </div>
+                <div class="form-button group-sm text-center text-sm-left">
+                  <button class="button button-primary button-circle button-shadow" type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-classic section bg-gray-900 text-center section-relative">
+        <div class="container">
+          <div class="row row-15 align-items-center">
+            <div class="col-md-4 text-md-left">
+              <div class="brand"><a href="index.html"><img src="images/logo-inverse-300x86.png" alt="" width="150" height="43"/></a></div>
+            </div>
+            <div class="col-md-8 text-md-right">
+              <p class="rights"><span>©</span> <span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a>. Design&nbsp;by&nbsp;<a href="https://zemez.io/">Zemez</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

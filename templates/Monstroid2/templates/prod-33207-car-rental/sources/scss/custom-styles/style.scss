@@ -1,0 +1,394 @@
+@charset "UTF-8";
+
+/**
+* Template Style
+*
+* [Table of contents]
+*   1. Custom styles
+*     1.1 Main Styles
+*     1.2 Typography
+*     1.3 Backgrounds
+*     1.4 Colors
+*     1.5 Main layout
+*
+*   2. Components
+*     2.1 Icons
+*     2.2 Buttons
+*     2.3 Forms
+*     2.4 Tables
+*     2.5 Lists
+*     2.6 Post
+*     2.7 Thumbnail
+*     2.8 Tooltip
+*     2.9 Snackbars
+*     2.10 Navigation
+*     2.11 Preloader
+*     2.12 Breadcrumbs
+*     2.13 Panel custom
+*
+*   3. Helpers
+*     3.1 Text-alignment
+*     3.2 Text-styling
+*     3.3 Visibility responsive
+*     3.4 Groups
+*     3.5 Context Styling
+*     3.6 Sections
+*     3.7 Offsets
+*
+*   4. Modules
+*     4.1 Flex grid
+*     4.2 Unit-responsive
+*
+*   5 Plugins
+*     5.1 Animate
+*     5.2 Isotope
+*     5.3 Owl Carousel
+*     5.4 RD Navbar
+*     5.5 RD Parallax
+*     5.6 RD Google-Map
+*     5.7 RD Search
+*     5.8 To top
+*     5.9 Tabs
+*     5.10 Photoswipe
+*     5.11 Progress-bars
+*     5.12 Counter
+*     5.13 jquery-circle-progress
+*     5.14 Timecircles
+*     5.15 Swiper
+*
+*   6. Fonts
+*     6.1 FontAwesome
+*     6.2 MDI
+**/
+// Import Bootstrap
+@import "../bootstrap/_functions";
+@import "../bootstrap/_variables";
+@import "../bootstrap/_mixins";
+
+// Import variables
+@import "_variables_custom";
+// Import mixins
+@import "mixins";
+// Import reset styles
+@import "reset";
+
+
+
+//
+// Main Styles
+// --------------------------------------------------
+
+// Body
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 14px;
+  font-weight: $font-weight-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $body-color;
+
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-body;
+  }
+}
+
+// Links
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: .33s all ease;
+
+  &,
+  &:active,
+  &:focus {
+    color: $link-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &[href*='tel'],
+  &[href*='mailto'] {
+    white-space: nowrap;
+  }
+}
+
+// Images
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Horizontal rules
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $gray-light;
+}
+
+/*
+*
+* Typography
+* ==================================================
+*/
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+
+  a {
+    display: inline;
+    font: inherit;
+    letter-spacing: inherit;
+    @include link(inherit, $link-hover-color);
+  }
+
+  > * {
+    display: inline-block;
+  }
+
+  span:not(:last-child) {
+    margin-right: .25em;
+  }
+}
+
+// {0 - 768px} <= 40px
+// {768px - 992px} <= 62px
+h1,
+.heading-1 {
+  font-size: 34px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(md) {
+    font-size: 56px;
+    line-height: $h1-line-height;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h1-font-size;
+  }
+}
+
+// {0 - 768px} <= 36px
+// {768px - 992px} <= 52px
+h2,
+.heading-2 {
+  font-size: 26px;
+  line-height: 1.3;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    line-height: $h2-line-height;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 44px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h2-font-size;
+  }
+}
+
+// {0 - 768px} <= 32px
+// {768px - 992px} <= 44px
+h3,
+.heading-3 {
+  font-size: 22px;
+  line-height: 1.45;
+
+  @include media-breakpoint-up(md) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+  }
+}
+
+// {0 - 768px} <= 26px
+// {768px - 992px} <= 36px
+h4,
+.heading-4 {
+  font-size: 20px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+  }
+}
+
+// {0 - 768px} <= 22px
+// {768px - 992px} <= 28px
+h5,
+.heading-5 {
+  font-size: 18px;
+  line-height: 1.45;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+  }
+}
+
+// {0 - 768px} <= 18px
+// {768px - 992px} <= 22px
+h6,
+.heading-6 {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $secondary;
+
+  @include media-breakpoint-up(md) {
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+  }
+}
+
+// Big text
+.big {
+  font-size: $font-size-lg;
+}
+
+// Small text
+@mixin small {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+}
+
+small,
+.small {
+  display: block;
+  @include small;
+	font-weight: normal;
+}
+
+// Code
+code,
+.code {
+  padding: 1px 5px;
+  border-radius: 0;
+  font-family: $font-family-base;
+  color: $white;
+  background: $black;
+}
+
+/*
+*
+* Colors
+* ==================================================
+*/
+.page {
+  .text-primary {
+    color: $primary;
+  }
+
+  .text-dark {
+    color: $gray-dark;
+  }
+}
+
+/*
+*
+* Main layout
+* ==================================================
+*/
+
+// Page
+//
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh !important;
+}
+
+// Page header
+.page-header {
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+// Page footer
+.page-footer {
+}
+
+//call to action
+//
+.cat-img-group {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+
+  > div {
+    position: absolute;
+    bottom: 0;
+    max-width: 80%;
+
+    &:first-of-type {
+      z-index: 1;
+      right: 0;
+
+    }
+    &:last-of-type {
+      left: 0;
+    }
+  }
+  img {
+    width: auto;
+  }
+}
+
+.cat-wrap {
+  padding: 60px 0 80px;
+  @include media-breakpoint-up(lg) {
+    padding: 120px 0 140px;
+  }
+}
+
+.cat-mod-1 {
+  max-width: 715px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  > * {
+    color: $white;
+  }
+}
+
+//toggle
+[data-custom-toggle] {
+  cursor: pointer;
+}
+
+// Components & modules & plugins & helpers & fonts
+//
+
+@import "includes";

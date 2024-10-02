@@ -1,0 +1,16 @@
+// text rotator
+
+
+.rotate-list {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.rotate-area {
+  animation-delay: .5s;
+  display: inline-block;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  white-space: nowrap;
+}

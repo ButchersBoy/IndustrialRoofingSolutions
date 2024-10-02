@@ -1,0 +1,51 @@
+/*
+* Footers
+*/
+
+//
+// Footer Classic
+//
+
+.footer-classic {
+	text-align: center;
+	background: $gray-800;
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+
+	* + .contacts-modern { margin-top: 40px; }
+}
+
+.footer-classic-list {
+	position: relative;
+	
+	&::before {
+		display: none;
+		position: absolute;
+	  content: '';
+		top: 0;
+		left: 50%;
+		height: 0;
+		width: 200px;
+		border-top: 1px solid rgba($white, .1);
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+.footer-classic-list + .footer-classic-list {
+	margin-top: 40px;
+	padding-top: 30px;
+
+	&::before {
+		display: block;
+	}
+}
+
+.footer-classic-list + .rights { margin-top: 40px; }
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+
+	.footer-classic-list + .rights { margin-top: 60px; }
+}

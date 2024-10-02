@@ -1,0 +1,32 @@
+include ../elements/_ui-tag-list
+
+mixin shop-grid(obj)
+  .product.product-grid(class=obj.class)
+    .product-img-wrap
+      +jpg(obj.img)
+      .product-icon-wrap
+        span.icon.icon-md(data-toggle='tooltip' data-original-title='Add to Wishlist')(class=obj.icon_class1)
+        span.icon.icon-md(data-toggle='tooltip' data-original-title='Add to Compare')(class=obj.icon_class2)
+      .product-label-wrap
+        span(class=obj.class_label)=obj.label_text
+    .product-caption
+      +tag-list({
+        list_class: obj.tag_list_class,
+        href: "#",
+        items: obj.tag_list_items
+      })
+      h6.product-title: a(href=obj.href)=obj.title
+      p.product-price(class=obj.price_class)
+        each price in obj.prices
+          span= price
+      a(href=obj.href class=obj.button_class).button.button-icon.button-icon-left
+        span.icon.icon-md(class=obj.button_icon_class)
+        span=obj.button_text
+
+      if obj.rating_list
+        ul.rating-list
+          li: span.icon.linear-icon-star.icon-secondary-4
+          li: span.icon.linear-icon-star.icon-secondary-4
+          li: span.icon.linear-icon-star.icon-secondary-4
+          li: span.icon.linear-icon-star.icon-secondary-4
+          li: span.icon.linear-icon-star.icon-gray-4

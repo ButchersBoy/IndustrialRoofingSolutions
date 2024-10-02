@@ -1,0 +1,84 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Single post'
+
+block page
+	include ../sections/_header-classic-shadow
+
+	+breadcrumbs
+
+	// Post
+	section.section.section-lg.bg-default.text-center.text-md-start
+		.container.text-center
+			.row
+				.col-12
+					h2 Best Days to Stay in Los Angeles
+					.post-single-meta
+						.post-single-meta-item
+							= 'By '
+							span.text-primary admin
+						.post-single-meta-item
+							| Posted February 20, 2023
+						.post-single-meta-item
+							span.text-primary 0 Comment(s)
+
+		+img( 'single-post-01-1400x430' ).img-post-wide.img-wide
+
+		.container
+			.row.justify-content-center
+				.col-lg-8
+					.post-single-section.post-single-content
+						p With its overall history spanning more than 200 years, Indianapolis has a lot of long-established venues, with restaurants, bars, and pubs being at the very top of that list.
+						p We’ve decided to help our Hotel’s guest, who may be visiting the city for the first time in the intricate process of choosing where to eat and drink.
+						h4 AN ULTIMATE LIST OF THE CITY’S VENUES LOOKS LIKE THIS:
+						h4 Cafe Patachou
+						p This contender, located at the city’s airport offers a wide choice of organic dishes, with a big emphasis put on vegetarian and gluten free meals...
+						h4 St. Elmo Steak House
+						p When visiting a typical farming Midwest state like Indiana, enjoying a steak and fried farm vegetables on the side would make perfect sense!
+						+img( 'single-post-02-770x766' )
+						h4 Repeal Restaurant
+						p Being one of the oldest bars & restaurants in the city and serving as a main bootlegging venue during the Prohibition era, this one has a lot of beverages and burgers to offer!
+						h4 Shapiro’s Delicatessen
+						p A traditionally Italian deli place, also serving some Jewish desserts as well, Shapiro’s is by far the Indy’s top rated bakery of them all!
+						h4 Scotty’s Brewhouse
+						p Good craft & draft beer, on par with incredible meat burgers and steaks, will make your visit worthwhile and yummy!
+
+					.post-single-section
+						.post-single-author
+							+img( 'single-post-03-140x140' ).post-single-author-img
+							h4.post-single-author-title: a( href='#' ) ADMIN
+
+					.post-single-section
+						.post-single-pager
+							.post-single-pager-item
+								.post-single-pager-arrow.mdi.mdi-chevron-left
+								.post-single-pager-body
+									.post-single-pager-subtitle Previous
+									h4.post-single-pager-title: a( href='single-post.html' ) Top 3 Hotels for Families with Kids
+							.post-single-pager-item
+								.post-single-pager-body
+									.post-single-pager-subtitle Next
+									h4.post-single-pager-title: a( href='single-post.html' ) Top 3 Hotels for Families with Kids
+								.post-single-pager-arrow.mdi.mdi-chevron-right
+
+					.post-single-section
+						h4 Leave a Reply
+						p.post-single-offset-1 Your email address will not be published. Required fields are marked*
+						form.post-single-form.text-start
+							.form-wrap
+								label.form-label(for="footer-name") Name
+								input#footer-name.form-input(type="text" name="name" data-constraints='@Required')
+							.form-wrap
+								label.form-label(for="footer-phone") Phone
+								input#footer-phone.form-input(type="text" name="phone" data-constraints='@Required @Numeric')
+							.form-wrap
+								label.form-label(for="footer-email") E-Mail
+								input#footer-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+							.form-wrap
+								label.form-label(for="footer-message") Message
+								textarea#footer-message.form-input(name="message" data-constraints='@Required')
+							.form-button.text-center
+								button(type="submit").btn.btn-primary.btn-ujarak Submit comment
+
+	include ../sections/_footer-classic

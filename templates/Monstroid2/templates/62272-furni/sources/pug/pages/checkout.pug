@@ -1,0 +1,188 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-panel
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Checkout'
+
+block page
+  // Page header
+  include ../sections/_header-inverse
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  // Forms
+  section.section-sm.bg-default
+    .container
+      // Accordion
+      #accordion(role='tablist')
+        +panel({
+          parentId: "1",
+          header: "Returning customer?<span>Click here to login</span>"
+        })
+          p If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.
+          // RD Mailform
+          form.rd-mailform.rd-mailform_responsive.rd-mailform_style-2
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              input#modal-login-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="modal-login-email") Your e-mail
+
+            .form-wrap.form-wrap_icon.linear-icon-lock
+              input#modal-login-password.form-input(type="password" name="password" data-constraints="@Required")
+              label.form-label(for="modal-login-password") Your password
+
+            .form-wrap.group-xl
+              button(type="submit").button.button-primary Login
+
+              label.checkbox-inline
+                input(type='checkbox' name='remember')
+                | Remember me
+          ul.list-small
+            li: a(href='#') Lost your password?
+
+        +panel({
+          parentId: "2",
+          header: "Have a coupon?<span>Click here to enter your code</span>"
+        })
+          .row
+            .col-md-8.col-xl-5
+              form.rd-mailform.rd-mailform_responsive.rd-mailform-inline-flex
+                .form-wrap
+                  input#coupon-code.form-input(type="text" name="text" data-constraints=" @Required")
+                  label.form-label(for="coupon-code") Coupon Code
+                button(type="submit").button.button-black Apply coupon
+      hr
+
+      // RD Mailform
+      form.rd-mailform.text-left.row.row-50
+        .col-md-6.col-lg-4
+          h5 Billing Details
+          .form-wrap
+            input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="contact-name") First Name *
+
+          .form-wrap
+            input#contact-last-name.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="contact-last-name") Last Name *
+
+          .form-wrap
+            input#company.form-input(type="text" name="name")
+            label.form-label(for="company") Company Name
+
+          .form-wrap
+            input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+            label.form-label(for="contact-email") Email Address *
+
+          .form-wrap
+            input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+            label.form-label(for="contact-phone") Phone *
+
+          .form-wrap
+            //Select 2
+            select.form-control.select-filter(data-placeholder="Country", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+              option Country
+              option(value="2") USA
+              option(value="3") Mexico
+              option(value="4") China
+
+          .form-wrap
+            input#address.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="address") Street address *
+
+          .form-wrap
+            input#address-2.form-input(type="text" name="name")
+            label.form-label(for="address-2") Apartment, suite, unit etc. (optional)
+
+          .form-wrap
+            input#city.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="city") Town / City *
+
+          .form-wrap
+            input#country.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="country") State / County *
+
+          .form-wrap
+            input#postcode.form-input(type="text" name="name" data-constraints='@Required')
+            label.form-label(for="postcode") Postcode / ZIP *
+
+          .form-wrap
+            label.checkbox-inline
+              input(type='checkbox' name='remember')
+              | Create an account?
+
+
+        .col-md-6.col-lg-8
+          h5 Additional Information
+          .form-wrap
+            textarea#contact-message.form-input(name="message" data-constraints="@Required")
+            label.form-label(for="contact-message") Order Notes *
+
+  section
+    +divider
+  section.section-sm.bg-default
+    .container
+      .row
+        .col-sm-12
+          h5 Your order
+          .table-responsive
+            table.table-checkout
+              thead
+                tr
+                  th Product
+                  th Total
+              tbody
+                tr
+                  td
+                    h6: a.thumbnail-classic-title(href='single-product.html') Italian furniture contemporary…
+                  td
+                    .product-price
+                      span 45
+                tr
+                  td
+                    h6: a.thumbnail-classic-title(href='single-product.html') Italian emma chairs…
+                  td
+                    .product-price
+                      span 45
+              tfoot
+                tr
+                  td(colspan=2).text-md-right
+                    dl.list-terms-minimal
+                      dt Subtotal
+                      dd $90
+                    dl.heading-5.list-terms-minimal
+                      dt Total
+                      dd $90
+
+  section
+    +divider
+  section.section-sm.bg-default
+    .container
+      .payment-box
+        .form-wrap
+          label.radio-inline
+            input(name="input-group-radio", value="radio-1", type="radio" class="radio-custom")
+            | Cheque Payment
+        .payment-box-inner
+          p Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+
+      .payment-box
+        .form-wrap
+          label.radio-inline
+            input(name="input-group-radio", value="radio-1", type="radio" class="radio-custom")
+            | PayPal
+          +png('checkout-1-319x110')
+        .payment-box-inner
+          p Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.
+      .payment-box-button
+        button(type='submit').button.button-primary Place order
+
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

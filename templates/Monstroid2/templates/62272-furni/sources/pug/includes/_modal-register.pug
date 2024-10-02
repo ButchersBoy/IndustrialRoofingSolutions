@@ -1,0 +1,29 @@
+// Modal register window
+#modalRegister.modal.fade(role='dialog')
+  .modal-dialog.modal-dialog_custom
+    // Modal content
+    .modal-dialog__inner
+      button.close(type='button', data-dismiss='modal')
+      .modal-dialog__content
+        h5 Register Form
+        // RD Mailform
+        form.rd-mailform.rd-mailform_responsive(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+          .form-wrap.form-wrap_icon.linear-icon-envelope
+            input#modal-register-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+            label.form-label(for="modal-register-email") Your e-mail
+
+          .form-wrap.form-wrap_icon.linear-icon-lock
+            input#modal-register-password.form-input(type="password" name="password" data-constraints="@Required")
+            label.form-label(for="modal-register-password") Your password
+
+          .form-wrap.form-wrap_icon.linear-icon-lock
+            input#modal-register-password2.form-input(type="password" name="password2" data-constraints="@Required")
+            label.form-label(for="modal-register-password2") Confirm password
+
+          .form-wrap
+            label.checkbox-inline
+              input(type='checkbox' name='remember')
+              | Remember me
+
+          button(type="submit").button.button-primary Register
+='\n'

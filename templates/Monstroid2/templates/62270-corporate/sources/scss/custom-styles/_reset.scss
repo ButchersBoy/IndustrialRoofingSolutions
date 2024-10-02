@@ -1,0 +1,63 @@
+//
+// Reset Styles
+// --------------------------------------------------
+
+a,
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: block;
+  }
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: inherit;
+}
+
+address {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+html p a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+form {
+  margin-bottom: 0;
+}

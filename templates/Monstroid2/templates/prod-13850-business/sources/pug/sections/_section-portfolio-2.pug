@@ -1,0 +1,85 @@
+include ../elements/_ui-portfolio-item
+
+section.section-md.bg-default.text-center
+	h4.heading-decorated Our gallery
+	.container
+		.isotope-wrap.row.row-70
+			.col-sm-12(data-lightgallery='group')
+				.isotope.row(data-isotope-layout='fitRows', data-isotope-group='gallery')
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'slider-slide-14-1280x1920',
+							img: 'portfolio-2-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'portfolio-original-4-1920x1440',
+							img: 'portfolio-4-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'portfolio-original-5-1920x1280',
+							img: 'portfolio-5-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'portfolio-original-6-1920x1280',
+							img: 'portfolio-6-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'portfolio-original-7-1920x1280',
+							img: 'portfolio-7-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})
+
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+						+portfolio-item({
+							single_img: true,
+							number: 3,
+							original: 'portfolio-original-8-1536x1920',
+							img: 'portfolio-8-418x315',
+							icon_class1: 'linear-icon-picture',
+							items: ['Objects'],
+							title: 'Photo',
+							desc: 'Creating Portfolio.',
+							icon_class2: 'linear-icon-plus'
+						})

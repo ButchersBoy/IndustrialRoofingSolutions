@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+
+block variables
+  - var activeIndex = 0
+  - var pageName = 'Header modern'
+
+block page
+  // Page header
+  header.section.page-header
+    // RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar(
+      data-body-class=              'rd-navbar-static-smooth'
+      data-layout=                  'rd-navbar-fixed',
+      data-sm-layout=               'rd-navbar-fixed',
+      data-md-layout=               'rd-navbar-fixed',
+      data-md-device-layout=        'rd-navbar-fixed',
+      data-lg-layout=               'rd-navbar-static',
+      data-lg-device-layout=        'rd-navbar-fixed',
+      data-xl-layout=               'rd-navbar-static',
+      data-xl-device-layout=        'rd-navbar-static',
+      data-xxl-layout=              'rd-navbar-static',
+      data-xxl-device-layout=       'rd-navbar-static',
+      data-lg-stick-up-offset=      '46px',
+      data-xl-stick-up-offset=      '46px',
+      data-xxl-stick-up-offset=     '46px',
+      data-lg-stick-up=             'true',
+      data-xl-stick-up=             'true',
+      data-xxl-stick-up=            'true'
+      )
+        include ../includes/_navbar-default-top-panel
+
+        .rd-navbar-inner
+          // RD Navbar Panel
+          .rd-navbar-panel
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+            // RD Navbar Brand
+            .rd-navbar-brand
+              a.brand-name(href='index.html')
+                +png('logo-1770x398')
+
+          // RD Navbar Nav
+          .rd-navbar-nav-wrap
+            include ../includes/_nav
+
+          .rd-navbar-static--hidden.rd-navbar-top-panel__toggle.rd-navbar-fixed__element-1(data-rd-navbar-toggle='.rd-navbar-top-panel__content'): span
+          .rd-navbar-top-panel__content
+            p
+              span.icon.fa-phone
+              =" Let's talk "
+              a(href='callto:#') (703) 329-06-32
+            .unit.flex-row.align-items-center.unit-spacing-xs
+              .unit-left
+                span.icon.fa-map-marker
+              .unit-body
+                a(href='#').navbar-link-default 6036 Richmond hwy., Alexandria, VA 22303"
+
+  +breadcrumbs({
+    path: [['Headers', '#'], [pageName]]
+  })
+
+  section.section-lg.bg-default.text-center
+    .container
+      .row.row-70
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-1-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-2-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-3-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-4-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-5-886x668')
+
+        .col-md-6.col-lg-4: a.link-image(href='#')
+          +jpg('post-classic-6-886x668')
+  ='\n'
+
+  // Page Footer
+  include ../sections/_footer-minimal
+

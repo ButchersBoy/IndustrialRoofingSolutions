@@ -1,0 +1,68 @@
+// Reservation plan
+//---------------------------------
+
+.plan-reservation-box {
+  
+  .row + .row,
+  * + .row {
+    @include media-breakpoint-up(md) {
+      margin-top: 75px;
+    }
+  }
+}
+
+.plan-reservation-inner {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  img {
+    width: auto;
+    vertical-align: top;
+  }
+  span {
+    position: absolute;
+    display: block;
+    color: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8px;
+    font-style: italic;
+    @include media-breakpoint-up(sm) {
+      font-size: 12px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 28px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 37px;
+    }
+  }
+  &:hover {
+    animation-duration: 550ms;
+    animation-name: table-anim;
+  }
+}
+
+.plan-reservation-active {
+  cursor: default;
+  &:hover{
+    animation: none;   
+  }
+}
+
+@keyframes table-anim {
+  35% {
+    transform: scale(.98)
+  }
+  75% {
+    transform: scale(1.03)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+

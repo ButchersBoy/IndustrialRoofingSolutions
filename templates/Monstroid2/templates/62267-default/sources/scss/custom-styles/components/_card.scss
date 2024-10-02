@@ -1,0 +1,134 @@
+/*
+*
+* Panels Custom
+* --------------------------------------------------
+*/
+
+//== Panel variables
+//
+//##
+
+$card-title-color: $gray-dark;
+$card-title-background: $white;
+$card-title-padding: 22px 0 20px;
+$card-title-sm-padding: 55px 0 55px 0;
+$card-active-background: transparent;
+$card-arrow: '\e937';
+$card-arrow-font: 400 24px/24px $font-icons;
+$card-body-padding: 15px 25px 30px 0;
+$card-body-sm-padding: 30px 30px 22px 0;
+
+
+// Base Style
+// --------------------------------------------------
+
+.card {
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.card-custom {
+  padding: $card-title-padding;
+
+  @include media-breakpoint-up(md) {
+    padding: $card-title-sm-padding;
+  }
+
+  & + .card-custom {
+    border-top: 1px solid $gray-1;
+    margin-top: 0;
+  }
+
+  .card-custom-title {
+
+    > a {
+      display: block;
+      position: relative;
+      padding-right: 40px;
+      color: $card-title-color;
+      background: $card-active-background;
+      transition: .3s all ease;
+
+      &:before {
+        content: $card-arrow;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font: $card-arrow-font;
+        color: $primary;
+        transform: translateY(-50%) rotate(0deg);
+        transition: .35s all ease-in-out;
+      }
+
+      span {
+        padding-left: 8px;
+        color: $gray;
+        font-size: 14px;
+      }
+
+      &.collapsed {
+        background: $card-title-background;
+
+        &:before {
+          content: '\e936';
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $card-active-background;
+      }
+    }
+  }
+
+  .card-custom-collapse {
+    background: $card-active-background;
+
+    .card-custom-body {
+      padding: $card-body-padding;
+
+      @include media-breakpoint-up(md) {
+        padding: $card-body-sm-padding;
+      }
+    }
+  }
+}
+
+h3 + .card-custom-group-wrap {
+  margin-top: 30px;
+}
+
+//card classic
+.card-classic {
+  .card-custom-title {
+
+    > a {
+      padding-left: 35px;
+      padding-right: 0;
+
+      &:before {
+        content: "\e93c";
+        top: 47%;
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotate(90deg);
+        transition: .35s all ease-in-out;
+      }
+
+      &.collapsed {
+        &:before {
+          content: '\e93c';
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $card-active-background;
+      }
+    }
+  }
+}

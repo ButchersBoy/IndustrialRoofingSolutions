@@ -1,0 +1,48 @@
+/** @section Row spacing */
+
+.row-0 {
+	@include grid-offset(0px);
+}
+
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-26 {
+	@include grid-offset(26px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+* + .row-offset-1 { margin-top: 40px }
+* + .row-offset-2 { margin-top: 40px }
+
+@include media-breakpoint-up( md ) {
+	.row-md-30 {
+		@include grid-offset( 30px );
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .row-offset-1 { margin-top: 107px * $lg-multiplier }
+	* + .row-offset-2 { margin-top: 61px * $lg-multiplier }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .row-offset-1 { margin-top: 107px }
+	* + .row-offset-2 { margin-top: 61px }
+}
