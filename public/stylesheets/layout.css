@@ -1,0 +1,75 @@
+#main {width:980px; margin:0 auto; position:relative;}
+#mainR {margin:0 auto; position:relative;}
+
+#header {height:431px; background:url(../images/header-bg.jpg) no-repeat left top;}
+#headerR {height:320px; background:url(../images/header-bg.jpg) no-repeat left top;}
+#header, #headerR, #content, #footer { font-size:0.75em;}
+
+
+
+/*======= index.html =======*/
+#index #content .row-1 .col-1 {width:100%; margin-right:0%}
+#index #content .row-1 .col-2 {width:100%; margin-right:10%}
+#index #content .row-1 .col-2 .row-1 .col-1 { width:20%; margin-right:0;}
+#index #content .row-1 .col-2 .row-1 .col-2 { width:90%; margin-left:10%;}
+#index #content .feature { margin-left: 28px }
+#index .col-1 img {margin-bottom:10px;}
+#index .faceBook {margin-top: 20px}
+
+/*======= about.html =======*/
+#about #content .row-1 .col-1 {width:97%; }
+#about #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
+#about #content .row-1 .col-1 .col-2 { width:29%;}
+#about #content .row-1 .col-2 { width:100%; }
+#about #content .row-2 .col-1 { width:22%; margin-right:6.9%;}
+#about #content .row-2 .col-2 { width:59%;}  
+
+/*======= projects.html =======*/
+#projects #content .row-1 .col-1 {width:100%; margin-right:4%}
+#projects #content .row-1 .col-1 .col-1 { width:26%; margin-right:0;}
+#projects #content .row-1 .col-1 .col-2 { width:29%;}
+#projects #content .row-1 .col-2 { width:90%; margin-left: 4% }
+
+#contact #content .row-1 .col-1 {width:100%; margin-right: 4%}
+#contact #content .row-1 .col-1 .col-1 { width:25%; }
+#contact #content .row-1 .col-1 .col-2 { width:32%;}
+#contact #content .row-1 .col-2 { width:100%;  }
+#contact #content .row-2 .col-1 {width:22%; margin-right:68%;}
+#contact #content .row-2 .col-2 { width:58%;}
+#contact #content .row-2 .col-2 .col-1 { width:26%; }
+#contact #content .row-2 .col-2 .col-2 { width:26%;}
+
+@media screen and (min-width: 800px)  
+{
+	#mainR { width: 980px; }
+	#headerR { height: 431px; }
+	/* == home == */
+	#index #content .row-1 .col-1 {width:29%; margin-right:0px; float:left}
+	#index #content .row-1 .col-2 { width:62%; float:right; margin-right:4%}
+	#index #content .row-1 .col-2 .row-1 .col-2 { width:65%; margin-left:0; margin-right:0;}
+	#index .col-1 .col-2 .col-3 { float:left; margin-left:0%}	
+	#index #content .feature { margin-left: 0 }	
+	
+	/* == about == */	
+	#about #content .row-1 .col-1 { float: left; width:60%; }	
+	#about #content .row-1 .col-2 { float: right}
+	#about #content .row-1 .col-2 { width:28%; }	
+	
+	/* == projects == */	
+	#projects #content .row-1 .col-1 { float: left; width:62%; margin-right:3% }
+	#projects #content .row-1 .col-1 .col-1 { width:28%; margin-right:0;}	
+	#projects #content .row-1 .col-2 { width:28%; margin-left: 0%; margin-right:6%; float:right }
+	
+	#contact #content .row-1 .col-1 {width:61%; margin-right:3%;}
+	#contact #content .row-1 .col-1 { float:left; margin-left:0%}
+	#contact #content .row-1 .col-2 { float:left; margin-left:0%;  width:29%;}	
+}
+
+.suppliersImages {
+	background-color: white; 
+	padding: 5px; 
+	margin-right: 25px;
+	display: inline-block; 	
+}
+
+#footer {height:94px;}
