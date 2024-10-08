@@ -1,9 +1,12 @@
 {
   "name": "IRS",
   "version": "0.0.0",
-  "private": true,
+  "private": true,  
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"    
   },
   "dependencies": {
     "body-parser": "~1.12.0",
@@ -13,5 +16,9 @@
     "jade": "~1.9.2",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
   }
 }
