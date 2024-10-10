@@ -1,0 +1,94 @@
+az webapp config appsettings set --name industrialroofingsolutions --resource-group Default-Web-NorthEurope --settings WEBSITE_NODE_DEFAULT_VERSION="~18"
+
+
+az webapp config appsettings list --name industrialroofingsolutions --resource-group Default-Web-NorthEurope --query "[?name=='WEBSITE_NODE_DEFAULT_VERSION'].value"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+change the internal roof picture for the New Kingspan Roof to Old Farm Building, The Shropshire Golf Centre, the one with the green roof
+DONE
+
+Bottom of page, yellow bullet points
+DONE
+
+insert ‘a’ We work with variety
+DONE
+
+lose coma after cladding
+DONE
+
+Rooging to Roofing
+DONE
+
+‘Surveys’ change yellow bubble intro to: Discover how our innovative approach can save you time and money while ensuring the integrity of your property.
+DONE
+
+When you click on 'Domestic Maintenance' yellow bubble it jumps to Surveys not Domestic 
+DONE
+
+change 'free surveying and quotation' to surveying and free quotations.
+DONE
+
+Your Peace of Mind, Guaranteed
+At Industrial Roofing Solutions, we stand behind our work. Our roofing warranties provide you with the confidence you need to protect your investment. 
+Our aim as a local business is to provide our customers with cost effective, aesthetically pleasing and fully functional environmentally sound building systems both for industrial, agricultural and commercial uses.
+DONE
+
+" Graeme. What a wonderful job, I knew when we met you were the man for the job and I was right, an absolutely splendid job, thank you so much, my committee will be delighted. Please thank your colleagues for me as well. Have a wonderful Xmas." Eddie, 1st Stone Scout Group
+DONE
+
+new roofing page
+DONE
+
+domestic - remove paragpaph
+DONE
+
+domestic - jet wash pic
+DONE
+
+new products image
+DONE
+
+Get rid of the ‘structural integrity assessment’ section
+DONE
+
+Lump together the 2 introductions 
+DONE
+
+Section with link to domestic from services page
+DONE
+
+Fix services Cleaning link
+DONE
+
+
+get rid of the North Leamington School & Birmingham airport photos.
+DONE
+
+Can you also put 2 Aston ones at the top (roof ones not fire damage wall)
+DONE
+
+Then 2 pics below can be 'Agricultural roof light replacement' & 'City Centre Car Care' 
+DONE
+
+Put the following ones along side each other and remove the ones we've used above on the roofing & cladding 
+edit:
+Renault - Stourbridge
+Superform Aluminium - Worcester
+Activity centre - Before & after
+Workshop Project
+Kingspan Fire Damage - Aston
+DONE
