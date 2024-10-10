@@ -2,6 +2,16 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// Middleware to redirect HTTP to HTTPS only in production
+if (process.env.NODE_ENV === 'production') {
+    app.use((req, res, next) => {
+        if (req.headers['x-forwarded-proto'] !== 'https') {
+            return res.redirect('https://' + req.headers.host + req.url);
+        }
+        next();
+    });
+}
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
