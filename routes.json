@@ -1,0 +1,13 @@
+{
+    "routes": [
+      {
+        "route": "/404",
+        "serve": "/404.html"
+      },
+      {
+        "route": "/*",
+        "serve": "/404.html",
+        "statusCode": 404
+      }
+    ]
+  }
