@@ -1,7 +1,7 @@
 {
     "responseOverrides": {
       "404": {
-        "rewrite": "/public/404.html",
+        "rewrite": "/404.html",
         "statusCode": 404
       }
     }
