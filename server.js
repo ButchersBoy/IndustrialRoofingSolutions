@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 // Handle 404 errors for unknown URLs
 app.use((req, res) => {
-    res.status(404).send('Page not found');
+    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 // Start the server
