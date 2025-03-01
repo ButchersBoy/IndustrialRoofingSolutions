@@ -1,4 +1,21 @@
 {
+  "routes": [
+    {
+      "route": "/Contact",
+      "redirect": "/contact",
+      "statusCode": 301
+    },
+    {
+      "route": "/About",
+      "redirect": "/about",
+      "statusCode": 301
+    },
+    {
+      "route": "/Projects",
+      "redirect": "/projects",
+      "statusCode": 301
+    }
+  ],
     "responseOverrides": {
       "404": {
         "rewrite": "/404.html",
