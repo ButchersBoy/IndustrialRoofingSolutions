@@ -6,7 +6,7 @@ az webapp config appsettings list --name industrialroofingsolutions --resource-g
 
 
 
-
+to build and kick off deploy, just push deploy deploy2024
 
 
 
